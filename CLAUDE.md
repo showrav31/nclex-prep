@@ -13,8 +13,18 @@ This website is my wife's **main** place to prepare for the NCLEX-RN. She is a 4
 ## Syllabus source
 NCSBN 2026 NCLEX-RN Test Plan: https://nclex.com/files/2026_RN_Test%20Plan_English-F.pdf. Link to it; **don't commit the PDF**.
 
-## Workflow
-- At the end of every task, open a pull request into `main` with a short summary of **what to test**.
+## Workflow (every task, permanent rule)
+At the end of every task, without being asked:
+1. **Test it**:
+   - `node tests/check-data.js` checks the content: IDs, question → topic links, files cached by `sw.js`.
+   - `node tests/browser-test.js` loads the site locally under `/nclex-prep/` at a 360px phone size. It checks there are no console errors or sideways scrolling, tests the tabs, quiz, Back button and offline loading, and checks that saved progress from every older version still loads.
+   - Add checks to these scripts when adding features.
+2. **Bump `VERSION` in `sw.js`** (`v2` → `v3` …), so phones get the update.
+3. **Open a pull request** into `main` with a short summary of what changed and what to test.
+4. **Squash-merge it yourself and delete the branch.**
+5. Tell the user what changed in **3–5 short lines**.
+
+**Only skip the merge and ask first** if a test fails or the change is risky (e.g. it could lose saved progress, it removes content, or it is a large clinical-content change you're unsure of).
 
 ## Hosting
 - **GitHub Pages**, deployed from branch `main`, root folder (`/`).
@@ -42,9 +52,17 @@ The site lives under the `/nclex-prep/` subpath, not the domain root.
 - `js/app.js` — screens and features. Loads content from `data/*.json` at start-up.
 - `data/*.json` — content: `syllabus`, `questions`, `plan`, `canada`, `reference`, `exam-guide`.
 - `sw.js` — service worker for offline use. **Bump `VERSION` in `sw.js` whenever any app file changes**, and add new files to its `FILES` list.
+- `tests/` — `check-data.js` (content checks) and `browser-test.js` (Playwright, phone size). Not part of the app.
 
 ## Saved progress (never lose it)
-- One `localStorage` key: `nclexDash2`. Never rename it. Schema has a version field `v` (now 3); when the shape changes, add a step to `migrate()` in `js/store.js`.
-- Before migrating old data, a raw copy is kept in `nclexDash2_backup_v2`.
-- Ratings, plan ticks and Canada ticks are keyed by **array position** in the JSON (e.g. `lv["2-5"]` = category 2, topic 5). **Never reorder or delete** categories, topics, plan tasks or Canada steps; only append. Questions point to topics the same way (`cat`, `topic`).
+- One `localStorage` key: `nclexDash2`. Never rename it. Schema has a version field `v` (now **4**); when the shape changes, add a step to `migrate()` in `js/store.js` and a test case in `tests/browser-test.js`.
+- Before each migration, a raw copy of the old data is kept in `nclexDash2_backup_v<old version>` (e.g. `_backup_v2`, `_backup_v3`). Old keys that can't be mapped are kept in `S.unmapped`, never dropped.
+- Progress is saved by **fixed text IDs**, not by position: topic ratings `lv[topicId]`, plan ticks `plan[taskId]`, Canada ticks `can[stepId]`, quiz stats `stat[catId]`, today's task `task.topic`.
+- Every category, topic, phase, plan task, Canada step and question in `data/*.json` has an `id` (lowercase words with dashes, e.g. `moc-delegation`, `q-pharm-heparin-antidote`). Questions link to a topic by `topic: "<topicId>"`.
+
+## Content order and IDs
+- Content can be **reordered, inserted or removed** safely.
+- **Never change or reuse an existing ID**: progress is attached to it. To fix a typo in a name, change the text, not the `id`.
+- New items need a new unique `id`; `tests/check-data.js` checks this.
+- `LEGACY_V3` in `js/store.js` is a frozen copy of the old position → ID mapping, used only to migrate old progress. Never edit it.
 - Dates use the phone's local calendar day (`dayKey()`), not UTC.
