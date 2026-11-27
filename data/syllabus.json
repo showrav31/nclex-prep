@@ -1,148 +1,399 @@
 {
  "categories": [
   {
+   "id": "moc",
    "group": "Safe and Effective Care Environment",
    "name": "Management of Care",
    "short": "MoC",
    "weight": "15–21%",
    "topics": [
-    "Advance directives & client rights",
-    "Advocacy",
-    "Assignment, delegation & supervision",
-    "Case management & continuity of care",
-    "Client confidentiality / privacy",
-    "Collaboration with the interprofessional team",
-    "Concepts of management & leadership",
-    "Establishing priorities",
-    "Ethical practice",
-    "Informed consent",
-    "Information technology & documentation",
-    "Legal rights & responsibilities",
-    "Performance improvement (quality)",
-    "Referrals"
+    {
+     "id": "moc-advance-directives",
+     "name": "Advance directives & client rights"
+    },
+    {
+     "id": "moc-advocacy",
+     "name": "Advocacy"
+    },
+    {
+     "id": "moc-delegation",
+     "name": "Assignment, delegation & supervision"
+    },
+    {
+     "id": "moc-case-management",
+     "name": "Case management & continuity of care"
+    },
+    {
+     "id": "moc-confidentiality",
+     "name": "Client confidentiality / privacy"
+    },
+    {
+     "id": "moc-collaboration",
+     "name": "Collaboration with the interprofessional team"
+    },
+    {
+     "id": "moc-leadership",
+     "name": "Concepts of management & leadership"
+    },
+    {
+     "id": "moc-priorities",
+     "name": "Establishing priorities"
+    },
+    {
+     "id": "moc-ethics",
+     "name": "Ethical practice"
+    },
+    {
+     "id": "moc-informed-consent",
+     "name": "Informed consent"
+    },
+    {
+     "id": "moc-documentation",
+     "name": "Information technology & documentation"
+    },
+    {
+     "id": "moc-legal",
+     "name": "Legal rights & responsibilities"
+    },
+    {
+     "id": "moc-quality",
+     "name": "Performance improvement (quality)"
+    },
+    {
+     "id": "moc-referrals",
+     "name": "Referrals"
+    }
    ]
   },
   {
+   "id": "safety",
    "group": "Safe and Effective Care Environment",
    "name": "Safety and Infection Prevention and Control",
    "short": "Safety",
    "weight": "10–16%",
    "topics": [
-    "Accident, error & injury prevention",
-    "Emergency response plan & triage",
-    "Ergonomic principles & safe handling",
-    "Handling hazardous & infectious materials",
-    "Home safety",
-    "Reporting incidents",
-    "Safe use of equipment",
-    "Security plan",
-    "Standard & transmission-based precautions",
-    "Surgical asepsis",
-    "Restraints & safety devices"
+    {
+     "id": "safety-injury-prevention",
+     "name": "Accident, error & injury prevention"
+    },
+    {
+     "id": "safety-emergency-triage",
+     "name": "Emergency response plan & triage"
+    },
+    {
+     "id": "safety-ergonomics",
+     "name": "Ergonomic principles & safe handling"
+    },
+    {
+     "id": "safety-hazardous-materials",
+     "name": "Handling hazardous & infectious materials"
+    },
+    {
+     "id": "safety-home",
+     "name": "Home safety"
+    },
+    {
+     "id": "safety-incident-reports",
+     "name": "Reporting incidents"
+    },
+    {
+     "id": "safety-equipment",
+     "name": "Safe use of equipment"
+    },
+    {
+     "id": "safety-security",
+     "name": "Security plan"
+    },
+    {
+     "id": "safety-precautions",
+     "name": "Standard & transmission-based precautions"
+    },
+    {
+     "id": "safety-surgical-asepsis",
+     "name": "Surgical asepsis"
+    },
+    {
+     "id": "safety-restraints",
+     "name": "Restraints & safety devices"
+    }
    ]
   },
   {
+   "id": "health",
    "group": "Health Promotion and Maintenance",
    "name": "Health Promotion and Maintenance",
    "short": "Health Promo",
    "weight": "6–12%",
    "topics": [
-    "Aging process",
-    "Ante / intra / postpartum & newborn care",
-    "Developmental stages & transitions",
-    "Growth & development (paediatrics)",
-    "Health promotion, disease prevention & immunizations",
-    "Health screening",
-    "High-risk behaviours",
-    "Lifestyle choices",
-    "Self-care",
-    "Physical assessment techniques"
+    {
+     "id": "health-aging",
+     "name": "Aging process"
+    },
+    {
+     "id": "health-maternal-newborn",
+     "name": "Ante / intra / postpartum & newborn care"
+    },
+    {
+     "id": "health-developmental-stages",
+     "name": "Developmental stages & transitions"
+    },
+    {
+     "id": "health-growth-development",
+     "name": "Growth & development (paediatrics)"
+    },
+    {
+     "id": "health-prevention-immunizations",
+     "name": "Health promotion, disease prevention & immunizations"
+    },
+    {
+     "id": "health-screening",
+     "name": "Health screening"
+    },
+    {
+     "id": "health-high-risk-behaviours",
+     "name": "High-risk behaviours"
+    },
+    {
+     "id": "health-lifestyle",
+     "name": "Lifestyle choices"
+    },
+    {
+     "id": "health-self-care",
+     "name": "Self-care"
+    },
+    {
+     "id": "health-physical-assessment",
+     "name": "Physical assessment techniques"
+    }
    ]
   },
   {
+   "id": "psych",
    "group": "Psychosocial Integrity",
    "name": "Psychosocial Integrity",
    "short": "Psychosocial",
    "weight": "6–12%",
    "topics": [
-    "Abuse / neglect",
-    "Behavioural interventions",
-    "Substance use disorders & withdrawal",
-    "Coping mechanisms",
-    "Crisis intervention",
-    "Cultural awareness & spirituality",
-    "End-of-life & grief",
-    "Family dynamics",
-    "Mental health concepts",
-    "Sensory / perceptual alterations",
-    "Stress management",
-    "Support systems",
-    "Therapeutic communication",
-    "Therapeutic environment"
+    {
+     "id": "psych-abuse-neglect",
+     "name": "Abuse / neglect"
+    },
+    {
+     "id": "psych-behavioural-interventions",
+     "name": "Behavioural interventions"
+    },
+    {
+     "id": "psych-substance-use",
+     "name": "Substance use disorders & withdrawal"
+    },
+    {
+     "id": "psych-coping",
+     "name": "Coping mechanisms"
+    },
+    {
+     "id": "psych-crisis",
+     "name": "Crisis intervention"
+    },
+    {
+     "id": "psych-culture-spirituality",
+     "name": "Cultural awareness & spirituality"
+    },
+    {
+     "id": "psych-end-of-life",
+     "name": "End-of-life & grief"
+    },
+    {
+     "id": "psych-family-dynamics",
+     "name": "Family dynamics"
+    },
+    {
+     "id": "psych-mental-health",
+     "name": "Mental health concepts"
+    },
+    {
+     "id": "psych-sensory-perceptual",
+     "name": "Sensory / perceptual alterations"
+    },
+    {
+     "id": "psych-stress",
+     "name": "Stress management"
+    },
+    {
+     "id": "psych-support-systems",
+     "name": "Support systems"
+    },
+    {
+     "id": "psych-therapeutic-communication",
+     "name": "Therapeutic communication"
+    },
+    {
+     "id": "psych-therapeutic-environment",
+     "name": "Therapeutic environment"
+    }
    ]
   },
   {
+   "id": "basic",
    "group": "Physiological Integrity",
    "name": "Basic Care and Comfort",
    "short": "Basic Care",
    "weight": "6–12%",
    "topics": [
-    "Assistive devices",
-    "Elimination",
-    "Mobility / immobility",
-    "Non-pharmacological comfort",
-    "Nutrition & oral hydration",
-    "Personal hygiene",
-    "Rest & sleep"
+    {
+     "id": "basic-assistive-devices",
+     "name": "Assistive devices"
+    },
+    {
+     "id": "basic-elimination",
+     "name": "Elimination"
+    },
+    {
+     "id": "basic-mobility",
+     "name": "Mobility / immobility"
+    },
+    {
+     "id": "basic-comfort",
+     "name": "Non-pharmacological comfort"
+    },
+    {
+     "id": "basic-nutrition",
+     "name": "Nutrition & oral hydration"
+    },
+    {
+     "id": "basic-hygiene",
+     "name": "Personal hygiene"
+    },
+    {
+     "id": "basic-rest-sleep",
+     "name": "Rest & sleep"
+    }
    ]
   },
   {
+   "id": "pharm",
    "group": "Physiological Integrity",
    "name": "Pharmacological and Parenteral Therapies",
    "short": "Pharm",
    "weight": "13–19%",
    "topics": [
-    "Adverse effects / contraindications / interactions",
-    "Blood & blood products",
-    "Central venous access devices",
-    "Dosage calculation",
-    "Expected actions / outcomes",
-    "Medication administration",
-    "Parenteral / IV therapies",
-    "Pharmacological pain management",
-    "Total parenteral nutrition",
-    "High-alert medications"
+    {
+     "id": "pharm-adverse-effects",
+     "name": "Adverse effects / contraindications / interactions"
+    },
+    {
+     "id": "pharm-blood-products",
+     "name": "Blood & blood products"
+    },
+    {
+     "id": "pharm-central-lines",
+     "name": "Central venous access devices"
+    },
+    {
+     "id": "pharm-dosage-calculation",
+     "name": "Dosage calculation"
+    },
+    {
+     "id": "pharm-expected-actions",
+     "name": "Expected actions / outcomes"
+    },
+    {
+     "id": "pharm-med-administration",
+     "name": "Medication administration"
+    },
+    {
+     "id": "pharm-iv-therapy",
+     "name": "Parenteral / IV therapies"
+    },
+    {
+     "id": "pharm-pain-management",
+     "name": "Pharmacological pain management"
+    },
+    {
+     "id": "pharm-tpn",
+     "name": "Total parenteral nutrition"
+    },
+    {
+     "id": "pharm-high-alert",
+     "name": "High-alert medications"
+    }
    ]
   },
   {
+   "id": "risk",
    "group": "Physiological Integrity",
    "name": "Reduction of Risk Potential",
    "short": "Risk Reduction",
    "weight": "9–15%",
    "topics": [
-    "Changes in vital signs",
-    "Diagnostic tests",
-    "Laboratory values",
-    "Potential for alterations in body systems",
-    "Complications of procedures / surgery",
-    "System-specific assessments",
-    "Therapeutic procedures"
+    {
+     "id": "risk-vital-signs",
+     "name": "Changes in vital signs"
+    },
+    {
+     "id": "risk-diagnostic-tests",
+     "name": "Diagnostic tests"
+    },
+    {
+     "id": "risk-lab-values",
+     "name": "Laboratory values"
+    },
+    {
+     "id": "risk-body-system-alterations",
+     "name": "Potential for alterations in body systems"
+    },
+    {
+     "id": "risk-procedure-complications",
+     "name": "Complications of procedures / surgery"
+    },
+    {
+     "id": "risk-system-assessments",
+     "name": "System-specific assessments"
+    },
+    {
+     "id": "risk-therapeutic-procedures",
+     "name": "Therapeutic procedures"
+    }
    ]
   },
   {
+   "id": "phys",
    "group": "Physiological Integrity",
    "name": "Physiological Adaptation",
    "short": "Phys Adaptation",
    "weight": "11–17%",
    "topics": [
-    "Alterations in body systems",
-    "Fluid & electrolyte imbalances",
-    "Acid–base / ABGs",
-    "Hemodynamics & dysrhythmias",
-    "Illness management",
-    "Medical emergencies",
-    "Pathophysiology",
-    "Unexpected response to therapies"
+    {
+     "id": "phys-body-system-alterations",
+     "name": "Alterations in body systems"
+    },
+    {
+     "id": "phys-fluid-electrolytes",
+     "name": "Fluid & electrolyte imbalances"
+    },
+    {
+     "id": "phys-acid-base",
+     "name": "Acid–base / ABGs"
+    },
+    {
+     "id": "phys-hemodynamics",
+     "name": "Hemodynamics & dysrhythmias"
+    },
+    {
+     "id": "phys-illness-management",
+     "name": "Illness management"
+    },
+    {
+     "id": "phys-medical-emergencies",
+     "name": "Medical emergencies"
+    },
+    {
+     "id": "phys-pathophysiology",
+     "name": "Pathophysiology"
+    },
+    {
+     "id": "phys-unexpected-response",
+     "name": "Unexpected response to therapies"
+    }
    ]
   }
  ]

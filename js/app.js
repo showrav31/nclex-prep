@@ -1,6 +1,8 @@
 /* NCLEX-RN Study — app logic. Content lives in data/*.json, saved progress in js/store.js. */
 
 let CATS = [], Q = [], PHASES = [], CAN = {}, REF = {}, GUIDE = {};
+let CAT = {}, TOPIC = {}; // lookups by ID: CAT[catId], TOPIC[topicId] = {id, name, cat}
+const catOf = q => TOPIC[q.topic].cat;
 const $ = id => document.getElementById(id);
 const MINUTES = [[15, "15 min"], [30, "30 min"], [45, "45 min"], [60, "1 hour"], [90, "1½ hours+"]];
 
@@ -10,7 +12,9 @@ function save() { persist(); renderStats(); }
 const DATA = ["syllabus", "questions", "plan", "canada", "reference", "exam-guide"];
 Promise.all(DATA.map(f => fetch("data/" + f + ".json").then(r => { if (!r.ok) throw new Error(f); return r.json(); })))
   .then(([syl, qs, plan, can, ref, guide]) => {
-    CATS = syl.categories; Q = qs.questions; PHASES = plan.phases; CAN = can; REF = ref; GUIDE = guide;
+    CATS = syl.categories; PHASES = plan.phases; CAN = can; REF = ref; GUIDE = guide;
+    CATS.forEach(c => { CAT[c.id] = c; c.topics.forEach(t => TOPIC[t.id] = { ...t, cat: c.id }); });
+    Q = qs.questions.filter(q => TOPIC[q.topic]); // skip any question whose topic was removed
     start();
   })
   .catch(() => {
@@ -130,12 +134,12 @@ function renderHome() {
 
 function renderStats() {
   let tot = 0, conf = 0;
-  CATS.forEach((c, ci) => c.topics.forEach((_, ti) => { tot++; if (S.lv[ci + "-" + ti] == 3) conf++; }));
+  CATS.forEach(c => c.topics.forEach(t => { tot++; if (S.lv[t.id] == 3) conf++; }));
   $("sSyl").textContent = tot ? Math.round(conf / tot * 100) + "%" : "0%";
   let pt = 0, pd = 0;
-  PHASES.forEach((p, pi) => p.tasks.forEach((_, ti) => { pt++; if (S.plan[pi + "-" + ti]) pd++; }));
+  PHASES.forEach(p => p.tasks.forEach(t => { pt++; if (S.plan[t.id]) pd++; }));
   $("sPlan").textContent = pt ? Math.round(pd / pt * 100) + "%" : "0%";
-  const st = Object.values(S.stat), n = st.reduce((s, x) => s + x.n, 0), c = st.reduce((s, x) => s + x.c, 0);
+  const st = CATS.map(c => S.stat[c.id]).filter(Boolean), n = st.reduce((s, x) => s + x.n, 0), c = st.reduce((s, x) => s + x.c, 0);
   $("sQ").textContent = n;
   $("sAcc").textContent = n ? Math.round(c / n * 100) + "%" : "–";
 }
@@ -144,9 +148,9 @@ function renderStats() {
    Weak topics first, then topics not rated yet (rotating categories), then OK, then review. */
 function todayTask() {
   const d = dayKey(), t = S.task;
-  if (t && t.d === d && CATS[t.c] && CATS[t.c].topics[t.tp] !== undefined) return t;
+  if (t && t.d === d && TOPIC[t.topic]) return t;
   const all = [];
-  CATS.forEach((c, ci) => c.topics.forEach((_, ti) => all.push({ c: ci, tp: ti, v: S.lv[ci + "-" + ti] || 0 })));
+  CATS.forEach(c => c.topics.forEach(tp => all.push({ c: c.id, id: tp.id, v: S.lv[tp.id] || 0 })));
   const n = Math.floor(Date.parse(d + "T00:00:00Z") / 864e5);
   const by = v => all.filter(x => x.v === v);
   const weak = by(1), fresh = by(0), ok = by(2);
@@ -158,27 +162,27 @@ function todayTask() {
   }
   else if (ok.length) { p = ok[n % ok.length]; why = "ok"; }
   else { p = all[n % all.length]; why = "review"; }
-  S.task = { d, c: p.c, tp: p.tp, why, done: false };
+  S.task = { d, topic: p.id, why, done: false };
   persist();
   return S.task;
 }
 
 function renderTask() {
-  const t = todayTask(), cat = CATS[t.c], topic = cat.topics[t.tp], m = S.minutes || 30;
-  const nq = Q.filter(q => q.cat === t.c).length;
+  const t = todayTask(), topic = TOPIC[t.topic], cat = CAT[topic.cat], m = S.minutes || 30;
+  const nq = Q.filter(q => catOf(q) === cat.id).length;
   const qn = Math.min(nq, m <= 15 ? 5 : m <= 30 ? 10 : m <= 45 ? 15 : 20);
   const read = Math.max(5, m - Math.round(qn * 1.5) - (m >= 60 ? 10 : 0));
   const why = { weak: "You marked this <b>Weak</b>, so let's make it stronger.", new: "A topic you haven't rated yet.", ok: "Rated <b>OK</b>: let's push it to Confident.", review: "Everything is Confident! Quick review to keep it fresh." }[t.why];
-  const v = S.lv[t.c + "-" + t.tp] || 0;
+  const v = S.lv[t.topic] || 0;
   let h = `<h3><span>📌 Today's study task</span><span class="pill ${t.done ? "done" : ""}">${t.done ? "Done ✔" : "~" + m + " min"}</span></h3>
-  <div class="topicname">${topic}</div><div class="note">${cat.name} · ${why}</div>`;
+  <div class="topicname">${topic.name}</div><div class="note">${cat.name} · ${why}</div>`;
   if (t.done) {
     h += `<p style="margin:12px 0 4px">🎉 <b>Done for today!</b> Come back tomorrow to keep your streak going.</p>
-    <div class="row"><button class="btn ghost" onclick="startQuiz(${t.c})">Practise more</button><button class="btn ghost" onclick="taskDone(false)">Undo</button></div>`;
+    <div class="row"><button class="btn ghost" onclick="startQuiz('${cat.id}')">Practise more</button><button class="btn ghost" onclick="taskDone(false)">Undo</button></div>`;
   } else {
     h += `<ol>
-    <li>📖 <b>Review the topic</b> for about ${read} min in your textbook or notes. <a href="#learn/syllabus" onclick="event.preventDefault();openCat(${t.c})">See it in the syllabus</a></li>
-    ${qn ? `<li>✍️ <b>Answer ${qn} questions</b> on ${cat.short}.<br><button class="btn" style="margin-top:6px" onclick="startQuiz(${t.c},${qn},true)">Start practice ▶</button></li>` : ""}
+    <li>📖 <b>Review the topic</b> for about ${read} min in your textbook or notes. <a href="#learn/syllabus" onclick="event.preventDefault();openCat('${cat.id}')">See it in the syllabus</a></li>
+    ${qn ? `<li>✍️ <b>Answer ${qn} questions</b> on ${cat.short}.<br><button class="btn" style="margin-top:6px" onclick="startQuiz('${cat.id}',${qn},true)">Start practice ▶</button></li>` : ""}
     ${m >= 60 ? `<li>🧪 <b>10 min quick review</b>: <a href="#learn/quick">lab values & drug suffixes</a></li>` : ""}
     <li>⭐ <b>How do you feel about it now?</b><div class="lvl" style="margin-top:6px">${["Weak", "OK", "Confident"].map((l, i) => `<button class="s${i + 1} ${v == i + 1 ? "on" : ""}" onclick="rateTask(${i + 1})">${l}</button>`).join("")}</div></li>
     </ol><button class="btn block" onclick="taskDone(true)">✔ I've done today's task</button>`;
@@ -187,14 +191,14 @@ function renderTask() {
   $("hTask").innerHTML = h;
 }
 
-function rateTask(v) { const t = todayTask(); setLv(t.c + "-" + t.tp, v, true); renderTask(); }
+function rateTask(v) { setLv(todayTask().topic, v, true); renderTask(); }
 function taskDone(done) {
   const t = todayTask(); t.done = done;
   if (done) markActive();
   save(); renderHome();
 }
-function openCat(ci) {
-  pendingScroll = $("c" + ci);
+function openCat(cid) {
+  pendingScroll = $("c-" + cid);
   if (pendingScroll) pendingScroll.classList.add("open");
   go("learn", "syllabus");
 }
@@ -203,14 +207,14 @@ function openCat(ci) {
 function renderCats() {
   const open = [...document.querySelectorAll("#cats .open")].map(e => e.id);
   let h = "", lastG = "";
-  CATS.forEach((c, ci) => {
+  CATS.forEach(c => {
     if (c.group !== lastG) { h += `<div class="group">${c.group}</div>`; lastG = c.group; }
-    const nq = Q.filter(q => q.cat === ci).length;
-    h += `<div class="card" id="c${ci}"><div class="head" onclick="this.parentNode.classList.toggle('open')"><h3>${c.name}</h3><span class="pill">${c.weight} of exam</span></div><div class="bar"><i id="b${ci}"></i></div><div class="note" id="p${ci}" style="margin-top:6px"></div><div class="body">
-    <button class="btn ghost" style="margin-bottom:8px" onclick="startQuiz(${ci})">Practise ${nq} questions on this ▶</button>`;
-    c.topics.forEach((t, ti) => {
-      const k = ci + "-" + ti, v = S.lv[k] || 0;
-      h += `<div class="topic"><span>${t}</span><div class="lvl">${["Weak", "OK", "Confident"].map((l, i) => `<button class="s${i + 1} ${v == i + 1 ? "on" : ""}" onclick="setLv('${k}',${i + 1})">${l}</button>`).join("")}</div></div>`;
+    const nq = Q.filter(q => catOf(q) === c.id).length;
+    h += `<div class="card" id="c-${c.id}"><div class="head" onclick="this.parentNode.classList.toggle('open')"><h3>${c.name}</h3><span class="pill">${c.weight} of exam</span></div><div class="bar"><i id="b-${c.id}"></i></div><div class="note" id="p-${c.id}" style="margin-top:6px"></div><div class="body">
+    <button class="btn ghost" style="margin-bottom:8px" onclick="startQuiz('${c.id}')">Practise ${nq} questions on this ▶</button>`;
+    c.topics.forEach(t => {
+      const k = t.id, v = S.lv[k] || 0;
+      h += `<div class="topic"><span>${t.name}</span><div class="lvl">${["Weak", "OK", "Confident"].map((l, i) => `<button class="s${i + 1} ${v == i + 1 ? "on" : ""}" onclick="setLv('${k}',${i + 1})">${l}</button>`).join("")}</div></div>`;
     });
     h += `</div></div>`;
   });
@@ -226,12 +230,12 @@ function setLv(k, v, keep) {
 }
 
 function catBars() {
-  CATS.forEach((c, ci) => {
+  CATS.forEach(c => {
     let conf = 0, weak = 0;
-    c.topics.forEach((_, ti) => { const v = S.lv[ci + "-" + ti]; if (v == 3) conf++; if (v == 1) weak++; });
-    $("b" + ci).style.width = (conf / c.topics.length * 100) + "%";
-    const st = S.stat[ci];
-    $("p" + ci).textContent = `${conf}/${c.topics.length} confident${weak ? ` · ${weak} weak` : ""}${st ? ` · quiz ${Math.round(st.c / st.n * 100)}%` : ""} · tap to open`;
+    c.topics.forEach(t => { const v = S.lv[t.id]; if (v == 3) conf++; if (v == 1) weak++; });
+    $("b-" + c.id).style.width = (conf / c.topics.length * 100) + "%";
+    const st = S.stat[c.id];
+    $("p-" + c.id).textContent = `${conf}/${c.topics.length} confident${weak ? ` · ${weak} weak` : ""}${st ? ` · quiz ${Math.round(st.c / st.n * 100)}%` : ""} · tap to open`;
   });
 }
 
@@ -239,44 +243,44 @@ function catBars() {
 function renderPhases() {
   const open = [...document.querySelectorAll("#phases .open")].map(e => e.id), now = new Date();
   const fmt = d => new Date(d + "T00:00:00").toLocaleDateString(undefined, { month: "short", year: "numeric" });
-  $("phases").innerHTML = PHASES.map((p, pi) => {
-    const done = p.tasks.filter((_, ti) => S.plan[pi + "-" + ti]).length, all = done == p.tasks.length;
+  $("phases").innerHTML = PHASES.map(p => {
+    const done = p.tasks.filter(t => S.plan[t.id]).length, all = done == p.tasks.length;
     const cur = now >= new Date(p.start + "T00:00:00") && now <= new Date(p.end + "T23:59:59");
-    return `<div class="card phase ${all ? "complete" : cur ? "now" : ""}" id="ph${pi}"><div class="head" onclick="this.parentNode.classList.toggle('open')"><div><h3>${all ? "✔ " : ""}${p.name}</h3><div class="when">${fmt(p.start)} – ${fmt(p.end)}${cur ? " · <b style='color:var(--amber)'>you are here</b>" : ""}</div></div><span class="pill ${all ? "done" : ""}">${done}/${p.tasks.length}</span></div>
+    return `<div class="card phase ${all ? "complete" : cur ? "now" : ""}" id="ph-${p.id}"><div class="head" onclick="this.parentNode.classList.toggle('open')"><div><h3>${all ? "✔ " : ""}${p.name}</h3><div class="when">${fmt(p.start)} – ${fmt(p.end)}${cur ? " · <b style='color:var(--amber)'>you are here</b>" : ""}</div></div><span class="pill ${all ? "done" : ""}">${done}/${p.tasks.length}</span></div>
     <div class="bar"><i style="width:${done / p.tasks.length * 100}%"></i></div>
-    <div class="body"><p class="note" style="margin:0 0 6px">🎯 ${p.goal}</p>${p.tasks.map((t, ti) => {
-      const k = pi + "-" + ti, c = S.plan[k];
+    <div class="body"><p class="note" style="margin:0 0 6px">🎯 ${p.goal}</p>${p.tasks.map(t => {
+      const k = t.id, c = S.plan[k];
       return `<label class="check ${c ? "done" : ""}"><input type="checkbox" ${c ? "checked" : ""} onchange="setPlan('${k}',this.checked)"><span><b style="font-weight:500">${t.title}</b>${t.hint ? `<small>${t.hint}</small>` : ""}</span></label>`;
     }).join("")}
-    <div class="row"><button class="btn ghost" onclick="markPhase(${pi},1)">Mark whole phase done</button><button class="btn ghost" onclick="markPhase(${pi},0)">Untick all</button></div></div></div>`;
+    <div class="row"><button class="btn ghost" onclick="markPhase('${p.id}',1)">Mark whole phase done</button><button class="btn ghost" onclick="markPhase('${p.id}',0)">Untick all</button></div></div></div>`;
   }).join("");
   open.forEach(id => $(id) && $(id).classList.add("open"));
-  if (!open.length) { const i = PHASES.findIndex(p => now <= new Date(p.end + "T23:59:59")); const el = $("ph" + Math.max(0, i)); if (el) el.classList.add("open"); }
+  if (!open.length) { const i = PHASES.findIndex(p => now <= new Date(p.end + "T23:59:59")); const el = $("ph-" + PHASES[Math.max(0, i)].id); if (el) el.classList.add("open"); }
 }
 function setPlan(k, v) { S.plan[k] = v; if (v) markActive(); save(); renderPhases(); }
-function markPhase(pi, v) {
+function markPhase(pid, v) {
   if (!v && !confirm("Untick every task in this phase?")) return;
-  PHASES[pi].tasks.forEach((_, ti) => S.plan[pi + "-" + ti] = !!v);
+  PHASES.find(p => p.id === pid).tasks.forEach(t => S.plan[t.id] = !!v);
   if (v) markActive();
   save(); renderPhases();
 }
 
 /* ---------- PRACTICE ---------- */
-let qf = -1, QZ = null;
+let qf = "", QZ = null; // qf: category ID to practise, "" = all
 
 function renderFilter() {
-  $("qfilter").innerHTML = [`<button class="chip ${qf == -1 ? "on" : ""}" onclick="qf=-1;renderFilter()">All</button>`]
-    .concat(CATS.map((c, i) => `<button class="chip ${qf == i ? "on" : ""}" onclick="qf=${i};renderFilter()">${c.short}</button>`)).join("");
+  $("qfilter").innerHTML = [`<button class="chip ${!qf ? "on" : ""}" onclick="qf='';renderFilter()">All</button>`]
+    .concat(CATS.map(c => `<button class="chip ${qf == c.id ? "on" : ""}" onclick="qf='${c.id}';renderFilter()">${c.short}</button>`)).join("");
   $("bankInfo").textContent = Q.length + " questions in the bank.";
 }
 
 function shuffle(a) { return a.map(x => [Math.random(), x]).sort((p, q) => p[0] - q[0]).map(x => x[1]); }
 
-/* ci: category (undefined = use the filter), n: how many, fromTask: started from Home's task */
-function startQuiz(ci, n, fromTask) {
-  if (ci !== undefined) { qf = ci; renderFilter(); }
-  let pool = shuffle(Q.filter(q => qf == -1 || q.cat == qf));
-  if ($("qweak").checked) pool.sort((a, b) => (S.lv[b.cat + "-" + b.topic] == 1) - (S.lv[a.cat + "-" + a.topic] == 1));
+/* cid: category ID (undefined = use the filter), n: how many, fromTask: started from Home's task */
+function startQuiz(cid, n, fromTask) {
+  if (cid !== undefined) { qf = cid; renderFilter(); }
+  let pool = shuffle(Q.filter(q => !qf || catOf(q) === qf));
+  if ($("qweak").checked) pool.sort((a, b) => (S.lv[b.topic] == 1) - (S.lv[a.topic] == 1));
   pool = pool.slice(0, n || +$("qn").value);
   QZ = { list: pool, i: 0, score: 0, sel: [], sub: false, task: !!fromTask, cat: qf };
   $("quiz").hidden = false;
@@ -292,7 +296,7 @@ function drawQ() {
   const z = QZ;
   if (z.i >= z.list.length) return finishQuiz();
   const q = z.list[z.i];
-  let h = `<div class="qmeta"><span>Question ${z.i + 1} of ${z.list.length} · Score ${z.score}</span><span><span class="qtype">${TYPE_NAMES[q.type]}</span> · ${CATS[q.cat].short} · ${CATS[q.cat].topics[q.topic]}</span></div><div class="bar" style="margin:0 0 12px"><i style="width:${z.i / z.list.length * 100}%"></i></div><div class="stem">${q.stem}</div>`;
+  let h = `<div class="qmeta"><span>Question ${z.i + 1} of ${z.list.length} · Score ${z.score}</span><span><span class="qtype">${TYPE_NAMES[q.type]}</span> · ${CAT[catOf(q)].short} · ${TOPIC[q.topic].name}</span></div><div class="bar" style="margin:0 0 12px"><i style="width:${z.i / z.list.length * 100}%"></i></div><div class="stem">${q.stem}</div>`;
   if (q.type == "matrix") {
     h += `<div class="scroll"><table class="matrix"><tr><th></th>${q.cols.map(c => `<th style="text-align:center">${c}</th>`).join("")}</tr>${q.rows.map((r, ri) => `<tr><td>${r.text}</td>${q.cols.map((_, ci) => {
       let cls = ""; if (z.sub && ci == r.answer) cls = "right"; else if (z.sub && z.sel[ri] == ci) cls = "wrong";
@@ -334,15 +338,15 @@ function submitQ() {
   else ok = q.answer[0] == z.sel[0];
   z.sub = true; z.last = ok; z.partial = partial;
   if (ok) z.score++;
-  const st = S.stat[q.cat] || (S.stat[q.cat] = { n: 0, c: 0 });
+  const cid = catOf(q), st = S.stat[cid] || (S.stat[cid] = { n: 0, c: 0 });
   st.n++; if (ok) st.c++;
-  if (!ok) { const k = q.cat + "-" + q.topic; if (!S.lv[k] || S.lv[k] == 2) S.lv[k] = 1; }
+  if (!ok) { const k = q.topic; if (!S.lv[k] || S.lv[k] == 2) S.lv[k] = 1; }
   markActive(); save(); drawQ();
 }
 
 function finishQuiz() {
   const z = QZ, p = Math.round(z.score / z.list.length * 100);
-  S.sessions.push({ d: dayKey(), q: z.list.length, c: z.score, cat: z.cat == -1 ? "All" : CATS[z.cat].short });
+  S.sessions.push({ d: dayKey(), q: z.list.length, c: z.score, cat: z.cat ? CAT[z.cat].short : "All", cid: z.cat || "all" });
   let taskMsg = "";
   if (z.task && S.task && S.task.d === dayKey() && !S.task.done) {
     S.task.done = true;
@@ -357,8 +361,8 @@ function renderLog() {
   const L = S.sessions.slice(-30);
   $("chart").innerHTML = L.map(r => { const a = Math.round(r.c / r.q * 100); return `<div class="${a < 60 ? "low" : ""}" style="height:${Math.max(a, 3)}%" title="${r.d}: ${a}%"></div>`; }).join("") || '<span class="note" style="margin:auto">No sessions yet</span>';
   $("hist").innerHTML = S.sessions.slice(-8).reverse().map(r => `<tr><td>${r.d}</td><td>${r.cat}</td><td>${r.c}/${r.q}</td><td>${Math.round(r.c / r.q * 100)}%</td></tr>`).join("");
-  $("catAcc").innerHTML = CATS.map((c, i) => {
-    const s = S.stat[i], a = s ? Math.round(s.c / s.n * 100) : null;
+  $("catAcc").innerHTML = CATS.map(c => {
+    const s = S.stat[c.id], a = s ? Math.round(s.c / s.n * 100) : null;
     return `<div class="catrow"><span>${c.name}</span><div class="bar" style="margin:0"><i style="width:${a || 0}%;${a !== null && a < 60 ? "background:var(--rose)" : ""}"></i></div><b style="text-align:right">${a === null ? "–" : a + "%"}</b></div>`;
   }).join("");
 }
@@ -486,8 +490,8 @@ $("optName").addEventListener("change", e => { const n = e.target.value.trim(); 
 $("optExam").addEventListener("change", e => { if (e.target.value) { S.exam = e.target.value; save(); } else e.target.value = S.exam; });
 
 function renderCan() {
-  const steps = CAN.steps, d = steps.filter((_, i) => S.can[i]).length;
+  const steps = CAN.steps, d = steps.filter(c => S.can[c.id]).length;
   $("canBar").style.width = d / steps.length * 100 + "%";
-  $("canList").innerHTML = steps.map((c, i) => `<label class="check ${S.can[i] ? "done" : ""}"><input type="checkbox" ${S.can[i] ? "checked" : ""} onchange="S.can[${i}]=this.checked;save();renderCan()"><span><b style="font-weight:500">${c.title}</b>${c.hint ? `<small>${c.hint}</small>` : ""}</span></label>`).join("");
+  $("canList").innerHTML = steps.map(c => `<label class="check ${S.can[c.id] ? "done" : ""}"><input type="checkbox" ${S.can[c.id] ? "checked" : ""} onchange="S.can['${c.id}']=this.checked;save();renderCan()"><span><b style="font-weight:500">${c.title}</b>${c.hint ? `<small>${c.hint}</small>` : ""}</span></label>`).join("");
   $("canLinks").innerHTML = CAN.links.map(l => `<li><a href="${l.url}" target="_blank" rel="noopener">${l.label}</a></li>`).join("");
 }

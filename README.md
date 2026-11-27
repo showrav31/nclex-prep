@@ -8,6 +8,7 @@ A mobile-first study app for the NCLEX-RN: the official Client Needs syllabus wi
 - `index.html`, `css/style.css`, `js/store.js`, `js/app.js`: the app
 - `data/*.json`: syllabus, questions, study plan, Canada roadmap, quick reference, exam guide
 - `sw.js`: offline support (bump its `VERSION` on every change)
+- `tests/`: `node tests/check-data.js` and `node tests/browser-test.js`
 
 ## Hosting
 Served by GitHub Pages from the `main` branch, root folder. No build step. All paths are relative because the site lives under `/nclex-prep/`.
