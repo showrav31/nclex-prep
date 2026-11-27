@@ -6,7 +6,7 @@
    can be reordered, inserted or removed safely. Never reuse a deleted ID. */
 
 const KEY = "nclexDash2";
-const VERSION = 4;
+const VERSION = 5;
 
 const DEFAULTS = () => ({
   v: VERSION,
@@ -20,7 +20,21 @@ const DEFAULTS = () => ({
   minutes: 30,        // daily study time in minutes
   setup: false,       // first-time setup finished
   days: {},           // "YYYY-MM-DD" -> number of study actions that day
-  task: null          // today's study task {d, topic, why, done}
+  task: null,         // today's study task {d, topic, why, done}
+  // v5: study tools
+  cards: {},          // flashcard SRS state: cardId -> {due, ivl, ease, reps, lapses}
+  fcNew: { d: "", n: 0 }, // new cards started today
+  fcReviews: 0,       // total flashcard reviews (for badges)
+  myCards: [],        // her own cards: {id, front, back, created}
+  notes: {},          // topic notes: topicId -> {text, updated}
+  freeNotes: [],      // free notes: {id, title, text, updated}
+  mistakes: {},       // questionId -> {topic, stem, rationale, first, last, n, why, fixed}
+  timer: { work: 25, brk: 5 },
+  timerRun: null,     // running timer {mode, end, left, topic, work}
+  study: {},          // timer minutes: "YYYY-MM-DD" -> {topicId|"general": minutes}
+  badges: {},         // badgeId -> date earned
+  theme: "auto",      // auto | light | dark
+  textSize: 1         // 1, 1.12, 1.25
 });
 
 /* FROZEN: the content order used by versions 1–3, which saved progress by
@@ -89,7 +103,9 @@ function migrate(x, raw) {
     if (Object.values(left).some(o => Object.keys(o).length)) x.unmapped = left;
     x.v = 4;
   }
-  // future: if (x.v < 5) { ...; x.v = 5; }
+  // v4 -> v5: study tools added. New fields get their defaults in loadState().
+  if (x.v < 5) x.v = 5;
+  // future: if (x.v < 6) { ...; x.v = 6; }
   return x;
 }
 
@@ -103,14 +119,17 @@ function loadState() {
     }
   }
   const s = Object.assign(DEFAULTS(), x && typeof x === "object" ? migrate(x, raw) : {});
-  ["lv", "can", "plan", "stat", "days"].forEach(k => { if (!s[k] || typeof s[k] !== "object") s[k] = {}; });
-  if (!Array.isArray(s.sessions)) s.sessions = [];
+  const d = DEFAULTS();
+  ["lv", "can", "plan", "stat", "days", "cards", "notes", "mistakes", "study", "badges", "timer", "fcNew"].forEach(k => { if (!s[k] || typeof s[k] !== "object" || Array.isArray(s[k])) s[k] = d[k]; });
+  ["sessions", "myCards", "freeNotes"].forEach(k => { if (!Array.isArray(s[k])) s[k] = []; });
   return s;
 }
 
 let S = loadState();
 
+let frozen = false; // set during restore/reset so nothing writes old data back before the reload
 function persist() {
+  if (frozen) return false;
   try { localStorage.setItem(KEY, JSON.stringify(S)); return true; }
   catch (e) { return false; }
 }

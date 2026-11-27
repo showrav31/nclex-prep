@@ -59,6 +59,10 @@
     <div class="count"><span class="n" id="hDays">–</span><span class="l" id="hDaysL">days to your exam</span></div>
     <div class="streak"><span class="n" id="hStreak">0</span><span class="l">day streak 🔥</span><div class="week" id="hWeek"></div></div>
   </div>
+  <div class="tiles">
+    <button class="tile" onclick="go('practice','cards')"><span class="n" id="hDue">0</span><span class="l">🃏 cards due today</span></button>
+    <button class="tile" onclick="openTimer()"><span class="n" id="hMin">0</span><span class="l">⏱️ min studied today · timer</span></button>
+  </div>
   <div class="card task" id="hTask"></div>
   <div class="stats">
     <div class="stat"><div class="n" id="sSyl">0%</div><div class="l">syllabus confident</div></div>
@@ -73,7 +77,8 @@
   <h2 class="title">Learn</h2>
   <div class="seg" id="learnTabs">
     <button data-sub="syllabus">Syllabus</button>
-    <button data-sub="ngn">The exam</button>
+    <button data-sub="notes">Notes</button>
+    <button data-sub="ngn">Exam</button>
     <button data-sub="quick">Quick ref</button>
   </div>
 
@@ -81,6 +86,13 @@
     <div class="card tip">✅ This is the <b>official NCLEX-RN syllabus</b>: the 8 Client Needs categories and exam weights from the NCSBN <b>2026 NCLEX-RN Test Plan</b> (in force April 2026 – March 2029). Tap a category, then rate each topic <b>Weak → OK → Confident</b>, or press <b>Practise</b> to get questions on it.</div>
     <div id="cats"></div>
     <p class="note">Topic lists follow the "related content" listed under each category in the official test plan, slightly condensed. Full official PDF: <a href="https://www.nclex.com/test-plans.page" target="_blank" rel="noopener">nclex.com/test-plans</a></p>
+  </div>
+
+  <div class="sub" id="notes">
+    <input class="search" id="noteSearch" type="search" placeholder="🔍 Search your notes">
+    <div class="row" style="margin:0 0 12px"><button class="btn" onclick="editFreeNote()">＋ New note</button></div>
+    <div class="card" id="noteList"></div>
+    <p class="note">Topic notes: tap 📝 next to any topic in the Syllabus.</p>
   </div>
 
   <div class="sub" id="ngn">
@@ -121,12 +133,22 @@
     <div class="card"><h3>Must-know lab values</h3><div class="scroll"><table id="labs"></table></div><p class="note">Typical adult ranges. Check against your course textbook.</p></div>
     <div class="card"><h3>Drug suffixes → class</h3><div class="scroll"><table id="drugs"></table></div></div>
     <div class="card"><h3>Isolation precautions</h3><div class="scroll"><table id="iso"></table></div></div>
+    <div class="card"><h3>High-alert medications & antidotes</h3><div class="scroll"><table id="antidotes"></table></div></div>
+    <div class="card"><h3>Normal vital signs by age</h3><div class="scroll"><table id="vitals"></table></div><p class="note" id="vitalsNote"></p></div>
+    <p class="note">All of these are also flashcard decks: Practice → Cards.</p>
   </div>
 </section>
 
 <!-- PRACTICE -->
 <section class="screen" id="practice">
   <h2 class="title">Practice</h2>
+  <div class="seg" id="practiceTabs">
+    <button data-sub="drill">Quiz</button>
+    <button data-sub="cards">Cards</button>
+    <button data-sub="mistakes">Mistakes</button>
+  </div>
+
+  <div class="sub" id="drill">
   <div class="card">
     <p class="note" style="margin-top:0">Pick a category (or all), then answer like the real exam: choose, press <b>Submit</b>, read the rationale. <span id="bankInfo"></span></p>
     <div class="chips scroll-x" id="qfilter"></div>
@@ -138,11 +160,35 @@
   </div>
   <div class="card" id="quiz" hidden></div>
   <div class="card tip">Commercial question banks such as UWorld and Archer are harder and much bigger. Scores of 55–65% there are common for students who go on to pass. Use this bank for daily practice on each topic, and a real bank in Phase 3.</div>
+  </div>
+
+  <div class="sub" id="cards">
+    <div class="card" id="fcStudy"></div>
+    <div class="card"><h3>Decks</h3><div id="fcDecks"></div></div>
+    <div class="card">
+      <h3>My own cards</h3>
+      <label class="field">Front (question)<textarea id="fcFront" rows="2" style="min-height:60px" maxlength="500"></textarea></label>
+      <label class="field">Back (answer)<textarea id="fcBack" rows="2" style="min-height:60px" maxlength="1000"></textarea></label>
+      <button class="btn" onclick="addMyCard()">＋ Add card</button>
+      <div id="fcMine" style="margin-top:10px"></div>
+    </div>
+  </div>
+
+  <div class="sub" id="mistakes">
+    <div class="card">
+      <p class="note" style="margin-top:0">Every question you get wrong is saved here with its rationale. Mark why you missed it, then retry until it's fixed.</p>
+      <div class="chips" id="mkFilter"></div>
+      <button class="btn block" id="mkRetry" onclick="retryMistakes()">Retry my mistakes ▶</button>
+    </div>
+    <div class="card" id="mkList"></div>
+  </div>
 </section>
 
 <!-- PROGRESS -->
 <section class="screen" id="progress">
   <h2 class="title">Progress</h2>
+  <div class="card"><h3>⏱️ Study time this week</h3><div class="wk" id="wkChart"></div><div id="wkTopics"></div><button class="btn ghost small" style="margin-top:10px" onclick="openTimer()">Open study timer</button></div>
+  <div class="card"><h3>🏅 Badges <span class="note" id="badgeCount"></span></h3><div class="badges" id="badgeGrid"></div></div>
   <div class="card"><h3>Accuracy by category</h3><div id="catAcc"></div></div>
   <div class="card"><h3>Session history</h3><div class="chart" id="chart"></div><p class="note">Each bar = one practice session. Red = below 60%.</p><div class="scroll"><table id="hist"></table></div></div>
   <h3 class="group">Study plan</h3>
@@ -159,6 +205,26 @@
     <label class="field">Target exam date <input id="optExam" type="date"></label>
     <div class="field">Daily study time<div class="choices" id="optMinutes"></div></div>
     <p class="note">Saved automatically on this phone. Your progress stays in this browser, so use the same browser each time.</p>
+  </div>
+  <div class="card">
+    <h3>🎨 Appearance</h3>
+    <div class="field">Theme<div class="choices" id="optTheme"></div></div>
+    <div class="field">Text size<div class="choices" id="optText"></div></div>
+  </div>
+  <div class="card">
+    <h3>💾 Backup</h3>
+    <p class="note">Save a copy of all your progress (ratings, cards, notes, mistakes, study time…). Do this now and then, and before changing phones.</p>
+    <div class="row"><button class="btn" onclick="exportDownload()">Download backup</button><button class="btn ghost" onclick="exportCopy()">Copy backup</button></div>
+    <h3 style="margin-top:16px">Restore</h3>
+    <p class="note">Choose a backup file, or paste the copied backup text below.</p>
+    <input type="file" id="importFile" accept=".json,application/json,text/plain" style="width:100%">
+    <textarea id="importText" placeholder="…or paste backup text here" style="margin-top:8px;min-height:80px"></textarea>
+    <button class="btn ghost" style="margin-top:8px" onclick="importBackup()">Restore backup</button>
+  </div>
+  <div class="card">
+    <h3>⚠️ Start over</h3>
+    <p class="note">Deletes all progress on this phone. A safety copy is kept, but download a backup first.</p>
+    <button class="btn danger" onclick="resetAll()">Reset all progress</button>
   </div>
   <h3 class="group">🇨🇦 Canada roadmap</h3>
   <div class="card tip">Goal: Registered Nurse in Canada. NNAS assessment and English tests take months, so start early. <b>Always confirm current steps on the official NNAS and regulator sites.</b></div>
@@ -177,7 +243,17 @@
   <button data-go="more"><span>☰</span>More</button>
 </nav>
 
+<button class="timebar" id="timebar" hidden onclick="openTimer()"></button>
+<div class="sheet" id="sheet" hidden><div class="sheet-in" id="sheetBody" role="dialog" aria-modal="true"></div></div>
+<div class="toast" id="toast" hidden role="status"></div>
+
 <script src="js/store.js"></script>
 <script src="js/app.js"></script>
+<script src="js/flashcards.js"></script>
+<script src="js/notes.js"></script>
+<script src="js/mistakes.js"></script>
+<script src="js/timer.js"></script>
+<script src="js/badges.js"></script>
+<script src="js/settings.js"></script>
 </body>
 </html>

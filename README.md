@@ -2,10 +2,10 @@
 
 **Live site:** https://showrav31.github.io/nclex-prep/
 
-A mobile-first study app for the NCLEX-RN: the official Client Needs syllabus with self-ratings, a phased study plan, practice questions (including Next Gen item types), quick-reference tables and a Canada RN roadmap. Progress is saved locally in your browser.
+A mobile-first study app for the NCLEX-RN: the official Client Needs syllabus with self-ratings, a phased study plan, practice questions (including Next Gen item types), quick-reference tables and a Canada RN roadmap. Study tools: flashcards with spaced repetition, notes per topic, a log of mistakes with retry, a study timer with a weekly chart, and badges. Progress is saved locally in your browser, with backup and restore in More.
 
 ## Files
-- `index.html`, `css/style.css`, `js/store.js`, `js/app.js`: the app
+- `index.html`, `css/style.css`, `js/*.js`: the app
 - `data/*.json`: syllabus, questions, study plan, Canada roadmap, quick reference, exam guide
 - `sw.js`: offline support (bump its `VERSION` on every change)
 - `tests/`: `node tests/check-data.js` and `node tests/browser-test.js`

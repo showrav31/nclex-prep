@@ -4,6 +4,8 @@
 This website is my wife's **main** place to prepare for the NCLEX-RN. She is a 4th-year nursing student in Bangladesh, sitting the exam around mid-2028, and will then work as an RN in Canada. She mostly uses her **Android phone**, sometimes on **slow internet**.
 
 ## Rules
+- **Fast on a mid-range Android**: plain JS, no frameworks or big libraries, render only the visible screen. (Now: ~150 KB uncompressed, ~0.3 s load with a 4× slower CPU.)
+- **Dark mode**: use the colour tokens in `:root` (`var(--card)`, `var(--ink)` …), never hard-coded colours.
 - **Mobile-first**: design for a small Android screen first, then scale up.
 - **Simple and friendly** design, in **plain English**.
 - **Works offline** (and loads fast on slow connections).
@@ -49,20 +51,24 @@ The site lives under the `/nclex-prep/` subpath, not the domain root.
 - `index.html` — page shell: first-time setup, 5 screens (Home, Learn, Practice, Progress, More), bottom menu, NCSBN footer.
 - `css/style.css` — mobile-first styles (base = small phone, `min-width` media queries scale up).
 - `js/store.js` — saved progress: load, migrate, save, streak. Loaded before `app.js`.
-- `js/app.js` — screens and features. Loads content from `data/*.json` at start-up.
-- `data/*.json` — content: `syllabus`, `questions`, `plan`, `canada`, `reference`, `exam-guide`.
+- `js/app.js` — core: start-up, navigation (hash + Back button), bottom sheet, toast, Home, syllabus, study plan, quiz, exam guide. Loads `data/*.json` at start-up.
+- Study tools, one file each, loaded after `app.js`: `flashcards.js` (spaced repetition), `notes.js`, `mistakes.js`, `timer.js` (study timer + weekly chart), `badges.js`, `settings.js` (dark mode, text size, backup/restore, reset).
+- `data/*.json` — content: `syllabus`, `questions`, `plan`, `canada`, `reference` (labs, drugs, isolation, high-alert meds, vital signs), `exam-guide`. Flashcard decks are built from `reference` + `exam-guide.priority`; each item's `id` is its card ID.
 - `sw.js` — service worker for offline use. **Bump `VERSION` in `sw.js` whenever any app file changes**, and add new files to its `FILES` list.
 - `tests/` — `check-data.js` (content checks) and `browser-test.js` (Playwright, phone size). Not part of the app.
 
 ## Saved progress (never lose it)
-- One `localStorage` key: `nclexDash2`. Never rename it. Schema has a version field `v` (now **4**); when the shape changes, add a step to `migrate()` in `js/store.js` and a test case in `tests/browser-test.js`.
+- One `localStorage` key: `nclexDash2`. Never rename it. Schema has a version field `v` (now **5**); when the shape changes, add a step to `migrate()` in `js/store.js` and a test case in `tests/browser-test.js`.
 - Before each migration, a raw copy of the old data is kept in `nclexDash2_backup_v<old version>` (e.g. `_backup_v2`, `_backup_v3`). Old keys that can't be mapped are kept in `S.unmapped`, never dropped.
-- Progress is saved by **fixed text IDs**, not by position: topic ratings `lv[topicId]`, plan ticks `plan[taskId]`, Canada ticks `can[stepId]`, quiz stats `stat[catId]`, today's task `task.topic`.
+- Progress is saved by **fixed text IDs**, not by position: topic ratings `lv[topicId]`, plan ticks `plan[taskId]`, Canada ticks `can[stepId]`, quiz stats `stat[catId]`, today's task `task.topic`, flashcards `cards[cardId]`, topic notes `notes[topicId]`, mistakes `mistakes[questionId]`, timer minutes `study[day][topicId]`, badges `badges[badgeId]`. Her own cards / free notes get generated IDs (`my-…`, `note-…`); data IDs must not use those prefixes.
+- Everything she has is inside that one object, so **backup/restore** (More → Backup) covers it all. Any new feature must store its data in `S` too. Restore and reset keep a safety copy (`nclexDash2_before_import`, `nclexDash2_before_reset`).
+- Mistakes store a copy of the question stem and rationale, so they survive question edits or removal.
 - Every category, topic, phase, plan task, Canada step and question in `data/*.json` has an `id` (lowercase words with dashes, e.g. `moc-delegation`, `q-pharm-heparin-antidote`). Questions link to a topic by `topic: "<topicId>"`.
 
 ## Content order and IDs
 - Content can be **reordered, inserted or removed** safely.
 - **Never change or reuse an existing ID**: progress is attached to it. To fix a typo in a name, change the text, not the `id`.
 - New items need a new unique `id`; `tests/check-data.js` checks this.
+- Never rename a badge `id` in `js/badges.js`.
 - `LEGACY_V3` in `js/store.js` is a frozen copy of the old position → ID mapping, used only to migrate old progress. Never edit it.
 - Dates use the phone's local calendar day (`dayKey()`), not UTC.
