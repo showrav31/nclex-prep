@@ -1,0 +1,262 @@
+{
+ "facts": [
+  {
+   "q": "How many questions?",
+   "a": "<b>85 to 150</b>. The 15 unscored pretest questions are mixed in and you can't tell which they are."
+  },
+  {
+   "q": "How long?",
+   "a": "Up to <b>5 hours</b>, including tutorial and optional breaks."
+  },
+  {
+   "q": "Case studies?",
+   "a": "<b>3 scored case studies</b>, 6 questions each, following one patient."
+  },
+  {
+   "q": "Why did it stop at 85?",
+   "a": "Not bad news! It stops when it's <b>95% confident</b> you're above or below the passing line."
+  },
+  {
+   "q": "Partial credit?",
+   "a": "Yes. Many Next Gen items give <b>partial credit</b> (e.g. SATA, matrix)."
+  },
+  {
+   "q": "Results?",
+   "a": "Pass / fail only. Official results come from the <b>regulator</b>."
+  }
+ ],
+ "judgment": [
+  {
+   "step": "Recognize cues",
+   "ask": "What data matters?",
+   "example": "You notice: SpO₂ 88%, RR 28, HR 118, sudden chest pain, anxiety, and right calf was swollen yesterday. <b>Skill:</b> picking the important findings out of a long chart, often with a <i>highlight</i> question."
+  },
+  {
+   "step": "Analyze cues",
+   "ask": "What could it mean?",
+   "example": "Post-op immobility + calf swelling + sudden dyspnea + tachycardia → links to <b>pulmonary embolism</b>, not just anxiety or pain. <b>Skill:</b> connecting findings to conditions."
+  },
+  {
+   "step": "Prioritize hypotheses",
+   "ask": "What's most urgent?",
+   "example": "Possible PE vs. pneumonia vs. anxiety. PE is life-threatening right now, so it ranks <b>first</b>. <b>Skill:</b> ranking problems by urgency."
+  },
+  {
+   "step": "Generate solutions",
+   "ask": "What should happen?",
+   "example": "Goals: improve oxygenation and prevent clot growth. Plan: raise HOB, give oxygen, prepare for anticoagulation and CT angiography. <b>Skill:</b> choosing the right interventions and avoiding wrong ones."
+  },
+  {
+   "step": "Take action",
+   "ask": "Do it",
+   "example": "Apply oxygen, call a rapid response / notify the provider (SBAR), start the IV, give heparin as prescribed. <b>Skill:</b> what to do first, often a <i>drag-and-drop</i> or <i>matrix</i>."
+  },
+  {
+   "step": "Evaluate outcomes",
+   "ask": "Did it work?",
+   "example": "SpO₂ now 95%, RR 20, less anxious → improving. If not, escalate. <b>Skill:</b> judging whether the patient got better, often a <i>trend</i> question."
+  }
+ ],
+ "types": [
+  {
+   "name": "Multiple choice",
+   "desc": "One correct answer from 4 options.",
+   "demo": {
+    "type": "mcq",
+    "stem": "Which value is a normal adult serum potassium?",
+    "options": [
+     "2.8 mEq/L",
+     "4.2 mEq/L",
+     "5.9 mEq/L",
+     "6.5 mEq/L"
+    ],
+    "answer": [
+     1
+    ],
+    "rationale": "Normal is 3.5–5.0 mEq/L."
+   }
+  },
+  {
+   "name": "Select all (SATA)",
+   "desc": "Choose every correct option. Could be 1 or all of them. Partial credit applies.",
+   "demo": {
+    "type": "sata",
+    "stem": "Which are signs of hypoglycemia? Select all that apply.",
+    "options": [
+     "Sweating",
+     "Shakiness",
+     "Fruity breath",
+     "Confusion",
+     "Warm dry skin"
+    ],
+    "answer": [
+     0,
+     1,
+     3
+    ],
+    "rationale": "Fruity breath and warm dry skin point to <b>hyper</b>glycemia/DKA. Remember: 'Cold & clammy, need some candy.'"
+   }
+  },
+  {
+   "name": "Matrix",
+   "desc": "A grid. For each row pick the right column (e.g. Indicated / Not indicated).",
+   "demo": {
+    "type": "matrix",
+    "stem": "Client with pneumonia: mark each action.",
+    "cols": [
+     "Indicated",
+     "Not indicated"
+    ],
+    "rows": [
+     {
+      "text": "Encourage coughing & deep breathing",
+      "answer": 0
+     },
+     {
+      "text": "Keep client flat in bed",
+      "answer": 1
+     },
+     {
+      "text": "Increase fluid intake (if not restricted)",
+      "answer": 0
+     }
+    ],
+    "rationale": "Elevate the HOB, encourage coughing and deep breathing, and encourage fluids to thin secretions."
+   }
+  },
+  {
+   "name": "Highlight",
+   "desc": "Tap the findings in a nurse's note that need follow-up.",
+   "kind": "highlight"
+  },
+  {
+   "name": "Drop-down (cloze)",
+   "desc": "Complete a sentence by choosing from drop-down lists.",
+   "kind": "cloze"
+  },
+  {
+   "name": "Bowtie",
+   "desc": "Middle = the condition; left = 2 actions to take; right = 2 parameters to monitor.",
+   "kind": "bowtie"
+  },
+  {
+   "name": "Drag & drop / ordering",
+   "desc": "Put steps in order or place options into categories.",
+   "kind": "order"
+  },
+  {
+   "name": "Trend",
+   "desc": "Look at data across several times (vitals, labs) and decide what changed.",
+   "kind": "trend"
+  }
+ ],
+ "priority": [
+  {
+   "rule": "ABCs",
+   "detail": "Airway → Breathing → Circulation. (CPR is C-A-B.)"
+  },
+  {
+   "rule": "Maslow",
+   "detail": "Physiological needs → safety → love/belonging → esteem."
+  },
+  {
+   "rule": "Acute > chronic",
+   "detail": "A new problem beats a long-standing one."
+  },
+  {
+   "rule": "Unstable > stable",
+   "detail": "Unexpected changes come first."
+  },
+  {
+   "rule": "Actual > potential",
+   "detail": "A real problem now beats a risk."
+  },
+  {
+   "rule": "Assess first…",
+   "detail": "…unless the client is in danger: then act first."
+  },
+  {
+   "rule": "Delegation",
+   "detail": "RN: assess, teach, evaluate, unstable clients. UCP: routine tasks for stable clients."
+  },
+  {
+   "rule": "Least restrictive",
+   "detail": "Try the least restrictive safe option first."
+  }
+ ],
+ "examDay": [
+  {
+   "title": "Arrive 30 min early",
+   "hint": "Bring the exact ID registered with Pearson VUE"
+  },
+  {
+   "title": "Check-in",
+   "hint": "Palm vein scan, photo, signature. Belongings go in a locker"
+  },
+  {
+   "title": "Tutorial",
+   "hint": "Short tutorial on the item types (you'll already know them!)"
+  },
+  {
+   "title": "Exam begins",
+   "hint": "No going back to previous questions"
+  },
+  {
+   "title": "Optional breaks",
+   "hint": "Raise a hand. Break time counts toward the 5 hours"
+  },
+  {
+   "title": "Exam ends",
+   "hint": "Can stop anywhere from 85 to 150 questions. Don't read anything into it!"
+  },
+  {
+   "title": "Results",
+   "hint": "Official result from the regulator. Unofficial 'quick results' may be available for a fee in some places"
+  }
+ ],
+ "highlight": [
+  {
+   "text": "Client is 70 y/o, admitted with UTI. ",
+   "key": false
+  },
+  {
+   "text": "Temp 39.2 °C",
+   "key": true
+  },
+  {
+   "text": ", ",
+   "key": false
+  },
+  {
+   "text": "new confusion this morning",
+   "key": true
+  },
+  {
+   "text": ". Ate 75% of breakfast. ",
+   "key": false
+  },
+  {
+   "text": "BP 86/50",
+   "key": true
+  },
+  {
+   "text": ", ",
+   "key": false
+  },
+  {
+   "text": "HR 118",
+   "key": true
+  },
+  {
+   "text": ". Ambulated to bathroom with walker.",
+   "key": false
+  }
+ ],
+ "donning": [
+  "Hand hygiene",
+  "Gown",
+  "Mask / respirator",
+  "Goggles / face shield",
+  "Gloves"
+ ]
+}

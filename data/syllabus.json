@@ -1,0 +1,149 @@
+{
+ "categories": [
+  {
+   "group": "Safe and Effective Care Environment",
+   "name": "Management of Care",
+   "short": "MoC",
+   "weight": "15–21%",
+   "topics": [
+    "Advance directives & client rights",
+    "Advocacy",
+    "Assignment, delegation & supervision",
+    "Case management & continuity of care",
+    "Client confidentiality / privacy",
+    "Collaboration with the interprofessional team",
+    "Concepts of management & leadership",
+    "Establishing priorities",
+    "Ethical practice",
+    "Informed consent",
+    "Information technology & documentation",
+    "Legal rights & responsibilities",
+    "Performance improvement (quality)",
+    "Referrals"
+   ]
+  },
+  {
+   "group": "Safe and Effective Care Environment",
+   "name": "Safety and Infection Prevention and Control",
+   "short": "Safety",
+   "weight": "10–16%",
+   "topics": [
+    "Accident, error & injury prevention",
+    "Emergency response plan & triage",
+    "Ergonomic principles & safe handling",
+    "Handling hazardous & infectious materials",
+    "Home safety",
+    "Reporting incidents",
+    "Safe use of equipment",
+    "Security plan",
+    "Standard & transmission-based precautions",
+    "Surgical asepsis",
+    "Restraints & safety devices"
+   ]
+  },
+  {
+   "group": "Health Promotion and Maintenance",
+   "name": "Health Promotion and Maintenance",
+   "short": "Health Promo",
+   "weight": "6–12%",
+   "topics": [
+    "Aging process",
+    "Ante / intra / postpartum & newborn care",
+    "Developmental stages & transitions",
+    "Growth & development (paediatrics)",
+    "Health promotion, disease prevention & immunizations",
+    "Health screening",
+    "High-risk behaviours",
+    "Lifestyle choices",
+    "Self-care",
+    "Physical assessment techniques"
+   ]
+  },
+  {
+   "group": "Psychosocial Integrity",
+   "name": "Psychosocial Integrity",
+   "short": "Psychosocial",
+   "weight": "6–12%",
+   "topics": [
+    "Abuse / neglect",
+    "Behavioural interventions",
+    "Substance use disorders & withdrawal",
+    "Coping mechanisms",
+    "Crisis intervention",
+    "Cultural awareness & spirituality",
+    "End-of-life & grief",
+    "Family dynamics",
+    "Mental health concepts",
+    "Sensory / perceptual alterations",
+    "Stress management",
+    "Support systems",
+    "Therapeutic communication",
+    "Therapeutic environment"
+   ]
+  },
+  {
+   "group": "Physiological Integrity",
+   "name": "Basic Care and Comfort",
+   "short": "Basic Care",
+   "weight": "6–12%",
+   "topics": [
+    "Assistive devices",
+    "Elimination",
+    "Mobility / immobility",
+    "Non-pharmacological comfort",
+    "Nutrition & oral hydration",
+    "Personal hygiene",
+    "Rest & sleep"
+   ]
+  },
+  {
+   "group": "Physiological Integrity",
+   "name": "Pharmacological and Parenteral Therapies",
+   "short": "Pharm",
+   "weight": "13–19%",
+   "topics": [
+    "Adverse effects / contraindications / interactions",
+    "Blood & blood products",
+    "Central venous access devices",
+    "Dosage calculation",
+    "Expected actions / outcomes",
+    "Medication administration",
+    "Parenteral / IV therapies",
+    "Pharmacological pain management",
+    "Total parenteral nutrition",
+    "High-alert medications"
+   ]
+  },
+  {
+   "group": "Physiological Integrity",
+   "name": "Reduction of Risk Potential",
+   "short": "Risk Reduction",
+   "weight": "9–15%",
+   "topics": [
+    "Changes in vital signs",
+    "Diagnostic tests",
+    "Laboratory values",
+    "Potential for alterations in body systems",
+    "Complications of procedures / surgery",
+    "System-specific assessments",
+    "Therapeutic procedures"
+   ]
+  },
+  {
+   "group": "Physiological Integrity",
+   "name": "Physiological Adaptation",
+   "short": "Phys Adaptation",
+   "weight": "11–17%",
+   "topics": [
+    "Alterations in body systems",
+    "Fluid & electrolyte imbalances",
+    "Acid–base / ABGs",
+    "Hemodynamics & dysrhythmias",
+    "Illness management",
+    "Medical emergencies",
+    "Pathophysiology",
+    "Unexpected response to therapies"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,62 @@
+{
+ "steps": [
+  {
+   "title": "Finish BSc Nursing + register with the Bangladesh Nursing & Midwifery Council",
+   "hint": ""
+  },
+  {
+   "title": "Collect transcripts, course syllabi, registration proof, ID",
+   "hint": "Ask the university early"
+  },
+  {
+   "title": "Prepare and take IELTS Academic or CELBAN",
+   "hint": "Check the regulator's minimum scores"
+  },
+  {
+   "title": "Apply to NNAS and send all documents",
+   "hint": "Can take many months"
+  },
+  {
+   "title": "Apply to the provincial regulator (e.g. CRNA, Alberta)",
+   "hint": ""
+  },
+  {
+   "title": "Complete any competence assessment or bridging required",
+   "hint": ""
+  },
+  {
+   "title": "Get NCLEX eligibility and book with Pearson VUE",
+   "hint": ""
+  },
+  {
+   "title": "Pass the NCLEX-RN 🎉",
+   "hint": ""
+  },
+  {
+   "title": "Get registered and apply for RN jobs",
+   "hint": ""
+  },
+  {
+   "title": "Plan the immigration pathway (spousal, Express Entry, PNP)",
+   "hint": "Use official IRCC sources"
+  }
+ ],
+ "links": [
+  {
+   "url": "https://www.nnas.ca",
+   "label": "NNAS: National Nursing Assessment Service"
+  },
+  {
+   "url": "https://nurses.ab.ca",
+   "label": "CRNA: College of Registered Nurses of Alberta"
+  },
+  {
+   "url": "https://www.nclex.com",
+   "label": "NCLEX.com: test plan & registration"
+  },
+  {
+   "url": "https://www.celban.org",
+   "label": "CELBAN: nursing English test"
+  }
+ ]
+}
