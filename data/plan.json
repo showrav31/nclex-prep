@@ -1,0 +1,140 @@
+{
+ "phases": [
+  {
+   "name": "Phase 1 · Foundation",
+   "start": "2026-12-01",
+   "end": "2027-06-30",
+   "goal": "Build knowledge across all 8 categories while finishing 4th year.",
+   "tasks": [
+    {
+     "title": "Download the official 2026 NCLEX-RN Test Plan PDF",
+     "hint": "nclex.com → Test Plans"
+    },
+    {
+     "title": "Set up daily flashcards (Anki) for drugs & lab values",
+     "hint": "15 min every morning"
+    },
+    {
+     "title": "Study Management of Care + Safety topics",
+     "hint": "Biggest categories: start here"
+    },
+    {
+     "title": "Study Pharmacology by drug class",
+     "hint": "Use the suffix table in Quick reference"
+    },
+    {
+     "title": "Study Physiological Adaptation & Risk Reduction body system by body system",
+     "hint": "Cardiac, respiratory, renal, endocrine, neuro, GI"
+    },
+    {
+     "title": "Study Health Promotion, Psychosocial and Basic Care",
+     "hint": "Shorter categories"
+    },
+    {
+     "title": "Do 10–20 practice questions daily on today's topic",
+     "hint": "Use the Practice questions tab"
+    },
+    {
+     "title": "Learn the 6 Clinical Judgment steps",
+     "hint": "How the exam works tab"
+    },
+    {
+     "title": "Start IELTS Academic / CELBAN practice",
+     "hint": "30 min, 3× a week"
+    }
+   ]
+  },
+  {
+   "name": "Phase 2 · Question practice",
+   "start": "2027-07-01",
+   "end": "2027-12-31",
+   "goal": "Move from reading to answering. Questions become the main study method.",
+   "tasks": [
+    {
+     "title": "30–50 mixed questions per day",
+     "hint": "Read every rationale"
+    },
+    {
+     "title": "Practise every Next Gen question type",
+     "hint": "Bowtie, matrix, highlight, drop-down, trend"
+    },
+    {
+     "title": "1 full case study per week",
+     "hint": "Walk through all 6 judgment steps"
+    },
+    {
+     "title": "Re-study every topic still marked Weak",
+     "hint": "Check the Syllabus tab"
+    },
+    {
+     "title": "Book IELTS / CELBAN date",
+     "hint": "Leave time for a retake"
+    },
+    {
+     "title": "Start NNAS application once eligible",
+     "hint": "Request transcripts and syllabi from university early"
+    }
+   ]
+  },
+  {
+   "name": "Phase 3 · Intensive",
+   "start": "2028-01-01",
+   "end": "2028-04-30",
+   "goal": "Exam-level practice with a full commercial question bank.",
+   "tasks": [
+    {
+     "title": "Subscribe to one main question bank (e.g. UWorld)",
+     "hint": "Pick one and finish it"
+    },
+    {
+     "title": "75–100 timed questions per day",
+     "hint": ""
+    },
+    {
+     "title": "Weekly full-length adaptive mock exam",
+     "hint": "Same length & time as the real one"
+    },
+    {
+     "title": "Keep an error notebook",
+     "hint": "Why did I miss it? Content or strategy?"
+    },
+    {
+     "title": "Apply for NCLEX eligibility through the Canadian regulator",
+     "hint": "Follow regulator instructions"
+    }
+   ]
+  },
+  {
+   "name": "Phase 4 · Final readiness",
+   "start": "2028-05-01",
+   "end": "2028-07-31",
+   "goal": "Polish and get ready for exam day.",
+   "tasks": [
+    {
+     "title": "Take 1–2 readiness assessments",
+     "hint": "Look for consistent scores"
+    },
+    {
+     "title": "Weak areas only + lab values / drugs review",
+     "hint": ""
+    },
+    {
+     "title": "Register with Pearson VUE and book the test centre",
+     "hint": "Check nearest centre & travel/visa if outside Bangladesh"
+    },
+    {
+     "title": "Practise exam-day schedule: timing, breaks, sleep",
+     "hint": ""
+    },
+    {
+     "title": "Light review only in the last 2 days, then rest",
+     "hint": ""
+    },
+    {
+     "title": "Sit the NCLEX-RN 🎉",
+     "hint": ""
+    }
+   ]
+  }
+ ]
+}

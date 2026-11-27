@@ -35,5 +35,16 @@ The site lives under the `/nclex-prep/` subpath, not the domain root.
 ## Must keep
 - The NCSBN credit footer at the bottom of `index.html` (credits the 2026 NCLEX-RN Test Plan © NCSBN and states the site is not affiliated with NCSBN).
 
-## Structure
-- `index.html` — the whole app (HTML + CSS + JS inline). Progress is saved in `localStorage` key `nclexDash2`.
+## Structure (no build step: plain files, served as-is)
+- `index.html` — page shell: first-time setup, 5 screens (Home, Learn, Practice, Progress, More), bottom menu, NCSBN footer.
+- `css/style.css` — mobile-first styles (base = small phone, `min-width` media queries scale up).
+- `js/store.js` — saved progress: load, migrate, save, streak. Loaded before `app.js`.
+- `js/app.js` — screens and features. Loads content from `data/*.json` at start-up.
+- `data/*.json` — content: `syllabus`, `questions`, `plan`, `canada`, `reference`, `exam-guide`.
+- `sw.js` — service worker for offline use. **Bump `VERSION` in `sw.js` whenever any app file changes**, and add new files to its `FILES` list.
+
+## Saved progress (never lose it)
+- One `localStorage` key: `nclexDash2`. Never rename it. Schema has a version field `v` (now 3); when the shape changes, add a step to `migrate()` in `js/store.js`.
+- Before migrating old data, a raw copy is kept in `nclexDash2_backup_v2`.
+- Ratings, plan ticks and Canada ticks are keyed by **array position** in the JSON (e.g. `lv["2-5"]` = category 2, topic 5). **Never reorder or delete** categories, topics, plan tasks or Canada steps; only append. Questions point to topics the same way (`cat`, `topic`).
+- Dates use the phone's local calendar day (`dayKey()`), not UTC.

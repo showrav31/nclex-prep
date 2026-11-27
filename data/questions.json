@@ -1,0 +1,595 @@
+{
+ "questions": [
+  {
+   "cat": 0,
+   "topic": 2,
+   "type": "mcq",
+   "stem": "The RN is caring for four clients. Which task is most appropriate to delegate to an unregulated care provider (UCP/PSW)?",
+   "options": [
+    "Teaching a newly diagnosed diabetic client how to use an insulin pen",
+    "Ambulating a stable client on post-op day 2 after knee surgery",
+    "Performing the admission assessment for a client with chest pain",
+    "Evaluating a client's response to IV morphine"
+   ],
+   "answer": [
+    1
+   ],
+   "rationale": "UCPs can do routine tasks for <b>stable</b> clients with predictable outcomes. Assessment, teaching and evaluation stay with the RN."
+  },
+  {
+   "cat": 0,
+   "topic": 7,
+   "type": "mcq",
+   "stem": "After receiving report, which client should the nurse see first?",
+   "options": [
+    "Client with COPD whose SpO₂ is 90% on 2 L/min",
+    "Client 1 hour post-op who received morphine and now has RR 8/min and is difficult to rouse",
+    "Client with a pressure injury requesting a dressing change",
+    "Client with diabetes whose pre-lunch glucose is 9 mmol/L (162 mg/dL)"
+   ],
+   "answer": [
+    1
+   ],
+   "rationale": "RR 8 and decreased level of consciousness after an opioid is a <b>breathing</b> problem and possible opioid toxicity: ABCs first. SpO₂ 90% is often an acceptable target for a client with COPD."
+  },
+  {
+   "cat": 0,
+   "topic": 9,
+   "type": "mcq",
+   "stem": "A client scheduled for surgery asks the nurse what the surgeon will be removing. What is the nurse's role regarding informed consent?",
+   "options": [
+    "Explain the procedure in detail and have the client sign",
+    "Witness the client's signature and notify the surgeon that the client has questions",
+    "Tell the client the procedure is routine and to sign the form",
+    "Ask the family to sign on the client's behalf"
+   ],
+   "answer": [
+    1
+   ],
+   "rationale": "The <b>provider</b> explains the procedure, risks and alternatives. The nurse witnesses the signature and advocates by notifying the provider when the client does not understand."
+  },
+  {
+   "cat": 0,
+   "topic": 4,
+   "type": "sata",
+   "stem": "Which actions by a nurse protect client confidentiality? Select all that apply.",
+   "options": [
+    "Logging off the computer when leaving the workstation",
+    "Discussing a client's diagnosis in the elevator with a coworker",
+    "Giving information only to people the client has authorized",
+    "Posting a photo of a 'cool wound' on social media without the name",
+    "Using the minimum necessary information when giving report"
+   ],
+   "answer": [
+    0,
+    2,
+    4
+   ],
+   "rationale": "Lock screens, authorized disclosure only, and minimum necessary info all protect privacy. Public conversations and social media posts are breaches, <b>even without a name</b>."
+  },
+  {
+   "cat": 0,
+   "topic": 0,
+   "type": "mcq",
+   "stem": "A competent adult client with a valid DNR order goes into cardiac arrest. The daughter shouts, 'Do everything!' What should the nurse do?",
+   "options": [
+    "Start CPR because the family requests it",
+    "Follow the DNR order and support the daughter",
+    "Call the provider to cancel the DNR",
+    "Start CPR until the provider arrives"
+   ],
+   "answer": [
+    1
+   ],
+   "rationale": "A valid advance directive from a competent client must be honoured. The nurse advocates for the client's wishes and gives emotional support to the family."
+  },
+  {
+   "cat": 1,
+   "topic": 8,
+   "type": "mcq",
+   "stem": "A client is diagnosed with Clostridioides difficile. Which hand hygiene is required after care?",
+   "options": [
+    "Alcohol-based hand rub",
+    "Soap and water",
+    "Chlorhexidine wipes only",
+    "Gloves alone are enough"
+   ],
+   "answer": [
+    1
+   ],
+   "rationale": "<i>C. difficile</i> spores are <b>not killed by alcohol</b>. Use contact precautions and wash with soap and water to remove the spores physically."
+  },
+  {
+   "cat": 1,
+   "topic": 1,
+   "type": "mcq",
+   "stem": "A nurse discovers a fire in a client's room. Using RACE, what is the FIRST action?",
+   "options": [
+    "Activate the alarm",
+    "Contain the fire by closing the door",
+    "Rescue the client from immediate danger",
+    "Extinguish with the fire extinguisher"
+   ],
+   "answer": [
+    2
+   ],
+   "rationale": "<b>R</b>escue → <b>A</b>larm → <b>C</b>ontain → <b>E</b>xtinguish/Evacuate. For the extinguisher, remember PASS: Pull, Aim, Squeeze, Sweep."
+  },
+  {
+   "cat": 1,
+   "topic": 10,
+   "type": "sata",
+   "stem": "A client has a prescribed wrist restraint. Which actions are correct? Select all that apply.",
+   "options": [
+    "Tie the restraint to the bed frame",
+    "Tie the restraint to the side rail",
+    "Use a quick-release knot",
+    "Check circulation and skin regularly per policy (at least every 2 hours)",
+    "Use a PRN restraint order for convenience"
+   ],
+   "answer": [
+    0,
+    2,
+    3
+   ],
+   "rationale": "Tie to the <b>frame</b> (side rails move and can injure), use quick-release knots, and monitor circulation, skin and needs. Restraint orders are never PRN."
+  },
+  {
+   "cat": 1,
+   "topic": 8,
+   "type": "mcq",
+   "stem": "A client with suspected pulmonary tuberculosis is admitted. Which precautions should the nurse implement?",
+   "options": [
+    "Droplet: surgical mask",
+    "Contact: gown and gloves",
+    "Airborne: N95 respirator and negative-pressure room",
+    "Standard precautions only"
+   ],
+   "answer": [
+    2
+   ],
+   "rationale": "TB, measles and varicella are <b>airborne</b>: fit-tested N95 and a negative-pressure (AIIR) room. The client wears a surgical mask when outside the room."
+  },
+  {
+   "cat": 2,
+   "topic": 3,
+   "type": "mcq",
+   "stem": "A parent asks when their baby's weight should triple. The nurse answers:",
+   "options": [
+    "By 4 months",
+    "By 6 months",
+    "By 12 months",
+    "By 24 months"
+   ],
+   "answer": [
+    2
+   ],
+   "rationale": "Birth weight <b>doubles by about 6 months</b> and <b>triples by about 12 months</b>."
+  },
+  {
+   "cat": 2,
+   "topic": 1,
+   "type": "mcq",
+   "stem": "One hour after delivery, the nurse finds a boggy uterus above the umbilicus with heavy lochia. What is the FIRST action?",
+   "options": [
+    "Notify the provider",
+    "Massage the fundus",
+    "Increase IV fluids",
+    "Have the client empty her bladder"
+   ],
+   "answer": [
+    1
+   ],
+   "rationale": "A boggy uterus means <b>uterine atony</b>, the leading cause of postpartum hemorrhage. Massage the fundus first. Then assess the bladder (a full bladder displaces the uterus) and notify the provider if it stays boggy."
+  },
+  {
+   "cat": 2,
+   "topic": 4,
+   "type": "mcq",
+   "stem": "Which vaccine is contraindicated during pregnancy?",
+   "options": [
+    "Inactivated influenza",
+    "Tdap",
+    "MMR",
+    "Hepatitis B"
+   ],
+   "answer": [
+    2
+   ],
+   "rationale": "MMR is a <b>live</b> vaccine and is avoided in pregnancy. Inactivated flu and Tdap are recommended in pregnancy."
+  },
+  {
+   "cat": 3,
+   "topic": 12,
+   "type": "mcq",
+   "stem": "A client says, 'I don't think I'll ever get better.' Which response is most therapeutic?",
+   "options": [
+    "'Don't worry, everything will be fine.'",
+    "'You sound discouraged. Tell me more about that.'",
+    "'Why do you feel that way?'",
+    "'You should talk to your doctor about this.'"
+   ],
+   "answer": [
+    1
+   ],
+   "rationale": "Reflecting feelings and using open-ended prompts is therapeutic. False reassurance, 'why' questions (which feel judgmental) and passing the buck are non-therapeutic."
+  },
+  {
+   "cat": 3,
+   "topic": 2,
+   "type": "mcq",
+   "stem": "A client with heavy alcohol use was admitted 48 hours ago and is now tremulous, confused and hallucinating, with HR 124. The nurse anticipates which priority medication?",
+   "options": [
+    "Naloxone",
+    "A benzodiazepine such as lorazepam",
+    "Disulfiram",
+    "Haloperidol alone"
+   ],
+   "answer": [
+    1
+   ],
+   "rationale": "These are signs of severe withdrawal / possible delirium tremens (usually 48–72 h). <b>Benzodiazepines</b> are first-line. Also start seizure precautions and give thiamine."
+  },
+  {
+   "cat": 3,
+   "topic": 8,
+   "type": "sata",
+   "stem": "A client taking lithium has a level of 2.0 mEq/L. Which findings would the nurse expect? Select all that apply.",
+   "options": [
+    "Coarse hand tremor",
+    "Vomiting and diarrhea",
+    "Confusion / slurred speech",
+    "Fine tremor only",
+    "Increased energy and euphoria"
+   ],
+   "answer": [
+    0,
+    1,
+    2
+   ],
+   "rationale": "Therapeutic level is ~0.6–1.2 mEq/L. Toxicity causes <b>coarse</b> tremor, GI upset and neuro changes. A fine tremor is a common side effect at therapeutic levels."
+  },
+  {
+   "cat": 3,
+   "topic": 4,
+   "type": "mcq",
+   "stem": "A client with depression who has been withdrawn suddenly seems calm and is giving away personal belongings. What is the nurse's priority?",
+   "options": [
+    "Document the improvement in mood",
+    "Directly assess the client for suicidal thoughts and plan",
+    "Encourage group activities",
+    "Tell the client the change is a good sign"
+   ],
+   "answer": [
+    1
+   ],
+   "rationale": "A sudden calm and giving things away are <b>warning signs</b>. Ask directly about suicidal ideation, plan and means, and maintain safety per policy."
+  },
+  {
+   "cat": 4,
+   "topic": 2,
+   "type": "mcq",
+   "stem": "Which intervention best prevents pressure injuries in an immobile client?",
+   "options": [
+    "Massage reddened bony prominences",
+    "Reposition at least every 2 hours",
+    "Use a donut-shaped cushion",
+    "Keep the head of bed at 60° at all times"
+   ],
+   "answer": [
+    1
+   ],
+   "rationale": "Regular repositioning relieves pressure. Never massage reddened areas, avoid donut cushions, and keep the HOB at or below 30° when possible to reduce shear."
+  },
+  {
+   "cat": 4,
+   "topic": 0,
+   "type": "mcq",
+   "stem": "A client is learning to go UP stairs with crutches. Which instruction is correct?",
+   "options": [
+    "Crutches first, then the good leg",
+    "Good (unaffected) leg first, then crutches and affected leg",
+    "Affected leg first",
+    "Both legs together"
+   ],
+   "answer": [
+    1
+   ],
+   "rationale": "'<b>Up with the good, down with the bad.</b>' Going up: the strong leg leads. Going down: crutches and the affected leg lead."
+  },
+  {
+   "cat": 4,
+   "topic": 4,
+   "type": "mcq",
+   "stem": "A client on a low-sodium diet chooses lunch. Which choice shows understanding?",
+   "options": [
+    "Canned chicken noodle soup",
+    "Ham sandwich with pickles",
+    "Fresh grilled chicken with steamed vegetables",
+    "Instant noodles"
+   ],
+   "answer": [
+    2
+   ],
+   "rationale": "Canned, cured, pickled and instant foods are high in sodium. <b>Fresh</b>, unprocessed foods are best."
+  },
+  {
+   "cat": 5,
+   "topic": 9,
+   "type": "mcq",
+   "stem": "Before giving digoxin, the nurse finds an apical pulse of 54/min. What should the nurse do?",
+   "options": [
+    "Give the dose and recheck in 1 hour",
+    "Hold the dose and notify the provider",
+    "Give half the dose",
+    "Give the dose with food"
+   ],
+   "answer": [
+    1
+   ],
+   "rationale": "Hold digoxin if the apical HR is <b>below 60</b> in an adult (count for a full minute), and report it. Also watch for toxicity: nausea, vision changes (yellow-green halos), and low potassium, which increases toxicity."
+  },
+  {
+   "cat": 5,
+   "topic": 0,
+   "type": "mcq",
+   "stem": "Which medication is the antidote for heparin?",
+   "options": [
+    "Vitamin K",
+    "Protamine sulfate",
+    "Naloxone",
+    "Flumazenil"
+   ],
+   "answer": [
+    1
+   ],
+   "rationale": "Heparin → <b>protamine sulfate</b> (monitor aPTT). Warfarin → <b>vitamin K</b> (monitor INR). Naloxone reverses opioids, flumazenil reverses benzodiazepines."
+  },
+  {
+   "cat": 5,
+   "topic": 3,
+   "type": "mcq",
+   "stem": "The order is amoxicillin 250 mg PO. Available: 125 mg/5 mL. How many mL should the nurse give?",
+   "options": [
+    "2.5 mL",
+    "5 mL",
+    "10 mL",
+    "20 mL"
+   ],
+   "answer": [
+    2
+   ],
+   "rationale": "Desired ÷ Have × Volume = 250 ÷ 125 × 5 mL = <b>10 mL</b>."
+  },
+  {
+   "cat": 5,
+   "topic": 6,
+   "type": "mcq",
+   "stem": "Which statement about IV potassium chloride is correct?",
+   "options": [
+    "It may be given IV push if the client is hypokalemic",
+    "It must always be diluted and given by infusion, never IV push",
+    "It can be given faster in emergencies by IV push",
+    "It does not require cardiac monitoring at any rate"
+   ],
+   "answer": [
+    1
+   ],
+   "rationale": "<b>Never give potassium by IV push</b>: it can cause fatal dysrhythmias. Always dilute, infuse with a pump, and check urine output and the IV site."
+  },
+  {
+   "cat": 5,
+   "topic": 9,
+   "type": "sata",
+   "stem": "Which insulin facts are correct? Select all that apply.",
+   "options": [
+    "Regular insulin can be given IV",
+    "Glargine (long-acting) can be mixed with other insulins",
+    "When mixing, draw up clear (regular) before cloudy (NPH)",
+    "Rapid-acting (lispro) is given with or just before meals",
+    "Hypoglycemia signs include sweating, shakiness, and confusion"
+   ],
+   "answer": [
+    0,
+    2,
+    3,
+    4
+   ],
+   "rationale": "Regular insulin is the IV insulin. <b>Clear before cloudy</b>. Glargine is <b>never mixed</b>. Rapid-acting insulin goes with meals. Hypoglycemia causes shaky, sweaty, confused behaviour: treat with 15 g fast carbs."
+  },
+  {
+   "cat": 5,
+   "topic": 1,
+   "type": "mcq",
+   "stem": "Ten minutes into a blood transfusion, the client reports back pain and chills; temperature rises. The nurse's FIRST action is:",
+   "options": [
+    "Slow the transfusion rate",
+    "Stop the transfusion and keep the line open with normal saline using new tubing",
+    "Give acetaminophen",
+    "Notify the blood bank"
+   ],
+   "answer": [
+    1
+   ],
+   "rationale": "Suspected hemolytic reaction: <b>stop the transfusion first</b>, keep the IV open with NS on new tubing, then notify the provider and blood bank and send the bag and tubing."
+  },
+  {
+   "cat": 6,
+   "topic": 2,
+   "type": "mcq",
+   "stem": "A client's potassium is 6.2 mEq/L. What is the nurse's priority action?",
+   "options": [
+    "Encourage bananas",
+    "Place the client on a cardiac monitor",
+    "Give a potassium supplement",
+    "Recheck the value tomorrow"
+   ],
+   "answer": [
+    1
+   ],
+   "rationale": "Hyperkalemia can cause <b>peaked T waves and fatal dysrhythmias</b>. Monitor the heart and notify the provider; treatment may include calcium gluconate, insulin + dextrose, and binders."
+  },
+  {
+   "cat": 6,
+   "topic": 4,
+   "type": "mcq",
+   "stem": "After a cardiac catheterization through the femoral artery, which action is the priority?",
+   "options": [
+    "Ambulate the client immediately",
+    "Check distal pulses and the insertion site for bleeding",
+    "Flex the affected leg to improve comfort",
+    "Restrict fluids"
+   ],
+   "answer": [
+    1
+   ],
+   "rationale": "Watch for bleeding/hematoma and impaired circulation: check site, pulses, colour, temperature. Keep the leg <b>straight</b> for the prescribed time, and encourage fluids to flush the contrast."
+  },
+  {
+   "cat": 6,
+   "topic": 5,
+   "type": "mcq",
+   "stem": "After a thyroidectomy, the client reports tingling around the mouth. The nurse suspects:",
+   "options": [
+    "Hypercalcemia",
+    "Hypocalcemia from parathyroid injury",
+    "Thyroid storm",
+    "Hypokalemia"
+   ],
+   "answer": [
+    1
+   ],
+   "rationale": "Perioral tingling, Chvostek's and Trousseau's signs mean <b>hypocalcemia</b>. Keep IV calcium gluconate and a tracheostomy set available."
+  },
+  {
+   "cat": 6,
+   "topic": 0,
+   "type": "matrix",
+   "stem": "A client is 6 hours post abdominal surgery. For each finding, mark whether it needs FOLLOW-UP or is EXPECTED.",
+   "cols": [
+    "Needs follow-up",
+    "Expected"
+   ],
+   "rows": [
+    {
+     "text": "BP 84/50, HR 122",
+     "answer": 0
+    },
+    {
+     "text": "Incisional pain 4/10 after analgesic",
+     "answer": 1
+    },
+    {
+     "text": "Urine output 15 mL/h for the past 2 h",
+     "answer": 0
+    },
+    {
+     "text": "Hypoactive bowel sounds",
+     "answer": 1
+    },
+    {
+     "text": "New restlessness and pallor",
+     "answer": 0
+    }
+   ],
+   "rationale": "Low BP + high HR + low urine output + restlessness + pallor all point to possible <b>hemorrhage / hypovolemic shock</b>. Mild pain and hypoactive bowel sounds are expected early after abdominal surgery."
+  },
+  {
+   "cat": 7,
+   "topic": 2,
+   "type": "mcq",
+   "stem": "ABG: pH 7.30, PaCO₂ 52 mmHg, HCO₃⁻ 24 mEq/L. Interpret.",
+   "options": [
+    "Metabolic acidosis",
+    "Respiratory acidosis, uncompensated",
+    "Respiratory alkalosis",
+    "Metabolic alkalosis, compensated"
+   ],
+   "answer": [
+    1
+   ],
+   "rationale": "pH low = acidosis. PaCO₂ high (matches) = <b>respiratory</b>. HCO₃⁻ normal = <b>uncompensated</b>. Tip: ROME, Respiratory Opposite, Metabolic Equal."
+  },
+  {
+   "cat": 7,
+   "topic": 5,
+   "type": "mcq",
+   "stem": "A client arrives with diabetic ketoacidosis (glucose 32 mmol/L, Kussmaul respirations). What is the FIRST priority intervention?",
+   "options": [
+    "Give long-acting insulin",
+    "Start IV 0.9% normal saline",
+    "Give sodium bicarbonate",
+    "Give oral fluids"
+   ],
+   "answer": [
+    1
+   ],
+   "rationale": "DKA causes severe dehydration: <b>fluids first</b> (0.9% NS). Then a regular insulin infusion, with close potassium monitoring, because insulin moves K⁺ into cells."
+  },
+  {
+   "cat": 7,
+   "topic": 5,
+   "type": "mcq",
+   "stem": "A client develops hives, wheezing and throat tightness after an antibiotic. The FIRST medication is:",
+   "options": [
+    "Diphenhydramine PO",
+    "Epinephrine IM",
+    "Methylprednisolone IV",
+    "Salbutamol inhaler"
+   ],
+   "answer": [
+    1
+   ],
+   "rationale": "Anaphylaxis: <b>IM epinephrine</b> (anterolateral thigh) first. Stop the drug and maintain the airway. Antihistamines and steroids are add-ons."
+  },
+  {
+   "cat": 7,
+   "topic": 5,
+   "type": "mcq",
+   "stem": "A client presents with sudden right-sided weakness and slurred speech that began 1 hour ago. Before thrombolytics, which test is essential?",
+   "options": [
+    "Lumbar puncture",
+    "Non-contrast CT scan of the head",
+    "Chest X-ray",
+    "Echocardiogram"
+   ],
+   "answer": [
+    1
+   ],
+   "rationale": "A CT rules out a <b>hemorrhagic</b> stroke. Thrombolytics (tPA) would be fatal in a bleed. Time matters: 'time is brain.'"
+  },
+  {
+   "cat": 7,
+   "topic": 4,
+   "type": "matrix",
+   "stem": "A client has heart failure. Mark each instruction INDICATED or NOT INDICATED for discharge teaching.",
+   "cols": [
+    "Indicated",
+    "Not indicated"
+   ],
+   "rows": [
+    {
+     "text": "Weigh yourself every morning at the same time",
+     "answer": 0
+    },
+    {
+     "text": "Drink at least 3 litres of fluid daily",
+     "answer": 1
+    },
+    {
+     "text": "Report a gain of ~1 kg (2 lb) in a day or 2 kg (5 lb) in a week",
+     "answer": 0
+    },
+    {
+     "text": "Limit high-sodium foods",
+     "answer": 0
+    },
+    {
+     "text": "Sleep flat without pillows",
+     "answer": 1
+    }
+   ],
+   "rationale": "Daily weights, reporting rapid gain, and sodium restriction manage fluid. HF clients often need <b>fluid restriction</b>, and usually breathe easier with the head <b>elevated</b>."
+  }
+ ]
+}
