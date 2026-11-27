@@ -25,7 +25,11 @@ read("data/questions.json").questions.forEach(q => {
   if (q.type === "matrix" ? !(q.rows && q.cols) : !(q.options && q.answer && q.answer.every(a => a < q.options.length))) errors.push(`question ${q.id}: answer doesn't match options`);
   if (!q.rationale) errors.push(`question ${q.id}: no rationale`);
 });
-["reference", "exam-guide"].forEach(f => read(`data/${f}.json`));
+// flashcard items: their ids are the card ids
+const ref = read("data/reference.json"), guide = read("data/exam-guide.json");
+["labs", "drugs", "isolation", "highAlert", "vitals"].forEach(k => (ref[k] || (errors.push(`reference.json: missing ${k}`), [])).forEach(x => id("card " + k, x.id)));
+guide.priority.forEach(x => id("card priority", x.id));
+[...seen].filter(x => /^(my|note)-/.test(x)).forEach(x => errors.push(`id "${x}" uses a prefix reserved for her own cards/notes`));
 
 const sw = fs.readFileSync(path.join(root, "sw.js"), "utf8");
 const files = JSON.parse(sw.match(/const FILES = (\[[\s\S]*?\]);/)[1].replace(/,\s*\]/, "]"));

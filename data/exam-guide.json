@@ -152,34 +152,42 @@
  ],
  "priority": [
   {
+   "id": "prio-abcs",
    "rule": "ABCs",
    "detail": "Airway → Breathing → Circulation. (CPR is C-A-B.)"
   },
   {
+   "id": "prio-maslow",
    "rule": "Maslow",
    "detail": "Physiological needs → safety → love/belonging → esteem."
   },
   {
+   "id": "prio-acute-chronic",
    "rule": "Acute > chronic",
    "detail": "A new problem beats a long-standing one."
   },
   {
+   "id": "prio-unstable-stable",
    "rule": "Unstable > stable",
    "detail": "Unexpected changes come first."
   },
   {
+   "id": "prio-actual-potential",
    "rule": "Actual > potential",
    "detail": "A real problem now beats a risk."
   },
   {
+   "id": "prio-assess-first",
    "rule": "Assess first…",
    "detail": "…unless the client is in danger: then act first."
   },
   {
+   "id": "prio-delegation",
    "rule": "Delegation",
    "detail": "RN: assess, teach, evaluate, unstable clients. UCP: routine tasks for stable clients."
   },
   {
+   "id": "prio-least-restrictive",
    "rule": "Least restrictive",
    "detail": "Try the least restrictive safe option first."
   }

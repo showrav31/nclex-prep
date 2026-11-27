@@ -6,7 +6,32 @@ const catOf = q => TOPIC[q.topic].cat;
 const $ = id => document.getElementById(id);
 const MINUTES = [[15, "15 min"], [30, "30 min"], [45, "45 min"], [60, "1 hour"], [90, "1½ hours+"]];
 
-function save() { persist(); renderStats(); }
+function save() { persist(); renderStats(); checkBadges(); }
+
+/* ---------- SMALL UI HELPERS ---------- */
+const esc = t => String(t == null ? "" : t).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+let toastTimer = null;
+function toast(msg, ms = 3000) {
+  const t = $("toast"); t.innerHTML = msg; t.hidden = false;
+  clearTimeout(toastTimer); toastTimer = setTimeout(() => t.hidden = true, ms);
+}
+/* Bottom sheet. Opening pushes a history entry so Android's Back button closes it. */
+let sheetOpen = false, sheetClosed = null;
+function openSheet(html, onClose) {
+  $("sheetBody").innerHTML = html; $("sheet").hidden = false;
+  if (!sheetOpen) history.pushState({ sheet: 1 }, "", location.hash || "#home");
+  sheetOpen = true; sheetClosed = onClose || null;
+}
+function closeSheet() { if (sheetOpen) history.back(); }
+function sheetGone() {
+  sheetOpen = false;
+  const f = sheetClosed; sheetClosed = null;
+  if (f) f(); // runs while the sheet's inputs still exist, so it can save them
+  $("sheet").hidden = true; $("sheetBody").innerHTML = "";
+}
+$("sheet").addEventListener("click", e => { if (e.target.id === "sheet") closeSheet(); });
+function onPop() { if (sheetOpen) return sheetGone(); show(); }
+const sheetHead = title => `<div class="sheet-head"><h3>${title}</h3><button class="btn ghost small" onclick="closeSheet()">Done</button></div>`;
 
 /* ---------- START-UP ---------- */
 const DATA = ["syllabus", "questions", "plan", "canada", "reference", "exam-guide"];
@@ -28,10 +53,12 @@ if ("serviceWorker" in navigator) {
 function start() {
   $("loading").hidden = true;
   renderCats(); renderFilter(); renderFacts(); drawCat(); renderCJ(); renderPrio(); renderTypes(); renderDay();
-  renderQuick(); renderCan(); renderSettings();
+  renderQuick(); renderCan(); renderSettings(); renderLook();
   document.querySelectorAll("#tabbar button").forEach(b => b.onclick = () => go(b.dataset.go));
   document.querySelectorAll("#learnTabs button").forEach(b => b.onclick = () => go("learn", b.dataset.sub));
-  window.addEventListener("popstate", show);
+  document.querySelectorAll("#practiceTabs button").forEach(b => b.onclick = () => go("practice", b.dataset.sub));
+  window.addEventListener("popstate", onPop);
+  timerResume();
   if (!S.setup) openSetup(); else openApp();
 }
 
@@ -42,7 +69,9 @@ function openApp() {
 
 /* ---------- NAVIGATION (hash-based, so Android's Back button works) ---------- */
 const SCREENS = ["home", "learn", "practice", "progress", "more"];
-let learnSub = "syllabus", pendingScroll = null;
+const SUBS = { learn: ["syllabus", "notes", "ngn", "quick"], practice: ["drill", "cards", "mistakes"] };
+const curSub = { learn: "syllabus", practice: "drill" };
+let pendingScroll = null;
 
 function go(screen, sub) {
   const h = "#" + screen + (sub ? "/" + sub : "");
@@ -55,13 +84,17 @@ function show() {
   if (!SCREENS.includes(screen)) screen = "home";
   document.querySelectorAll(".screen").forEach(s => s.classList.toggle("on", s.id === screen));
   document.querySelectorAll("#tabbar button").forEach(b => b.classList.toggle("on", b.dataset.go === screen));
-  if (screen === "learn") {
-    if (["syllabus", "ngn", "quick"].includes(sub)) learnSub = sub;
-    document.querySelectorAll("#learn .sub").forEach(s => s.classList.toggle("on", s.id === learnSub));
-    document.querySelectorAll("#learnTabs button").forEach(b => b.classList.toggle("on", b.dataset.sub === learnSub));
+  if (SUBS[screen]) {
+    if (SUBS[screen].includes(sub)) curSub[screen] = sub;
+    const cur = curSub[screen];
+    document.querySelectorAll(`#${screen} .sub`).forEach(s => s.classList.toggle("on", s.id === cur));
+    document.querySelectorAll(`#${screen} .seg button`).forEach(b => b.classList.toggle("on", b.dataset.sub === cur));
+    if (cur === "notes") renderNotes();
+    if (cur === "cards") renderCards();
+    if (cur === "mistakes") renderMistakes();
   }
   if (screen === "home") renderHome();
-  if (screen === "progress") { renderLog(); renderPhases(); }
+  if (screen === "progress") { renderLog(); renderPhases(); renderWeek(); renderBadges(); }
   if (pendingScroll) { const el = pendingScroll; pendingScroll = null; el.scrollIntoView({ block: "start" }); }
   else window.scrollTo(0, 0);
 }
@@ -69,11 +102,11 @@ function show() {
 /* ---------- FIRST-TIME SETUP ---------- */
 let setupStep = 0, setupMin = 30;
 
-function choiceChips(id, value, onPick) {
-  $(id).innerHTML = MINUTES.map(([v, l]) => `<button type="button" class="chip ${v === value ? "on" : ""}" data-v="${v}">${l}</button>`).join("");
+function choiceChips(id, value, onPick, options = MINUTES) {
+  $(id).innerHTML = options.map(([v, l], i) => `<button type="button" class="chip ${v === value ? "on" : ""}" data-i="${i}">${l}</button>`).join("");
   $(id).querySelectorAll("button").forEach(b => b.onclick = () => {
     $(id).querySelectorAll("button").forEach(x => x.classList.toggle("on", x === b));
-    onPick(+b.dataset.v);
+    onPick(options[+b.dataset.i][0]);
   });
 }
 
@@ -128,6 +161,8 @@ function renderHome() {
   const week = [];
   for (let i = 6; i >= 0; i--) { const x = new Date(); x.setDate(x.getDate() - i); week.push(S.days[dayKey(x)] ? "y" : ""); }
   $("hWeek").innerHTML = week.map(c => `<i class="${c}"></i>`).join("");
+  $("hDue").textContent = dueCount();
+  $("hMin").textContent = Object.values(S.study[dayKey()] || {}).reduce((a, b) => a + b, 0);
   renderTask();
   renderStats();
 }
@@ -184,6 +219,7 @@ function renderTask() {
     <li>📖 <b>Review the topic</b> for about ${read} min in your textbook or notes. <a href="#learn/syllabus" onclick="event.preventDefault();openCat('${cat.id}')">See it in the syllabus</a></li>
     ${qn ? `<li>✍️ <b>Answer ${qn} questions</b> on ${cat.short}.<br><button class="btn" style="margin-top:6px" onclick="startQuiz('${cat.id}',${qn},true)">Start practice ▶</button></li>` : ""}
     ${m >= 60 ? `<li>🧪 <b>10 min quick review</b>: <a href="#learn/quick">lab values & drug suffixes</a></li>` : ""}
+    <li>📝 <a href="#" onclick="event.preventDefault();editTopicNote('${t.topic}')">${S.notes[t.topic] && S.notes[t.topic].text ? "Open my notes" : "Write notes"} on this topic</a> · ⏱️ <a href="#" onclick="event.preventDefault();openTimer('${t.topic}')">Start the study timer</a></li>
     <li>⭐ <b>How do you feel about it now?</b><div class="lvl" style="margin-top:6px">${["Weak", "OK", "Confident"].map((l, i) => `<button class="s${i + 1} ${v == i + 1 ? "on" : ""}" onclick="rateTask(${i + 1})">${l}</button>`).join("")}</div></li>
     </ol><button class="btn block" onclick="taskDone(true)">✔ I've done today's task</button>`;
   }
@@ -214,7 +250,8 @@ function renderCats() {
     <button class="btn ghost" style="margin-bottom:8px" onclick="startQuiz('${c.id}')">Practise ${nq} questions on this ▶</button>`;
     c.topics.forEach(t => {
       const k = t.id, v = S.lv[k] || 0;
-      h += `<div class="topic"><span>${t.name}</span><div class="lvl">${["Weak", "OK", "Confident"].map((l, i) => `<button class="s${i + 1} ${v == i + 1 ? "on" : ""}" onclick="setLv('${k}',${i + 1})">${l}</button>`).join("")}</div></div>`;
+      const hasNote = S.notes[k] && S.notes[k].text;
+      h += `<div class="topic"><span>${t.name}</span><div class="lvl">${["Weak", "OK", "Confident"].map((l, i) => `<button class="s${i + 1} ${v == i + 1 ? "on" : ""}" onclick="setLv('${k}',${i + 1})">${l}</button>`).join("")}<button class="iconbtn ${hasNote ? "has" : ""}" onclick="editTopicNote('${k}')" aria-label="Notes on ${esc(t.name)}">📝</button></div></div>`;
     });
     h += `</div></div>`;
   });
@@ -282,11 +319,16 @@ function startQuiz(cid, n, fromTask) {
   let pool = shuffle(Q.filter(q => !qf || catOf(q) === qf));
   if ($("qweak").checked) pool.sort((a, b) => (S.lv[b.topic] == 1) - (S.lv[a.topic] == 1));
   pool = pool.slice(0, n || +$("qn").value);
-  QZ = { list: pool, i: 0, score: 0, sel: [], sub: false, task: !!fromTask, cat: qf };
+  runQuiz(pool, { task: !!fromTask, cat: qf });
+}
+
+/* Start a quiz on a given list. opts: {task, cat, mode: "retry"} */
+function runQuiz(list, opts) {
+  QZ = Object.assign({ list, i: 0, score: 0, sel: [], sub: false, task: false, cat: "", mode: "" }, opts);
   $("quiz").hidden = false;
   drawQ();
   pendingScroll = $("quiz");
-  go("practice");
+  go("practice", "drill");
 }
 $("qstart").onclick = () => startQuiz();
 
@@ -311,7 +353,7 @@ function drawQ() {
   }
   if (z.sub) {
     const ok = z.last;
-    h += `<div class="rat"><b class="${ok ? "ok" : "no"}">${ok ? "✔ Correct" : "✘ Not quite"}${!ok && z.partial ? ` · partial credit ${z.partial}` : ""}</b><br>${q.rationale}</div><div class="row"><button class="btn" onclick="QZ.i++;QZ.sel=[];QZ.sub=false;drawQ()">${z.i + 1 < z.list.length ? "Next question →" : "See results"}</button></div>`;
+    h += `<div class="rat"><b class="${ok ? "ok" : "no"}">${ok ? "✔ Correct" : "✘ Not quite"}${!ok && z.partial ? ` · partial credit ${z.partial}` : ""}</b><br>${q.rationale}</div>${ok ? "" : whyChips(q.id)}<div class="row"><button class="btn" onclick="QZ.i++;QZ.sel=[];QZ.sub=false;drawQ()">${z.i + 1 < z.list.length ? "Next question →" : "See results"}</button></div>`;
   } else {
     const ready = q.type == "matrix" ? q.rows.every((_, ri) => z.sel[ri] !== undefined) : z.sel.length > 0;
     h += `<div class="row"><button class="btn" ${ready ? "" : "disabled"} onclick="submitQ()">Submit</button></div>`;
@@ -341,19 +383,20 @@ function submitQ() {
   const cid = catOf(q), st = S.stat[cid] || (S.stat[cid] = { n: 0, c: 0 });
   st.n++; if (ok) st.c++;
   if (!ok) { const k = q.topic; if (!S.lv[k] || S.lv[k] == 2) S.lv[k] = 1; }
+  recordAnswer(q, ok);
   markActive(); save(); drawQ();
 }
 
 function finishQuiz() {
   const z = QZ, p = Math.round(z.score / z.list.length * 100);
-  S.sessions.push({ d: dayKey(), q: z.list.length, c: z.score, cat: z.cat ? CAT[z.cat].short : "All", cid: z.cat || "all" });
+  S.sessions.push({ d: dayKey(), q: z.list.length, c: z.score, cat: z.mode === "retry" ? "Mistakes" : z.cat ? CAT[z.cat].short : "All", cid: z.mode === "retry" ? "mistakes" : z.cat || "all" });
   let taskMsg = "";
   if (z.task && S.task && S.task.d === dayKey() && !S.task.done) {
     S.task.done = true;
     taskMsg = `<p><b>🎉 Today's task is done!</b> Rate the topic on Home.</p>`;
   }
   save(); renderCats();
-  $("quiz").innerHTML = `<div style="text-align:center;padding:10px"><div style="font-size:3rem">${p >= 80 ? "🌟" : p >= 60 ? "💪" : "📚"}</div><h2>${z.score} / ${z.list.length} (${p}%)</h2><p class="note">${p >= 80 ? "Excellent! Move these topics toward Confident." : p >= 60 ? "Good work, keep going. Review the rationales you missed." : "Topics you missed were marked Weak in the Syllabus. Review them, then try again."}</p>${taskMsg}<div class="row" style="justify-content:center"><button class="btn" onclick="startQuiz()">Another round</button>${z.task ? `<button class="btn ghost" onclick="go('home')">Back to Home</button>` : ""}</div></div>`;
+  $("quiz").innerHTML = `<div style="text-align:center;padding:10px"><div style="font-size:3rem">${p >= 80 ? "🌟" : p >= 60 ? "💪" : "📚"}</div><h2>${z.score} / ${z.list.length} (${p}%)</h2><p class="note">${p >= 80 ? "Excellent! Move these topics toward Confident." : p >= 60 ? "Good work, keep going. Review the rationales you missed." : "Topics you missed were marked Weak in the Syllabus. Review them, then try again."}</p>${taskMsg}<div class="row" style="justify-content:center">${z.mode === "retry" ? `<button class="btn" onclick="go('practice','mistakes')">See my mistakes</button>` : `<button class="btn" onclick="startQuiz()">Another round</button>`}${z.task ? `<button class="btn ghost" onclick="go('home')">Back to Home</button>` : ""}</div></div>`;
 }
 
 /* ---------- PROGRESS ---------- */
@@ -394,8 +437,8 @@ function catAns(ok) {
 function catReset() { cat = { th: 0, hist: [0], n: 0 }; $("catMsg").innerHTML = "Press a button to answer question 1."; drawCat(); }
 function drawCat() {
   const y = v => 85 - v * 24, n = Math.max(12, cat.hist.length), x = i => 30 + i * (300 / (n - 1));
-  let s = `<rect x="30" y="${y(3)}" width="300" height="${y(0) - y(3)}" fill="#e6f4f1"/><rect x="30" y="${y(0)}" width="300" height="${y(-3) - y(0)}" fill="#fdf0f1"/><line x1="30" x2="330" y1="${y(0)}" y2="${y(0)}" stroke="#b7791f" stroke-dasharray="5 4"/><text x="34" y="${y(0) - 5}" font-size="10" fill="#b7791f">passing standard</text><text x="34" y="${y(3) + 12}" font-size="10" fill="#0f766e">PASS zone</text><text x="34" y="${y(-3) - 4}" font-size="10" fill="#be4b5b">FAIL zone</text>`;
-  s += `<polyline fill="none" stroke="#0f766e" stroke-width="2.5" points="${cat.hist.map((v, i) => x(i) + "," + y(v)).join(" ")}"/>` + cat.hist.map((v, i) => `<circle cx="${x(i)}" cy="${y(v)}" r="3.5" fill="#0f766e"/>`).join("");
+  let s = `<rect x="30" y="${y(3)}" width="300" height="${y(0) - y(3)}" style="fill:var(--soft)"/><rect x="30" y="${y(0)}" width="300" height="${y(-3) - y(0)}" style="fill:var(--rsoft)"/><line x1="30" x2="330" y1="${y(0)}" y2="${y(0)}" style="stroke:var(--amber)" stroke-dasharray="5 4"/><text x="34" y="${y(0) - 5}" font-size="10" style="fill:var(--amber)">passing standard</text><text x="34" y="${y(3) + 12}" font-size="10" style="fill:var(--teal2)">PASS zone</text><text x="34" y="${y(-3) - 4}" font-size="10" style="fill:var(--rose)">FAIL zone</text>`;
+  s += `<polyline fill="none" style="stroke:var(--teal2)" stroke-width="2.5" points="${cat.hist.map((v, i) => x(i) + "," + y(v)).join(" ")}"/>` + cat.hist.map((v, i) => `<circle cx="${x(i)}" cy="${y(v)}" r="3.5" style="fill:var(--teal2)"/>`).join("");
   $("catSvg").innerHTML = s;
 }
 
@@ -429,7 +472,7 @@ function drawDemo() {
     h += demoSub ? `<div class="rat">${q.rationale}</div>` : `<button class="btn" style="margin-top:8px" onclick="demoSub=true;drawDemo()">Check</button>`;
   }
   else if (t.kind == "highlight") {
-    h += `<div class="case" id="hlBox" style="font-size:1rem;line-height:2.2">${GUIDE.highlight.map(p => p.key || p.text.trim().length > 2 ? `<span data-k="${p.key ? 1 : 0}" onclick="this.classList.toggle('hl');this.style.background=this.classList.contains('hl')?'#fde68a':''" style="cursor:pointer;border-radius:4px;padding:2px 3px">${p.text}</span>` : p.text).join("")}</div><button class="btn" onclick="hlCheck()">Check</button><div id="hlRes"></div>`;
+    h += `<div class="case" id="hlBox" style="font-size:1rem;line-height:2.2">${GUIDE.highlight.map(p => p.key || p.text.trim().length > 2 ? `<span class="hlw" data-k="${p.key ? 1 : 0}" onclick="this.classList.toggle('hl')">${p.text}</span>` : p.text).join("")}</div><button class="btn" onclick="hlCheck()">Check</button><div id="hlRes"></div>`;
   }
   else if (t.kind == "cloze") {
     h += `<div class="case" style="font-size:1rem;line-height:2.4">The client is most likely experiencing <select id="cz1"><option>—</option><option>hypovolemia</option><option>fluid overload</option></select> as shown by <select id="cz2"><option>—</option><option>crackles and weight gain</option><option>dry mouth and low BP</option></select>.</div><p class="note">Case: heart failure client, +2 kg overnight, crackles, edema.</p><button class="btn" onclick="clozeCheck()">Check</button><div id="czRes"></div>`;
@@ -457,7 +500,7 @@ function hlCheck() {
   const total = GUIDE.highlight.filter(p => p.key).length;
   document.querySelectorAll("#hlBox span").forEach(s => {
     const k = s.dataset.k == "1", h = s.classList.contains("hl");
-    if (k) s.style.outline = "2px solid #0f766e";
+    if (k) s.style.outline = "2px solid var(--teal2)";
     if (k && h) r++; if (!k && h) w++;
   });
   $("hlRes").innerHTML = `<div class="rat">You found <b>${r}/${total}</b> key findings${w ? ` (and ${w} extra)` : ""}. Fever, new confusion, low BP and high HR together suggest <b>sepsis</b>: report right away.</div>`;
@@ -479,6 +522,9 @@ function renderQuick() {
   $("labs").innerHTML = REF.labs.map(l => `<tr><td>${l.name}</td><td>${l.range}</td></tr>`).join("");
   $("drugs").innerHTML = REF.drugs.map(l => `<tr><td><b>${l.suffix}</b></td><td>${l.cls}</td></tr>`).join("");
   $("iso").innerHTML = `<tr><th>Type</th><th>Examples</th><th>Key PPE / room</th></tr>` + REF.isolation.map(r => `<tr><td>${r.type}</td><td>${r.examples}</td><td>${r.ppe}</td></tr>`).join("");
+  $("antidotes").innerHTML = `<tr><th>Medication</th><th>Antidote / reversal</th><th>Watch for</th></tr>` + REF.highAlert.map(r => `<tr><td>${r.drug}</td><td><b>${r.antidote}</b></td><td>${r.watch}</td></tr>`).join("");
+  $("vitals").innerHTML = `<tr><th>Age</th><th>Heart rate</th><th>Resp. rate</th></tr>` + REF.vitals.map(r => `<tr><td>${r.age}</td><td>${r.hr}</td><td>${r.rr}</td></tr>${r.more ? `<tr><td></td><td colspan="2" class="note">${r.more}</td></tr>` : ""}`).join("");
+  $("vitalsNote").textContent = REF.vitalsNote;
 }
 
 /* ---------- MORE: SETTINGS + CANADA ---------- */
