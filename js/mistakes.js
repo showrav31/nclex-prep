@@ -45,8 +45,8 @@ function renderMistakes() {
   const list = (mkShow === "open" ? open : all).slice(0, 100);
   $("mkList").innerHTML = list.length ? list.map(([id, m]) => `<div class="item">
       <div class="meta">${TOPIC[m.topic] ? esc(TOPIC[m.topic].name) : "Old topic"} · wrong ${m.n}× · last ${m.last}${m.fixed ? ` · <b style="color:var(--teal2)">✔ fixed</b>` : ""}</div>
-      <div style="margin-top:4px">${m.stem}</div>
-      <details><summary>Show rationale</summary><div class="rat">${m.rationale}</div></details>
+      <div style="margin-top:4px">${fmt(legacyHtml(m.stem))}</div>
+      <details><summary>Show rationale</summary><div class="rat">${fmt(legacyHtml(m.rationale))}</div></details>
       ${whyChips(id)}</div>`).join("")
     : `<p class="empty">${all.length ? "All mistakes fixed! 🎉" : "No mistakes yet. Wrong answers from quizzes show up here."}</p>`;
 }

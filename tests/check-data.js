@@ -79,9 +79,122 @@ const ref = read("data/reference.json"), guide = read("data/exam-guide.json");
 guide.priority.forEach(x => id("card priority", x.id));
 [...seen].filter(x => /^(my|note)-/.test(x)).forEach(x => errors.push(`id "${x}" uses a prefix reserved for her own cards/notes`));
 
+// ---- question banks: data/questions/<categoryId>.json (new format, all question types)
+const NGN_TYPES = new Set(["matrix", "dropdown", "highlight", "dragdrop", "bowtie", "trend"]);
+const ALL_TYPES = new Set(["mcq", "sata", ...NGN_TYPES]);
+const cjIds = new Set(syl.clinicalJudgmentSteps.map(s => s.id)), ipIds = new Set(syl.integratedProcesses.map(p => p.id));
+const topicCat = {}, pointTopic = {};
+syl.categories.forEach(c => c.topics.forEach(t => { topicCat[t.id] = c.id; t.learningPoints.forEach(p => pointTopic[p.id] = t.id); }));
+const nonEmpty = x => typeof x === "string" && x.trim().length > 0;
+const isIdx = (n, len) => Number.isInteger(n) && n >= 0 && n < len;
+const bankFiles = fs.existsSync(path.join(root, "data/questions")) ? fs.readdirSync(path.join(root, "data/questions")).filter(f => f.endsWith(".json")).sort() : [];
+const stems = new Map(), needsReview = [];
+let bankTotal = 0;
+
+function checkTypeFields(q, E) {
+  const opts = (arr, what) => Array.isArray(arr) && arr.length >= 2 && arr.every(nonEmpty) && new Set(arr).size === arr.length ? true : (E(`${what} must be 2+ different non-empty strings`), false);
+  const rationales = (arr, n, what) => { if (!Array.isArray(arr) || arr.length !== n || !arr.every(r => nonEmpty(r) && r.length >= 15)) E(`${what} needs one real explanation per option`); };
+  switch (q.type) {
+    case "mcq":
+      if (opts(q.options, "options") && q.options.length >= 3) { if (!isIdx(q.key, q.options.length)) E("key is not a valid option index"); rationales(q.optionRationales, q.options.length, "optionRationales"); }
+      break;
+    case "sata":
+      if (opts(q.options, "options") && q.options.length >= 4) {
+        if (!Array.isArray(q.key) || new Set(q.key).size !== q.key.length || q.key.length < 2 || q.key.length >= q.options.length || !q.key.every(k => isIdx(k, q.options.length))) E("key must be 2+ different option indexes, but not all options");
+        rationales(q.optionRationales, q.options.length, "optionRationales");
+      }
+      break;
+    case "matrix": case "trend":
+      if (opts(q.cols, "cols") && Array.isArray(q.rows) && q.rows.length >= 3) q.rows.forEach((r, i) => { if (!nonEmpty(r.text) || !isIdx(r.key, q.cols.length) || !nonEmpty(r.why) || r.why.length < 15) E(`row ${i + 1}: needs text, a valid key column and a why`); });
+      else E("rows must be 3 or more");
+      if (q.type === "trend" && !(q.exhibit && Array.isArray(q.exhibit.rows) && q.exhibit.rows.length >= 2)) E("a trend question needs an exhibit table with data over time");
+      break;
+    case "dropdown": {
+      if (!nonEmpty(q.template) || !Array.isArray(q.blanks) || !q.blanks.length) return E("needs a template and blanks");
+      q.blanks.forEach((b, i) => {
+        if ((q.template.match(new RegExp(`\\{${i + 1}\\}`, "g")) || []).length !== 1) E(`template must contain {${i + 1}} exactly once`);
+        if (!opts(b.options, `blank ${i + 1} options`) || !isIdx(b.key, b.options.length)) E(`blank ${i + 1}: bad options or key`);
+        if (!nonEmpty(b.why) || b.why.length < 15) E(`blank ${i + 1}: needs a why`);
+      });
+      if ((q.template.match(/\{\d+\}/g) || []).length !== q.blanks.length) E("template has a different number of {n} than blanks");
+      break;
+    }
+    case "highlight": {
+      const sel = Array.isArray(q.segments) ? q.segments.filter(s => s.key !== undefined) : [];
+      if (!Array.isArray(q.segments) || !q.segments.every(s => typeof s.text === "string" && s.text.length > 0 && (s.key === undefined || nonEmpty(s.text)))) return E("segments need text (plain separators may be a space)");
+      if (sel.length < 4 || !sel.some(s => s.key === true) || !sel.some(s => s.key === false) || !sel.every(s => typeof s.key === "boolean")) E("needs 4+ selectable segments with both key and non-key ones");
+      sel.forEach((s, i) => { if (!nonEmpty(s.why) || s.why.length < 15) E(`selectable segment ${i + 1}: needs a why`); });
+      break;
+    }
+    case "dragdrop":
+      if (q.mode === "order") {
+        if (!Array.isArray(q.items) || q.items.length < 3 || !q.items.every(i => nonEmpty(i.text) && nonEmpty(i.why))) return E("order items need text and why (3+)");
+        const n = q.items.length;
+        if (!Array.isArray(q.key) || q.key.length !== n || [...q.key].sort((a, b) => a - b).some((v, i) => v !== i)) E("key must list every item index once, in the correct order");
+        else if (q.key.every((v, i) => v === i)) E("items are shown already in the correct order");
+      } else if (q.mode === "sort") {
+        if (!opts(q.bins, "bins") || !Array.isArray(q.items) || q.items.length < 3) return E("sort needs bins and 3+ items");
+        q.items.forEach((it, i) => { if (!nonEmpty(it.text) || !isIdx(it.key, q.bins.length) || !nonEmpty(it.why)) E(`item ${i + 1}: needs text, a valid bin key and a why`); });
+        q.bins.forEach((b, bi) => { if (!q.items.some(it => it.key === bi)) E(`bin "${b}" is never the answer`); });
+      } else E(`unknown dragdrop mode "${q.mode}"`);
+      break;
+    case "bowtie":
+      [["condition", 1], ["actions", 2], ["parameters", 2]].forEach(([part, n]) => {
+        const p = q[part];
+        if (!p || !nonEmpty(p.prompt) || !opts(p.options, `${part}.options`)) return E(`${part}: needs a prompt and options`);
+        const keys = part === "condition" ? [p.key] : p.keys;
+        if (!Array.isArray(keys) || keys.length !== n || new Set(keys).size !== n || !keys.every(k => isIdx(k, p.options.length))) E(`${part}: needs exactly ${n} valid key(s)`);
+        if (p.options.length <= n + 1) E(`${part}: needs at least ${n + 2} options`);
+        rationales(p.optionRationales, p.options.length, `${part}.optionRationales`);
+      });
+      break;
+  }
+}
+
+bankFiles.forEach(f => {
+  const file = read("data/questions/" + f), cat = syl.categories.find(c => c.id === file.categoryId);
+  if (!cat || f !== file.categoryId + ".json") { errors.push(`data/questions/${f}: categoryId "${file.categoryId}" must be a real category and match the file name`); return; }
+  const perTopic = {}, firstPoints = {};
+  file.questions.forEach(q => {
+    const E = msg => errors.push(`question ${q.id || "(no id)"}: ${msg}`);
+    bankTotal++;
+    id("question", q.id);
+    if (q.categoryId !== file.categoryId) E(`categoryId should be ${file.categoryId}`);
+    if (topicCat[q.topicId] !== file.categoryId) E(`topicId "${q.topicId}" is not a topic of ${file.categoryId}`);
+    if (!Array.isArray(q.secondaryTopicIds) || q.secondaryTopicIds.some(t => !topicCat[t] || t === q.topicId)) E("secondaryTopicIds must be real topics, different from topicId");
+    const allowed = new Set([q.topicId, ...(q.secondaryTopicIds || [])]);
+    if (!Array.isArray(q.learningPointIds) || !q.learningPointIds.length || new Set(q.learningPointIds).size !== q.learningPointIds.length) E("needs 1+ different learningPointIds");
+    else q.learningPointIds.forEach(p => { if (!pointTopic[p]) E(`learning point "${p}" does not exist`); else if (!allowed.has(pointTopic[p])) E(`learning point "${p}" belongs to another topic`); });
+    if (q.cjStep !== null && !cjIds.has(q.cjStep)) E(`cjStep "${q.cjStep}" is not null or a clinical judgment step`);
+    if (!ipIds.has(q.integratedProcess)) E(`integratedProcess "${q.integratedProcess}" does not exist`);
+    if (!ALL_TYPES.has(q.type)) E(`unknown type "${q.type}"`);
+    if (!Number.isInteger(q.difficulty) || q.difficulty < 1 || q.difficulty > 5) E("difficulty must be 1 to 5");
+    if (!nonEmpty(q.stem) || q.stem.length < 20) E("needs a stem");
+    if (!nonEmpty(q.rationale) || q.rationale.length < 30) E("needs a rationale");
+    if (typeof q.needsReview !== "boolean") E("needsReview must be true or false");
+    if (q.needsReview) { needsReview.push(q.id); if (!nonEmpty(q.reviewNote)) E("needsReview questions need a reviewNote saying what to check"); }
+    if (q.exhibit && !(nonEmpty(q.exhibit.text) || (Array.isArray(q.exhibit.columns) && Array.isArray(q.exhibit.rows) && q.exhibit.rows.every(r => r.length === q.exhibit.columns.length)))) E("exhibit needs text, or columns and rows of the same width");
+    const norm = String(q.stem).toLowerCase().replace(/\W+/g, " ").trim();
+    if (stems.has(norm)) E(`same stem as ${stems.get(norm)}`); else stems.set(norm, q.id);
+    if (ALL_TYPES.has(q.type)) checkTypeFields(q, E);
+    perTopic[q.topicId] = (perTopic[q.topicId] || 0) + 1;
+    (firstPoints[q.topicId] = firstPoints[q.topicId] || new Set()).add((q.learningPointIds || [])[0]);
+  });
+  cat.topics.forEach(t => {
+    if ((perTopic[t.id] || 0) < 4) errors.push(`${f}: topic ${t.id} has ${perTopic[t.id] || 0} questions, needs at least 4`);
+    const want = Math.min(4, t.learningPoints.length), got = (firstPoints[t.id] || new Set()).size;
+    if (got < want) errors.push(`${f}: topic ${t.id} covers only ${got} different learning points (first learningPointId of each question), needs ${want}`);
+  });
+  const ngn = file.questions.filter(q => NGN_TYPES.has(q.type)).length;
+  if (ngn / file.questions.length < 0.4) errors.push(`${f}: only ${ngn} of ${file.questions.length} questions are Next Gen types, needs at least 40%`);
+  // the file must be loaded by the app and cached by the service worker
+  if (!fs.readFileSync(path.join(root, "js/app.js"), "utf8").includes(`"questions/${file.categoryId}"`)) errors.push(`js/app.js QUESTION_FILES does not list questions/${file.categoryId}`);
+  if (!fs.readFileSync(path.join(root, "sw.js"), "utf8").includes(`"data/questions/${f}"`)) errors.push(`sw.js FILES does not list data/questions/${f}`);
+});
+
 const sw = fs.readFileSync(path.join(root, "sw.js"), "utf8");
 const files = JSON.parse(sw.match(/const FILES = (\[[\s\S]*?\]);/)[1].replace(/,\s*\]/, "]"));
 files.filter(f => f !== "./").forEach(f => { if (!fs.existsSync(path.join(root, f))) errors.push(`sw.js caches missing file ${f}`); });
 
 if (errors.length) { console.error("✘ " + errors.join("\n✘ ")); process.exit(1); }
-console.log(`✔ data ok: ${counts.areas} areas, ${counts.categories} categories, ${counts.topics} topics, ${counts.learningPoints} learning points, ${counts.activityStatements} activity statements, ${counts.integratedProcesses} integrated processes, ${counts.clinicalJudgmentSteps} judgment steps; ${seen.size} unique ids; sw caches ${files.length} files`);
+console.log(`✔ data ok: ${counts.areas} areas, ${counts.categories} categories, ${counts.topics} topics, ${counts.learningPoints} learning points, ${counts.activityStatements} activity statements, ${counts.integratedProcesses} integrated processes, ${counts.clinicalJudgmentSteps} judgment steps; ${seen.size} unique ids; sw caches ${files.length} files; question banks: ${bankTotal} questions, ${needsReview.length} flagged needsReview`);

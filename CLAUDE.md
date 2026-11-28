@@ -4,7 +4,7 @@
 This website is my wife's **main** place to prepare for the NCLEX-RN. She is a 4th-year nursing student in Bangladesh, sitting the exam around mid-2028, and will then work as an RN in Canada. She mostly uses her **Android phone**, sometimes on **slow internet**.
 
 ## Rules
-- **Fast on a mid-range Android**: plain JS, no frameworks or big libraries, render only the visible screen. (Now: ~365 KB uncompressed, of which the syllabus data is 168 KB / ~23 KB gzipped; ~0.4 s load with a 4× slower CPU.)
+- **Fast on a mid-range Android**: plain JS, no frameworks or big libraries, render only the visible screen. (Now: ~500 KB uncompressed; the syllabus is 168 KB and the Management of Care questions 117 KB, about 23 KB and 28 KB gzipped; ~0.35 s load with a 4× slower CPU.)
 - **Dark mode**: use the colour tokens in `:root` (`var(--card)`, `var(--ink)` …), never hard-coded colours.
 - **Mobile-first**: design for a small Android screen first, then scale up.
 - **Simple and friendly** design, in **plain English**.
@@ -59,6 +59,9 @@ The site lives under the `/nclex-prep/` subpath, not the domain root.
 - `js/syllabus.js` — syllabus screen: area → category → topic rows, the topic page (learning-point checklist, linked activity statements, note, "Practise this topic"), weighted progress, "About the test plan". Short category labels (`CAT_SHORT`) live here: add one for any new category.
 - Study tools, one file each, loaded after `app.js`: `flashcards.js` (spaced repetition), `notes.js`, `mistakes.js`, `timer.js` (study timer + weekly chart), `badges.js`, `settings.js` (dark mode, text size, backup/restore, reset).
 - `source/nclex-2026-syllabus.json` — the official syllabus data (never edit). Not cached by the service worker.
+- `js/qtypes.js` — question engine: loads/normalizes questions, draws all 8 question types, scoring and partial credit, "why each choice" review.
+- `data/questions/<categoryId>.json` — the question bank for one category, in the new format (see **Question bank** below). Today only `management-of-care.json` (64 questions). Add a file per category, and list it in `QUESTION_FILES` in `js/app.js` and in `FILES` in `sw.js`.
+- `data/questions.json` — the 34 older questions (older, simpler format; still loaded and converted by `normQ`). Leave as is.
 - `data/legacy-topic-map.json` — old (pre-2026-syllabus) topic id → new id map, used by the v5 → v6 migration. Never edit it.
 - `data/*.json` — content: `syllabus` (copy of the source), `questions`, `plan`, `canada`, `reference` (labs, drugs, isolation, high-alert meds, vital signs), `exam-guide`. Flashcard decks are built from `reference` + `exam-guide.priority`; each item's `id` is its card ID.
 - `sw.js` — service worker for offline use. **Bump `VERSION` in `sw.js` whenever any app file changes**, and add new files to its `FILES` list.
@@ -72,6 +75,22 @@ The site lives under the `/nclex-prep/` subpath, not the domain root.
 - Mistakes store a copy of the question stem and rationale, so they survive question edits or removal.
 - Every category, topic, learning point, phase, plan task, Canada step and question in `data/*.json` has an `id` (lowercase words with dashes, e.g. `q-pharm-heparin-antidote`). Questions link to a topic by `topic: "<official topicId>"`.
 - **Schema v6** moved everything from the old topic ids (`moc-delegation` …) to the official ids. Ratings, notes, timer minutes, mistakes, today's task and quiz stats were mapped by `LEGACY_V5` (a frozen copy of `data/legacy-topic-map.json` inside `js/store.js`; a test checks they agree). Where two old topics became one, the lower rating wins and notes are joined. Anything unmatched is kept in `S.unmapped.v6`; a note on an unmatched topic becomes a free note.
+
+## Question bank
+Question files `data/questions/<categoryId>.json` look like `{ "categoryId": "...", "questions": [ ... ] }`. Every question has:
+`id` (stable, `q-…`), `categoryId`, `topicId`, `secondaryTopicIds[]`, `learningPointIds[]` (official ids; the first is the main one), `cjStep` (a clinical judgment step id or `null`), `integratedProcess` (id), `type`, `difficulty` (1 to 5), `stem`, optional `exhibit` (`{title, text}` or `{title, columns, rows}`), `rationale` (why the key is right), `needsReview` (true/false, plus a `reviewNote` saying what to check when true).
+Type fields:
+- `mcq`: `options[]`, `key` (index), `optionRationales[]` (one per option).
+- `sata`: `options[]`, `key` (array of indexes), `optionRationales[]`.
+- `matrix`: `cols[]`, `rows[{text, key (column index), why}]`.
+- `trend`: like `matrix`, plus a required `exhibit` table of data over time.
+- `dropdown`: `template` with `{1}`, `{2}`…, `blanks[{options[], key, why}]`.
+- `highlight`: `segments[]`; plain text is `{text}`, tappable text is `{text, key: true|false, why}`.
+- `dragdrop`: `mode: "order"` with `items[{text, why}]` shown in a mixed order and `key[]` (key[position] = index of the item that belongs there); or `mode: "sort"` with `bins[]` and `items[{text, key (bin index), why}]`.
+- `bowtie`: `condition`, `actions`, `parameters`, each `{prompt, options[], key|keys[], optionRationales[]}` (1 condition, 2 actions, 2 parameters).
+Text is plain; `**bold**` is allowed. Question ids are stable: **never change or reuse one** (My mistakes is keyed by it).
+**Partial credit** (in `scoreQ`, `js/qtypes.js`): mcq all-or-nothing; sata and highlight plus/minus (+1 right, −1 wrong, min 0); matrix, trend, sort 1 point per row/item; dropdown 1 per box; order 1 per item in the right place; bowtie 1 per right choice out of 5 (wrong choices score 0). A question counts as correct only when every point is earned.
+**Writing questions**: original (never copy the test plan or a commercial bank), entry-level RN scope, generic drug names, lab values with units, glucose in both mmol/L and mg/dL, temperatures in °C with °F, Canadian-friendly wording. At least 4 questions per topic covering different learning points, and at least 40% Next Gen types (matrix, dropdown, highlight, dragdrop, bowtie, trend). Every wrong option needs a reason. Set `needsReview: true` (with a `reviewNote`) when not fully sure, or when the answer depends on province/territory rules; the app shows these to her as "waiting for a clinical check", and they should be listed to the user after each task.
 
 ## Content order and IDs
 - Content can be **reordered, inserted or removed** safely.

@@ -168,6 +168,29 @@ svg text{font-family:Inter,sans-serif}
 .acts{margin:0;padding-left:20px;font-size:.9rem}.acts li{margin:6px 0}
 #planInfo details summary{cursor:pointer}
 
+/* question types */
+.qhint{font-size:.82rem;color:var(--muted);margin:0 0 8px}
+.qreview{font-size:.82rem;background:var(--asoft);color:var(--amber);border:1px solid var(--tipline);border-radius:10px;padding:6px 10px;margin-bottom:10px}
+.exhibit{background:var(--subtle);border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin:0 0 12px;font-size:.9rem}
+.exh{width:100%;margin-top:8px;font-size:.8rem;table-layout:auto}.exh th,.exh td{padding:5px 4px;border-bottom:1px solid var(--line);vertical-align:top}.exh th{text-align:left}.exh tr:first-child th{color:var(--muted);font-weight:600;font-size:.74rem}
+.exh td{text-align:center}.exh.two td{text-align:left}.exh th:first-child{width:36%}.exh.two th:first-child{width:42%}
+.blankline{line-height:2;font-size:1rem}
+.slot{display:inline;padding:1px 8px;border-radius:8px;border:1px dashed var(--line);background:var(--card);font-weight:600}
+.slot.set{border-style:solid;border-color:var(--teal2);color:var(--teal)}
+.slot.right{border-style:solid;border-color:var(--teal);background:var(--right)}
+.slot.wrong{border-style:solid;border-color:var(--rose);background:var(--rsoft)}
+.hlbox{line-height:2.3}
+.hlw.right{background:var(--right);outline:2px solid var(--teal)}
+.hlw.wrong{background:var(--rsoft);outline:2px solid var(--rose)}
+.hlw.miss{outline:2px dashed var(--teal2)}
+.ord{margin:8px 0 0;padding-left:22px}.ord li{margin:6px 0;padding:4px 6px;border-radius:8px}
+.ord li.right{background:var(--right)}.ord li.wrong{background:var(--rsoft)}
+.bowpart{margin-bottom:6px}
+.whyall{margin-top:10px;font-size:.9rem}
+.whyall summary{cursor:pointer;color:var(--teal);font-weight:600}
+.why1{padding:8px 0;border-top:1px dashed var(--line)}
+.why1 div{color:var(--muted);margin-top:2px}
+
 /* highlight demo */
 .hlw{cursor:pointer;border-radius:4px;padding:2px 3px}.hlw.hl{background:var(--hl)}
 

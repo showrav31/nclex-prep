@@ -140,7 +140,7 @@ function togglePoint(pid, el) {
 function startTopicQuiz(tid) {
   const t = TOPIC[tid], pool = Q.filter(q => q.topic === tid);
   if (!pool.length) return;
-  qf = t.cat; renderFilter();
+  qf = t.cat; qt = tid; renderFilter(); // the Practice screen's filter shows the same topic
   runQuiz(shuffle(pool), { cat: t.cat, topic: tid });
 }
 

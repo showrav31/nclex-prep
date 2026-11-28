@@ -290,7 +290,7 @@ const V5 = {
     await p.goto(U + "#learn/notes"); await p.waitForSelector("#notes.on");
     await p.fill("#noteSearch", "rome");
     check((await txt("noteList")).includes("From old topic"), "the note from the unmatched topic can be found in Notes");
-    check((await p.evaluate(() => Q.length)) === 34 && (await p.evaluate(() => Q.every(q => TOPIC[q.topic]))), "all 34 questions are in the bank and point to real topics");
+    check((await p.evaluate(() => Q.length)) === 98 && (await p.evaluate(() => Q.every(q => TOPIC[q.topic]))), "all 98 questions (34 older + 64 new) are in the bank and point to real topics");
     check(p.errs.length === 0, "no console errors (v5)" + (p.errs.length ? ": " + p.errs.join(" | ") : ""));
     await ctx.close();
   }
@@ -344,10 +344,11 @@ const V5 = {
     check(await p.evaluate(t => QZ.topic === t && QZ.list.length === Q.filter(q => q.topic === t).length && QZ.list.every(q => q.topic === t), adv.id), "Practise this topic runs only that topic's questions");
     check(await p.evaluate(() => !document.getElementById("sheet").offsetParent) && await p.evaluate(() => location.hash) === "#practice/drill", "the topic page closed and the quiz opened");
     // a topic with no questions
+    const safety = SYLL.categories.find(c => c.id === "safety-infection-control"), secPlan = safety.topics.find(t => t.id.endsWith("--security-plan"));
     await p.goto(U + "#learn/syllabus");
-    if (!(await p.isVisible("#c-management-of-care .topic"))) await p.click("#c-management-of-care .head");
-    await p.click(`#c-management-of-care .tname:has-text("Advocacy")`);
-    check((await p.textContent("#sheetBody")).includes("No practice questions on this topic yet") && (await p.$$("#sheetBody .acts li")).length === (ACTS_FOR(moc, advocacy.id)), "topic without questions says so and offers the category instead");
+    if (!(await p.isVisible("#c-safety-infection-control .topic"))) await p.click("#c-safety-infection-control .head");
+    await p.click(`#c-safety-infection-control .tname:has-text("Security Plan")`);
+    check((await p.textContent("#sheetBody")).includes("No practice questions on this topic yet") && (await p.$$("#sheetBody .acts li")).length === (ACTS_FOR(safety, secPlan.id)), "topic without questions says so and offers the category instead");
     await p.goBack();
     // test plan overview + footer
     await p.waitForSelector("#sheet", { state: "hidden" });
@@ -355,6 +356,158 @@ const V5 = {
     check(info.includes("85 to 150 items") && (await p.$$("#planInfo details")).length === 12, "test-plan overview shows exam rules, 6 integrated processes and 6 clinical judgment steps");
     check((await p.textContent("footer.credit")).includes("Portions copyrighted by the National Council of State Boards of Nursing, Inc. All rights reserved."), "footer shows the NCSBN copyright credit");
     check(p.errs.length === 0, "no console errors (syllabus)" + (p.errs.length ? ": " + p.errs.join(" | ") : ""));
+    await ctx.close();
+  }
+
+  // G. Question types, scoring and the 64 Management of Care questions
+  {
+    const BANK = JSON.parse(fs.readFileSync(path.join(root, "data/questions/management-of-care.json"), "utf8")).questions;
+    // The right and a deliberately wrong answer for each question, worked out here from the keys (not by the app).
+    const correctSel = q => ({
+      mcq: () => [q.key], sata: () => [...q.key], matrix: () => q.rows.map(r => r.key), trend: () => q.rows.map(r => r.key),
+      dropdown: () => q.blanks.map(b => b.key), highlight: () => q.segments.map((s, i) => s.key === true ? i : -1).filter(i => i >= 0),
+      dragdrop: () => q.mode === "sort" ? q.items.map(i => i.key) : [...q.key],
+      bowtie: () => ({ c: [q.condition.key], a: [...q.actions.keys], p: [...q.parameters.keys] })
+    })[q.type]();
+    const wrongSel = q => ({
+      mcq: () => [(q.key + 1) % q.options.length], sata: () => q.options.map((_, i) => i).filter(i => !q.key.includes(i)).slice(0, 2),
+      matrix: () => q.rows.map(r => (r.key + 1) % q.cols.length), trend: () => q.rows.map(r => (r.key + 1) % q.cols.length),
+      dropdown: () => q.blanks.map(b => (b.key + 1) % b.options.length), highlight: () => q.segments.map((s, i) => s.key === false ? i : -1).filter(i => i >= 0),
+      dragdrop: () => q.mode === "sort" ? q.items.map(i => (i.key + 1) % q.bins.length) : [...q.key].reverse(),
+      bowtie: () => { const pick = (n, keys, len) => [...Array(len).keys()].filter(i => !keys.includes(i)).slice(0, n); return { c: pick(1, [q.condition.key], q.condition.options.length), a: pick(q.actions.keys.length, q.actions.keys, q.actions.options.length), p: pick(q.parameters.keys.length, q.parameters.keys, q.parameters.options.length) }; }
+    })[q.type]();
+
+    const { ctx, p } = await page({ v: LATEST, setup: true, name: "Quiz", exam: "2028-07-01" });
+    await p.waitForSelector("#home.on");
+
+    // 1. every question: the right answer earns full marks, a wrong answer does not
+    const res = await p.evaluate(items => items.map(({ id, good, bad }) => { const q = Q.find(x => x.id === id); return { id, found: !!q, goodReady: isReady(q, good), badReady: isReady(q, bad), good: scoreQ(q, good), bad: scoreQ(q, bad) }; }),
+      BANK.map(q => ({ id: q.id, good: correctSel(q), bad: wrongSel(q) })));
+    check(res.every(r => r.found) && res.length === 64, "all 64 new questions are loaded by the app");
+    check(res.every(r => r.goodReady && r.badReady), "every right and wrong answer can be submitted (Submit becomes available)");
+    check(res.every(r => r.good.got === r.good.max && r.good.max >= 1), "the right answer earns full marks for every question: " + (res.filter(r => r.good.got !== r.good.max).map(r => r.id).join(", ") || "ok"));
+    check(res.every(r => r.bad.got < r.bad.max), "a wrong answer never earns full marks: " + (res.filter(r => r.bad.got >= r.bad.max).map(r => r.id).join(", ") || "ok"));
+
+    // 2. partial credit rules, on small made-up questions
+    const pc = await p.evaluate(() => {
+      const O6 = ["a", "b", "c", "d", "e", "f"], sc = (q, s) => { const r = scoreQ(q, s); return r.got + "/" + r.max; };
+      const sata = { type: "sata", options: O6, key: [0, 1, 2] };
+      const hl = { type: "highlight", segments: [{ text: "x", key: true }, { text: "y", key: true }, { text: "z", key: true }, { text: "w", key: false }, { text: "v", key: false }] };
+      const mx = { type: "matrix", cols: ["A", "B"], rows: [{ key: 0 }, { key: 1 }, { key: 0 }, { key: 1 }] };
+      const dd = { type: "dropdown", blanks: [{ key: 0, options: ["a", "b"] }, { key: 1, options: ["a", "b"] }] };
+      const ord = { type: "dragdrop", mode: "order", items: [{}, {}, {}, {}], key: [2, 0, 3, 1] };
+      const srt = { type: "dragdrop", mode: "sort", bins: ["A", "B"], items: [{ key: 0 }, { key: 1 }, { key: 0 }, { key: 1 }, { key: 0 }, { key: 1 }] };
+      const bow = { type: "bowtie", condition: { key: 1 }, actions: { keys: [0, 1] }, parameters: { keys: [2, 3] } };
+      return {
+        mcqWrong: sc({ type: "mcq", key: 1 }, [0]), mcqRight: sc({ type: "mcq", key: 1 }, [1]),
+        sata2of3: sc(sata, [0, 1]), sataOneWrong: sc(sata, [0, 1, 3]), sataAllRightOneWrong: sc(sata, [0, 1, 2, 3]), sataOnlyWrong: sc(sata, [3, 4]), sataMoreWrongThanRight: sc(sata, [0, 3, 4, 5]),
+        hlRightWithWrong: sc(hl, [0, 1, 3]), hlAll: sc(hl, [0, 1, 2]),
+        matrix3of4: sc(mx, [0, 1, 0, 0]), dropdown1of2: sc(dd, [0, 0]),
+        orderSwap: sc(ord, [2, 0, 1, 3]), orderRight: sc(ord, [2, 0, 3, 1]), sort5of6: sc(srt, [0, 1, 0, 1, 0, 0]),
+        bowtie4of5: sc(bow, { c: [1], a: [0, 4], p: [2, 3] }), bowtieAll: sc(bow, { c: [1], a: [0, 1], p: [2, 3] }), bowtieNone: sc(bow, { c: [0], a: [4, 5], p: [0, 1] })
+      };
+    });
+    check(pc.mcqRight === "1/1" && pc.mcqWrong === "0/1", "multiple choice: all or nothing");
+    check(pc.sata2of3 === "2/3" && pc.sataOneWrong === "1/3" && pc.sataAllRightOneWrong === "2/3" && pc.sataOnlyWrong === "0/3" && pc.sataMoreWrongThanRight === "0/3", "select-all: +1 for each right choice, -1 for each wrong one, never below 0");
+    check(pc.hlRightWithWrong === "1/3" && pc.hlAll === "3/3", "highlight: plus/minus scoring");
+    check(pc.matrix3of4 === "3/4" && pc.dropdown1of2 === "1/2" && pc.sort5of6 === "5/6", "matrix, drop-down and sort: one point per row, box or item");
+    check(pc.orderSwap === "2/4" && pc.orderRight === "4/4", "ordering: one point per item in the right place");
+    check(pc.bowtie4of5 === "4/5" && pc.bowtieAll === "5/5" && pc.bowtieNone === "0/5", "bowtie: one point per right choice out of 5");
+
+    // 3. every question draws without sideways scroll, before and after answering, and with no stray text
+    const layout = await p.evaluate(items => items.map(({ id, good }) => {
+      const q = Q.find(x => x.id === id); runQuiz([q], {}); QZ.selFor = 0; QZ.sel = good;
+      const before = [document.documentElement.scrollWidth, document.getElementById("quiz").innerText];
+      submitQ();
+      return { id, w1: before[0], w2: document.documentElement.scrollWidth, bad: /undefined|\[object|NaN|\{\d\}/.test(before[1] + document.getElementById("quiz").innerText), why: !!document.querySelector("#quiz .whyall"), rationale: document.querySelector("#quiz .rat").innerText.length > 30 };
+    }), BANK.map(q => ({ id: q.id, good: correctSel(q) })));
+    check(layout.every(l => l.w1 <= 360 && l.w2 <= 360), "no sideways scroll at 360px for any of the 64 questions: " + (layout.filter(l => l.w1 > 360 || l.w2 > 360).map(l => l.id).join(", ") || "ok"));
+    check(layout.every(l => !l.bad), "no 'undefined', '[object' or '{n}' text in any question");
+    check(layout.every(l => l.why && l.rationale), "after answering, every question shows its rationale and the 'why each choice' list");
+
+    // 4. one question of every type, answered by tapping the screen
+    const byType = {}; BANK.forEach(q => { const k = q.type === "dragdrop" ? "dragdrop-" + q.mode : q.type; if (!byType[k]) byType[k] = q; });
+    check(Object.keys(byType).length === 9, "the bank uses all 9 kinds of question: " + Object.keys(byType).join(", "));
+    const fresh = async q => { await p.evaluate(id => { runQuiz([Q.find(x => x.id === id)], {}); }, q.id); await p.waitForSelector("#quiz .stem"); };
+    const banner = async () => (await p.textContent("#quiz .rat b")).trim();
+    for (const [kind, q] of Object.entries(byType)) {
+      await fresh(q);
+      const submit = '#quiz button:has-text("Submit")';
+      check(await p.isDisabled(submit), `${kind}: Submit is off until the question is answered`);
+      if (q.type === "mcq") await p.click(`#quiz .opt >> nth=${q.key}`);
+      else if (q.type === "sata") for (const k of q.key) await p.click(`#quiz .opt >> nth=${k}`);
+      else if (q.type === "matrix" || q.type === "trend" || (q.type === "dragdrop" && q.mode === "sort")) { const rows = q.rows || q.items; for (let ri = 0; ri < rows.length; ri++) await p.click(`#quiz input[name=m${ri}] >> nth=${rows[ri].key}`); }
+      else if (q.type === "dropdown") for (let bi = 0; bi < q.blanks.length; bi++) await p.click(`#quiz .bowpart >> nth=${bi} >> .opt >> nth=${q.blanks[bi].key}`);
+      else if (q.type === "highlight") { const idx = q.segments.map((s, i) => s.key !== undefined ? i : -1).filter(i => i >= 0); for (const i of q.segments.map((s, i) => s.key === true ? i : -1).filter(i => i >= 0)) await p.click(`#quiz .hlw >> nth=${idx.indexOf(i)}`); }
+      else if (q.type === "dragdrop") for (const ii of q.key) await p.getByText(q.items[ii].text, { exact: true }).click();
+      else if (q.type === "bowtie") { for (const k of q.actions.keys) await p.click(`#quiz .bowpart >> nth=0 >> .opt >> nth=${k}`); await p.click(`#quiz .bowpart >> nth=1 >> .opt >> nth=${q.condition.key}`); for (const k of q.parameters.keys) await p.click(`#quiz .bowpart >> nth=2 >> .opt >> nth=${k}`); }
+      await p.click(submit);
+      check((await banner()).includes("Correct"), `${kind}: answering correctly on screen shows "Correct"`);
+    }
+    // wrong answers: partial credit is shown and the mistake is saved with its rationale
+    const sataQ = byType.sata; await fresh(sataQ);
+    await p.click(`#quiz .opt >> nth=${sataQ.key[0]}`); await p.click(`#quiz .opt >> nth=${sataQ.key[1]}`); await p.click(`#quiz .opt >> nth=${sataQ.options.map((_, i) => i).find(i => !sataQ.key.includes(i))}`);
+    await p.click('#quiz button:has-text("Submit")');
+    check((await banner()).includes("Not quite") && (await banner()).includes("partial credit 1/"), "select-all with 2 right and 1 wrong shows partial credit");
+    check((await p.$$("#quiz .whyall[open] .why1")).length === sataQ.options.length, "after a wrong answer the 'why each choice' list is open and covers every option");
+    const ordQ = byType["dragdrop-order"]; await fresh(ordQ);
+    for (const ii of [...ordQ.key].reverse()) await p.getByText(ordQ.items[ii].text, { exact: true }).click();
+    await p.click('#quiz button:has-text("Submit")');
+    check(await p.isVisible("#quiz .ord li.wrong"), "ordering: wrong positions are marked");
+    const mk = await state(p);
+    check(!!mk.mistakes[sataQ.id] && !!mk.mistakes[ordQ.id] && mk.mistakes[ordQ.id].rationale.length > 30 && mk.mistakes[ordQ.id].topic === ordQ.topicId, "wrong answers of the new types are saved to My mistakes with their rationale");
+    await p.goto(U + "#practice/mistakes"); await p.waitForSelector("#mistakes.on .item");
+    check((await p.textContent("#mkList")).includes(ordQ.stem.slice(0, 40)), "My mistakes shows the question text");
+    await p.click("#mkRetry"); await p.waitForSelector("#drill.on #quiz .stem");
+    check(await p.evaluate(() => QZ.mode === "retry" && QZ.list.every(q => q.id in S.mistakes)), "Retry my mistakes works with the new types");
+
+    // 5. questions waiting for a clinical check are marked
+    const flagged = BANK.find(q => q.needsReview); await fresh(flagged);
+    check((await p.textContent("#quiz")).includes("Waiting for a clinical check"), "a needsReview question shows the 'waiting for a clinical check' note");
+    check(p.errs.length === 0, "no console errors (question types)" + (p.errs.length ? ": " + p.errs.join(" | ") : ""));
+    await ctx.close();
+  }
+
+  // H. Practice screen: official topics as the filter, and "Practise this topic"
+  {
+    const SYLL = JSON.parse(fs.readFileSync(path.join(root, "data/syllabus.json"), "utf8")), moc = SYLL.categories.find(c => c.id === "management-of-care");
+    const { ctx, p } = await page({ v: LATEST, setup: true, name: "Filter", exam: "2028-07-01" });
+    await p.waitForSelector("#home.on");
+    await p.goto(U + "#practice/drill"); await p.waitForSelector("#drill.on #qtopic");
+    check((await p.$$("#qtopic optgroup")).length === 8 && (await p.$$("#qtopic option[value*='--']")).length === 82, "topic filter lists all 82 official topics in 8 category groups");
+    const withQuestions = new Set([...JSON.parse(fs.readFileSync(path.join(root, "data/questions.json"), "utf8")).questions.map(q => q.topic), ...JSON.parse(fs.readFileSync(path.join(root, "data/questions/management-of-care.json"), "utf8")).questions.map(q => q.topicId)]);
+    check((await p.$$("#qtopic option[disabled]")).length === 82 - withQuestions.size, `topics with no questions are greyed out (${82 - withQuestions.size} of 82 for now)`);
+    await p.click('#qfilter .chip:has-text("MoC")');
+    check((await p.$$("#qtopic optgroup")).length === 1 && (await p.$$("#qtopic option[value*='--']")).length === 16, "choosing a category narrows the topic list to its topics");
+    const counts = await p.$$eval("#qtopic option[value*='--']", os => os.map(o => +o.textContent.match(/\((\d+)\)$/)[1]));
+    check(counts.length === 16 && counts.every(n => n >= 4), "every Management of Care topic shows 4 or more questions: " + counts.join(","));
+    const t = moc.topics.find(x => x.id.endsWith("--delegation-and-supervision") || x.id.endsWith("assignment-delegation-and-supervision"));
+    await p.selectOption("#qtopic", t.id);
+    const expectN = await p.evaluate(id => Q.filter(q => q.topic === id).length, t.id);
+    check((await p.textContent("#bankInfo")).startsWith(expectN + " questions match"), "the screen says how many questions match the chosen topic");
+    await p.selectOption("#qn", "5"); await p.click("#qstart");
+    await p.waitForSelector("#quiz .stem");
+    check(await p.evaluate(id => QZ.list.length > 0 && QZ.list.every(q => q.topic === id) && QZ.topic === id, t.id), "Start runs only questions of the chosen topic");
+    // "Practise this topic" for each of the 16 topics
+    let allWork = true, why = [];
+    for (const topic of moc.topics) {
+      await p.goto(U + "#learn/syllabus");
+      await p.evaluate(id => openTopic(id), topic.id);
+      await p.waitForSelector("#sheet:not([hidden]) #tpPoints");
+      const btn = p.locator('#sheetBody button:has-text("Practise this topic")');
+      if (!(await btn.count())) { allWork = false; why.push(topic.id + " (no button)"); await p.goBack(); continue; }
+      await btn.click();
+      await p.waitForSelector("#drill.on #quiz .stem");
+      const ok = await p.evaluate(id => QZ.topic === id && QZ.list.length >= 4 && QZ.list.every(q => q.topic === id) && qt === id && document.getElementById("qtopic").value === id, topic.id);
+      if (!ok) { allWork = false; why.push(topic.id); }
+    }
+    check(allWork, "'Practise this topic' works for all 16 Management of Care topics and updates the Practice filter" + (why.length ? ": " + why.join(", ") : ""));
+    // a topic with nothing yet does not start an empty quiz
+    await p.goto(U + "#practice/drill");
+    await p.evaluate(() => { qf = "safety-infection-control"; qt = ""; renderFilter(); });
+    await p.evaluate(() => { qf = "safety-infection-control"; qt = "safety-infection-control--security-plan"; startQuiz(); });
+    check(await p.isVisible("#toast") && (await p.textContent("#toast")).includes("No questions"), "choosing a topic with no questions gives a message instead of an empty quiz");
+    check(p.errs.length === 0, "no console errors (practice filter)" + (p.errs.length ? ": " + p.errs.join(" | ") : ""));
     await ctx.close();
   }
 
