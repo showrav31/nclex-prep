@@ -1,0 +1,2217 @@
+{
+ "categoryId": "health-promotion",
+ "quotas": {
+  "health-promotion--aging-process": 4,
+  "health-promotion--ante-intra-postpartum-and-newborn-care": 8,
+  "health-promotion--developmental-stages-and-transitions": 6,
+  "health-promotion--health-promotion-disease-prevention": 6,
+  "health-promotion--health-screening": 4,
+  "health-promotion--high-risk-behaviors": 3,
+  "health-promotion--lifestyle-choices": 5,
+  "health-promotion--self-care": 3,
+  "health-promotion--techniques-of-physical-assessment": 4
+ },
+ "minFirstPoints": {
+  "health-promotion--aging-process": 2
+ },
+ "questions": [
+  {
+   "id": "q-hp-aging-01",
+   "categoryId": "health-promotion",
+   "topicId": "health-promotion--aging-process",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "health-promotion--aging-process--p01"
+   ],
+   "cjStep": "recognize-cues",
+   "integratedProcess": "nursing-process",
+   "type": "matrix",
+   "difficulty": 2,
+   "stem": "A nurse assesses a 76-year-old client during a routine visit. For each finding, select whether it is an expected age-related change or needs to be reported to the provider.",
+   "cols": [
+    "Expected with aging",
+    "Report to the provider"
+   ],
+   "rows": [
+    {
+     "text": "The skin is thinner, drier and less elastic than it was.",
+     "key": 0,
+     "why": "The skin loses collagen, fat and oil glands with age, so it becomes thinner, drier and less elastic. The nurse teaches skin care and the prevention of tears."
+    },
+    {
+     "text": "The client has trouble hearing high-pitched sounds in both ears.",
+     "key": 0,
+     "why": "Loss of high-pitched hearing (presbycusis) is common in older adults. The nurse speaks in a lower voice, faces the client and reduces background noise."
+    },
+    {
+     "text": "The client takes longer to answer questions and to react to a sudden event.",
+     "key": 0,
+     "why": "Reaction time slows with age. A slower response, with normal thinking, is expected."
+    },
+    {
+     "text": "The client became confused two days ago and is now drowsy.",
+     "key": 1,
+     "why": "A sudden change in thinking or alertness is not a part of normal aging. It may be delirium from an infection, a medicine, dehydration or another illness, and needs urgent assessment."
+    },
+    {
+     "text": "The client has lost 5 kg [11 lb] over the last 2 months without trying.",
+     "key": 1,
+     "why": "Unplanned weight loss is not an expected change. It may be a sign of cancer, depression, swallowing or dental problems, or another disease."
+    }
+   ],
+   "rationale": "The nurse needs to know what is normal for aging so that normal changes are supported and not treated as illness, and so that illness is not dismissed as \"just old age\". New confusion, unplanned weight loss, new falls and new incontinence are never explained by age alone.",
+   "needsReview": false
+  },
+  {
+   "id": "q-hp-aging-02",
+   "categoryId": "health-promotion",
+   "topicId": "health-promotion--aging-process",
+   "secondaryTopicIds": [
+    "pharmacological-parenteral--adverse-effects-contraindications-side-effects-interactions"
+   ],
+   "learningPointIds": [
+    "health-promotion--aging-process--p05"
+   ],
+   "cjStep": "analyze-cues",
+   "integratedProcess": "nursing-process",
+   "type": "matrix",
+   "difficulty": 3,
+   "stem": "A nurse reviews the medicines of a 79-year-old client who has fallen twice in 6 months. For each medicine, select whether it is generally appropriate to continue or should be questioned, because it appears on lists of potentially inappropriate medicines for older adults (such as the American Geriatrics Society Beers Criteria).",
+   "cols": [
+    "Generally appropriate",
+    "Question the order"
+   ],
+   "rows": [
+    {
+     "text": "Diphenhydramine at bedtime for sleep",
+     "key": 1,
+     "why": "Diphenhydramine is strongly anticholinergic. In older adults it can cause confusion, dry mouth, constipation, urinary retention and falls."
+    },
+    {
+     "text": "Diazepam for insomnia",
+     "key": 1,
+     "why": "Benzodiazepines increase the risk of falls, fractures, confusion and car crashes in older adults. A non-drug approach to sleep is preferred."
+    },
+    {
+     "text": "Glyburide for type 2 diabetes",
+     "key": 1,
+     "why": "Glyburide is a long-acting sulfonylurea that has a high risk of prolonged hypoglycemia in older adults. Safer choices are available."
+    },
+    {
+     "text": "Acetaminophen for osteoarthritis pain, within the daily limit",
+     "key": 0,
+     "why": "Acetaminophen is a first-choice drug for mild to moderate pain in older adults when the daily limit is respected, and it is not on the list."
+    },
+    {
+     "text": "Levothyroxine for hypothyroidism, with a normal thyroid test",
+     "key": 0,
+     "why": "Replacement of a hormone that the body lacks is appropriate, as long as the dose is checked with blood tests."
+    }
+   ],
+   "rationale": "Older adults take more medicines and are more sensitive to them, because the kidneys and liver clear drugs more slowly and the body has less water and more fat. Lists such as the AGS Beers Criteria name drugs that are often best avoided, including anticholinergics, benzodiazepines and long-acting sulfonylureas. Note on regional practice: the Beers Criteria come from the US, and Canadian resources (the Canadian Deprescribing Network, STOPP/START, and Choosing Wisely Canada) give similar advice but not exactly the same lists. The nurse does not stop a medicine on her own: she reports the concern to the provider or the pharmacist.",
+   "needsReview": true,
+   "reviewKind": "regional",
+   "reviewNote": "The Beers Criteria are US (American Geriatrics Society) guidance. Canadian deprescribing resources (for example, the Canadian Deprescribing Network, STOPP/START and Choosing Wisely Canada) overlap but are not identical. Check which list her future workplace uses."
+  },
+  {
+   "id": "q-hp-aging-03",
+   "categoryId": "health-promotion",
+   "topicId": "health-promotion--aging-process",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "health-promotion--aging-process--p05"
+   ],
+   "cjStep": "analyze-cues",
+   "integratedProcess": "clinical-judgment",
+   "type": "dragdrop",
+   "difficulty": 3,
+   "stem": "A nurse is comparing two causes of confusion in older adults. For each feature, select whether it is more typical of delirium or of dementia.",
+   "mode": "sort",
+   "bins": [
+    "Delirium",
+    "Dementia"
+   ],
+   "items": [
+    {
+     "text": "It starts suddenly, over hours to days.",
+     "key": 0,
+     "why": "Delirium is an acute change. The family can often say when it began."
+    },
+    {
+     "text": "It starts slowly and gets worse over months to years.",
+     "key": 1,
+     "why": "Dementia is a gradual, progressive decline in thinking and daily function."
+    },
+    {
+     "text": "Attention and alertness go up and down during the day.",
+     "key": 0,
+     "why": "A fluctuating level of consciousness and poor attention are the key features of delirium."
+    },
+    {
+     "text": "It often clears when the cause, such as an infection, a medicine or dehydration, is found and treated.",
+     "key": 0,
+     "why": "Delirium is a medical emergency with a cause that can often be treated. The nurse looks for the cause."
+    },
+    {
+     "text": "Memory loss and trouble finding words get worse, while the client is usually fully alert in the early stages.",
+     "key": 1,
+     "why": "In dementia, memory and language decline gradually, but the level of alertness is usually normal until late in the illness."
+    },
+    {
+     "text": "It is a permanent decline in thinking that cannot be reversed with current treatment.",
+     "key": 1,
+     "why": "Most dementias are progressive and are not reversible. Medicines may slow some symptoms."
+    }
+   ],
+   "rationale": "Delirium is sudden, fluctuating and often reversible, and it is an emergency. Dementia is gradual and progressive. A client with dementia can also develop delirium, and a sudden change in a client with dementia is reported and assessed for a cause such as infection, pain, constipation, a new drug or dehydration.",
+   "needsReview": false
+  },
+  {
+   "id": "q-hp-aging-04",
+   "categoryId": "health-promotion",
+   "topicId": "health-promotion--aging-process",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "health-promotion--aging-process--p05"
+   ],
+   "cjStep": "generate-solutions",
+   "integratedProcess": "nursing-process",
+   "type": "sata",
+   "difficulty": 2,
+   "stem": "An 82-year-old client who lives alone has fallen twice in 6 months. The client takes four medicines for blood pressure and a sleeping tablet. Which actions will help to prevent more falls? Select all that apply.",
+   "options": [
+    "Check the blood pressure lying down and after standing.",
+    "Ask the provider and the pharmacist to review all the medicines, including the sleeping tablet.",
+    "Refer the client for a home safety assessment and for exercises to improve strength and balance.",
+    "Check the client's vision and the fit and grip of the shoes.",
+    "Teach the client to get up slowly and to use a night light and a clear path.",
+    "Tell the client to stay in a chair as much as possible.",
+    "Tell the client to hurry to the door and the telephone so that nobody has to wait.",
+    "Suggest removing the night light so that the client sleeps better."
+   ],
+   "optionRationales": [
+    "Correct. A drop in blood pressure on standing (orthostatic hypotension) is a common cause of falls, especially in a client who takes several blood-pressure medicines.",
+    "Correct. Sedatives and several blood-pressure drugs raise the risk of falls, and a review may allow doses to be lowered or drugs to be stopped.",
+    "Correct. Exercise programmes that train strength and balance lower the risk of falls, and the home check finds hazards.",
+    "Correct. Poor vision and unsafe footwear both increase the risk of falls.",
+    "Correct. Slow changes of position and a lit, clear path reduce falls at night.",
+    "Incorrect. Staying still weakens the muscles and increases the risk of falls and of other problems. Safe activity is encouraged.",
+    "Incorrect. Hurrying increases the risk of falls. A phone that is easy to reach (or a personal alarm) is a safer plan.",
+    "Incorrect. A dark path at night makes a fall more likely."
+   ],
+   "key": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "rationale": "Falls in older adults usually have more than one cause, so the plan deals with each one: blood pressure changes, medicines, strength and balance, vision, footwear and the home. The nurse does not restrict activity.",
+   "needsReview": false
+  },
+  {
+   "id": "q-hp-ante-01",
+   "categoryId": "health-promotion",
+   "topicId": "health-promotion--ante-intra-postpartum-and-newborn-care",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "health-promotion--ante-intra-postpartum-and-newborn-care--p06"
+   ],
+   "cjStep": "recognize-cues",
+   "integratedProcess": "teaching-learning",
+   "type": "sata",
+   "difficulty": 2,
+   "stem": "A nurse teaches a woman who is 30 weeks pregnant about the warning signs that she must report right away. Which signs should the nurse include? Select all that apply.",
+   "options": [
+    "Vaginal bleeding.",
+    "A severe headache that does not go away, with blurred vision or spots before the eyes.",
+    "Sudden swelling of the face and hands.",
+    "A clear decrease in the baby's movements.",
+    "A leak of fluid from the vagina, or regular tightening of the uterus every 10 minutes or more often.",
+    "Mild ankle swelling that goes away overnight.",
+    "Occasional painless tightening of the uterus that eases when she changes position.",
+    "Heartburn after a large meal."
+   ],
+   "optionRationales": [
+    "Correct. Bleeding in pregnancy may come from a placenta that has separated or is low-lying, and it needs urgent assessment.",
+    "Correct. These are signs of preeclampsia, which can lead to seizures and needs urgent care.",
+    "Correct. Sudden swelling in the face and hands, especially with a headache, may be a sign of preeclampsia.",
+    "Correct. A change in fetal movement may be a sign that the baby is not getting enough oxygen.",
+    "Correct. Leaking fluid may mean that the membranes have ruptured, and regular contractions before 37 weeks may be preterm labour.",
+    "Incorrect. Mild swelling of the feet and ankles at the end of the day is common in late pregnancy, and it goes down with rest.",
+    "Incorrect. These are Braxton Hicks contractions, which are common and are not a sign of labour.",
+    "Incorrect. Heartburn is common because of the pressure of the uterus and the hormones. Small meals and sitting upright help."
+   ],
+   "key": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "rationale": "Prenatal teaching helps a client to tell the common discomforts of pregnancy from the signs of danger: bleeding, a severe headache with visual changes, sudden swelling of the face and hands, less fetal movement, leaking fluid and regular contractions before term. She is told whom to call (her midwife or provider, or the emergency department after hours) and not to wait.",
+   "needsReview": false
+  },
+  {
+   "id": "q-hp-ante-02",
+   "categoryId": "health-promotion",
+   "topicId": "health-promotion--ante-intra-postpartum-and-newborn-care",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "health-promotion--ante-intra-postpartum-and-newborn-care--p04",
+    "health-promotion--ante-intra-postpartum-and-newborn-care--p07"
+   ],
+   "cjStep": "recognize-cues",
+   "integratedProcess": "nursing-process",
+   "type": "matrix",
+   "difficulty": 2,
+   "stem": "A nurse is performing Leopold's maneuvers on a woman at 36 weeks of gestation. For each purpose, select the maneuver.",
+   "cols": [
+    "First maneuver",
+    "Second maneuver",
+    "Third maneuver",
+    "Fourth maneuver"
+   ],
+   "rows": [
+    {
+     "text": "To find out which part of the fetus is in the fundus of the uterus.",
+     "key": 0,
+     "why": "In the first maneuver, the nurse faces the client's head and feels the fundus. A round, firm, movable part is the head, and a softer, irregular part is the buttocks (breech)."
+    },
+    {
+     "text": "To find the side on which the fetal back lies, which helps to place the Doppler to listen for the fetal heart.",
+     "key": 1,
+     "why": "In the second maneuver, the nurse moves the hands down the sides of the abdomen. The back is smooth and firm, and the arms and legs are small, irregular parts."
+    },
+    {
+     "text": "To find out which part presents above the pelvic inlet and whether it is engaged.",
+     "key": 2,
+     "why": "In the third maneuver (Pawlick's grip), the nurse grasps the part above the symphysis between the thumb and fingers."
+    },
+    {
+     "text": "To find out whether the head is flexed, and how far it has come down into the pelvis. The nurse faces the client's feet.",
+     "key": 3,
+     "why": "In the fourth maneuver, the nurse turns to face the feet and presses the fingers down toward the pelvic inlet to feel the cephalic prominence."
+    }
+   ],
+   "rationale": "Leopold's maneuvers are four steps of abdominal palpation. The first three are done facing the client's head, and the fourth facing her feet. They show the fetal lie, presentation and position, and the nurse then knows where to listen for the fetal heart rate.",
+   "needsReview": false
+  },
+  {
+   "id": "q-hp-ante-03",
+   "categoryId": "health-promotion",
+   "topicId": "health-promotion--ante-intra-postpartum-and-newborn-care",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "health-promotion--ante-intra-postpartum-and-newborn-care--p03"
+   ],
+   "cjStep": "analyze-cues",
+   "integratedProcess": "nursing-process",
+   "type": "mcq",
+   "difficulty": 2,
+   "stem": "A client's last menstrual period began on March 14, 2026. Using Naegele's rule, what is her expected date of delivery?",
+   "checks": [
+    {
+     "kind": "edd",
+     "lmp": "2026-03-14",
+     "edd": "2026-12-21",
+     "ref": "key"
+    },
+    {
+     "kind": "gestational-age",
+     "lmp": "2026-03-14",
+     "onDate": "2026-06-06",
+     "weeks": 12,
+     "days": 0
+    }
+   ],
+   "options": [
+    "December 21, 2026",
+    "December 14, 2026",
+    "December 7, 2026",
+    "January 21, 2027"
+   ],
+   "optionRationales": [
+    "Correct. Naegele's rule adds 7 days to the first day of the last menstrual period and counts back 3 months (or forward 9 months). March 14 plus 7 days is March 21, and 9 months later is December 21, 2026.",
+    "Incorrect. This adds 9 months but forgets to add the 7 days.",
+    "Incorrect. This subtracts the 7 days instead of adding them.",
+    "Incorrect. This adds 10 months and not 9."
+   ],
+   "key": 0,
+   "rationale": "Naegele's rule is: first day of the last menstrual period, plus 7 days, minus 3 months, plus 1 year. It assumes a regular 28-day cycle, and the date may be changed after an early ultrasound. For example, on June 6, 2026 this client will be 12 weeks and 0 days pregnant.",
+   "needsReview": false
+  },
+  {
+   "id": "q-hp-ante-04",
+   "categoryId": "health-promotion",
+   "topicId": "health-promotion--ante-intra-postpartum-and-newborn-care",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "health-promotion--ante-intra-postpartum-and-newborn-care--p07",
+    "health-promotion--ante-intra-postpartum-and-newborn-care--p04"
+   ],
+   "cjStep": "analyze-cues",
+   "integratedProcess": "clinical-judgment",
+   "type": "trend",
+   "difficulty": 4,
+   "stem": "A woman in labour is being monitored. The nurse reviews the fetal monitor data (fetal heart rate, FHR) over 3 hours. In the table, \"Late (some)\" means late decelerations with some contractions, and \"Late (all)\" means with every contraction. For each measure, select whether the trend is an expected finding or a concerning trend.",
+   "exhibit": {
+    "title": "Fetal monitoring in labour",
+    "columns": [
+     "Measure",
+     "09:00",
+     "10:30",
+     "12:00"
+    ],
+    "rows": [
+     [
+      "Baseline FHR (beats/min)",
+      "142",
+      "152",
+      "164"
+     ],
+     [
+      "Variability",
+      "Normal",
+      "Normal",
+      "Low"
+     ],
+     [
+      "Decelerations",
+      "None",
+      "Late (some)",
+      "Late (all)"
+     ],
+     [
+      "Contractions",
+      "5 min apart",
+      "3 min",
+      "2 to 3 min"
+     ]
+    ]
+   },
+   "checks": [
+    {
+     "kind": "fhr",
+     "baseline": 164,
+     "flag": "tachycardia"
+    }
+   ],
+   "cols": [
+    "Expected finding",
+    "Concerning trend"
+   ],
+   "rows": [
+    {
+     "text": "Baseline fetal heart rate",
+     "key": 1,
+     "why": "A baseline that climbs from 142 to 164 beats/min goes above the normal range of 110 to 160 and is a fetal tachycardia. It may mean that the fetus is not getting enough oxygen."
+    },
+    {
+     "text": "Variability",
+     "key": 1,
+     "why": "Normal (moderate) variability shows that the fetal brain is well oxygenated. Variability that is low (minimal) for a long time is a warning sign."
+    },
+    {
+     "text": "Decelerations",
+     "key": 1,
+     "why": "Early decelerations are harmless, but late decelerations (after the peak of the contraction) that occur with every contraction suggest that the placenta is not supplying enough oxygen."
+    },
+    {
+     "text": "Contractions",
+     "key": 0,
+     "why": "Contractions that get closer together show that labour is progressing. This is the expected finding."
+    }
+   ],
+   "rationale": "A rising baseline, minimal variability and late decelerations with every contraction are non-reassuring signs. The nurse starts intrauterine resuscitation: she changes the mother's position (to the side), gives IV fluids, gives oxygen as the policy says, stops oxytocin if it is running, checks for a prolapsed cord and calls the provider at once. Note on regional practice: the NCLEX and US guidelines use the category I, II and III system, whereas the Canadian SOGC guideline for intrapartum fetal surveillance describes tracings as normal, atypical or abnormal. The nurse uses the terms in her facility's policy.",
+   "needsReview": true,
+   "reviewKind": "regional",
+   "reviewNote": "Canadian (SOGC) guidelines classify fetal heart rate tracings as normal, atypical or abnormal, while the NCLEX and US guidance use categories I, II and III. Check the terms and the policy where she will work."
+  },
+  {
+   "id": "q-hp-ante-05",
+   "categoryId": "health-promotion",
+   "topicId": "health-promotion--ante-intra-postpartum-and-newborn-care",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "health-promotion--ante-intra-postpartum-and-newborn-care--p02",
+    "health-promotion--ante-intra-postpartum-and-newborn-care--p08"
+   ],
+   "cjStep": "recognize-cues",
+   "integratedProcess": "nursing-process",
+   "type": "highlight",
+   "difficulty": 3,
+   "stem": "A nurse assesses a woman on the second day after a vaginal birth. Select the findings that need to be reported to the provider.",
+   "segments": [
+    {
+     "text": "The nurse finds that "
+    },
+    {
+     "text": "the fundus is firm, in the midline and about two finger-breadths below the umbilicus",
+     "key": false,
+     "why": "This is expected. The fundus is firm and in the midline, and it descends by about one finger-breadth a day."
+    },
+    {
+     "text": ", "
+    },
+    {
+     "text": "the fundus is soft, above the umbilicus and pushed to the right side",
+     "key": true,
+     "why": "This needs to be reported and treated. A soft (boggy) fundus can bleed heavily, and a full bladder can push it to the side. The nurse massages the fundus and helps the client to empty the bladder, and reports if it stays soft."
+    },
+    {
+     "text": ", "
+    },
+    {
+     "text": "the lochia is dark red, moderate in amount and has a fleshy smell",
+     "key": false,
+     "why": "This is expected. Lochia rubra is dark red for the first few days and has a smell like menstrual blood."
+    },
+    {
+     "text": ", "
+    },
+    {
+     "text": "a pad is soaked with bright red blood within 15 minutes",
+     "key": true,
+     "why": "This is a heavy bleed (a postpartum hemorrhage) and needs to be reported at once."
+    },
+    {
+     "text": ", "
+    },
+    {
+     "text": "the perineum has mild swelling and some bruising",
+     "key": false,
+     "why": "This is expected after a vaginal birth. Cold packs and sitz baths help."
+    },
+    {
+     "text": ", and "
+    },
+    {
+     "text": "the lochia has a foul smell, and the temperature is 38.6 °C [101.5 °F]",
+     "key": true,
+     "why": "This needs to be reported. A foul smell and a fever are signs of an infection of the uterus (endometritis)."
+    },
+    {
+     "text": "."
+    }
+   ],
+   "rationale": "After birth the nurse checks the fundus (firm, in the midline, and descending), the lochia (colour, amount, odour and clots), the perineum, the bladder, the vital signs and the pain. A soft or displaced fundus, heavy bleeding, foul-smelling lochia and a fever are reported at once.",
+   "needsReview": false
+  },
+  {
+   "id": "q-hp-ante-06",
+   "categoryId": "health-promotion",
+   "topicId": "health-promotion--ante-intra-postpartum-and-newborn-care",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "health-promotion--ante-intra-postpartum-and-newborn-care--p08"
+   ],
+   "cjStep": "generate-solutions",
+   "integratedProcess": "teaching-learning",
+   "type": "sata",
+   "difficulty": 2,
+   "stem": "A nurse is teaching a mother on the first day after birth about breastfeeding. Which statements should the nurse include? Select all that apply.",
+   "options": [
+    "Feed the baby whenever he shows hunger cues, usually 8 to 12 times in 24 hours.",
+    "The baby's mouth should be wide open and cover the nipple and much of the areola, with the chin touching the breast.",
+    "By about the fifth or sixth day the baby should have at least six wet diapers a day.",
+    "Breast milk alone is recommended for the first 6 months, and breastfeeding can continue with solid foods after that.",
+    "Ask the baby's provider about a vitamin D supplement for a breastfed baby.",
+    "Wake the baby to feed only every 4 hours by the clock.",
+    "Give water or formula between the feeds, to be sure that the baby has enough.",
+    "Pull the baby off the breast quickly when the baby is finished."
+   ],
+   "optionRationales": [
+    "Correct. Frequent feeding builds up the milk supply and makes sure that the newborn gets enough.",
+    "Correct. A deep latch protects the nipples from pain and damage and lets the baby remove milk well.",
+    "Correct. Wet diapers and the change in stool colour are the best signs that the baby is getting enough milk.",
+    "Correct. This is the advice of Health Canada, the Canadian Paediatric Society and the World Health Organization.",
+    "Correct. Breast milk has little vitamin D, and health organizations recommend a daily supplement for breastfed infants.",
+    "Incorrect. A newborn needs to be fed on cue and much more often than every 4 hours. A baby who sleeps too long is woken to feed.",
+    "Incorrect. Extra water or formula fills the baby's stomach and reduces the demand for the breast, which lowers the milk supply. Supplements are given only for a medical reason.",
+    "Incorrect. This can injure the nipple. To end the feed, the mother breaks the suction by putting a clean finger in the corner of the baby's mouth."
+   ],
+   "key": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "rationale": "Successful breastfeeding depends on frequent feeds on cue, a good latch and the signs that the baby is getting enough (wet diapers, stools and weight). The nurse also teaches the mother how to find help after discharge, such as a lactation consultant or a public health nurse.",
+   "needsReview": false
+  },
+  {
+   "id": "q-hp-ante-07",
+   "categoryId": "health-promotion",
+   "topicId": "health-promotion--ante-intra-postpartum-and-newborn-care",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "health-promotion--ante-intra-postpartum-and-newborn-care--p10",
+    "health-promotion--ante-intra-postpartum-and-newborn-care--p05"
+   ],
+   "cjStep": "analyze-cues",
+   "integratedProcess": "clinical-judgment",
+   "type": "trend",
+   "difficulty": 3,
+   "stem": "A breastfed newborn was born at term and weighed 3500 g. The nurse reviews the feeding record at a follow-up visit on day 4. For each measure, select whether it is an expected finding or needs follow-up.",
+   "exhibit": {
+    "title": "Newborn record",
+    "columns": [
+     "Measure",
+     "Birth",
+     "Day 2",
+     "Day 4"
+    ],
+    "rows": [
+     [
+      "Weight (g)",
+      "3500",
+      "3330",
+      "3090"
+     ],
+     [
+      "Wet diapers in 24 hours",
+      "0",
+      "2",
+      "2"
+     ],
+     [
+      "Stools",
+      "Black meconium",
+      "Green-black",
+      "Green-brown"
+     ],
+     [
+      "Breastfeeds in 24 hours",
+      "6",
+      "7",
+      "6"
+     ]
+    ]
+   },
+   "checks": [
+    {
+     "kind": "newborn-weight",
+     "birthG": 3500,
+     "weightG": 3330,
+     "day": 2,
+     "status": "expected"
+    },
+    {
+     "kind": "newborn-weight",
+     "birthG": 3500,
+     "weightG": 3090,
+     "day": 4,
+     "status": "excessive"
+    }
+   ],
+   "cols": [
+    "Expected finding",
+    "Needs follow-up"
+   ],
+   "rows": [
+    {
+     "text": "Weight",
+     "key": 1,
+     "why": "By day 4 the baby has lost about 12% of the birth weight (3500 g to 3090 g). Up to about 7 to 10% is expected, so this is too much and needs a feeding assessment."
+    },
+    {
+     "text": "Wet diapers",
+     "key": 1,
+     "why": "By day 4 a baby should have at least 4 wet diapers a day, and the number should rise every day. Two is too few and may mean that the baby is not getting enough milk."
+    },
+    {
+     "text": "Stools",
+     "key": 0,
+     "why": "The change from black meconium to green and then to brown-yellow stools is the normal pattern as the milk comes in."
+    },
+    {
+     "text": "Breastfeeds",
+     "key": 1,
+     "why": "A newborn should feed 8 to 12 times in 24 hours. Six feeds with a sleepy baby are too few and may be a cause of the poor weight."
+    }
+   ],
+   "rationale": "A healthy term newborn loses up to about 7 to 10% of the birth weight in the first days and starts to regain it after the milk comes in, usually back to the birth weight by about 10 to 14 days. A larger loss, few wet diapers and too few feeds mean that the baby is not feeding well. The nurse assesses the latch and feeding, makes a plan to increase the feeds, and reports to the provider.",
+   "needsReview": false
+  },
+  {
+   "id": "q-hp-ante-08",
+   "categoryId": "health-promotion",
+   "topicId": "health-promotion--ante-intra-postpartum-and-newborn-care",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "health-promotion--ante-intra-postpartum-and-newborn-care--p05"
+   ],
+   "cjStep": "analyze-cues",
+   "integratedProcess": "nursing-process",
+   "type": "dropdown",
+   "difficulty": 3,
+   "stem": "A newborn is assessed at 1 minute after birth. The heart rate is 132 beats/min. The breathing is slow and irregular. The arms and legs show some flexion. The baby grimaces when the nose is suctioned. The body is pink, but the hands and feet are blue.",
+   "checks": [
+    {
+     "kind": "apgar",
+     "appearance": 1,
+     "pulse": 2,
+     "grimace": 1,
+     "activity": 1,
+     "respiration": 1,
+     "total": 6,
+     "ref": "blanks.0"
+    },
+    {
+     "kind": "apgar",
+     "appearance": 1,
+     "pulse": 2,
+     "grimace": 1,
+     "activity": 1,
+     "respiration": 1,
+     "total": 6,
+     "band": "moderate",
+     "what": "band",
+     "ref": "blanks.1"
+    },
+    {
+     "kind": "peds-vital",
+     "ageMonths": 0,
+     "ageText": "newborn",
+     "name": "hr",
+     "value": 132,
+     "flag": "normal"
+    }
+   ],
+   "template": "The 1-minute APGAR score is {1}, which is a {2} score, and the nurse should {3}.",
+   "blanks": [
+    {
+     "options": [
+      "6",
+      "8",
+      "4"
+     ],
+     "key": 0,
+     "why": "The five parts are scored 0 to 2: appearance (colour) 1 for a pink body with blue extremities, pulse 2 for a rate above 100, grimace 1, activity 1 for some flexion, and respiration 1 for slow, irregular breathing. 1 + 2 + 1 + 1 + 1 = 6."
+    },
+    {
+     "options": [
+      "moderately abnormal",
+      "reassuring",
+      "severely low"
+     ],
+     "key": 0,
+     "why": "A score of 7 to 10 is reassuring, 4 to 6 is moderately abnormal and 0 to 3 is low. A score of 6 means that the baby needs some help."
+    },
+    {
+     "options": [
+      "dry and stimulate the baby, keep the baby warm, support the breathing if needed, and score again at 5 minutes",
+      "assume the baby is normal and score again at 24 hours",
+      "start chest compressions at once"
+     ],
+     "key": 0,
+     "why": "Drying, warming and stimulating help a baby to breathe. The nurse supports the breathing as the neonatal resuscitation protocol says and scores again at 5 minutes. Compressions are for a heart rate below 60 despite good ventilation, and this baby's heart rate is well above that."
+    }
+   ],
+   "rationale": "The APGAR score rates Appearance, Pulse, Grimace, Activity and Respiration from 0 to 2 at 1 and 5 minutes. It shows how well the baby is adapting to life outside the womb, and it does not replace the decision to start resuscitation. A low score is followed by support and a second score.",
+   "needsReview": false
+  },
+  {
+   "id": "q-hp-dev-01",
+   "categoryId": "health-promotion",
+   "topicId": "health-promotion--developmental-stages-and-transitions",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "health-promotion--developmental-stages-and-transitions--p09",
+    "health-promotion--developmental-stages-and-transitions--p01"
+   ],
+   "cjStep": "evaluate-outcomes",
+   "integratedProcess": "nursing-process",
+   "type": "matrix",
+   "difficulty": 2,
+   "stem": "A nurse is checking the development of healthy infants at well-baby visits. For each skill, select the age at which most infants first show it.",
+   "checks": [
+    {
+     "kind": "milestone",
+     "skill": "social-smile",
+     "months": 2,
+     "ref": "rows.0"
+    },
+    {
+     "kind": "milestone",
+     "skill": "sits-without-support",
+     "months": 6,
+     "ref": "rows.1"
+    },
+    {
+     "kind": "milestone",
+     "skill": "pincer-grasp",
+     "months": 9,
+     "ref": "rows.2"
+    },
+    {
+     "kind": "milestone",
+     "skill": "walks-alone",
+     "months": 12,
+     "ref": "rows.3"
+    }
+   ],
+   "cols": [
+    "2 months",
+    "6 months",
+    "9 months",
+    "12 months"
+   ],
+   "rows": [
+    {
+     "text": "Smiles in response to a person's face or voice (social smile).",
+     "key": 0,
+     "why": "Most babies smile in response to a person at about 2 months. This is an early sign of social attachment."
+    },
+    {
+     "text": "Sits without support.",
+     "key": 1,
+     "why": "Most babies sit without support at about 6 months, although some take until 8 or 9 months, as the muscles of the trunk get stronger."
+    },
+    {
+     "text": "Picks up a small piece of cereal between the thumb and the first finger (pincer grasp).",
+     "key": 2,
+     "why": "The pincer grasp develops at about 9 months. Before this, the baby rakes small things with the whole hand. Small foods need supervision because of the risk of choking."
+    },
+    {
+     "text": "Takes the first steps alone.",
+     "key": 3,
+     "why": "Most babies walk alone at about 12 months, with a normal range of about 11 to 15 months."
+    }
+   ],
+   "rationale": "Milestones are guides to the age at which most children show a skill, and healthy children vary by a few months. The nurse compares what the child can do with the usual range, and reports a child who is clearly behind, who loses a skill that was gained before, or who shows no progress. Canadian well-baby visits use tools such as the Rourke Baby Record and the Nipissing District Developmental Screen, and US teams use the CDC milestone checklists.",
+   "needsReview": false
+  },
+  {
+   "id": "q-hp-dev-02",
+   "categoryId": "health-promotion",
+   "topicId": "health-promotion--developmental-stages-and-transitions",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "health-promotion--developmental-stages-and-transitions--p01"
+   ],
+   "cjStep": "analyze-cues",
+   "integratedProcess": "teaching-learning",
+   "type": "dropdown",
+   "difficulty": 2,
+   "stem": "A 4-year-old child tells the nurse that her teddy bear has a tummy ache and needs the injection too. She insists on putting on her shoes by herself.",
+   "checks": [
+    {
+     "kind": "stage",
+     "theory": "piaget",
+     "stage": "preoperational",
+     "ageYears": 4,
+     "ageText": "4-year-old",
+     "ref": "blanks.0"
+    },
+    {
+     "kind": "stage",
+     "theory": "erikson",
+     "stage": "initiative versus guilt",
+     "ageYears": 4,
+     "ageText": "4-year-old",
+     "ref": "blanks.1"
+    }
+   ],
+   "template": "In Piaget's theory the child is in the {1} stage, and in Erikson's theory the child's main task is {2}.",
+   "blanks": [
+    {
+     "options": [
+      "preoperational",
+      "sensorimotor",
+      "concrete operational"
+     ],
+     "key": 0,
+     "why": "A child of 2 to 7 years is in the preoperational stage. Thinking is magical and egocentric, and the child uses play and symbols (such as the teddy bear) to understand the world."
+    },
+    {
+     "options": [
+      "initiative versus guilt",
+      "trust versus mistrust",
+      "industry versus inferiority"
+     ],
+     "key": 0,
+     "why": "A preschooler plans and starts activities (initiative). Praising her efforts helps her to feel capable, while criticism can lead to guilt. Trust versus mistrust belongs to infancy and industry versus inferiority to school age."
+    }
+   ],
+   "rationale": "Knowing the stages of development helps a nurse to teach and to care in a way that suits the child. For a preschooler, the nurse uses simple words, play and dolls, gives small choices, and reassures the child that a procedure is not a punishment.",
+   "needsReview": false
+  },
+  {
+   "id": "q-hp-dev-03",
+   "categoryId": "health-promotion",
+   "topicId": "health-promotion--developmental-stages-and-transitions",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "health-promotion--developmental-stages-and-transitions--p08"
+   ],
+   "cjStep": "generate-solutions",
+   "integratedProcess": "teaching-learning",
+   "type": "dragdrop",
+   "difficulty": 2,
+   "stem": "A nurse is teaching parents about injury prevention at different ages. For each safety measure, select the age group for which it is most important.",
+   "mode": "sort",
+   "bins": [
+    "Infant",
+    "Toddler",
+    "School-age child",
+    "Adolescent"
+   ],
+   "items": [
+    {
+     "text": "Never leave the baby alone on a changing table, a bed or a sofa, even for a moment.",
+     "key": 0,
+     "why": "A baby who cannot yet roll over can suddenly start to do so, and a fall from a height can cause a serious head injury."
+    },
+    {
+     "text": "Put up gates at the stairs and guards on the windows, because the child is climbing and walking.",
+     "key": 1,
+     "why": "A toddler can climb and walk but has no sense of danger. Falls are a leading cause of injury at this age."
+    },
+    {
+     "text": "Fence the pool, and stay within arm's reach of the child near any water.",
+     "key": 1,
+     "why": "A toddler is curious and can drown in a very small amount of water in seconds."
+    },
+    {
+     "text": "Teach how to cross the street safely and to wear a helmet when riding a bicycle.",
+     "key": 2,
+     "why": "School-age children ride bicycles and walk to school, and they can understand and follow clear safety rules."
+    },
+    {
+     "text": "Teach the child what to do if a stranger approaches, and what to do in a fire.",
+     "key": 2,
+     "why": "School-age children can learn and practise safety rules and plans."
+    },
+    {
+     "text": "Discuss always wearing a seat belt and never driving after drinking or using drugs, or riding with someone who has.",
+     "key": 3,
+     "why": "Motor vehicle crashes are the leading cause of death among teenagers, and risk-taking is part of this stage."
+    }
+   ],
+   "rationale": "Injury prevention teaching is based on what a child can do at each age and what the child does not yet understand. Infants are protected by constant supervision, toddlers by a safe environment, school-age children by teaching clear rules, and adolescents by honest discussion of risks and choices.",
+   "needsReview": false
+  },
+  {
+   "id": "q-hp-dev-04",
+   "categoryId": "health-promotion",
+   "topicId": "health-promotion--developmental-stages-and-transitions",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "health-promotion--developmental-stages-and-transitions--p04"
+   ],
+   "cjStep": "analyze-cues",
+   "integratedProcess": "clinical-judgment",
+   "type": "dropdown",
+   "difficulty": 3,
+   "stem": "A baby who was born weighing 3.2 kg [7.1 lb] is seen for a well-baby visit at 12 months of age and weighs 6.4 kg [14.1 lb].",
+   "checks": [
+    {
+     "kind": "weight-milestone",
+     "milestone": "triple",
+     "birthKg": 3.2,
+     "value": 9.6,
+     "ageMonths": 12,
+     "ref": "blanks.0"
+    }
+   ],
+   "template": "Birth weight is expected to triple by about 12 months, to about {1}, so this baby's weight is {2}.",
+   "blanks": [
+    {
+     "options": [
+      "9.6 kg",
+      "6.4 kg",
+      "12.8 kg"
+     ],
+     "key": 0,
+     "why": "Three times 3.2 kg is 9.6 kg. A weight of 6.4 kg is double the birth weight, which is the expected weight at about 4 to 6 months."
+    },
+    {
+     "options": [
+      "below the expected weight, and the nurse should report it for an assessment of growth and feeding",
+      "normal, because the birth weight has doubled",
+      "above the expected weight, so the diet should be reduced"
+     ],
+     "key": 0,
+     "why": "A baby who has only doubled the birth weight by 12 months is growing too slowly. The cause can be poor intake, a feeding problem, a medical illness or a social problem, so the nurse reports it and a full assessment is done."
+    }
+   ],
+   "rationale": "Healthy babies usually double their birth weight by about 4 to 6 months and triple it by about 12 months. The nurse plots the weight, length and head size on a growth chart (the WHO charts are used in Canada) and looks at the trend over time, and reports a child whose growth falls away from the expected curve.",
+   "needsReview": false
+  },
+  {
+   "id": "q-hp-dev-05",
+   "categoryId": "health-promotion",
+   "topicId": "health-promotion--developmental-stages-and-transitions",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "health-promotion--developmental-stages-and-transitions--p07"
+   ],
+   "cjStep": "generate-solutions",
+   "integratedProcess": "teaching-learning",
+   "type": "matrix",
+   "difficulty": 2,
+   "stem": "A nurse is preparing three children for the start of an IV line. For each child, select the best approach to the explanation. The approaches are: (1) short, simple words just before the procedure, a parent at the bedside, and a small choice such as the colour of the bandage; (2) step-by-step concrete explanation with pictures or a doll, and handling the equipment; (3) full and honest information, privacy, and involvement in decisions.",
+   "cols": [
+    "Short and simple, with a small choice",
+    "Concrete, with pictures or a doll",
+    "Full information and privacy"
+   ],
+   "rows": [
+    {
+     "text": "A 2-year-old",
+     "key": 0,
+     "why": "A toddler cannot understand long explanations and fears separation. A very short explanation just before the procedure, the parent's presence and a small choice give some sense of control."
+    },
+    {
+     "text": "An 8-year-old",
+     "key": 1,
+     "why": "A school-age child thinks in concrete terms and wants to know exactly what will happen. Pictures, a doll and handling the equipment lower the fear."
+    },
+    {
+     "text": "A 15-year-old",
+     "key": 2,
+     "why": "A teenager wants to be treated as an adult, to have privacy and to take part in decisions. Honest, full information supports this."
+    }
+   ],
+   "rationale": "The explanation matches the child's stage of development. Toddlers need very little and very late, school-age children need concrete detail, and adolescents need respect, privacy and honest information. A parent is usually welcome at the bedside, and the nurse never tells a child that a procedure will not hurt if it will.",
+   "needsReview": false
+  },
+  {
+   "id": "q-hp-dev-06",
+   "categoryId": "health-promotion",
+   "topicId": "health-promotion--developmental-stages-and-transitions",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "health-promotion--developmental-stages-and-transitions--p03",
+    "health-promotion--developmental-stages-and-transitions--p05"
+   ],
+   "cjStep": "recognize-cues",
+   "integratedProcess": "nursing-process",
+   "type": "matrix",
+   "difficulty": 2,
+   "stem": "A nurse is recording the family structure of four clients. For each description, select the type of family.",
+   "cols": [
+    "Nuclear family",
+    "Blended family",
+    "Single-parent family",
+    "Extended family"
+   ],
+   "rows": [
+    {
+     "text": "A mother, a father and their two children live together.",
+     "key": 0,
+     "why": "A nuclear family is made up of two parents and their children."
+    },
+    {
+     "text": "A mother, her new husband, and the children from each of their earlier relationships live together.",
+     "key": 1,
+     "why": "A blended (step) family is formed when partners with children from earlier relationships join together."
+    },
+    {
+     "text": "A father raises his two children alone.",
+     "key": 2,
+     "why": "A single-parent family is headed by one parent. The nurse assesses the supports that the parent has and the stress of being the only caregiver."
+    },
+    {
+     "text": "Parents, their children and the children's grandmother live in the same home.",
+     "key": 3,
+     "why": "An extended family includes other relatives, such as grandparents, aunts or uncles, as well as parents and children."
+    }
+   ],
+   "rationale": "Family structures vary. The nurse assesses who lives in the home, who makes decisions and who gives care, and does not assume that a family is nuclear. Any change, such as an illness, a divorce or a new baby, affects every member of the family system.",
+   "needsReview": false
+  },
+  {
+   "id": "q-hp-prev-01",
+   "categoryId": "health-promotion",
+   "topicId": "health-promotion--health-promotion-disease-prevention",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "health-promotion--health-promotion-disease-prevention--p06"
+   ],
+   "cjStep": "generate-solutions",
+   "integratedProcess": "teaching-learning",
+   "type": "dragdrop",
+   "difficulty": 2,
+   "stem": "A nurse is teaching a parent about vaccines. For each vaccine, select the type.",
+   "mode": "sort",
+   "bins": [
+    "Live attenuated vaccine",
+    "Non-live vaccine"
+   ],
+   "items": [
+    {
+     "text": "Measles, mumps and rubella (MMR)",
+     "key": 0,
+     "why": "MMR contains weakened live viruses. It is not given to people who are pregnant or who have a severely weakened immune system."
+    },
+    {
+     "text": "Varicella (chickenpox)",
+     "key": 0,
+     "why": "The varicella vaccine contains a weakened live virus and has the same cautions as MMR."
+    },
+    {
+     "text": "Oral rotavirus vaccine",
+     "key": 0,
+     "why": "The rotavirus vaccine is a live vaccine that is given by mouth to babies."
+    },
+    {
+     "text": "Hepatitis B",
+     "key": 1,
+     "why": "Hepatitis B vaccine contains a part of the virus (a protein) and cannot cause the infection."
+    },
+    {
+     "text": "Tetanus, diphtheria and pertussis (Tdap or DTaP)",
+     "key": 1,
+     "why": "These vaccines contain inactivated toxins and parts of the bacteria, so they cannot cause the diseases."
+    },
+    {
+     "text": "Influenza vaccine given by injection",
+     "key": 1,
+     "why": "The injected vaccine contains inactivated virus (or parts of it) and cannot cause influenza."
+    }
+   ],
+   "rationale": "Live attenuated vaccines contain a weakened germ that can multiply a little, so they are usually avoided in pregnancy and in people with a severely weakened immune system. Non-live vaccines cannot cause the disease. The schedule of which vaccine is given at which age is set by each province and territory.",
+   "needsReview": false
+  },
+  {
+   "id": "q-hp-prev-02",
+   "categoryId": "health-promotion",
+   "topicId": "health-promotion--health-promotion-disease-prevention",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "health-promotion--health-promotion-disease-prevention--p09",
+    "health-promotion--health-promotion-disease-prevention--p06"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "teaching-learning",
+   "type": "mcq",
+   "difficulty": 3,
+   "stem": "The parents of a 3-year-old child who has just moved to Canada from Bangladesh bring a handwritten vaccination record from a health clinic in their country. What should the nurse do?",
+   "options": [
+    "Review the record with the primary care provider or the public health unit, who will compare it with the provincial or territorial schedule and plan any missing doses.",
+    "Tell the parents that the record cannot be used and that all vaccines must be started again.",
+    "Give all the vaccines in the Canadian schedule at the next visit, whatever the child had before.",
+    "Tell the parents that the child does not need more vaccines because the child is now 3 years old."
+   ],
+   "optionRationales": [
+    "Correct. Written records with dates and the names of the vaccines are generally accepted. A catch-up plan is made from the record and is based on the provincial or territorial schedule.",
+    "Incorrect. Doses that are documented and valid do not need to be repeated, and repeating them wastes doses and exposes the child to extra injections.",
+    "Incorrect. Catch-up schedules follow minimum ages and minimum intervals between doses, and are planned from what the child has already had.",
+    "Incorrect. A child of this age still needs the vaccines of the schedule that have not been given."
+   ],
+   "key": 0,
+   "rationale": "A child's vaccination record from another country is reviewed by a provider or the public health unit, who compare it with the local schedule and plan a catch-up. Note on regional practice: in Canada, routine immunization schedules and the catch-up rules are set by each province and territory (using the Canadian Immunization Guide), and they differ from each other and from the US (CDC) schedules in the ages and the number of doses. A clear, dated written record is generally accepted as proof of doses given.",
+   "needsReview": true,
+   "reviewKind": "regional",
+   "reviewNote": "Check the catch-up schedule and the way that records from other countries are accepted in the province where she will work, and the Canadian Immunization Guide. US catch-up rules differ in detail."
+  },
+  {
+   "id": "q-hp-prev-03",
+   "categoryId": "health-promotion",
+   "topicId": "health-promotion--health-promotion-disease-prevention",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "health-promotion--health-promotion-disease-prevention--p04"
+   ],
+   "cjStep": "analyze-cues",
+   "integratedProcess": "teaching-learning",
+   "type": "dragdrop",
+   "difficulty": 2,
+   "stem": "A public health nurse is planning programmes. For each activity, select the level of prevention.",
+   "mode": "sort",
+   "bins": [
+    "Primary prevention",
+    "Secondary prevention",
+    "Tertiary prevention"
+   ],
+   "items": [
+    {
+     "text": "Teaching hand washing to school children.",
+     "key": 0,
+     "why": "Primary prevention stops a disease from starting. Hand hygiene lowers the spread of infection."
+    },
+    {
+     "text": "Running a vaccination clinic.",
+     "key": 0,
+     "why": "A vaccine prevents the disease before it occurs, so this is primary prevention."
+    },
+    {
+     "text": "Offering blood pressure checks at a community event.",
+     "key": 1,
+     "why": "Secondary prevention finds a disease early, before it causes symptoms, so that treatment can start sooner."
+    },
+    {
+     "text": "Offering blood glucose screening at a health fair.",
+     "key": 1,
+     "why": "A screening test finds diabetes or pre-diabetes early."
+    },
+    {
+     "text": "Teaching foot care to a client who has had diabetes for 20 years, to prevent amputation.",
+     "key": 2,
+     "why": "Tertiary prevention limits the damage and the complications of an established disease."
+    },
+    {
+     "text": "Running a cardiac rehabilitation programme after a heart attack.",
+     "key": 2,
+     "why": "Rehabilitation restores function and prevents another heart attack. This is tertiary prevention."
+    }
+   ],
+   "rationale": "Primary prevention prevents the disease (vaccines, hand hygiene, healthy habits), secondary prevention finds disease early (screening), and tertiary prevention limits the effects of a disease that is established (rehabilitation, prevention of complications).",
+   "needsReview": false
+  },
+  {
+   "id": "q-hp-prev-04",
+   "categoryId": "health-promotion",
+   "topicId": "health-promotion--health-promotion-disease-prevention",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "health-promotion--health-promotion-disease-prevention--p03"
+   ],
+   "cjStep": "generate-solutions",
+   "integratedProcess": "teaching-learning",
+   "type": "sata",
+   "difficulty": 2,
+   "stem": "A nurse is planning a community talk about preventing the spread of respiratory infections. Which messages should the nurse include? Select all that apply.",
+   "options": [
+    "Clean the hands often with soap and water or an alcohol-based hand rub.",
+    "Cough or sneeze into a sleeve or a tissue, and then clean the hands.",
+    "Stay at home when you have a fever or feel sick.",
+    "Keep up to date with the recommended vaccines, including the yearly influenza vaccine.",
+    "Regularly clean the surfaces that are touched by many people.",
+    "Take an antibiotic at the first sign of a cold to stop it spreading.",
+    "Share water bottles with friends, if everyone seems healthy.",
+    "Keep all the windows closed, to avoid cold air."
+   ],
+   "optionRationales": [
+    "Correct. Hand hygiene is the single most effective way to reduce the spread of infection.",
+    "Correct. This stops the droplets from spreading, and a tissue is thrown away at once.",
+    "Correct. Staying away from work, school and other people while ill prevents spread to others.",
+    "Correct. Vaccination lowers the risk of illness and of passing the infection on.",
+    "Correct. Germs can survive on surfaces such as door handles and phones.",
+    "Incorrect. Colds are caused by viruses, so antibiotics do not help, and they can cause harmful side effects and resistance.",
+    "Incorrect. Germs can spread before symptoms start, so cups and bottles should not be shared.",
+    "Incorrect. Fresh air and good ventilation lower the number of germs in the air."
+   ],
+   "key": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "rationale": "Community teaching on preventing infection focuses on actions that people can take: hand hygiene, respiratory etiquette, staying home when ill, vaccination, cleaning and ventilation. Antibiotics do not treat viral infections.",
+   "needsReview": false
+  },
+  {
+   "id": "q-hp-prev-05",
+   "categoryId": "health-promotion",
+   "topicId": "health-promotion--health-promotion-disease-prevention",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "health-promotion--health-promotion-disease-prevention--p02"
+   ],
+   "cjStep": "analyze-cues",
+   "integratedProcess": "teaching-learning",
+   "type": "matrix",
+   "difficulty": 2,
+   "stem": "A nurse uses the stages-of-change model to assess clients' readiness to quit smoking. For each client's statement, select the stage.",
+   "cols": [
+    "Precontemplation",
+    "Contemplation",
+    "Preparation",
+    "Action",
+    "Maintenance"
+   ],
+   "rows": [
+    {
+     "text": "\"I don't see why I should quit. I feel fine.\"",
+     "key": 0,
+     "why": "The client has no intention of changing in the near future. The nurse gives information without pressure."
+    },
+    {
+     "text": "\"I know that smoking is bad for me. I might quit in the next six months.\"",
+     "key": 1,
+     "why": "The client is thinking about change but is not yet committed. The nurse explores the pros and cons."
+    },
+    {
+     "text": "\"I bought nicotine patches and I will quit next week.\"",
+     "key": 2,
+     "why": "The client intends to act soon and is making a plan. The nurse helps with the plan and a quit date."
+    },
+    {
+     "text": "\"I stopped smoking three weeks ago.\"",
+     "key": 3,
+     "why": "The client has made a change recently. The nurse supports the client and looks for the triggers of relapse."
+    },
+    {
+     "text": "\"I haven't smoked for two years, and I avoid the situations that tempt me.\"",
+     "key": 4,
+     "why": "The client has kept up the change for a long time and works to prevent relapse."
+    }
+   ],
+   "rationale": "Teaching works best when it matches the client's readiness to change. A client in precontemplation needs information and respect, in contemplation needs help to weigh the pros and cons, in preparation needs a plan, in action needs support and in maintenance needs help to prevent relapse.",
+   "needsReview": false
+  },
+  {
+   "id": "q-hp-prev-06",
+   "categoryId": "health-promotion",
+   "topicId": "health-promotion--health-promotion-disease-prevention",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "health-promotion--health-promotion-disease-prevention--p08",
+    "health-promotion--health-promotion-disease-prevention--p10"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "communication-documentation",
+   "type": "mcq",
+   "difficulty": 2,
+   "stem": "A client who speaks very little English must learn how to inject insulin. The client's 12-year-old son offers to interpret. What is the nurse's best action?",
+   "options": [
+    "Accept the son's offer, because he knows the family best.",
+    "Arrange a qualified health care interpreter (in person, by telephone or by video), and ask the client to show back how to inject the insulin.",
+    "Speak slowly and loudly in English, and give a printed English leaflet.",
+    "Teach the son how to inject the insulin, and have him teach his mother later."
+   ],
+   "optionRationales": [
+    "Incorrect. A child should not be asked to interpret health information. He may not know the medical words, and the client's privacy and his own well-being are at risk.",
+    "Correct. A trained interpreter gives accurate information and protects confidentiality. Asking the client to demonstrate (teach-back) shows whether the teaching worked.",
+    "Incorrect. Speaking louder does not help a person who does not understand the language, and a leaflet in a language that the client cannot read does not teach her.",
+    "Incorrect. The client is the person who must be able to give her own insulin or to direct her care, and the nurse is responsible for teaching her."
+   ],
+   "key": 1,
+   "rationale": "A communication barrier is removed with a qualified interpreter. Family members, and especially children, are not used for health teaching except in an emergency. The nurse also uses plain language, pictures and demonstration, and checks the client's understanding with teach-back.",
+   "needsReview": false
+  },
+  {
+   "id": "q-hp-screen-01",
+   "categoryId": "health-promotion",
+   "topicId": "health-promotion--health-screening",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "health-promotion--health-screening--p01"
+   ],
+   "cjStep": "analyze-cues",
+   "integratedProcess": "teaching-learning",
+   "type": "mcq",
+   "difficulty": 2,
+   "stem": "A nurse teaches the parents of a healthy newborn about the newborn blood spot screening test (the heel-prick test). Which statement shows that the parents understand?",
+   "options": [
+    "\"The test looks for rare conditions, such as phenylketonuria (PKU) and an underactive thyroid, so that treatment can start before harm occurs.\"",
+    "\"The test is done only when the baby looks unwell.\"",
+    "\"The blood must be taken before the baby has had a first feed.\"",
+    "\"A normal result means that my child will never get any illness.\""
+   ],
+   "optionRationales": [
+    "Correct. These conditions often cause no signs at birth, but untreated they can cause serious damage, such as an intellectual disability. Early treatment, such as a special diet or thyroid hormone, prevents it.",
+    "Incorrect. The babies who have these conditions usually look well at birth. That is why every baby is tested.",
+    "Incorrect. For PKU the baby must have had protein feeds (milk) for a day or so, so that a high level of phenylalanine can show up.",
+    "Incorrect. The test screens only for a limited list of conditions. A normal result does not rule out other conditions."
+   ],
+   "key": 0,
+   "rationale": "Newborn screening finds babies with rare, treatable conditions before they have symptoms. PKU is caused by a lack of the enzyme that breaks down phenylalanine, which builds up and damages the brain, and a special diet prevents that harm. Note on regional practice: the list of conditions and the timing of the sample (usually after the baby has been feeding for at least 24 hours) differ between provinces and territories in Canada and between US states. The nurse follows the programme of her province.",
+   "needsReview": true,
+   "reviewKind": "regional",
+   "reviewNote": "Which conditions are screened for, and when the sample is taken, is decided by each province and territory (and by US states). Check the programme where she will work."
+  },
+  {
+   "id": "q-hp-screen-02",
+   "categoryId": "health-promotion",
+   "topicId": "health-promotion--health-screening",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "health-promotion--health-screening--p02"
+   ],
+   "cjStep": "recognize-cues",
+   "integratedProcess": "nursing-process",
+   "type": "highlight",
+   "difficulty": 2,
+   "stem": "A nurse is taking a health history from a 45-year-old man to assess his risk of heart disease. Select the findings that increase his risk.",
+   "segments": [
+    {
+     "text": "The client says that "
+    },
+    {
+     "text": "his father had a heart attack at the age of 49",
+     "key": true,
+     "why": "This raises his risk. A heart attack in a first-degree male relative before the age of 55 is a risk factor for early heart disease."
+    },
+    {
+     "text": ", "
+    },
+    {
+     "text": "he smokes about a pack of cigarettes a day",
+     "key": true,
+     "why": "Smoking damages the blood vessels and raises the risk of heart disease and stroke."
+    },
+    {
+     "text": ", "
+    },
+    {
+     "text": "he walks briskly for 30 minutes on most days",
+     "key": false,
+     "why": "Regular physical activity lowers the risk of heart disease."
+    },
+    {
+     "text": ", "
+    },
+    {
+     "text": "his body mass index is 33 kg/m²",
+     "key": true,
+     "why": "A body mass index of 30 or more is obesity, which raises the risk of heart disease, high blood pressure and diabetes."
+    },
+    {
+     "text": ", "
+    },
+    {
+     "text": "his mother had cataract surgery",
+     "key": false,
+     "why": "Cataracts are not a risk factor for heart disease."
+    },
+    {
+     "text": ", and "
+    },
+    {
+     "text": "his lipid levels were normal at his last check",
+     "key": false,
+     "why": "Normal lipid levels are a protective finding, not a risk factor."
+    },
+    {
+     "text": "."
+    }
+   ],
+   "rationale": "A health history looks for the family and personal risk factors of the diseases that matter most, such as heart disease. The nurse separates the risks that can be changed (smoking, weight, activity, diet) from those that cannot (family history, age), and focuses the teaching on those that can.",
+   "needsReview": false
+  },
+  {
+   "id": "q-hp-screen-03",
+   "categoryId": "health-promotion",
+   "topicId": "health-promotion--health-screening",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "health-promotion--health-screening--p03"
+   ],
+   "cjStep": "analyze-cues",
+   "integratedProcess": "nursing-process",
+   "type": "dropdown",
+   "difficulty": 3,
+   "stem": "A nurse screens a client who seems withdrawn for depression using the PHQ-2 (a two-question tool; each answer scores 0 to 3). The client says that over the last 2 weeks \"more than half the days\" (2) the client has had little interest or pleasure in doing things, and \"nearly every day\" (3) the client has felt down, depressed or hopeless.",
+   "template": "The PHQ-2 score is {1}. A score of 3 or more is a {2} screen, so the nurse should {3}.",
+   "blanks": [
+    {
+     "options": [
+      "5",
+      "2",
+      "6"
+     ],
+     "key": 0,
+     "why": "The scores of the two answers are added: 2 + 3 = 5. The total can range from 0 to 6."
+    },
+    {
+     "options": [
+      "positive",
+      "negative",
+      "inconclusive"
+     ],
+     "key": 0,
+     "why": "A total of 3 or more is a positive screen, which means that a fuller assessment is needed. A screening tool does not diagnose depression."
+    },
+    {
+     "options": [
+      "report it and arrange a fuller assessment, such as the PHQ-9, and ask directly about thoughts of self-harm",
+      "tell the client that the result is normal and repeat the screen at the next yearly visit",
+      "diagnose depression and ask the provider to start an antidepressant at once"
+     ],
+     "key": 0,
+     "why": "A positive screen is followed by a full assessment. The nurse asks directly about thoughts of self-harm, because depression raises the risk of suicide. A diagnosis and a treatment plan are made by the provider."
+    }
+   ],
+   "rationale": "The PHQ-2 is a quick screening tool that asks about low mood and loss of interest over 2 weeks. A positive result (3 or more) is followed by the PHQ-9 and a clinical interview. The nurse always asks about suicide when a client screens positive.",
+   "needsReview": false
+  },
+  {
+   "id": "q-hp-screen-04",
+   "categoryId": "health-promotion",
+   "topicId": "health-promotion--health-screening",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "health-promotion--health-screening--p04"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "communication-documentation",
+   "type": "matrix",
+   "difficulty": 2,
+   "stem": "A nurse is taking a health history. For each question, select the type of question.",
+   "cols": [
+    "Open-ended",
+    "Closed",
+    "Leading"
+   ],
+   "rows": [
+    {
+     "text": "\"What brings you in today?\"",
+     "key": 0,
+     "why": "An open-ended question allows the client to answer in his or her own words and gives the most information."
+    },
+    {
+     "text": "\"Do you smoke?\"",
+     "key": 1,
+     "why": "A closed question gets a short answer, such as yes or no. It is useful for specific facts, but gives little detail."
+    },
+    {
+     "text": "\"You don't drink much, do you?\"",
+     "key": 2,
+     "why": "A leading question suggests the answer that the nurse expects. The client may agree and not give an honest answer."
+    },
+    {
+     "text": "\"Tell me more about the pain in your chest.\"",
+     "key": 0,
+     "why": "This invites the client to describe the pain in detail, and is an open-ended request."
+    }
+   ],
+   "rationale": "A good health history begins with open-ended questions in a private setting, uses closed questions to fill in specific details, and avoids leading questions. The nurse listens, uses a calm and non-judgmental tone, and explains that the information is confidential.",
+   "needsReview": false
+  },
+  {
+   "id": "q-hp-risk-01",
+   "categoryId": "health-promotion",
+   "topicId": "health-promotion--high-risk-behaviors",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "health-promotion--high-risk-behaviors--p01"
+   ],
+   "cjStep": "recognize-cues",
+   "integratedProcess": "nursing-process",
+   "type": "sata",
+   "difficulty": 2,
+   "stem": "A nurse reviews the lifestyle history of a 24-year-old client. Which findings are high-risk behaviours that need follow-up? Select all that apply.",
+   "options": [
+    "Smokes or vapes nicotine every day.",
+    "Has five or more drinks on one occasion about twice a month.",
+    "Uses a tanning bed regularly.",
+    "Does not use a condom with new sexual partners.",
+    "Rides a motorcycle without a helmet.",
+    "Always wears a seat belt in a car.",
+    "Uses sunscreen and a hat when outdoors in the summer.",
+    "Goes for a yearly check-up with the primary care provider."
+   ],
+   "optionRationales": [
+    "Correct. Nicotine is addictive and damages the lungs and blood vessels, and vaping also carries risks.",
+    "Correct. This is binge drinking, which carries risks of injury, violence, alcohol poisoning and addiction.",
+    "Correct. Tanning beds give off ultraviolet radiation that raises the risk of skin cancer.",
+    "Correct. This raises the risk of sexually transmitted infections and of unplanned pregnancy.",
+    "Correct. A helmet greatly lowers the risk of a fatal head injury.",
+    "Incorrect. This is a protective behaviour.",
+    "Incorrect. This is a protective behaviour that lowers the risk of skin cancer.",
+    "Incorrect. This is a healthy behaviour that helps to find problems early."
+   ],
+   "key": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "rationale": "Assessing lifestyle risks means asking about tobacco, alcohol, drugs, sexual practices, sun exposure, driving and safety habits in a non-judgmental way. The nurse identifies the behaviours that need follow-up and also recognizes the client's protective habits.",
+   "needsReview": false
+  },
+  {
+   "id": "q-hp-risk-02",
+   "categoryId": "health-promotion",
+   "topicId": "health-promotion--high-risk-behaviors",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "health-promotion--high-risk-behaviors--p02"
+   ],
+   "cjStep": "analyze-cues",
+   "integratedProcess": "teaching-learning",
+   "type": "mcq",
+   "difficulty": 3,
+   "stem": "A client tells the nurse that she has 5 standard drinks a week and asks whether that is risky. (A standard drink in Canada is 341 mL of 5% beer, 142 mL of 12% wine or 43 mL of 40% spirits.) According to Canada's Guidance on Alcohol and Health (2023), how should the nurse describe this level of drinking?",
+   "options": [
+    "No risk, because it is less than one drink a day.",
+    "A moderate risk. Three to six standard drinks a week carry a moderate risk of harm.",
+    "A low risk. Up to 14 standard drinks a week is considered low risk for women.",
+    "A very high risk that needs medical detoxification."
+   ],
+   "optionRationales": [
+    "Incorrect. The Canadian guidance says that no amount of alcohol is risk-free, and that the risk rises with the number of drinks.",
+    "Correct. The guidance describes 0 drinks as the lowest risk, 1 to 2 drinks a week as a low risk, 3 to 6 drinks a week as a moderate risk, and 7 or more drinks a week as an increasingly high risk.",
+    "Incorrect. A limit of this kind belongs to earlier guidelines. The 2023 Canadian guidance describes 1 to 2 drinks a week as low risk.",
+    "Incorrect. This level of drinking is not described as very high risk, and there is no sign of dependence in this history."
+   ],
+   "key": 1,
+   "rationale": "The nurse helps the client to see how her drinking compares with current guidance, in a non-judgmental way, and asks what she thinks about it. Note on regional practice: Canada's 2023 guidance describes risk by the number of standard drinks a week (1 to 2 is low risk, 3 to 6 is moderate, and 7 or more is increasingly high), which is much lower than the older Canadian low-risk limits and the US dietary guidance (up to 1 drink a day for women and 2 for men). Pregnancy, medicines and some illnesses make any alcohol unsafe.",
+   "needsReview": true,
+   "reviewKind": "regional",
+   "reviewNote": "The Canadian 2023 guidance on alcohol (Canadian Centre on Substance Use and Addiction) differs from earlier Canadian limits and from US dietary guidance. Check the current guidance used where she will work."
+  },
+  {
+   "id": "q-hp-risk-03",
+   "categoryId": "health-promotion",
+   "topicId": "health-promotion--high-risk-behaviors",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "health-promotion--high-risk-behaviors--p03"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "teaching-learning",
+   "type": "dragdrop",
+   "difficulty": 2,
+   "stem": "A nurse uses the \"5 A's\" to help a client stop smoking. Place the steps in the correct order.",
+   "mode": "order",
+   "items": [
+    {
+     "text": "Arrange follow-up visits or calls.",
+     "why": "Follow-up supports the client, finds problems early and prevents a relapse."
+    },
+    {
+     "text": "Assist with a quit plan, with counselling and with medicines such as nicotine replacement if appropriate.",
+     "why": "Help is given to a client who is ready, using a quit date, coping strategies and medicines that raise the chance of success."
+    },
+    {
+     "text": "Advise the client to quit, in a clear, strong and personal way.",
+     "why": "A clear message from a health professional increases quit attempts."
+    },
+    {
+     "text": "Ask about tobacco use at every visit.",
+     "why": "Every client is asked, so that no smoker is missed."
+    },
+    {
+     "text": "Assess the client's readiness to quit.",
+     "why": "The next step depends on whether the client is ready to quit now."
+    }
+   ],
+   "key": [
+    3,
+    2,
+    4,
+    1,
+    0
+   ],
+   "rationale": "The 5 A's (Ask, Advise, Assess, Assist, Arrange) are a brief and effective way to deal with tobacco use at any visit. A client who is not ready to quit is given information about the risks and is asked again at the next visit.",
+   "needsReview": false
+  },
+  {
+   "id": "q-hp-life-01",
+   "categoryId": "health-promotion",
+   "topicId": "health-promotion--lifestyle-choices",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "health-promotion--lifestyle-choices--p01"
+   ],
+   "cjStep": "generate-solutions",
+   "integratedProcess": "teaching-learning",
+   "type": "dropdown",
+   "difficulty": 2,
+   "stem": "A nurse is teaching a healthy 40-year-old client about healthy eating, activity and sleep, using Canadian guidance.",
+   "template": "Canada's Food Guide suggests that about {1} of the plate is vegetables and fruit, with {2} as the drink of choice. Adults should aim for at least {3} of moderate to vigorous aerobic activity each week, and for {4} of good-quality sleep each night.",
+   "blanks": [
+    {
+     "options": [
+      "half",
+      "a quarter",
+      "two thirds"
+     ],
+     "key": 0,
+     "why": "The plate in Canada's Food Guide is half vegetables and fruit, a quarter whole grain foods and a quarter protein foods."
+    },
+    {
+     "options": [
+      "water",
+      "fruit juice",
+      "sports drinks"
+     ],
+     "key": 0,
+     "why": "Water is the drink of choice. Juice and sports drinks contain a lot of sugar."
+    },
+    {
+     "options": [
+      "150 minutes",
+      "30 minutes",
+      "500 minutes"
+     ],
+     "key": 0,
+     "why": "Adults are advised to do at least 150 minutes of moderate to vigorous aerobic activity a week, in bouts of 10 minutes or more, with muscle-strengthening activities on at least 2 days."
+    },
+    {
+     "options": [
+      "7 to 9 hours",
+      "4 to 5 hours",
+      "11 to 12 hours"
+     ],
+     "key": 0,
+     "why": "Adults aged 18 to 64 should have about 7 to 9 hours of good-quality sleep, with regular bed and wake-up times. Older adults need 7 to 8 hours."
+    }
+   ],
+   "rationale": "Healthy lifestyle teaching builds on the national guidance. Note on regional practice: the plate in Canada's Food Guide (half vegetables and fruit, a quarter whole grains, a quarter protein) is similar to the US MyPlate, and the Canadian 24-Hour Movement Guidelines (at least 150 minutes of activity a week and 7 to 9 hours of sleep for adults) are in line with the World Health Organization, but the wording and some details differ. The nurse uses the guide of her own province and country.",
+   "needsReview": true,
+   "reviewKind": "regional",
+   "reviewNote": "These are Canadian guides (Canada's Food Guide and the Canadian 24-Hour Movement Guidelines). The US MyPlate and the US physical activity guidelines are similar but not identical. Check which guide is used where she will work."
+  },
+  {
+   "id": "q-hp-life-02",
+   "categoryId": "health-promotion",
+   "topicId": "health-promotion--lifestyle-choices",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "health-promotion--lifestyle-choices--p04",
+    "health-promotion--lifestyle-choices--p03"
+   ],
+   "cjStep": "analyze-cues",
+   "integratedProcess": "teaching-learning",
+   "type": "mcq",
+   "difficulty": 3,
+   "stem": "A 38-year-old woman who smokes 20 cigarettes a day asks for a combined estrogen–progestin contraceptive pill. Which response by the nurse is best?",
+   "options": [
+    "Explain that smoking, especially after the age of 35, raises the risk of blood clots, heart attack and stroke with combined hormonal contraception, and discuss other options, such as an intrauterine device or a progestin-only method, and help to quit.",
+    "Tell her that combined pills are safe for all women who are not pregnant.",
+    "Advise her to cut down to 10 cigarettes a day and then take the pill.",
+    "Tell her that the only safe choice is to avoid sex."
+   ],
+   "optionRationales": [
+    "Correct. This protects the client and respects her wish for contraception. A copper IUD, a levonorgestrel intrauterine system or progestin-only methods do not carry the same risk, and the nurse supports smoking cessation.",
+    "Incorrect. Smoking is an important exception, and the risk rises with age and with the number of cigarettes.",
+    "Incorrect. Cutting down does not remove the risk, and she is still at risk of clots and of cardiovascular disease.",
+    "Incorrect. Several safe and effective methods are available, and she should be offered options."
+   ],
+   "key": 0,
+   "rationale": "Contraindications to a contraceptive method are found by asking about smoking, age, blood pressure, clots, migraine with aura and medicines. Note on regional practice: the US medical eligibility criteria place smokers of 35 years or older in the highest-risk category for combined hormonal contraception, and Canadian (SOGC) guidance also advises against it for smokers over 35 and for heavy smokers, with some difference in the way that the risk is graded. The provider decides, and the nurse supports an informed choice and smoking cessation.",
+   "needsReview": true,
+   "reviewKind": "regional",
+   "reviewNote": "Guidance on combined hormonal contraception in smokers differs between the US medical eligibility criteria (heavy smokers over 35 are in the unacceptable-risk category) and Canadian (SOGC) guidance. Check the policy where she will work."
+  },
+  {
+   "id": "q-hp-life-03",
+   "categoryId": "health-promotion",
+   "topicId": "health-promotion--lifestyle-choices",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "health-promotion--lifestyle-choices--p06"
+   ],
+   "cjStep": "recognize-cues",
+   "integratedProcess": "nursing-process",
+   "type": "highlight",
+   "difficulty": 3,
+   "stem": "A community nurse visits an 80-year-old man who lives alone since his wife died. Select the findings that suggest that he is socially isolated.",
+   "segments": [
+    {
+     "text": "The nurse learns that "
+    },
+    {
+     "text": "he has not spoken to a neighbour or a relative for more than a week",
+     "key": true,
+     "why": "This suggests isolation. A long period without any contact is a key sign."
+    },
+    {
+     "text": ", "
+    },
+    {
+     "text": "he stopped going to the weekly seniors' lunch because he has no way to get there",
+     "key": true,
+     "why": "This is a barrier that keeps him isolated. The nurse can look for transportation or a delivery programme."
+    },
+    {
+     "text": ", "
+    },
+    {
+     "text": "he talks by telephone with his daughter every Sunday, and she visits once a month",
+     "key": false,
+     "why": "This shows that he has regular family contact, which is a protective factor."
+    },
+    {
+     "text": ", "
+    },
+    {
+     "text": "he says that the television is his only company and that nobody would notice if he were gone",
+     "key": true,
+     "why": "This suggests loneliness and possible depression. The nurse also asks directly about thoughts of self-harm."
+    },
+    {
+     "text": ", "
+    },
+    {
+     "text": "he enjoys gardening and goes to the library every Thursday",
+     "key": false,
+     "why": "Regular activities outside the home are protective."
+    },
+    {
+     "text": ", and "
+    },
+    {
+     "text": "he uses the telephone to order groceries",
+     "key": false,
+     "why": "This is a way to meet a need. It does not show whether he has social contact."
+    },
+    {
+     "text": "."
+    }
+   ],
+   "rationale": "Social isolation is linked to depression, poor health and early death. The nurse looks for little contact, barriers such as transport or sensory loss, and feelings of loneliness, asks about depression and suicide, and links the client with community programmes, such as visiting, day programmes and seniors' centres.",
+   "needsReview": false
+  },
+  {
+   "id": "q-hp-life-04",
+   "categoryId": "health-promotion",
+   "topicId": "health-promotion--lifestyle-choices",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "health-promotion--lifestyle-choices--p07"
+   ],
+   "cjStep": "recognize-cues",
+   "integratedProcess": "teaching-learning",
+   "type": "matrix",
+   "difficulty": 2,
+   "stem": "A nurse is teaching a 52-year-old woman about the menopause transition. For each finding, select whether it is expected or should be reported to the provider.",
+   "cols": [
+    "Expected",
+    "Report to the provider"
+   ],
+   "rows": [
+    {
+     "text": "Hot flashes and night sweats.",
+     "key": 0,
+     "why": "These are the most common symptoms of the menopause transition. Lifestyle changes and medicines can help."
+    },
+    {
+     "text": "Vaginal dryness that makes intercourse uncomfortable.",
+     "key": 0,
+     "why": "Falling estrogen thins and dries the vaginal tissue. A water-based lubricant and a vaginal moisturizer help, and treatment is available if they do not."
+    },
+    {
+     "text": "Periods that are irregular, with shorter or longer cycles, in the early part of the transition.",
+     "key": 0,
+     "why": "Irregular cycles are expected as ovulation becomes irregular."
+    },
+    {
+     "text": "Vaginal bleeding after 12 months without a period.",
+     "key": 1,
+     "why": "Any bleeding after menopause (postmenopausal bleeding) needs to be assessed, because it may be a sign of uterine cancer."
+    },
+    {
+     "text": "A broken wrist after a minor fall.",
+     "key": 1,
+     "why": "A fracture from a minor injury is a sign of weak bones (osteoporosis), which is more likely after menopause. The client needs an assessment."
+    }
+   ],
+   "rationale": "Menopause is the end of menstruation, confirmed after 12 months without a period. The nurse teaches about the expected changes and how to ease them (such as layers of clothing, lubricants, weight-bearing exercise, calcium and vitamin D), and about the signs that need an assessment: bleeding after menopause and fractures from minor injuries.",
+   "needsReview": false
+  },
+  {
+   "id": "q-hp-life-05",
+   "categoryId": "health-promotion",
+   "topicId": "health-promotion--lifestyle-choices",
+   "secondaryTopicIds": [
+    "pharmacological-parenteral--adverse-effects-contraindications-side-effects-interactions"
+   ],
+   "learningPointIds": [
+    "health-promotion--lifestyle-choices--p08"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "teaching-learning",
+   "type": "mcq",
+   "difficulty": 3,
+   "stem": "A client who takes sertraline for depression tells the nurse that she has started St. John's wort, bought at a health food store, \"to feel better\". What is the nurse's best response?",
+   "options": [
+    "Tell her that a natural product is safe to take with prescription medicines.",
+    "Explain that the combination can cause a dangerous reaction (serotonin syndrome), and ask her to talk to her provider or pharmacist before continuing, without stopping the sertraline on her own.",
+    "Suggest that she takes the herb and the sertraline at different times of the day.",
+    "Suggest that she doubles the dose of sertraline so that it works better with the herb."
+   ],
+   "optionRationales": [
+    "Incorrect. Natural products can have strong effects and many interactions with prescribed drugs.",
+    "Correct. St. John's wort acts on serotonin and, taken with an antidepressant such as sertraline, may cause agitation, a fast heart rate, sweating, a high temperature and muscle twitching. The provider must be told.",
+    "Incorrect. The effects in the body last for many hours, so a different time of day does not prevent the interaction.",
+    "Incorrect. A client must never change a dose without the provider, and a higher dose increases the risk of toxicity."
+   ],
+   "key": 1,
+   "rationale": "The nurse asks every client about herbal and natural health products, vitamins and other treatments, because they can interact with prescribed drugs. St. John's wort also speeds the breakdown of many drugs (for example, some contraceptives, warfarin and cyclosporine) and makes them less effective. In Canada, Health Canada licenses natural health products and puts a natural product number (NPN) on the label, but a licence does not mean that there is no risk of interaction.",
+   "needsReview": false
+  },
+  {
+   "id": "q-hp-self-01",
+   "categoryId": "health-promotion",
+   "topicId": "health-promotion--self-care",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "health-promotion--self-care--p01"
+   ],
+   "cjStep": "recognize-cues",
+   "integratedProcess": "nursing-process",
+   "type": "sata",
+   "difficulty": 2,
+   "stem": "A nurse is planning the discharge of a 76-year-old client who lives alone, has heart failure and has just started insulin. Which assessments will help to decide whether the client can manage at home? Select all that apply.",
+   "options": [
+    "Vision and hand strength to read the insulin pen and to give the dose.",
+    "Understanding of the medicines, the diet, the daily weights and the warning signs.",
+    "Help available from family, friends or home care, and access to a telephone.",
+    "The layout of the home, such as stairs, bathroom access and the kitchen.",
+    "Transportation to appointments and the means to buy medicines and food.",
+    "The client's job before retirement.",
+    "The name of the client's former family doctor.",
+    "Whether the client plays cards on Saturdays."
+   ],
+   "optionRationales": [
+    "Correct. A client who cannot see the markings or work the pen cannot give the dose safely.",
+    "Correct. A client with heart failure and diabetes must understand several tasks, and teach-back shows how much has been understood.",
+    "Correct. Support at home and a way to call for help affect safety.",
+    "Correct. The home must allow the client to move safely and to prepare meals.",
+    "Correct. Missed appointments and unaffordable medicines are common causes of readmission.",
+    "Incorrect. This does not affect whether the client can manage care at home.",
+    "Incorrect. This does not affect the ability to manage care at home. The current provider's contact is what matters.",
+    "Incorrect. This is not related to safety at home, unless it is a sign of the client's social support."
+   ],
+   "key": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "rationale": "The nurse looks at what the client can do (vision, strength, memory, understanding), the support that is available, the home and the practical resources, and plans the care and the referrals, such as home care, to fill the gaps. A plan that does not fit the client's real situation will fail.",
+   "needsReview": false
+  },
+  {
+   "id": "q-hp-self-02",
+   "categoryId": "health-promotion",
+   "topicId": "health-promotion--self-care",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "health-promotion--self-care--p02"
+   ],
+   "cjStep": "analyze-cues",
+   "integratedProcess": "nursing-process",
+   "type": "matrix",
+   "difficulty": 3,
+   "stem": "A nurse is using Orem's self-care theory to plan care. For each client, select the nursing system that is needed.",
+   "cols": [
+    "Wholly compensatory",
+    "Partly compensatory",
+    "Supportive-educative"
+   ],
+   "rows": [
+    {
+     "text": "An unconscious client on a ventilator in the intensive care unit.",
+     "key": 0,
+     "why": "The client cannot do any self-care, so the nurse does it all (wholly compensatory)."
+    },
+    {
+     "text": "A client on the first day after surgery who can eat and brush the teeth but needs help to bathe and to walk.",
+     "key": 1,
+     "why": "The client can do some activities and needs the nurse for others (partly compensatory)."
+    },
+    {
+     "text": "A client with newly diagnosed type 2 diabetes who is learning to check the blood glucose at home.",
+     "key": 2,
+     "why": "The client can do self-care but needs knowledge and skills. The nurse teaches and supports (supportive-educative)."
+    }
+   ],
+   "rationale": "Orem's theory says that nursing is needed when a client cannot meet his or her own self-care needs. The nurse decides how much to do for the client, and aims to move the client toward as much independence as possible.",
+   "needsReview": false
+  },
+  {
+   "id": "q-hp-self-03",
+   "categoryId": "health-promotion",
+   "topicId": "health-promotion--self-care",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "health-promotion--self-care--p03"
+   ],
+   "cjStep": "generate-solutions",
+   "integratedProcess": "caring",
+   "type": "mcq",
+   "difficulty": 2,
+   "stem": "The daughter who cares for her mother with advanced dementia tells the nurse that she is exhausted, sleeps badly and feels guilty when she thinks about taking time off. What is the nurse's best response?",
+   "options": [
+    "Acknowledge her feelings, explain that caregiver strain is common, and connect her with respite care, a caregiver support group and home care services.",
+    "Tell her that a good daughter puts her mother's needs before her own.",
+    "Suggest that she stops talking about her feelings, so that she does not upset her mother.",
+    "Tell her that she should place her mother in long-term care at once."
+   ],
+   "optionRationales": [
+    "Correct. The caregiver's own health and well-being affect the care of the person with dementia. Respite and support help her to keep going, and also help her mother.",
+    "Incorrect. This increases the guilt and the risk of burnout and is not therapeutic.",
+    "Incorrect. Her feelings are a sign that she needs help, and she should be encouraged to talk about them.",
+    "Incorrect. The decision is hers and her family's, and the nurse offers information and support without pressure."
+   ],
+   "key": 0,
+   "rationale": "Caregivers are at risk of stress, depression and ill health. The nurse recognises the signs, asks about the caregiver's own health and sleep, teaches stress management, and connects her with the community supports that are available, such as respite care, day programmes, support groups and provincial home and community care programmes.",
+   "needsReview": false
+  },
+  {
+   "id": "q-hp-assess-01",
+   "categoryId": "health-promotion",
+   "topicId": "health-promotion--techniques-of-physical-assessment",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "health-promotion--techniques-of-physical-assessment--p02"
+   ],
+   "cjStep": "analyze-cues",
+   "integratedProcess": "clinical-judgment",
+   "type": "trend",
+   "difficulty": 3,
+   "stem": "A 6-month-old infant is being treated for bronchiolitis. The nurse reviews the vital signs over 6 hours. For each measure, select the trend.",
+   "exhibit": {
+    "title": "Infant vital signs",
+    "columns": [
+     "Measure",
+     "06:00",
+     "09:00",
+     "12:00"
+    ],
+    "rows": [
+     [
+      "Heart rate (per minute)",
+      "138",
+      "152",
+      "176"
+     ],
+     [
+      "Respiratory rate (per minute)",
+      "42",
+      "50",
+      "58"
+     ],
+     [
+      "Oxygen saturation (%)",
+      "97",
+      "94",
+      "90"
+     ],
+     [
+      "Temperature, °C [°F]",
+      "37.4 [99.3]",
+      "37.4 [99.3]",
+      "37.4 [99.3]"
+     ]
+    ]
+   },
+   "checks": [
+    {
+     "kind": "peds-vital",
+     "ageMonths": 6,
+     "ageText": "6-month-old",
+     "name": "hr",
+     "value": 138,
+     "flag": "normal"
+    },
+    {
+     "kind": "peds-vital",
+     "ageMonths": 6,
+     "ageText": "6-month-old",
+     "name": "hr",
+     "value": 176,
+     "flag": "high"
+    },
+    {
+     "kind": "peds-vital",
+     "ageMonths": 6,
+     "ageText": "6-month-old",
+     "name": "rr",
+     "value": 42,
+     "flag": "normal"
+    },
+    {
+     "kind": "peds-vital",
+     "ageMonths": 6,
+     "ageText": "6-month-old",
+     "name": "rr",
+     "value": 58,
+     "flag": "high"
+    }
+   ],
+   "cols": [
+    "Improving",
+    "No change",
+    "Worsening"
+   ],
+   "rows": [
+    {
+     "text": "Heart rate",
+     "key": 2,
+     "why": "A heart rate that rises from a normal value of 138 to 176 beats/min is above the range for an infant. The heart is working harder because of low oxygen or distress."
+    },
+    {
+     "text": "Respiratory rate",
+     "key": 2,
+     "why": "A rate of 58 breaths/min is above the usual range for an infant of 6 months. Fast breathing with low oxygen is a sign that the infant is working hard to breathe."
+    },
+    {
+     "text": "Oxygen saturation",
+     "key": 2,
+     "why": "A saturation that falls from 97% to 90% is worsening, and the infant needs oxygen and a prompt assessment."
+    },
+    {
+     "text": "Temperature",
+     "key": 1,
+     "why": "The temperature has not changed."
+    }
+   ],
+   "rationale": "The normal vital signs of children change with age, so the nurse compares each value with the range for the child's age and looks at the trend. For a 6-month-old infant the heart rate is usually about 110 to 150 beats/min and the respiratory rate about 25 to 45 breaths/min. A rising heart and respiratory rate with a falling oxygen saturation is a worsening child, and is reported at once.",
+   "needsReview": false
+  },
+  {
+   "id": "q-hp-assess-02",
+   "categoryId": "health-promotion",
+   "topicId": "health-promotion--techniques-of-physical-assessment",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "health-promotion--techniques-of-physical-assessment--p01",
+    "health-promotion--techniques-of-physical-assessment--p02"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "nursing-process",
+   "type": "dragdrop",
+   "difficulty": 2,
+   "stem": "A nurse is examining a cooperative 2-year-old who is sitting on a parent's lap. Place the steps in the order that is the least upsetting for the child.",
+   "mode": "order",
+   "items": [
+    {
+     "text": "Examine the head, the eyes and the nose.",
+     "why": "These are examined after the body. Examining the head first can frighten a young child."
+    },
+    {
+     "text": "Examine the ears and the mouth and throat last.",
+     "why": "These are the most upsetting parts of the examination, because they are uncomfortable. They are done last, with the parent helping to hold the child."
+    },
+    {
+     "text": "Observe the child's appearance, colour, activity and play while talking with the parent.",
+     "why": "Observation costs the child nothing and gives a lot of information before the child feels threatened."
+    },
+    {
+     "text": "Count the respirations and listen to the heart and lungs while the child is quiet.",
+     "why": "These are done first because crying and moving make the findings hard to hear and to count."
+    },
+    {
+     "text": "Palpate the abdomen and examine the arms, the legs and the skin.",
+     "why": "This is a less frightening touch, and is done when the child has become used to the nurse."
+    }
+   ],
+   "key": [
+    2,
+    3,
+    4,
+    0,
+    1
+   ],
+   "rationale": "With toddlers, the nurse starts with the least invasive steps and does the upsetting ones, such as looking at the ears and the throat, last. The nurse uses a calm voice and play, lets the child hold the equipment, and keeps the parent close.",
+   "needsReview": false
+  },
+  {
+   "id": "q-hp-assess-03",
+   "categoryId": "health-promotion",
+   "topicId": "health-promotion--techniques-of-physical-assessment",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "health-promotion--techniques-of-physical-assessment--p03"
+   ],
+   "cjStep": "recognize-cues",
+   "integratedProcess": "nursing-process",
+   "type": "highlight",
+   "difficulty": 3,
+   "stem": "During a comprehensive skin assessment, the nurse examines a mole on a client's back. Select the features that are warning signs and need follow-up with the provider.",
+   "segments": [
+    {
+     "text": "The nurse notes that the mole "
+    },
+    {
+     "text": "is not the same on both halves",
+     "key": true,
+     "why": "This is a warning sign (asymmetry). Benign moles are usually symmetrical."
+    },
+    {
+     "text": ", "
+    },
+    {
+     "text": "has an uneven, notched border",
+     "key": true,
+     "why": "This is a warning sign (an irregular border). Benign moles usually have a smooth, even border."
+    },
+    {
+     "text": ", "
+    },
+    {
+     "text": "is one even shade of brown",
+     "key": false,
+     "why": "This is reassuring. A mole with several colours (brown, black, red, white or blue) would be a warning sign."
+    },
+    {
+     "text": ", "
+    },
+    {
+     "text": "is about 3 mm across",
+     "key": false,
+     "why": "This is reassuring. A diameter of more than 6 mm (about the size of a pencil eraser) is a warning sign."
+    },
+    {
+     "text": ", "
+    },
+    {
+     "text": "has grown and become darker over the last 3 months",
+     "key": true,
+     "why": "This is a warning sign (evolving). Any change in size, shape or colour needs to be checked."
+    },
+    {
+     "text": ", and "
+    },
+    {
+     "text": "has surrounding skin that is not red or swollen",
+     "key": false,
+     "why": "This is a normal finding and not a warning sign."
+    },
+    {
+     "text": "."
+    }
+   ],
+   "rationale": "The ABCDE rule describes the warning signs of melanoma: Asymmetry, irregular Border, more than one Colour, Diameter over 6 mm, and Evolving (a change). A mole with any of these features is referred for assessment. A comprehensive assessment also includes teaching about sun protection and skin self-examination.",
+   "needsReview": false
+  },
+  {
+   "id": "q-hp-assess-04",
+   "categoryId": "health-promotion",
+   "topicId": "health-promotion--techniques-of-physical-assessment",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "health-promotion--techniques-of-physical-assessment--p01"
+   ],
+   "cjStep": "recognize-cues",
+   "integratedProcess": "nursing-process",
+   "type": "matrix",
+   "difficulty": 2,
+   "stem": "A nurse is percussing different parts of a client's body. For each area, select the sound that is expected.",
+   "cols": [
+    "Tympany",
+    "Resonance",
+    "Dullness",
+    "Flatness"
+   ],
+   "rows": [
+    {
+     "text": "Over the stomach bubble (a gas-filled organ).",
+     "key": 0,
+     "why": "Tympany is a loud, high-pitched, drum-like sound that is heard over air-filled organs, such as the stomach and the intestines."
+    },
+    {
+     "text": "Over healthy lung tissue.",
+     "key": 1,
+     "why": "Resonance is a loud, low-pitched, hollow sound that is heard over normal lung tissue."
+    },
+    {
+     "text": "Over the liver.",
+     "key": 2,
+     "why": "Dullness is a medium-pitched, thud-like sound that is heard over solid organs, such as the liver. Dullness over a lung is abnormal and may mean a consolidation or fluid."
+    },
+    {
+     "text": "Over a thigh muscle.",
+     "key": 3,
+     "why": "Flatness is a quiet, high-pitched, very short sound that is heard over dense tissue, such as muscle and bone."
+    }
+   ],
+   "rationale": "Percussion produces sounds that vary with the density of the tissue under the hand: tympany over air-filled organs, resonance over normal lungs, dullness over solid organs, and flatness over muscle and bone. A change from the expected sound, such as dullness over a lung, may mean fluid or consolidation.",
+   "needsReview": false
+  }
+ ]
+}
