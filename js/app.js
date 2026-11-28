@@ -42,11 +42,14 @@ const sheetHead = title => `<div class="sheet-head"><h3>${title}</h3><button cla
 
 /* ---------- START-UP ---------- */
 const DATA = ["syllabus", "questions", "plan", "canada", "reference", "exam-guide"];
-Promise.all(DATA.map(f => fetch("data/" + f + ".json").then(r => { if (!r.ok) throw new Error(f); return r.json(); })))
-  .then(([syl, qs, plan, can, ref, guide]) => {
+/* Question banks per category (data/questions/<categoryId>.json). Add new files here AND to FILES in sw.js. */
+const QUESTION_FILES = ["questions/management-of-care"];
+const getJson = f => fetch("data/" + f + ".json").then(r => { if (!r.ok) throw new Error(f); return r.json(); });
+Promise.all([Promise.all(DATA.map(getJson)), Promise.all(QUESTION_FILES.map(getJson))])
+  .then(([[syl, qs, plan, can, ref, guide], more]) => {
     PHASES = plan.phases; CAN = can; REF = ref; GUIDE = guide;
     indexSyllabus(syl); // js/syllabus.js: CATS, CAT, TOPIC, ...
-    Q = qs.questions.filter(q => TOPIC[q.topic]); // skip any question whose topic was removed
+    Q = qs.questions.concat(...more.map(f => f.questions)).map(normQ).filter(q => TOPIC[q.topic]); // js/qtypes.js; skip any question whose topic was removed
     start();
   })
   .catch(() => {
@@ -271,23 +274,32 @@ function markPhase(pid, v) {
 }
 
 /* ---------- PRACTICE ---------- */
-let qf = "", QZ = null; // qf: category ID to practise, "" = all
+let qf = "", qt = "", QZ = null; // qf: category ID to practise ("" = all); qt: topic ID ("" = all topics of the category)
 
+/* Practice filter: categories as chips, then the official topics of that category (or of all categories). */
 function renderFilter() {
-  $("qfilter").innerHTML = [`<button class="chip ${!qf ? "on" : ""}" onclick="qf='';renderFilter()">All</button>`]
-    .concat(CATS.map(c => `<button class="chip ${qf == c.id ? "on" : ""}" onclick="qf='${c.id}';renderFilter()">${c.short}</button>`)).join("");
-  $("bankInfo").textContent = Q.length + " questions in the bank.";
+  const countOf = f => Q.filter(f).length;
+  $("qfilter").innerHTML = [`<button class="chip ${!qf ? "on" : ""}" onclick="qf='';qt='';renderFilter()">All</button>`]
+    .concat(CATS.map(c => `<button class="chip ${qf == c.id ? "on" : ""}" onclick="qf='${c.id}';qt='';renderFilter()">${c.short}</button>`)).join("");
+  const opt = t => { const n = countOf(q => q.topic === t.id); return `<option value="${t.id}" ${qt === t.id ? "selected" : ""} ${n ? "" : "disabled"}>${esc(t.name)} (${n})</option>`; };
+  const cats = CATS.filter(c => !qf || c.id === qf);
+  $("qtopic").innerHTML = `<option value="">All topics (${countOf(q => !qf || catOf(q) === qf)})</option>` +
+    cats.map(c => `<optgroup label="${esc(c.name)}">${c.topics.map(opt).join("")}</optgroup>`).join("");
+  const n = countOf(q => (!qf || catOf(q) === qf) && (!qt || q.topic === qt));
+  $("bankInfo").textContent = `${n} question${n === 1 ? "" : "s"} match${n === 1 ? "es" : ""} your choice (${Q.length} in the bank).`;
 }
+$("qtopic").onchange = e => { qt = e.target.value; if (qt) qf = TOPIC[qt].cat; renderFilter(); };
 
 function shuffle(a) { return a.map(x => [Math.random(), x]).sort((p, q) => p[0] - q[0]).map(x => x[1]); }
 
 /* cid: category ID (undefined = use the filter), n: how many, fromTask: started from Home's task */
 function startQuiz(cid, n, fromTask) {
-  if (cid !== undefined) { qf = cid; renderFilter(); }
-  let pool = shuffle(Q.filter(q => !qf || catOf(q) === qf));
+  if (cid !== undefined) { qf = cid; qt = ""; renderFilter(); }
+  let pool = shuffle(Q.filter(q => (!qf || catOf(q) === qf) && (!qt || q.topic === qt)));
+  if (!pool.length) return toast("No questions for this choice yet. Try another topic.");
   if ($("qweak").checked) pool.sort((a, b) => (S.lv[b.topic] == 1) - (S.lv[a.topic] == 1));
   pool = pool.slice(0, n || +$("qn").value);
-  runQuiz(pool, { task: !!fromTask, cat: qf });
+  runQuiz(pool, { task: !!fromTask, cat: qf, topic: qt });
 }
 
 /* Start a quiz on a given list. opts: {task, cat, mode: "retry"} */
@@ -299,61 +311,6 @@ function runQuiz(list, opts) {
   go("practice", "drill");
 }
 $("qstart").onclick = () => startQuiz();
-
-const TYPE_NAMES = { mcq: "Multiple choice", sata: "Select all that apply", matrix: "Matrix (Next Gen)" };
-
-function drawQ() {
-  const z = QZ;
-  if (z.i >= z.list.length) return finishQuiz();
-  const q = z.list[z.i];
-  let h = `<div class="qmeta"><span>Question ${z.i + 1} of ${z.list.length} · Score ${z.score}</span><span><span class="qtype">${TYPE_NAMES[q.type]}</span> · ${CAT[catOf(q)].short} · ${TOPIC[q.topic].name}</span></div><div class="bar" style="margin:0 0 12px"><i style="width:${z.i / z.list.length * 100}%"></i></div><div class="stem">${q.stem}</div>`;
-  if (q.type == "matrix") {
-    h += `<div class="scroll"><table class="matrix"><tr><th></th>${q.cols.map(c => `<th style="text-align:center">${c}</th>`).join("")}</tr>${q.rows.map((r, ri) => `<tr><td>${r.text}</td>${q.cols.map((_, ci) => {
-      let cls = ""; if (z.sub && ci == r.answer) cls = "right"; else if (z.sub && z.sel[ri] == ci) cls = "wrong";
-      return `<td class="${cls}"><input type="radio" name="m${ri}" aria-label="${q.cols[ci]}" ${z.sel[ri] == ci ? "checked" : ""} ${z.sub ? "disabled" : ""} onchange="QZ.sel[${ri}]=${ci};drawQ()"></td>`;
-    }).join("")}</tr>`).join("")}</table></div>`;
-  } else {
-    h += q.options.map((o, oi) => {
-      let cls = z.sel.includes(oi) ? "sel" : "";
-      if (z.sub) { if (q.answer.includes(oi)) cls = "right"; else if (z.sel.includes(oi)) cls = "wrong"; }
-      return `<div class="opt ${cls}" onclick="pick(${oi})"><span class="k">${q.type == "sata" ? (z.sel.includes(oi) ? "☑" : "☐") : String.fromCharCode(65 + oi)}</span><span>${o}</span></div>`;
-    }).join("");
-  }
-  if (z.sub) {
-    const ok = z.last;
-    h += `<div class="rat"><b class="${ok ? "ok" : "no"}">${ok ? "✔ Correct" : "✘ Not quite"}${!ok && z.partial ? ` · partial credit ${z.partial}` : ""}</b><br>${q.rationale}</div>${ok ? "" : whyChips(q.id)}<div class="row"><button class="btn" onclick="QZ.i++;QZ.sel=[];QZ.sub=false;drawQ()">${z.i + 1 < z.list.length ? "Next question →" : "See results"}</button></div>`;
-  } else {
-    const ready = q.type == "matrix" ? q.rows.every((_, ri) => z.sel[ri] !== undefined) : z.sel.length > 0;
-    h += `<div class="row"><button class="btn" ${ready ? "" : "disabled"} onclick="submitQ()">Submit</button></div>`;
-  }
-  $("quiz").innerHTML = h;
-}
-
-function pick(oi) {
-  const z = QZ, q = z.list[z.i];
-  if (z.sub) return;
-  z.sel = q.type == "mcq" ? [oi] : z.sel.includes(oi) ? z.sel.filter(x => x != oi) : [...z.sel, oi];
-  drawQ();
-}
-
-function submitQ() {
-  const z = QZ, q = z.list[z.i];
-  let ok, partial = "";
-  if (q.type == "matrix") { const n = q.rows.filter((r, ri) => z.sel[ri] == r.answer).length; ok = n == q.rows.length; partial = n + "/" + q.rows.length; }
-  else if (q.type == "sata") {
-    ok = z.sel.length == q.answer.length && z.sel.every(x => q.answer.includes(x));
-    const n = Math.max(0, z.sel.filter(x => q.answer.includes(x)).length - z.sel.filter(x => !q.answer.includes(x)).length);
-    partial = n + "/" + q.answer.length;
-  }
-  else ok = q.answer[0] == z.sel[0];
-  z.sub = true; z.last = ok; z.partial = partial;
-  if (ok) z.score++;
-  const cid = catOf(q), st = S.stat[cid] || (S.stat[cid] = { n: 0, c: 0 });
-  st.n++; if (ok) st.c++;
-  if (!ok) { const k = q.topic; if (!S.lv[k] || S.lv[k] == 2) S.lv[k] = 1; }
-  recordAnswer(q, ok);
-  markActive(); save(); drawQ();
-}
 
 function finishQuiz() {
   const z = QZ, p = Math.round(z.score / z.list.length * 100);

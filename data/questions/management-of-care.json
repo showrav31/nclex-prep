@@ -1,0 +1,2762 @@
+{
+ "categoryId": "management-of-care",
+ "questions": [
+  {
+   "id": "q-moc-advdir-01",
+   "categoryId": "management-of-care",
+   "topicId": "management-of-care--advance-directives-self-determination-life-planning",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "management-of-care--advance-directives-self-determination-life-planning--p01"
+   ],
+   "cjStep": "recognize-cues",
+   "integratedProcess": "nursing-process",
+   "type": "mcq",
+   "difficulty": 2,
+   "stem": "A nurse is completing the admission assessment for a 72-year-old client with heart failure. The client says, \"My daughter knows what I want if I can't speak for myself, and she has papers that say she can decide for me.\" Which action should the nurse take next?",
+   "options": [
+    "Record in the chart that the client has a health care agent and continue the admission assessment.",
+    "Ask the client what the papers are called and what they say, and ask for a copy to be placed in the record.",
+    "Tell the client that the daughter has no authority until a lawyer has reviewed the papers.",
+    "Ask the client to complete the facility's advance directive form today because the old papers may not be valid."
+   ],
+   "optionRationales": [
+    "Incorrect. The nurse has not seen the papers, so it is not known whether an agent was named, who it is, or what authority the agent has. Charting it as fact could lead staff to ask the wrong person to decide.",
+    "Correct. Assessing what the client knows, then getting the document, lets the team confirm the type of directive, who the agent is and what wishes are written down.",
+    "Incorrect. The nurse does not decide the legal validity of the papers, and this statement could upset the client. Documents are reviewed under facility policy.",
+    "Incorrect. This assumes the existing papers are invalid without checking them and pressures the client. Offering information is fine, but it should not replace reviewing what the client already has."
+   ],
+   "key": 1,
+   "rationale": "The first step is to assess what the client has and understands, then obtain the document so the team can follow the client's wishes. Assumptions and pressure are not appropriate.",
+   "needsReview": false
+  },
+  {
+   "id": "q-moc-advdir-02",
+   "categoryId": "management-of-care",
+   "topicId": "management-of-care--advance-directives-self-determination-life-planning",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "management-of-care--advance-directives-self-determination-life-planning--p03"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "teaching-learning",
+   "type": "sata",
+   "difficulty": 3,
+   "stem": "A client who was just diagnosed with advanced chronic obstructive pulmonary disease asks the nurse what an advance directive is. Which statements should the nurse include in the teaching? Select all that apply.",
+   "options": [
+    "It lets you state which treatments you would or would not want if you cannot speak for yourself.",
+    "You can name a person to make health care decisions for you if you lose the ability to decide.",
+    "You can change or cancel it at any time while you are able to make your own decisions.",
+    "It must be completed with a lawyer to be valid.",
+    "Once you sign it, you will not receive any treatment at all.",
+    "There is no need to give a copy to your care team or your family."
+   ],
+   "optionRationales": [
+    "Correct. This is the main purpose of a living will / advance care plan.",
+    "Correct. A health care agent (substitute decision-maker) can be named in a directive.",
+    "Correct. A capable client can revise or revoke a directive whenever they wish.",
+    "Incorrect. A lawyer is usually not required. Requirements such as witnesses depend on local law, and the social worker or facility can provide the correct form.",
+    "Incorrect. A directive describes the treatments a client does and does not want. Comfort measures, pain relief and wanted treatments continue.",
+    "Incorrect. A directive cannot guide care if the team and family do not know it exists or where it is kept."
+   ],
+   "key": [
+    0,
+    1,
+    2
+   ],
+   "rationale": "Teaching about advance directives covers their purpose, naming an agent and the client's right to change them, and encourages the client to share copies with the care team and family.",
+   "needsReview": false
+  },
+  {
+   "id": "q-moc-advdir-03",
+   "categoryId": "management-of-care",
+   "topicId": "management-of-care--advance-directives-self-determination-life-planning",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "management-of-care--advance-directives-self-determination-life-planning--p02"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "nursing-process",
+   "type": "dropdown",
+   "difficulty": 3,
+   "stem": "An 80-year-old client with end-stage kidney disease is admitted with pneumonia. On admission, the client gives the nurse a signed advance directive that says: \"No cardiopulmonary resuscitation (CPR). I do accept antibiotics, oxygen and dialysis.\" No code status order has been written yet.",
+   "template": "The nurse should {1} and then {2}.",
+   "blanks": [
+    {
+     "options": [
+      "ask the provider to review the directive and write a code status order that matches it",
+      "assume the client is a full code until a family member confirms the directive",
+      "tell the client that the directive does not apply in hospital"
+     ],
+     "key": 0,
+     "why": "The directive is the client's own wish, and it must be turned into an order the team can follow. Assuming \"full code\" ignores the known wishes, and telling the client the directive does not apply is incorrect and disrespects the client's autonomy."
+    },
+    {
+     "options": [
+      "document the directive and the code status in the plan of care and report it at handoff",
+      "keep the directive in the client's belongings so that it stays private",
+      "ask the family to decide whether the directive should be followed"
+     ],
+     "key": 0,
+     "why": "Documenting and handing off the code status makes sure every team member follows it. A directive hidden in belongings cannot be found in an emergency, and a capable client's own directive does not need family approval."
+    }
+   ],
+   "rationale": "Integrating an advance directive into the plan of care means getting a matching order, documenting it and communicating it to the team.",
+   "needsReview": false
+  },
+  {
+   "id": "q-moc-advdir-04",
+   "categoryId": "management-of-care",
+   "topicId": "management-of-care--advance-directives-self-determination-life-planning",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "management-of-care--advance-directives-self-determination-life-planning--p01",
+    "management-of-care--advance-directives-self-determination-life-planning--p03"
+   ],
+   "cjStep": "analyze-cues",
+   "integratedProcess": "teaching-learning",
+   "type": "matrix",
+   "difficulty": 3,
+   "stem": "After teaching about advance directives, the nurse listens to what clients say. For each client statement, select whether it shows that the client understands or needs more teaching.",
+   "cols": [
+    "Understands",
+    "Needs more teaching"
+   ],
+   "rows": [
+    {
+     "text": "\"My health care agent only decides for me when I am not able to decide for myself.\"",
+     "key": 0,
+     "why": "Correct understanding. An agent speaks for the client only when the client has lost the ability to decide."
+    },
+    {
+     "text": "\"If I sign a directive, the nurses will stop giving me pain medicine.\"",
+     "key": 1,
+     "why": "A directive lists treatments a client wants or refuses. It does not stop comfort care or pain relief."
+    },
+    {
+     "text": "\"I should tell my family and my care team where my directive is kept.\"",
+     "key": 0,
+     "why": "Correct understanding. People need to know a directive exists and where to find it."
+    },
+    {
+     "text": "\"I can't change my directive once it is signed.\"",
+     "key": 1,
+     "why": "A capable client can change or cancel a directive at any time."
+    },
+    {
+     "text": "\"My wishes will only be followed if my family agrees with them.\"",
+     "key": 1,
+     "why": "The client's own recorded wishes guide care. Family agreement is not required."
+    }
+   ],
+   "rationale": "The nurse evaluates understanding by listening for accurate statements and correcting misunderstandings about when a directive applies, what it covers and how it can be changed.",
+   "needsReview": false
+  },
+  {
+   "id": "q-moc-advocacy-01",
+   "categoryId": "management-of-care",
+   "topicId": "management-of-care--advocacy",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "management-of-care--advocacy--p03"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "caring",
+   "type": "mcq",
+   "difficulty": 2,
+   "stem": "A client scheduled for knee surgery tomorrow tells the nurse, \"I'm not sure I want this operation, but the surgeon said it is my best option.\" The client has already signed the consent form. What is the nurse's best action?",
+   "options": [
+    "Remind the client that the form is signed and that the operating room is booked.",
+    "Tell the client that surgeons know best and that most clients do well.",
+    "Tell the surgeon about the client's concerns and ask the surgeon to speak with the client before the surgery.",
+    "Cancel the surgery in the scheduling system."
+   ],
+   "optionRationales": [
+    "Incorrect. A signed form does not end the client's right to change their mind. This response pressures the client.",
+    "Incorrect. This is false reassurance and dismisses the client's concerns.",
+    "Correct. As the client's advocate, the nurse makes sure the concerns reach the provider so the client can ask questions, hear the options again and make an informed decision.",
+    "Incorrect. Cancelling a procedure is not the nurse's role. The client decides whether to go ahead, and the nurse makes sure the client's concerns are heard."
+   ],
+   "key": 2,
+   "rationale": "Advocacy means making sure the client's voice is heard and that the client has the information needed to decide, without taking the decision away from the client.",
+   "needsReview": false
+  },
+  {
+   "id": "q-moc-advocacy-02",
+   "categoryId": "management-of-care",
+   "topicId": "management-of-care--advocacy",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "management-of-care--advocacy--p01"
+   ],
+   "cjStep": "generate-solutions",
+   "integratedProcess": "caring",
+   "type": "sata",
+   "difficulty": 3,
+   "stem": "A 56-year-old client with newly diagnosed stage III colon cancer tells the nurse that she wants to try changes to her diet and does not want chemotherapy. Which actions by the nurse respect the client's right to decide while supporting her? Select all that apply.",
+   "options": [
+    "Ask the client what she understands about her diagnosis and the treatment options.",
+    "Tell the oncologist about the client's decision so the options can be discussed again.",
+    "Tell the client that refusing chemotherapy is irresponsible.",
+    "Give accurate information about the options, including benefits and risks, without pressure.",
+    "Ask the family to persuade the client to accept chemotherapy.",
+    "Document the client's decision and the reasons she gave."
+   ],
+   "optionRationales": [
+    "Correct. Finding out what the client understands shows what information she still needs.",
+    "Correct. The provider can explain benefits and risks, and the plan can be reviewed together.",
+    "Incorrect. Judging the client is not therapeutic and does not respect her right to decide.",
+    "Correct. Clients can only make informed decisions when the information is accurate and balanced.",
+    "Incorrect. Using family to pressure a capable client undermines her autonomy.",
+    "Correct. Documentation keeps the whole team informed of the client's wishes."
+   ],
+   "key": [
+    0,
+    1,
+    3,
+    5
+   ],
+   "rationale": "The nurse supports informed decision-making by exploring understanding, giving balanced information, involving the provider and documenting, while respecting the client's decision.",
+   "needsReview": false
+  },
+  {
+   "id": "q-moc-advocacy-03",
+   "categoryId": "management-of-care",
+   "topicId": "management-of-care--advocacy",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "management-of-care--advocacy--p05"
+   ],
+   "cjStep": "recognize-cues",
+   "integratedProcess": "culture-spirituality",
+   "type": "highlight",
+   "difficulty": 4,
+   "stem": "A nurse writes about caring for a 34-year-old transgender man with severe abdominal pain (pain 9/10, heart rate 112/min, blood pressure 142/90 mmHg). Highlight the statements that show care that is NOT unbiased or equally accessible.",
+   "segments": [
+    {
+     "text": "Nurse's note: "
+    },
+    {
+     "text": "I delayed his pain assessment because I assumed he was exaggerating.",
+     "key": true,
+     "why": "Assuming exaggeration because of who the client is, instead of assessing, is biased and delays care. Pain is what the client says it is, and his vital signs support the report."
+    },
+    {
+     "text": " "
+    },
+    {
+     "text": "I asked him privately which name and pronouns he wants us to use.",
+     "key": false,
+     "why": "This is respectful, supports trust and is good practice."
+    },
+    {
+     "text": " "
+    },
+    {
+     "text": "I asked the unit clerk to put him in the room at the end of the hall so that other clients would not be bothered.",
+     "key": true,
+     "why": "Separating a client because of identity is unequal treatment. Room assignment should be based on clinical needs and policy."
+    },
+    {
+     "text": " "
+    },
+    {
+     "text": "I used the same pain assessment tool that I use for every client.",
+     "key": false,
+     "why": "Using the same standard tool for all clients supports equal care."
+    },
+    {
+     "text": " "
+    },
+    {
+     "text": "I told the provider his pain was probably not real, so no tests were needed.",
+     "key": true,
+     "why": "The nurse's role is to report assessment findings objectively. Dismissing the symptoms based on assumptions blocks access to care."
+    },
+    {
+     "text": " "
+    },
+    {
+     "text": "I reported his rising heart rate to the provider using SBAR.",
+     "key": false,
+     "why": "Reporting objective findings promptly is appropriate and supports equal care."
+    }
+   ],
+   "rationale": "Unbiased care means assessing and treating every client based on clinical needs, using respectful communication and standard tools, and never letting assumptions about identity affect access to care.",
+   "needsReview": false
+  },
+  {
+   "id": "q-moc-advocacy-04",
+   "categoryId": "management-of-care",
+   "topicId": "management-of-care--advocacy",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "management-of-care--advocacy--p04"
+   ],
+   "cjStep": "generate-solutions",
+   "integratedProcess": "communication-documentation",
+   "type": "dragdrop",
+   "difficulty": 3,
+   "stem": "For each situation, select the advocacy resource the nurse should use first.",
+   "mode": "sort",
+   "bins": [
+    "Professional interpreter",
+    "Social worker",
+    "Chain of command"
+   ],
+   "items": [
+    {
+     "text": "A client who speaks only Punjabi needs to understand a procedure before agreeing to it.",
+     "key": 0,
+     "why": "A qualified interpreter makes sure the client understands. Using a family member risks errors and breaches privacy."
+    },
+    {
+     "text": "A client who is ready for discharge has no safe housing and cannot pay for medications.",
+     "key": 1,
+     "why": "Housing and financial needs are the social worker's area of expertise."
+    },
+    {
+     "text": "A provider has not answered repeated calls about a client whose pain is rising and whose blood pressure is falling.",
+     "key": 2,
+     "why": "When a client is at risk and the provider does not respond, the nurse follows the chain of command (charge nurse, manager, and so on)."
+    },
+    {
+     "text": "A client who is Deaf and uses sign language needs wound care instructions.",
+     "key": 0,
+     "why": "A professional sign language interpreter allows full, accurate communication."
+    },
+    {
+     "text": "A client's family is exhausted from caregiving and asks about funding for home support.",
+     "key": 1,
+     "why": "The social worker knows about community and funding resources."
+    },
+    {
+     "text": "An unsafe staffing practice continues after the nurse reported it to the first manager.",
+     "key": 2,
+     "why": "If a safety concern is not resolved, it is escalated up the chain of command."
+    }
+   ],
+   "rationale": "Advocacy resources are used according to the need: interpreters for language and communication, social workers for social and financial needs, and the chain of command for unresolved safety concerns.",
+   "needsReview": false
+  },
+  {
+   "id": "q-moc-delegation-01",
+   "categoryId": "management-of-care",
+   "topicId": "management-of-care--assignment-delegation-and-supervision",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "management-of-care--assignment-delegation-and-supervision--p02"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "nursing-process",
+   "type": "mcq",
+   "difficulty": 2,
+   "stem": "The registered nurse (RN) is making assignments for the day shift. Which client is the most appropriate to assign to an unregulated care provider (UCP)?",
+   "options": [
+    "A client admitted 1 hour ago with chest pain who needs a baseline assessment and a 12-lead electrocardiogram.",
+    "A client receiving the first unit of a blood transfusion who needs frequent monitoring.",
+    "A client 3 days after knee replacement who is stable and needs help to bathe and walk to the bathroom.",
+    "A client with a new tracheostomy who needs suctioning and teaching about home care."
+   ],
+   "optionRationales": [
+    "Incorrect. A new, possibly unstable condition needs the assessment and judgment of an RN.",
+    "Incorrect. Watching for transfusion reactions requires nursing assessment and judgment, especially at the start.",
+    "Correct. Hygiene and mobility help for a stable client with predictable needs is within a UCP's skills. The RN remains accountable and supervises.",
+    "Incorrect. Airway care and teaching require a regulated nurse, and the airway can become unstable quickly."
+   ],
+   "key": 2,
+   "rationale": "Tasks are assigned to UCPs for stable clients with predictable outcomes. Assessment, teaching, unstable clients and tasks needing nursing judgment stay with the RN.",
+   "needsReview": false
+  },
+  {
+   "id": "q-moc-delegation-02",
+   "categoryId": "management-of-care",
+   "topicId": "management-of-care--assignment-delegation-and-supervision",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "management-of-care--assignment-delegation-and-supervision--p06"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "nursing-process",
+   "type": "sata",
+   "difficulty": 4,
+   "stem": "Which statements by a registered nurse show correct use of the rights of delegation? Select all that apply.",
+   "options": [
+    "\"I will ask the UCP to measure and record the vital signs of this stable client and to report any value outside the range I gave.\"",
+    "\"I'm short of time, so I'll delegate the task even though the UCP has not been trained to do it.\"",
+    "\"I will check with the LPN at midday to see how the dressing changes are going.\"",
+    "\"The UCP did this task on another unit, so I don't need to check that she is competent here.\"",
+    "\"I delegated the teaching about a new insulin regimen to the UCP.\"",
+    "\"I will explain what to do, how and by when, and what to report.\""
+   ],
+   "optionRationales": [
+    "Correct. This is the right task, for the right circumstances, with the right direction and communication.",
+    "Incorrect. The right person must have the competence for the task. Lack of time does not make an untrained delegation safe.",
+    "Correct. This is the right supervision and evaluation.",
+    "Incorrect. The RN confirms competence and what the facility allows. Prior experience elsewhere is not enough.",
+    "Incorrect. Teaching new content requires nursing knowledge and judgment and cannot be delegated to a UCP.",
+    "Correct. This is the right direction and communication."
+   ],
+   "key": [
+    0,
+    2,
+    5
+   ],
+   "rationale": "The rights of delegation include the right task, circumstances, person, direction/communication and supervision/evaluation. The RN stays accountable for the outcome.",
+   "needsReview": false
+  },
+  {
+   "id": "q-moc-delegation-03",
+   "categoryId": "management-of-care",
+   "topicId": "management-of-care--assignment-delegation-and-supervision",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "management-of-care--assignment-delegation-and-supervision--p01"
+   ],
+   "cjStep": "generate-solutions",
+   "integratedProcess": "nursing-process",
+   "type": "matrix",
+   "difficulty": 4,
+   "stem": "Use the NCLEX model of scope of practice (RN, LPN/VN and unlicensed assistive personnel). For each task for a stable client, select the staff member who is most appropriate: someone with the right skills and scope, without using a more highly trained person than necessary.",
+   "cols": [
+    "RN",
+    "LPN/VN",
+    "UAP (unregulated care provider)"
+   ],
+   "rows": [
+    {
+     "text": "Teach a client about the purpose and side effects of a newly prescribed heart failure medication.",
+     "key": 0,
+     "why": "Initial teaching of new content requires the knowledge and judgment of the RN."
+    },
+    {
+     "text": "Measure and record intake and output.",
+     "key": 2,
+     "why": "This is a routine task with predictable results that a UAP can do when given clear instructions."
+    },
+    {
+     "text": "Give scheduled oral medications.",
+     "key": 1,
+     "why": "Giving medications is outside a UAP's role. An LPN/VN can give oral medications to stable clients under the RN's direction, so the RN is not needed."
+    },
+    {
+     "text": "Give a bed bath and reposition the client.",
+     "key": 2,
+     "why": "Hygiene and positioning for a stable client can be assigned to a UAP."
+    },
+    {
+     "text": "Evaluate the client's response to the plan of care and update the plan.",
+     "key": 0,
+     "why": "Evaluating care and revising the plan are RN responsibilities."
+    }
+   ],
+   "rationale": "Assign tasks to the staff member who has the skills and legal scope, and keep assessment, teaching new content and evaluation of the plan with the RN.",
+   "needsReview": true,
+   "reviewNote": "Scope of practice for practical nurses and care aides differs by province or territory. This item uses the NCLEX RN / LPN / UAP model. Please check it against the Canadian regulator's guidance."
+  },
+  {
+   "id": "q-moc-delegation-04",
+   "categoryId": "management-of-care",
+   "topicId": "management-of-care--assignment-delegation-and-supervision",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "management-of-care--assignment-delegation-and-supervision--p07",
+    "management-of-care--assignment-delegation-and-supervision--p06"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "nursing-process",
+   "type": "dragdrop",
+   "difficulty": 2,
+   "stem": "The RN decides to delegate measuring and recording vital signs for four stable clients to a UCP. Place the steps in the correct order.",
+   "mode": "order",
+   "items": [
+    {
+     "text": "Tell the UCP what to do, when to do it and which results to report right away.",
+     "why": "Clear communication of the task, timing and reporting limits comes before the work starts."
+    },
+    {
+     "text": "Decide that the task can be safely delegated based on the clients' condition and stability.",
+     "why": "Delegation starts with the RN's assessment of the clients and the task."
+    },
+    {
+     "text": "Choose a UCP who has the competence and the allowed scope for the task.",
+     "why": "The right person is chosen after the RN knows what the task requires."
+    },
+    {
+     "text": "Review the results and give feedback to the UCP.",
+     "why": "The RN evaluates the outcome and gives feedback when the task is complete."
+    },
+    {
+     "text": "Be available to answer questions and check on the work while it is being done.",
+     "why": "Supervision takes place while the task is done."
+    }
+   ],
+   "key": [
+    1,
+    2,
+    0,
+    4,
+    3
+   ],
+   "rationale": "Delegation follows a sequence: assess and decide, choose the right person, communicate, supervise, then evaluate and give feedback.",
+   "needsReview": false
+  },
+  {
+   "id": "q-moc-casemgmt-01",
+   "categoryId": "management-of-care",
+   "topicId": "management-of-care--case-management",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "management-of-care--case-management--p05"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "teaching-learning",
+   "type": "mcq",
+   "difficulty": 2,
+   "stem": "A 78-year-old client who lives alone is being discharged home tomorrow after hip fracture repair and will use a walker. Which nurse action best prepares the client for discharge?",
+   "options": [
+    "Give the client the printed instructions and ask the client to read them at home.",
+    "Review the discharge instructions with the client, and ask the client to explain them back and to show safe walker use.",
+    "Tell the client that the case manager will arrange everything, so no teaching is needed.",
+    "Review the instructions with the client's neighbour because the client seems tired."
+   ],
+   "optionRationales": [
+    "Incorrect. Reading alone does not confirm understanding, and the client may have questions that cannot be answered at home.",
+    "Correct. Teach-back and demonstration confirm that the client understands and can perform the skills.",
+    "Incorrect. The case manager coordinates services, but the nurse still teaches the client about the care.",
+    "Incorrect. The client is the learner, and sharing information with a neighbour needs the client's permission. Teaching can be broken into shorter sessions instead."
+   ],
+   "key": 1,
+   "rationale": "Discharge teaching should be individualized to the client and verified with teach-back or demonstration.",
+   "needsReview": false
+  },
+  {
+   "id": "q-moc-casemgmt-02",
+   "categoryId": "management-of-care",
+   "topicId": "management-of-care--case-management",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "management-of-care--case-management--p01"
+   ],
+   "cjStep": "generate-solutions",
+   "integratedProcess": "nursing-process",
+   "type": "sata",
+   "difficulty": 3,
+   "stem": "An 84-year-old client who lives alone will be discharged after a mild stroke that left mild left-sided weakness. The client's goal is to stay independent at home. Which resources should the nurse explore with the client and the team? Select all that apply.",
+   "options": [
+    "Home care nursing and personal-support services",
+    "An occupational therapy home safety assessment",
+    "A community meal delivery program",
+    "Immediate placement in a long-term care home without discussing it with the client",
+    "A personal emergency response (medical alert) device",
+    "Advice to avoid all daily activities so that falls cannot happen"
+   ],
+   "optionRationales": [
+    "Correct. These can support medications, monitoring and personal care at home.",
+    "Correct. It identifies hazards and equipment that allow safe independence.",
+    "Correct. It helps maintain nutrition if shopping and cooking are difficult.",
+    "Incorrect. The client's goal is independence, and the client has the right to take part in the decision.",
+    "Correct. It lets a client who lives alone call for help quickly after a fall or new symptoms.",
+    "Incorrect. Avoiding all activity causes weakness and loss of independence. The goal is safe activity."
+   ],
+   "key": [
+    0,
+    1,
+    2,
+    4
+   ],
+   "rationale": "Case management explores resources that help the client reach the goal of independence safely, while involving the client in each decision.",
+   "needsReview": false
+  },
+  {
+   "id": "q-moc-casemgmt-03",
+   "categoryId": "management-of-care",
+   "topicId": "management-of-care--case-management",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "management-of-care--case-management--p06"
+   ],
+   "cjStep": "evaluate-outcomes",
+   "integratedProcess": "nursing-process",
+   "type": "dropdown",
+   "difficulty": 3,
+   "stem": "A client with a stage 2 pressure injury on the sacrum has been on a 2-hourly turning schedule with a new dressing for 7 days. Today the wound is larger, and there is new yellow drainage and more redness around the edges.",
+   "template": "The nurse should recognize that the plan of care is {1} and should {2}.",
+   "blanks": [
+    {
+     "options": [
+      "effective and should continue unchanged",
+      "not effective and needs to be updated"
+     ],
+     "key": 1,
+     "why": "A larger wound with drainage and spreading redness means the current plan is not working. Continuing unchanged would allow the wound to get worse."
+    },
+    {
+     "options": [
+      "report the findings and work with the provider and the wound care nurse to revise the plan",
+      "wait another week before reporting the changes",
+      "document that the client is not following the plan"
+     ],
+     "key": 0,
+     "why": "Evaluating and updating the plan involves reporting the findings and collaborating with the team. Waiting delays treatment, and blaming the client is not supported by the data."
+    }
+   ],
+   "rationale": "When the evaluation shows that expected outcomes are not met, the nurse reports the findings and updates the plan of care with the team.",
+   "needsReview": false
+  },
+  {
+   "id": "q-moc-casemgmt-04",
+   "categoryId": "management-of-care",
+   "topicId": "management-of-care--case-management",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "management-of-care--case-management--p04",
+    "management-of-care--case-management--p02"
+   ],
+   "cjStep": "analyze-cues",
+   "integratedProcess": "nursing-process",
+   "type": "highlight",
+   "difficulty": 4,
+   "stem": "The nurse reviews this note about a client who is ready to go home tomorrow. Highlight the findings that mean the discharge plan needs to be individualized or changed.",
+   "segments": [
+    {
+     "text": "74-year-old client admitted with a chronic obstructive pulmonary disease exacerbation. "
+    },
+    {
+     "text": "Lives with his spouse in a second-floor apartment with no elevator.",
+     "key": true,
+     "why": "Stairs can be a barrier for a client who becomes short of breath with exertion. The plan may need rest stops, help on the stairs or other arrangements."
+    },
+    {
+     "text": " "
+    },
+    {
+     "text": "Takes his oral medications correctly and can name each one.",
+     "key": false,
+     "why": "This shows self-care ability and does not require a change to the plan."
+    },
+    {
+     "text": " "
+    },
+    {
+     "text": "Oxygen saturation is 92% on room air at rest and 86% after walking in the hall.",
+     "key": true,
+     "why": "A drop to 86% with activity means the client may need an assessment for home oxygen. The nurse should report the finding and assess the need for equipment."
+    },
+    {
+     "text": " "
+    },
+    {
+     "text": "His appetite is good and he eats most of his meals.",
+     "key": false,
+     "why": "Normal intake needs no change to the plan."
+    },
+    {
+     "text": " "
+    },
+    {
+     "text": "His spouse is away at work for 8 hours every day.",
+     "key": true,
+     "why": "He may be alone when he becomes short of breath, so the plan should address supervision, a way to call for help and support services."
+    },
+    {
+     "text": " "
+    },
+    {
+     "text": "A follow-up appointment at the respiratory clinic is booked for next week.",
+     "key": false,
+     "why": "A booked appointment is already part of the plan."
+    }
+   ],
+   "rationale": "An individualized plan responds to the client's own situation: the home layout, oxygen needs with exertion and the lack of daytime support all affect safe discharge.",
+   "needsReview": false
+  },
+  {
+   "id": "q-moc-rights-01",
+   "categoryId": "management-of-care",
+   "topicId": "management-of-care--client-rights",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "management-of-care--client-rights--p01"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "caring",
+   "type": "mcq",
+   "difficulty": 2,
+   "stem": "A competent client who is scheduled to receive a blood transfusion tells the nurse, \"I don't want the blood.\" The nurse has already explained the benefits. What should the nurse do first?",
+   "options": [
+    "Start the transfusion because the provider ordered it.",
+    "Ask about the reasons for refusing, make sure the client understands the risks of refusing, and then notify the provider.",
+    "Ask the client's family to persuade the client to accept the transfusion.",
+    "Document the refusal and tell the client that no other care will be given."
+   ],
+   "optionRationales": [
+    "Incorrect. A competent client has the right to refuse treatment. Giving a treatment against the client's wishes is a violation of the client's rights.",
+    "Correct. The nurse respects the refusal, checks that the decision is informed and makes sure the provider knows so that the options and plan can be reviewed.",
+    "Incorrect. Using family to pressure a competent client undermines the client's autonomy.",
+    "Incorrect. Refusing one treatment does not mean the client loses other care, and the provider must be told."
+   ],
+   "key": 1,
+   "rationale": "Competent clients have the right to refuse treatment. The nurse explores the reasons, confirms understanding of the consequences, informs the provider and documents.",
+   "needsReview": false
+  },
+  {
+   "id": "q-moc-rights-02",
+   "categoryId": "management-of-care",
+   "topicId": "management-of-care--client-rights",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "management-of-care--client-rights--p03"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "teaching-learning",
+   "type": "sata",
+   "difficulty": 2,
+   "stem": "A nurse is orienting a newly admitted client to the unit. Which client rights should the nurse include? Select all that apply.",
+   "options": [
+    "To receive respectful care that is free from discrimination",
+    "To ask to see their health record and request a copy, following facility policy",
+    "To refuse a treatment and be told what could happen if they refuse",
+    "To have privacy and the confidentiality of their health information protected",
+    "To be told that they must accept every treatment that is ordered",
+    "To receive any medication they request, whenever they request it"
+   ],
+   "optionRationales": [
+    "Correct. All clients have the right to respectful care.",
+    "Correct. Clients have a right of access to their own health information.",
+    "Correct. Refusal and information about the consequences are part of informed decision-making.",
+    "Correct. Privacy and confidentiality are basic rights.",
+    "Incorrect. Competent clients can decline treatments.",
+    "Incorrect. Medications are given on a provider's order and when safe and appropriate."
+   ],
+   "key": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "rationale": "Client rights include respectful care, access to their record, the right to refuse treatment with information about the consequences, and privacy.",
+   "needsReview": false
+  },
+  {
+   "id": "q-moc-rights-03",
+   "categoryId": "management-of-care",
+   "topicId": "management-of-care--client-rights",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "management-of-care--client-rights--p04"
+   ],
+   "cjStep": "evaluate-outcomes",
+   "integratedProcess": "teaching-learning",
+   "type": "matrix",
+   "difficulty": 3,
+   "stem": "After teaching a client about client rights, the nurse asks the client to describe them. For each statement, select whether it shows understanding or a need for more teaching.",
+   "cols": [
+    "Understands",
+    "Needs more teaching"
+   ],
+   "rows": [
+    {
+     "text": "\"I can say no to a treatment even if my doctor recommends it.\"",
+     "key": 0,
+     "why": "Correct. Competent clients can refuse treatments."
+    },
+    {
+     "text": "\"If I refuse a treatment, the staff will not give me any other care.\"",
+     "key": 1,
+     "why": "Refusing one treatment does not take away the right to other care."
+    },
+    {
+     "text": "\"I can ask for an interpreter if I do not understand English well.\"",
+     "key": 0,
+     "why": "Correct. Language support is part of the right to understand care."
+    },
+    {
+     "text": "\"My health information can be shared with anyone in the hospital who asks.\"",
+     "key": 1,
+     "why": "Information is shared only with those who need it for care or with the client's permission."
+    },
+    {
+     "text": "\"I have the right to ask questions before I sign a consent form.\"",
+     "key": 0,
+     "why": "Correct. Asking questions is part of informed consent."
+    }
+   ],
+   "rationale": "Evaluating understanding means checking that the client can state their rights correctly and correcting misunderstandings.",
+   "needsReview": false
+  },
+  {
+   "id": "q-moc-rights-04",
+   "categoryId": "management-of-care",
+   "topicId": "management-of-care--client-rights",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "management-of-care--client-rights--p02"
+   ],
+   "cjStep": "generate-solutions",
+   "integratedProcess": "communication-documentation",
+   "type": "dropdown",
+   "difficulty": 3,
+   "stem": "A 45-year-old client with newly diagnosed type 2 diabetes (hemoglobin A1c 9.1% [76 mmol/mol]; fasting glucose 11.2 mmol/L [202 mg/dL]) tells the nurse that he does not want to start insulin.",
+   "template": "The nurse should {1} and then {2}.",
+   "blanks": [
+    {
+     "options": [
+      "explore the client's concerns and give information about the options, including lifestyle changes and medicines other than insulin",
+      "explain that insulin is the only option and that he must agree",
+      "tell the client that he has no choice in his care"
+     ],
+     "key": 0,
+     "why": "Discussing options with the client respects his right to take part in decisions. Type 2 diabetes can often be treated with lifestyle changes and other medicines, so insulin is not the only option. Telling him he must agree or has no choice violates his rights."
+    },
+    {
+     "options": [
+      "share the client's preferences with the provider so that the plan can be reviewed together",
+      "change the plan of care without telling the provider",
+      "stop teaching about diet and exercise because the client is not cooperating"
+     ],
+     "key": 0,
+     "why": "The provider must know the client's preferences to review the plan with him. Changing the plan alone is outside the nurse's role, and stopping teaching removes information he needs."
+    }
+   ],
+   "rationale": "The nurse supports shared decision-making by exploring concerns, giving balanced information and making sure the provider knows the client's preferences.",
+   "needsReview": false
+  },
+  {
+   "id": "q-moc-collab-01",
+   "categoryId": "management-of-care",
+   "topicId": "management-of-care--collaboration-with-multidisciplinary-team",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "management-of-care--collaboration-with-multidisciplinary-team--p03"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "communication-documentation",
+   "type": "mcq",
+   "difficulty": 3,
+   "stem": "A client who had a total knee replacement yesterday has a provider order: \"Out of bed to chair three times daily.\" The physiotherapist's note says: \"Client to stay on bedrest until the surgeon reviews today's knee x-ray.\" What should the nurse do first?",
+   "options": [
+    "Follow the provider's order because it is an order.",
+    "Follow the physiotherapist's note because it was written most recently.",
+    "Clarify the conflicting instructions with the provider and the physiotherapist before getting the client up.",
+    "Ask the client which instruction the client prefers."
+   ],
+   "optionRationales": [
+    "Incorrect. The conflict could mean new information has changed the plan, and getting the client up could cause harm.",
+    "Incorrect. The physiotherapist's note is not a replacement for the provider's order.",
+    "Correct. Reviewing the plan across disciplines means resolving conflicts before acting so the client stays safe and care is consistent.",
+    "Incorrect. The client cannot be expected to resolve a conflict between the team's instructions."
+   ],
+   "key": 2,
+   "rationale": "The nurse reviews the plan of care for consistency across disciplines and clarifies conflicts with the people involved before acting.",
+   "needsReview": false
+  },
+  {
+   "id": "q-moc-collab-02",
+   "categoryId": "management-of-care",
+   "topicId": "management-of-care--collaboration-with-multidisciplinary-team",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "management-of-care--collaboration-with-multidisciplinary-team--p02"
+   ],
+   "cjStep": "recognize-cues",
+   "integratedProcess": "communication-documentation",
+   "type": "sata",
+   "difficulty": 3,
+   "stem": "A nurse is giving report to the pharmacist about a client who is about to start warfarin. Which information is significant to share? Select all that apply.",
+   "options": [
+    "Current prescription medicines, over-the-counter products and herbal supplements",
+    "Known drug allergies",
+    "The most recent INR (international normalized ratio) result and any history of bleeding",
+    "How much leafy green vegetable (a source of vitamin K) the client usually eats",
+    "The client's religion",
+    "The names of the client's visitors this week"
+   ],
+   "optionRationales": [
+    "Correct. The pharmacist needs this to check for drug interactions with warfarin.",
+    "Correct. Allergies are essential for medication safety.",
+    "Correct. The baseline INR and bleeding history affect dosing and risk.",
+    "Correct. Vitamin K intake affects how warfarin works.",
+    "Incorrect. This does not affect the medication review unless it affects treatment choices the client has stated.",
+    "Incorrect. This is not relevant to the medication review and is private information."
+   ],
+   "key": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "rationale": "Information shared with another discipline should be relevant to the question being asked. For warfarin, that includes interacting medicines, allergies, INR, bleeding risk and diet.",
+   "needsReview": false
+  },
+  {
+   "id": "q-moc-collab-03",
+   "categoryId": "management-of-care",
+   "topicId": "management-of-care--collaboration-with-multidisciplinary-team",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "management-of-care--collaboration-with-multidisciplinary-team--p04"
+   ],
+   "cjStep": "generate-solutions",
+   "integratedProcess": "nursing-process",
+   "type": "dragdrop",
+   "difficulty": 2,
+   "stem": "For each client problem, select the team member who is best suited to help.",
+   "mode": "sort",
+   "bins": [
+    "Physiotherapist",
+    "Dietitian",
+    "Respiratory therapist",
+    "Social worker"
+   ],
+   "items": [
+    {
+     "text": "A client after a knee replacement needs gait training and stair practice.",
+     "key": 0,
+     "why": "Mobility, gait and exercise are the physiotherapist's area."
+    },
+    {
+     "text": "A client with new kidney disease needs a meal plan that limits sodium and potassium.",
+     "key": 1,
+     "why": "Diet planning for medical conditions is the dietitian's area."
+    },
+    {
+     "text": "A client with chronic obstructive pulmonary disease needs coaching on airway clearance and inhaler use.",
+     "key": 2,
+     "why": "Respiratory therapists help with breathing treatments, oxygen and airway clearance."
+    },
+    {
+     "text": "A client needs help applying for disability benefits and finding transport to dialysis.",
+     "key": 3,
+     "why": "Social workers help with financial, social and community resources."
+    },
+    {
+     "text": "A client has weak legs and difficulty transferring from the bed to a chair.",
+     "key": 0,
+     "why": "Transfers and strengthening are the physiotherapist's area."
+    },
+    {
+     "text": "A client has a poor appetite and cannot meet protein needs during chemotherapy.",
+     "key": 1,
+     "why": "The dietitian can plan ways to increase calories and protein."
+    }
+   ],
+   "rationale": "Collaboration means matching each client need to the discipline with the right expertise.",
+   "needsReview": false
+  },
+  {
+   "id": "q-moc-collab-04",
+   "categoryId": "management-of-care",
+   "topicId": "management-of-care--collaboration-with-multidisciplinary-team",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "management-of-care--collaboration-with-multidisciplinary-team--p01"
+   ],
+   "cjStep": "generate-solutions",
+   "integratedProcess": "communication-documentation",
+   "type": "dropdown",
+   "difficulty": 3,
+   "stem": "A 58-year-old client with a leg ulcer, new dialysis, poorly controlled depression and no stable housing has been in the hospital for 3 weeks. Different team members have given the client conflicting instructions.",
+   "template": "The nurse should {1} so that the team can {2}.",
+   "blanks": [
+    {
+     "options": [
+      "request an interdisciplinary team conference",
+      "wait until discharge day to share the concerns",
+      "ask each discipline to contact the family separately"
+     ],
+     "key": 0,
+     "why": "A client with complex needs and conflicting instructions needs the whole team together. Waiting for discharge is too late, and separate calls to the family add to the confusion."
+    },
+    {
+     "options": [
+      "agree on common goals and a coordinated plan of care",
+      "decide which discipline is responsible for the mistake",
+      "write separate plans with no shared goals"
+     ],
+     "key": 0,
+     "why": "A conference allows the team to agree on shared goals. Assigning blame does not help the client, and separate plans are what caused the conflict."
+    }
+   ],
+   "rationale": "Interdisciplinary conferences are used when clients have complex needs or when the team's instructions conflict.",
+   "needsReview": false
+  },
+  {
+   "id": "q-moc-mgmt-01",
+   "categoryId": "management-of-care",
+   "topicId": "management-of-care--concepts-of-management",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "management-of-care--concepts-of-management--p04"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "communication-documentation",
+   "type": "mcq",
+   "difficulty": 3,
+   "stem": "Two unregulated care providers (UCPs) argue loudly in the hallway about who should answer a call light. Clients can hear them. What should the charge nurse do first?",
+   "options": [
+    "Write up both UCPs for disciplinary action right away.",
+    "Ignore the argument because they will probably settle it themselves.",
+    "Announce a new assignment sheet at the next report.",
+    "Ask both to step into a private area and have each describe the problem calmly."
+   ],
+   "optionRationales": [
+    "Incorrect. Discipline may be needed later, but jumping to it skips the chance to understand the problem and solve it.",
+    "Incorrect. Ignoring conflict allows it to continue and disturbs clients.",
+    "Incorrect. This does not stop the present conflict and may not address its cause.",
+    "Correct. Moving the conflict away from clients and letting each person speak starts the process of understanding and resolving it."
+   ],
+   "key": 3,
+   "rationale": "The first step in managing conflict is to stop disruption in front of clients and give each person a chance to describe the problem in private.",
+   "needsReview": false
+  },
+  {
+   "id": "q-moc-mgmt-02",
+   "categoryId": "management-of-care",
+   "topicId": "management-of-care--concepts-of-management",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "management-of-care--concepts-of-management--p01"
+   ],
+   "cjStep": null,
+   "integratedProcess": "nursing-process",
+   "type": "sata",
+   "difficulty": 2,
+   "stem": "A new graduate nurse asks about the roles of the health care team. Which statements are accurate? Select all that apply.",
+   "options": [
+    "The charge nurse coordinates assignments and helps resolve staffing problems during the shift.",
+    "The case manager helps plan discharge and arranges community services.",
+    "The unregulated care provider is responsible for developing the nursing care plan.",
+    "The pharmacist reviews medication orders for dosing and interactions.",
+    "The social worker is responsible for prescribing medications.",
+    "The RN remains accountable for the outcome of care that the RN delegates."
+   ],
+   "optionRationales": [
+    "Correct. This is a core role of the charge nurse.",
+    "Correct. Case managers coordinate care transitions and resources.",
+    "Incorrect. Planning care is an RN responsibility.",
+    "Correct. Pharmacists check orders for safety.",
+    "Incorrect. Social workers help with psychosocial and community needs and do not prescribe medications.",
+    "Correct. Delegation does not remove the RN's accountability."
+   ],
+   "key": [
+    0,
+    1,
+    3,
+    5
+   ],
+   "rationale": "Knowing each team member's role allows the nurse to assign, refer and delegate correctly.",
+   "needsReview": false
+  },
+  {
+   "id": "q-moc-mgmt-03",
+   "categoryId": "management-of-care",
+   "topicId": "management-of-care--concepts-of-management",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "management-of-care--concepts-of-management--p05"
+   ],
+   "cjStep": "evaluate-outcomes",
+   "integratedProcess": "nursing-process",
+   "type": "trend",
+   "difficulty": 3,
+   "stem": "A nurse manager introduced a new team nursing model on a medical unit in January. The table shows four months of unit data. For each measure, select the trend.",
+   "exhibit": {
+    "title": "Unit measures, January to April",
+    "columns": [
+     "Measure",
+     "Jan",
+     "Feb",
+     "Mar",
+     "Apr"
+    ],
+    "rows": [
+     [
+      "Average call-light response time (minutes)",
+      "7.8",
+      "6.9",
+      "5.8",
+      "4.9"
+     ],
+     [
+      "Staff overtime (hours per week)",
+      "38",
+      "41",
+      "52",
+      "60"
+     ],
+     [
+      "Client falls (per 1000 patient-days)",
+      "4.2",
+      "4.1",
+      "4.3",
+      "4.2"
+     ],
+     [
+      "Client satisfaction score (%)",
+      "78",
+      "80",
+      "84",
+      "88"
+     ]
+    ]
+   },
+   "cols": [
+    "Improving",
+    "No change",
+    "Worsening"
+   ],
+   "rows": [
+    {
+     "text": "Call-light response time",
+     "key": 0,
+     "why": "The response time is falling each month, which means clients are being answered faster."
+    },
+    {
+     "text": "Staff overtime",
+     "key": 2,
+     "why": "Overtime is rising each month, which is a negative outcome and may affect cost and staff fatigue."
+    },
+    {
+     "text": "Client falls",
+     "key": 1,
+     "why": "The numbers stay close to 4.2 with only small changes, so there is no clear trend."
+    },
+    {
+     "text": "Client satisfaction",
+     "key": 0,
+     "why": "The score is rising each month."
+    }
+   ],
+   "rationale": "Evaluating management outcomes means reading the trend for each measure. The new model seems to improve response time and satisfaction, but the rising overtime needs attention.",
+   "needsReview": false
+  },
+  {
+   "id": "q-moc-mgmt-04",
+   "categoryId": "management-of-care",
+   "topicId": "management-of-care--concepts-of-management",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "management-of-care--concepts-of-management--p03"
+   ],
+   "cjStep": null,
+   "integratedProcess": "communication-documentation",
+   "type": "matrix",
+   "difficulty": 2,
+   "stem": "The nurse coordinates care for a client with several needs. For each action, select whether it shows the nurse acting as a liaison between the client and others.",
+   "cols": [
+    "Liaison role",
+    "Not a liaison role"
+   ],
+   "rows": [
+    {
+     "text": "Tells the provider and the pharmacist that the client's pain is not controlled.",
+     "key": 0,
+     "why": "Carrying the client's needs to others is part of the liaison role."
+    },
+    {
+     "text": "Arranges a meeting between the client's family and the social worker to plan home supports.",
+     "key": 0,
+     "why": "Bringing the client, family and team together is liaison work."
+    },
+    {
+     "text": "Changes the client's prescribed diet without telling the dietitian.",
+     "key": 1,
+     "why": "This bypasses the team and is not coordination. Diet orders are changed through the provider and dietitian."
+    },
+    {
+     "text": "Tells the physiotherapist that the client is afraid of falling so that therapy can be adjusted.",
+     "key": 0,
+     "why": "Passing on the client's concern to another team member is liaison work."
+    },
+    {
+     "text": "Assists the client with morning hygiene by herself.",
+     "key": 1,
+     "why": "This is direct care and not a liaison activity."
+    }
+   ],
+   "rationale": "A liaison links the client with others by communicating needs and coordinating services, rather than acting alone or bypassing the team.",
+   "needsReview": false
+  },
+  {
+   "id": "q-moc-confid-01",
+   "categoryId": "management-of-care",
+   "topicId": "management-of-care--confidentiality-information-security",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "management-of-care--confidentiality-information-security--p02"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "communication-documentation",
+   "type": "mcq",
+   "difficulty": 2,
+   "stem": "After a difficult shift, a nurse wants to post on social media. Which post is acceptable with regard to client confidentiality?",
+   "options": [
+    "A photo of the unit whiteboard with no client names but with room numbers and diagnoses.",
+    "\"Another long shift. I'm tired but grateful for the great team I work with.\"",
+    "\"I cared for a client with a very rare condition today. I won't say the name.\"",
+    "A funny story about a confused older client, using only the first name."
+   ],
+   "optionRationales": [
+    "Incorrect. Room numbers and diagnoses can identify clients to people who know them.",
+    "Correct. It contains no information about any client.",
+    "Incorrect. A rare condition can identify a client, especially in a small community.",
+    "Incorrect. A first name and a story can identify the person, and making fun of a client is unprofessional."
+   ],
+   "key": 1,
+   "rationale": "Nurses must not post anything on social media that could identify a client, even without a name. Details such as unusual diagnoses, locations and photos can identify clients.",
+   "needsReview": false
+  },
+  {
+   "id": "q-moc-confid-02",
+   "categoryId": "management-of-care",
+   "topicId": "management-of-care--confidentiality-information-security",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "management-of-care--confidentiality-information-security--p01"
+   ],
+   "cjStep": "analyze-cues",
+   "integratedProcess": "communication-documentation",
+   "type": "sata",
+   "difficulty": 3,
+   "stem": "During orientation, the nurse asks a new graduate to explain confidentiality. Which statements show understanding? Select all that apply.",
+   "options": [
+    "\"I will only open the records of clients I'm caring for or have a work reason to review.\"",
+    "\"I will log off the computer whenever I leave the workstation.\"",
+    "\"I can talk about a client's diagnosis in the elevator if I don't use the name.\"",
+    "\"I can look at a coworker's health record if I'm worried about them.\"",
+    "\"I will share information with a client's family only with the client's permission or as policy allows.\"",
+    "\"I can give lab results to a neighbour who calls and says they are a close friend.\""
+   ],
+   "optionRationales": [
+    "Correct. Access is limited to what is needed for care or work.",
+    "Correct. This prevents others from seeing client information.",
+    "Incorrect. Others may overhear, and details can identify the client.",
+    "Incorrect. Access without a work reason is a breach, even with good intentions.",
+    "Correct. Sharing depends on consent and policy.",
+    "Incorrect. A caller is not entitled to the information without the client's consent."
+   ],
+   "key": [
+    0,
+    1,
+    4
+   ],
+   "rationale": "Staff confidentiality knowledge includes need-to-know access, protecting screens and public conversations, and sharing information only with consent or according to policy.",
+   "needsReview": false
+  },
+  {
+   "id": "q-moc-confid-03",
+   "categoryId": "management-of-care",
+   "topicId": "management-of-care--confidentiality-information-security",
+   "secondaryTopicIds": [
+    "management-of-care--information-technology"
+   ],
+   "learningPointIds": [
+    "management-of-care--confidentiality-information-security--p03"
+   ],
+   "cjStep": "recognize-cues",
+   "integratedProcess": "communication-documentation",
+   "type": "highlight",
+   "difficulty": 3,
+   "stem": "A nurse manager reads an incident review about one staff nurse's actions during a shift. Highlight the actions that were breaches of client confidentiality.",
+   "segments": [
+    {
+     "text": "The staff nurse: "
+    },
+    {
+     "text": "took a photo of a client's wound with a personal phone to show a friend who works at another hospital.",
+     "key": true,
+     "why": "A photo taken for a non-care reason on a personal device is a breach. Clinical photos follow policy and consent and are stored in the record."
+    },
+    {
+     "text": " "
+    },
+    {
+     "text": "Gave the report to the oncoming nurse in a private area.",
+     "key": false,
+     "why": "Handoff in a private area protects information and is appropriate."
+    },
+    {
+     "text": " "
+    },
+    {
+     "text": "Left a printed assignment sheet with client names and diagnoses on a table in a coffee shop.",
+     "key": true,
+     "why": "Leaving identifiable information in a public place is a breach."
+    },
+    {
+     "text": " "
+    },
+    {
+     "text": "Discussed a client's care with the care team in a conference room.",
+     "key": false,
+     "why": "Sharing information needed for care, in a private place, with the team is appropriate."
+    },
+    {
+     "text": " "
+    },
+    {
+     "text": "Opened the electronic record of a neighbour who was not on the assignment.",
+     "key": true,
+     "why": "Access without a work reason is a breach, even if the nurse did not tell anyone."
+    },
+    {
+     "text": " "
+    },
+    {
+     "text": "Logged out of the computer at the end of each task.",
+     "key": false,
+     "why": "Logging out protects information and is correct."
+    }
+   ],
+   "rationale": "A breach occurs when identifiable client information is accessed or shared without a care-related reason or without the client's consent. The manager must intervene according to policy.",
+   "needsReview": false
+  },
+  {
+   "id": "q-moc-confid-04",
+   "categoryId": "management-of-care",
+   "topicId": "management-of-care--confidentiality-information-security",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "management-of-care--confidentiality-information-security--p02"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "communication-documentation",
+   "type": "matrix",
+   "difficulty": 3,
+   "stem": "A nurse is asked to share a client's information. For each situation, select whether sharing is permitted.",
+   "cols": [
+    "Permitted",
+    "Not permitted"
+   ],
+   "rows": [
+    {
+     "text": "A provider on the client's care team asks for the client's recent laboratory results to plan treatment.",
+     "key": 0,
+     "why": "Sharing with the team for the purpose of care is allowed."
+    },
+    {
+     "text": "The client's employer phones to ask why the client is in hospital.",
+     "key": 1,
+     "why": "An employer has no right to this information without the client's consent."
+    },
+    {
+     "text": "The client has agreed that her sister may receive updates about her condition.",
+     "key": 0,
+     "why": "With the client's consent, sharing with the named person is allowed."
+    },
+    {
+     "text": "A nursing student who is not assigned to the unit asks to look at a well-known client's chart out of curiosity.",
+     "key": 1,
+     "why": "Curiosity is not a care-related reason."
+    },
+    {
+     "text": "A reporter phones to ask about the condition of a client.",
+     "key": 1,
+     "why": "Information is not given to the media without the client's consent and under facility policy."
+    }
+   ],
+   "rationale": "Information may be shared when it is needed for care or the client has given consent. Curiosity, employers and the media are not valid reasons.",
+   "needsReview": false
+  },
+  {
+   "id": "q-moc-continuity-01",
+   "categoryId": "management-of-care",
+   "topicId": "management-of-care--continuity-of-care",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "management-of-care--continuity-of-care--p04"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "communication-documentation",
+   "type": "mcq",
+   "difficulty": 2,
+   "stem": "A client is being transferred from the emergency department to a medical unit. Which action by the sending nurse best supports a safe transfer?",
+   "options": [
+    "Send the client to the unit with the chart and ask the porter to give the report to the unit clerk.",
+    "Wait to give report until the client is settled so that the receiving nurse can ask questions then.",
+    "Give the client's family a summary and ask them to tell the receiving nurse.",
+    "Give a verbal report to the receiving nurse in a structured format, and send the transfer form and the current medication list with the client."
+   ],
+   "optionRationales": [
+    "Incorrect. Report must go from nurse to nurse, so questions can be asked and the information is understood.",
+    "Incorrect. The receiving nurse needs key information before or when the client arrives, so care is not delayed.",
+    "Incorrect. Family members may leave out or misunderstand important details, and this is not a safe way to hand over care.",
+    "Correct. A structured, nurse-to-nurse report with written documents supports continuity of care."
+   ],
+   "key": 3,
+   "rationale": "A safe transfer includes a structured verbal report between nurses and written documents that go with the client.",
+   "needsReview": false
+  },
+  {
+   "id": "q-moc-continuity-02",
+   "categoryId": "management-of-care",
+   "topicId": "management-of-care--continuity-of-care",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "management-of-care--continuity-of-care--p03"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "communication-documentation",
+   "type": "dropdown",
+   "difficulty": 3,
+   "stem": "A nurse is writing medication administration record entries and must use approved terminology, avoiding error-prone abbreviations and dose formats.",
+   "template": "Insulin glargine 12 {1} subcutaneously at bedtime. Digoxin {2} by mouth daily.",
+   "blanks": [
+    {
+     "options": [
+      "units",
+      "U",
+      "IU"
+     ],
+     "key": 0,
+     "why": "\"Units\" is written out in full. \"U\" can be mistaken for 0 or 4, and \"IU\" can be mistaken for \"IV\", which has led to serious overdoses."
+    },
+    {
+     "options": [
+      "0.125 mg",
+      ".125 mg",
+      "0.1250 mg"
+     ],
+     "key": 0,
+     "why": "A leading zero is used before a decimal point, because \".125\" could be misread as 125. A trailing zero is not used, because it can make a dose look 10 times larger when the decimal point is missed."
+    }
+   ],
+   "rationale": "Approved terminology avoids abbreviations and dose formats that are known to cause errors, such as \"U\", \"IU\", missing leading zeros and trailing zeros.",
+   "needsReview": false
+  },
+  {
+   "id": "q-moc-continuity-03",
+   "categoryId": "management-of-care",
+   "topicId": "management-of-care--continuity-of-care",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "management-of-care--continuity-of-care--p01"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "communication-documentation",
+   "type": "dragdrop",
+   "difficulty": 1,
+   "stem": "A nurse telephones the provider about a client who has a new fever 2 days after surgery. Place the parts of an SBAR report in the correct order.",
+   "mode": "order",
+   "items": [
+    {
+     "text": "Background: reason for admission, the surgery and its date, relevant history, allergies and current medications.",
+     "why": "After the problem is stated, the provider needs the relevant context."
+    },
+    {
+     "text": "Assessment: current vital signs, assessment findings and what you think the problem may be.",
+     "why": "The nurse then shares the current findings and an interpretation of them."
+    },
+    {
+     "text": "Recommendation: what you need, such as an assessment, a test or an order, and by when.",
+     "why": "The report ends with a clear request."
+    },
+    {
+     "text": "Situation: identify yourself, the client and the problem right now (temperature 38.9 °C [102 °F] with new chills).",
+     "why": "Report begins with who you are and what the problem is right now."
+    }
+   ],
+   "key": [
+    3,
+    0,
+    1,
+    2
+   ],
+   "rationale": "SBAR stands for Situation, Background, Assessment, Recommendation. It gives a clear, predictable structure for handoff and urgent reports.",
+   "needsReview": false
+  },
+  {
+   "id": "q-moc-continuity-04",
+   "categoryId": "management-of-care",
+   "topicId": "management-of-care--continuity-of-care",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "management-of-care--continuity-of-care--p05"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "nursing-process",
+   "type": "sata",
+   "difficulty": 4,
+   "stem": "At the start of the day shift, the night nurse reports: \"The potassium result of 3.1 mmol/L [3.1 mEq/L] came back at 05:30. I paged the provider twice and have not had a callback. The client also asked to see the chaplain.\" Which actions should the day nurse take? Select all that apply.",
+   "options": [
+    "Contact the provider again about the potassium result and document the communication.",
+    "Use the chain of command if the provider still does not respond in a timely way.",
+    "Wait for the provider to call back because the night shift already paged.",
+    "Ask the client about the request and arrange a visit from the chaplain.",
+    "Document the follow-up actions and who was notified.",
+    "Assume the night nurse resolved the issues before leaving."
+   ],
+   "optionRationales": [
+    "Correct. The abnormal laboratory result is an unresolved issue and needs a response.",
+    "Correct. If a provider cannot be reached for an abnormal result, escalate according to policy.",
+    "Incorrect. Waiting leaves a low potassium level unaddressed. The new nurse takes over the responsibility to follow up.",
+    "Correct. A client request is also an unresolved issue to be followed up.",
+    "Correct. Documentation supports continuity and shows what was done.",
+    "Incorrect. The report states that the issues are not resolved."
+   ],
+   "key": [
+    0,
+    1,
+    3,
+    4
+   ],
+   "rationale": "Handoff often includes unresolved issues. The receiving nurse follows up on them, escalates when needed and documents.",
+   "needsReview": false
+  },
+  {
+   "id": "q-moc-priorities-01",
+   "categoryId": "management-of-care",
+   "topicId": "management-of-care--establishing-priorities",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "management-of-care--establishing-priorities--p02"
+   ],
+   "cjStep": "prioritize-hypotheses",
+   "integratedProcess": "clinical-judgment",
+   "type": "mcq",
+   "difficulty": 3,
+   "stem": "At the start of the shift, the nurse is assigned four clients. Which client should the nurse assess first?",
+   "options": [
+    "A 62-year-old client on day 2 after a bowel resection who reports incisional pain of 5/10. Blood pressure 128/76 mmHg, heart rate 82/min.",
+    "A 34-year-old client with asthma who has mild wheezing and an oxygen saturation of 96% on room air after a bronchodilator.",
+    "A 70-year-old client on day 2 after a hip replacement who has sudden shortness of breath and chest pain. Heart rate 118/min, oxygen saturation 86% on 2 L/min by nasal prongs.",
+    "A 55-year-old client with type 2 diabetes whose fasting glucose is 12.4 mmol/L [223 mg/dL] and who is waiting for breakfast and morning insulin."
+   ],
+   "optionRationales": [
+    "Incorrect. Moderate pain after surgery is expected, and the vital signs are stable.",
+    "Incorrect. The client has improved after treatment and is stable.",
+    "Correct. This client has new, severe breathing and cardiac signs after surgery and may have a pulmonary embolism, which is life-threatening.",
+    "Incorrect. The glucose is high but the client is stable. The nurse can treat it after more urgent needs."
+   ],
+   "key": 2,
+   "rationale": "Priorities are set by acuity: new, unstable and life-threatening problems (airway, breathing, circulation) come before expected or stable findings.",
+   "needsReview": false
+  },
+  {
+   "id": "q-moc-priorities-02",
+   "categoryId": "management-of-care",
+   "topicId": "management-of-care--establishing-priorities",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "management-of-care--establishing-priorities--p01"
+   ],
+   "cjStep": "analyze-cues",
+   "integratedProcess": "clinical-judgment",
+   "type": "bowtie",
+   "difficulty": 5,
+   "stem": "A 59-year-old client is 6 hours after a total abdominal hysterectomy. Review the client data, then complete the diagram by choosing the condition, 2 actions and 2 parameters.",
+   "exhibit": {
+    "title": "Client data",
+    "columns": [
+     "Finding",
+     "Value"
+    ],
+    "rows": [
+     [
+      "Blood pressure",
+      "84/50 mmHg"
+     ],
+     [
+      "Heart rate",
+      "128/min"
+     ],
+     [
+      "Respiratory rate",
+      "26/min"
+     ],
+     [
+      "Oxygen saturation",
+      "94% on room air"
+     ],
+     [
+      "Temperature",
+      "36.4 °C [97.5 °F]"
+     ],
+     [
+      "Skin",
+      "Cool, pale and clammy"
+     ],
+     [
+      "Urine output",
+      "10 mL in the last hour"
+     ],
+     [
+      "Abdominal dressing",
+      "Saturated with bright red blood"
+     ],
+     [
+      "Behaviour",
+      "Restless and anxious"
+     ]
+    ]
+   },
+   "condition": {
+    "prompt": "Condition most likely experienced by the client",
+    "options": [
+     "Hypovolemic shock from hemorrhage",
+     "Surgical site infection",
+     "Pulmonary embolism"
+    ],
+    "key": 0,
+    "optionRationales": [
+     "Correct. Low blood pressure, fast heart rate, cool clammy skin, low urine output and a blood-soaked dressing point to blood loss.",
+     "Incorrect. Infection causes fever and takes days to develop, not 6 hours after surgery with bright red bleeding.",
+     "Incorrect. A pulmonary embolism would cause sudden shortness of breath and chest pain. It does not explain the blood-soaked dressing."
+    ]
+   },
+   "actions": {
+    "prompt": "Actions the nurse should take (select 2)",
+    "options": [
+     "Notify the surgeon immediately using SBAR.",
+     "Make sure two large-bore IV lines are in place and prepare for fluid or blood product replacement.",
+     "Give the prescribed oral analgesic and reassess in 1 hour.",
+     "Help the client to walk to improve circulation.",
+     "Apply a warm compress to the abdomen."
+    ],
+    "keys": [
+     0,
+     1
+    ],
+    "optionRationales": [
+     "Correct. Hemorrhage needs urgent provider intervention.",
+     "Correct. Fluid or blood replacement needs reliable IV access.",
+     "Incorrect. Waiting an hour delays treatment of a life-threatening problem, and an oral drug is not appropriate for a client in shock.",
+     "Incorrect. Activity increases oxygen demand and bleeding risk, and could cause collapse.",
+     "Incorrect. A warm compress does not treat bleeding and could increase blood flow to the area."
+    ]
+   },
+   "parameters": {
+    "prompt": "Parameters the nurse should monitor (select 2)",
+    "options": [
+     "Blood pressure and heart rate",
+     "Urine output each hour",
+     "Bowel sounds",
+     "Range of motion of the legs",
+     "Appetite and meal intake"
+    ],
+    "keys": [
+     0,
+     1
+    ],
+    "optionRationales": [
+     "Correct. These show whether circulation is improving or getting worse.",
+     "Correct. Urine output reflects organ perfusion and the response to fluids.",
+     "Incorrect. Bowel sounds are not a priority in shock.",
+     "Incorrect. Leg movement is not the focus of this problem.",
+     "Incorrect. Appetite is not a priority while the client is in shock."
+    ]
+   },
+   "rationale": "Knowing the pathophysiology of blood loss (low volume leading to low blood pressure, fast heart rate and poor organ perfusion) helps the nurse decide what is urgent and what to monitor.",
+   "needsReview": false
+  },
+  {
+   "id": "q-moc-priorities-03",
+   "categoryId": "management-of-care",
+   "topicId": "management-of-care--establishing-priorities",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "management-of-care--establishing-priorities--p03"
+   ],
+   "cjStep": "recognize-cues",
+   "integratedProcess": "clinical-judgment",
+   "type": "trend",
+   "difficulty": 4,
+   "stem": "At 08:00 the nurse made a plan for four clients and ranked Mr. Silva, who is 1 day after a bowel resection, as the lowest priority. Review his data. For each measure, select the trend.",
+   "exhibit": {
+    "title": "Mr. Silva, post-operative day 1",
+    "columns": [
+     "Measure",
+     "08:00",
+     "10:00",
+     "12:00",
+     "14:00"
+    ],
+    "rows": [
+     [
+      "Blood pressure (mmHg)",
+      "126/78",
+      "118/72",
+      "106/66",
+      "94/58"
+     ],
+     [
+      "Heart rate (per minute)",
+      "78",
+      "86",
+      "98",
+      "110"
+     ],
+     [
+      "Urine output (mL per hour)",
+      "60",
+      "50",
+      "35",
+      "20"
+     ],
+     [
+      "Pain score (0 to 10)",
+      "3",
+      "3",
+      "3",
+      "3"
+     ]
+    ]
+   },
+   "cols": [
+    "Improving",
+    "No change",
+    "Worsening"
+   ],
+   "rows": [
+    {
+     "text": "Blood pressure",
+     "key": 2,
+     "why": "The pressure is falling steadily."
+    },
+    {
+     "text": "Heart rate",
+     "key": 2,
+     "why": "The heart rate is rising, which can be the body's response to low volume."
+    },
+    {
+     "text": "Urine output",
+     "key": 2,
+     "why": "Falling urine output shows reduced organ perfusion."
+    },
+    {
+     "text": "Pain score",
+     "key": 1,
+     "why": "The pain score has not changed, so it does not explain the other changes."
+    }
+   ],
+   "rationale": "The trends show that his condition is getting worse (possible bleeding or shock). The nurse revises the plan, assesses him right away, reports to the provider and moves him up the priority list.",
+   "needsReview": false
+  },
+  {
+   "id": "q-moc-priorities-04",
+   "categoryId": "management-of-care",
+   "topicId": "management-of-care--establishing-priorities",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "management-of-care--establishing-priorities--p02"
+   ],
+   "cjStep": "prioritize-hypotheses",
+   "integratedProcess": "clinical-judgment",
+   "type": "dragdrop",
+   "difficulty": 4,
+   "stem": "The nurse receives report on four clients. Place the clients in the order in which the nurse should assess them, from first to last.",
+   "mode": "order",
+   "items": [
+    {
+     "text": "A client with pneumonia who has a temperature of 38.4 °C [101.1 °F] and is due for acetaminophen.",
+     "why": "The client needs attention, but the problem is not immediately life-threatening."
+    },
+    {
+     "text": "A client 1 hour after a thyroidectomy who has new noisy breathing and neck swelling.",
+     "why": "Airway compromise from swelling or bleeding is life-threatening and comes first."
+    },
+    {
+     "text": "A client with diabetes whose glucose is 3.0 mmol/L [54 mg/dL] and who is sweaty and shaky, but alert and able to swallow.",
+     "why": "This client needs treatment right away, but is alert and can take oral carbohydrate, so the airway problem is more urgent."
+    },
+    {
+     "text": "A client on day 3 after surgery who asks for help to shower.",
+     "why": "This is a routine request and the lowest priority."
+    }
+   ],
+   "key": [
+    1,
+    2,
+    0,
+    3
+   ],
+   "rationale": "Airway, breathing and circulation problems come first, then other urgent or unstable problems, then routine needs.",
+   "needsReview": false
+  },
+  {
+   "id": "q-moc-ethics-01",
+   "categoryId": "management-of-care",
+   "topicId": "management-of-care--ethical-practice",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "management-of-care--ethical-practice--p02"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "culture-spirituality",
+   "type": "mcq",
+   "difficulty": 4,
+   "stem": "A client with terminal cancer asks the nurse, \"Am I dying? Please tell me the truth.\" The client's adult children ask the nurse not to tell their parent the prognosis. Which response by the nurse is most consistent with the nursing code of ethics?",
+   "options": [
+    "Follow the family's request so that the client is not upset.",
+    "Tell the client the prognosis directly, even though the provider has not discussed it.",
+    "Ask what the client wants to know, tell the provider so that honest information can be given, and offer to support the family during the discussion.",
+    "Refuse to care for the client until the family and the client agree."
+   ],
+   "optionRationales": [
+    "Incorrect. A client has the right to honest information about their own condition.",
+    "Incorrect. The provider is responsible for discussing the diagnosis and prognosis. The nurse should not bypass this.",
+    "Correct. This respects the client's autonomy and right to the truth, involves the provider and supports the family.",
+    "Incorrect. Refusing care is abandonment and does not solve the problem."
+   ],
+   "key": 2,
+   "rationale": "The code of ethics supports respect for the client's autonomy, honesty and support for families. The nurse makes sure the provider provides the information the client wants.",
+   "needsReview": false
+  },
+  {
+   "id": "q-moc-ethics-02",
+   "categoryId": "management-of-care",
+   "topicId": "management-of-care--ethical-practice",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "management-of-care--ethical-practice--p01"
+   ],
+   "cjStep": "recognize-cues",
+   "integratedProcess": "clinical-judgment",
+   "type": "sata",
+   "difficulty": 3,
+   "stem": "Which situations present an ethical dilemma for the nurse? Select all that apply.",
+   "options": [
+    "A competent client refuses life-saving treatment, and the family begs the nurse to convince the client to accept it.",
+    "A client asks for a glass of water and the nurse brings it.",
+    "Two critically ill clients both need the last available intensive care bed.",
+    "A nurse gives a scheduled vitamin dose 15 minutes early.",
+    "The family of a client who has lost capacity and has no directive disagrees about stopping a ventilator."
+   ],
+   "optionRationales": [
+    "Correct. Respecting autonomy conflicts with the wish to prevent harm.",
+    "Incorrect. This is a routine request with no conflict of values.",
+    "Correct. Fair distribution of a limited resource is an issue of justice.",
+    "Incorrect. This is routine practice within the allowed time window.",
+    "Correct. Competing values and unclear wishes create a dilemma that needs an ethics process."
+   ],
+   "key": [
+    0,
+    2,
+    4
+   ],
+   "rationale": "An ethical dilemma involves competing values or duties where no option fully satisfies them all.",
+   "needsReview": false
+  },
+  {
+   "id": "q-moc-ethics-03",
+   "categoryId": "management-of-care",
+   "topicId": "management-of-care--ethical-practice",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "management-of-care--ethical-practice--p03"
+   ],
+   "cjStep": "analyze-cues",
+   "integratedProcess": "caring",
+   "type": "dragdrop",
+   "difficulty": 3,
+   "stem": "For each situation, select the ethical principle that the nurse's action or the client's choice best reflects.",
+   "mode": "sort",
+   "bins": [
+    "Autonomy",
+    "Beneficence",
+    "Justice",
+    "Nonmaleficence"
+   ],
+   "items": [
+    {
+     "text": "A client declines a recommended surgery after the risks and benefits are explained.",
+     "key": 0,
+     "why": "Autonomy is the client's right to make their own decisions."
+    },
+    {
+     "text": "The nurse advocates for a better pain plan to relieve a client's suffering.",
+     "key": 1,
+     "why": "Beneficence means acting to do good for the client."
+    },
+    {
+     "text": "The nurse divides limited time among clients according to need, not according to social status.",
+     "key": 2,
+     "why": "Justice means fairness in the way care and resources are given."
+    },
+    {
+     "text": "The nurse holds a medication dose after noticing a dangerous drug interaction.",
+     "key": 3,
+     "why": "Nonmaleficence means avoiding harm."
+    },
+    {
+     "text": "The nurse respects a client's decision about who may visit the room.",
+     "key": 0,
+     "why": "This respects the client's right to decide."
+    },
+    {
+     "text": "The nurse makes sure a client who cannot pay for private services receives the same quality of care as other clients.",
+     "key": 2,
+     "why": "Equal access and quality of care reflect justice."
+    }
+   ],
+   "rationale": "The nurse's code of ethics is built on principles such as autonomy, beneficence, nonmaleficence and justice.",
+   "needsReview": false
+  },
+  {
+   "id": "q-moc-ethics-04",
+   "categoryId": "management-of-care",
+   "topicId": "management-of-care--ethical-practice",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "management-of-care--ethical-practice--p04"
+   ],
+   "cjStep": "evaluate-outcomes",
+   "integratedProcess": "caring",
+   "type": "dropdown",
+   "difficulty": 3,
+   "stem": "After an ethics consultation about moving a client with severe dementia to a long-term care home, a plan was agreed. Two weeks later, the nurse evaluates the outcome.",
+   "template": "The nurse should check whether {1} and, if concerns remain, {2}.",
+   "blanks": [
+    {
+     "options": [
+      "the plan respects the client's known values and the client's care needs are being met",
+      "only the family is satisfied with the plan",
+      "the ethics committee has met"
+     ],
+     "key": 0,
+     "why": "The outcome of an ethical intervention is judged by whether the client's values and needs are respected, not by family satisfaction alone or by the fact that a meeting happened."
+    },
+    {
+     "options": [
+      "bring the concerns back to the ethics committee or the manager for review",
+      "stop discussing the issue to avoid conflict",
+      "change the plan without consulting the team"
+     ],
+     "key": 0,
+     "why": "Unresolved concerns are escalated through the proper process. Avoiding the topic leaves the client at risk, and changing the plan alone bypasses the team."
+    }
+   ],
+   "rationale": "Evaluating ethical outcomes means checking that the client's values and needs are respected and escalating concerns that remain.",
+   "needsReview": false
+  },
+  {
+   "id": "q-moc-consent-01",
+   "categoryId": "management-of-care",
+   "topicId": "management-of-care--informed-consent",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "management-of-care--informed-consent--p01"
+   ],
+   "cjStep": "analyze-cues",
+   "integratedProcess": "communication-documentation",
+   "type": "mcq",
+   "difficulty": 4,
+   "stem": "A 78-year-old client with advanced dementia cannot understand the risks and benefits of a planned, non-emergency feeding tube insertion. The client has no written advance directive. Who is the most appropriate person to give consent?",
+   "options": [
+    "The client, after the nurse explains the procedure again.",
+    "The nurse who is caring for the client.",
+    "The substitute decision-maker identified under local law and facility policy.",
+    "The provider who will perform the procedure."
+   ],
+   "optionRationales": [
+    "Incorrect. The client lacks the capacity to understand, so consent from the client would not be informed.",
+    "Incorrect. Nurses do not consent on behalf of clients.",
+    "Correct. When a client cannot consent, the legally authorized substitute decision-maker gives consent for the client.",
+    "Incorrect. The provider explains the procedure and obtains consent, but cannot consent on the client's behalf."
+   ],
+   "key": 2,
+   "rationale": "When a client lacks capacity, the legally authorized substitute decision-maker (identified through law and facility policy) gives informed consent.",
+   "needsReview": true,
+   "reviewNote": "Who may act as substitute decision-maker and in what order is set by provincial or territorial law. Please check this against Canadian rules."
+  },
+  {
+   "id": "q-moc-consent-02",
+   "categoryId": "management-of-care",
+   "topicId": "management-of-care--informed-consent",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "management-of-care--informed-consent--p03"
+   ],
+   "cjStep": null,
+   "integratedProcess": "teaching-learning",
+   "type": "sata",
+   "difficulty": 2,
+   "stem": "Which elements must be present for informed consent to be valid? Select all that apply.",
+   "options": [
+    "The client has the capacity to understand the information.",
+    "The client is told the nature and purpose of the procedure.",
+    "The client is told the risks, benefits and alternatives, including no treatment.",
+    "The client's decision is voluntary and free from pressure.",
+    "The form is signed while the client is sedated.",
+    "The nurse gives a personal opinion on which option is best, in place of the provider's explanation."
+   ],
+   "optionRationales": [
+    "Correct. Without capacity, the client cannot give informed consent.",
+    "Correct. The client must know what will be done and why.",
+    "Correct. This information is needed to make a choice.",
+    "Correct. Consent given under pressure is not valid.",
+    "Incorrect. A sedated client cannot understand or decide.",
+    "Incorrect. The provider explains the options. The nurse's personal opinion is not part of informed consent."
+   ],
+   "key": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "rationale": "Valid informed consent requires capacity, adequate information on the procedure, risks, benefits and alternatives, and a voluntary decision.",
+   "needsReview": false
+  },
+  {
+   "id": "q-moc-consent-03",
+   "categoryId": "management-of-care",
+   "topicId": "management-of-care--informed-consent",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "management-of-care--informed-consent--p05"
+   ],
+   "cjStep": "recognize-cues",
+   "integratedProcess": "nursing-process",
+   "type": "matrix",
+   "difficulty": 4,
+   "stem": "A nurse checks a client's consent before a procedure. For each finding, select whether the consent is valid or not valid.",
+   "cols": [
+    "Consent is valid",
+    "Consent is not valid"
+   ],
+   "rows": [
+    {
+     "text": "The client is alert, says she understands the procedure and has signed and dated the form, which has been witnessed.",
+     "key": 0,
+     "why": "The client has capacity, understands and has signed. The consent is valid."
+    },
+    {
+     "text": "The client signed after receiving an IV opioid 20 minutes earlier and is now drowsy and confused.",
+     "key": 1,
+     "why": "A drowsy, confused client cannot give informed consent."
+    },
+    {
+     "text": "The client says, \"The doctor said I must sign or I won't be treated, so I will.\"",
+     "key": 1,
+     "why": "Consent must be voluntary. The client feels forced."
+    },
+    {
+     "text": "A client who speaks Bengali signed an English form after the surgeon explained the procedure through the client's 16-year-old grandson.",
+     "key": 1,
+     "why": "A qualified interpreter is needed. A young family member may not interpret accurately."
+    },
+    {
+     "text": "The client asks questions, the surgeon answers them, and the client then signs.",
+     "key": 0,
+     "why": "The client is informed and the decision is voluntary."
+    }
+   ],
+   "rationale": "The nurse verifies that the client received the information and consents freely, with capacity and with accurate language support.",
+   "needsReview": false
+  },
+  {
+   "id": "q-moc-consent-04",
+   "categoryId": "management-of-care",
+   "topicId": "management-of-care--informed-consent",
+   "secondaryTopicIds": [
+    "management-of-care--legal-rights-and-responsibilities"
+   ],
+   "learningPointIds": [
+    "management-of-care--informed-consent--p02"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "culture-spirituality",
+   "type": "dropdown",
+   "difficulty": 2,
+   "stem": "A client who speaks Bengali and limited English is scheduled for a colonoscopy. The consent form and the bowel preparation instructions are in English only.",
+   "template": "The nurse should ask for {1} and arrange for {2}.",
+   "blanks": [
+    {
+     "options": [
+      "the consent form and the bowel preparation instructions in Bengali, where available",
+      "a shorter version of the English form",
+      "the client's visitor to translate the instructions"
+     ],
+     "key": 0,
+     "why": "Written materials in the client's language, when available, help the client understand. A shorter English form does not solve the language barrier, and a visitor may translate inaccurately."
+    },
+    {
+     "options": [
+      "a qualified interpreter to be present when the procedure is explained",
+      "the client to sign first and ask questions later",
+      "the client to read the English form alone"
+     ],
+     "key": 0,
+     "why": "A qualified interpreter makes sure the explanation is accurate. Signing before understanding, or reading alone in English, does not give informed consent."
+    }
+   ],
+   "rationale": "Informed consent requires information the client can understand: written materials in the client's language when possible and a qualified interpreter for the explanation.",
+   "needsReview": false
+  },
+  {
+   "id": "q-moc-infotech-01",
+   "categoryId": "management-of-care",
+   "topicId": "management-of-care--information-technology",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "management-of-care--information-technology--p05"
+   ],
+   "cjStep": "generate-solutions",
+   "integratedProcess": "nursing-process",
+   "type": "mcq",
+   "difficulty": 2,
+   "stem": "A nurse wants to know the current best practice for preventing catheter-associated urinary tract infections on the unit. Which resource is the best source?",
+   "options": [
+    "A coworker's description of how she has always done it.",
+    "The facility's policy and a current clinical practice guideline based on research evidence.",
+    "A news article about hospital infections.",
+    "A post on an online forum for nurses."
+   ],
+   "optionRationales": [
+    "Incorrect. Habit is not evidence and may be out of date.",
+    "Correct. Policies and evidence-based guidelines give current, reliable direction.",
+    "Incorrect. News articles may be incomplete or inaccurate and are not clinical guidance.",
+    "Incorrect. Forum posts are personal opinions without review for accuracy."
+   ],
+   "key": 1,
+   "rationale": "Quality client care is supported by evidence-based research, current guidelines and facility policies and procedures.",
+   "needsReview": false
+  },
+  {
+   "id": "q-moc-infotech-02",
+   "categoryId": "management-of-care",
+   "topicId": "management-of-care--information-technology",
+   "secondaryTopicIds": [
+    "management-of-care--confidentiality-information-security"
+   ],
+   "learningPointIds": [
+    "management-of-care--information-technology--p02"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "communication-documentation",
+   "type": "sata",
+   "difficulty": 3,
+   "stem": "Which actions follow facility rules for accessing electronic health records? Select all that apply.",
+   "options": [
+    "Viewing the records only of clients the nurse is assigned to or has a work reason to review.",
+    "Locking the screen when stepping away from the computer.",
+    "Logging in with the nurse's own username and password.",
+    "Sharing a password with a student nurse who needs access for a short time.",
+    "Looking up the record of a friend admitted to another unit to see how the friend is doing.",
+    "Reporting suspected unauthorized access to the manager or the privacy officer."
+   ],
+   "optionRationales": [
+    "Correct. Access is limited to what is needed for care.",
+    "Correct. This prevents others from viewing client information.",
+    "Correct. Individual log-ins make every entry traceable to the person who made it.",
+    "Incorrect. Passwords are never shared. Students should use their own authorized access.",
+    "Incorrect. Access without a work reason is a breach, even if the nurse means well.",
+    "Correct. Suspected breaches must be reported."
+   ],
+   "key": [
+    0,
+    1,
+    2,
+    5
+   ],
+   "rationale": "Facility rules limit record access to care-related reasons, require individual log-ins and screen security, and require reporting suspected misuse.",
+   "needsReview": false
+  },
+  {
+   "id": "q-moc-infotech-03",
+   "categoryId": "management-of-care",
+   "topicId": "management-of-care--information-technology",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "management-of-care--information-technology--p04"
+   ],
+   "cjStep": "recognize-cues",
+   "integratedProcess": "communication-documentation",
+   "type": "highlight",
+   "difficulty": 3,
+   "stem": "A nurse reviews a colleague's electronic chart entries for a client after hip surgery. Highlight the entries that are not accurate, complete or specific enough.",
+   "segments": [
+    {
+     "text": "Entries: "
+    },
+    {
+     "text": "Pain was relieved.",
+     "key": true,
+     "why": "There is no pain score, intervention, time or reassessment, so the entry is too vague."
+    },
+    {
+     "text": " "
+    },
+    {
+     "text": "10:30 Client reports pain 7/10 in the right hip. Oxycodone 5 mg by mouth given at 10:35. At 11:05 pain 3/10, client resting.",
+     "key": false,
+     "why": "This entry is specific and complete: assessment, drug, dose, route, times and reassessment."
+    },
+    {
+     "text": " "
+    },
+    {
+     "text": "Dressing changed.",
+     "key": true,
+     "why": "The entry does not describe the wound, drainage or the client's tolerance."
+    },
+    {
+     "text": " "
+    },
+    {
+     "text": "09:20 Right hip incision 12 cm, edges together, no redness, swelling or drainage.",
+     "key": false,
+     "why": "This is a specific, objective description with a time."
+    },
+    {
+     "text": " "
+    },
+    {
+     "text": "Gave medication as ordered.",
+     "key": true,
+     "why": "The drug, dose, route and time are missing, so the entry cannot be checked."
+    },
+    {
+     "text": " "
+    },
+    {
+     "text": "14:00 BP 128/76 mmHg, HR 80/min, RR 16/min, SpO2 97% on room air, temperature 36.8 °C.",
+     "key": false,
+     "why": "The entry is complete, with the time, values and units."
+    }
+   ],
+   "rationale": "Documentation should be accurate, complete, timely and specific, using objective data, times and units rather than vague phrases.",
+   "needsReview": false
+  },
+  {
+   "id": "q-moc-infotech-04",
+   "categoryId": "management-of-care",
+   "topicId": "management-of-care--information-technology",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "management-of-care--information-technology--p01"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "communication-documentation",
+   "type": "dragdrop",
+   "difficulty": 2,
+   "stem": "A provider gives a nurse a telephone order for a client. Place the steps in the correct order.",
+   "mode": "order",
+   "items": [
+    {
+     "text": "Carry out the order.",
+     "why": "The order is carried out after it has been verified."
+    },
+    {
+     "text": "Verify the order against the client's identity, allergies, current medications and condition, and clarify any concern with the provider.",
+     "why": "The nurse checks that the order is correct and safe before acting on it."
+    },
+    {
+     "text": "Document the action and the client's response, and enter or co-sign the order as the policy requires.",
+     "why": "Documentation completes the process and communicates it to the team."
+    },
+    {
+     "text": "Write down the order exactly as given and read it back to the provider to confirm it.",
+     "why": "Writing it down and reading it back prevents errors in hearing and understanding."
+    }
+   ],
+   "key": [
+    3,
+    1,
+    0,
+    2
+   ],
+   "rationale": "Receiving, verifying and implementing an order follows a sequence that includes read-back, safety checks, action and documentation.",
+   "needsReview": false
+  },
+  {
+   "id": "q-moc-legal-01",
+   "categoryId": "management-of-care",
+   "topicId": "management-of-care--legal-rights-and-responsibilities",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "management-of-care--legal-rights-and-responsibilities--p03"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "nursing-process",
+   "type": "mcq",
+   "difficulty": 4,
+   "stem": "The charge nurse asks a newly licensed RN to give a chemotherapy drug. The nurse has not completed the facility's required chemotherapy education and competency check. What should the nurse do?",
+   "options": [
+    "Give the drug under the charge nurse's supervision because the charge nurse is responsible.",
+    "Decline to give the drug until the education and competency check are complete, explain why, and ask for another arrangement.",
+    "Give the drug after reading the label carefully.",
+    "Ask an unregulated care provider to give the drug."
+   ],
+   "optionRationales": [
+    "Incorrect. The nurse remains accountable for acts she performs. Without the required education and competency, the task is unsafe.",
+    "Correct. Recognizing one's own limitations and using resources protects the client and the nurse.",
+    "Incorrect. Careful reading does not replace the required education and competency.",
+    "Incorrect. A UCP cannot give chemotherapy. Passing the task on is unsafe."
+   ],
+   "key": 1,
+   "rationale": "Nurses must practise within their competence and legal scope. When asked to do something they are not prepared for, they decline the task, explain why and seek help.",
+   "needsReview": false
+  },
+  {
+   "id": "q-moc-legal-02",
+   "categoryId": "management-of-care",
+   "topicId": "management-of-care--legal-rights-and-responsibilities",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "management-of-care--legal-rights-and-responsibilities--p06"
+   ],
+   "cjStep": "recognize-cues",
+   "integratedProcess": "nursing-process",
+   "type": "sata",
+   "difficulty": 3,
+   "stem": "A community clinic nurse follows legal reporting requirements. Reporting rules are set by law and differ between provinces, territories and states, so the nurse follows local law and policy. Which situations typically require a report to the proper authority? Select all that apply.",
+   "options": [
+    "A 6-year-old child with unexplained bruises in different stages of healing and a changing story from the caregiver.",
+    "A client diagnosed with active tuberculosis.",
+    "A confirmed case of measles.",
+    "A client with a common cold.",
+    "A client with seasonal allergies.",
+    "A client with well-controlled hypertension."
+   ],
+   "optionRationales": [
+    "Correct. Suspected child abuse or neglect must be reported.",
+    "Correct. Tuberculosis is a reportable communicable disease.",
+    "Correct. Measles is a reportable communicable disease.",
+    "Incorrect. A common cold is not a reportable condition.",
+    "Incorrect. This is not a reportable condition.",
+    "Incorrect. Hypertension is not a reportable condition."
+   ],
+   "key": [
+    0,
+    1,
+    2
+   ],
+   "rationale": "Nurses must report conditions that the law requires, such as suspected child abuse or neglect and certain communicable diseases.",
+   "needsReview": false
+  },
+  {
+   "id": "q-moc-legal-03",
+   "categoryId": "management-of-care",
+   "topicId": "management-of-care--legal-rights-and-responsibilities",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "management-of-care--legal-rights-and-responsibilities--p07"
+   ],
+   "cjStep": null,
+   "integratedProcess": "nursing-process",
+   "type": "matrix",
+   "difficulty": 3,
+   "stem": "Using the usual scope of practice of a staff registered nurse, select whether each activity is within or outside the RN's scope.",
+   "cols": [
+    "Within RN scope",
+    "Outside RN scope"
+   ],
+   "rows": [
+    {
+     "text": "Assessing a client and identifying nursing problems.",
+     "key": 0,
+     "why": "Assessment and nursing diagnosis are core RN functions."
+    },
+    {
+     "text": "Making a medical diagnosis and ordering a treatment plan.",
+     "key": 1,
+     "why": "This is the role of the provider (or a nurse with additional authorization)."
+    },
+    {
+     "text": "Delegating a task to a UCP and supervising the work.",
+     "key": 0,
+     "why": "Delegation and supervision are within RN scope."
+    },
+    {
+     "text": "Teaching a client about the purpose and side effects of a medication.",
+     "key": 0,
+     "why": "Client teaching is within RN scope."
+    },
+    {
+     "text": "Signing a consent form on behalf of a competent client.",
+     "key": 1,
+     "why": "Only the client (or the legal substitute decision-maker) can give consent."
+    }
+   ],
+   "rationale": "Nurses must work within the legal scope of practice. Assessment, nursing care, teaching and delegation are within scope, but medical diagnosis and signing consent for a client are not.",
+   "needsReview": true,
+   "reviewNote": "RN scope of practice varies between provinces and territories (for example, ordering some tests or prescribing with additional authorization). Please check this item against the Canadian regulator."
+  },
+  {
+   "id": "q-moc-legal-04",
+   "categoryId": "management-of-care",
+   "topicId": "management-of-care--legal-rights-and-responsibilities",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "management-of-care--legal-rights-and-responsibilities--p02"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "communication-documentation",
+   "type": "dropdown",
+   "difficulty": 2,
+   "stem": "An unresponsive client arrives in the emergency department with a wallet, a gold ring and a cell phone.",
+   "template": "The nurse should {1} and {2}.",
+   "blanks": [
+    {
+     "options": [
+      "list the valuables with another staff member as a witness and document them",
+      "put the items in the client's pocket and tell no one",
+      "give the wallet to the first family member who asks"
+     ],
+     "key": 0,
+     "why": "A witnessed list and documentation protect the client and the staff. Items left unrecorded can go missing, and giving valuables to someone who asks is not safe or authorized."
+    },
+    {
+     "options": [
+      "secure them according to facility policy, for example in a locked safe, and document the transfer or give a receipt",
+      "leave them at the bedside where they are easy to find",
+      "take the ring home for safekeeping"
+     ],
+     "key": 0,
+     "why": "Following policy for secure storage protects the client's property. Leaving items at the bedside risks loss, and taking items home is theft."
+    }
+   ],
+   "rationale": "Client valuables are inventoried with a witness, documented and secured according to facility policy.",
+   "needsReview": false
+  },
+  {
+   "id": "q-moc-quality-01",
+   "categoryId": "management-of-care",
+   "topicId": "management-of-care--performance-improvement-quality-improvement",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "management-of-care--performance-improvement-quality-improvement--p01"
+   ],
+   "cjStep": null,
+   "integratedProcess": "nursing-process",
+   "type": "mcq",
+   "difficulty": 1,
+   "stem": "Which is an example of a performance (quality) improvement activity?",
+   "options": [
+    "Blaming the nurse involved in a client fall and giving a warning.",
+    "Giving a client's morning medications as ordered.",
+    "Completing a client's morning hygiene.",
+    "Reviewing the unit's fall data, finding a pattern and testing a new hourly rounding process."
+   ],
+   "optionRationales": [
+    "Incorrect. Quality improvement looks at processes and systems. Blaming one person does not fix the cause.",
+    "Incorrect. This is routine care, not an improvement activity.",
+    "Incorrect. This is routine care, not an improvement activity.",
+    "Correct. Collecting data, identifying a problem and testing a change are quality improvement activities."
+   ],
+   "key": 3,
+   "rationale": "Performance improvement uses data to find problems in care processes, tests changes and measures the results.",
+   "needsReview": false
+  },
+  {
+   "id": "q-moc-quality-02",
+   "categoryId": "management-of-care",
+   "topicId": "management-of-care--performance-improvement-quality-improvement",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "management-of-care--performance-improvement-quality-improvement--p03"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "communication-documentation",
+   "type": "sata",
+   "difficulty": 3,
+   "stem": "A nurse notices that near-miss medication errors have happened three times this month because two look-alike vials are stored side by side. Which actions are appropriate? Select all that apply.",
+   "options": [
+    "Report each event through the facility's event reporting system without blaming anyone.",
+    "Tell the manager or the patient safety lead about the pattern.",
+    "Suggest storing the vials apart and adding warning labels.",
+    "Rearrange the storage alone and tell nobody.",
+    "Say nothing because no client was harmed.",
+    "Post the name of the nurse who made the near miss on the unit board."
+   ],
+   "optionRationales": [
+    "Correct. Reports allow the organization to see patterns and fix the cause.",
+    "Correct. Repeated events should be brought to the people who can change the process.",
+    "Correct. Practical suggestions help prevent future errors.",
+    "Incorrect. Changes made without a process or communication may cause new problems.",
+    "Incorrect. Near misses are warnings, and reporting them prevents harm.",
+    "Incorrect. Quality improvement is not about blame, and this breaches confidentiality and a just culture."
+   ],
+   "key": [
+    0,
+    1,
+    2
+   ],
+   "rationale": "Nurses report care issues, including near misses, to the appropriate personnel so that the system can be improved.",
+   "needsReview": false
+  },
+  {
+   "id": "q-moc-quality-03",
+   "categoryId": "management-of-care",
+   "topicId": "management-of-care--performance-improvement-quality-improvement",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "management-of-care--performance-improvement-quality-improvement--p05"
+   ],
+   "cjStep": "evaluate-outcomes",
+   "integratedProcess": "nursing-process",
+   "type": "trend",
+   "difficulty": 3,
+   "stem": "A unit started hourly rounding on 1 March to reduce falls. The table shows the results. For each measure, select the trend.",
+   "exhibit": {
+    "title": "Unit measures, January to May (hourly rounding started in March)",
+    "columns": [
+     "Measure",
+     "Jan",
+     "Feb",
+     "Mar",
+     "Apr",
+     "May"
+    ],
+    "rows": [
+     [
+      "Falls per 1000 patient-days",
+      "5.8",
+      "5.7",
+      "4.6",
+      "3.4",
+      "2.7"
+     ],
+     [
+      "Average length of stay (days)",
+      "5.2",
+      "5.3",
+      "5.2",
+      "5.1",
+      "5.2"
+     ],
+     [
+      "Staff overtime (hours per week)",
+      "40",
+      "41",
+      "55",
+      "58",
+      "61"
+     ]
+    ]
+   },
+   "cols": [
+    "Improving",
+    "No change",
+    "Worsening"
+   ],
+   "rows": [
+    {
+     "text": "Falls",
+     "key": 0,
+     "why": "The fall rate has dropped each month since rounding started."
+    },
+    {
+     "text": "Length of stay",
+     "key": 1,
+     "why": "The values stay close to 5.2 days with only small changes."
+    },
+    {
+     "text": "Staff overtime",
+     "key": 2,
+     "why": "Overtime has risen each month since rounding started, which is a cost and a fatigue concern."
+    }
+   ],
+   "rationale": "Evaluating a performance improvement measure means checking its effect on client care and on resource use. Hourly rounding appears to reduce falls but may be increasing overtime.",
+   "needsReview": false
+  },
+  {
+   "id": "q-moc-quality-04",
+   "categoryId": "management-of-care",
+   "topicId": "management-of-care--performance-improvement-quality-improvement",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "management-of-care--performance-improvement-quality-improvement--p02"
+   ],
+   "cjStep": "generate-solutions",
+   "integratedProcess": "nursing-process",
+   "type": "dragdrop",
+   "difficulty": 2,
+   "stem": "A unit is using the Plan-Do-Study-Act (PDSA) cycle to improve hand hygiene. Place the steps of one cycle in the correct order.",
+   "mode": "order",
+   "items": [
+    {
+     "text": "Study: collect data and compare the results with the goal.",
+     "why": "The results are examined to see whether the change worked."
+    },
+    {
+     "text": "Act: adopt, adjust or abandon the change and decide the next steps.",
+     "why": "Decisions are made from what was learned."
+    },
+    {
+     "text": "Plan: identify the problem, set a goal and decide what change to test.",
+     "why": "Every cycle begins with a plan."
+    },
+    {
+     "text": "Do: carry out the change on a small scale.",
+     "why": "The change is tested on a small scale first."
+    }
+   ],
+   "key": [
+    2,
+    3,
+    0,
+    1
+   ],
+   "rationale": "The PDSA cycle is a common model for quality improvement: Plan, Do, Study, Act.",
+   "needsReview": false
+  },
+  {
+   "id": "q-moc-referrals-01",
+   "categoryId": "management-of-care",
+   "topicId": "management-of-care--referrals",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "management-of-care--referrals--p02"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "nursing-process",
+   "type": "mcq",
+   "difficulty": 2,
+   "stem": "A client's venous leg ulcer has not improved after 6 weeks of standard dressings. The nurse thinks a wound care specialist is needed. What is the nurse's best next step?",
+   "options": [
+    "Tell the client to arrange a private appointment with a wound clinic.",
+    "Discuss the findings with the provider and get an order for a referral to the wound care specialist, following facility policy.",
+    "Send the client to the clinic without an order.",
+    "Wait until the ulcer gets worse before asking for help."
+   ],
+   "optionRationales": [
+    "Incorrect. The nurse should arrange the referral through the care team so care is coordinated.",
+    "Correct. The nurse assesses the need for the referral and obtains the necessary order.",
+    "Incorrect. Many referrals require an order, and sending without one may not be accepted.",
+    "Incorrect. Waiting delays treatment and risks complications."
+   ],
+   "key": 1,
+   "rationale": "When a client needs more specialized help, the nurse assesses the need, discusses it with the provider and obtains the order needed for the referral.",
+   "needsReview": false
+  },
+  {
+   "id": "q-moc-referrals-02",
+   "categoryId": "management-of-care",
+   "topicId": "management-of-care--referrals",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "management-of-care--referrals--p04"
+   ],
+   "cjStep": "generate-solutions",
+   "integratedProcess": "communication-documentation",
+   "type": "sata",
+   "difficulty": 3,
+   "stem": "A nurse prepares a referral for home nursing visits after a client's discharge. Which items should be included? Select all that apply.",
+   "options": [
+    "A completed referral form that states the reason for the referral.",
+    "The current medication list and allergies.",
+    "The discharge summary with the client's care needs, such as wound care instructions.",
+    "The client's contact details and consent to share information.",
+    "The nurse's personal notes about an unrelated disagreement between family members.",
+    "Unrelated records from a pregnancy 30 years ago."
+   ],
+   "optionRationales": [
+    "Correct. The receiving service needs to know why the client is being referred.",
+    "Correct. This is needed for safe home care.",
+    "Correct. It tells the receiving service what care to provide.",
+    "Correct. The agency must be able to reach the client, and information is shared with consent.",
+    "Incorrect. Personal and unrelated information does not belong in a referral.",
+    "Incorrect. Only information relevant to the referral should be shared."
+   ],
+   "key": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "rationale": "A referral includes the documents the receiving service needs, and only what is relevant, with the client's consent.",
+   "needsReview": false
+  },
+  {
+   "id": "q-moc-referrals-03",
+   "categoryId": "management-of-care",
+   "topicId": "management-of-care--referrals",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "management-of-care--referrals--p03"
+   ],
+   "cjStep": "generate-solutions",
+   "integratedProcess": "caring",
+   "type": "dragdrop",
+   "difficulty": 2,
+   "stem": "For each situation, select the community resource that best meets the need.",
+   "mode": "sort",
+   "bins": [
+    "Respite care",
+    "Meal delivery program",
+    "Emergency shelter",
+    "Home-care nursing"
+   ],
+   "items": [
+    {
+     "text": "A daughter who gives full-time care to her father with dementia is exhausted and needs a break for a few days.",
+     "key": 0,
+     "why": "Respite care gives caregivers temporary relief."
+    },
+    {
+     "text": "An older client with mobility problems cannot shop or cook and is losing weight at home.",
+     "key": 1,
+     "why": "A meal delivery program supports nutrition for people who cannot prepare meals."
+    },
+    {
+     "text": "A client being discharged has no home and nowhere to stay tonight.",
+     "key": 2,
+     "why": "An emergency shelter provides a safe place to stay."
+    },
+    {
+     "text": "A client needs wound care and medication monitoring at home after discharge.",
+     "key": 3,
+     "why": "Home-care nurses provide skilled care in the home."
+    },
+    {
+     "text": "A family caregiver of a client with advanced Parkinson disease needs temporary care for the client so that the caregiver can attend a family wedding.",
+     "key": 0,
+     "why": "This is a short-term break for the caregiver."
+    },
+    {
+     "text": "A client with a new colostomy needs ostomy care teaching and visits at home.",
+     "key": 3,
+     "why": "Home-care nursing can provide skilled teaching and follow-up."
+    }
+   ],
+   "rationale": "Community resources are matched to the specific need of the client or the caregiver.",
+   "needsReview": false
+  },
+  {
+   "id": "q-moc-referrals-04",
+   "categoryId": "management-of-care",
+   "topicId": "management-of-care--referrals",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "management-of-care--referrals--p01"
+   ],
+   "cjStep": "analyze-cues",
+   "integratedProcess": "nursing-process",
+   "type": "matrix",
+   "difficulty": 3,
+   "stem": "For each client finding, select the referral that is most appropriate.",
+   "cols": [
+    "Physiotherapy",
+    "Speech-language therapy",
+    "Occupational therapy"
+   ],
+   "rows": [
+    {
+     "text": "After a stroke, the client coughs when swallowing and has slurred speech.",
+     "key": 1,
+     "why": "Swallowing and speech problems are assessed by a speech-language pathologist."
+    },
+    {
+     "text": "After a hip replacement, the client cannot walk without help and has weak thigh muscles.",
+     "key": 0,
+     "why": "Walking and muscle strengthening are physiotherapy goals."
+    },
+    {
+     "text": "A client with severe arthritis cannot button clothes or hold a fork.",
+     "key": 2,
+     "why": "Occupational therapy helps clients regain skills for daily activities."
+    },
+    {
+     "text": "A client with Parkinson disease has a shuffling gait and frequent falls.",
+     "key": 0,
+     "why": "Physiotherapy helps with gait and balance."
+    }
+   ],
+   "rationale": "The nurse assesses the client's needs and refers to the discipline that specializes in them.",
+   "needsReview": false
+  }
+ ]
+}

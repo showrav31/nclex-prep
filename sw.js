@@ -1,7 +1,7 @@
 /* Offline support. Caches the whole app on first visit, then serves it from the
    phone even with no internet. BUMP VERSION whenever any app file changes, or
    phones keep the old copy. Paths are relative: the site lives under /nclex-prep/. */
-const VERSION = "v4";
+const VERSION = "v5";
 const CACHE = "nclex-" + VERSION;
 const FILES = [
   "./",
@@ -10,6 +10,7 @@ const FILES = [
   "js/store.js",
   "js/app.js",
   "js/syllabus.js",
+  "js/qtypes.js",
   "js/flashcards.js",
   "js/notes.js",
   "js/mistakes.js",
@@ -18,6 +19,7 @@ const FILES = [
   "js/settings.js",
   "data/syllabus.json",
   "data/questions.json",
+  "data/questions/management-of-care.json",
   "data/plan.json",
   "data/canada.json",
   "data/reference.json",
