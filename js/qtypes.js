@@ -8,6 +8,8 @@
    - dropdown: 1 point per box.
    - dragdrop order: 1 point per item in the correct position.
    - bowtie: 1 point per correct choice (1 condition + the actions + the parameters); wrong choices score 0 but do not subtract.
+   - numeric (calculation): 1 point, all or nothing. The typed number is accepted if it equals the key, or if it is a more
+     precise number that rounds to the key under the question's stated rounding rule (q.rounding.decimals).
    A question counts as "correct" (stats, streaks, mistakes) only when every point is earned. */
 
 /* ---------- text helpers ---------- */
@@ -16,6 +18,20 @@ const fmt = s => esc(s).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>");
 /* Older questions and saved mistakes contain <b>/<i> tags: turn them into the plain format. */
 const legacyHtml = s => String(s == null ? "" : s).replace(/<b>(.*?)<\/b>/g, "**$1**").replace(/<\/?i>/g, "");
 const letter = i => String.fromCharCode(65 + i);
+
+/* ---------- numbers (calculation questions) ---------- */
+/* Typed text to a number, or null. Accepts "7", "7.0", "7,5" (decimal comma) and "1,200" (thousands comma). */
+function parseNum(s) {
+  let t = String(s == null ? "" : s).trim();
+  if (/^-?\d{1,3}(,\d{3})+(\.\d+)?$/.test(t)) t = t.replace(/,/g, "");
+  else t = t.replace(",", ".");
+  return /^-?(\d+\.?\d*|\.\d+)$/.test(t) ? Number(t) : null;
+}
+const roundTo = (x, decimals) => Number(Math.round(Number(x + "e" + decimals)) + "e-" + decimals); // half up; same as tests/calc.js
+const sameNum = (a, b, decimals) => a !== null && b !== null && Math.abs(roundTo(a, decimals) - roundTo(b, decimals)) < 1e-9;
+const numericOk = (q, typed) => sameNum(parseNum(typed), q.key, q.rounding.decimals);
+/* A typed wrong answer that matches a known slip (wrong conversion, forgot a step...). */
+const commonSlip = (q, typed) => (q.commonErrors || []).find(e => sameNum(parseNum(typed), e.value, q.rounding.decimals));
 
 /* Bring a question from either file format into one shape. Adds q.topic as an alias of q.topicId. */
 function normQ(raw) {
@@ -33,12 +49,13 @@ function normQ(raw) {
   return q;
 }
 
-const kindOf = q => q.type === "dragdrop" ? (q.mode === "sort" ? "sort" : "order") : q.type === "trend" ? "matrix" : q.type;
-const TYPE_NAME = { mcq: "Multiple choice", sata: "Select all that apply", matrix: "Matrix (Next Gen)", trend: "Trend (Next Gen)", dropdown: "Drop-down (Next Gen)", highlight: "Highlight (Next Gen)", order: "Ordering (Next Gen)", sort: "Drag & drop sort (Next Gen)", bowtie: "Bowtie (Next Gen)" };
+const kindOf = q => q.type === "numeric" ? "numeric" : q.type === "dragdrop" ? (q.mode === "sort" ? "sort" : "order") : q.type === "trend" ? "matrix" : q.type;
+const TYPE_NAME = { mcq: "Multiple choice", sata: "Select all that apply", matrix: "Matrix (Next Gen)", trend: "Trend (Next Gen)", dropdown: "Drop-down (Next Gen)", highlight: "Highlight (Next Gen)", order: "Ordering (Next Gen)", sort: "Drag & drop sort (Next Gen)", bowtie: "Bowtie (Next Gen)", numeric: "Calculation" };
 const TYPE_HINT = {
   mcq: "Choose 1 answer.", sata: "Choose all the answers that apply.", matrix: "Choose one answer in each row.",
   dropdown: "Choose an answer for each box. The sentence fills in as you go.", highlight: "Tap the statements that apply. Tap again to undo.",
-  order: "Tap the items in the order you think is correct.", sort: "Choose a group for each item.", bowtie: "Choose the condition, the actions and the parameters to monitor."
+  order: "Tap the items in the order you think is correct.", sort: "Choose a group for each item.", bowtie: "Choose the condition, the actions and the parameters to monitor.",
+  numeric: "Type the number only. The unit is shown next to the box. Round only the final answer, as the question says."
 };
 const typeName = q => q.type === "trend" ? TYPE_NAME.trend : TYPE_NAME[kindOf(q)];
 
@@ -57,6 +74,7 @@ function isReady(q, sel) {
     case "highlight": return sel.length > 0;
     case "order": return sel.length === q.items.length;
     case "bowtie": return sel.c.length === 1 && sel.a.length === q.actions.keys.length && sel.p.length === q.parameters.keys.length;
+    case "numeric": return parseNum(sel[0]) !== null;
   }
   return false;
 }
@@ -72,6 +90,7 @@ function scoreQ(q, sel) {
     case "dropdown": return { got: q.blanks.filter((b, i) => sel[i] === b.key).length, max: q.blanks.length };
     case "highlight": return { got: plusMinus(sel, hlKeys(q)), max: hlKeys(q).length };
     case "order": return { got: q.key.filter((item, pos) => sel[pos] === item).length, max: q.key.length };
+    case "numeric": return { got: numericOk(q, sel[0]) ? 1 : 0, max: 1 };
     case "bowtie": {
       const hit = (picked, keys) => picked.filter(x => keys.includes(x)).length;
       return { got: hit(sel.c, [q.condition.key]) + hit(sel.a, q.actions.keys) + hit(sel.p, q.parameters.keys), max: 1 + q.actions.keys.length + q.parameters.keys.length };
@@ -135,6 +154,7 @@ const BODY = {
     if (!z.sub && z.sel.length) h += `<button class="chip" onclick="qOrdReset()">↺ Start over</button>`;
     return h;
   },
+  numeric: (q, z) => `<div class="numrow"><input id="numIn" class="numin ${z.sub ? (z.last ? "right" : "wrong") : ""}" type="text" inputmode="decimal" autocomplete="off" aria-label="Your answer" value="${esc(z.sel[0] === undefined ? "" : z.sel[0])}" ${z.sub ? "disabled" : ""} oninput="qNum(this.value)" onkeydown="if(event.key==='Enter'){event.preventDefault();submitQ()}"><span class="unit">${esc(q.unit)}</span></div>`,
   bowtie: (q, z) => [["a", q.actions, q.actions.keys, "Actions"], ["c", q.condition, [q.condition.key], "Condition"], ["p", q.parameters, q.parameters.keys, "Parameters"]].map(([part, p, keys]) =>
     `<div class="bowpart"><h4 class="sub-h">${fmt(p.prompt)} · ${z.sel[part].length} of ${keys.length} chosen</h4>${p.options.map((o, oi) => {
       let cls = z.sel[part].includes(oi) ? "sel" : "";
@@ -153,18 +173,30 @@ function whyItems(q) {
     case "order": return q.key.map((ii, pos) => li(`${pos + 1}.`, q.items[ii].text, q.items[ii].why));
     case "dropdown": return q.blanks.map((b, bi) => li("✔", `Box ${bi + 1}: ${b.options[b.key]}`, b.why));
     case "highlight": return q.segments.filter(s => s.key !== undefined).map(s => li(s.key ? "✔ Highlight:" : "✘ Do not highlight:", s.text, s.why));
+    case "numeric": return [li("📐", "Formula: " + q.calc.formula, "")]
+      .concat(q.calc.steps.map(st => li("•", `${st.label}: ${st.show}`, "")))
+      .concat((q.commonErrors || []).map(e => li("✘", `${fmtVal(e.value, q)} ${q.unit}`, "This is what you get if " + e.why)));
     case "bowtie": return [["Condition", q.condition, [q.condition.key]], ["Actions", q.actions, q.actions.keys], ["Parameters", q.parameters, q.parameters.keys]]
       .flatMap(([name, p, keys]) => [`<h4 class="sub-h">${name}</h4>`].concat(p.options.map((o, i) => li(keys.includes(i) ? "✔" : "✘", o, p.optionRationales[i]))));
   }
   return [];
 }
 
+const fmtVal = (v, q) => String(roundTo(v, q.rounding.decimals));
+
+/* Notes for questions flagged needsReview. "regional": the NCLEX model may differ from provincial/Canadian practice
+   (the detail is in the rationale). Anything else (reviewKind "clinical"): real doubt about the clinical answer. */
+const reviewTop = q => !q.needsReview ? "" : q.reviewKind === "regional"
+  ? `<div class="qnote">ℹ️ NCLEX model: provincial rules may differ. The detail is in the rationale.</div>`
+  : `<div class="qreview">⚠️ Waiting for a clinical check. Treat this answer with care.</div>`;
+const reviewEnd = q => q.needsReview && q.reviewKind !== "regional" ? `<p class="note">⚠️ This question is waiting for a clinical check.</p>` : "";
+
 function reviewHtml(q, z) {
-  const banner = z.last ? "✔ Correct" : `✘ Not quite${z.pts.got > 0 ? ` · partial credit ${z.pts.got}/${z.pts.max}` : ""}`;
-  const items = whyItems(q);
-  return `<div class="rat"><b class="${z.last ? "ok" : "no"}">${banner}</b><br>${fmt(q.rationale)}</div>` +
-    (items.length ? `<details class="whyall" ${z.last ? "" : "open"}><summary>Why each choice is right or wrong</summary>${items.join("")}</details>` : "") +
-    (q.needsReview ? `<p class="note">⚠️ This question is waiting for a clinical check.</p>` : "");
+  const banner = z.last ? "✔ Correct" : `✘ Not quite${z.pts.got > 0 && z.pts.max > 1 ? ` · partial credit ${z.pts.got}/${z.pts.max}` : ""}`;
+  const items = whyItems(q), isNum = q.type === "numeric", slip = isNum && !z.last ? commonSlip(q, z.sel[0]) : null;
+  return `<div class="rat"><b class="${z.last ? "ok" : "no"}">${banner}</b>${isNum ? `<br>Answer: <b>${fmtVal(q.key, q)} ${esc(q.unit)}</b>${slip ? `<br><i>Your answer is what you get if ${fmt(slip.why)}</i>` : ""}` : ""}<br>${fmt(q.rationale)}</div>` +
+    (items.length ? `<details class="whyall" ${z.last && !isNum ? "" : "open"}><summary>${isNum ? "Working and common slips" : "Why each choice is right or wrong"}</summary>${items.join("")}</details>` : "") +
+    reviewEnd(q);
 }
 
 function drawQ() {
@@ -173,12 +205,12 @@ function drawQ() {
   const q = z.list[z.i], k = kindOf(q);
   if (z.selFor !== z.i) { z.sel = initSel(q); z.selFor = z.i; }
   let h = `<div class="qmeta"><span>Question ${z.i + 1} of ${z.list.length} · Score ${z.score}</span><span><span class="qtype">${typeName(q)}</span> · ${esc(CAT[catOf(q)].short)} · ${esc(TOPIC[q.topic].name)}</span></div>`;
-  if (q.needsReview) h += `<div class="qreview">⚠️ Waiting for a clinical check. Treat this answer with care.</div>`;
+  h += reviewTop(q);
   h += `<div class="bar" style="margin:0 0 12px"><i style="width:${z.i / z.list.length * 100}%"></i></div><div class="stem">${fmt(q.stem)}</div>`;
   if (q.exhibit) h += exhibitHtml(q.exhibit);
   h += `<p class="qhint">${TYPE_HINT[k]}</p>${BODY[k](q, z)}`;
   if (z.sub) h += reviewHtml(q, z) + `<div class="row"><button class="btn" onclick="nextQ()">${z.i + 1 < z.list.length ? "Next question →" : "See results"}</button></div>`;
-  else h += `<div class="row"><button class="btn" ${isReady(q, z.sel) ? "" : "disabled"} onclick="submitQ()">Submit</button></div>`;
+  else h += `<div class="row"><button class="btn" id="qSubmit" ${isReady(q, z.sel) ? "" : "disabled"} onclick="submitQ()">Submit</button></div>`;
   $("quiz").innerHTML = h;
 }
 
@@ -191,6 +223,8 @@ function qHl(si) { const z = live(); if (!z) return; z.sel = z.sel.includes(si) 
 function qOrd(ii) { const z = live(); if (!z || z.sel.includes(ii)) return; z.sel = [...z.sel, ii]; drawQ(); }
 function qOrdRemove(pos) { const z = live(); if (!z) return; z.sel = z.sel.filter((_, p) => p !== pos); drawQ(); }
 function qOrdReset() { const z = live(); if (!z) return; z.sel = []; drawQ(); }
+/* Typing a number: keep the input as it is (no redraw, so the keyboard stays open) and just switch Submit on or off. */
+function qNum(v) { const z = live(); if (!z) return; z.sel = [v]; const b = $("qSubmit"); if (b) b.disabled = !isReady(z.list[z.i], z.sel); }
 function qBow(part, oi) {
   const z = live(); if (!z) return;
   const q = z.list[z.i], max = part === "c" ? 1 : (part === "a" ? q.actions.keys.length : q.parameters.keys.length), cur = z.sel[part];

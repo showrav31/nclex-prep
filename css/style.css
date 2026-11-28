@@ -188,6 +188,11 @@ svg text{font-family:Inter,sans-serif}
 .bowpart{margin-bottom:6px}
 .whyall{margin-top:10px;font-size:.9rem}
 .whyall summary{cursor:pointer;color:var(--teal);font-weight:600}
+.qnote{font-size:.82rem;background:var(--soft);color:var(--teal);border:1px solid var(--okline);border-radius:10px;padding:6px 10px;margin-bottom:10px}
+.numrow{display:flex;align-items:center;gap:10px;margin:8px 0 4px}
+.numin{width:9rem;font-size:1.3rem;text-align:right;font-variant-numeric:tabular-nums}
+.numin.right{border-color:var(--teal);background:var(--right)}.numin.wrong{border-color:var(--rose);background:var(--rsoft)}
+.unit{font-weight:600}
 .why1{padding:8px 0;border-top:1px dashed var(--line)}
 .why1 div{color:var(--muted);margin-top:2px}
 
