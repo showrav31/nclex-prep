@@ -41,8 +41,27 @@ const LAB_RANGES = {
   sodium: [135, 145, "mmol/L"], potassium: [3.5, 5.0, "mmol/L"], chloride: [98, 107, "mmol/L"], bicarbonate: [22, 26, "mmol/L"],
   calcium: [2.15, 2.60, "mmol/L"], magnesium: [0.70, 1.00, "mmol/L"], lactate: [0.5, 2.0, "mmol/L"],
   glucose: [3.9, 5.6, "mmol/L"], urea: [2.5, 7.1, "mmol/L"], creatinine: [45, 110, "µmol/L"],
-  platelets: [150, 400, "× 10⁹/L"], wbc: [4.0, 11.0, "× 10⁹/L"], hemoglobin: [120, 175, "g/L"]
+  platelets: [150, 400, "× 10⁹/L"], wbc: [4.0, 11.0, "× 10⁹/L"], hemoglobin: [120, 175, "g/L"],
+  alt: [7, 55, "U/L"], ast: [10, 40, "U/L"], inr: [0.8, 1.2, ""], hba1c: [4.0, 6.0, "%"], bilirubin: [5, 21, "µmol/L"], albumin: [35, 50, "g/L"],
+  troponin: [0, 14, "ng/L"] // high-sensitivity troponin T: the 99th percentile limit depends on the assay, so a question must state the limit it uses
 };
+/* ---------- adult vital signs at rest (ranges differ a little between facilities; values near a limit are rejected as ambiguous) ---------- */
+const VITAL_RANGES = {
+  hr: [60, 100, "/min"], rr: [12, 20, "/min"], sbp: [90, 139, "mmHg"], dbp: [60, 89, "mmHg"], temp: [36.0, 37.5, "°C"], spo2: [94, 100, "%"]
+};
+function vitalFlag(name, value) {
+  const r = VITAL_RANGES[name];
+  if (!r) return { invalid: `unknown vital sign "${name}"` };
+  const [lo, hi] = r, width = hi - lo;
+  if (Math.min(Math.abs(value - lo), Math.abs(value - hi)) < 0.03 * width) return { invalid: `${name} ${value} is too close to its limit (${lo} to ${hi}) to be an unambiguous example` };
+  return { flag: value < lo ? "low" : value > hi ? "high" : "normal", unit: r[2] };
+}
+/* ---------- Glasgow Coma Scale: eye 1-4, verbal 1-5, motor 1-6; total 3-15; 13-15 mild, 9-12 moderate, 3-8 severe ---------- */
+function gcs(e, v, m) {
+  if (!(Number.isInteger(e) && e >= 1 && e <= 4 && Number.isInteger(v) && v >= 1 && v <= 5 && Number.isInteger(m) && m >= 1 && m <= 6)) return { invalid: "GCS parts must be eye 1-4, verbal 1-5, motor 1-6" };
+  const total = e + v + m;
+  return { total, severity: total >= 13 ? "mild" : total >= 9 ? "moderate" : "severe" };
+}
 function labFlag(name, value) {
   const r = LAB_RANGES[name];
   if (!r) return { invalid: `unknown lab "${name}"` };
@@ -62,4 +81,4 @@ const RHYTHM_ACTION = {
   "sinus-brady:symptomatic": /atropine|pacing/i, "afib:stable": /rate control/i
 };
 
-module.exports = { abgInterpret, LAB_RANGES, labFlag, RHYTHM_NAME, RHYTHM_ACTION };
+module.exports = { abgInterpret, LAB_RANGES, labFlag, VITAL_RANGES, vitalFlag, gcs, RHYTHM_NAME, RHYTHM_ACTION };

@@ -35,7 +35,7 @@ const T = {
   medAdmin: "pharmacological-parenteral--medication-administration", dose: "pharmacological-parenteral--dosage-calculations",
   dev: "health-promotion--developmental-stages-and-transitions", fluid: "physiological-adaptation--fluid-and-electrolyte-imbalances"
 };
-const BANK_FILES = ["management-of-care", "pharmacological-parenteral", "physiological-adaptation", "safety-infection-control"]; // question banks in data/questions/
+const BANK_FILES = ["management-of-care", "pharmacological-parenteral", "physiological-adaptation", "safety-infection-control", "reduction-risk-potential"]; // question banks in data/questions/
 const BANK = BANK_FILES.flatMap(c => JSON.parse(fs.readFileSync(path.join(root, "data/questions/" + c + ".json"), "utf8")).questions);
 // The first topic that has no questions in any bank yet (used to test the "no questions" messages; it changes as banks are added).
 const HAS_Q = new Set([...JSON.parse(fs.readFileSync(path.join(root, "data/questions.json"), "utf8")).questions.map(q => q.topic), ...BANK.map(q => q.topicId)]);
@@ -617,10 +617,7 @@ const V5 = {
       await p.evaluate(id => { runQuiz([Q.find(x => x.id === id)], {}); }, q.id);
       await p.waitForSelector("#quiz .stem");
       check((await p.$$("#quiz svg.ecg")).length === want && await p.evaluate(() => document.documentElement.scrollWidth <= 360), `${q.id}: ${want} ECG strip(s) are drawn without sideways scroll`);
-      const rows = q.rows || q.items;
-      if (rows && rows.some(r => r.ecg)) {
-        for (let ri = 0; ri < rows.length; ri++) await p.click(`#quiz input[name=m${ri}] >> nth=${rows[ri].key}`);
-      } else if (q.type === "dropdown") for (let bi = 0; bi < q.blanks.length; bi++) await p.click(`#quiz .bowpart >> nth=${bi} >> .opt >> nth=${q.blanks[bi].key}`);
+      await tapRight(p, q);
       await p.click('#quiz button:has-text("Submit")');
       check((await p.textContent("#quiz .rat b")).includes("Correct"), `${q.id}: choosing the right answers for the strips shows Correct`);
     }

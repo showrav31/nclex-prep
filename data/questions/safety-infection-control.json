@@ -3,7 +3,7 @@
  "quotas": {
   "safety-infection-control--accident-error-injury-prevention": 8,
   "safety-infection-control--emergency-response-plan": 4,
-  "safety-infection-control--ergonomic-principles": 0,
+  "safety-infection-control--ergonomic-principles": 3,
   "safety-infection-control--handling-hazardous-and-infectious-materials": 3,
   "safety-infection-control--home-safety": 3,
   "safety-infection-control--reporting-of-incident-event-irregular-occurrence-variance": 3,
@@ -1647,6 +1647,139 @@
     4
    ],
    "rationale": "A restrained client is at risk of injury, pressure, impaired circulation, aspiration and loss of dignity. The nurse uses the correct knot and fastening, checks the skin and circulation, meets the client's needs on a schedule set by policy, watches the client closely and documents the reason and the checks.",
+   "needsReview": false
+  },
+  {
+   "id": "q-safe-ergo-01",
+   "categoryId": "safety-infection-control",
+   "topicId": "safety-infection-control--ergonomic-principles",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "safety-infection-control--ergonomic-principles--p03"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "nursing-process",
+   "type": "sata",
+   "difficulty": 1,
+   "stem": "A nurse is moving a client up in bed. Which actions show safe body mechanics and safe patient handling? Select all that apply.",
+   "options": [
+    "Raise the bed to about the height of the nurse's elbows before starting.",
+    "Stand with the feet apart, one foot a little ahead of the other, and the knees slightly bent.",
+    "Keep the client's weight close to the body.",
+    "Turn by moving the feet, and not by twisting at the waist.",
+    "Use a friction-reducing slide sheet and enough staff, and ask the client to help if able.",
+    "Bend forward from the waist with the legs straight to reach the client.",
+    "Lift the client manually without help when the mechanical lift is being used elsewhere, because it is quicker.",
+    "Pull the client up the bed with a sudden jerk."
+   ],
+   "optionRationales": [
+    "Correct. A bed at the right height keeps the back straight. Working with the bed too low makes the nurse bend over and strains the back.",
+    "Correct. A wide base of support gives balance, and the large leg muscles do the work instead of the back.",
+    "Correct. A load held close to the body puts much less strain on the back than one that is held at arm's length.",
+    "Correct. Twisting while the back is loaded is a common cause of back injuries.",
+    "Correct. Equipment and a team reduce the force on every person and also protect the client's skin from friction and shear.",
+    "Incorrect. Bending at the waist puts the load on the lower back. The nurse bends the knees and hips instead and keeps the back straight.",
+    "Incorrect. Many facilities have a no-lift policy for exactly this reason. The nurse waits for the equipment or gets more help, and does not lift the client's weight alone.",
+    "Incorrect. Sudden movements cause strains and can injure the client's skin. The move is planned, and done on a count with the team."
+   ],
+   "key": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "rationale": "Safe patient handling protects the nurse and the client. The nurse adjusts the bed to the right height, keeps a wide base and a straight back, holds the load close, avoids twisting, uses equipment and gets help. Manual lifting of a client's weight is avoided, in line with the facility's no-lift policy.",
+   "needsReview": false
+  },
+  {
+   "id": "q-safe-ergo-02",
+   "categoryId": "safety-infection-control",
+   "topicId": "safety-infection-control--ergonomic-principles",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "safety-infection-control--ergonomic-principles--p01",
+    "safety-infection-control--ergonomic-principles--p03"
+   ],
+   "cjStep": "analyze-cues",
+   "integratedProcess": "nursing-process",
+   "type": "matrix",
+   "difficulty": 2,
+   "stem": "A nurse is planning how to move four clients. For each client, select the safest way to do the move, following a safe patient handling (no-lift) policy.",
+   "cols": [
+    "Gait belt and stand-by help",
+    "Mechanical lift",
+    "Slide sheet"
+   ],
+   "rows": [
+    {
+     "text": "An alert client who walks with a walker and needs a little help to stand up from a chair.",
+     "key": 0,
+     "why": "The client can bear weight and follow instructions, so a gait belt gives the nurse a safe hold to guide and steady the client. The nurse does not lift."
+    },
+    {
+     "text": "A client who cannot bear weight or help with the move and weighs 120 kg [265 lb].",
+     "key": 1,
+     "why": "A client who cannot help and who is heavy must be moved with a mechanical lift (a ceiling or floor lift) and enough staff. Manual lifting would risk injury to the client and the staff."
+    },
+    {
+     "text": "A client in bed who has slid toward the foot of the bed and cannot push with the legs.",
+     "key": 2,
+     "why": "A slide sheet (a friction-reducing device) lets two or more staff move the client up the bed with much less force and less friction on the skin."
+    },
+    {
+     "text": "A client with a fractured hip who is not allowed to put any weight on the leg and has to move from the bed to a chair.",
+     "key": 1,
+     "why": "The client cannot stand on the leg, so the transfer would put the client and the nurse at risk. A mechanical lift is the safe choice."
+    }
+   ],
+   "rationale": "A no-lift policy means that staff use devices and teamwork instead of lifting the client's weight. Before each move the nurse checks the client's ability to bear weight and to follow instructions, the client's size, and the equipment and number of staff that are needed. A gait belt is used for guiding a client who can stand and walk, and is not used to lift.",
+   "needsReview": false
+  },
+  {
+   "id": "q-safe-ergo-03",
+   "categoryId": "safety-infection-control",
+   "topicId": "safety-infection-control--ergonomic-principles",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "safety-infection-control--ergonomic-principles--p02"
+   ],
+   "cjStep": "generate-solutions",
+   "integratedProcess": "teaching-learning",
+   "type": "dropdown",
+   "difficulty": 1,
+   "stem": "A client who works at a computer for most of the day has pain and tingling in both wrists, which are signs of repetitive strain. The nurse teaches body positions that reduce the stress on the wrists.",
+   "template": "The client should keep the wrists {1} while typing, sit with the elbows bent at about {2}, and take a short break to stretch {3}.",
+   "blanks": [
+    {
+     "options": [
+      "straight (in a neutral position)",
+      "bent upward",
+      "bent downward"
+     ],
+     "key": 0,
+     "why": "A neutral wrist keeps the nerve and the tendons in the wrist from being squeezed. A wrist that is bent up or down for long periods increases the pressure in the wrist."
+    },
+    {
+     "options": [
+      "90 degrees",
+      "45 degrees",
+      "180 degrees (arms fully straight)"
+     ],
+     "key": 0,
+     "why": "Elbows at about 90 degrees with the forearms level with the keyboard reduces the strain on the shoulders, the arms and the wrists."
+    },
+    {
+     "options": [
+      "every 30 to 60 minutes",
+      "only at lunchtime",
+      "only when the pain becomes severe"
+     ],
+     "key": 0,
+     "why": "Short, regular breaks stop the same muscles and tendons from being used without rest. Waiting for severe pain allows the injury to get worse."
+    }
+   ],
+   "rationale": "Repetitive strain injuries come from the same movement being repeated or the same position being held. Teaching includes neutral wrists, a good work height, supported forearms and regular short breaks. The client reports pain that does not go away, or numbness that gets worse, to the provider.",
    "needsReview": false
   }
  ]

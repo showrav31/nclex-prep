@@ -1,0 +1,2236 @@
+{
+ "categoryId": "reduction-risk-potential",
+ "quotas": {
+  "reduction-risk-potential--changes-abnormalities-in-vital-signs": 4,
+  "reduction-risk-potential--diagnostic-tests": 4,
+  "reduction-risk-potential--laboratory-values": 6,
+  "reduction-risk-potential--potential-for-alterations-in-body-systems": 4,
+  "reduction-risk-potential--potential-for-complications-of-diagnostic-tests-treatments-procedures": 6,
+  "reduction-risk-potential--potential-for-complications-from-surgical-procedures-and-health-alterations": 4,
+  "reduction-risk-potential--system-specific-assessments": 6,
+  "reduction-risk-potential--therapeutic-procedures": 6
+ },
+ "questions": [
+  {
+   "id": "q-rrp-vital-01",
+   "categoryId": "reduction-risk-potential",
+   "topicId": "reduction-risk-potential--changes-abnormalities-in-vital-signs",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "reduction-risk-potential--changes-abnormalities-in-vital-signs--p01"
+   ],
+   "cjStep": "analyze-cues",
+   "integratedProcess": "clinical-judgment",
+   "type": "trend",
+   "difficulty": 3,
+   "stem": "A client is recovering after abdominal surgery. The nurse reviews the vital signs from the first 4 hours back on the unit. For each measure, select the trend.",
+   "exhibit": {
+    "title": "Vital signs after surgery",
+    "columns": [
+     "Measure",
+     "Hour 1",
+     "Hour 2",
+     "Hour 3",
+     "Hour 4"
+    ],
+    "rows": [
+     [
+      "Heart rate (per minute)",
+      "76",
+      "88",
+      "102",
+      "116"
+     ],
+     [
+      "Systolic blood pressure (mmHg)",
+      "128",
+      "116",
+      "102",
+      "84"
+     ],
+     [
+      "Respiratory rate (per minute)",
+      "16",
+      "18",
+      "22",
+      "26"
+     ],
+     [
+      "Temperature, °C [°F]",
+      "37.1 [98.8]",
+      "37.2 [99.0]",
+      "37.1 [98.8]",
+      "37.2 [99.0]"
+     ],
+     [
+      "Oxygen saturation (%)",
+      "98",
+      "97",
+      "95",
+      "93"
+     ]
+    ]
+   },
+   "checks": [
+    {
+     "kind": "vital",
+     "name": "hr",
+     "value": 116,
+     "flag": "high"
+    },
+    {
+     "kind": "vital",
+     "name": "sbp",
+     "value": 84,
+     "flag": "low"
+    },
+    {
+     "kind": "vital",
+     "name": "rr",
+     "value": 26,
+     "flag": "high"
+    },
+    {
+     "kind": "vital",
+     "name": "spo2",
+     "value": 93,
+     "flag": "low"
+    },
+    {
+     "kind": "vital",
+     "name": "temp",
+     "value": 37.2,
+     "flag": "normal"
+    }
+   ],
+   "cols": [
+    "Improving",
+    "No change",
+    "Worsening"
+   ],
+   "rows": [
+    {
+     "text": "Heart rate",
+     "key": 2,
+     "why": "A heart rate that climbs from 76 to 116 is worsening. The heart beats faster to make up for a lower blood volume or a lower blood pressure."
+    },
+    {
+     "text": "Systolic blood pressure",
+     "key": 2,
+     "why": "A pressure that falls from 128 to 84 mmHg is worsening and is now low. It is a later sign than the heart rate and means that the body can no longer make up for the loss."
+    },
+    {
+     "text": "Respiratory rate",
+     "key": 2,
+     "why": "A rate that rises from 16 to 26 is worsening. Fast breathing is an early sign of shock and of low oxygen."
+    },
+    {
+     "text": "Temperature",
+     "key": 1,
+     "why": "The temperature stays within the normal range, so there is no change. A normal temperature does not rule out bleeding or shock."
+    },
+    {
+     "text": "Oxygen saturation",
+     "key": 2,
+     "why": "A saturation that slowly falls from 98% to 93% is worsening. Low blood flow and fast breathing both reduce the oxygen that reaches the tissues."
+    }
+   ],
+   "rationale": "A rising heart rate and respiratory rate with a falling blood pressure and falling oxygen saturation, in the hours after surgery, suggest bleeding or another cause of shock until proven otherwise. The nurse looks at the trend and not only at one set of numbers, checks the dressing, the drains and the abdomen, and reports to the provider right away (or calls the rapid response team, as the policy says).",
+   "needsReview": false
+  },
+  {
+   "id": "q-rrp-vital-02",
+   "categoryId": "reduction-risk-potential",
+   "topicId": "reduction-risk-potential--changes-abnormalities-in-vital-signs",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "reduction-risk-potential--changes-abnormalities-in-vital-signs--p02"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "nursing-process",
+   "type": "sata",
+   "difficulty": 2,
+   "stem": "The nurse is measuring a blood pressure on the upper arm of a seated adult client. Which actions will give an accurate reading? Select all that apply.",
+   "options": [
+    "Let the client sit quietly for about 5 minutes with the back supported and the feet flat on the floor.",
+    "Support the arm so that the middle of the cuff is at the level of the heart.",
+    "Choose a cuff whose bladder fits the size of the client's upper arm.",
+    "Place the cuff on the bare skin and not over clothing.",
+    "Ask the client not to talk during the measurement.",
+    "Use a small cuff on a large arm so that it fits snugly.",
+    "Take the blood pressure on the arm that has a dialysis fistula.",
+    "Let the client's arm hang by the side during the measurement."
+   ],
+   "optionRationales": [
+    "Correct. Activity, a full bladder, crossed legs and an unsupported back can all raise the reading.",
+    "Correct. An arm that hangs below the heart gives a falsely high reading, and an arm held above the heart gives a falsely low reading.",
+    "Correct. The cuff must fit. A cuff that is too small gives a falsely high reading, and one that is too large gives a falsely low reading.",
+    "Correct. Clothing between the cuff and the arm can change the reading, and a pushed-up sleeve that squeezes the arm can raise it.",
+    "Correct. Talking can raise the blood pressure.",
+    "Incorrect. A cuff that is too small for the arm gives a falsely high reading.",
+    "Incorrect. A cuff on a fistula arm can damage the access. The other arm is used.",
+    "Incorrect. An arm below heart level gives a falsely high reading."
+   ],
+   "key": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "rationale": "A blood pressure that is measured wrongly leads to wrong decisions. The client rests first, sits with the back supported and the feet flat, the arm is supported at heart level, the cuff fits and is on bare skin, and there is no talking. An arm with a dialysis access, a mastectomy with lymph node removal, or an IV infusion is avoided.",
+   "needsReview": false
+  },
+  {
+   "id": "q-rrp-vital-03",
+   "categoryId": "reduction-risk-potential",
+   "topicId": "reduction-risk-potential--changes-abnormalities-in-vital-signs",
+   "secondaryTopicIds": [
+    "physiological-adaptation--alterations-in-body-systems"
+   ],
+   "learningPointIds": [
+    "reduction-risk-potential--changes-abnormalities-in-vital-signs--p03"
+   ],
+   "cjStep": "recognize-cues",
+   "integratedProcess": "clinical-judgment",
+   "type": "dropdown",
+   "difficulty": 3,
+   "stem": "A client with a head injury has a rising intracranial pressure. The nurse checks the vital signs every 15 minutes.",
+   "template": "As the intracranial pressure rises, the nurse expects the systolic blood pressure to {1}, the heart rate to {2}, and the breathing to become {3}.",
+   "blanks": [
+    {
+     "options": [
+      "rise, with a widening pulse pressure",
+      "fall, with a narrowing pulse pressure",
+      "stay the same"
+     ],
+     "key": 0,
+     "why": "The body raises the blood pressure to keep blood flowing into the brain against the higher pressure. The systolic pressure rises more than the diastolic, so the pulse pressure widens."
+    },
+    {
+     "options": [
+      "slow down (bradycardia)",
+      "speed up (tachycardia)",
+      "become very irregular and rapid"
+     ],
+     "key": 0,
+     "why": "The high pressure in the vessels triggers a reflex that slows the heart. A heart rate that falls while the blood pressure rises is a late and dangerous sign."
+    },
+    {
+     "options": [
+      "irregular",
+      "fast and regular",
+      "deep and regular"
+     ],
+     "key": 0,
+     "why": "Pressure on the brain stem upsets the breathing centres, so the breathing becomes irregular and slow. Together these three signs are called Cushing's triad."
+    }
+   ],
+   "rationale": "Cushing's triad (a rising systolic pressure with a wide pulse pressure, a slow heart rate and irregular breathing) is a late sign of raised intracranial pressure and an emergency. The nurse reports it at once and keeps the head of the bed raised and the head and neck in line, as ordered.",
+   "needsReview": false
+  },
+  {
+   "id": "q-rrp-vital-04",
+   "categoryId": "reduction-risk-potential",
+   "topicId": "reduction-risk-potential--changes-abnormalities-in-vital-signs",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "reduction-risk-potential--changes-abnormalities-in-vital-signs--p01",
+    "reduction-risk-potential--changes-abnormalities-in-vital-signs--p03"
+   ],
+   "cjStep": "recognize-cues",
+   "integratedProcess": "clinical-judgment",
+   "type": "highlight",
+   "difficulty": 3,
+   "stem": "A 68-year-old client was admitted with pneumonia and is receiving oxygen at 2 L/min by nasal prongs. Review the vital signs and the nurse's note at 14:00. Select the findings that need to be reported to the provider promptly.",
+   "exhibit": {
+    "title": "Vital signs",
+    "columns": [
+     "Measure",
+     "08:00",
+     "11:00",
+     "14:00"
+    ],
+    "rows": [
+     [
+      "Heart rate (per minute)",
+      "88",
+      "96",
+      "108"
+     ],
+     [
+      "Respiratory rate (per minute)",
+      "20",
+      "24",
+      "28"
+     ],
+     [
+      "Oxygen saturation (%)",
+      "95",
+      "93",
+      "90"
+     ],
+     [
+      "Blood pressure (mmHg)",
+      "132/78",
+      "128/74",
+      "118/70"
+     ],
+     [
+      "Temperature, °C [°F]",
+      "38.1 [100.6]",
+      "38.4 [101.1]",
+      "38.6 [101.5]"
+     ]
+    ]
+   },
+   "checks": [
+    {
+     "kind": "vital",
+     "name": "rr",
+     "value": 28,
+     "flag": "high"
+    },
+    {
+     "kind": "vital",
+     "name": "spo2",
+     "value": 90,
+     "flag": "low"
+    }
+   ],
+   "segments": [
+    {
+     "text": "Nurse's note at 14:00: "
+    },
+    {
+     "text": "The respiratory rate has risen from 20 to 28 per minute.",
+     "key": true,
+     "why": "This needs to be reported. A rising respiratory rate is a sign that the client is working harder to breathe and is getting worse."
+    },
+    {
+     "text": " "
+    },
+    {
+     "text": "The oxygen saturation has fallen from 95% to 90% on the same oxygen flow.",
+     "key": true,
+     "why": "This needs to be reported. The client is getting less oxygen into the blood even with the same oxygen therapy."
+    },
+    {
+     "text": " "
+    },
+    {
+     "text": "The client is coughing up thick yellow sputum.",
+     "key": false,
+     "why": "This is expected with a bacterial pneumonia. The nurse documents the amount and the colour, and it does not need an urgent report on its own."
+    },
+    {
+     "text": " "
+    },
+    {
+     "text": "The client is now drowsy and restless, and was alert this morning.",
+     "key": true,
+     "why": "This needs to be reported. A new change in mental status may mean that the brain is not getting enough oxygen, or that the infection is spreading."
+    },
+    {
+     "text": " "
+    },
+    {
+     "text": "The blood pressure is 118/70 mmHg, a little lower than this morning.",
+     "key": false,
+     "why": "This is still in the normal range. It should be watched with the other changes but does not need an urgent report on its own."
+    },
+    {
+     "text": " "
+    },
+    {
+     "text": "The client says that the chest hurts a little when taking a deep breath.",
+     "key": false,
+     "why": "Mild pleuritic pain is common with pneumonia. The nurse gives the pain relief that is ordered and reassesses it."
+    }
+   ],
+   "rationale": "A trend of a faster breathing rate, a falling oxygen saturation and a new change in mental status shows a client who is getting worse, and the provider is told straight away (using SBAR) or the rapid response team is called. The expected findings of pneumonia, such as a productive cough and mild pleuritic pain, are managed and documented.",
+   "needsReview": false
+  },
+  {
+   "id": "q-rrp-diag-01",
+   "categoryId": "reduction-risk-potential",
+   "topicId": "reduction-risk-potential--diagnostic-tests",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "reduction-risk-potential--diagnostic-tests--p01"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "nursing-process",
+   "type": "matrix",
+   "difficulty": 2,
+   "stem": "A nurse is caring for four clients after diagnostic tests. For each test, select the priority aftercare action.",
+   "cols": [
+    "Lie on the right side for several hours",
+    "Hold food and fluids until the gag reflex returns",
+    "Drink extra fluids to flush out the contrast",
+    "Report severe abdominal pain, a hard swollen abdomen or rectal bleeding"
+   ],
+   "rows": [
+    {
+     "text": "After a percutaneous liver biopsy",
+     "key": 0,
+     "why": "Lying on the right side puts pressure on the puncture site and lowers the risk of bleeding. The nurse also checks the vital signs and the dressing for bleeding as ordered."
+    },
+    {
+     "text": "After an upper endoscopy (EGD) with the throat sprayed with a local anesthetic",
+     "key": 1,
+     "why": "The throat is numb, so the client cannot protect the airway. Nothing is given by mouth until the gag reflex has returned, to prevent aspiration."
+    },
+    {
+     "text": "After a CT scan with IV iodinated contrast (the kidneys are healthy)",
+     "key": 2,
+     "why": "Fluids help the kidneys to clear the contrast. A client with kidney disease needs special orders."
+    },
+    {
+     "text": "After a colonoscopy with removal of a polyp",
+     "key": 3,
+     "why": "Severe pain, a rigid distended abdomen or heavy rectal bleeding may mean a perforation or bleeding from the polyp site, which are emergencies."
+    }
+   ],
+   "rationale": "Each test has its own risks, so the nurse knows the risk and the aftercare for each. A liver biopsy carries a risk of bleeding, an endoscopy under topical anesthetic a risk of aspiration, contrast a risk to the kidneys, and a colonoscopy with polypectomy a risk of perforation or bleeding.",
+   "needsReview": false
+  },
+  {
+   "id": "q-rrp-diag-02",
+   "categoryId": "reduction-risk-potential",
+   "topicId": "reduction-risk-potential--diagnostic-tests",
+   "secondaryTopicIds": [
+    "reduction-risk-potential--potential-for-complications-of-diagnostic-tests-treatments-procedures"
+   ],
+   "learningPointIds": [
+    "reduction-risk-potential--diagnostic-tests--p02"
+   ],
+   "cjStep": "analyze-cues",
+   "integratedProcess": "clinical-judgment",
+   "type": "trend",
+   "difficulty": 4,
+   "stem": "A 66-year-old client had a coronary angiogram with IV contrast. The nurse compares the results after the test with the results from before the test. For each measure, select the action that is needed.",
+   "exhibit": {
+    "title": "Results before and after the test",
+    "columns": [
+     "Measure",
+     "Before the test",
+     "After 24 hours",
+     "After 48 hours"
+    ],
+    "rows": [
+     [
+      "Creatinine, µmol/L [mg/dL]",
+      "80 [0.9]",
+      "98 [1.1]",
+      "142 [1.6]"
+     ],
+     [
+      "Urine output (mL/hour)",
+      "55",
+      "40",
+      "22"
+     ],
+     [
+      "Potassium (mmol/L)",
+      "4.1",
+      "4.6",
+      "5.3"
+     ],
+     [
+      "Hemoglobin (g/L)",
+      "132",
+      "130",
+      "131"
+     ]
+    ]
+   },
+   "checks": [
+    {
+     "kind": "lab",
+     "name": "creatinine",
+     "value": 142,
+     "flag": "high"
+    },
+    {
+     "kind": "lab",
+     "name": "potassium",
+     "value": 5.3,
+     "flag": "high"
+    },
+    {
+     "kind": "lab",
+     "name": "hemoglobin",
+     "value": 131,
+     "flag": "normal"
+    }
+   ],
+   "cols": [
+    "No action needed",
+    "Report to the provider"
+   ],
+   "rows": [
+    {
+     "text": "Creatinine",
+     "key": 1,
+     "why": "The creatinine has risen from 80 to 142 µmol/L, which is much more than the usual rise of 26 µmol/L [0.3 mg/dL] that is used to define acute kidney injury. This may be contrast-associated kidney injury and needs to be reported."
+    },
+    {
+     "text": "Urine output",
+     "key": 1,
+     "why": "A urine output that falls from 55 to 22 mL/hour is low for an adult. Together with the creatinine, it points to a kidney that is not working well."
+    },
+    {
+     "text": "Potassium",
+     "key": 1,
+     "why": "The potassium has risen to 5.3 mmol/L, which is above the normal range. The kidneys excrete potassium, so a high level can follow kidney injury and can cause heart rhythm problems."
+    },
+    {
+     "text": "Hemoglobin",
+     "key": 0,
+     "why": "The hemoglobin is steady and within the normal range, so there are no signs of bleeding from the access site."
+    }
+   ],
+   "rationale": "Comparing results with the pretest values shows changes that a single result could hide. After contrast, a rising creatinine, a falling urine output and a rising potassium mean that the kidneys may be injured, and the provider is told so that fluids can be given and nephrotoxic drugs can be reviewed.",
+   "needsReview": false
+  },
+  {
+   "id": "q-rrp-diag-03",
+   "categoryId": "reduction-risk-potential",
+   "topicId": "reduction-risk-potential--diagnostic-tests",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "reduction-risk-potential--diagnostic-tests--p03"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "nursing-process",
+   "type": "dragdrop",
+   "difficulty": 2,
+   "stem": "A nurse is asked to record a 12-lead electrocardiogram (ECG) for a client who has chest discomfort. Place the steps in the correct order.",
+   "mode": "order",
+   "items": [
+    {
+     "text": "Place the limb electrodes and the six chest electrodes in the correct places.",
+     "why": "The electrodes are placed after the skin is ready. Chest electrodes in the wrong places can change the tracing and lead to a wrong diagnosis."
+    },
+    {
+     "text": "Label the tracing with the client's name, the date and the time, and report any acute changes or ongoing pain to the provider at once.",
+     "why": "The tracing must be matched to the right client and the right time. A client with chest pain needs the result read without delay."
+    },
+    {
+     "text": "Identify the client with two identifiers, explain the test and ask the client to lie still.",
+     "why": "The right client is tested, and a client who knows what to expect is more relaxed, so that the tracing is clearer."
+    },
+    {
+     "text": "Position the client lying down, expose the chest and limbs, and prepare the skin (clip hair if needed and wipe the skin dry).",
+     "why": "The skin must be dry and clean so that the electrodes stick and the tracing has no interference."
+    },
+    {
+     "text": "Ask the client to breathe normally and not to talk or move, and record the tracing.",
+     "why": "Movement and talking cause artifact, which can hide or look like a real abnormality."
+    }
+   ],
+   "key": [
+    2,
+    3,
+    0,
+    4,
+    1
+   ],
+   "rationale": "A good ECG tracing depends on correct identification, a calm client, clean skin, correct electrode placement and a still client. A tracing that shows an acute change, or a client who has ongoing chest pain, is shown to the provider immediately and is not left in a pile.",
+   "needsReview": false
+  },
+  {
+   "id": "q-rrp-diag-04",
+   "categoryId": "reduction-risk-potential",
+   "topicId": "reduction-risk-potential--diagnostic-tests",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "reduction-risk-potential--diagnostic-tests--p04",
+    "reduction-risk-potential--diagnostic-tests--p05"
+   ],
+   "cjStep": "analyze-cues",
+   "integratedProcess": "clinical-judgment",
+   "type": "mcq",
+   "difficulty": 2,
+   "stem": "A woman at 36 weeks of gestation has a nonstress test. In 20 minutes the tracing shows a baseline fetal heart rate of 140 beats/min with normal variability, two accelerations that rise 15 beats/min above the baseline and last 15 seconds, and no decelerations. How should the nurse interpret the test?",
+   "options": [
+    "The test is reactive (normal), which is reassuring, and the result is reported to the provider.",
+    "The test is nonreactive, and the client needs an immediate cesarean birth.",
+    "The test is nonreactive, because fewer than three accelerations were seen.",
+    "The test is inconclusive, and the nurse should continue it for 2 more hours."
+   ],
+   "optionRationales": [
+    "Correct. A reactive test has a normal baseline and at least two accelerations of 15 beats/min lasting 15 seconds in 20 minutes. It shows that the fetus has an intact nervous system and is well oxygenated.",
+    "Incorrect. A nonreactive result would need more testing and not an immediate birth, and this tracing is not nonreactive.",
+    "Incorrect. Two accelerations are enough. Three is not the rule.",
+    "Incorrect. The criteria for a reactive test have been met. A tracing that does not meet the criteria is usually continued for a further 20 minutes, and is not continued for hours."
+   ],
+   "key": 0,
+   "rationale": "A nonstress test looks at the fetal heart rate for accelerations with fetal movement. At 32 weeks or more it is reactive when there are at least two accelerations of 15 beats/min lasting at least 15 seconds in 20 minutes. Note on regional practice: Canadian (SOGC) guidelines call a tracing like this normal and use the terms atypical and abnormal in place of nonreactive. The nurse reports the result to the provider using the terms used by the facility.",
+   "needsReview": true,
+   "reviewKind": "regional",
+   "reviewNote": "Canadian (SOGC) guidelines classify a nonstress test as normal, atypical or abnormal. The NCLEX uses reactive and nonreactive. Check the terms used where she will work."
+  },
+  {
+   "id": "q-rrp-lab-01",
+   "categoryId": "reduction-risk-potential",
+   "topicId": "reduction-risk-potential--laboratory-values",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "reduction-risk-potential--laboratory-values--p01"
+   ],
+   "cjStep": "recognize-cues",
+   "integratedProcess": "clinical-judgment",
+   "type": "matrix",
+   "difficulty": 2,
+   "stem": "Use these adult reference ranges: hemoglobin 120 to 160 g/L (female), ALT 7 to 55 U/L, creatinine 45 to 110 µmol/L, INR 0.8 to 1.2 (for a client who does not take warfarin), potassium 3.5 to 5.0 mmol/L, and for this laboratory the 99th percentile limit of high-sensitivity troponin T is 14 ng/L. For each result, select whether it is low, normal or high.",
+   "checks": [
+    {
+     "kind": "lab",
+     "name": "hemoglobin",
+     "value": 88,
+     "flag": "low",
+     "ref": "rows.0"
+    },
+    {
+     "kind": "lab",
+     "name": "alt",
+     "value": 220,
+     "flag": "high",
+     "ref": "rows.1"
+    },
+    {
+     "kind": "lab",
+     "name": "creatinine",
+     "value": 210,
+     "flag": "high",
+     "ref": "rows.2"
+    },
+    {
+     "kind": "lab",
+     "name": "inr",
+     "value": 1,
+     "flag": "normal",
+     "ref": "rows.3"
+    },
+    {
+     "kind": "lab",
+     "name": "potassium",
+     "value": 2.9,
+     "flag": "low",
+     "ref": "rows.4"
+    },
+    {
+     "kind": "lab",
+     "name": "troponin",
+     "value": 62,
+     "flag": "high",
+     "ref": "rows.5"
+    }
+   ],
+   "cols": [
+    "Low",
+    "Normal",
+    "High"
+   ],
+   "rows": [
+    {
+     "text": "Hemoglobin 88 g/L [8.8 g/dL] in a woman",
+     "key": 0,
+     "why": "The value is below the normal range, which means anemia. The nurse looks for bleeding, checks the symptoms (fatigue, shortness of breath, a fast pulse) and reports it."
+    },
+    {
+     "text": "ALT 220 U/L",
+     "key": 2,
+     "why": "ALT is an enzyme that is released from injured liver cells. A value many times above normal suggests liver injury."
+    },
+    {
+     "text": "Creatinine 210 µmol/L [2.4 mg/dL]",
+     "key": 2,
+     "why": "A raised creatinine means that the kidneys are not clearing waste well. The nurse looks at the urine output and at the drugs that the kidneys clear."
+    },
+    {
+     "text": "INR 1.0 in a client who does not take warfarin",
+     "key": 1,
+     "why": "The value is within the normal range, so the blood clots normally on this test."
+    },
+    {
+     "text": "Potassium 2.9 mmol/L [2.9 mEq/L]",
+     "key": 0,
+     "why": "The value is below 3.5 mmol/L (hypokalemia). It can cause muscle weakness, cramps and abnormal heart rhythms."
+    },
+    {
+     "text": "High-sensitivity troponin T 62 ng/L",
+     "key": 2,
+     "why": "The value is above the limit of 14 ng/L. A raised troponin means that heart muscle cells have been injured, as in a myocardial infarction, and needs urgent action with the ECG and the symptoms."
+    }
+   ],
+   "rationale": "Comparing a result with the reference range is the first step in using it. Reference ranges differ a little between laboratories, and some (such as troponin) depend on the method, so the nurse uses the ranges printed on the report. A result that is outside the range is looked at together with the client's symptoms and trends.",
+   "needsReview": false
+  },
+  {
+   "id": "q-rrp-lab-02",
+   "categoryId": "reduction-risk-potential",
+   "topicId": "reduction-risk-potential--laboratory-values",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "reduction-risk-potential--laboratory-values--p02"
+   ],
+   "cjStep": "generate-solutions",
+   "integratedProcess": "teaching-learning",
+   "type": "dropdown",
+   "difficulty": 2,
+   "stem": "A nurse is teaching a 52-year-old client who has risk factors for diabetes about two blood tests that were ordered: a fasting plasma glucose and an HbA1c.",
+   "template": "The fasting plasma glucose test requires {1}, and the HbA1c test {2}.",
+   "blanks": [
+    {
+     "options": [
+      "no food or drink except water for at least 8 hours before the blood is drawn",
+      "no food or drink for 24 hours before the blood is drawn",
+      "a high-carbohydrate meal 2 hours before the blood is drawn"
+     ],
+     "key": 0,
+     "why": "Eating raises the glucose, so a fasting test needs at least 8 hours without food or any drink other than water. Fasting for 24 hours is unnecessary and is not safe for some clients."
+    },
+    {
+     "options": [
+      "does not need fasting and shows the average glucose over the last 2 to 3 months",
+      "needs fasting and shows the glucose of the last hour",
+      "needs a 24-hour urine collection and shows the glucose of the day"
+     ],
+     "key": 0,
+     "why": "HbA1c is the share of hemoglobin that has glucose attached, and it reflects the average glucose over the life of the red cells, about 2 to 3 months. It can be drawn at any time of day."
+    }
+   ],
+   "rationale": "Clients do better with tests when they know what to expect. A fasting plasma glucose of 7.0 mmol/L [126 mg/dL] or higher, or an HbA1c of 6.5% [48 mmol/mol] or higher, is in the diabetes range and is confirmed by the provider.",
+   "needsReview": false
+  },
+  {
+   "id": "q-rrp-lab-03",
+   "categoryId": "reduction-risk-potential",
+   "topicId": "reduction-risk-potential--laboratory-values",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "reduction-risk-potential--laboratory-values--p03"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "nursing-process",
+   "type": "dragdrop",
+   "difficulty": 3,
+   "stem": "A nurse is drawing blood from a client by venipuncture for blood cultures, an INR (light-blue tube), electrolytes (red or gold serum tube), a heparin tube (green) and a complete blood count (lavender EDTA tube). Place the order of draw in the correct order.",
+   "mode": "order",
+   "items": [
+    {
+     "text": "Red or gold tube (serum), for the electrolytes",
+     "why": "A serum tube is filled before the tubes that contain anticoagulants, so that it is not contaminated by them."
+    },
+    {
+     "text": "Lavender tube (EDTA), for the complete blood count",
+     "why": "EDTA contains potassium and binds calcium. If it is carried over into other tubes, it can falsely raise the potassium and lower the calcium, so it comes late."
+    },
+    {
+     "text": "Light-blue tube (sodium citrate), for the INR",
+     "why": "The citrate tube follows the cultures. It must be filled to the line, because the ratio of blood to citrate is critical."
+    },
+    {
+     "text": "Green tube (heparin)",
+     "why": "The heparin tube comes before the EDTA tube."
+    },
+    {
+     "text": "Blood culture bottles",
+     "why": "These are collected first, with the skin cleaned, so that the sample is as sterile as possible and is not contaminated by the other tubes."
+    }
+   ],
+   "key": [
+    4,
+    2,
+    0,
+    3,
+    1
+   ],
+   "rationale": "The order of draw stops additives from one tube from contaminating the next. The common order is blood culture, citrate, serum, heparin, EDTA and then the glucose (grey) tube. The tube colours and the order can differ a little between manufacturers and facilities, so the nurse follows the facility's laboratory guide.",
+   "needsReview": false
+  },
+  {
+   "id": "q-rrp-lab-04",
+   "categoryId": "reduction-risk-potential",
+   "topicId": "reduction-risk-potential--laboratory-values",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "reduction-risk-potential--laboratory-values--p04"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "teaching-learning",
+   "type": "sata",
+   "difficulty": 2,
+   "stem": "A client with a suspected lung infection must give a sputum specimen for culture. Which instructions and actions are correct? Select all that apply.",
+   "options": [
+    "Collect the sample in the early morning, before the client eats, and before antibiotics are started if possible.",
+    "Have the client rinse the mouth with plain water first.",
+    "Ask the client to take a few deep breaths and cough deeply from the chest.",
+    "Use a sterile container, close the lid right away, label it and take it promptly to the laboratory.",
+    "Wear gloves, and a mask or other protection as the precautions for the suspected infection require.",
+    "Ask the client to spit saliva from the mouth into the container.",
+    "Have the client use an antiseptic mouthwash before the collection.",
+    "Leave the sample at the nurses' station until the end of the shift."
+   ],
+   "optionRationales": [
+    "Correct. Secretions collect overnight, and the antibiotics can stop the germs from growing in the culture.",
+    "Correct. Rinsing removes food and many of the germs from the mouth, so that the sample comes from the lungs.",
+    "Correct. A deep cough brings up sputum from the lower airways. A shallow cough brings up only saliva.",
+    "Correct. A sterile container stops contamination, and a delay allows germs to grow or die, which can alter the result.",
+    "Correct. Coughing produces droplets and aerosols, so the nurse follows the precautions that apply.",
+    "Incorrect. Saliva is not sputum, and the sample is rejected by the laboratory because it grows mouth germs.",
+    "Incorrect. Mouthwash can kill germs in the sample and affect the culture result. Plain water is used.",
+    "Incorrect. A sample that waits for hours is not accurate."
+   ],
+   "key": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "rationale": "A good sputum specimen comes from deep in the lungs and is collected, labelled and transported so that the laboratory can find the true cause of the infection. The nurse teaches the steps and the reason for each step.",
+   "needsReview": false
+  },
+  {
+   "id": "q-rrp-lab-05",
+   "categoryId": "reduction-risk-potential",
+   "topicId": "reduction-risk-potential--laboratory-values",
+   "secondaryTopicIds": [
+    "pharmacological-parenteral--adverse-effects-contraindications-side-effects-interactions"
+   ],
+   "learningPointIds": [
+    "reduction-risk-potential--laboratory-values--p05"
+   ],
+   "cjStep": "analyze-cues",
+   "integratedProcess": "clinical-judgment",
+   "type": "dropdown",
+   "difficulty": 3,
+   "stem": "A 74-year-old client with heart failure takes furosemide and digoxin. On day 3 the nurse reviews the laboratory results. The client says that the legs feel weak.",
+   "exhibit": {
+    "title": "Laboratory results",
+    "columns": [
+     "Result",
+     "Day 1",
+     "Day 2",
+     "Day 3"
+    ],
+    "rows": [
+     [
+      "Potassium (mmol/L)",
+      "3.8",
+      "3.2",
+      "2.8"
+     ],
+     [
+      "Creatinine (µmol/L)",
+      "92",
+      "95",
+      "94"
+     ]
+    ]
+   },
+   "checks": [
+    {
+     "kind": "lab",
+     "name": "potassium",
+     "value": 2.8,
+     "flag": "low",
+     "ref": "blanks.0"
+    }
+   ],
+   "template": "The potassium is {1}, so the nurse should {2}.",
+   "blanks": [
+    {
+     "options": [
+      "low, at 2.8 mmol/L [2.8 mEq/L], and falling",
+      "normal, at 2.8 mmol/L [2.8 mEq/L]",
+      "high, at 2.8 mmol/L [2.8 mEq/L], and rising"
+     ],
+     "key": 0,
+     "why": "The normal range is 3.5 to 5.0 mmol/L, so a value of 2.8 is low. The trend of 3.8, 3.2 and 2.8 is falling. The loop diuretic is the likely cause, because it increases the loss of potassium in the urine."
+    },
+    {
+     "options": [
+      "report it to the provider promptly and expect an order for potassium replacement and a heart rhythm check",
+      "continue the usual medicines and recheck the potassium next week",
+      "teach the client to eat fewer foods that contain potassium"
+     ],
+     "key": 0,
+     "why": "A low potassium raises the risk of dangerous heart rhythms, and it makes digoxin toxicity more likely. The muscle weakness is a sign of hypokalemia. The provider needs to know now, and a client on digoxin may need the rhythm monitored."
+    }
+   ],
+   "rationale": "Monitoring laboratory values means looking at the trend and at the client's medicines and symptoms. A falling potassium in a client who takes a loop diuretic and digoxin is a safety problem that is reported at once, because hypokalemia increases the risk of digoxin toxicity and of dysrhythmias.",
+   "needsReview": false
+  },
+  {
+   "id": "q-rrp-lab-06",
+   "categoryId": "reduction-risk-potential",
+   "topicId": "reduction-risk-potential--laboratory-values",
+   "secondaryTopicIds": [
+    "physiological-adaptation--fluid-and-electrolyte-imbalances",
+    "pharmacological-parenteral--pharmacological-pain-management"
+   ],
+   "learningPointIds": [
+    "reduction-risk-potential--laboratory-values--p06"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "communication-documentation",
+   "type": "mcq",
+   "difficulty": 3,
+   "stem": "A 58-year-old client is 6 hours after abdominal surgery and has a morphine PCA (patient-controlled analgesia) pump. The nurse finds the client very drowsy with a respiratory rate of 7 breaths/min. An arterial blood gas shows pH 7.28, PaCO₂ 58 mmHg [7.7 kPa] and HCO₃⁻ 25 mmol/L. What is the best action?",
+   "checks": [
+    {
+     "kind": "abg",
+     "pH": 7.28,
+     "paco2": 58,
+     "hco3": 25,
+     "primary": "respiratory acidosis",
+     "compensation": "uncompensated",
+     "ref": "key"
+    }
+   ],
+   "options": [
+    "Recognise respiratory acidosis (uncompensated), stop the PCA, stimulate the client and support the breathing, and notify the provider and the rapid response team, expecting an order for naloxone.",
+    "Recognise metabolic acidosis (partially compensated), give IV sodium bicarbonate and repeat the blood gas in the morning.",
+    "Recognise respiratory alkalosis, and have the client breathe into a paper bag.",
+    "Recognise that the result is near normal, continue the PCA and repeat the blood gas in 4 hours."
+   ],
+   "optionRationales": [
+    "Correct. The pH is low, the PaCO₂ is high and the bicarbonate is normal, so the problem is respiratory and the kidneys have not compensated. The cause is opioid-induced hypoventilation, which is an emergency.",
+    "Incorrect. The bicarbonate is normal and the PaCO₂ is high, so the acidosis is respiratory, not metabolic. Waiting until the morning is also unsafe.",
+    "Incorrect. The pH is low, not high. The client is breathing too little and not too much.",
+    "Incorrect. A pH of 7.28 and a PaCO₂ of 58 mmHg are clearly abnormal, and the client is at risk of a respiratory arrest."
+   ],
+   "key": 0,
+   "rationale": "Notifying the provider of a laboratory result means giving the facts and the nurse's assessment: the client, the result, the trend and the concern. Here the blood gas (pH below 7.35, PaCO₂ above 45 mmHg, normal HCO₃⁻) shows uncompensated respiratory acidosis in a client with a slow respiratory rate and drowsiness after an opioid. The PCA is stopped, the breathing is supported and urgent help is called.",
+   "needsReview": false
+  },
+  {
+   "id": "q-rrp-alter-01",
+   "categoryId": "reduction-risk-potential",
+   "topicId": "reduction-risk-potential--potential-for-alterations-in-body-systems",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "reduction-risk-potential--potential-for-alterations-in-body-systems--p01"
+   ],
+   "cjStep": "recognize-cues",
+   "integratedProcess": "nursing-process",
+   "type": "sata",
+   "difficulty": 2,
+   "stem": "Which clients are at high risk for aspiration? Select all that apply.",
+   "options": [
+    "A client who had a stroke, has a weak gag reflex and coughs when swallowing thin liquids.",
+    "A client who receives continuous tube feedings and lies flat in bed.",
+    "A client who is drowsy after moderate sedation for a colonoscopy.",
+    "A client with advanced dementia who eats quickly and coughs during meals.",
+    "A client who has a decreased level of consciousness after a seizure.",
+    "An alert client on the second day after an appendectomy who is eating while sitting upright.",
+    "An alert client with a healed forearm fracture who eats lunch in a chair.",
+    "A client who walks the hallway with a physiotherapist and sips water between walks."
+   ],
+   "optionRationales": [
+    "Correct. A weak swallow and a weak gag allow food, liquid and saliva to enter the airway.",
+    "Correct. Lying flat allows the stomach contents to flow back into the throat. The head of the bed is kept raised during feeding.",
+    "Correct. A sedated client has weaker protective reflexes and may vomit or have secretions in the airway.",
+    "Correct. A client with dementia may forget how to chew and swallow, and coughing during meals is a sign that food is entering the airway.",
+    "Correct. A client who cannot protect the airway is at risk of aspirating saliva and vomit.",
+    "Incorrect. The client is awake, has normal swallowing and is positioned upright. The risk is low.",
+    "Incorrect. A healed fracture does not affect swallowing, and the client is alert and upright.",
+    "Incorrect. The client is alert and upright, with no sign of a swallowing problem."
+   ],
+   "key": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "rationale": "Aspiration risk comes from a weak swallow, a lowered level of consciousness, sedation, feeding tubes and lying flat. The nurse identifies clients at risk and then lowers the risk by keeping the head of the bed raised, checking swallowing before oral intake, and keeping suction ready.",
+   "needsReview": false
+  },
+  {
+   "id": "q-rrp-alter-02",
+   "categoryId": "reduction-risk-potential",
+   "topicId": "reduction-risk-potential--potential-for-alterations-in-body-systems",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "reduction-risk-potential--potential-for-alterations-in-body-systems--p02"
+   ],
+   "cjStep": "recognize-cues",
+   "integratedProcess": "nursing-process",
+   "type": "matrix",
+   "difficulty": 2,
+   "stem": "A nurse uses the Braden Scale to assess a client's risk of pressure injuries. For each finding, select the risk factor that it describes.",
+   "cols": [
+    "Moisture",
+    "Nutrition",
+    "Mobility",
+    "Friction and shear"
+   ],
+   "rows": [
+    {
+     "text": "The client has urine and stool incontinence most of the day, and the skin is often wet.",
+     "key": 0,
+     "why": "Skin that is wet from urine, stool or sweat becomes soft and breaks down more easily (moisture)."
+    },
+    {
+     "text": "The client eats about one third of each meal and drinks little.",
+     "key": 1,
+     "why": "Poor intake of protein and calories (nutrition) lowers the skin's ability to resist pressure and to heal."
+    },
+    {
+     "text": "The client makes only slight changes in the position of the body and cannot turn without help.",
+     "key": 2,
+     "why": "A client who cannot change position stays on the same area of skin, so the pressure goes on (mobility)."
+    },
+    {
+     "text": "The client slides down the bed when the head of the bed is raised and needs a lot of help to be moved up.",
+     "key": 3,
+     "why": "Sliding drags the skin over the sheets (friction) and the deeper tissues move while the skin stays still (shear), which damages the tissue."
+    }
+   ],
+   "rationale": "The Braden Scale scores sensory perception, moisture, activity, mobility, nutrition and friction and shear. A lower score means a higher risk. The plan then targets each factor: skin care and continence care, nutrition, regular repositioning and a support surface, and care in raising the head of the bed.",
+   "needsReview": false
+  },
+  {
+   "id": "q-rrp-alter-03",
+   "categoryId": "reduction-risk-potential",
+   "topicId": "reduction-risk-potential--potential-for-alterations-in-body-systems",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "reduction-risk-potential--potential-for-alterations-in-body-systems--p03"
+   ],
+   "cjStep": "recognize-cues",
+   "integratedProcess": "nursing-process",
+   "type": "matrix",
+   "difficulty": 3,
+   "stem": "A client has a plaster cast on the forearm after a fracture, which was put on 6 hours ago. For each finding, select whether it is expected or needs to be reported now.",
+   "cols": [
+    "Expected",
+    "Report now"
+   ],
+   "rows": [
+    {
+     "text": "The fingers are warm and pink, and the nail beds refill in less than 3 seconds.",
+     "key": 0,
+     "why": "This shows that the blood is reaching the fingers. It is an expected finding."
+    },
+    {
+     "text": "Pain in the arm is getting worse and is not relieved by the prescribed opioid.",
+     "key": 1,
+     "why": "Increasing pain that does not respond to analgesia may mean that swelling is squeezing the blood vessels and nerves (compartment syndrome). This is an emergency."
+    },
+    {
+     "text": "The fingers are cool, pale and swollen, and the client reports numbness and tingling.",
+     "key": 1,
+     "why": "These are signs of poor blood flow and nerve compression. The tissue can be permanently injured within hours."
+    },
+    {
+     "text": "There is mild swelling of the fingers that goes down when the arm is raised above the heart.",
+     "key": 0,
+     "why": "Mild swelling is common after an injury, and raising the arm helps the fluid to drain. It is expected."
+    }
+   ],
+   "rationale": "A client with a cast, an immobilised limb or a vascular risk is checked for circulation, sensation and movement. Pain that gets worse, pale or cool skin, numbness or tingling, a weak or absent pulse and a slow capillary refill are reported without delay. Risk is higher with diabetes, after surgery or with an immobilised limb.",
+   "needsReview": false
+  },
+  {
+   "id": "q-rrp-alter-04",
+   "categoryId": "reduction-risk-potential",
+   "topicId": "reduction-risk-potential--potential-for-alterations-in-body-systems",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "reduction-risk-potential--potential-for-alterations-in-body-systems--p06",
+    "reduction-risk-potential--potential-for-alterations-in-body-systems--p05"
+   ],
+   "cjStep": "analyze-cues",
+   "integratedProcess": "clinical-judgment",
+   "type": "numeric",
+   "difficulty": 3,
+   "stem": "A client who had bowel surgery has a nasogastric tube to low suction. Over 24 hours the client's intake was 1900 mL. The output was urine 1.1 L, nasogastric drainage 350 mL, emesis 150 mL and wound drain 60 mL. What is the net fluid balance (intake minus output) in mL? A positive number means that more fluid went in than came out. Round to the nearest whole number.",
+   "unit": "mL",
+   "rounding": {
+    "decimals": 0,
+    "rule": "Round to the nearest whole number."
+   },
+   "key": 240,
+   "calc": {
+    "formula": "Net balance = intake − (urine + nasogastric drainage + emesis + drain output), with all amounts in mL.",
+    "inputs": {
+     "intakeMl": 1900,
+     "urineL": 1.1,
+     "ngMl": 350,
+     "emesisMl": 150,
+     "drainMl": 60
+    },
+    "steps": [
+     {
+      "name": "urineMl",
+      "label": "Change the urine to mL",
+      "expr": "urineL * 1000",
+      "value": 1100,
+      "show": "1.1 × 1000 = 1100"
+     },
+     {
+      "name": "outputMl",
+      "label": "Add all the outputs",
+      "expr": "urineMl + ngMl + emesisMl + drainMl",
+      "value": 1660,
+      "show": "1100 + 350 + 150 + 60 = 1660"
+     },
+     {
+      "name": "balance",
+      "label": "Subtract the output from the intake",
+      "expr": "intakeMl - outputMl",
+      "value": 240,
+      "show": "1900 - 1660 = 240"
+     }
+    ],
+    "result": "balance"
+   },
+   "commonErrors": [
+    {
+     "expr": "intakeMl - (urineL + ngMl + emesisMl + drainMl)",
+     "value": 1338.9,
+     "why": "used the urine as 1.1 mL and forgot to change litres into millilitres."
+    },
+    {
+     "expr": "outputMl - intakeMl",
+     "value": -240,
+     "why": "subtracted the intake from the output, so the sign is the wrong way round."
+    },
+    {
+     "expr": "intakeMl - urineMl",
+     "value": 800,
+     "why": "counted only the urine and left out the other outputs."
+    }
+   ],
+   "rationale": "Every route of fluid loss counts as output, including drains and emesis. Intake 1900 mL minus output (1100 + 350 + 150 + 60 = 1660 mL) gives +240 mL. The nurse compares this with the client's baseline and trend, and reports a large change or a very low urine output.",
+   "needsReview": false
+  },
+  {
+   "id": "q-rrp-comp-01",
+   "categoryId": "reduction-risk-potential",
+   "topicId": "reduction-risk-potential--potential-for-complications-of-diagnostic-tests-treatments-procedures",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "reduction-risk-potential--potential-for-complications-of-diagnostic-tests-treatments-procedures--p01"
+   ],
+   "cjStep": "analyze-cues",
+   "integratedProcess": "clinical-judgment",
+   "type": "mcq",
+   "difficulty": 3,
+   "stem": "A client returns to the unit 1 hour after a cardiac catheterization through the right femoral artery. The nurse looks at the monitor (6-second strip shown). The client has no chest pain and no dizziness, the blood pressure is 124/76 mmHg and the oxygen saturation is 96%.",
+   "exhibit": {
+    "title": "Cardiac monitor",
+    "ecg": {
+     "rhythm": "pvc",
+     "rate": 88,
+     "seed": 21
+    }
+   },
+   "checks": [
+    {
+     "kind": "ecg",
+     "rhythm": "pvc",
+     "ref": "key"
+    }
+   ],
+   "options": [
+    "The strip shows premature ventricular contractions (PVCs). Assess the client, the vital signs and the groin, and report the new ectopic beats to the provider.",
+    "The strip shows atrial fibrillation. Prepare for rate control as ordered.",
+    "The strip shows normal sinus rhythm. No action is needed.",
+    "The strip shows ventricular fibrillation. Start CPR and call for a defibrillator."
+   ],
+   "optionRationales": [
+    "Correct. A wide, early beat that is followed by a pause is a PVC. New PVCs after a catheterization can come from irritation of the heart or from low potassium or magnesium, and the provider must know.",
+    "Incorrect. Atrial fibrillation has no P waves and is irregularly irregular throughout. This strip has a regular underlying rhythm with occasional early wide beats.",
+    "Incorrect. There are early, wide beats that do not belong to normal sinus rhythm, and new rhythm changes after catheterization need to be reported.",
+    "Incorrect. Ventricular fibrillation is a chaotic tracing with no identifiable complexes. This client is awake and has a pulse and a normal blood pressure."
+   ],
+   "key": 0,
+   "rationale": "A heart rhythm change after cardiac catheterization may come from irritation of the heart muscle, from ischemia, or from an electrolyte problem. The nurse checks the client, the vital signs, the access site and the pulses, and reports new ectopic beats. A client with frequent PVCs, runs of beats, chest pain or low blood pressure needs urgent help.",
+   "needsReview": false
+  },
+  {
+   "id": "q-rrp-comp-02",
+   "categoryId": "reduction-risk-potential",
+   "topicId": "reduction-risk-potential--potential-for-complications-of-diagnostic-tests-treatments-procedures",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "reduction-risk-potential--potential-for-complications-of-diagnostic-tests-treatments-procedures--p04",
+    "reduction-risk-potential--potential-for-complications-of-diagnostic-tests-treatments-procedures--p01"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "nursing-process",
+   "type": "dropdown",
+   "difficulty": 2,
+   "stem": "A client with a large pleural effusion is scheduled for a thoracentesis at the bedside.",
+   "template": "For the procedure, the client is positioned {1}. After the procedure, the nurse watches most closely for {2}.",
+   "blanks": [
+    {
+     "options": [
+      "sitting upright and leaning forward over a bedside table, with the arms and feet supported",
+      "lying flat on the back with the arms at the sides",
+      "lying on the unaffected side with the head of the bed down"
+     ],
+     "key": 0,
+     "why": "Leaning forward widens the spaces between the ribs and lets the fluid collect at the base of the lung where the needle is placed. A client who is flat cannot be positioned correctly and may become short of breath."
+    },
+    {
+     "options": [
+      "a pneumothorax, with sudden shortness of breath, falling oxygen saturation and decreased breath sounds on the treated side",
+      "hyperglycemia and a fruity breath odour",
+      "urinary retention and a full bladder"
+     ],
+     "key": 0,
+     "why": "The needle passes close to the lung, and a puncture lets air into the pleural space. The nurse checks the breathing, the oxygen saturation and the breath sounds and expects a chest x-ray as ordered."
+    }
+   ],
+   "rationale": "After a thoracentesis the nurse monitors the vital signs, the breathing and the oxygen saturation, listens to the breath sounds, checks the puncture site for bleeding or leakage, and watches for signs of a pneumothorax, a bleed, or a fall in blood pressure from a large fluid shift.",
+   "needsReview": false
+  },
+  {
+   "id": "q-rrp-comp-03",
+   "categoryId": "reduction-risk-potential",
+   "topicId": "reduction-risk-potential--potential-for-complications-of-diagnostic-tests-treatments-procedures",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "reduction-risk-potential--potential-for-complications-of-diagnostic-tests-treatments-procedures--p13"
+   ],
+   "cjStep": "analyze-cues",
+   "integratedProcess": "clinical-judgment",
+   "type": "mcq",
+   "difficulty": 3,
+   "stem": "A client with cirrhosis has just had a paracentesis in which 6 L of ascitic fluid was removed. Before the procedure the blood pressure was 134/82 mmHg. Twenty minutes later the client feels dizzy, the blood pressure is 94/56 mmHg and the heart rate is 112 beats/min. What should the nurse do first?",
+   "options": [
+    "Help the client to sit upright and drink extra fluids by mouth.",
+    "Help the client to lie flat, recheck the vital signs, check the puncture site and notify the provider, and expect an order for IV albumin.",
+    "Give an extra dose of the prescribed diuretic to prevent the fluid from coming back.",
+    "Remove the dressing and press on the abdomen to drain out any remaining fluid."
+   ],
+   "optionRationales": [
+    "Incorrect. Sitting upright can lower the blood pressure further, and oral fluids do not replace the lost volume quickly enough.",
+    "Correct. Removal of a large amount of fluid can cause a shift of fluid and a fall in the circulating volume. Lying flat helps the blood pressure, and albumin is given to draw fluid back into the blood vessels.",
+    "Incorrect. A diuretic would reduce the circulating volume further.",
+    "Incorrect. Pressing on the abdomen can cause more fluid loss and injury, and the dressing protects the puncture site."
+   ],
+   "key": 1,
+   "rationale": "A large-volume paracentesis can cause hypotension and shock from the fluid shift, and a fall in kidney function. The nurse monitors the vital signs, the urine output and the puncture site. Clients who have more than about 5 L of fluid removed are usually given IV albumin as the provider orders.",
+   "needsReview": false
+  },
+  {
+   "id": "q-rrp-comp-04",
+   "categoryId": "reduction-risk-potential",
+   "topicId": "reduction-risk-potential--potential-for-complications-of-diagnostic-tests-treatments-procedures",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "reduction-risk-potential--potential-for-complications-of-diagnostic-tests-treatments-procedures--p15",
+    "reduction-risk-potential--potential-for-complications-of-diagnostic-tests-treatments-procedures--p04"
+   ],
+   "cjStep": "generate-solutions",
+   "integratedProcess": "nursing-process",
+   "type": "sata",
+   "difficulty": 2,
+   "stem": "A client returns to the unit 1 hour after a lumbar puncture. Which actions should the nurse include in the plan of care? Select all that apply.",
+   "options": [
+    "Keep the client lying flat for the length of time that the provider has ordered.",
+    "Encourage the client to drink extra fluids if there is no restriction.",
+    "Check the movement, strength and sensation of both legs, and ask about numbness or tingling.",
+    "Check the puncture site for bleeding or leaking of clear fluid.",
+    "Ask about headache, neck stiffness and fever, and report them.",
+    "Raise the head of the bed to 90 degrees so that the client can eat.",
+    "Restrict fluids to lower the risk of leaking.",
+    "Get the client up to walk to the bathroom straight away."
+   ],
+   "optionRationales": [
+    "Correct. Lying flat lowers the pressure at the puncture site and helps to prevent a headache from leakage of cerebrospinal fluid.",
+    "Correct. Fluids help the body to replace cerebrospinal fluid and lower the risk of a headache.",
+    "Correct. A change in sensation or strength in the legs may mean nerve irritation or bleeding near the spinal cord.",
+    "Correct. Leakage of cerebrospinal fluid or blood can be a sign of a complication.",
+    "Correct. A mild headache is common, but a severe one, or one with fever and a stiff neck, may be an infection (meningitis).",
+    "Incorrect. Sitting upright increases the risk of a headache while the client is meant to be flat.",
+    "Incorrect. Fluids are encouraged, not restricted, unless another condition limits them.",
+    "Incorrect. The client stays flat for the ordered time and uses a bedpan or urinal."
+   ],
+   "key": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "rationale": "After a lumbar puncture the nurse watches for headache, infection, bleeding, leakage of cerebrospinal fluid and nerve problems in the legs. The length of time that the client lies flat depends on the provider's order and the policy of the facility.",
+   "needsReview": false
+  },
+  {
+   "id": "q-rrp-comp-05",
+   "categoryId": "reduction-risk-potential",
+   "topicId": "reduction-risk-potential--potential-for-complications-of-diagnostic-tests-treatments-procedures",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "reduction-risk-potential--potential-for-complications-of-diagnostic-tests-treatments-procedures--p11"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "teaching-learning",
+   "type": "matrix",
+   "difficulty": 2,
+   "stem": "A client has a new arteriovenous (AV) fistula in the left forearm for hemodialysis. For each action, select whether it is appropriate or not appropriate.",
+   "cols": [
+    "Appropriate",
+    "Not appropriate"
+   ],
+   "rows": [
+    {
+     "text": "Check for a thrill with the fingertips and listen for a bruit with a stethoscope every shift.",
+     "key": 0,
+     "why": "A thrill (a buzzing feeling) and a bruit (a whooshing sound) show that blood is flowing through the fistula. If they are absent, it may be clotted, and the provider is told at once."
+    },
+    {
+     "text": "Take the client's blood pressure on the left arm.",
+     "key": 1,
+     "why": "The pressure of a cuff can clot the fistula or damage it. Blood pressure is not measured on the arm with the access."
+    },
+    {
+     "text": "Draw blood from a vein in the left arm.",
+     "key": 1,
+     "why": "Needle punctures and tourniquets on the fistula arm can damage the access. Only the dialysis staff use the fistula."
+    },
+    {
+     "text": "Teach the client to avoid carrying heavy bags or sleeping on the left arm.",
+     "key": 0,
+     "why": "Pressure on the fistula arm can reduce the flow and cause a clot."
+    },
+    {
+     "text": "Teach the client to check the thrill every day and to report redness, pain, swelling or drainage.",
+     "key": 0,
+     "why": "Daily checks find a problem early. Signs of infection or of reduced flow need prompt attention."
+    }
+   ],
+   "rationale": "A dialysis access is the client's lifeline. The nurse protects the arm from pressure, punctures and injury, checks the thrill and the bruit, teaches the client to do the same and watches for infection, bleeding and clotting.",
+   "needsReview": false
+  },
+  {
+   "id": "q-rrp-comp-06",
+   "categoryId": "reduction-risk-potential",
+   "topicId": "reduction-risk-potential--potential-for-complications-of-diagnostic-tests-treatments-procedures",
+   "secondaryTopicIds": [
+    "reduction-risk-potential--therapeutic-procedures"
+   ],
+   "learningPointIds": [
+    "reduction-risk-potential--potential-for-complications-of-diagnostic-tests-treatments-procedures--p02"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "clinical-judgment",
+   "type": "bowtie",
+   "difficulty": 3,
+   "stem": "A client is recovering from a colonoscopy with moderate sedation (midazolam and fentanyl). Thirty minutes later the client is hard to arouse, the respiratory rate is 8 breaths/min and the oxygen saturation is 86% on room air.",
+   "checks": [
+    {
+     "kind": "vital",
+     "name": "rr",
+     "value": 8,
+     "flag": "low"
+    },
+    {
+     "kind": "vital",
+     "name": "spo2",
+     "value": 86,
+     "flag": "low"
+    }
+   ],
+   "condition": {
+    "prompt": "The client is most likely to have",
+    "options": [
+     "respiratory depression (hypoventilation)",
+     "malignant hyperthermia",
+     "anaphylaxis",
+     "pulmonary embolism",
+     "hypoglycemia"
+    ],
+    "key": 0,
+    "optionRationales": [
+     "Correct. Opioids and benzodiazepines slow the breathing. A slow rate, low oxygen saturation and difficulty in waking the client fit this.",
+     "Incorrect. Malignant hyperthermia causes a high temperature and rigid muscles, and it happens during or just after anesthesia with certain agents.",
+     "Incorrect. Anaphylaxis causes hives, swelling, wheezing and low blood pressure.",
+     "Incorrect. A pulmonary embolism causes chest pain, fast breathing and a fast pulse rather than a slow rate and drowsiness.",
+     "Incorrect. Hypoglycemia can cause drowsiness, but it does not explain the very slow breathing."
+    ]
+   },
+   "actions": {
+    "prompt": "Which two actions should the nurse take first? (select 2)",
+    "options": [
+     "Stimulate the client, open the airway and give oxygen",
+     "Call for help and prepare the reversal agents that are ordered (naloxone for the opioid, flumazenil for the benzodiazepine)",
+     "Give another dose of midazolam to calm the client",
+     "Let the client sleep and check again in an hour",
+     "Give a 1 litre IV fluid bolus"
+    ],
+    "keys": [
+     0,
+     1
+    ],
+    "optionRationales": [
+     "Correct. Airway, breathing and oxygen are the first priority.",
+     "Correct. The effects of the drugs can be reversed, and help is needed in case the airway has to be supported.",
+     "Incorrect. More sedative would slow the breathing further.",
+     "Incorrect. A client with a breathing rate of 8 and a low oxygen saturation cannot be left.",
+     "Incorrect. The problem is the breathing, and a fluid bolus does not treat it."
+    ]
+   },
+   "parameters": {
+    "prompt": "Which two parameters should the nurse monitor? (select 2)",
+    "options": [
+     "Respiratory rate and oxygen saturation",
+     "Level of consciousness (sedation level)",
+     "Bowel sounds",
+     "Urine ketones",
+     "Pedal pulses"
+    ],
+    "keys": [
+     0,
+     1
+    ],
+    "optionRationales": [
+     "Correct. These show if the breathing is improving or getting worse.",
+     "Correct. A client who is waking up is improving, and one who is getting more sleepy is getting worse. The effect of the reversal agents may wear off before the effect of the sedative does.",
+     "Incorrect. Bowel sounds are not related to this problem.",
+     "Incorrect. Ketones are not related to this problem.",
+     "Incorrect. Pedal pulses are not related to this problem."
+    ]
+   },
+   "rationale": "After moderate sedation the nurse monitors the breathing, the oxygen saturation, the level of consciousness and the vital signs until the client is awake and meets the discharge criteria. Respiratory depression is treated with airway support and oxygen first. Reversal agents are used as ordered, and the client is watched because the sedative may last longer than the reversal agent.",
+   "needsReview": false
+  },
+  {
+   "id": "q-rrp-surg-01",
+   "categoryId": "reduction-risk-potential",
+   "topicId": "reduction-risk-potential--potential-for-complications-from-surgical-procedures-and-health-alterations",
+   "secondaryTopicIds": [
+    "reduction-risk-potential--therapeutic-procedures"
+   ],
+   "learningPointIds": [
+    "reduction-risk-potential--potential-for-complications-from-surgical-procedures-and-health-alterations--p01"
+   ],
+   "cjStep": "recognize-cues",
+   "integratedProcess": "clinical-judgment",
+   "type": "bowtie",
+   "difficulty": 4,
+   "stem": "During a general anesthetic with sevoflurane and succinylcholine, the client's end-tidal carbon dioxide rises rapidly, the heart rate is 142 beats/min, the jaw and muscles are rigid, and the temperature is rising and is now 39.8 °C [103.6 °F].",
+   "condition": {
+    "prompt": "The client is most likely to have",
+    "options": [
+     "malignant hyperthermia",
+     "sepsis",
+     "anaphylaxis",
+     "pulmonary embolism",
+     "hypovolemic shock"
+    ],
+    "key": 0,
+    "optionRationales": [
+     "Correct. A rapid rise in carbon dioxide, a fast heart rate, muscle rigidity and a rising temperature during an anesthetic with these drugs are the signs of malignant hyperthermia.",
+     "Incorrect. Sepsis develops over hours and does not cause rigid muscles or a rapid rise in end-tidal carbon dioxide.",
+     "Incorrect. Anaphylaxis causes hives, wheezing and low blood pressure, not rigid muscles.",
+     "Incorrect. A pulmonary embolism causes a fall in the end-tidal carbon dioxide.",
+     "Incorrect. Hypovolemic shock causes low blood pressure and does not cause muscle rigidity."
+    ]
+   },
+   "actions": {
+    "prompt": "Which two actions should be done first? (select 2)",
+    "options": [
+     "Stop the triggering anesthetic agents and call for help (the malignant hyperthermia team)",
+     "Prepare and give dantrolene as ordered",
+     "Give acetaminophen and recheck the temperature in an hour",
+     "Cover the client with warm blankets",
+     "Give a beta-blocker for the fast heart rate"
+    ],
+    "keys": [
+     0,
+     1
+    ],
+    "optionRationales": [
+     "Correct. Stopping the trigger and getting help is the first step. The breathing is supported with 100% oxygen and a high flow.",
+     "Correct. Dantrolene is the specific drug. It stops the uncontrolled release of calcium in the muscle.",
+     "Incorrect. Antipyretics do not work in malignant hyperthermia, because the heat comes from the muscles and not from the brain's thermostat.",
+     "Incorrect. The client is overheated and needs cooling.",
+     "Incorrect. The heart rate is a result of the problem, and a beta-blocker does not treat it."
+    ]
+   },
+   "parameters": {
+    "prompt": "Which two parameters should be monitored? (select 2)",
+    "options": [
+     "Core temperature and end-tidal carbon dioxide",
+     "Serum potassium, heart rhythm and the colour and amount of urine",
+     "Bowel sounds",
+     "Pain score",
+     "Capillary refill of the toes"
+    ],
+    "keys": [
+     0,
+     1
+    ],
+    "optionRationales": [
+     "Correct. These show how severe the crisis is, and how well the treatment is working.",
+     "Correct. Muscle breakdown releases potassium and myoglobin, which can cause heart rhythm problems and kidney injury (dark urine).",
+     "Incorrect. Bowel sounds are not a priority in this emergency.",
+     "Incorrect. The client is anesthetised and the pain score is not a priority.",
+     "Incorrect. Capillary refill of the toes is not the key parameter here."
+    ]
+   },
+   "rationale": "Malignant hyperthermia is a rare, life-threatening reaction to certain anesthetic drugs that causes uncontrolled muscle metabolism. The signs are a rapid rise in end-tidal carbon dioxide, a fast heart rate, muscle rigidity and a high temperature. The treatment is to stop the triggers, give dantrolene, cool the client and treat the complications.",
+   "needsReview": false
+  },
+  {
+   "id": "q-rrp-surg-02",
+   "categoryId": "reduction-risk-potential",
+   "topicId": "reduction-risk-potential--potential-for-complications-from-surgical-procedures-and-health-alterations",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "reduction-risk-potential--potential-for-complications-from-surgical-procedures-and-health-alterations--p01"
+   ],
+   "cjStep": "analyze-cues",
+   "integratedProcess": "clinical-judgment",
+   "type": "mcq",
+   "difficulty": 4,
+   "stem": "A client who had a total knee replacement has received subcutaneous unfractionated heparin since surgery. On day 6 the client has a new swollen, painful right calf. The nurse reviews the platelet counts.",
+   "exhibit": {
+    "title": "Platelet counts",
+    "columns": [
+     "Day",
+     "Platelets (× 10⁹/L)"
+    ],
+    "rows": [
+     [
+      "Day 0 (before heparin)",
+      "245"
+     ],
+     [
+      "Day 3",
+      "210"
+     ],
+     [
+      "Day 5",
+      "140"
+     ],
+     [
+      "Day 6",
+      "88"
+     ]
+    ]
+   },
+   "checks": [
+    {
+     "kind": "lab",
+     "name": "platelets",
+     "value": 88,
+     "flag": "low"
+    }
+   ],
+   "options": [
+    "Give the next heparin dose as scheduled, because the platelet count is expected to recover.",
+    "Hold the next heparin dose and notify the provider at once, because heparin-induced thrombocytopenia may be present.",
+    "Ask the provider for a platelet transfusion to treat the low count.",
+    "Apply a heating pad to the calf and encourage the client to walk more."
+   ],
+   "optionRationales": [
+    "Incorrect. The platelet count has fallen by more than half, and the client has signs of a clot. Heparin may be the cause, and giving more could make the problem worse.",
+    "Correct. A platelet count that falls by more than 50% about 5 to 10 days after heparin is started, with a new clot, is typical of heparin-induced thrombocytopenia. Heparin is stopped, and another type of anticoagulant is ordered.",
+    "Incorrect. In this condition the platelets are being used up in clots, so giving platelets can increase the risk of clotting.",
+    "Incorrect. A calf that may have a deep vein thrombosis must not be massaged or heated, because a clot can break off and travel to the lungs."
+   ],
+   "key": 1,
+   "rationale": "Heparin-induced thrombocytopenia is an immune reaction that lowers the platelets and increases clotting. The nurse knows the typical pattern (a fall of more than half, usually 5 to 10 days after the start), recognises the signs of a new clot, and reports at once. Heparin, including heparin flushes, is stopped as ordered.",
+   "needsReview": false
+  },
+  {
+   "id": "q-rrp-surg-03",
+   "categoryId": "reduction-risk-potential",
+   "topicId": "reduction-risk-potential--potential-for-complications-from-surgical-procedures-and-health-alterations",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "reduction-risk-potential--potential-for-complications-from-surgical-procedures-and-health-alterations--p02"
+   ],
+   "cjStep": "evaluate-outcomes",
+   "integratedProcess": "nursing-process",
+   "type": "highlight",
+   "difficulty": 3,
+   "stem": "A client is on the second day after a bowel resection. The nurse has taught and provided interventions to prevent pneumonia and blood clots. Select the findings that show that the client is not responding well to these interventions and needs to be reported.",
+   "segments": [
+    {
+     "text": "The nurse notes that the client "
+    },
+    {
+     "text": "has walked the length of the hall three times today",
+     "key": false,
+     "why": "This is a good response. Walking helps to prevent both clots and lung complications."
+    },
+    {
+     "text": ", "
+    },
+    {
+     "text": "reaches 1500 mL on the incentive spirometer",
+     "key": false,
+     "why": "This is a good response. A good inspiratory volume helps to open the air sacs and prevents atelectasis."
+    },
+    {
+     "text": ", "
+    },
+    {
+     "text": "has new crackles at both lung bases that do not clear after coughing",
+     "key": true,
+     "why": "This is a poor response. Crackles at the bases that do not clear may mean atelectasis or pneumonia."
+    },
+    {
+     "text": ", "
+    },
+    {
+     "text": "has a swollen, warm and tender left calf",
+     "key": true,
+     "why": "This is a poor response. These are signs of a deep vein thrombosis, which can lead to a pulmonary embolism."
+    },
+    {
+     "text": ", "
+    },
+    {
+     "text": "wears the sequential compression devices whenever in bed",
+     "key": false,
+     "why": "This is a good response. The devices improve the blood flow in the legs and lower the risk of clots."
+    },
+    {
+     "text": ", and "
+    },
+    {
+     "text": "has a temperature of 38.4 °C [101.1 °F]",
+     "key": true,
+     "why": "This needs to be reported. A new fever on the second day may come from atelectasis, a wound or urinary infection, or a clot."
+    },
+    {
+     "text": "."
+    }
+   ],
+   "rationale": "After surgery the nurse evaluates whether the plan is working. Early walking, deep breathing with the incentive spirometer, compression devices and leg exercises prevent complications. New crackles that persist, a swollen and tender calf and a new fever show that the plan is not enough and are reported.",
+   "needsReview": false
+  },
+  {
+   "id": "q-rrp-surg-04",
+   "categoryId": "reduction-risk-potential",
+   "topicId": "reduction-risk-potential--potential-for-complications-from-surgical-procedures-and-health-alterations",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "reduction-risk-potential--potential-for-complications-from-surgical-procedures-and-health-alterations--p01"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "clinical-judgment",
+   "type": "mcq",
+   "difficulty": 3,
+   "stem": "On the fifth day after an abdominal surgery, a client coughs and says, \"Something gave way.\" The nurse sees loops of bowel pushing through the opened abdominal incision. What should the nurse do first?",
+   "options": [
+    "Push the bowel gently back into the abdomen and apply a dry dressing.",
+    "Ask the client to stand up and walk to the treatment room.",
+    "Stay with the client and call for help, place the client in a low Fowler's position with the knees bent, and cover the bowel with sterile dressings moistened with normal saline.",
+    "Give the client a drink of water and wait for the surgeon to make rounds."
+   ],
+   "optionRationales": [
+    "Incorrect. The nurse does not try to push the bowel back, because this can injure it and spread infection.",
+    "Incorrect. Standing and walking increases the pressure in the abdomen and can push out more bowel.",
+    "Correct. This is an emergency (evisceration). The client must not be left alone. The position lowers the strain on the incision, and the moist, sterile dressing keeps the bowel from drying out. The surgeon is notified at once.",
+    "Incorrect. The client needs emergency surgery and must not eat or drink."
+   ],
+   "key": 2,
+   "rationale": "Wound dehiscence is the partial or total opening of a surgical wound, and evisceration is when organs come out through it. The risk is increased by coughing, straining, obesity, poor nutrition and infection. The nurse stays with the client, calls for help, covers the wound with a sterile, saline-moistened dressing, positions the client with the knees bent and keeps the client NPO for surgery.",
+   "needsReview": false
+  },
+  {
+   "id": "q-rrp-assess-01",
+   "categoryId": "reduction-risk-potential",
+   "topicId": "reduction-risk-potential--system-specific-assessments",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "reduction-risk-potential--system-specific-assessments--p01"
+   ],
+   "cjStep": "recognize-cues",
+   "integratedProcess": "nursing-process",
+   "type": "sata",
+   "difficulty": 3,
+   "stem": "A nurse checks the right leg 2 hours after a cardiac catheterization through the right femoral artery. Which findings suggest that the blood flow to the leg is impaired? Select all that apply.",
+   "options": [
+    "The right foot is pale and cool compared with the left foot.",
+    "The right dorsalis pedis pulse is weak or cannot be felt, and it was strong before the test.",
+    "The client reports numbness and tingling in the right foot.",
+    "The capillary refill in the right toes is more than 3 seconds.",
+    "The client has increasing pain in the right leg.",
+    "The right foot is warm and pink with a pulse as strong as before the procedure.",
+    "There is a small, flat bruise of about 2 cm at the puncture site and the site is soft."
+   ],
+   "optionRationales": [
+    "Correct. A pale, cool limb means that less blood is reaching it.",
+    "Correct. A pulse that is weaker than the baseline or than the other leg suggests an arterial blockage or a bleed.",
+    "Correct. Nerves are sensitive to low blood flow, so numbness is an early warning sign.",
+    "Correct. A slow refill shows slow flow in the small vessels.",
+    "Correct. New pain in a limb after an arterial procedure may be caused by an arterial occlusion or a hematoma pressing on the vessels.",
+    "Incorrect. This is the expected finding and shows good blood flow.",
+    "Incorrect. A small, flat bruise is expected, and a soft site with no growth shows no active bleeding."
+   ],
+   "key": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "rationale": "After an arterial procedure the nurse checks the six Ps: pain, pallor, pulselessness, paresthesia, paralysis and poikilothermia (coolness), and compares both legs. A change from the baseline is reported at once, and the site is checked for bleeding and a hematoma.",
+   "needsReview": false
+  },
+  {
+   "id": "q-rrp-assess-02",
+   "categoryId": "reduction-risk-potential",
+   "topicId": "reduction-risk-potential--system-specific-assessments",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "reduction-risk-potential--system-specific-assessments--p02"
+   ],
+   "cjStep": "analyze-cues",
+   "integratedProcess": "clinical-judgment",
+   "type": "dropdown",
+   "difficulty": 3,
+   "stem": "A client with a head injury opens the eyes only to pain (E2), says inappropriate words (V3) and localizes to a painful stimulus (M5). The nurse scores the Glasgow Coma Scale (GCS).",
+   "checks": [
+    {
+     "kind": "gcs",
+     "e": 2,
+     "v": 3,
+     "m": 5,
+     "total": 10,
+     "severity": "moderate",
+     "ref": "blanks.0"
+    },
+    {
+     "kind": "gcs",
+     "e": 2,
+     "v": 3,
+     "m": 5,
+     "total": 10,
+     "severity": "moderate",
+     "what": "severity",
+     "ref": "blanks.1"
+    }
+   ],
+   "template": "The GCS score is {1}, which is a {2} impairment, and the nurse should {3}.",
+   "blanks": [
+    {
+     "options": [
+      "10",
+      "7",
+      "13"
+     ],
+     "key": 0,
+     "why": "The scores are added: eye opening 2 + verbal response 3 + motor response 5 = 10. The scale runs from 3 to 15."
+    },
+    {
+     "options": [
+      "moderate",
+      "mild",
+      "severe"
+     ],
+     "key": 0,
+     "why": "A score of 13 to 15 is a mild impairment, 9 to 12 is moderate and 8 or less is severe."
+    },
+    {
+     "options": [
+      "repeat the neurological checks often and report a fall in the score at once",
+      "check again in 8 hours",
+      "record the score and tell the family that it is normal"
+     ],
+     "key": 0,
+     "why": "A score of 10 is not normal, and a fall of 2 or more points is an urgent change. Frequent checks (for example, hourly) and an immediate report show a change early."
+    }
+   ],
+   "rationale": "The Glasgow Coma Scale scores eye opening (1 to 4), verbal response (1 to 5) and motor response (1 to 6). The nurse scores the best response of each part and gives the three parts as well as the total. A drop in the score is more important than a single score.",
+   "needsReview": false
+  },
+  {
+   "id": "q-rrp-assess-03",
+   "categoryId": "reduction-risk-potential",
+   "topicId": "reduction-risk-potential--system-specific-assessments",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "reduction-risk-potential--system-specific-assessments--p06",
+    "reduction-risk-potential--system-specific-assessments--p08"
+   ],
+   "cjStep": "recognize-cues",
+   "integratedProcess": "nursing-process",
+   "type": "matrix",
+   "difficulty": 3,
+   "stem": "For each client, select the abnormal breath sound that the nurse is most likely to hear.",
+   "cols": [
+    "Fine crackles",
+    "Wheezes",
+    "Rhonchi",
+    "Stridor"
+   ],
+   "rows": [
+    {
+     "text": "A client with pulmonary edema from heart failure, with sounds at the bases of the lungs at the end of inspiration, like hair being rubbed together.",
+     "key": 0,
+     "why": "Fine crackles are caused by the opening of air sacs that are filled with fluid, and they are typical of pulmonary edema."
+    },
+    {
+     "text": "A client who is having an asthma attack, with high-pitched, musical sounds, mainly when breathing out.",
+     "key": 1,
+     "why": "Wheezes come from air moving through narrowed airways."
+    },
+    {
+     "text": "A client with a lot of mucus in the large airways, with low-pitched, snoring sounds that change after coughing.",
+     "key": 2,
+     "why": "Rhonchi come from secretions in the larger airways, and they often clear or change after a cough."
+    },
+    {
+     "text": "A toddler with croup, who has a harsh, high-pitched sound when breathing in.",
+     "key": 3,
+     "why": "Stridor is a sign of a narrowed upper airway and is an emergency in a child."
+    }
+   ],
+   "rationale": "Listening to the breath sounds in all lung fields, comparing sides, and noting the timing and the pitch is part of a focused respiratory assessment. New or changing sounds are put together with the breathing rate, the effort, the oxygen saturation and the symptoms.",
+   "needsReview": false
+  },
+  {
+   "id": "q-rrp-assess-04",
+   "categoryId": "reduction-risk-potential",
+   "topicId": "reduction-risk-potential--system-specific-assessments",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "reduction-risk-potential--system-specific-assessments--p04"
+   ],
+   "cjStep": "recognize-cues",
+   "integratedProcess": "clinical-judgment",
+   "type": "dragdrop",
+   "difficulty": 2,
+   "stem": "The nurse is assessing clients who have diabetes. For each finding, select whether it is a sign of hypoglycemia or of hyperglycemia with ketoacidosis.",
+   "mode": "sort",
+   "bins": [
+    "Hypoglycemia",
+    "Hyperglycemia with ketoacidosis"
+   ],
+   "items": [
+    {
+     "text": "Cool, clammy, sweaty skin.",
+     "key": 0,
+     "why": "Low glucose triggers the release of adrenaline, which causes sweating and cool, clammy skin."
+    },
+    {
+     "text": "Shakiness, hunger and a fast heartbeat.",
+     "key": 0,
+     "why": "These are also adrenaline effects and are early signs of low blood glucose."
+    },
+    {
+     "text": "Confusion and a blood glucose of 3.0 mmol/L [54 mg/dL].",
+     "key": 0,
+     "why": "The glucose is below 4.0 mmol/L, and the brain is not getting enough fuel."
+    },
+    {
+     "text": "Fruity-smelling breath with deep, fast breathing.",
+     "key": 1,
+     "why": "Ketones cause a fruity breath odour, and deep, fast breathing (Kussmaul breathing) tries to blow off carbon dioxide to correct the acidosis."
+    },
+    {
+     "text": "Extreme thirst and passing large amounts of urine.",
+     "key": 1,
+     "why": "A very high glucose pulls water into the urine, which causes dehydration, thirst and frequent urination."
+    },
+    {
+     "text": "Warm, dry, flushed skin and abdominal pain, with a blood glucose of 24.0 mmol/L [432 mg/dL].",
+     "key": 1,
+     "why": "High glucose and ketones cause dehydration, dry skin and often abdominal pain."
+    }
+   ],
+   "rationale": "Low blood glucose (hypoglycemia) comes on quickly with signs of adrenaline (sweating, shakiness, hunger) and brain effects (confusion). Ketoacidosis develops over hours to days, with dehydration, ketones, abdominal pain and deep, fast breathing. The glucose is always checked, because the signs can look alike.",
+   "needsReview": false
+  },
+  {
+   "id": "q-rrp-assess-05",
+   "categoryId": "reduction-risk-potential",
+   "topicId": "reduction-risk-potential--system-specific-assessments",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "reduction-risk-potential--system-specific-assessments--p08"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "nursing-process",
+   "type": "dragdrop",
+   "difficulty": 2,
+   "stem": "The nurse is doing a focused abdominal assessment for a client who has abdominal pain. Place the steps in the correct order.",
+   "mode": "order",
+   "items": [
+    {
+     "text": "Inspect the abdomen for shape, symmetry, the skin, scars, and movement.",
+     "why": "Looking comes first, because it does not disturb the abdomen."
+    },
+    {
+     "text": "Ask the client to empty the bladder, then lie flat with the knees slightly bent and the abdomen exposed.",
+     "why": "A comfortable and relaxed client with an empty bladder lets the abdominal muscles relax, which makes the examination more accurate."
+    },
+    {
+     "text": "Palpate lightly and then deeply, leaving any painful area until the end.",
+     "why": "Palpation comes last, because it can cause pain and muscle guarding. The painful area is left to the end so that the client stays relaxed."
+    },
+    {
+     "text": "Auscultate for bowel sounds in all four quadrants.",
+     "why": "Listening comes before percussion and palpation, because touching the abdomen can change the bowel sounds."
+    },
+    {
+     "text": "Percuss the abdomen for tympany and dullness.",
+     "why": "Percussion follows auscultation, and is done before deep palpation."
+    }
+   ],
+   "key": [
+    1,
+    0,
+    3,
+    4,
+    2
+   ],
+   "rationale": "In the abdomen the order is inspect, auscultate, percuss and palpate, and not the usual order of the other systems, because percussion and palpation can change the bowel sounds. The nurse is gentle, watches the client's face, and reports a rigid abdomen, rebound tenderness or absent bowel sounds.",
+   "needsReview": false
+  },
+  {
+   "id": "q-rrp-assess-06",
+   "categoryId": "reduction-risk-potential",
+   "topicId": "reduction-risk-potential--system-specific-assessments",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "reduction-risk-potential--system-specific-assessments--p05"
+   ],
+   "cjStep": "analyze-cues",
+   "integratedProcess": "nursing-process",
+   "type": "sata",
+   "difficulty": 2,
+   "stem": "A nurse is assessing a client with a surgical wound that is healing slowly. Which factors can delay wound healing? Select all that apply.",
+   "options": [
+    "Poor nutrition, with a low protein intake.",
+    "Diabetes with a high blood glucose.",
+    "Smoking.",
+    "A wound infection.",
+    "Long-term use of a corticosteroid.",
+    "An adequate intake of protein and fluids.",
+    "A clean wound that is kept moist with a suitable dressing.",
+    "Regular changes of position that keep pressure off the area."
+   ],
+   "optionRationales": [
+    "Correct. Protein, vitamin C and other nutrients are needed to build new tissue.",
+    "Correct. A high glucose damages small blood vessels and weakens the white blood cells, which delays healing and increases infection.",
+    "Correct. Nicotine narrows the blood vessels, so less oxygen reaches the wound.",
+    "Correct. An infection uses up the body's resources and damages the new tissue.",
+    "Correct. Corticosteroids slow the formation of new tissue and weaken the immune response.",
+    "Incorrect. Good nutrition and hydration help healing.",
+    "Incorrect. A moist, clean wound environment helps new cells to move across the wound.",
+    "Incorrect. Reducing pressure improves the blood flow and helps healing."
+   ],
+   "key": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "rationale": "Healing needs oxygen, nutrients, a good blood supply and an immune response. Poor nutrition, diabetes, smoking, infection, poor circulation, corticosteroids, older age and pressure all delay it. The nurse identifies the factors that can be changed and teaches the client about them.",
+   "needsReview": false
+  },
+  {
+   "id": "q-rrp-proc-01",
+   "categoryId": "reduction-risk-potential",
+   "topicId": "reduction-risk-potential--therapeutic-procedures",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "reduction-risk-potential--therapeutic-procedures--p07"
+   ],
+   "cjStep": "recognize-cues",
+   "integratedProcess": "nursing-process",
+   "type": "highlight",
+   "difficulty": 3,
+   "stem": "A client has a chest tube connected to a three-chamber drainage system with suction. Select the findings that need the nurse to take action.",
+   "segments": [
+    {
+     "text": "The nurse notices that "
+    },
+    {
+     "text": "the fluid in the water-seal chamber rises and falls as the client breathes",
+     "key": false,
+     "why": "This is expected. The movement (tidaling) shows that the tube is open and in the pleural space, and it stops when the lung has fully re-expanded."
+    },
+    {
+     "text": ", "
+    },
+    {
+     "text": "there is continuous bubbling in the water-seal chamber",
+     "key": true,
+     "why": "This needs action. Constant bubbling in this chamber shows an air leak, from the client's lung or from a loose connection in the system. The nurse checks the connections and tells the provider."
+    },
+    {
+     "text": ", "
+    },
+    {
+     "text": "there is gentle bubbling in the suction-control chamber",
+     "key": false,
+     "why": "This is expected when suction is on. It shows that the suction is working at the set level."
+    },
+    {
+     "text": ", "
+    },
+    {
+     "text": "a dependent loop of tubing filled with drainage hangs below the bed",
+     "key": true,
+     "why": "This needs action. Fluid trapped in a loop blocks the drainage and the air from leaving the chest. The nurse straightens the tubing so that the fluid drains down to the collection chamber."
+    },
+    {
+     "text": ", "
+    },
+    {
+     "text": "the drainage unit stands upright on the floor, below the level of the client's chest",
+     "key": false,
+     "why": "This is correct. The unit must stay upright and below the chest, so that fluid and air drain from the chest and cannot flow back."
+    },
+    {
+     "text": ", and "
+    },
+    {
+     "text": "the tubing is kinked under the client's leg",
+     "key": true,
+     "why": "This needs action. A kink blocks the drainage, and air or fluid builds up in the chest, which can cause a tension pneumothorax."
+    },
+    {
+     "text": "."
+    }
+   ],
+   "rationale": "The nurse checks the whole chest drainage system: that the tubing is straight with no kinks or dependent loops, that the unit is upright below chest level, that the water seal moves with breathing, that the suction chamber bubbles gently, and that there is no constant bubbling in the water-seal chamber. The amount and colour of drainage are recorded.",
+   "needsReview": false
+  },
+  {
+   "id": "q-rrp-proc-02",
+   "categoryId": "reduction-risk-potential",
+   "topicId": "reduction-risk-potential--therapeutic-procedures",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "reduction-risk-potential--therapeutic-procedures--p06"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "nursing-process",
+   "type": "dropdown",
+   "difficulty": 3,
+   "stem": "A client has a new nasogastric (NG) tube that will be used for feeding and medicines.",
+   "template": "A new NG tube is confirmed by {1}. Before each later feed or medicine, the nurse checks {2}.",
+   "blanks": [
+    {
+     "options": [
+      "an x-ray",
+      "the sound of air that is injected over the stomach",
+      "bubbles seen when the end of the tube is put into water"
+     ],
+     "key": 0,
+     "why": "An x-ray is the best way to confirm that the tube tip is in the stomach before it is first used. Listening for air (\"whoosh\") is not reliable. Bubbles in water do not show that the tube is not in the lungs, because a tube in the airway can also give bubbles."
+    },
+    {
+     "options": [
+      "the external length marking and the pH of the aspirate, as the facility's policy says",
+      "only that the client is not coughing",
+      "only the date on which the tube was inserted"
+     ],
+     "key": 0,
+     "why": "A change in the external mark may mean that the tube has moved. The pH of the stomach aspirate is acidic, which shows that the tip is in the stomach. The nurse stops and calls the provider if the check does not give a clear result."
+    }
+   ],
+   "rationale": "A tube in the lungs can cause aspiration pneumonia. The first placement is confirmed by an x-ray, and the placement is checked before each use with the checks that the facility's policy allows, usually the length at the nostril and the pH of the aspirate. Note on regional practice: the pH limit that shows the tube is in the stomach (often 5.0 or 5.5 or less) differs between US and Canadian policies and between facilities. The nurse follows the policy.",
+   "needsReview": true,
+   "reviewKind": "regional",
+   "reviewNote": "The pH cut-off and the method of checking placement differ between facilities, and between US and Canadian policies (often a pH of 5.0 or 5.5 or less). Check the policy of the facility where she will work."
+  },
+  {
+   "id": "q-rrp-proc-03",
+   "categoryId": "reduction-risk-potential",
+   "topicId": "reduction-risk-potential--therapeutic-procedures",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "reduction-risk-potential--therapeutic-procedures--p04"
+   ],
+   "cjStep": "generate-solutions",
+   "integratedProcess": "teaching-learning",
+   "type": "sata",
+   "difficulty": 2,
+   "stem": "A client is going home with an indwelling urinary catheter. Which instructions should the nurse include? Select all that apply.",
+   "options": [
+    "Wash the hands before and after handling the catheter or the bag.",
+    "Keep the drainage bag below the level of the bladder and off the floor.",
+    "Secure the catheter tubing to the thigh so that it does not pull.",
+    "Drink fluids as the provider advises (usually about 2 to 3 L a day unless the provider has limited fluids).",
+    "Report fever, chills, cloudy or foul-smelling urine, pain in the side or back, or no urine draining.",
+    "Disconnect the catheter from the bag each day to rinse the bag with bleach.",
+    "Lift the bag above the level of the bladder when walking, to keep it out of the way.",
+    "Drink less fluid to reduce the leaking around the catheter."
+   ],
+   "optionRationales": [
+    "Correct. Hand hygiene is the most important way to prevent a catheter-associated urinary tract infection.",
+    "Correct. A bag that is higher than the bladder lets urine flow back, and a bag on the floor picks up germs.",
+    "Correct. Pulling can injure the urethra and can let germs in.",
+    "Correct. Fluids keep the urine flowing, which flushes the system.",
+    "Correct. These may be signs of an infection or a blocked catheter.",
+    "Incorrect. Every disconnection allows germs to enter. The closed system is kept closed.",
+    "Incorrect. Urine can flow back into the bladder, and this increases the risk of infection.",
+    "Incorrect. Less fluid makes the urine concentrated, which increases the risk of infection and blockage. Leaking is reported to the provider."
+   ],
+   "key": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "rationale": "Catheter-associated urinary tract infection is one of the most common healthcare-related infections. The client and the family are taught hand hygiene, keeping the system closed, the position of the bag, securing the tube, fluids, and the signs that need a call to the provider or the community nurse.",
+   "needsReview": false
+  },
+  {
+   "id": "q-rrp-proc-04",
+   "categoryId": "reduction-risk-potential",
+   "topicId": "reduction-risk-potential--therapeutic-procedures",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "reduction-risk-potential--therapeutic-procedures--p02"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "nursing-process",
+   "type": "dragdrop",
+   "difficulty": 3,
+   "stem": "A client with a tracheostomy has noisy breathing and thick secretions, and needs suctioning. Place the steps in the correct order.",
+   "mode": "order",
+   "items": [
+    {
+     "text": "Give oxygen again, and check the breathing, the oxygen saturation and the secretions before deciding whether to suction again.",
+     "why": "The client needs time to recover between passes, and the nurse checks whether the suctioning was needed again."
+    },
+    {
+     "text": "Apply suction while withdrawing the catheter and rotating it, for no more than 10 seconds.",
+     "why": "Suction is used only while the catheter is coming out. A long suction pass causes low oxygen levels."
+    },
+    {
+     "text": "Explain the procedure, perform hand hygiene, put on the protective equipment, and give oxygen to the client before suctioning.",
+     "why": "Suctioning removes air and oxygen from the airway, so the client is given extra oxygen first. The nurse is protected from the secretions."
+    },
+    {
+     "text": "Insert the catheter gently into the tracheostomy tube without applying suction.",
+     "why": "Suction is not applied while the catheter is being passed in, because it would remove air and injure the lining of the airway."
+    },
+    {
+     "text": "Open the sterile kit, put on the sterile glove, and keep the dominant hand sterile.",
+     "why": "The catheter goes into the airway below the upper airway's defences, so it must be sterile."
+    }
+   ],
+   "key": [
+    2,
+    4,
+    3,
+    1,
+    0
+   ],
+   "rationale": "Tracheostomy suctioning is done only when needed, with sterile technique, extra oxygen before and after, no suction while the catheter goes in, and short passes of no more than about 10 seconds. The nurse watches the heart rate, the oxygen saturation and the colour, and stops if the client becomes distressed.",
+   "needsReview": false
+  },
+  {
+   "id": "q-rrp-proc-05",
+   "categoryId": "reduction-risk-potential",
+   "topicId": "reduction-risk-potential--therapeutic-procedures",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "reduction-risk-potential--therapeutic-procedures--p08"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "teaching-learning",
+   "type": "matrix",
+   "difficulty": 2,
+   "stem": "A nurse is teaching a client after abdominal surgery. For each instruction, select the device it belongs to.",
+   "cols": [
+    "Wound drain (for example, a Jackson-Pratt)",
+    "Sequential compression device",
+    "Incentive spirometer"
+   ],
+   "rows": [
+    {
+     "text": "Empty the bulb when it is half full, squeeze it flat and close it, to restore the gentle suction.",
+     "key": 0,
+     "why": "A closed-suction drain needs to be emptied and re-compressed so that it stays under suction and keeps drawing fluid from the wound."
+    },
+    {
+     "text": "Record the amount and the colour of the drainage each time it is emptied.",
+     "key": 0,
+     "why": "The amount and the colour of the drainage show if there is bleeding or infection, and are reported if they change."
+    },
+    {
+     "text": "Wear the sleeves when you are in bed or in a chair, and take them off to walk.",
+     "key": 1,
+     "why": "Compression devices help the blood flow in the legs when the client is not moving, to prevent a clot. They are not worn while walking."
+    },
+    {
+     "text": "Tell the nurse if the skin under the sleeves is red or if the legs feel numb.",
+     "key": 1,
+     "why": "The sleeves can cause pressure on the skin and nerves. The nurse checks the skin under them."
+    },
+    {
+     "text": "Sit up, seal the lips around the mouthpiece, breathe in slowly and deeply, and hold for 3 to 5 seconds.",
+     "key": 2,
+     "why": "A slow, deep breath that is held opens the air sacs and prevents atelectasis. Fast breaths do not work as well."
+    },
+    {
+     "text": "Use it about 10 times every hour while awake.",
+     "key": 2,
+     "why": "Frequent use, usually 10 breaths every hour while awake, keeps the lungs open after surgery."
+    }
+   ],
+   "rationale": "After surgery the client and the nurse share the work of preventing complications. A wound drain is emptied and recorded, compression devices are worn in bed or in a chair and checked for skin problems, and the incentive spirometer is used with slow, deep breaths every hour while awake.",
+   "needsReview": false
+  },
+  {
+   "id": "q-rrp-proc-06",
+   "categoryId": "reduction-risk-potential",
+   "topicId": "reduction-risk-potential--therapeutic-procedures",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "reduction-risk-potential--therapeutic-procedures--p03"
+   ],
+   "cjStep": "generate-solutions",
+   "integratedProcess": "teaching-learning",
+   "type": "sata",
+   "difficulty": 2,
+   "stem": "A nurse has started a peripheral IV line in a client's forearm for IV antibiotics. Which instructions should the nurse give the client? Select all that apply.",
+   "options": [
+    "Tell the nurse if you feel pain, burning, redness or swelling at the site.",
+    "Tell the nurse if the dressing is wet, loose or coming off.",
+    "Ask for help before getting up, and take the pole with you so that the tubing does not catch.",
+    "Do not change the clamp or the pump settings yourself.",
+    "Tell the nurse if the pump alarms or if the bag looks empty.",
+    "Pull on the tubing now and then to check that it is working.",
+    "Keep quiet about redness at the site, because it is normal and will go away.",
+    "Hold the arm in a bent position all day to keep the line safe."
+   ],
+   "optionRationales": [
+    "Correct. These may be signs of phlebitis or infiltration, and the line must be removed or checked.",
+    "Correct. A wet or loose dressing allows germs to enter and the catheter to move.",
+    "Correct. This prevents the tubing from pulling out and prevents falls.",
+    "Correct. A change in the flow rate can give too much or too little of the medicine.",
+    "Correct. The alarms warn of blockages and empty bags, and the nurse will fix them.",
+    "Incorrect. Pulling can dislodge the catheter and injure the vein.",
+    "Incorrect. Redness is a warning sign and is always reported.",
+    "Incorrect. Prolonged bending can kink the catheter and block the flow. The arm should be kept in a comfortable position and movement should not be forced."
+   ],
+   "key": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "rationale": "A client who understands the IV line helps to keep it safe. The nurse teaches the client to report pain, redness, swelling, leaking, a wet dressing and alarms, not to adjust the equipment, and to take care when moving around.",
+   "needsReview": false
+  }
+ ]
+}

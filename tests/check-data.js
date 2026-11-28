@@ -191,13 +191,14 @@ function allText(x, out = []) { if (typeof x === "string") out.push(x); else if 
 const NUM = "(\\d+(?:\\.\\d+)?)";
 const UNIT_PAIRS = [
   { name: "glucose / calcium / magnesium mmol/L [mg/dL]", re: new RegExp(NUM + " mmol\\/L \\[" + NUM + " mg\\/dL\\]", "g"),
-    ok: (a, b, before) => /calcium/i.test(before) ? Math.abs(a * 4.008 - b) <= 0.06 : /magnesium/i.test(before) ? Math.abs(a * 2.431 - b) <= 0.06 : Math.abs(a * 18 - b) <= 1 },
+    ok: (a, b, before) => /calcium/i.test(before) ? Math.abs(a * 4.008 - b) <= 0.06 : /magnesium/i.test(before) ? Math.abs(a * 2.431 - b) <= 0.06 : /urea|BUN/i.test(before) ? Math.abs(a * 2.801 - b) <= 0.6 : Math.abs(a * 18 - b) <= 1 },
   { name: "temperature °C [°F]", re: new RegExp(NUM + " °C \\[" + NUM + " °F\\]", "g"), ok: (a, b) => Math.abs(a * 1.8 + 32 - b) <= 0.06 },
   { name: "digoxin ng/mL [nmol/L]", re: new RegExp(NUM + " ng\\/mL \\[" + NUM + " nmol\\/L\\]", "g"), ok: (a, b) => Math.abs(a * 1.281 - b) <= 0.06 },
   { name: "hemoglobin g/L [g/dL]", re: new RegExp(NUM + " g\\/L \\[" + NUM + " g\\/dL\\]", "g"), ok: (a, b) => Math.abs(a / 10 - b) <= 0.051 },
   { name: "potassium / sodium mmol/L [mEq/L]", re: new RegExp(NUM + " mmol\\/L \\[" + NUM + " mEq\\/L\\]", "g"), ok: (a, b) => a === b },
   { name: "pressure mmHg [kPa]", re: new RegExp(NUM + " mmHg \\[" + NUM + " kPa\\]", "g"), ok: (a, b) => Math.abs(a / 7.5 - b) <= 0.06 },
-  { name: "creatinine µmol/L [mg/dL]", re: new RegExp(NUM + " µmol\\/L \\[" + NUM + " mg\\/dL\\]", "g"), ok: (a, b) => Math.abs(a / 88.4 - b) <= 0.06 },
+  { name: "creatinine µmol/L [mg/dL]", re: new RegExp(NUM + " µmol\\/L \\[" + NUM + " mg\\/dL\\]", "g"), ok: (a, b, before) => /bilirubin/i.test(before) ? Math.abs(a / 17.1 - b) <= 0.06 : Math.abs(a / 88.4 - b) <= 0.06 },
+  { name: "HbA1c % [mmol/mol]", re: new RegExp(NUM + "% \\[" + NUM + " mmol\\/mol\\]", "g"), ok: (a, b) => Math.abs((a - 2.15) * 10.929 - b) <= 1 },
   { name: "weight kg [lb]", re: new RegExp(NUM + " kg \\[" + NUM + " lb\\]", "g"), ok: (a, b) => Math.abs(a * 2.205 - b) <= 0.6 },
   { name: "length cm [in]", re: new RegExp(NUM + " cm \\[" + NUM + " in\\]", "g"), ok: (a, b) => Math.abs(a / 2.54 - b) <= 0.6 }
 ];
@@ -265,6 +266,19 @@ function checkChecks(q, E) {
       if (f.flag !== c.flag) W(`the lookup says ${c.name} ${c.value} is ${f.flag}, the check says ${c.flag}`);
       if (!text.includes(String(c.value))) W(`the question text does not show "${c.value}"`);
       if (ans !== undefined && !a.includes(c.flag)) W(`the keyed answer "${ans}" does not say "${c.flag}"`);
+    } else if (c.kind === "vital") {
+      const f = interpret.vitalFlag(c.name, c.value);
+      if (f.invalid) return W(f.invalid);
+      if (f.flag !== c.flag) W(`the lookup says ${c.name} ${c.value} is ${f.flag}, the check says ${c.flag}`);
+      if (!text.includes(String(c.value))) W(`the question text does not show "${c.value}"`);
+      if (ans !== undefined && !a.includes(c.flag)) W(`the keyed answer "${ans}" does not say "${c.flag}"`);
+    } else if (c.kind === "gcs") {
+      const g = interpret.gcs(c.e, c.v, c.m);
+      if (g.invalid) return W(g.invalid);
+      if (g.total !== c.total) W(`eye ${c.e} + verbal ${c.v} + motor ${c.m} = ${g.total}, but the check says ${c.total}`);
+      if (c.severity !== undefined && g.severity !== c.severity) W(`a GCS of ${g.total} is ${g.severity}, but the check says ${c.severity}`);
+      [`E${c.e}`, `V${c.v}`, `M${c.m}`].forEach(t => { if (!text.includes(t)) W(`the question text does not show "${t}"`); });
+      if (ans !== undefined && !a.includes(c.what === "severity" ? g.severity : String(g.total))) W(`the keyed answer "${ans}" does not say "${c.what === "severity" ? g.severity : g.total}"`);
     } else if (c.kind === "ecg") {
       if (!interpret.RHYTHM_NAME[c.rhythm] || ans === undefined) return W("needs a known rhythm and a ref");
       if (!a.includes(interpret.RHYTHM_NAME[c.rhythm])) W(`the keyed answer "${ans}" does not name the rhythm shown on the strip ("${interpret.RHYTHM_NAME[c.rhythm]}")`);
