@@ -35,7 +35,7 @@ const T = {
   medAdmin: "pharmacological-parenteral--medication-administration", dose: "pharmacological-parenteral--dosage-calculations",
   dev: "health-promotion--developmental-stages-and-transitions", fluid: "physiological-adaptation--fluid-and-electrolyte-imbalances"
 };
-const BANK_FILES = ["management-of-care", "pharmacological-parenteral", "physiological-adaptation", "safety-infection-control", "reduction-risk-potential"]; // question banks in data/questions/
+const BANK_FILES = ["management-of-care", "pharmacological-parenteral", "physiological-adaptation", "safety-infection-control", "reduction-risk-potential", "health-promotion"]; // question banks in data/questions/
 const BANK = BANK_FILES.flatMap(c => JSON.parse(fs.readFileSync(path.join(root, "data/questions/" + c + ".json"), "utf8")).questions);
 // The first topic that has no questions in any bank yet (used to test the "no questions" messages; it changes as banks are added).
 const HAS_Q = new Set([...JSON.parse(fs.readFileSync(path.join(root, "data/questions.json"), "utf8")).questions.map(q => q.topic), ...BANK.map(q => q.topicId)]);

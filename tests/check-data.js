@@ -84,6 +84,7 @@ const NGN_TYPES = new Set(["matrix", "dropdown", "highlight", "dragdrop", "bowti
 const ALL_TYPES = new Set(["mcq", "sata", "numeric", ...NGN_TYPES]); // numeric (calculation) is not a Next Gen type
 const calc = require("./calc");
 const interpret = require("./interpret");
+const refRanges = require("./reference-ranges"); // age-based ranges and growth / development facts
 const cjIds = new Set(syl.clinicalJudgmentSteps.map(s => s.id)), ipIds = new Set(syl.integratedProcesses.map(p => p.id));
 const topicCat = {}, pointTopic = {};
 syl.categories.forEach(c => c.topics.forEach(t => { topicCat[t.id] = c.id; t.learningPoints.forEach(p => pointTopic[p.id] = t.id); }));
@@ -286,8 +287,18 @@ function checkChecks(q, E) {
       const want = interpret.RHYTHM_ACTION[c.rhythm + ":" + c.context];
       if (!want || ans === undefined) return W("needs a known rhythm, a context (pulseless / symptomatic / stable) and a ref");
       if (!want.test(ans)) W(`for ${c.rhythm} (${c.context}) the keyed answer "${ans}" should match ${want}`);
+    } else if (refRanges.KINDS.includes(c.kind)) {
+      refRanges.verify(c, { text, ans, a }).forEach(W);
     } else W("unknown kind");
   });
+  // A question that gives a child's vital signs, or a birth-weight milestone, must carry a check that ties it to tests/reference-ranges.js.
+  const qText = allText({ ...q, checks: undefined, id: undefined, categoryId: undefined, topicId: undefined, secondaryTopicIds: undefined, learningPointIds: undefined }).join(" \n "); // question text only (the ids contain words such as "newborn")
+  const childAge = /(\d+(?:\.\d+)?)[- ](day|week|month|year)s?[- ]old/gi;
+  let isChild = /\b(newborn|infant|toddler|preschooler|school-age child|adolescent)\b/i.test(qText);
+  for (const m of qText.matchAll(childAge)) { const n = +m[1], mo = /day/i.test(m[2]) ? 0 : /week/i.test(m[2]) ? 0 : /month/i.test(m[2]) ? n : n * 12; if (mo < 216) isChild = true; }
+  if (isChild && /(heart rate|pulse|respiratory rate|respirations|blood pressure)[^.;]{0,50}?\d/i.test(qText) && !checks.some(c => c.kind === "peds-vital"))
+    E("the question gives a child's vital signs, so it needs a peds-vital check (tests/reference-ranges.js)");
+  if (/birth weight/i.test(qText) && /(doubl|tripl)/i.test(qText) && !checks.some(c => c.kind === "weight-milestone")) E("the question mentions doubling or tripling the birth weight, so it needs a weight-milestone check");
   const strips = [];
   if (q.exhibit && q.exhibit.ecg) strips.push({ rhythm: q.exhibit.ecg.rhythm, ref: null });
   (q.rows || []).forEach((r, i) => r.ecg && strips.push({ rhythm: r.ecg.rhythm, ref: `rows.${i}` }));
@@ -352,7 +363,7 @@ bankFiles.forEach(f => {
     const quota = quotas[t.id] !== undefined ? quotas[t.id] : 4, have = perTopic[t.id] || 0;
     if (have < quota) errors.push(`${f}: topic ${t.id} has ${have} questions, needs ${quota}`);
     if (file.quotas && have > quota) errors.push(`${f}: topic ${t.id} has ${have} questions but its quota is ${quota}`);
-    const want = Math.min(quota, t.learningPoints.length), got = (firstPoints[t.id] || new Set()).size;
+    const want = file.minFirstPoints && file.minFirstPoints[t.id] !== undefined ? file.minFirstPoints[t.id] : Math.min(quota, t.learningPoints.length), got = (firstPoints[t.id] || new Set()).size;
     if (got < want) errors.push(`${f}: topic ${t.id} covers only ${got} different learning points (first learningPointId of each question), needs ${want}`);
   });
   const ngn = file.questions.filter(q => NGN_TYPES.has(q.type)).length;
