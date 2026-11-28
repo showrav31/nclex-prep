@@ -22,12 +22,19 @@ function openSheet(html, onClose) {
   if (!sheetOpen) history.pushState({ sheet: 1 }, "", location.hash || "#home");
   sheetOpen = true; sheetClosed = onClose || null;
 }
-function closeSheet() { if (sheetOpen) history.back(); }
+/* Close the sheet (Android Back does the same). `after` runs once it is closed, e.g. to start a quiz. */
+let sheetAfter = null;
+function closeSheet(after) {
+  if (!sheetOpen) { if (after) after(); return; }
+  sheetAfter = after || null;
+  history.back();
+}
 function sheetGone() {
   sheetOpen = false;
   const f = sheetClosed; sheetClosed = null;
   if (f) f(); // runs while the sheet's inputs still exist, so it can save them
   $("sheet").hidden = true; $("sheetBody").innerHTML = "";
+  const a = sheetAfter; sheetAfter = null; if (a) a();
 }
 $("sheet").addEventListener("click", e => { if (e.target.id === "sheet") closeSheet(); });
 function onPop() { if (sheetOpen) return sheetGone(); show(); }
@@ -37,8 +44,8 @@ const sheetHead = title => `<div class="sheet-head"><h3>${title}</h3><button cla
 const DATA = ["syllabus", "questions", "plan", "canada", "reference", "exam-guide"];
 Promise.all(DATA.map(f => fetch("data/" + f + ".json").then(r => { if (!r.ok) throw new Error(f); return r.json(); })))
   .then(([syl, qs, plan, can, ref, guide]) => {
-    CATS = syl.categories; PHASES = plan.phases; CAN = can; REF = ref; GUIDE = guide;
-    CATS.forEach(c => { CAT[c.id] = c; c.topics.forEach(t => TOPIC[t.id] = { ...t, cat: c.id }); });
+    PHASES = plan.phases; CAN = can; REF = ref; GUIDE = guide;
+    indexSyllabus(syl); // js/syllabus.js: CATS, CAT, TOPIC, ...
     Q = qs.questions.filter(q => TOPIC[q.topic]); // skip any question whose topic was removed
     start();
   })
@@ -52,7 +59,7 @@ if ("serviceWorker" in navigator) {
 
 function start() {
   $("loading").hidden = true;
-  renderCats(); renderFilter(); renderFacts(); drawCat(); renderCJ(); renderPrio(); renderTypes(); renderDay();
+  renderCats(); renderPlanInfo(); renderFilter(); renderFacts(); drawCat(); renderCJ(); renderPrio(); renderTypes(); renderDay();
   renderQuick(); renderCan(); renderSettings(); renderLook();
   document.querySelectorAll("#tabbar button").forEach(b => b.onclick = () => go(b.dataset.go));
   document.querySelectorAll("#learnTabs button").forEach(b => b.onclick = () => go("learn", b.dataset.sub));
@@ -168,9 +175,7 @@ function renderHome() {
 }
 
 function renderStats() {
-  let tot = 0, conf = 0;
-  CATS.forEach(c => c.topics.forEach(t => { tot++; if (S.lv[t.id] == 3) conf++; }));
-  $("sSyl").textContent = tot ? Math.round(conf / tot * 100) + "%" : "0%";
+  $("sSyl").textContent = Math.round(syllabusProgress().weighted * 100) + "%"; // weighted by each category's weightMid
   let pt = 0, pd = 0;
   PHASES.forEach(p => p.tasks.forEach(t => { pt++; if (S.plan[t.id]) pd++; }));
   $("sPlan").textContent = pt ? Math.round(pd / pt * 100) + "%" : "0%";
@@ -216,7 +221,7 @@ function renderTask() {
     <div class="row"><button class="btn ghost" onclick="startQuiz('${cat.id}')">Practise more</button><button class="btn ghost" onclick="taskDone(false)">Undo</button></div>`;
   } else {
     h += `<ol>
-    <li>📖 <b>Review the topic</b> for about ${read} min in your textbook or notes. <a href="#learn/syllabus" onclick="event.preventDefault();openCat('${cat.id}')">See it in the syllabus</a></li>
+    <li>📖 <b>Review the topic</b> for about ${read} min in your textbook or notes. <a href="#" onclick="event.preventDefault();openTopic('${t.topic}')">Open the topic: learning points</a></li>
     ${qn ? `<li>✍️ <b>Answer ${qn} questions</b> on ${cat.short}.<br><button class="btn" style="margin-top:6px" onclick="startQuiz('${cat.id}',${qn},true)">Start practice ▶</button></li>` : ""}
     ${m >= 60 ? `<li>🧪 <b>10 min quick review</b>: <a href="#learn/quick">lab values & drug suffixes</a></li>` : ""}
     <li>📝 <a href="#" onclick="event.preventDefault();editTopicNote('${t.topic}')">${S.notes[t.topic] && S.notes[t.topic].text ? "Open my notes" : "Write notes"} on this topic</a> · ⏱️ <a href="#" onclick="event.preventDefault();openTimer('${t.topic}')">Start the study timer</a></li>
@@ -237,43 +242,6 @@ function openCat(cid) {
   pendingScroll = $("c-" + cid);
   if (pendingScroll) pendingScroll.classList.add("open");
   go("learn", "syllabus");
-}
-
-/* ---------- SYLLABUS ---------- */
-function renderCats() {
-  const open = [...document.querySelectorAll("#cats .open")].map(e => e.id);
-  let h = "", lastG = "";
-  CATS.forEach(c => {
-    if (c.group !== lastG) { h += `<div class="group">${c.group}</div>`; lastG = c.group; }
-    const nq = Q.filter(q => catOf(q) === c.id).length;
-    h += `<div class="card" id="c-${c.id}"><div class="head" onclick="this.parentNode.classList.toggle('open')"><h3>${c.name}</h3><span class="pill">${c.weight} of exam</span></div><div class="bar"><i id="b-${c.id}"></i></div><div class="note" id="p-${c.id}" style="margin-top:6px"></div><div class="body">
-    <button class="btn ghost" style="margin-bottom:8px" onclick="startQuiz('${c.id}')">Practise ${nq} questions on this ▶</button>`;
-    c.topics.forEach(t => {
-      const k = t.id, v = S.lv[k] || 0;
-      const hasNote = S.notes[k] && S.notes[k].text;
-      h += `<div class="topic"><span>${t.name}</span><div class="lvl">${["Weak", "OK", "Confident"].map((l, i) => `<button class="s${i + 1} ${v == i + 1 ? "on" : ""}" onclick="setLv('${k}',${i + 1})">${l}</button>`).join("")}<button class="iconbtn ${hasNote ? "has" : ""}" onclick="editTopicNote('${k}')" aria-label="Notes on ${esc(t.name)}">📝</button></div></div>`;
-    });
-    h += `</div></div>`;
-  });
-  $("cats").innerHTML = h;
-  open.forEach(id => $(id) && $(id).classList.add("open"));
-  catBars();
-}
-
-/* keep=true: set the rating (don't toggle it off when tapped twice) */
-function setLv(k, v, keep) {
-  S.lv[k] = !keep && S.lv[k] == v ? 0 : v;
-  markActive(); save(); renderCats();
-}
-
-function catBars() {
-  CATS.forEach(c => {
-    let conf = 0, weak = 0;
-    c.topics.forEach(t => { const v = S.lv[t.id]; if (v == 3) conf++; if (v == 1) weak++; });
-    $("b-" + c.id).style.width = (conf / c.topics.length * 100) + "%";
-    const st = S.stat[c.id];
-    $("p-" + c.id).textContent = `${conf}/${c.topics.length} confident${weak ? ` · ${weak} weak` : ""}${st ? ` · quiz ${Math.round(st.c / st.n * 100)}%` : ""} · tap to open`;
-  });
 }
 
 /* ---------- STUDY PLAN ---------- */
@@ -324,7 +292,7 @@ function startQuiz(cid, n, fromTask) {
 
 /* Start a quiz on a given list. opts: {task, cat, mode: "retry"} */
 function runQuiz(list, opts) {
-  QZ = Object.assign({ list, i: 0, score: 0, sel: [], sub: false, task: false, cat: "", mode: "" }, opts);
+  QZ = Object.assign({ list, i: 0, score: 0, sel: [], sub: false, task: false, cat: "", mode: "", topic: "" }, opts);
   $("quiz").hidden = false;
   drawQ();
   pendingScroll = $("quiz");
@@ -396,7 +364,7 @@ function finishQuiz() {
     taskMsg = `<p><b>🎉 Today's task is done!</b> Rate the topic on Home.</p>`;
   }
   save(); renderCats();
-  $("quiz").innerHTML = `<div style="text-align:center;padding:10px"><div style="font-size:3rem">${p >= 80 ? "🌟" : p >= 60 ? "💪" : "📚"}</div><h2>${z.score} / ${z.list.length} (${p}%)</h2><p class="note">${p >= 80 ? "Excellent! Move these topics toward Confident." : p >= 60 ? "Good work, keep going. Review the rationales you missed." : "Topics you missed were marked Weak in the Syllabus. Review them, then try again."}</p>${taskMsg}<div class="row" style="justify-content:center">${z.mode === "retry" ? `<button class="btn" onclick="go('practice','mistakes')">See my mistakes</button>` : `<button class="btn" onclick="startQuiz()">Another round</button>`}${z.task ? `<button class="btn ghost" onclick="go('home')">Back to Home</button>` : ""}</div></div>`;
+  $("quiz").innerHTML = `<div style="text-align:center;padding:10px"><div style="font-size:3rem">${p >= 80 ? "🌟" : p >= 60 ? "💪" : "📚"}</div><h2>${z.score} / ${z.list.length} (${p}%)</h2><p class="note">${p >= 80 ? "Excellent! Move these topics toward Confident." : p >= 60 ? "Good work, keep going. Review the rationales you missed." : "Topics you missed were marked Weak in the Syllabus. Review them, then try again."}</p>${taskMsg}<div class="row" style="justify-content:center">${z.mode === "retry" ? `<button class="btn" onclick="go('practice','mistakes')">See my mistakes</button>` : z.topic ? `<button class="btn" onclick="startTopicQuiz('${z.topic}')">Another round</button><button class="btn ghost" onclick="openTopic('${z.topic}')">Open the topic</button>` : `<button class="btn" onclick="startQuiz()">Another round</button>`}${z.task ? `<button class="btn ghost" onclick="go('home')">Back to Home</button>` : ""}</div></div>`;
 }
 
 /* ---------- PROGRESS ---------- */

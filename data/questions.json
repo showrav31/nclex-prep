@@ -2,7 +2,7 @@
  "questions": [
   {
    "id": "q-moc-delegate-ucp",
-   "topic": "moc-delegation",
+   "topic": "management-of-care--assignment-delegation-and-supervision",
    "type": "mcq",
    "stem": "The RN is caring for four clients. Which task is most appropriate to delegate to an unregulated care provider (UCP/PSW)?",
    "options": [
@@ -18,7 +18,7 @@
   },
   {
    "id": "q-moc-see-first-opioid",
-   "topic": "moc-priorities",
+   "topic": "management-of-care--establishing-priorities",
    "type": "mcq",
    "stem": "After receiving report, which client should the nurse see first?",
    "options": [
@@ -34,7 +34,7 @@
   },
   {
    "id": "q-moc-consent-role",
-   "topic": "moc-informed-consent",
+   "topic": "management-of-care--informed-consent",
    "type": "mcq",
    "stem": "A client scheduled for surgery asks the nurse what the surgeon will be removing. What is the nurse's role regarding informed consent?",
    "options": [
@@ -50,7 +50,7 @@
   },
   {
    "id": "q-moc-confidentiality",
-   "topic": "moc-confidentiality",
+   "topic": "management-of-care--confidentiality-information-security",
    "type": "sata",
    "stem": "Which actions by a nurse protect client confidentiality? Select all that apply.",
    "options": [
@@ -69,7 +69,7 @@
   },
   {
    "id": "q-moc-dnr",
-   "topic": "moc-advance-directives",
+   "topic": "management-of-care--advance-directives-self-determination-life-planning",
    "type": "mcq",
    "stem": "A competent adult client with a valid DNR order goes into cardiac arrest. The daughter shouts, 'Do everything!' What should the nurse do?",
    "options": [
@@ -85,7 +85,7 @@
   },
   {
    "id": "q-safety-cdiff-hand-hygiene",
-   "topic": "safety-precautions",
+   "topic": "safety-infection-control--standard-precautions-transmission-based-precautions-surgical-asepsis",
    "type": "mcq",
    "stem": "A client is diagnosed with Clostridioides difficile. Which hand hygiene is required after care?",
    "options": [
@@ -101,7 +101,7 @@
   },
   {
    "id": "q-safety-fire-race",
-   "topic": "safety-emergency-triage",
+   "topic": "safety-infection-control--emergency-response-plan",
    "type": "mcq",
    "stem": "A nurse discovers a fire in a client's room. Using RACE, what is the FIRST action?",
    "options": [
@@ -117,7 +117,7 @@
   },
   {
    "id": "q-safety-wrist-restraint",
-   "topic": "safety-restraints",
+   "topic": "safety-infection-control--use-of-restraints-safety-devices",
    "type": "sata",
    "stem": "A client has a prescribed wrist restraint. Which actions are correct? Select all that apply.",
    "options": [
@@ -136,7 +136,7 @@
   },
   {
    "id": "q-safety-tb-precautions",
-   "topic": "safety-precautions",
+   "topic": "safety-infection-control--standard-precautions-transmission-based-precautions-surgical-asepsis",
    "type": "mcq",
    "stem": "A client with suspected pulmonary tuberculosis is admitted. Which precautions should the nurse implement?",
    "options": [
@@ -152,7 +152,7 @@
   },
   {
    "id": "q-health-infant-weight",
-   "topic": "health-growth-development",
+   "topic": "health-promotion--developmental-stages-and-transitions",
    "type": "mcq",
    "stem": "A parent asks when their baby's weight should triple. The nurse answers:",
    "options": [
@@ -168,7 +168,7 @@
   },
   {
    "id": "q-health-boggy-uterus",
-   "topic": "health-maternal-newborn",
+   "topic": "health-promotion--ante-intra-postpartum-and-newborn-care",
    "type": "mcq",
    "stem": "One hour after delivery, the nurse finds a boggy uterus above the umbilicus with heavy lochia. What is the FIRST action?",
    "options": [
@@ -184,7 +184,7 @@
   },
   {
    "id": "q-health-mmr-pregnancy",
-   "topic": "health-prevention-immunizations",
+   "topic": "health-promotion--health-promotion-disease-prevention",
    "type": "mcq",
    "stem": "Which vaccine is contraindicated during pregnancy?",
    "options": [
@@ -200,7 +200,7 @@
   },
   {
    "id": "q-psych-therapeutic-response",
-   "topic": "psych-therapeutic-communication",
+   "topic": "psychosocial-integrity--therapeutic-communication",
    "type": "mcq",
    "stem": "A client says, 'I don't think I'll ever get better.' Which response is most therapeutic?",
    "options": [
@@ -216,7 +216,7 @@
   },
   {
    "id": "q-psych-alcohol-withdrawal",
-   "topic": "psych-substance-use",
+   "topic": "psychosocial-integrity--chemical-and-other-dependencies-substance-use-disorder",
    "type": "mcq",
    "stem": "A client with heavy alcohol use was admitted 48 hours ago and is now tremulous, confused and hallucinating, with HR 124. The nurse anticipates which priority medication?",
    "options": [
@@ -232,7 +232,7 @@
   },
   {
    "id": "q-psych-lithium-toxicity",
-   "topic": "psych-mental-health",
+   "topic": "psychosocial-integrity--mental-health-concepts",
    "type": "sata",
    "stem": "A client taking lithium has a level of 2.0 mEq/L. Which findings would the nurse expect? Select all that apply.",
    "options": [
@@ -251,7 +251,7 @@
   },
   {
    "id": "q-psych-suicide-warning",
-   "topic": "psych-crisis",
+   "topic": "psychosocial-integrity--crisis-intervention",
    "type": "mcq",
    "stem": "A client with depression who has been withdrawn suddenly seems calm and is giving away personal belongings. What is the nurse's priority?",
    "options": [
@@ -267,7 +267,7 @@
   },
   {
    "id": "q-basic-pressure-injury",
-   "topic": "basic-mobility",
+   "topic": "basic-care-comfort--mobility-immobility",
    "type": "mcq",
    "stem": "Which intervention best prevents pressure injuries in an immobile client?",
    "options": [
@@ -283,7 +283,7 @@
   },
   {
    "id": "q-basic-crutches-stairs",
-   "topic": "basic-assistive-devices",
+   "topic": "basic-care-comfort--assistive-devices",
    "type": "mcq",
    "stem": "A client is learning to go UP stairs with crutches. Which instruction is correct?",
    "options": [
@@ -299,7 +299,7 @@
   },
   {
    "id": "q-basic-low-sodium",
-   "topic": "basic-nutrition",
+   "topic": "basic-care-comfort--nutrition-and-oral-hydration",
    "type": "mcq",
    "stem": "A client on a low-sodium diet chooses lunch. Which choice shows understanding?",
    "options": [
@@ -315,7 +315,7 @@
   },
   {
    "id": "q-pharm-digoxin-hold",
-   "topic": "pharm-high-alert",
+   "topic": "pharmacological-parenteral--medication-administration",
    "type": "mcq",
    "stem": "Before giving digoxin, the nurse finds an apical pulse of 54/min. What should the nurse do?",
    "options": [
@@ -331,7 +331,7 @@
   },
   {
    "id": "q-pharm-heparin-antidote",
-   "topic": "pharm-adverse-effects",
+   "topic": "pharmacological-parenteral--adverse-effects-contraindications-side-effects-interactions",
    "type": "mcq",
    "stem": "Which medication is the antidote for heparin?",
    "options": [
@@ -347,7 +347,7 @@
   },
   {
    "id": "q-pharm-amoxicillin-dose",
-   "topic": "pharm-dosage-calculation",
+   "topic": "pharmacological-parenteral--dosage-calculations",
    "type": "mcq",
    "stem": "The order is amoxicillin 250 mg PO. Available: 125 mg/5 mL. How many mL should the nurse give?",
    "options": [
@@ -363,7 +363,7 @@
   },
   {
    "id": "q-pharm-iv-potassium",
-   "topic": "pharm-iv-therapy",
+   "topic": "pharmacological-parenteral--parenteral-intravenous-therapies",
    "type": "mcq",
    "stem": "Which statement about IV potassium chloride is correct?",
    "options": [
@@ -379,7 +379,7 @@
   },
   {
    "id": "q-pharm-insulin-facts",
-   "topic": "pharm-high-alert",
+   "topic": "pharmacological-parenteral--medication-administration",
    "type": "sata",
    "stem": "Which insulin facts are correct? Select all that apply.",
    "options": [
@@ -399,7 +399,7 @@
   },
   {
    "id": "q-pharm-transfusion-reaction",
-   "topic": "pharm-blood-products",
+   "topic": "pharmacological-parenteral--blood-and-blood-products",
    "type": "mcq",
    "stem": "Ten minutes into a blood transfusion, the client reports back pain and chills; temperature rises. The nurse's FIRST action is:",
    "options": [
@@ -415,7 +415,7 @@
   },
   {
    "id": "q-risk-hyperkalemia",
-   "topic": "risk-lab-values",
+   "topic": "reduction-risk-potential--laboratory-values",
    "type": "mcq",
    "stem": "A client's potassium is 6.2 mEq/L. What is the nurse's priority action?",
    "options": [
@@ -431,7 +431,7 @@
   },
   {
    "id": "q-risk-cardiac-cath",
-   "topic": "risk-procedure-complications",
+   "topic": "reduction-risk-potential--potential-for-complications-of-diagnostic-tests-treatments-procedures",
    "type": "mcq",
    "stem": "After a cardiac catheterization through the femoral artery, which action is the priority?",
    "options": [
@@ -447,7 +447,7 @@
   },
   {
    "id": "q-risk-thyroidectomy-calcium",
-   "topic": "risk-system-assessments",
+   "topic": "reduction-risk-potential--system-specific-assessments",
    "type": "mcq",
    "stem": "After a thyroidectomy, the client reports tingling around the mouth. The nurse suspects:",
    "options": [
@@ -463,7 +463,7 @@
   },
   {
    "id": "q-risk-postop-hemorrhage",
-   "topic": "risk-vital-signs",
+   "topic": "reduction-risk-potential--changes-abnormalities-in-vital-signs",
    "type": "matrix",
    "stem": "A client is 6 hours post abdominal surgery. For each finding, mark whether it needs FOLLOW-UP or is EXPECTED.",
    "cols": [
@@ -496,7 +496,7 @@
   },
   {
    "id": "q-phys-abg-resp-acidosis",
-   "topic": "phys-acid-base",
+   "topic": "physiological-adaptation--fluid-and-electrolyte-imbalances",
    "type": "mcq",
    "stem": "ABG: pH 7.30, PaCO₂ 52 mmHg, HCO₃⁻ 24 mEq/L. Interpret.",
    "options": [
@@ -512,7 +512,7 @@
   },
   {
    "id": "q-phys-dka-fluids",
-   "topic": "phys-medical-emergencies",
+   "topic": "physiological-adaptation--medical-emergencies",
    "type": "mcq",
    "stem": "A client arrives with diabetic ketoacidosis (glucose 32 mmol/L, Kussmaul respirations). What is the FIRST priority intervention?",
    "options": [
@@ -528,7 +528,7 @@
   },
   {
    "id": "q-phys-anaphylaxis",
-   "topic": "phys-medical-emergencies",
+   "topic": "physiological-adaptation--medical-emergencies",
    "type": "mcq",
    "stem": "A client develops hives, wheezing and throat tightness after an antibiotic. The FIRST medication is:",
    "options": [
@@ -544,7 +544,7 @@
   },
   {
    "id": "q-phys-stroke-ct",
-   "topic": "phys-medical-emergencies",
+   "topic": "physiological-adaptation--medical-emergencies",
    "type": "mcq",
    "stem": "A client presents with sudden right-sided weakness and slurred speech that began 1 hour ago. Before thrombolytics, which test is essential?",
    "options": [
@@ -560,7 +560,7 @@
   },
   {
    "id": "q-phys-hf-teaching",
-   "topic": "phys-illness-management",
+   "topic": "physiological-adaptation--illness-management",
    "type": "matrix",
    "stem": "A client has heart failure. Mark each instruction INDICATED or NOT INDICATED for discharge teaching.",
    "cols": [

@@ -3,7 +3,7 @@
 
 const answered = () => Object.values(S.stat).reduce((s, x) => s + (x.n || 0), 0);
 const timerMinutes = () => Object.values(S.study).reduce((s, d) => s + Object.values(d).reduce((a, b) => a + b, 0), 0);
-const confidentShare = () => { let t = 0, c = 0; CATS.forEach(k => k.topics.forEach(x => { t++; if (S.lv[x.id] == 3) c++; })); return t ? c / t : 0; };
+const confidentShare = () => syllabusProgress().weighted; // weighted by category weight
 
 const BADGES = [
   { id: "first-question", ic: "🌱", name: "First step", desc: "Answer your first question", test: () => answered() >= 1 },
@@ -12,7 +12,7 @@ const BADGES = [
   { id: "streak-7", ic: "🔥", name: "7-day streak", desc: "Study 7 days in a row", test: () => streak() >= 7 },
   { id: "streak-30", ic: "🌟", name: "30-day streak", desc: "Study 30 days in a row", test: () => streak() >= 30 },
   { id: "category-confident", ic: "🎯", name: "Category mastered", desc: "Rate every topic in one category Confident", test: () => CATS.some(c => c.topics.every(t => S.lv[t.id] == 3)) },
-  { id: "syllabus-half", ic: "📚", name: "Halfway there", desc: "Half of all topics Confident", test: () => confidentShare() >= .5 },
+  { id: "syllabus-half", ic: "📚", name: "Halfway there", desc: "Half the syllabus Confident", test: () => confidentShare() >= .5 },
   { id: "syllabus-all", ic: "🎓", name: "Exam ready", desc: "Every topic Confident", test: () => confidentShare() >= 1 },
   { id: "cards-100", ic: "🃏", name: "Card shark", desc: "Review 100 flashcards", test: () => S.fcReviews >= 100 },
   { id: "first-note", ic: "📝", name: "Note taker", desc: "Write your first note", test: () => Object.keys(S.notes).length > 0 || S.freeNotes.some(n => (n.text || "").trim()) },

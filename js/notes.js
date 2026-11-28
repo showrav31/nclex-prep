@@ -5,18 +5,6 @@ let noteTimer = null;
 const nowIso = () => new Date().toISOString();
 function later(fn) { clearTimeout(noteTimer); noteTimer = setTimeout(fn, 500); }
 
-function editTopicNote(tid) {
-  const t = TOPIC[tid];
-  if (!t) return;
-  const n = S.notes[tid] || { text: "" };
-  openSheet(sheetHead("📝 " + esc(t.name)) +
-    `<p class="note" style="margin-top:0">${esc(CAT[t.cat].name)}</p>
-     <textarea id="noteText" rows="10" placeholder="Key facts, mnemonics, what confuses you…">${esc(n.text)}</textarea>
-     <p class="note">Saved automatically.</p>`,
-    () => { clearTimeout(noteTimer); saveTopicNote(tid, $("noteText").value); renderCats(); refreshNotesViews(); });
-  $("noteText").oninput = e => later(() => saveTopicNote(tid, e.target.value));
-}
-
 function saveTopicNote(tid, text) {
   const old = S.notes[tid];
   if (!text.trim()) { if (old) { delete S.notes[tid]; save(); } return; }

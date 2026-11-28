@@ -7,6 +7,7 @@ A mobile-first study app for the NCLEX-RN: the official Client Needs syllabus wi
 ## Files
 - `index.html`, `css/style.css`, `js/*.js`: the app
 - `data/*.json`: syllabus, questions, study plan, Canada roadmap, quick reference, exam guide
+- `source/nclex-2026-syllabus.json`: the official 2026 NCLEX-RN Test Plan syllabus data (source of truth; `data/syllabus.json` is an exact copy)
 - `sw.js`: offline support (bump its `VERSION` on every change)
 - `tests/`: `node tests/check-data.js` and `node tests/browser-test.js`
 
@@ -16,4 +17,6 @@ Served by GitHub Pages from the `main` branch, root folder. No build step. All p
 To try it locally, serve the parent folder so the URL matches Pages (`python3 -m http.server` from the folder that contains `nclex-prep`, then open `http://localhost:8000/nclex-prep/`). Opening `index.html` directly from disk won't load the data files.
 
 ## Credits
+Portions copyrighted by the National Council of State Boards of Nursing, Inc. All rights reserved.
+
 Syllabus categories and exam weights are based on the 2026 NCLEX-RN Test Plan © National Council of State Boards of Nursing (NCSBN). Official test plan: https://www.nclex.com/test-plans.page. This project is an independent study aid and is not affiliated with or endorsed by NCSBN.
