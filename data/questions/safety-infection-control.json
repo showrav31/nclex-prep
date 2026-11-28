@@ -1,0 +1,1653 @@
+{
+ "categoryId": "safety-infection-control",
+ "quotas": {
+  "safety-infection-control--accident-error-injury-prevention": 8,
+  "safety-infection-control--emergency-response-plan": 4,
+  "safety-infection-control--ergonomic-principles": 0,
+  "safety-infection-control--handling-hazardous-and-infectious-materials": 3,
+  "safety-infection-control--home-safety": 3,
+  "safety-infection-control--reporting-of-incident-event-irregular-occurrence-variance": 3,
+  "safety-infection-control--safe-use-of-equipment": 3,
+  "safety-infection-control--security-plan": 2,
+  "safety-infection-control--standard-precautions-transmission-based-precautions-surgical-asepsis": 8,
+  "safety-infection-control--use-of-restraints-safety-devices": 2
+ },
+ "questions": [
+  {
+   "id": "q-safe-acc-01",
+   "categoryId": "safety-infection-control",
+   "topicId": "safety-infection-control--accident-error-injury-prevention",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "safety-infection-control--accident-error-injury-prevention--p02",
+    "safety-infection-control--accident-error-injury-prevention--p09"
+   ],
+   "cjStep": "recognize-cues",
+   "integratedProcess": "nursing-process",
+   "type": "highlight",
+   "difficulty": 2,
+   "stem": "The nurse enters the room of a 78-year-old client who is confused and is 1 day after hip surgery. Select the findings that are safety hazards for this client.",
+   "segments": [
+    {
+     "text": "The nurse notices that "
+    },
+    {
+     "text": "the bed is in its highest position with the wheels unlocked",
+     "key": true,
+     "why": "This is a hazard. A high bed makes a fall more serious, and an unlocked bed can roll when the client gets up. The bed should be low and locked, except during care."
+    },
+    {
+     "text": ", "
+    },
+    {
+     "text": "the call light is clipped to the bed rail within the client's reach",
+     "key": false,
+     "why": "This is not a hazard. The call light should always be within reach, and the client should be shown how to use it."
+    },
+    {
+     "text": ", "
+    },
+    {
+     "text": "there is a puddle of water on the floor beside the bed",
+     "key": true,
+     "why": "This is a hazard. A wet floor can cause a slip. The nurse should wipe it up at once and report the source of the leak."
+    },
+    {
+     "text": ", "
+    },
+    {
+     "text": "a night light is on",
+     "key": false,
+     "why": "This is not a hazard. Soft lighting helps a confused client to see the way and lowers the risk of falling at night."
+    },
+    {
+     "text": ", and "
+    },
+    {
+     "text": "the oxygen tubing is stretched across the walkway to the bathroom",
+     "key": true,
+     "why": "This is a hazard. Tubing across the floor is a trip risk. The tubing should be arranged along the bed or the wall, with enough length to reach the bathroom without crossing the path."
+    },
+    {
+     "text": ". The client is wearing "
+    },
+    {
+     "text": "non-slip socks",
+     "key": false,
+     "why": "This is not a hazard. Non-slip footwear lowers the risk of slipping."
+    },
+    {
+     "text": "."
+    }
+   ],
+   "rationale": "Checking the care environment means looking for trip, slip and fall hazards and fixing them. For a confused client after surgery, keep the bed low and locked, the floor dry, the path clear, the lights adequate and the call light in reach.",
+   "needsReview": false
+  },
+  {
+   "id": "q-safe-acc-02",
+   "categoryId": "safety-infection-control",
+   "topicId": "safety-infection-control--accident-error-injury-prevention",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "safety-infection-control--accident-error-injury-prevention--p14"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "nursing-process",
+   "type": "mcq",
+   "difficulty": 1,
+   "stem": "The nurse is about to give a scheduled medication to a client who is alert and oriented. Which action correctly identifies the client?",
+   "options": [
+    "Say, \"Are you Mr. Lee?\" and give the medication when the client nods.",
+    "Check that the room and bed number on the medication record match the room the nurse is in.",
+    "Ask the client to state their full name and date of birth, and compare both with the identification band and the medication record (or scan the band).",
+    "Ask the client's roommate to confirm the client's name."
+   ],
+   "optionRationales": [
+    "Incorrect. A question that can be answered yes or no is unsafe. A client who is confused, hard of hearing or anxious may agree to a wrong name.",
+    "Incorrect. Room and bed numbers are not identifiers because clients move and rooms change.",
+    "Correct. Two client identifiers are used, and one should be given by the client when possible. The identifiers on the band must match the record.",
+    "Incorrect. Other clients are not a reliable source and a conversation like this breaks confidentiality."
+   ],
+   "key": 2,
+   "rationale": "The right client, drug, dose, route and time all depend on correct identification. Use at least two identifiers (for example, full name and date of birth or health card number, as the facility policy states), compare them with the band and the record, and never use the room number.",
+   "needsReview": false
+  },
+  {
+   "id": "q-safe-acc-03",
+   "categoryId": "safety-infection-control",
+   "topicId": "safety-infection-control--accident-error-injury-prevention",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "safety-infection-control--accident-error-injury-prevention--p12"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "nursing-process",
+   "type": "matrix",
+   "difficulty": 2,
+   "stem": "A client who is in the dayroom begins a generalized tonic-clonic (whole-body) seizure. For each action, select whether it is appropriate or not appropriate.",
+   "cols": [
+    "Appropriate",
+    "Not appropriate"
+   ],
+   "rows": [
+    {
+     "text": "Lower the client to the floor and protect the head with a folded towel or pillow.",
+     "key": 0,
+     "why": "This protects the client from a fall and from a head injury while the muscles are jerking."
+    },
+    {
+     "text": "Place a tongue blade or fingers between the client's teeth.",
+     "key": 1,
+     "why": "This can break teeth or injure the client's mouth, and the nurse can be bitten. Nothing is placed in the mouth during a seizure."
+    },
+    {
+     "text": "Hold the client down firmly to stop the jerking movements.",
+     "key": 1,
+     "why": "Restraining the client can cause fractures and muscle injury. Seizure activity is not stopped by holding."
+    },
+    {
+     "text": "Turn the client onto one side as soon as it is safe to do so, to keep the airway clear.",
+     "key": 0,
+     "why": "Side-lying lets saliva or vomit drain from the mouth and lowers the risk of aspiration."
+    },
+    {
+     "text": "Note the time the seizure started, how it looked and how long it lasted.",
+     "key": 0,
+     "why": "The details help the provider to classify the seizure and to decide on treatment. A seizure that lasts more than 5 minutes is an emergency."
+    }
+   ],
+   "rationale": "During a seizure the nurse protects the client from injury, keeps the airway open, stays with the client and observes. Nothing goes in the mouth, and the client is not held down. Afterwards, check breathing and level of consciousness, reorient the client and document.",
+   "needsReview": false
+  },
+  {
+   "id": "q-safe-acc-04",
+   "categoryId": "safety-infection-control",
+   "topicId": "safety-infection-control--accident-error-injury-prevention",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "safety-infection-control--accident-error-injury-prevention--p10"
+   ],
+   "cjStep": "generate-solutions",
+   "integratedProcess": "caring",
+   "type": "sata",
+   "difficulty": 2,
+   "stem": "A client is admitted to the mental health unit after telling the emergency department nurse that they plan to hang themselves. Which interventions should the nurse include in the plan of care? Select all that apply.",
+   "options": [
+    "Place the client in a room close to the nursing station and use the level of observation that the provider has ordered.",
+    "Remove belts, shoelaces, cords, sharp objects and glass items from the room and from the client's belongings.",
+    "Check that the client has swallowed oral medications, for example by checking the mouth.",
+    "Ask the client directly and regularly about suicidal thoughts and plans.",
+    "Let the client use the bathroom with the door locked for privacy.",
+    "Avoid talking about suicide in case it makes the client worse.",
+    "Allow the client to keep a dressing-gown cord and belt for comfort."
+   ],
+   "optionRationales": [
+    "Correct. Close, continuous observation (for example, one-to-one) is used for a client who has a plan. Observation levels follow the facility's policy.",
+    "Correct. The environment is made safe by removing objects that could be used for self-harm, especially anything that could be used to hang oneself.",
+    "Correct. A client may hold pills in the cheek to save them for later, and that can lead to an overdose.",
+    "Correct. Asking directly does not put the idea in the client's mind. It helps the nurse to see changes in risk and shows that the nurse cares.",
+    "Incorrect. The bathroom is a high-risk place. The door is not locked, and the client is observed according to the level of observation ordered.",
+    "Incorrect. Avoiding the subject leaves the risk unchecked. Honest, calm questions are part of safe care.",
+    "Incorrect. These are items that can be used for hanging and are removed."
+   ],
+   "key": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "rationale": "A client who has a plan and the means is at high risk. Safety comes first: constant observation, a safe room, no dangerous items, checks that medicines are swallowed and open, direct conversations about thoughts of suicide.",
+   "needsReview": false
+  },
+  {
+   "id": "q-safe-acc-05",
+   "categoryId": "safety-infection-control",
+   "topicId": "safety-infection-control--accident-error-injury-prevention",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "safety-infection-control--accident-error-injury-prevention--p06"
+   ],
+   "cjStep": "analyze-cues",
+   "integratedProcess": "communication-documentation",
+   "type": "dropdown",
+   "difficulty": 3,
+   "stem": "A client is scheduled for a right knee arthroscopy in the morning. The signed consent form says \"right knee\", but the operating room schedule says \"left knee\", and no mark is on the client's leg.",
+   "template": "The nurse should {1}, and the team must complete the {2} before the incision is made.",
+   "blanks": [
+    {
+     "options": [
+      "stop the process and clarify the site with the surgeon before the client goes to the operating room",
+      "mark the right knee, because the consent form is the signed document",
+      "ask the client to point to the knee and continue if the client agrees"
+     ],
+     "key": 0,
+     "why": "A difference between the consent and the schedule is a serious warning sign. Surgery does not go ahead until the surgeon has confirmed the correct site and the paperwork has been corrected. A nurse does not decide the site, and the client's answer alone is not enough because the consent and the schedule must agree."
+    },
+    {
+     "options": [
+      "surgical safety checklist, including a time-out (pause) in which the client, procedure and site are confirmed aloud",
+      "instrument and sponge count",
+      "post-operative hand-over report"
+     ],
+     "key": 0,
+     "why": "The surgical safety checklist (called the Universal Protocol in the US) includes a time-out at which all team members stop and confirm the client's identity, the procedure and the site. The instrument and sponge counts are done to prevent a retained item, and the hand-over is done after surgery."
+    }
+   ],
+   "rationale": "Wrong-site, wrong-procedure and wrong-person surgery are preventable. The consent, the schedule, the site marking and the client's own answer must all agree, and any difference stops the process until it is resolved. The time-out is a final check, not a replacement for earlier checks.",
+   "needsReview": false
+  },
+  {
+   "id": "q-safe-acc-06",
+   "categoryId": "safety-infection-control",
+   "topicId": "safety-infection-control--accident-error-injury-prevention",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "safety-infection-control--accident-error-injury-prevention--p04",
+    "safety-infection-control--accident-error-injury-prevention--p07"
+   ],
+   "cjStep": "generate-solutions",
+   "integratedProcess": "teaching-learning",
+   "type": "dragdrop",
+   "difficulty": 2,
+   "stem": "The nurse is teaching about safety. For each safety measure, select the client group for which it is most important.",
+   "mode": "sort",
+   "bins": [
+    "Infant",
+    "School-age child",
+    "Older adult"
+   ],
+   "items": [
+    {
+     "text": "Place on the back to sleep in a crib with a firm, flat mattress and nothing else in the crib.",
+     "key": 0,
+     "why": "Sleeping on the back in an empty crib lowers the risk of sudden unexpected death in infancy and suffocation."
+    },
+    {
+     "text": "Keep one hand on the child at all times on a changing table.",
+     "key": 0,
+     "why": "Infants can roll or wriggle unexpectedly, and a fall from a height can cause a serious head injury."
+    },
+    {
+     "text": "Use a booster seat until the adult seat belt fits correctly across the hips and the chest.",
+     "key": 1,
+     "why": "A seat belt that is made for an adult can injure a child's abdomen and neck. Children move from a harness seat to a booster seat and then to the seat belt alone."
+    },
+    {
+     "text": "Teach how to cross a street safely and to tell a trusted adult if something makes them feel unsafe.",
+     "key": 1,
+     "why": "School-age children are learning independence and can understand and follow simple safety rules."
+    },
+    {
+     "text": "Keep a lit, clear path to the bathroom and use a night light.",
+     "key": 2,
+     "why": "Poor vision, slower reactions and getting up at night to urinate raise the risk of a fall."
+    },
+    {
+     "text": "Review the medicines for ones that cause dizziness, sleepiness or a drop in blood pressure when standing.",
+     "key": 2,
+     "why": "Older adults often take several medicines, and many of them increase the risk of falls."
+    }
+   ],
+   "rationale": "Safety teaching fits the client's age and stage of development. Infants depend on adults for everything and cannot protect themselves. School-age children can learn rules. Older adults are at risk from changes in vision, balance, reaction time and medicines.",
+   "needsReview": false
+  },
+  {
+   "id": "q-safe-acc-07",
+   "categoryId": "safety-infection-control",
+   "topicId": "safety-infection-control--accident-error-injury-prevention",
+   "secondaryTopicIds": [
+    "pharmacological-parenteral--medication-administration"
+   ],
+   "learningPointIds": [
+    "safety-infection-control--accident-error-injury-prevention--p15",
+    "safety-infection-control--accident-error-injury-prevention--p01"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "clinical-judgment",
+   "type": "bowtie",
+   "difficulty": 3,
+   "stem": "A nurse misreads a handwritten order of \"4 units\" as \"14 units\" and gives 14 units of rapid-acting insulin to a client who is about to eat breakfast. The nurse realises the mistake a few minutes later. The client is alert and has no symptoms.",
+   "condition": {
+    "prompt": "The client is most at risk of",
+    "options": [
+     "hypoglycemia",
+     "hyperglycemia",
+     "diabetic ketoacidosis",
+     "hyperosmolar hyperglycemic state",
+     "fluid volume deficit"
+    ],
+    "key": 0,
+    "optionRationales": [
+     "Correct. Rapid-acting insulin lowers the blood glucose. A dose that is more than three times the ordered dose can cause a severe drop in glucose within an hour or two.",
+     "Incorrect. Extra insulin lowers the blood glucose and does not raise it.",
+     "Incorrect. Ketoacidosis occurs when there is too little insulin.",
+     "Incorrect. This occurs when the glucose is very high, not after an overdose of insulin.",
+     "Incorrect. Extra insulin does not cause fluid loss."
+    ]
+   },
+   "actions": {
+    "prompt": "Which two actions should the nurse take first? (select 2)",
+    "options": [
+     "Check the client's blood glucose now and repeat it often",
+     "Report the error to the provider right away and follow the orders",
+     "Hold the breakfast tray",
+     "Wait until the client has symptoms before taking action",
+     "Reduce the next dose of insulin without telling the provider"
+    ],
+    "keys": [
+     0,
+     1
+    ],
+    "optionRationales": [
+     "Correct. The glucose must be checked at once and again often, because it can fall quickly and the client may need treatment with carbohydrate.",
+     "Correct. The provider needs to know about the error so that treatment can be ordered. The nurse also reports it to the charge nurse and files an incident report.",
+     "Incorrect. The client needs food to balance the extra insulin, so the tray is not held back.",
+     "Incorrect. Waiting for symptoms means waiting until the client is already hypoglycemic, and some clients have no warning signs.",
+     "Incorrect. Dose changes are made by the provider. A nurse who changes a dose without an order makes a second error."
+    ]
+   },
+   "parameters": {
+    "prompt": "Which two parameters should the nurse monitor? (select 2)",
+    "options": [
+     "Blood glucose level",
+     "Level of consciousness and signs such as sweating, shakiness and confusion",
+     "Urine ketones",
+     "Serum sodium level",
+     "Pedal pulses"
+    ],
+    "keys": [
+     0,
+     1
+    ],
+    "optionRationales": [
+     "Correct. The blood glucose result guides treatment.",
+     "Correct. A change in alertness or new sweating, shakiness or confusion are signs of hypoglycemia and may mean the client needs urgent treatment.",
+     "Incorrect. Ketones are checked when the glucose is high, not low.",
+     "Incorrect. This is not the key parameter for an overdose of insulin.",
+     "Incorrect. Pedal pulses are not affected by this error."
+    ]
+   },
+   "rationale": "Insulin is a high-alert medication. After an error the nurse protects the client first (check glucose, make sure the client eats, treat a low), then reports it to the provider and the charge nurse, and completes the incident report. The order, the label and the dose are checked before every dose, and a number written by hand (for example, \"4\") is clarified if it is not clear.",
+   "needsReview": false
+  },
+  {
+   "id": "q-safe-acc-08",
+   "categoryId": "safety-infection-control",
+   "topicId": "safety-infection-control--accident-error-injury-prevention",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "safety-infection-control--accident-error-injury-prevention--p05",
+    "safety-infection-control--accident-error-injury-prevention--p09"
+   ],
+   "cjStep": "generate-solutions",
+   "integratedProcess": "nursing-process",
+   "type": "sata",
+   "difficulty": 2,
+   "stem": "A nurse is planning care for an 82-year-old client who was admitted with pneumonia. The client has cataracts, takes a diuretic and gets up several times a night to urinate. Which actions will help to prevent a fall? Select all that apply.",
+   "options": [
+    "Show the client how to use the call light, keep it within reach and ask the client to call before getting up.",
+    "Offer a trip to the toilet on a schedule, especially before bed and during the night.",
+    "Make sure the client's glasses are on, the room is well lit and the walkway is clear.",
+    "Keep the bed in the lowest position with the wheels locked, and have the client wear non-slip footwear.",
+    "Teach the client to sit on the edge of the bed for a few minutes before standing.",
+    "Raise all four side rails to keep the client in bed.",
+    "Turn the lights off at night so that the client can sleep.",
+    "Put the walker on the other side of the room so that the client has to ring for help."
+   ],
+   "optionRationales": [
+    "Correct. A call light only works if the client knows about it and can reach it.",
+    "Correct. Many falls happen on the way to the bathroom. A schedule reduces the urgent, unplanned trips.",
+    "Correct. A client with poor vision needs good light and a clear path to see hazards.",
+    "Correct. A low bed reduces the height of a fall, and locked wheels stop the bed from moving when the client gets up.",
+    "Correct. A change in position can cause a drop in blood pressure and dizziness, especially in older adults who take a diuretic.",
+    "Incorrect. Full rails can act as a restraint, and a client who climbs over them can fall from a greater height or become trapped.",
+    "Incorrect. A dark room hides hazards. A night light should be left on.",
+    "Incorrect. The walker should be within reach when the client is allowed to walk. Making a client stretch for it increases the risk."
+   ],
+   "key": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "rationale": "Fall prevention is built on the client's own risk factors: poor vision, a diuretic, frequent night-time toileting and an unfamiliar room. The plan includes a way to ask for help, scheduled toileting, good lighting, a low and locked bed, non-slip footwear and slow position changes.",
+   "needsReview": false
+  },
+  {
+   "id": "q-safe-prec-01",
+   "categoryId": "safety-infection-control",
+   "topicId": "safety-infection-control--standard-precautions-transmission-based-precautions-surgical-asepsis",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "safety-infection-control--standard-precautions-transmission-based-precautions-surgical-asepsis--p03",
+    "safety-infection-control--standard-precautions-transmission-based-precautions-surgical-asepsis--p05"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "teaching-learning",
+   "type": "matrix",
+   "difficulty": 2,
+   "stem": "A nurse is teaching a new nursing student about hand hygiene. For each situation, select the method that is correct.",
+   "cols": [
+    "Alcohol-based hand rub is acceptable",
+    "Soap and water is required"
+   ],
+   "rows": [
+    {
+     "text": "Before a routine assessment of a client. The nurse's hands are not visibly soiled.",
+     "key": 0,
+     "why": "Alcohol-based hand rub is quick, kills most germs and is gentler on the skin, so it is the usual method when hands are not visibly soiled."
+    },
+    {
+     "text": "After caring for a client who has Clostridioides difficile (C. difficile) infection.",
+     "key": 1,
+     "why": "C. difficile forms spores that alcohol does not kill. Washing with soap and water, with friction, removes the spores from the hands. This is the NCLEX answer."
+    },
+    {
+     "text": "After a dressing change in which the nurse's hands were visibly soiled with blood.",
+     "key": 1,
+     "why": "Hands that are visibly soiled must be washed with soap and water, because alcohol does not work well on top of dirt or body fluids."
+    },
+    {
+     "text": "Before preparing an intravenous medication. The nurse's hands are not visibly soiled.",
+     "key": 0,
+     "why": "If the hands are clean to the eye, alcohol-based hand rub is acceptable and is used before a clean or aseptic task."
+    }
+   ],
+   "rationale": "Hand hygiene is the most important way to prevent the spread of infection. Use alcohol-based hand rub when the hands are not visibly soiled, and soap and water when they are, and after caring for a client with C. difficile or with norovirus. Note on regional practice: the NCLEX model teaches soap and water for C. difficile, but some Canadian provincial guidelines allow alcohol-based hand rub when the hands are not visibly soiled and recommend soap and water in an outbreak. Follow the policy of the facility.",
+   "needsReview": true,
+   "reviewKind": "regional",
+   "reviewNote": "Check the C. difficile row against the facility's policy. The NCLEX model is soap and water. Some Canadian provincial guidance allows alcohol-based hand rub for C. difficile when the hands are not visibly soiled."
+  },
+  {
+   "id": "q-safe-prec-02",
+   "categoryId": "safety-infection-control",
+   "topicId": "safety-infection-control--standard-precautions-transmission-based-precautions-surgical-asepsis",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "safety-infection-control--standard-precautions-transmission-based-precautions-surgical-asepsis--p02"
+   ],
+   "cjStep": "recognize-cues",
+   "integratedProcess": "nursing-process",
+   "type": "matrix",
+   "difficulty": 2,
+   "stem": "The nurse is planning care for six clients. For each infection, select the type of transmission-based (additional) precautions that is needed. In Canada these are called \"additional precautions\", and they are used with routine practices (standard precautions).",
+   "cols": [
+    "Airborne",
+    "Droplet",
+    "Contact"
+   ],
+   "rows": [
+    {
+     "text": "Pulmonary tuberculosis",
+     "key": 0,
+     "why": "The bacteria are carried in tiny particles that stay in the air. The client needs an airborne infection isolation room (negative pressure) and staff wear a fit-tested N95 respirator."
+    },
+    {
+     "text": "Pertussis (whooping cough)",
+     "key": 1,
+     "why": "It spreads by larger droplets from coughing and sneezing, which travel only a short distance. Staff wear a surgical mask when within about 2 metres of the client."
+    },
+    {
+     "text": "Draining wound infected with MRSA",
+     "key": 2,
+     "why": "It is spread by touching the client, the wound drainage or objects in the room. Staff wear a gown and gloves when they enter."
+    },
+    {
+     "text": "Measles (rubeola)",
+     "key": 0,
+     "why": "The virus stays in the air for a long time after the client has left a room, so airborne precautions are used. Only staff who are immune should care for the client."
+    },
+    {
+     "text": "C. difficile infection with diarrhea",
+     "key": 2,
+     "why": "The spores spread on hands, equipment and surfaces. The client has contact (enteric) precautions with a gown and gloves, a private room with a toilet, and hand washing with soap and water."
+    },
+    {
+     "text": "Mumps",
+     "key": 1,
+     "why": "The virus spreads by respiratory droplets, so a surgical mask is worn when close to the client."
+    }
+   ],
+   "rationale": "The type of precautions depends on how the organism spreads. Airborne organisms (tuberculosis, measles, chickenpox) stay in the air. Droplet organisms (pertussis, mumps, many respiratory viruses) travel only a short distance. Contact organisms (MRSA, C. difficile) spread by touch. Some infections need more than one type.",
+   "needsReview": false
+  },
+  {
+   "id": "q-safe-prec-03",
+   "categoryId": "safety-infection-control",
+   "topicId": "safety-infection-control--standard-precautions-transmission-based-precautions-surgical-asepsis",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "safety-infection-control--standard-precautions-transmission-based-precautions-surgical-asepsis--p05",
+    "safety-infection-control--standard-precautions-transmission-based-precautions-surgical-asepsis--p03"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "teaching-learning",
+   "type": "dragdrop",
+   "difficulty": 2,
+   "stem": "A nurse is teaching a nursing student how to put on personal protective equipment (PPE) before going into the room of a client on droplet and contact precautions. Place the steps in the correct order.",
+   "mode": "order",
+   "items": [
+    {
+     "text": "Put on the mask and mould it to the nose and the face.",
+     "why": "The mask goes on after the gown. A mask put on first would be moved while the nurse handles the gown."
+    },
+    {
+     "text": "Perform hand hygiene.",
+     "why": "Hands are cleaned first, before any PPE is touched."
+    },
+    {
+     "text": "Put on the gown and tie it at the neck and the waist.",
+     "why": "The gown goes on first so that it covers the clothes and the body. It is tied securely."
+    },
+    {
+     "text": "Put on the gloves, pulling the cuffs over the sleeves of the gown.",
+     "why": "Gloves go on last because the hands touch the other items first. The cuffs cover the gown's sleeves so that no skin is exposed."
+    },
+    {
+     "text": "Put on the goggles or face shield.",
+     "why": "Eye protection goes on after the mask, so that it can sit over the mask's edges."
+    }
+   ],
+   "key": [
+    1,
+    2,
+    0,
+    4,
+    3
+   ],
+   "rationale": "Putting PPE on in the order hand hygiene, gown, mask or respirator, eye protection and gloves means that the hands touch the other items before the gloves cover them, and that the gloves seal the gown's sleeves.",
+   "needsReview": false
+  },
+  {
+   "id": "q-safe-prec-04",
+   "categoryId": "safety-infection-control",
+   "topicId": "safety-infection-control--standard-precautions-transmission-based-precautions-surgical-asepsis",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "safety-infection-control--standard-precautions-transmission-based-precautions-surgical-asepsis--p08",
+    "safety-infection-control--standard-precautions-transmission-based-precautions-surgical-asepsis--p03"
+   ],
+   "cjStep": "evaluate-outcomes",
+   "integratedProcess": "teaching-learning",
+   "type": "dragdrop",
+   "difficulty": 3,
+   "stem": "The nurse is coaching a colleague on the order of removing PPE after leaving the room of a client on contact and droplet precautions. Place the steps in the correct order for the NCLEX.",
+   "mode": "order",
+   "items": [
+    {
+     "text": "Remove the goggles or face shield by the strap or headband at the back.",
+     "why": "The front of the eye protection is contaminated. The strap at the back is touched only after the gloves are off."
+    },
+    {
+     "text": "Remove the mask or respirator by its ties or elastic, without touching the front.",
+     "why": "The mask comes off last, outside the room, because the nurse still needs protection from airborne droplets while taking off the rest."
+    },
+    {
+     "text": "Perform hand hygiene.",
+     "why": "The hands are cleaned at the end, after all PPE is off."
+    },
+    {
+     "text": "Remove the gown by untying it, pulling it away from the neck and shoulders, turning it inside out and rolling it up.",
+     "why": "The gown is handled by the inside only. It is rolled up so that the contaminated outside is folded in."
+    },
+    {
+     "text": "Remove the gloves, peeling the first glove off with the other gloved hand and then sliding a bare finger under the second.",
+     "why": "The gloves are the most contaminated items, so they are removed first, touching only the outside of the glove with another glove."
+    }
+   ],
+   "key": [
+    4,
+    0,
+    3,
+    1,
+    2
+   ],
+   "rationale": "The goal is to take off the most contaminated items first and without touching the outside of any item with bare hands. The NCLEX (CDC) order is gloves, goggles or face shield, gown, mask or respirator, then hand hygiene. Note on regional practice: some Canadian provincial public health sequences take the gown off before the eye protection and add hand hygiene between steps. Follow the sequence posted by the facility, and perform hand hygiene again if the hands become contaminated at any step.",
+   "needsReview": true,
+   "reviewKind": "regional",
+   "reviewNote": "Confirm the order against the facility's posted sequence. The NCLEX uses the CDC order. Some Canadian provincial public health sequences remove the gown before the eye protection and add hand hygiene in between."
+  },
+  {
+   "id": "q-safe-prec-05",
+   "categoryId": "safety-infection-control",
+   "topicId": "safety-infection-control--standard-precautions-transmission-based-precautions-surgical-asepsis",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "safety-infection-control--standard-precautions-transmission-based-precautions-surgical-asepsis--p07",
+    "safety-infection-control--standard-precautions-transmission-based-precautions-surgical-asepsis--p09"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "nursing-process",
+   "type": "sata",
+   "difficulty": 2,
+   "stem": "The nurse is setting up a sterile field for a sterile dressing change. Which actions are correct? Select all that apply.",
+   "options": [
+    "Check that the package is dry and undamaged and that the expiry date has not passed.",
+    "Open the outer flap of the sterile wrapper away from the body first and the near flap last, without reaching over the field.",
+    "Keep the hands above the waist and in view while handling sterile items.",
+    "Consider the outer border of the sterile field as contaminated.",
+    "Do not turn away from the field or leave it unattended.",
+    "Reach across the sterile field to place a supply on the far side.",
+    "Use a sterile drape that has become damp, because the moisture is sterile.",
+    "Use a package that looks clean but has a small tear in the wrapper."
+   ],
+   "optionRationales": [
+    "Correct. A torn, wet or expired package is no longer sterile.",
+    "Correct. This stops the nurse's arm and sleeve from passing over the sterile contents.",
+    "Correct. Anything below the waist or out of sight cannot be seen and is considered unsterile.",
+    "Correct. The edge of the field is not sterile. Items are placed inside the border.",
+    "Correct. A field that is out of sight is considered contaminated.",
+    "Incorrect. Reaching over the field can drip or shed germs onto it. The nurse walks around or places items before moving.",
+    "Incorrect. Moisture lets germs travel through the material (strike-through contamination), so a wet drape is not sterile.",
+    "Incorrect. A tear means that the package is not intact, so the contents are no longer sterile."
+   ],
+   "key": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "rationale": "A sterile field is protected by checking the package, opening it so that the nurse does not reach over the contents, keeping the hands above the waist, treating the border as unsterile, keeping the field in sight, and discarding anything that is wet, torn or doubtful. If there is any doubt about sterility, the item is considered contaminated and replaced.",
+   "needsReview": false
+  },
+  {
+   "id": "q-safe-prec-06",
+   "categoryId": "safety-infection-control",
+   "topicId": "safety-infection-control--standard-precautions-transmission-based-precautions-surgical-asepsis",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "safety-infection-control--standard-precautions-transmission-based-precautions-surgical-asepsis--p06"
+   ],
+   "cjStep": "generate-solutions",
+   "integratedProcess": "nursing-process",
+   "type": "sata",
+   "difficulty": 2,
+   "stem": "A client who is receiving chemotherapy has an absolute neutrophil count of 0.4 × 10⁹/L, which is very low. Which interventions should the nurse include in the plan of care? Select all that apply.",
+   "options": [
+    "Place the client in a private room and perform hand hygiene before every contact.",
+    "Keep out visitors and staff who have a cold, fever, diarrhea or a rash.",
+    "Do not allow fresh flowers or potted plants in the room.",
+    "Teach food safety: wash fruit and vegetables, and avoid raw or undercooked meat, raw eggs and unpasteurised products.",
+    "Take the temperature regularly, and report a temperature of 38.0 °C [100.4 °F] or higher right away.",
+    "Take the client's temperature rectally for the most accurate reading.",
+    "Place the client in a room with a client who has a cough.",
+    "Care for this client after the clients on the unit who have infections."
+   ],
+   "optionRationales": [
+    "Correct. A private room lowers the contact with other clients' germs, and clean hands are the main protection.",
+    "Correct. A client with very few white blood cells cannot fight infections that would be minor for a healthy person.",
+    "Correct. Soil and standing water in the vase can carry fungi and bacteria.",
+    "Correct. Food can carry germs that make a neutropenic client very ill. Food safety rules apply.",
+    "Correct. A fever may be the only sign of a serious infection in a neutropenic client, who may not have pus or other signs. It is treated as an emergency.",
+    "Incorrect. Rectal temperatures, suppositories and enemas can injure the lining of the bowel and let bacteria into the blood.",
+    "Incorrect. A client who is neutropenic should not share a room with anyone who might have an infection.",
+    "Incorrect. The most vulnerable client is cared for first, or the nurse is assigned to this client and not to the infected clients."
+   ],
+   "key": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "rationale": "A neutropenic client is at very high risk of infection. The plan is built on protection: a private room, hand hygiene, no sick visitors, no plants or flowers, safe food, careful skin and mouth care, no rectal procedures, and a fast response to a fever, which may be the only sign.",
+   "needsReview": false
+  },
+  {
+   "id": "q-safe-prec-07",
+   "categoryId": "safety-infection-control",
+   "topicId": "safety-infection-control--standard-precautions-transmission-based-precautions-surgical-asepsis",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "safety-infection-control--standard-precautions-transmission-based-precautions-surgical-asepsis--p04",
+    "safety-infection-control--standard-precautions-transmission-based-precautions-surgical-asepsis--p02"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "communication-documentation",
+   "type": "mcq",
+   "difficulty": 2,
+   "stem": "A client who has a fever, a cough and a rash that began on the face is placed in an airborne infection isolation room. Measles is suspected. The nurse has put on a fit-tested N95 respirator. What else must the nurse do?",
+   "options": [
+    "Wait for the laboratory confirmation before telling anyone, to avoid a false alarm.",
+    "Notify infection prevention and control (IPAC) now, so that contact follow-up and the report to public health can begin as required.",
+    "Tell the family and visitors the diagnosis in the waiting area so that they can protect themselves.",
+    "Document the findings and leave the report to the next shift."
+   ],
+   "optionRationales": [
+    "Incorrect. A delay can allow the infection to spread to other clients, visitors and staff. Suspected cases are reported at once.",
+    "Correct. Measles is a reportable disease. Infection prevention and control and public health must be told promptly so that exposed people can be identified and protected.",
+    "Incorrect. This breaches the client's confidentiality. Visitors are given the precautions they must follow, not the diagnosis.",
+    "Incorrect. Reporting a communicable disease is time-sensitive and is not left for later."
+   ],
+   "key": 1,
+   "rationale": "Suspected communicable diseases such as measles, tuberculosis and pertussis are reported to infection prevention and control and to public health. Note on regional practice: the list of reportable diseases, the time limits and who reports (the nurse, the provider, the laboratory or the facility) are set by provincial and territorial public health laws in Canada and by state laws in the US. The nurse follows the facility's policy and protects confidentiality.",
+   "needsReview": true,
+   "reviewKind": "regional",
+   "reviewNote": "Check which diseases must be reported, how fast, and by whom in the province or territory where she will work."
+  },
+  {
+   "id": "q-safe-prec-08",
+   "categoryId": "safety-infection-control",
+   "topicId": "safety-infection-control--standard-precautions-transmission-based-precautions-surgical-asepsis",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "safety-infection-control--standard-precautions-transmission-based-precautions-surgical-asepsis--p01",
+    "safety-infection-control--standard-precautions-transmission-based-precautions-surgical-asepsis--p03"
+   ],
+   "cjStep": "analyze-cues",
+   "integratedProcess": "nursing-process",
+   "type": "dropdown",
+   "difficulty": 3,
+   "stem": "A nurse in a long-term care home is assessing a resident who has a stage 3 pressure injury and a history of MRSA colonization. The resident has no diarrhea or fever and is not coughing. The home uses enhanced barrier precautions.",
+   "template": "Staff should wear a gown and gloves during {1}, and the resident {2}.",
+   "blanks": [
+    {
+     "options": [
+      "high-contact care such as bathing, dressing, wound care and changing linens",
+      "any contact, including delivering a meal tray",
+      "care only when the wound is draining"
+     ],
+     "key": 0,
+     "why": "Enhanced barrier precautions use a gown and gloves during high-contact care activities, when the resident's skin and wounds can transfer germs to hands and clothes. They are not needed for brief contact such as delivering a meal tray, and they apply whether or not the wound is draining at that moment."
+    },
+    {
+     "options": [
+      "does not need a private room and can take part in group activities",
+      "must stay in a private room with the door closed",
+      "must wear a mask whenever leaving the room"
+     ],
+     "key": 0,
+     "why": "Enhanced barrier precautions are not isolation. The resident is not confined to a room and takes part in usual activities, with good hand hygiene and with the wound covered."
+    }
+   ],
+   "rationale": "Enhanced barrier precautions are used in long-term care for residents who have wounds or indwelling devices (such as a feeding tube or a urinary catheter) or an infection with a resistant organism, to prevent the spread of resistant germs during high-contact care. Note on regional practice: the term comes from US (CDC) guidance. In Canada, long-term care homes use routine practices and additional precautions as set by provincial public health guidance. The approach in a particular home depends on its policy.",
+   "needsReview": true,
+   "reviewKind": "regional",
+   "reviewNote": "Enhanced barrier precautions are US (CDC) nursing-home guidance. Confirm with the long-term care policy and provincial guidance where she will work."
+  },
+  {
+   "id": "q-safe-emer-01",
+   "categoryId": "safety-infection-control",
+   "topicId": "safety-infection-control--emergency-response-plan",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "safety-infection-control--emergency-response-plan--p04",
+    "safety-infection-control--emergency-response-plan--p03"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "nursing-process",
+   "type": "dragdrop",
+   "difficulty": 2,
+   "stem": "A small fire starts in a wastebasket in a client's room on a medical unit. Place the nurse's actions in the correct order using RACE.",
+   "mode": "order",
+   "items": [
+    {
+     "text": "Contain: close the doors and windows and, as the plan says, shut off the oxygen for the area.",
+     "why": "Closed doors slow the spread of fire and smoke. Oxygen feeds a fire, so it is turned off for the affected area according to the facility's plan."
+    },
+    {
+     "text": "Extinguish or evacuate: use a fire extinguisher on a small fire if it is safe, or evacuate the clients as directed.",
+     "why": "This is the last step. The nurse fights only a small fire with a clear way out, and otherwise moves clients to safety."
+    },
+    {
+     "text": "Alarm: activate the fire alarm and call the emergency number to report the location.",
+     "why": "The alarm brings the trained team and starts the building's fire response. It is raised once the people in immediate danger are moving."
+    },
+    {
+     "text": "Rescue: move the clients who are in immediate danger out of the room and away from the fire.",
+     "why": "Rescue comes first. The lives of the people closest to the fire come before anything else."
+    }
+   ],
+   "key": [
+    3,
+    2,
+    0,
+    1
+   ],
+   "rationale": "RACE stands for Rescue, Alarm, Contain, Extinguish (or Evacuate). Rescue is first because people in immediate danger come first. Then the alarm brings help, containing the fire slows its spread, and finally the nurse extinguishes a small fire or evacuates.",
+   "needsReview": false
+  },
+  {
+   "id": "q-safe-emer-02",
+   "categoryId": "safety-infection-control",
+   "topicId": "safety-infection-control--emergency-response-plan",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "safety-infection-control--emergency-response-plan--p05",
+    "safety-infection-control--emergency-response-plan--p04"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "teaching-learning",
+   "type": "dropdown",
+   "difficulty": 1,
+   "stem": "During a fire drill, the nurse practises using a portable fire extinguisher on a small wastebasket fire. The nurse stands with a clear exit behind them and uses the PASS steps.",
+   "template": "The nurse should {1} the pin, aim at {2} of the fire, squeeze the handle and sweep from side to side.",
+   "blanks": [
+    {
+     "options": [
+      "pull",
+      "push in",
+      "unscrew"
+     ],
+     "key": 0,
+     "why": "The pin is pulled out to unlock the handle. This is the P in PASS."
+    },
+    {
+     "options": [
+      "the base",
+      "the top of the flames",
+      "the smoke above the fire"
+     ],
+     "key": 0,
+     "why": "The extinguishing agent must be aimed at the base of the fire, where the fuel is. Spraying the flames or the smoke does not put the fire out."
+    }
+   ],
+   "rationale": "PASS stands for Pull, Aim, Squeeze, Sweep. A portable extinguisher is used only on a small fire, with an exit behind the nurse and after the alarm has been raised. Fire drills help staff to practise the steps and the facility's plan before they are needed.",
+   "needsReview": false
+  },
+  {
+   "id": "q-safe-emer-03",
+   "categoryId": "safety-infection-control",
+   "topicId": "safety-infection-control--emergency-response-plan",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "safety-infection-control--emergency-response-plan--p03",
+    "safety-infection-control--emergency-response-plan--p02"
+   ],
+   "cjStep": "prioritize-hypotheses",
+   "integratedProcess": "clinical-judgment",
+   "type": "dragdrop",
+   "difficulty": 3,
+   "stem": "A bus crash has caused a mass casualty event, and the nurse is using the START triage system (Simple Triage and Rapid Treatment) at the scene. For each casualty, select the triage category.",
+   "mode": "sort",
+   "bins": [
+    "Red (immediate)",
+    "Yellow (delayed)",
+    "Green (minor)",
+    "Black (expectant)"
+   ],
+   "items": [
+    {
+     "text": "The casualty walks over to the triage area and has a cut on the forearm.",
+     "key": 2,
+     "why": "A person who can walk is tagged green, minor. They can wait for care."
+    },
+    {
+     "text": "The casualty cannot walk. Breathing is 38 breaths/min, and a radial pulse is present.",
+     "key": 0,
+     "why": "A respiratory rate above 30 breaths/min means that the person needs immediate help, so the category is red."
+    },
+    {
+     "text": "The casualty cannot walk. Breathing is 20 breaths/min, a radial pulse is present and the casualty follows simple commands. There is a closed fracture of the thigh.",
+     "key": 1,
+     "why": "Breathing, pulse and the ability to follow commands are all adequate, so the person is yellow. The injury is serious but the person is stable enough to wait."
+    },
+    {
+     "text": "The casualty cannot walk. Breathing is 18 breaths/min, but no radial pulse can be felt and the capillary refill is longer than 2 seconds.",
+     "key": 0,
+     "why": "No radial pulse or a slow capillary refill means poor perfusion, which needs immediate treatment: red."
+    },
+    {
+     "text": "The casualty is not breathing, even after the airway has been opened.",
+     "key": 3,
+     "why": "In a mass casualty event, a person who is not breathing after the airway is repositioned is tagged black. The limited resources are used for people who have a chance of survival."
+    }
+   ],
+   "rationale": "START checks Respirations (above 30/min is red), Perfusion (no radial pulse or capillary refill over 2 seconds is red) and Mental status (cannot follow simple commands is red). Anyone who can walk is green, and a person who is not breathing after the airway is opened is black. Everyone else is yellow. Note on regional practice: the colours are widely used, but some Canadian services and disaster plans use SALT (Sort, Assess, Lifesaving interventions, Treatment and/or transport) or their own tags. The nurse follows the local disaster plan.",
+   "needsReview": true,
+   "reviewKind": "regional",
+   "reviewNote": "Check which triage system the disaster plan in her province or health authority uses. START is the NCLEX model, and some Canadian services use SALT."
+  },
+  {
+   "id": "q-safe-emer-04",
+   "categoryId": "safety-infection-control",
+   "topicId": "safety-infection-control--emergency-response-plan",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "safety-infection-control--emergency-response-plan--p01",
+    "safety-infection-control--emergency-response-plan--p02"
+   ],
+   "cjStep": "prioritize-hypotheses",
+   "integratedProcess": "clinical-judgment",
+   "type": "mcq",
+   "difficulty": 2,
+   "stem": "A hospital expects many casualties after a major accident, and the charge nurse asks the nurse to identify clients who can safely be discharged to free beds. Which client is the best choice?",
+   "options": [
+    "A client who is 2 days after a laparoscopic cholecystectomy, has no fever, is eating, has pain controlled with oral medicine and has a family member at home.",
+    "A client who is 1 day after a hip replacement and still needs IV opioids for pain.",
+    "A client with a newly diagnosed deep vein thrombosis who is receiving a heparin infusion.",
+    "A client with a chest tube for a pneumothorax and a continuing air leak."
+   ],
+   "optionRationales": [
+    "Correct. This client is stable, needs no IV therapy or specialised equipment, and can be cared for at home with instructions and follow-up.",
+    "Incorrect. The pain is not yet controlled with oral medicine, and the client has not yet shown that they can move safely.",
+    "Incorrect. The client needs monitored IV therapy and laboratory tests, and the treatment plan is not yet set.",
+    "Incorrect. The client's lung is not yet re-expanded, and the chest tube and drainage system need monitoring."
+   ],
+   "key": 0,
+   "rationale": "In a disaster, beds are needed for the most seriously injured. The clients who can be sent home are those who are stable, need no IV or specialised care, have pain controlled by oral medicine, and have someone at home who can help. Each discharge still needs a safe plan, teaching and follow-up.",
+   "needsReview": false
+  },
+  {
+   "id": "q-safe-haz-01",
+   "categoryId": "safety-infection-control",
+   "topicId": "safety-infection-control--handling-hazardous-and-infectious-materials",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "safety-infection-control--handling-hazardous-and-infectious-materials--p02",
+    "safety-infection-control--handling-hazardous-and-infectious-materials--p03"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "nursing-process",
+   "type": "dragdrop",
+   "difficulty": 3,
+   "stem": "A bag of chemotherapy solution leaks onto the floor beside a client's bed. The nurse is trained to use the spill kit. Place the nurse's actions in the correct order.",
+   "mode": "order",
+   "items": [
+    {
+     "text": "Remove the remaining PPE and wash the hands with soap and water.",
+     "why": "The hands are cleaned after the PPE is off."
+    },
+    {
+     "text": "Alert the staff and restrict access to the area, and help the client to a safe place.",
+     "why": "People are kept away from the spill first, so that nobody walks through it or is exposed."
+    },
+    {
+     "text": "Place all the contaminated materials, including the outer gloves, in the cytotoxic waste container.",
+     "why": "Cytotoxic waste has its own container and its own disposal route, not the ordinary rubbish."
+    },
+    {
+     "text": "Clean the area with detergent and water, working from the outer edge towards the centre, and then rinse.",
+     "why": "Cleaning from the less contaminated area towards the more contaminated area stops the spill from being spread. Detergent lifts the drug, and the rinse removes the detergent."
+    },
+    {
+     "text": "Report the spill and document it as the facility's policy requires.",
+     "why": "The spill and any exposure are recorded so that the people exposed can be assessed and the cause can be reviewed."
+    },
+    {
+     "text": "Cover the liquid with the absorbent pads from the kit.",
+     "why": "The spill is contained so that it does not spread, before cleaning."
+    },
+    {
+     "text": "Put on the PPE from the spill kit: two pairs of chemotherapy gloves, a gown that resists liquids and eye protection (and a respirator if the spill is a powder or a spray).",
+     "why": "The nurse must be protected before touching anything that has chemotherapy drug on it."
+    }
+   ],
+   "key": [
+    1,
+    6,
+    5,
+    3,
+    2,
+    0,
+    4
+   ],
+   "rationale": "A chemotherapy spill is handled by people who are trained, using a spill kit. The order is to secure the area, protect yourself, contain the spill, clean from the outside in, dispose of the waste in the cytotoxic container, remove the PPE, wash the hands and report.",
+   "needsReview": false
+  },
+  {
+   "id": "q-safe-haz-02",
+   "categoryId": "safety-infection-control",
+   "topicId": "safety-infection-control--handling-hazardous-and-infectious-materials",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "safety-infection-control--handling-hazardous-and-infectious-materials--p04"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "nursing-process",
+   "type": "matrix",
+   "difficulty": 3,
+   "stem": "A client has a sealed radioactive implant (brachytherapy) in place for cervical cancer. For each nursing action, select whether it is appropriate or not appropriate.",
+   "cols": [
+    "Appropriate",
+    "Not appropriate"
+   ],
+   "rows": [
+    {
+     "text": "Plan care to keep the time in the room short, and stand as far from the client as the care allows.",
+     "key": 0,
+     "why": "Time, distance and shielding are the three ways to reduce exposure. The shorter the time and the greater the distance, the lower the dose."
+    },
+    {
+     "text": "Assign a nurse who is pregnant to care for the client, because the client needs frequent help.",
+     "key": 1,
+     "why": "A pregnant nurse should not be assigned to a client with an internal radioactive source, because radiation can harm the fetus."
+    },
+    {
+     "text": "Wear the radiation badge (dosimeter) while giving care.",
+     "key": 0,
+     "why": "The badge measures each staff member's exposure, so that it can be kept within safe limits."
+    },
+    {
+     "text": "Find the implant in the bed linens and put it back in place with gloved hands.",
+     "key": 1,
+     "why": "A source that has come out is never touched with the hands. The nurse uses long-handled forceps to place it in the lead container, and then calls the radiation safety officer and the provider."
+    },
+    {
+     "text": "Ask visitors to keep their distance and keep their visits short, as the radiation safety officer advises, and do not allow children or pregnant visitors in the room.",
+     "key": 0,
+     "why": "Visitors are exposed to radiation too, and children and pregnant visitors are the most sensitive."
+    }
+   ],
+   "rationale": "The nurse protects herself and others from a sealed radioactive source by limiting time, increasing distance and using shielding. The client is placed in a private room with a sign on the door. Pregnant staff and visitors, and children, are kept away. An implant that has become dislodged is never touched with the hands.",
+   "needsReview": false
+  },
+  {
+   "id": "q-safe-haz-03",
+   "categoryId": "safety-infection-control",
+   "topicId": "safety-infection-control--handling-hazardous-and-infectious-materials",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "safety-infection-control--handling-hazardous-and-infectious-materials--p01"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "nursing-process",
+   "type": "mcq",
+   "difficulty": 2,
+   "stem": "The nurse finds an unlabelled spray bottle of a clear liquid on a shelf in the clean utility room of a Canadian hospital. What should the nurse do?",
+   "options": [
+    "Smell the liquid to find out what it is.",
+    "Assume it is water and use it to clean the counter.",
+    "Do not use it. Tell the manager or the person in charge, and follow the facility's procedure for unknown products so that it can be identified and removed safely.",
+    "Pour it down the sink and rinse the bottle, so that nobody uses it by mistake."
+   ],
+   "optionRationales": [
+    "Incorrect. Fumes can be toxic or irritating. Hazardous materials are never identified by smell or by touch.",
+    "Incorrect. An unknown liquid could be a corrosive, a flammable or a toxic product and could harm the nurse or the client.",
+    "Correct. Under WHMIS every hazardous product at work needs a label that identifies it and its hazards, and a safety data sheet (SDS) must be available. An unlabelled container is reported and not used.",
+    "Incorrect. Some products react dangerously with water or other chemicals, and some must be disposed of as hazardous waste."
+   ],
+   "key": 2,
+   "rationale": "A hazardous product must be identified by its label and its safety data sheet (SDS), and an unlabelled container is not used or tested. Note on regional practice: Canadian workplaces use WHMIS (the Workplace Hazardous Materials Information System, 2015), where the supplier label shows pictograms, a signal word and hazard statements, and workplace labels are put on containers filled from larger ones. In the US the NCLEX model refers to the OSHA Hazard Communication Standard, which is similar in content. In both systems, the nurse reads the SDS for first-aid and handling information.",
+   "needsReview": true,
+   "reviewKind": "regional",
+   "reviewNote": "Canadian workplace labelling uses WHMIS 2015. Check the unknown-product procedure in her facility. The NCLEX uses the US system."
+  },
+  {
+   "id": "q-safe-home-01",
+   "categoryId": "safety-infection-control",
+   "topicId": "safety-infection-control--home-safety",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "safety-infection-control--home-safety--p01",
+    "safety-infection-control--home-safety--p05"
+   ],
+   "cjStep": "recognize-cues",
+   "integratedProcess": "nursing-process",
+   "type": "highlight",
+   "difficulty": 2,
+   "stem": "A community health nurse visits an 84-year-old woman who lives alone, uses a walker and has poor vision. Select the findings that are safety hazards.",
+   "segments": [
+    {
+     "text": "In the home, the nurse notices "
+    },
+    {
+     "text": "loose area rugs in the hallway",
+     "key": true,
+     "why": "This is a hazard. Loose rugs slide and catch a walker's wheels or a foot. They should be removed or fixed with non-slip backing."
+    },
+    {
+     "text": ", "
+    },
+    {
+     "text": "handrails on both sides of the stairs",
+     "key": false,
+     "why": "This is not a hazard. Sturdy handrails on both sides help the client to go up and down safely."
+    },
+    {
+     "text": ", "
+    },
+    {
+     "text": "an extension cord running under the living-room carpet",
+     "key": true,
+     "why": "This is a hazard. A cord under a carpet can be damaged without being seen, and it can overheat and cause a fire. It is also a trip risk."
+    },
+    {
+     "text": ", "
+    },
+    {
+     "text": "grab bars beside the toilet and in the shower",
+     "key": false,
+     "why": "This is not a hazard. Grab bars lower the risk of a fall in the bathroom."
+    },
+    {
+     "text": ", "
+    },
+    {
+     "text": "a portable heater next to the curtains",
+     "key": true,
+     "why": "This is a hazard. Fabric can ignite from the heat. A heater needs a safe distance from curtains, bedding and furniture."
+    },
+    {
+     "text": ", and "
+    },
+    {
+     "text": "a smoke alarm with a log saying it was tested last month",
+     "key": false,
+     "why": "This is not a hazard. A working smoke alarm that is tested regularly is a safeguard."
+    },
+    {
+     "text": "."
+    }
+   ],
+   "rationale": "A home safety check looks at falls, fire, burns and poisoning. The nurse and the client then plan changes in order of risk: remove loose rugs and cords, keep heat sources away from fabrics, and keep (or add) handrails, grab bars and working smoke alarms.",
+   "needsReview": false
+  },
+  {
+   "id": "q-safe-home-02",
+   "categoryId": "safety-infection-control",
+   "topicId": "safety-infection-control--home-safety",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "safety-infection-control--home-safety--p02",
+    "safety-infection-control--home-safety--p03"
+   ],
+   "cjStep": "generate-solutions",
+   "integratedProcess": "teaching-learning",
+   "type": "sata",
+   "difficulty": 2,
+   "stem": "A client with severe COPD is going home with oxygen delivered by an oxygen concentrator and a portable cylinder. Which instructions should the nurse include? Select all that apply.",
+   "options": [
+    "No smoking or open flames such as candles in the home, and put \"oxygen in use\" signs on the doors.",
+    "Keep the oxygen equipment away from heat sources such as the stove and the radiator.",
+    "Keep the cylinders upright in a stand or holder so that they cannot fall.",
+    "Use a water-based lubricant or lip moisturiser, and not petroleum jelly or oil-based products, near the nose and lips.",
+    "Let the fire department and the electric utility know that oxygen is in use, and have a backup cylinder for a power failure.",
+    "Turn up the flow rate when feeling short of breath.",
+    "Smoking is acceptable if the oxygen is turned off and the nasal prongs are taken out.",
+    "Store the spare cylinder on its side next to a radiator, so that it is warm and ready."
+   ],
+   "optionRationales": [
+    "Correct. Oxygen makes a fire burn faster and hotter. Nobody smokes in a home where oxygen is used.",
+    "Correct. Heat and flame near an oxygen source raise the risk of fire.",
+    "Correct. A cylinder is under high pressure, and if it falls and its valve breaks it can become a dangerous projectile.",
+    "Correct. Oil and petroleum products can burn in the presence of oxygen.",
+    "Correct. Responders can then take extra care, and the backup keeps the client safe if the concentrator stops.",
+    "Incorrect. A client with severe COPD can retain carbon dioxide if too much oxygen is given. The flow is set as prescribed and the client calls the provider if the breathing gets worse.",
+    "Incorrect. Oxygen stays in clothing, hair and furniture, so a fire can start even when the oxygen is turned off. Smoking is not allowed in a home with oxygen.",
+    "Incorrect. The cylinder must be upright and secured and away from heat."
+   ],
+   "key": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "rationale": "Home oxygen safety is built around the fire risk and around the client's illness. The client and family keep flames, smoking and heat away, store cylinders safely, avoid oil-based products on the face and keep the flow at the prescribed rate, because too much oxygen can slow the breathing of a client with COPD.",
+   "needsReview": false
+  },
+  {
+   "id": "q-safe-home-03",
+   "categoryId": "safety-infection-control",
+   "topicId": "safety-infection-control--home-safety",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "safety-infection-control--home-safety--p03",
+    "safety-infection-control--home-safety--p05"
+   ],
+   "cjStep": "generate-solutions",
+   "integratedProcess": "teaching-learning",
+   "type": "dropdown",
+   "difficulty": 1,
+   "stem": "A nurse is teaching a family about preventing fires, burns and poisoning at home.",
+   "template": "The family should test smoke alarms {1}, place carbon monoxide alarms {2}, and set the water heater at no higher than {3} to prevent scalds.",
+   "blanks": [
+    {
+     "options": [
+      "every month",
+      "once a year",
+      "only when the alarm chirps"
+     ],
+     "key": 0,
+     "why": "Smoke alarms are tested every month by pressing the test button. The batteries are replaced when they run low or at least once a year, and the alarm is replaced when the manufacturer's date says so, usually after 10 years."
+    },
+    {
+     "options": [
+      "near sleeping areas and on every level of the home",
+      "only in the kitchen",
+      "next to the furnace only"
+     ],
+     "key": 0,
+     "why": "Carbon monoxide is odourless and a person who is asleep cannot smell it. An alarm near the bedrooms wakes the family, and each level of the home needs one."
+    },
+    {
+     "options": [
+      "49 °C (about 120 °F)",
+      "60 °C (140 °F)",
+      "71 °C (about 160 °F)"
+     ],
+     "key": 0,
+     "why": "Water at 49 °C (about 120 °F) or lower reduces the risk of a scald, especially for children and older adults. Water at 60 °C (140 °F) can cause a serious burn within seconds, and water at 71 °C (about 160 °F) can do so almost at once."
+    }
+   ],
+   "rationale": "Home safety teaching covers the main sources of injury. Test smoke alarms every month, place carbon monoxide alarms near the bedrooms and on each level, and set the water heater temperature at 49 °C (about 120 °F) or lower to reduce the risk of scalds.",
+   "needsReview": false
+  },
+  {
+   "id": "q-safe-rep-01",
+   "categoryId": "safety-infection-control",
+   "topicId": "safety-infection-control--reporting-of-incident-event-irregular-occurrence-variance",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "safety-infection-control--reporting-of-incident-event-irregular-occurrence-variance--p04"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "communication-documentation",
+   "type": "mcq",
+   "difficulty": 3,
+   "stem": "A nurse notices that a colleague has slurred speech and smells of alcohol, and is about to prepare medicines for several clients. The colleague says, \"I'm fine, I'm just tired.\" What should the nurse do first?",
+   "options": [
+    "Accept the explanation and watch the colleague closely during the shift.",
+    "Tell the charge nurse or the supervisor at once, describe what was seen and keep the colleague away from client care until an assessment is made.",
+    "Quietly cover the colleague's assignments so that nobody finds out.",
+    "Wait until the end of the shift and speak to the colleague in private."
+   ],
+   "optionRationales": [
+    "Incorrect. The clients are at risk right now, and watching is not enough.",
+    "Correct. Client safety comes first. A nurse who might be impaired must not give care. The report is factual and goes to the person with authority to act.",
+    "Incorrect. Hiding the problem protects nobody. It leaves the colleague without help and delays the safeguards.",
+    "Incorrect. Clients could be harmed before the end of the shift."
+   ],
+   "key": 1,
+   "rationale": "A nurse has a duty to protect clients and to report unsafe practice, including suspected impairment, to a supervisor straight away. Note on regional practice: in Canada the duty to report is set by the provincial regulatory college (for example, a college of nurses), the employer's policy and in some provinces by law, and many employers offer confidential support programmes. In the US the state board of nursing and state laws apply. The nurse reports facts, not guesses about the cause.",
+   "needsReview": true,
+   "reviewKind": "regional",
+   "reviewNote": "Check the duty to report a colleague's unsafe practice, and the role of the regulatory college, in the province where she will work. Canadian rules differ from the US state boards of nursing."
+  },
+  {
+   "id": "q-safe-rep-02",
+   "categoryId": "safety-infection-control",
+   "topicId": "safety-infection-control--reporting-of-incident-event-irregular-occurrence-variance",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "safety-infection-control--reporting-of-incident-event-irregular-occurrence-variance--p02",
+    "safety-infection-control--reporting-of-incident-event-irregular-occurrence-variance--p03"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "communication-documentation",
+   "type": "dragdrop",
+   "difficulty": 3,
+   "stem": "A nurse finds that a client's morning blood pressure medicine was given twice, one hour apart, because two nurses each gave the 0900 dose. Place the nurse's actions in the correct order.",
+   "mode": "order",
+   "items": [
+    {
+     "text": "Notify the provider and the charge nurse of what happened, and what the client received.",
+     "why": "The provider must know so that orders can be given for treatment and monitoring."
+    },
+    {
+     "text": "Carry out the new orders and monitor the client's response.",
+     "why": "The nurse follows the plan for monitoring and treatment until the client is stable."
+    },
+    {
+     "text": "Document the facts of the event and of the care given in the client's record, without blame.",
+     "why": "The record states what happened, what was observed and what was done, in objective language."
+    },
+    {
+     "text": "Assess the client, including vital signs and symptoms of low blood pressure.",
+     "why": "The client's safety comes first, so the nurse checks for harm at once."
+    },
+    {
+     "text": "Complete an incident report according to the facility's policy, and do not mention it in the client's record.",
+     "why": "The incident report is used to improve safety and is kept separate from the client's record."
+    }
+   ],
+   "key": [
+    3,
+    0,
+    1,
+    2,
+    4
+   ],
+   "rationale": "After an error, the nurse protects the client, tells the provider, carries out the new orders, documents the facts in the client's record and completes an incident report, without blame. Honest reporting and talking openly with the client and family (disclosure, as the facility's policy and the provider direct) are part of safe care.",
+   "needsReview": false
+  },
+  {
+   "id": "q-safe-rep-03",
+   "categoryId": "safety-infection-control",
+   "topicId": "safety-infection-control--reporting-of-incident-event-irregular-occurrence-variance",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "safety-infection-control--reporting-of-incident-event-irregular-occurrence-variance--p01"
+   ],
+   "cjStep": "analyze-cues",
+   "integratedProcess": "communication-documentation",
+   "type": "matrix",
+   "difficulty": 3,
+   "stem": "The nurse is reviewing patient safety incidents. A near miss is an event that did not reach the client, a no-harm incident reached the client but caused no harm, and a harmful incident caused harm. For each event, select the type. All of them should be reported.",
+   "cols": [
+    "Near miss",
+    "No-harm incident",
+    "Harmful incident"
+   ],
+   "rows": [
+    {
+     "text": "A nurse scans the barcode of a blood unit and finds that it is for another client. The transfusion is not started.",
+     "key": 0,
+     "why": "The error was caught before it reached the client, so it is a near miss. Near misses are valuable because they show where the system is weak."
+    },
+    {
+     "text": "A client's scheduled antibiotic is given 90 minutes late, and there is no change in the client's condition.",
+     "key": 1,
+     "why": "The late dose reached the client, but no harm resulted, so it is a no-harm incident."
+    },
+    {
+     "text": "A client falls and fractures a wrist.",
+     "key": 2,
+     "why": "The event reached the client and caused harm, so it is a harmful incident."
+    },
+    {
+     "text": "The nurse draws up a dose of heparin that is ten times too high, notices it when checking the vial and discards it.",
+     "key": 0,
+     "why": "The mistake never reached the client, so it is a near miss."
+    },
+    {
+     "text": "A client is given the wrong dose of insulin and has a blood glucose of 2.4 mmol/L [43 mg/dL] that needs IV dextrose.",
+     "key": 2,
+     "why": "The error reached the client and caused harm that needed treatment, so it is a harmful incident."
+    }
+   ],
+   "rationale": "Events that happen, nearly happen or cause harm are reported so that the system can be improved, not to blame a person. Note on regional practice: the NCLEX talks about an incident, event, irregular occurrence or variance report. Canadian systems often use \"patient safety incident\" with the categories near miss, no-harm incident and harmful incident (adverse event), and a \"critical incident\" for a serious one. Reports may go to the facility's system, to ISMP Canada's medication-incident system or to a provincial system, and the facility's policy says which one.",
+   "needsReview": true,
+   "reviewKind": "regional",
+   "reviewNote": "Canadian systems (for example, the patient safety incident categories used by the Canadian Patient Safety Institute and ISMP Canada) use different words from the NCLEX terms. Check the reporting system and terms in her health authority."
+  },
+  {
+   "id": "q-safe-equip-01",
+   "categoryId": "safety-infection-control",
+   "topicId": "safety-infection-control--safe-use-of-equipment",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "safety-infection-control--safe-use-of-equipment--p01"
+   ],
+   "cjStep": "recognize-cues",
+   "integratedProcess": "nursing-process",
+   "type": "matrix",
+   "difficulty": 2,
+   "stem": "During a safety check of a client's room, the nurse looks at the electrical equipment. For each finding, select whether the equipment is safe to use or must be removed and reported.",
+   "cols": [
+    "Safe to use",
+    "Remove and report"
+   ],
+   "rows": [
+    {
+     "text": "The power cord of the bed has a cracked outer cover and a bare wire showing.",
+     "key": 1,
+     "why": "Damaged insulation can cause an electrical shock or a fire. The bed is removed from use and reported."
+    },
+    {
+     "text": "An infusion pump has a current inspection sticker from the biomedical (clinical) engineering department and an undamaged cord.",
+     "key": 0,
+     "why": "The inspection label shows that the pump has been checked, and the cord is intact."
+    },
+    {
+     "text": "A three-prong plug has been fitted into a two-slot outlet with an adaptor, and its grounding prong has been broken off.",
+     "key": 1,
+     "why": "The ground prong carries a fault current away from the person. Without it, the client or the nurse can receive a shock."
+    },
+    {
+     "text": "A suction machine gives off a smell of burning when it is switched on.",
+     "key": 1,
+     "why": "A burning smell means overheating or a fault in the wiring. The machine is switched off, unplugged, removed and reported."
+    },
+    {
+     "text": "A plug is pulled from the wall by gripping the plug and not the cord, and the plug is undamaged.",
+     "key": 0,
+     "why": "Pulling by the plug protects the cord and the connection. Pulling on the cord damages it."
+    }
+   ],
+   "rationale": "The nurse inspects the equipment before use, looks for damaged cords, missing or loose parts, a missing grounding prong, odours, sparks and an out-of-date inspection label, and takes any suspect device out of use and reports it. Plugs are pulled out by the plug, never by the cord.",
+   "needsReview": false
+  },
+  {
+   "id": "q-safe-equip-02",
+   "categoryId": "safety-infection-control",
+   "topicId": "safety-infection-control--safe-use-of-equipment",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "safety-infection-control--safe-use-of-equipment--p04",
+    "safety-infection-control--safe-use-of-equipment--p03"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "nursing-process",
+   "type": "mcq",
+   "difficulty": 2,
+   "stem": "During an infusion, the infusion pump shows an error code and the rate changes on its own. The IV site is intact. What should the nurse do?",
+   "options": [
+    "Check the client, replace the pump with a working one, take the faulty pump out of use with a label describing the problem and report it to biomedical engineering as the facility's policy says.",
+    "Reset the pump and keep using it, because the IV site is fine.",
+    "Leave the pump in the room with a note, to be reported by the next shift.",
+    "Turn up the alarm volume and keep a close watch on the pump."
+   ],
+   "optionRationales": [
+    "Correct. The client is checked first, and the faulty device is removed from the care area so that nobody uses it by mistake. The problem is reported, and an incident report is filed.",
+    "Incorrect. A pump that changes its rate by itself may deliver a wrong dose, and a reset does not mean that it is repaired.",
+    "Incorrect. A faulty pump left in the room can be picked up by another nurse. It is removed from the area and reported straight away.",
+    "Incorrect. Watching does not make a faulty pump safe, and the client could receive a wrong dose between checks."
+   ],
+   "key": 0,
+   "rationale": "Equipment that is faulty is removed from the client care area, labelled so that it is not used, and reported to the right department, with an incident report if the policy requires it. Meanwhile the nurse makes sure the client is safe and gets the care and therapy in another way.",
+   "needsReview": false
+  },
+  {
+   "id": "q-safe-equip-03",
+   "categoryId": "safety-infection-control",
+   "topicId": "safety-infection-control--safe-use-of-equipment",
+   "secondaryTopicIds": [
+    "safety-infection-control--standard-precautions-transmission-based-precautions-surgical-asepsis"
+   ],
+   "learningPointIds": [
+    "safety-infection-control--safe-use-of-equipment--p03",
+    "safety-infection-control--safe-use-of-equipment--p02"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "nursing-process",
+   "type": "sata",
+   "difficulty": 2,
+   "stem": "A nurse gives an intramuscular injection with a safety-engineered needle and then collects a urine specimen. Which actions are correct? Select all that apply.",
+   "options": [
+    "Activate the safety device straight after the injection, and put the needle in the sharps container at the point of use.",
+    "Do not recap, bend or break used needles.",
+    "Close and replace the sharps container when it is about three-quarters full.",
+    "Put the urine specimen in a leak-proof container, place it in a sealed bag and keep the form in the outside pocket.",
+    "After a needle-stick injury, wash the site with soap and water, report it right away and follow the facility's exposure protocol.",
+    "Recap the needle with both hands before disposal.",
+    "Carry the uncovered needle to the sharps container at the end of the corridor on a tray.",
+    "Push down the contents of a full sharps container with a gloved hand to make space."
+   ],
+   "optionRationales": [
+    "Correct. Safety devices and containers close to where the needle is used are meant to prevent needle-stick injuries.",
+    "Correct. Recapping is a common cause of needle-stick injury.",
+    "Correct. An overfilled container can cause needles to poke out and injure people.",
+    "Correct. A sealed bag stops leaks from contaminating people and surfaces. The form is kept outside so that it does not become contaminated.",
+    "Correct. Prompt reporting lets the facility test the nurse and the source client and start treatment, if it is needed.",
+    "Incorrect. Using both hands to recap a needle risks puncturing a finger.",
+    "Incorrect. A needle is disposed of at the point of use, not carried around.",
+    "Incorrect. Needles can pierce the glove. A full container is closed and replaced."
+   ],
+   "key": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "rationale": "Sharps and specimens are handled so that no one is injured or contaminated. Safety devices are used, needles are not recapped, containers are at the point of use and are not overfilled, specimens are in sealed bags, and any exposure is washed and reported at once.",
+   "needsReview": false
+  },
+  {
+   "id": "q-safe-sec-01",
+   "categoryId": "safety-infection-control",
+   "topicId": "safety-infection-control--security-plan",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "safety-infection-control--security-plan--p03",
+    "safety-infection-control--security-plan--p01"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "nursing-process",
+   "type": "mcq",
+   "difficulty": 2,
+   "stem": "A nurse on a postpartum unit sees a woman who is not wearing a staff or visitor badge walking quickly toward the stairwell, carrying an infant wrapped in a blanket. The infant's electronic security tag alarm has just sounded at the exit door. What should the nurse do first?",
+   "options": [
+    "Shout at the woman to stop and chase her down the stairs.",
+    "Immediately call the facility's infant-abduction emergency code and security, giving a description of the woman and the direction she went, and follow the unit's lockdown plan.",
+    "Finish the shift report and then check the infant's wristband.",
+    "Count the infants in the nursery first, and call for help only if one is missing."
+   ],
+   "optionRationales": [
+    "Incorrect. The nurse might put the infant and herself in danger, and the other infants on the unit are left without help. The chase is left to security.",
+    "Correct. The quickest way to stop an abduction is to start the plan, so that exits are guarded and security can search. A clear description helps them.",
+    "Incorrect. A delay gives the person time to leave the building.",
+    "Incorrect. The alarm and the unknown person are already a reason to act. Checking can be done by others while the code is called."
+   ],
+   "key": 1,
+   "rationale": "A security plan for infants includes identification bands and electronic tags, controlled access to the unit, staff badges and a clear emergency code. When an infant may have been taken, the first action is to activate the code and the plan, with a good description and the direction of travel. Note on regional practice: colour codes and their meanings vary between Canadian provinces and between facilities, and many now use plain-language alerts. In the US, \"Code Pink\" is common. The nurse must know the codes used where she works.",
+   "needsReview": true,
+   "reviewKind": "regional",
+   "reviewNote": "Code names and numbers differ by province and facility (for example, an infant abduction may be called Code Pink or Code Amber). Check the codes used in the health authority where she will work."
+  },
+  {
+   "id": "q-safe-sec-02",
+   "categoryId": "safety-infection-control",
+   "topicId": "safety-infection-control--security-plan",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "safety-infection-control--security-plan--p02"
+   ],
+   "cjStep": "prioritize-hypotheses",
+   "integratedProcess": "clinical-judgment",
+   "type": "dragdrop",
+   "difficulty": 3,
+   "stem": "A bomb threat has been confirmed on a hospital unit, and the unit must be evacuated horizontally to a safe area. No client is in immediate danger from the threat at this moment. For each client, select the order in which the client is moved, according to the NCLEX model.",
+   "mode": "sort",
+   "bins": [
+    "Move first",
+    "Move second",
+    "Move last"
+   ],
+   "items": [
+    {
+     "text": "An alert client who walks with a cane and can follow directions.",
+     "key": 0,
+     "why": "Clients who can walk and follow instructions are moved first. They can move on their own with direction and are out of the way for the staff who help the others."
+    },
+    {
+     "text": "A client who is 1 day after abdominal surgery, who is alert and can walk with a nurse's directions.",
+     "key": 0,
+     "why": "The client can walk, so can leave first, with help as needed."
+    },
+    {
+     "text": "A client in a wheelchair who needs help to get in and out of it.",
+     "key": 1,
+     "why": "This client needs equipment and a helper, so is moved after those who can walk themselves."
+    },
+    {
+     "text": "A client on crutches who needs a nurse beside them.",
+     "key": 1,
+     "why": "This client needs stand-by help, so is moved after those who can walk themselves."
+    },
+    {
+     "text": "A client who is on bed rest and cannot move without help.",
+     "key": 2,
+     "why": "Clients who must be moved in the bed, on a sheet or on an evacuation device need the most staff and time, so are moved last."
+    },
+    {
+     "text": "A client who is unconscious.",
+     "key": 2,
+     "why": "The client must be carried or moved in a bed and needs the most staff and equipment, so is moved last."
+    }
+   ],
+   "rationale": "When there is no immediate danger, the NCLEX model moves clients who can walk first, then those who need help, then those who must be carried or moved in their beds. Note on regional practice: a client who is in immediate danger is always rescued first (the R in RACE), and many Canadian facility plans start with those closest to the danger and use horizontal evacuation behind fire doors before any evacuation by stairs. The nurse follows the facility's own plan.",
+   "needsReview": true,
+   "reviewKind": "regional",
+   "reviewNote": "Facility evacuation plans differ. Check the evacuation priorities in her future workplace and province. The NCLEX model moves clients who can walk first, but plans in Canada may start with those closest to the danger."
+  },
+  {
+   "id": "q-safe-restr-01",
+   "categoryId": "safety-infection-control",
+   "topicId": "safety-infection-control--use-of-restraints-safety-devices",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "safety-infection-control--use-of-restraints-safety-devices--p01",
+    "safety-infection-control--use-of-restraints-safety-devices--p02"
+   ],
+   "cjStep": "generate-solutions",
+   "integratedProcess": "nursing-process",
+   "type": "dropdown",
+   "difficulty": 2,
+   "stem": "A confused client keeps pulling at an IV line and trying to climb out of bed. Reorientation has not worked.",
+   "template": "The nurse should first {1}. A restraint is the last resort and is used only {2}.",
+   "blanks": [
+    {
+     "options": [
+      "try less restrictive measures, such as a sitter or family member at the bedside, covering the IV site, a low bed and toileting",
+      "apply wrist restraints to protect the IV line",
+      "ask for a sedative so that the client is quiet"
+     ],
+     "key": 0,
+     "why": "A restraint limits freedom and can injure the client, so less restrictive measures are always tried first. A sedative is not used to manage behaviour for the convenience of staff, and a restraint is not the first step."
+    },
+    {
+     "options": [
+      "after less restrictive measures have failed, with the order or authorisation that the law and policy require, and for the shortest time needed",
+      "whenever the nurse feels that it is easier to look after the client",
+      "for the whole admission, so that it does not have to be reviewed"
+     ],
+     "key": 0,
+     "why": "A restraint needs a clinical reason, a plan, the authorisation required by law and policy, and regular reassessment, so that it is removed as soon as it is no longer needed. Convenience is never a reason, and it is reviewed regularly."
+    }
+   ],
+   "rationale": "Restraints are used only when less restrictive measures have failed and the client is at risk of harm, with the authorisation required by law and policy, and for as short a time as possible. Note on regional practice: in the US federal and state rules set time limits for orders and face-to-face reviews. In Canada, restraint legislation and policies differ by province and territory and by setting (hospital or long-term care), and many facilities follow a restraint-minimisation policy. In an emergency the nurse may need to act to prevent immediate harm, and the authorisation is then obtained as soon as possible.",
+   "needsReview": true,
+   "reviewKind": "regional",
+   "reviewNote": "Restraint rules differ by province and territory (and US federal and state rules). Check the legislation and policy where she will work, including who may order a restraint and how often it is reassessed."
+  },
+  {
+   "id": "q-safe-restr-02",
+   "categoryId": "safety-infection-control",
+   "topicId": "safety-infection-control--use-of-restraints-safety-devices",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "safety-infection-control--use-of-restraints-safety-devices--p03",
+    "safety-infection-control--use-of-restraints-safety-devices--p02"
+   ],
+   "cjStep": "evaluate-outcomes",
+   "integratedProcess": "nursing-process",
+   "type": "sata",
+   "difficulty": 2,
+   "stem": "A client is in soft wrist restraints, ordered to protect an IV line. Which actions are correct? Select all that apply.",
+   "options": [
+    "Attach the restraint to the bed frame (the part that does not move when the bed is raised or lowered) with a quick-release knot.",
+    "Check that two fingers can slide under the restraint, and check the skin and circulation (colour, warmth, pulse and sensation) at the site.",
+    "Remove the restraint at regular intervals as the policy says, to move the limbs through their range of motion and to offer toileting, fluids and food.",
+    "Check the client often, and make sure that the call light is within reach if the client can use it.",
+    "Document the reason, the less restrictive measures tried, the order, the checks and the client's response.",
+    "Tie the restraint to the side rail.",
+    "Use a tight knot that the client cannot loosen.",
+    "Leave the client flat on the back so that the client cannot get up."
+   ],
+   "optionRationales": [
+    "Correct. A quick-release knot lets the restraint be removed in seconds in an emergency. The bed frame holds it in place.",
+    "Correct. A restraint that is too tight can cut off blood flow and injure nerves and skin.",
+    "Correct. The restrained client still has basic needs, and the joints and skin need relief.",
+    "Correct. A restrained client can be in danger without being able to call for help, so close watching is needed.",
+    "Correct. The record shows that the restraint was needed, was safe and was reviewed.",
+    "Incorrect. When the rail is lowered, the restraint pulls on the client's limb and can injure it.",
+    "Incorrect. A tight knot that cannot be released quickly is dangerous in an emergency and may cut off circulation.",
+    "Incorrect. A client lying flat is at risk of aspiration. The head of the bed is raised, or the client is positioned on the side as appropriate."
+   ],
+   "key": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "rationale": "A restrained client is at risk of injury, pressure, impaired circulation, aspiration and loss of dignity. The nurse uses the correct knot and fastening, checks the skin and circulation, meets the client's needs on a schedule set by policy, watches the client closely and documents the reason and the checks.",
+   "needsReview": false
+  }
+ ]
+}

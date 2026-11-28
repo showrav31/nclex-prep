@@ -4,7 +4,7 @@
 This website is my wife's **main** place to prepare for the NCLEX-RN. She is a 4th-year nursing student in Bangladesh, sitting the exam around mid-2028, and will then work as an RN in Canada. She mostly uses her **Android phone**, sometimes on **slow internet**.
 
 ## Rules
-- **Fast on a mid-range Android**: plain JS, no frameworks or big libraries, render only the visible screen. (Now: ~690 KB uncompressed; the syllabus is 168 KB and the three question banks 118, 75 and 102 KB, all compressing to about a quarter of that on GitHub Pages; ~0.4 s load with a 4× slower CPU.)
+- **Fast on a mid-range Android**: plain JS, no frameworks or big libraries, render only the visible screen. (Now: ~780 KB uncompressed; the syllabus is 168 KB and the four question banks 118, 75, 102 and 91 KB, all compressing to about a quarter of that on GitHub Pages; ~0.4 s load with a 4× slower CPU.)
 - **Dark mode**: use the colour tokens in `:root` (`var(--card)`, `var(--ink)` …), never hard-coded colours.
 - **Mobile-first**: design for a small Android screen first, then scale up.
 - **Simple and friendly** design, in **plain English**.
@@ -60,7 +60,7 @@ The site lives under the `/nclex-prep/` subpath, not the domain root.
 - Study tools, one file each, loaded after `app.js`: `flashcards.js` (spaced repetition), `notes.js`, `mistakes.js`, `timer.js` (study timer + weekly chart), `badges.js`, `settings.js` (dark mode, text size, backup/restore, reset).
 - `source/nclex-2026-syllabus.json` — the official syllabus data (never edit). Not cached by the service worker.
 - `js/qtypes.js` — question engine: loads/normalizes questions, draws all 10 question types (incl. numeric calculations), scoring and partial credit, "why each choice" review.
-- `data/questions/<categoryId>.json` — the question bank for one category, in the new format (see **Question bank** below). Today `management-of-care.json` (64), `pharmacological-parenteral.json` (36) and `physiological-adaptation.json` (44 questions). Add a file per category, and list it in `QUESTION_FILES` in `js/app.js` and in `FILES` in `sw.js`.
+- `data/questions/<categoryId>.json` — the question bank for one category, in the new format (see **Question bank** below). Today `management-of-care.json` (64), `pharmacological-parenteral.json` (36), `physiological-adaptation.json` (44) and `safety-infection-control.json` (36 questions). Add a file per category, and list it in `QUESTION_FILES` in `js/app.js` and in `FILES` in `sw.js`.
 - `data/questions.json` — the 34 older questions (older, simpler format; still loaded and converted by `normQ`). Leave as is.
 - `data/legacy-topic-map.json` — old (pre-2026-syllabus) topic id → new id map, used by the v5 → v6 migration. Never edit it.
 - `data/*.json` — content: `syllabus` (copy of the source), `questions`, `plan`, `canada`, `reference` (labs, drugs, isolation, high-alert meds, vital signs), `exam-guide`. Flashcard decks are built from `reference` + `exam-guide.priority`; each item's `id` is its card ID.
@@ -78,7 +78,7 @@ The site lives under the `/nclex-prep/` subpath, not the domain root.
 - **Schema v6** moved everything from the old topic ids (`moc-delegation` …) to the official ids. Ratings, notes, timer minutes, mistakes, today's task and quiz stats were mapped by `LEGACY_V5` (a frozen copy of `data/legacy-topic-map.json` inside `js/store.js`; a test checks they agree). Where two old topics became one, the lower rating wins and notes are joined. Anything unmatched is kept in `S.unmapped.v6`; a note on an unmatched topic becomes a free note.
 
 ## Question bank
-Question files `data/questions/<categoryId>.json` look like `{ "categoryId": "...", "questions": [ ... ] }`. Every question has:
+Question files `data/questions/<categoryId>.json` look like `{ "categoryId": "...", "quotas": {...}, "questions": [ ... ] }`. **Quotas**: every topic needs at least 4 questions by default. When a request asks for other numbers, the file carries `quotas: {topicId: n}` (n may be 0 for a topic that was not asked for); the test then requires exactly that many per topic and `min(n, number of learning points)` different first learning points. Safety and Infection Control uses quotas (8, 8, 4, 3, 3, 3, 3, 2, 2, and 0 for Ergonomic Principles, which has no questions yet). Every question has:
 `id` (stable, `q-…`), `categoryId`, `topicId`, `secondaryTopicIds[]`, `learningPointIds[]` (official ids; the first is the main one), `cjStep` (a clinical judgment step id or `null`), `integratedProcess` (id), `type`, `difficulty` (1 to 5), `stem`, optional `exhibit` (`{title, text}` or `{title, columns, rows}`), `rationale` (why the key is right), `needsReview` (true/false; when true also `reviewKind` and `reviewNote`, see below). Optional: `caseStudy: {id: "cs-…", step: 1..6}` (marks a question as a building block for a later case study; `step` must match its `cjStep`, e.g. 1 = recognize-cues), `checks[]` (see **Interpretation checks**).
 Type fields:
 - `mcq`: `options[]`, `key` (index), `optionRationales[]` (one per option).
