@@ -1,0 +1,4334 @@
+{
+ "meta": {
+  "title": "NCLEX-RN Test Plan (Effective April 2026)",
+  "effective": "2026-04-01",
+  "validThrough": "2029-03-31",
+  "source": "National Council of State Boards of Nursing (NCSBN), 2026 NCLEX-RN Test Plan, Appendix A and Section II-III",
+  "sourceUrl": "https://nclex.com/files/2026_RN_Test%20Plan_English-F.pdf",
+  "practiceAnalysis": "2024 RN Practice Analysis",
+  "copyright": "Portions copyrighted by the National Council of State Boards of Nursing, Inc. All rights reserved.",
+  "note": "Personal study tool, not affiliated with NCSBN. Never change or reuse an existing id."
+ },
+ "areas": [
+  {
+   "id": "area-safe-effective-care",
+   "name": "Safe and Effective Care Environment",
+   "description": "The nurse promotes achievement of client outcomes by providing and directing nursing care that enhances the care delivery setting in order to protect clients and health care personnel."
+  },
+  {
+   "id": "area-health-promotion",
+   "name": "Health Promotion and Maintenance",
+   "description": "The nurse provides and directs nursing care of the client that incorporates the knowledge of expected growth and development principles, prevention and/or early detection of health problems, and strategies to achieve optimal health."
+  },
+  {
+   "id": "area-psychosocial-integrity",
+   "name": "Psychosocial Integrity",
+   "description": "The nurse provides and directs nursing care that promotes and supports the emotional, mental and social well-being of the client experiencing stressful events as well as clients with acute or chronic mental illness."
+  },
+  {
+   "id": "area-physiological-integrity",
+   "name": "Physiological Integrity",
+   "description": "The nurse promotes physical health and wellness by providing care and comfort, reducing client risk potential and managing health alterations."
+  }
+ ],
+ "categories": [
+  {
+   "id": "management-of-care",
+   "areaId": "area-safe-effective-care",
+   "name": "Management of Care",
+   "weightRange": "15–21%",
+   "weightMin": 15,
+   "weightMax": 21,
+   "weightMid": 18.0,
+   "description": "Providing and directing nursing care that enhances the care delivery setting to protect the client and health care personnel.",
+   "topics": [
+    {
+     "id": "management-of-care--advance-directives-self-determination-life-planning",
+     "name": "Advance Directives/Self-Determination/Life Planning",
+     "learningPoints": [
+      {
+       "id": "management-of-care--advance-directives-self-determination-life-planning--p01",
+       "text": "Assess client and/or staff member knowledge of advance directives (e.g., living will, health care agent/proxy, power of attorney for health care)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "management-of-care--advance-directives-self-determination-life-planning--p02",
+       "text": "Integrate advance directives into client plan of care",
+       "isActivityStatement": true
+      },
+      {
+       "id": "management-of-care--advance-directives-self-determination-life-planning--p03",
+       "text": "Provide client with information about advance directives, self-care determination, life planning",
+       "isActivityStatement": false
+      }
+     ]
+    },
+    {
+     "id": "management-of-care--advocacy",
+     "name": "Advocacy",
+     "learningPoints": [
+      {
+       "id": "management-of-care--advocacy--p01",
+       "text": "Discuss identified treatment options with client and respect their decisions",
+       "isActivityStatement": false
+      },
+      {
+       "id": "management-of-care--advocacy--p02",
+       "text": "Provide information on advocacy to staff members",
+       "isActivityStatement": false
+      },
+      {
+       "id": "management-of-care--advocacy--p03",
+       "text": "Act in the role of client advocate",
+       "isActivityStatement": false
+      },
+      {
+       "id": "management-of-care--advocacy--p04",
+       "text": "Use advocacy resources appropriately (e.g., social worker, chain of command, interpreter)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "management-of-care--advocacy--p05",
+       "text": "Perform care for clients to support unbiased treatment and equal access to care, regardless of culture/ethnicity, sexual orientation, gender identity and/or gender expression",
+       "isActivityStatement": true
+      }
+     ]
+    },
+    {
+     "id": "management-of-care--assignment-delegation-and-supervision",
+     "name": "Assignment, Delegation and Supervision",
+     "learningPoints": [
+      {
+       "id": "management-of-care--assignment-delegation-and-supervision--p01",
+       "text": "Identify tasks for assignment or delegation based on client needs",
+       "isActivityStatement": false
+      },
+      {
+       "id": "management-of-care--assignment-delegation-and-supervision--p02",
+       "text": "Delegate and assign appropriate tasks based on client needs to personnel with competency to perform tasks",
+       "isActivityStatement": false
+      },
+      {
+       "id": "management-of-care--assignment-delegation-and-supervision--p03",
+       "text": "Delegate and supervise care of client provided by others (e.g., LPN/VN, assistive personnel, other RNs)",
+       "isActivityStatement": true
+      },
+      {
+       "id": "management-of-care--assignment-delegation-and-supervision--p04",
+       "text": "Communicate tasks to be completed and report client concerns immediately",
+       "isActivityStatement": false
+      },
+      {
+       "id": "management-of-care--assignment-delegation-and-supervision--p05",
+       "text": "Organize workload to manage time effectively",
+       "isActivityStatement": true
+      },
+      {
+       "id": "management-of-care--assignment-delegation-and-supervision--p06",
+       "text": "Utilize the rights of delegation (e.g., right task, right circumstances, right person, right direction/communication, right supervision/evaluation)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "management-of-care--assignment-delegation-and-supervision--p07",
+       "text": "Evaluate delegated tasks to ensure correct completion of activity",
+       "isActivityStatement": false
+      },
+      {
+       "id": "management-of-care--assignment-delegation-and-supervision--p08",
+       "text": "Evaluate ability of staff members to perform assigned tasks considering personnel's allowable tasks/duties, competency and ability to use sound judgment and decision-making",
+       "isActivityStatement": false
+      },
+      {
+       "id": "management-of-care--assignment-delegation-and-supervision--p09",
+       "text": "Evaluate effectiveness of staff members' time management skills",
+       "isActivityStatement": false
+      }
+     ]
+    },
+    {
+     "id": "management-of-care--case-management",
+     "name": "Case Management",
+     "learningPoints": [
+      {
+       "id": "management-of-care--case-management--p01",
+       "text": "Explore resources available to assist client with achieving or maintaining independence",
+       "isActivityStatement": false
+      },
+      {
+       "id": "management-of-care--case-management--p02",
+       "text": "Assess client's need for materials and equipment (e.g., oxygen, suction machine, wound care supplies)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "management-of-care--case-management--p03",
+       "text": "Practice and advocate for quality and cost-effective care",
+       "isActivityStatement": true
+      },
+      {
+       "id": "management-of-care--case-management--p04",
+       "text": "Plan individualized care for client based on need (e.g., client diagnosis, self-care ability, prescribed treatments)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "management-of-care--case-management--p05",
+       "text": "Provide client with information on discharge procedures to home or community setting",
+       "isActivityStatement": false
+      },
+      {
+       "id": "management-of-care--case-management--p06",
+       "text": "Initiate, evaluate and update client plan of care",
+       "isActivityStatement": true
+      }
+     ]
+    },
+    {
+     "id": "management-of-care--client-rights",
+     "name": "Client Rights",
+     "learningPoints": [
+      {
+       "id": "management-of-care--client-rights--p01",
+       "text": "Recognize client's right to refuse treatment/procedures",
+       "isActivityStatement": false
+      },
+      {
+       "id": "management-of-care--client-rights--p02",
+       "text": "Discuss treatment options/decisions with client",
+       "isActivityStatement": false
+      },
+      {
+       "id": "management-of-care--client-rights--p03",
+       "text": "Provide education to clients and staff about client rights and responsibilities",
+       "isActivityStatement": true
+      },
+      {
+       "id": "management-of-care--client-rights--p04",
+       "text": "Evaluate client and staff understanding of client rights",
+       "isActivityStatement": false
+      },
+      {
+       "id": "management-of-care--client-rights--p05",
+       "text": "Advocate for client rights and needs",
+       "isActivityStatement": true
+      }
+     ]
+    },
+    {
+     "id": "management-of-care--collaboration-with-multidisciplinary-team",
+     "name": "Collaboration with Multidisciplinary Team",
+     "learningPoints": [
+      {
+       "id": "management-of-care--collaboration-with-multidisciplinary-team--p01",
+       "text": "Identify the need for interdisciplinary conferences",
+       "isActivityStatement": false
+      },
+      {
+       "id": "management-of-care--collaboration-with-multidisciplinary-team--p02",
+       "text": "Identify significant information to report to other disciplines (e.g., health care provider, pharmacist, social worker, respiratory therapist)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "management-of-care--collaboration-with-multidisciplinary-team--p03",
+       "text": "Review plan of care to ensure continuity across disciplines",
+       "isActivityStatement": false
+      },
+      {
+       "id": "management-of-care--collaboration-with-multidisciplinary-team--p04",
+       "text": "Identify and collaborate with multidisciplinary team members when providing client care (e.g., physical therapist, nutritionist, social worker)",
+       "isActivityStatement": true
+      },
+      {
+       "id": "management-of-care--collaboration-with-multidisciplinary-team--p05",
+       "text": "Serve as resource person to other staff",
+       "isActivityStatement": false
+      }
+     ]
+    },
+    {
+     "id": "management-of-care--concepts-of-management",
+     "name": "Concepts of Management",
+     "learningPoints": [
+      {
+       "id": "management-of-care--concepts-of-management--p01",
+       "text": "Identify roles and responsibilities of health care team members",
+       "isActivityStatement": false
+      },
+      {
+       "id": "management-of-care--concepts-of-management--p02",
+       "text": "Plan overall strategies to address client problems",
+       "isActivityStatement": false
+      },
+      {
+       "id": "management-of-care--concepts-of-management--p03",
+       "text": "Act as liaison between client and others (e.g., coordinate or manage care)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "management-of-care--concepts-of-management--p04",
+       "text": "Manage conflict among clients and staff",
+       "isActivityStatement": true
+      },
+      {
+       "id": "management-of-care--concepts-of-management--p05",
+       "text": "Evaluate management outcomes",
+       "isActivityStatement": false
+      }
+     ]
+    },
+    {
+     "id": "management-of-care--confidentiality-information-security",
+     "name": "Confidentiality/Information Security",
+     "learningPoints": [
+      {
+       "id": "management-of-care--confidentiality-information-security--p01",
+       "text": "Assess staff member and client understanding of confidentiality requirements",
+       "isActivityStatement": false
+      },
+      {
+       "id": "management-of-care--confidentiality-information-security--p02",
+       "text": "Maintain client confidentiality and privacy (e.g., social media, disclosure of information)",
+       "isActivityStatement": true
+      },
+      {
+       "id": "management-of-care--confidentiality-information-security--p03",
+       "text": "Intervene appropriately when staff members have breached confidentiality",
+       "isActivityStatement": false
+      }
+     ]
+    },
+    {
+     "id": "management-of-care--continuity-of-care",
+     "name": "Continuity of Care",
+     "learningPoints": [
+      {
+       "id": "management-of-care--continuity-of-care--p01",
+       "text": "Provide and receive handoff of care (report) on assigned clients",
+       "isActivityStatement": true
+      },
+      {
+       "id": "management-of-care--continuity-of-care--p02",
+       "text": "Use documents to record and communicate client information (e.g., medical record, referral/transfer form)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "management-of-care--continuity-of-care--p03",
+       "text": "Use approved terminology when documenting care",
+       "isActivityStatement": true
+      },
+      {
+       "id": "management-of-care--continuity-of-care--p04",
+       "text": "Perform procedures necessary to safely admit, transfer and/or discharge a client",
+       "isActivityStatement": true
+      },
+      {
+       "id": "management-of-care--continuity-of-care--p05",
+       "text": "Follow up on unresolved issues regarding client care (e.g., laboratory results, client requests)",
+       "isActivityStatement": false
+      }
+     ]
+    },
+    {
+     "id": "management-of-care--establishing-priorities",
+     "name": "Establishing Priorities",
+     "learningPoints": [
+      {
+       "id": "management-of-care--establishing-priorities--p01",
+       "text": "Apply knowledge of pathophysiology when establishing priorities for interventions with multiple clients",
+       "isActivityStatement": false
+      },
+      {
+       "id": "management-of-care--establishing-priorities--p02",
+       "text": "Prioritize the delivery of client care based on acuity",
+       "isActivityStatement": true
+      },
+      {
+       "id": "management-of-care--establishing-priorities--p03",
+       "text": "Evaluate plan of care for multiple clients and revise plan of care as needed",
+       "isActivityStatement": false
+      }
+     ]
+    },
+    {
+     "id": "management-of-care--ethical-practice",
+     "name": "Ethical Practice",
+     "learningPoints": [
+      {
+       "id": "management-of-care--ethical-practice--p01",
+       "text": "Recognize and report ethical dilemmas",
+       "isActivityStatement": true
+      },
+      {
+       "id": "management-of-care--ethical-practice--p02",
+       "text": "Inform client and staff members of ethical issues affecting client care",
+       "isActivityStatement": false
+      },
+      {
+       "id": "management-of-care--ethical-practice--p03",
+       "text": "Practice in a manner consistent with the nurses' code of ethics",
+       "isActivityStatement": true
+      },
+      {
+       "id": "management-of-care--ethical-practice--p04",
+       "text": "Evaluate outcomes of interventions to promote ethical practice",
+       "isActivityStatement": false
+      }
+     ]
+    },
+    {
+     "id": "management-of-care--informed-consent",
+     "name": "Informed Consent",
+     "learningPoints": [
+      {
+       "id": "management-of-care--informed-consent--p01",
+       "text": "Identify appropriate person to provide informed consent for client",
+       "isActivityStatement": false
+      },
+      {
+       "id": "management-of-care--informed-consent--p02",
+       "text": "Provide written materials in client's spoken language, when possible",
+       "isActivityStatement": false
+      },
+      {
+       "id": "management-of-care--informed-consent--p03",
+       "text": "Describe components of informed consent",
+       "isActivityStatement": false
+      },
+      {
+       "id": "management-of-care--informed-consent--p04",
+       "text": "Participate in obtaining informed consent",
+       "isActivityStatement": false
+      },
+      {
+       "id": "management-of-care--informed-consent--p05",
+       "text": "Verify the client receives education and consents for care and procedures",
+       "isActivityStatement": true
+      }
+     ]
+    },
+    {
+     "id": "management-of-care--information-technology",
+     "name": "Information Technology",
+     "learningPoints": [
+      {
+       "id": "management-of-care--information-technology--p01",
+       "text": "Receive, verify and implement health care provider orders",
+       "isActivityStatement": true
+      },
+      {
+       "id": "management-of-care--information-technology--p02",
+       "text": "Apply knowledge of facility regulations when accessing client records",
+       "isActivityStatement": false
+      },
+      {
+       "id": "management-of-care--information-technology--p03",
+       "text": "Access data for client through online databases and journals",
+       "isActivityStatement": false
+      },
+      {
+       "id": "management-of-care--information-technology--p04",
+       "text": "Enter computer documentation accurately, completely and in a timely manner",
+       "isActivityStatement": false
+      },
+      {
+       "id": "management-of-care--information-technology--p05",
+       "text": "Utilize resources to promote quality client care (e.g., evidence-based research, information technology, policies and procedures)",
+       "isActivityStatement": true
+      }
+     ]
+    },
+    {
+     "id": "management-of-care--legal-rights-and-responsibilities",
+     "name": "Legal Rights and Responsibilities",
+     "learningPoints": [
+      {
+       "id": "management-of-care--legal-rights-and-responsibilities--p01",
+       "text": "Identify legal issues affecting the client (e.g., refusing treatment)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "management-of-care--legal-rights-and-responsibilities--p02",
+       "text": "Identify and manage client's valuables according to facility/agency policy",
+       "isActivityStatement": false
+      },
+      {
+       "id": "management-of-care--legal-rights-and-responsibilities--p03",
+       "text": "Recognize limitations of self and others and utilize resources",
+       "isActivityStatement": true
+      },
+      {
+       "id": "management-of-care--legal-rights-and-responsibilities--p04",
+       "text": "Review facility policy and legal considerations when using interpreter services for a client",
+       "isActivityStatement": false
+      },
+      {
+       "id": "management-of-care--legal-rights-and-responsibilities--p05",
+       "text": "Educate client and staff on legal issues",
+       "isActivityStatement": false
+      },
+      {
+       "id": "management-of-care--legal-rights-and-responsibilities--p06",
+       "text": "Report client conditions as required by law (e.g., abuse/neglect, communicable diseases)",
+       "isActivityStatement": true
+      },
+      {
+       "id": "management-of-care--legal-rights-and-responsibilities--p07",
+       "text": "Provide care within the legal scope of practice",
+       "isActivityStatement": true
+      }
+     ]
+    },
+    {
+     "id": "management-of-care--performance-improvement-quality-improvement",
+     "name": "Performance Improvement (Quality Improvement)",
+     "learningPoints": [
+      {
+       "id": "management-of-care--performance-improvement-quality-improvement--p01",
+       "text": "Define performance improvement/quality assurance activities",
+       "isActivityStatement": false
+      },
+      {
+       "id": "management-of-care--performance-improvement-quality-improvement--p02",
+       "text": "Participate in performance improvement projects and quality improvement processes",
+       "isActivityStatement": true
+      },
+      {
+       "id": "management-of-care--performance-improvement-quality-improvement--p03",
+       "text": "Report identified client care issues to appropriate personnel",
+       "isActivityStatement": false
+      },
+      {
+       "id": "management-of-care--performance-improvement-quality-improvement--p04",
+       "text": "Utilize research and other references for performance improvement actions",
+       "isActivityStatement": false
+      },
+      {
+       "id": "management-of-care--performance-improvement-quality-improvement--p05",
+       "text": "Evaluate the impact of performance improvement measures on client care and resource use",
+       "isActivityStatement": false
+      }
+     ]
+    },
+    {
+     "id": "management-of-care--referrals",
+     "name": "Referrals",
+     "learningPoints": [
+      {
+       "id": "management-of-care--referrals--p01",
+       "text": "Assess the need to refer clients for assistance with existing or potential problems (e.g., physical therapy, speech therapy)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "management-of-care--referrals--p02",
+       "text": "Assess the need for referrals and obtain necessary orders",
+       "isActivityStatement": true
+      },
+      {
+       "id": "management-of-care--referrals--p03",
+       "text": "Identify community resources for the client (e.g., respite care, social services, shelters)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "management-of-care--referrals--p04",
+       "text": "Identify which documents to include when referring a client (e.g., medical record, referral form)",
+       "isActivityStatement": false
+      }
+     ]
+    }
+   ],
+   "activityStatements": [
+    {
+     "id": "management-of-care-act-01",
+     "text": "Perform procedures necessary to safely admit, transfer and/or discharge a client",
+     "topicIds": [
+      "management-of-care--continuity-of-care"
+     ]
+    },
+    {
+     "id": "management-of-care-act-02",
+     "text": "Provide and receive handoff of care (report) on assigned clients",
+     "topicIds": [
+      "management-of-care--continuity-of-care"
+     ]
+    },
+    {
+     "id": "management-of-care-act-03",
+     "text": "Delegate and supervise care of client provided by others (e.g., LPN/VN, assistive personnel, other RNs)",
+     "topicIds": [
+      "management-of-care--assignment-delegation-and-supervision"
+     ]
+    },
+    {
+     "id": "management-of-care-act-04",
+     "text": "Advocate for client rights and needs",
+     "topicIds": [
+      "management-of-care--client-rights"
+     ]
+    },
+    {
+     "id": "management-of-care-act-05",
+     "text": "Prioritize the delivery of client care based on acuity",
+     "topicIds": [
+      "management-of-care--establishing-priorities"
+     ]
+    },
+    {
+     "id": "management-of-care-act-06",
+     "text": "Participate in performance improvement projects and quality improvement processes",
+     "topicIds": [
+      "management-of-care--performance-improvement-quality-improvement"
+     ]
+    },
+    {
+     "id": "management-of-care-act-07",
+     "text": "Identify and collaborate with multidisciplinary team members when providing client care (e.g., physical therapist, nutritionist, social worker)",
+     "topicIds": [
+      "management-of-care--collaboration-with-multidisciplinary-team"
+     ]
+    },
+    {
+     "id": "management-of-care-act-08",
+     "text": "Receive, verify and implement health care provider orders",
+     "topicIds": [
+      "management-of-care--information-technology"
+     ]
+    },
+    {
+     "id": "management-of-care-act-09",
+     "text": "Integrate advance directives into client plan of care",
+     "topicIds": [
+      "management-of-care--advance-directives-self-determination-life-planning"
+     ]
+    },
+    {
+     "id": "management-of-care-act-10",
+     "text": "Perform care for clients to support unbiased treatment and equal access to care, regardless of culture/ethnicity, sexual orientation, gender identity and/or gender expression",
+     "topicIds": [
+      "management-of-care--advocacy"
+     ]
+    },
+    {
+     "id": "management-of-care-act-11",
+     "text": "Verify the client receives education and consents for care and procedures",
+     "topicIds": [
+      "management-of-care--informed-consent"
+     ]
+    },
+    {
+     "id": "management-of-care-act-12",
+     "text": "Provide education to clients and staff about client rights and responsibilities",
+     "topicIds": [
+      "management-of-care--client-rights"
+     ]
+    },
+    {
+     "id": "management-of-care-act-13",
+     "text": "Assess the need for referrals and obtain necessary orders",
+     "topicIds": [
+      "management-of-care--referrals"
+     ]
+    },
+    {
+     "id": "management-of-care-act-14",
+     "text": "Initiate, evaluate and update client plan of care",
+     "topicIds": [
+      "management-of-care--case-management"
+     ]
+    },
+    {
+     "id": "management-of-care-act-15",
+     "text": "Maintain client confidentiality and privacy (e.g., social media, disclosure of information)",
+     "topicIds": [
+      "management-of-care--confidentiality-information-security"
+     ]
+    },
+    {
+     "id": "management-of-care-act-16",
+     "text": "Recognize limitations of self and others and utilize resources",
+     "topicIds": [
+      "management-of-care--legal-rights-and-responsibilities"
+     ]
+    },
+    {
+     "id": "management-of-care-act-17",
+     "text": "Report client conditions as required by law (e.g., abuse/neglect, communicable diseases)",
+     "topicIds": [
+      "management-of-care--legal-rights-and-responsibilities"
+     ]
+    },
+    {
+     "id": "management-of-care-act-18",
+     "text": "Manage conflict among clients and staff",
+     "topicIds": [
+      "management-of-care--concepts-of-management"
+     ]
+    },
+    {
+     "id": "management-of-care-act-19",
+     "text": "Utilize resources to promote quality client care (e.g., evidence-based research, information technology, policies and procedures)",
+     "topicIds": [
+      "management-of-care--information-technology"
+     ]
+    },
+    {
+     "id": "management-of-care-act-20",
+     "text": "Recognize and report ethical dilemmas",
+     "topicIds": [
+      "management-of-care--ethical-practice"
+     ]
+    },
+    {
+     "id": "management-of-care-act-21",
+     "text": "Use approved terminology when documenting care",
+     "topicIds": [
+      "management-of-care--continuity-of-care"
+     ]
+    },
+    {
+     "id": "management-of-care-act-22",
+     "text": "Organize workload to manage time effectively",
+     "topicIds": [
+      "management-of-care--assignment-delegation-and-supervision"
+     ]
+    },
+    {
+     "id": "management-of-care-act-23",
+     "text": "Practice in a manner consistent with the nurses' code of ethics",
+     "topicIds": [
+      "management-of-care--ethical-practice"
+     ]
+    },
+    {
+     "id": "management-of-care-act-24",
+     "text": "Provide care within the legal scope of practice",
+     "topicIds": [
+      "management-of-care--legal-rights-and-responsibilities"
+     ]
+    },
+    {
+     "id": "management-of-care-act-25",
+     "text": "Practice and advocate for quality and cost-effective care",
+     "topicIds": [
+      "management-of-care--case-management"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "safety-infection-control",
+   "areaId": "area-safe-effective-care",
+   "name": "Safety and Infection Prevention and Control",
+   "weightRange": "10–16%",
+   "weightMin": 10,
+   "weightMax": 16,
+   "weightMid": 13.0,
+   "description": "Protecting clients and health care personnel from health and environmental hazards.",
+   "topics": [
+    {
+     "id": "safety-infection-control--accident-error-injury-prevention",
+     "name": "Accident/Error/Injury Prevention",
+     "learningPoints": [
+      {
+       "id": "safety-infection-control--accident-error-injury-prevention--p01",
+       "text": "Assess client for allergies and intervene as needed",
+       "isActivityStatement": true
+      },
+      {
+       "id": "safety-infection-control--accident-error-injury-prevention--p02",
+       "text": "Assess client care environment",
+       "isActivityStatement": true
+      },
+      {
+       "id": "safety-infection-control--accident-error-injury-prevention--p03",
+       "text": "Determine client and staff member knowledge of safety procedures",
+       "isActivityStatement": false
+      },
+      {
+       "id": "safety-infection-control--accident-error-injury-prevention--p04",
+       "text": "Identify factors that influence accident and injury prevention (e.g., age, developmental stage, lifestyle, mental status)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "safety-infection-control--accident-error-injury-prevention--p05",
+       "text": "Identify deficits that may impede client safety (e.g., visual, hearing, sensory/perceptual)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "safety-infection-control--accident-error-injury-prevention--p06",
+       "text": "Identify and verify orders for treatments that may contribute to an accident or injury (does not include medication)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "safety-infection-control--accident-error-injury-prevention--p07",
+       "text": "Identify and facilitate correct use of infant and child car seats",
+       "isActivityStatement": false
+      },
+      {
+       "id": "safety-infection-control--accident-error-injury-prevention--p08",
+       "text": "Promote staff and workplace safety",
+       "isActivityStatement": true
+      },
+      {
+       "id": "safety-infection-control--accident-error-injury-prevention--p09",
+       "text": "Provide client with appropriate method to signal staff members",
+       "isActivityStatement": false
+      },
+      {
+       "id": "safety-infection-control--accident-error-injury-prevention--p10",
+       "text": "Protect client from injury",
+       "isActivityStatement": true
+      },
+      {
+       "id": "safety-infection-control--accident-error-injury-prevention--p11",
+       "text": "Review necessary modifications with client to reduce stress on specific muscle or skeletal groups (e.g., frequent changing of position; routine stretching of the shoulders, neck, arms, hands, fingers)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "safety-infection-control--accident-error-injury-prevention--p12",
+       "text": "Implement seizure precautions for at-risk clients",
+       "isActivityStatement": false
+      },
+      {
+       "id": "safety-infection-control--accident-error-injury-prevention--p13",
+       "text": "Make appropriate room assignments for cognitively impaired clients",
+       "isActivityStatement": false
+      },
+      {
+       "id": "safety-infection-control--accident-error-injury-prevention--p14",
+       "text": "Properly identify client when providing care",
+       "isActivityStatement": true
+      },
+      {
+       "id": "safety-infection-control--accident-error-injury-prevention--p15",
+       "text": "Verify appropriateness and accuracy of a treatment order",
+       "isActivityStatement": true
+      }
+     ]
+    },
+    {
+     "id": "safety-infection-control--emergency-response-plan",
+     "name": "Emergency Response Plan",
+     "learningPoints": [
+      {
+       "id": "safety-infection-control--emergency-response-plan--p01",
+       "text": "Determine which client(s) to recommend for discharge in a disaster situation",
+       "isActivityStatement": false
+      },
+      {
+       "id": "safety-infection-control--emergency-response-plan--p02",
+       "text": "Identify nursing roles in disaster planning",
+       "isActivityStatement": false
+      },
+      {
+       "id": "safety-infection-control--emergency-response-plan--p03",
+       "text": "Use clinical decision-making/critical thinking for emergency response plan",
+       "isActivityStatement": false
+      },
+      {
+       "id": "safety-infection-control--emergency-response-plan--p04",
+       "text": "Participate in emergency planning and response",
+       "isActivityStatement": true
+      },
+      {
+       "id": "safety-infection-control--emergency-response-plan--p05",
+       "text": "Participate in disaster planning activities/drills",
+       "isActivityStatement": false
+      }
+     ]
+    },
+    {
+     "id": "safety-infection-control--ergonomic-principles",
+     "name": "Ergonomic Principles",
+     "learningPoints": [
+      {
+       "id": "safety-infection-control--ergonomic-principles--p01",
+       "text": "Assess client ability to balance, transfer and use assistive devices prior to planning care (e.g., crutches, walker)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "safety-infection-control--ergonomic-principles--p02",
+       "text": "Provide instruction and information to client about body positions that eliminate potential for repetitive stress injuries",
+       "isActivityStatement": false
+      },
+      {
+       "id": "safety-infection-control--ergonomic-principles--p03",
+       "text": "Use ergonomic principles when providing care",
+       "isActivityStatement": true
+      }
+     ]
+    },
+    {
+     "id": "safety-infection-control--handling-hazardous-and-infectious-materials",
+     "name": "Handling Hazardous and Infectious Materials",
+     "learningPoints": [
+      {
+       "id": "safety-infection-control--handling-hazardous-and-infectious-materials--p01",
+       "text": "Identify biohazardous, flammable and infectious materials",
+       "isActivityStatement": false
+      },
+      {
+       "id": "safety-infection-control--handling-hazardous-and-infectious-materials--p02",
+       "text": "Follow procedures for handling biohazardous and hazardous materials",
+       "isActivityStatement": true
+      },
+      {
+       "id": "safety-infection-control--handling-hazardous-and-infectious-materials--p03",
+       "text": "Demonstrate safe handling techniques to staff and client",
+       "isActivityStatement": false
+      },
+      {
+       "id": "safety-infection-control--handling-hazardous-and-infectious-materials--p04",
+       "text": "Ensure safe implementation of internal radiation therapy",
+       "isActivityStatement": false
+      }
+     ]
+    },
+    {
+     "id": "safety-infection-control--home-safety",
+     "name": "Home Safety",
+     "learningPoints": [
+      {
+       "id": "safety-infection-control--home-safety--p01",
+       "text": "Assess need for client home modifications (e.g., lighting, handrails, kitchen safety)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "safety-infection-control--home-safety--p02",
+       "text": "Apply knowledge of client pathophysiology to home safety interventions",
+       "isActivityStatement": false
+      },
+      {
+       "id": "safety-infection-control--home-safety--p03",
+       "text": "Educate client on safety concerns",
+       "isActivityStatement": true
+      },
+      {
+       "id": "safety-infection-control--home-safety--p04",
+       "text": "Encourage client to use protective equipment when using devices that can cause injury",
+       "isActivityStatement": false
+      },
+      {
+       "id": "safety-infection-control--home-safety--p05",
+       "text": "Evaluate client care environment for fire and environmental hazards",
+       "isActivityStatement": false
+      }
+     ]
+    },
+    {
+     "id": "safety-infection-control--reporting-of-incident-event-irregular-occurrence-variance",
+     "name": "Reporting of Incident/Event/Irregular Occurrence/Variance",
+     "learningPoints": [
+      {
+       "id": "safety-infection-control--reporting-of-incident-event-irregular-occurrence-variance--p01",
+       "text": "Identify need/situation where reporting of incident/event/irregular occurrence/variance is appropriate",
+       "isActivityStatement": false
+      },
+      {
+       "id": "safety-infection-control--reporting-of-incident-event-irregular-occurrence-variance--p02",
+       "text": "Acknowledge and document practice errors and near misses",
+       "isActivityStatement": true
+      },
+      {
+       "id": "safety-infection-control--reporting-of-incident-event-irregular-occurrence-variance--p03",
+       "text": "Evaluate response to error/event/occurrence",
+       "isActivityStatement": false
+      },
+      {
+       "id": "safety-infection-control--reporting-of-incident-event-irregular-occurrence-variance--p04",
+       "text": "Report, intervene and/or escalate unsafe practice of staff (e.g., substance misuse, improper care, staffing practices)",
+       "isActivityStatement": true
+      }
+     ]
+    },
+    {
+     "id": "safety-infection-control--safe-use-of-equipment",
+     "name": "Safe Use of Equipment",
+     "learningPoints": [
+      {
+       "id": "safety-infection-control--safe-use-of-equipment--p01",
+       "text": "Inspect equipment for safety hazards (e.g., frayed electrical cords, loose/missing parts)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "safety-infection-control--safe-use-of-equipment--p02",
+       "text": "Teach client about safe use of equipment needed for health care",
+       "isActivityStatement": false
+      },
+      {
+       "id": "safety-infection-control--safe-use-of-equipment--p03",
+       "text": "Facilitate appropriate and safe use of equipment",
+       "isActivityStatement": true
+      },
+      {
+       "id": "safety-infection-control--safe-use-of-equipment--p04",
+       "text": "Remove malfunctioning equipment from client care area and report the problem to appropriate personnel",
+       "isActivityStatement": false
+      }
+     ]
+    },
+    {
+     "id": "safety-infection-control--security-plan",
+     "name": "Security Plan",
+     "learningPoints": [
+      {
+       "id": "safety-infection-control--security-plan--p01",
+       "text": "Use clinical decision-making/critical thinking in situations related to security planning",
+       "isActivityStatement": false
+      },
+      {
+       "id": "safety-infection-control--security-plan--p02",
+       "text": "Apply principles of triage and evacuation procedures and protocols",
+       "isActivityStatement": false
+      },
+      {
+       "id": "safety-infection-control--security-plan--p03",
+       "text": "Follow security plan and procedures (e.g., newborn nursery security, violence, controlled access, environmental)",
+       "isActivityStatement": true
+      }
+     ]
+    },
+    {
+     "id": "safety-infection-control--standard-precautions-transmission-based-precautions-surgical-asepsis",
+     "name": "Standard Precautions/Transmission-Based Precautions/Surgical Asepsis",
+     "learningPoints": [
+      {
+       "id": "safety-infection-control--standard-precautions-transmission-based-precautions-surgical-asepsis--p01",
+       "text": "Assess client care area for sources of infection",
+       "isActivityStatement": false
+      },
+      {
+       "id": "safety-infection-control--standard-precautions-transmission-based-precautions-surgical-asepsis--p02",
+       "text": "Understand communicable diseases and the modes of organism transmission (e.g., airborne, droplet, contact)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "safety-infection-control--standard-precautions-transmission-based-precautions-surgical-asepsis--p03",
+       "text": "Apply principles of infection prevention (e.g., hand hygiene, aseptic technique, isolation, sterile technique, universal/standard enhanced barrier precautions)",
+       "isActivityStatement": true
+      },
+      {
+       "id": "safety-infection-control--standard-precautions-transmission-based-precautions-surgical-asepsis--p04",
+       "text": "Follow correct policy and procedures when reporting a client with a communicable disease",
+       "isActivityStatement": false
+      },
+      {
+       "id": "safety-infection-control--standard-precautions-transmission-based-precautions-surgical-asepsis--p05",
+       "text": "Educate client and staff regarding infection prevention measures",
+       "isActivityStatement": true
+      },
+      {
+       "id": "safety-infection-control--standard-precautions-transmission-based-precautions-surgical-asepsis--p06",
+       "text": "Use appropriate precautions for immunocompromised clients",
+       "isActivityStatement": false
+      },
+      {
+       "id": "safety-infection-control--standard-precautions-transmission-based-precautions-surgical-asepsis--p07",
+       "text": "Use appropriate technique to set up a sterile field/maintain asepsis",
+       "isActivityStatement": false
+      },
+      {
+       "id": "safety-infection-control--standard-precautions-transmission-based-precautions-surgical-asepsis--p08",
+       "text": "Evaluate infection control precautions implemented by staff members",
+       "isActivityStatement": false
+      },
+      {
+       "id": "safety-infection-control--standard-precautions-transmission-based-precautions-surgical-asepsis--p09",
+       "text": "Evaluate whether aseptic technique is performed correctly",
+       "isActivityStatement": false
+      }
+     ]
+    },
+    {
+     "id": "safety-infection-control--use-of-restraints-safety-devices",
+     "name": "Use of Restraints/Safety Devices",
+     "learningPoints": [
+      {
+       "id": "safety-infection-control--use-of-restraints-safety-devices--p01",
+       "text": "Assess appropriateness of the type of restraint/safety device used",
+       "isActivityStatement": false
+      },
+      {
+       "id": "safety-infection-control--use-of-restraints-safety-devices--p02",
+       "text": "Follow requirements when using restraints",
+       "isActivityStatement": true
+      },
+      {
+       "id": "safety-infection-control--use-of-restraints-safety-devices--p03",
+       "text": "Monitor/evaluate client response to restraints/safety device",
+       "isActivityStatement": false
+      }
+     ]
+    }
+   ],
+   "activityStatements": [
+    {
+     "id": "safety-infection-control-act-01",
+     "text": "Apply principles of infection prevention (e.g., hand hygiene, aseptic technique, isolation, sterile technique, universal/standard enhanced barrier precautions)",
+     "topicIds": [
+      "safety-infection-control--standard-precautions-transmission-based-precautions-surgical-asepsis"
+     ]
+    },
+    {
+     "id": "safety-infection-control-act-02",
+     "text": "Protect client from injury",
+     "topicIds": [
+      "safety-infection-control--accident-error-injury-prevention"
+     ]
+    },
+    {
+     "id": "safety-infection-control-act-03",
+     "text": "Verify appropriateness and accuracy of a treatment order",
+     "topicIds": [
+      "safety-infection-control--accident-error-injury-prevention"
+     ]
+    },
+    {
+     "id": "safety-infection-control-act-04",
+     "text": "Follow procedures for handling biohazardous and hazardous materials",
+     "topicIds": [
+      "safety-infection-control--handling-hazardous-and-infectious-materials"
+     ]
+    },
+    {
+     "id": "safety-infection-control-act-05",
+     "text": "Follow security plan and procedures (e.g., newborn security, violence, controlled access, environmental)",
+     "topicIds": [
+      "safety-infection-control--security-plan"
+     ]
+    },
+    {
+     "id": "safety-infection-control-act-06",
+     "text": "Use ergonomic principles when providing care",
+     "topicIds": [
+      "safety-infection-control--ergonomic-principles"
+     ]
+    },
+    {
+     "id": "safety-infection-control-act-07",
+     "text": "Acknowledge and document practice errors and near misses",
+     "topicIds": [
+      "safety-infection-control--reporting-of-incident-event-irregular-occurrence-variance"
+     ]
+    },
+    {
+     "id": "safety-infection-control-act-08",
+     "text": "Properly identify client when providing care",
+     "topicIds": [
+      "safety-infection-control--accident-error-injury-prevention"
+     ]
+    },
+    {
+     "id": "safety-infection-control-act-09",
+     "text": "Facilitate appropriate and safe use of equipment",
+     "topicIds": [
+      "safety-infection-control--safe-use-of-equipment"
+     ]
+    },
+    {
+     "id": "safety-infection-control-act-10",
+     "text": "Educate client on safety concerns",
+     "topicIds": [
+      "safety-infection-control--home-safety"
+     ]
+    },
+    {
+     "id": "safety-infection-control-act-11",
+     "text": "Participate in emergency planning and response",
+     "topicIds": [
+      "safety-infection-control--emergency-response-plan"
+     ]
+    },
+    {
+     "id": "safety-infection-control-act-12",
+     "text": "Follow requirements when using restraints",
+     "topicIds": [
+      "safety-infection-control--use-of-restraints-safety-devices"
+     ]
+    },
+    {
+     "id": "safety-infection-control-act-13",
+     "text": "Educate client and staff regarding infection prevention measures",
+     "topicIds": [
+      "safety-infection-control--standard-precautions-transmission-based-precautions-surgical-asepsis"
+     ]
+    },
+    {
+     "id": "safety-infection-control-act-14",
+     "text": "Assess client for allergies and intervene as needed",
+     "topicIds": [
+      "safety-infection-control--accident-error-injury-prevention"
+     ]
+    },
+    {
+     "id": "safety-infection-control-act-15",
+     "text": "Report, intervene and/or escalate unsafe practice of staff (e.g., substance misuse, improper care, staffing practices)",
+     "topicIds": [
+      "safety-infection-control--reporting-of-incident-event-irregular-occurrence-variance"
+     ]
+    },
+    {
+     "id": "safety-infection-control-act-16",
+     "text": "Assess client care environment",
+     "topicIds": [
+      "safety-infection-control--accident-error-injury-prevention"
+     ]
+    },
+    {
+     "id": "safety-infection-control-act-17",
+     "text": "Promote staff and workplace safety",
+     "topicIds": [
+      "safety-infection-control--accident-error-injury-prevention"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "health-promotion",
+   "areaId": "area-health-promotion",
+   "name": "Health Promotion and Maintenance",
+   "weightRange": "6–12%",
+   "weightMin": 6,
+   "weightMax": 12,
+   "weightMid": 9.0,
+   "description": null,
+   "topics": [
+    {
+     "id": "health-promotion--aging-process",
+     "name": "Aging Process",
+     "learningPoints": [
+      {
+       "id": "health-promotion--aging-process--p01",
+       "text": "Assess client's reactions to expected age-related changes",
+       "isActivityStatement": false
+      },
+      {
+       "id": "health-promotion--aging-process--p02",
+       "text": "Provide care and education for the newborn, infant and toddler client from birth through 2 years",
+       "isActivityStatement": true
+      },
+      {
+       "id": "health-promotion--aging-process--p03",
+       "text": "Provide care and education for the preschool, school-age and adolescent client ages 3 through 17 years",
+       "isActivityStatement": true
+      },
+      {
+       "id": "health-promotion--aging-process--p04",
+       "text": "Provide care and education for the adult client ages 18 through 64 years",
+       "isActivityStatement": true
+      },
+      {
+       "id": "health-promotion--aging-process--p05",
+       "text": "Provide care and education for the adult client ages 65 years and over",
+       "isActivityStatement": true
+      }
+     ]
+    },
+    {
+     "id": "health-promotion--ante-intra-postpartum-and-newborn-care",
+     "name": "Ante-/Intra-/Postpartum and Newborn Care",
+     "learningPoints": [
+      {
+       "id": "health-promotion--ante-intra-postpartum-and-newborn-care--p01",
+       "text": "Assess client's psychosocial response to pregnancy (e.g., support systems, perception of pregnancy, coping mechanisms)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "health-promotion--ante-intra-postpartum-and-newborn-care--p02",
+       "text": "Assess client for symptoms of postpartum complications (e.g., hemorrhage, infection)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "health-promotion--ante-intra-postpartum-and-newborn-care--p03",
+       "text": "Calculate expected delivery date",
+       "isActivityStatement": false
+      },
+      {
+       "id": "health-promotion--ante-intra-postpartum-and-newborn-care--p04",
+       "text": "Check fetal heart rate during routine prenatal exams",
+       "isActivityStatement": false
+      },
+      {
+       "id": "health-promotion--ante-intra-postpartum-and-newborn-care--p05",
+       "text": "Assist client with learning and performing newborn care (e.g., feeding)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "health-promotion--ante-intra-postpartum-and-newborn-care--p06",
+       "text": "Provide prenatal care and education",
+       "isActivityStatement": true
+      },
+      {
+       "id": "health-promotion--ante-intra-postpartum-and-newborn-care--p07",
+       "text": "Provide care and education to an antepartum client or a client in labor",
+       "isActivityStatement": true
+      },
+      {
+       "id": "health-promotion--ante-intra-postpartum-and-newborn-care--p08",
+       "text": "Provide postpartum care and education",
+       "isActivityStatement": true
+      },
+      {
+       "id": "health-promotion--ante-intra-postpartum-and-newborn-care--p09",
+       "text": "Provide discharge instructions (e.g., postpartum and newborn care)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "health-promotion--ante-intra-postpartum-and-newborn-care--p10",
+       "text": "Evaluate client's ability to care for the newborn",
+       "isActivityStatement": false
+      }
+     ]
+    },
+    {
+     "id": "health-promotion--developmental-stages-and-transitions",
+     "name": "Developmental Stages and Transitions",
+     "learningPoints": [
+      {
+       "id": "health-promotion--developmental-stages-and-transitions--p01",
+       "text": "Identify expected physical, cognitive and psychosocial stages of development",
+       "isActivityStatement": false
+      },
+      {
+       "id": "health-promotion--developmental-stages-and-transitions--p02",
+       "text": "Identify expected body image changes associated with client developmental age (e.g., aging, pregnancy)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "health-promotion--developmental-stages-and-transitions--p03",
+       "text": "Identify family structures and roles of family members (e.g., nuclear, blended, adoptive)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "health-promotion--developmental-stages-and-transitions--p04",
+       "text": "Compare client development to expected age/developmental stage and report any deviations",
+       "isActivityStatement": false
+      },
+      {
+       "id": "health-promotion--developmental-stages-and-transitions--p05",
+       "text": "Assess impact of change on family system (e.g., one-parent family, divorce, ill family member)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "health-promotion--developmental-stages-and-transitions--p06",
+       "text": "Assist client to cope with life transitions (e.g., attachment to newborn, parenting, puberty, retirement)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "health-promotion--developmental-stages-and-transitions--p07",
+       "text": "Modify approaches to care in accordance with client developmental stage (use age-appropriate explanations of procedures and treatments)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "health-promotion--developmental-stages-and-transitions--p08",
+       "text": "Provide education to client and staff members about expected age-related changes and age-specific growth and development (e.g., developmental stages)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "health-promotion--developmental-stages-and-transitions--p09",
+       "text": "Evaluate client's achievement of expected developmental level (e.g., developmental milestones)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "health-promotion--developmental-stages-and-transitions--p10",
+       "text": "Evaluate impact of expected body image changes on client and family",
+       "isActivityStatement": false
+      }
+     ]
+    },
+    {
+     "id": "health-promotion--health-promotion-disease-prevention",
+     "name": "Health Promotion/Disease Prevention",
+     "learningPoints": [
+      {
+       "id": "health-promotion--health-promotion-disease-prevention--p01",
+       "text": "Assess and educate clients about health risks based on family, population and community",
+       "isActivityStatement": true
+      },
+      {
+       "id": "health-promotion--health-promotion-disease-prevention--p02",
+       "text": "Assess client's readiness to learn, learning preferences and barriers to learning",
+       "isActivityStatement": true
+      },
+      {
+       "id": "health-promotion--health-promotion-disease-prevention--p03",
+       "text": "Plan and/or participate in community health education",
+       "isActivityStatement": true
+      },
+      {
+       "id": "health-promotion--health-promotion-disease-prevention--p04",
+       "text": "Educate client on actions to promote and maintain health and prevent disease (e.g., smoking cessation, diet, weight loss)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "health-promotion--health-promotion-disease-prevention--p05",
+       "text": "Integrate complementary therapies into health promotion activities for the well client",
+       "isActivityStatement": false
+      },
+      {
+       "id": "health-promotion--health-promotion-disease-prevention--p06",
+       "text": "Educate client about preventive care and health maintenance recommendations",
+       "isActivityStatement": true
+      },
+      {
+       "id": "health-promotion--health-promotion-disease-prevention--p07",
+       "text": "Provide follow-up to client following participation in health promotion program (e.g., diet counseling)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "health-promotion--health-promotion-disease-prevention--p08",
+       "text": "Provide resources to minimize communication barriers",
+       "isActivityStatement": true
+      },
+      {
+       "id": "health-promotion--health-promotion-disease-prevention--p09",
+       "text": "Assist client in maintaining an optimal level of health",
+       "isActivityStatement": false
+      },
+      {
+       "id": "health-promotion--health-promotion-disease-prevention--p10",
+       "text": "Evaluate client understanding of health promotion behaviors/activities (e.g., weight control, exercise actions)",
+       "isActivityStatement": false
+      }
+     ]
+    },
+    {
+     "id": "health-promotion--health-screening",
+     "name": "Health Screening",
+     "learningPoints": [
+      {
+       "id": "health-promotion--health-screening--p01",
+       "text": "Apply knowledge of pathophysiology to health screening",
+       "isActivityStatement": false
+      },
+      {
+       "id": "health-promotion--health-screening--p02",
+       "text": "Perform health history/health and risk assessments (e.g., lifestyle, family and genetic history)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "health-promotion--health-screening--p03",
+       "text": "Perform targeted screening assessments (e.g., vision, nutrition, depression)",
+       "isActivityStatement": true
+      },
+      {
+       "id": "health-promotion--health-screening--p04",
+       "text": "Use appropriate procedures and interviewing techniques when obtaining a client health history",
+       "isActivityStatement": false
+      }
+     ]
+    },
+    {
+     "id": "health-promotion--high-risk-behaviors",
+     "name": "High-Risk Behaviors",
+     "learningPoints": [
+      {
+       "id": "health-promotion--high-risk-behaviors--p01",
+       "text": "Assess client lifestyle practice risks that may impact health (e.g., excessive sun exposure, lack of regular exercise)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "health-promotion--high-risk-behaviors--p02",
+       "text": "Assist client to identify behaviors/risks that may impact health",
+       "isActivityStatement": false
+      },
+      {
+       "id": "health-promotion--high-risk-behaviors--p03",
+       "text": "Educate client about prevention and treatment of high-risk health behaviors",
+       "isActivityStatement": true
+      }
+     ]
+    },
+    {
+     "id": "health-promotion--lifestyle-choices",
+     "name": "Lifestyle Choices",
+     "learningPoints": [
+      {
+       "id": "health-promotion--lifestyle-choices--p01",
+       "text": "Assess client's lifestyle choices",
+       "isActivityStatement": false
+      },
+      {
+       "id": "health-promotion--lifestyle-choices--p02",
+       "text": "Assess client's attitudes/perceptions on sexuality",
+       "isActivityStatement": false
+      },
+      {
+       "id": "health-promotion--lifestyle-choices--p03",
+       "text": "Assess client's need/desire for contraception",
+       "isActivityStatement": false
+      },
+      {
+       "id": "health-promotion--lifestyle-choices--p04",
+       "text": "Identify contraindications to chosen contraceptive method (e.g., cigarette smoking, adherence, medical conditions)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "health-promotion--lifestyle-choices--p05",
+       "text": "Identify expected outcomes for family planning methods",
+       "isActivityStatement": false
+      },
+      {
+       "id": "health-promotion--lifestyle-choices--p06",
+       "text": "Recognize client who is socially or environmentally isolated",
+       "isActivityStatement": false
+      },
+      {
+       "id": "health-promotion--lifestyle-choices--p07",
+       "text": "Educate client on sexuality issues (e.g., family planning, safer sex practices, menopause, impotence)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "health-promotion--lifestyle-choices--p08",
+       "text": "Evaluate client alternative or homeopathic health care practices (e.g., massage therapy, acupuncture, herbal medicine and minerals)",
+       "isActivityStatement": false
+      }
+     ]
+    },
+    {
+     "id": "health-promotion--self-care",
+     "name": "Self-Care",
+     "learningPoints": [
+      {
+       "id": "health-promotion--self-care--p01",
+       "text": "Assess client ability to manage care in home environment and plan care accordingly",
+       "isActivityStatement": true
+      },
+      {
+       "id": "health-promotion--self-care--p02",
+       "text": "Consider client self-care needs before developing or revising care plan",
+       "isActivityStatement": false
+      },
+      {
+       "id": "health-promotion--self-care--p03",
+       "text": "Assist primary caregivers working with the client to meet self-care goals",
+       "isActivityStatement": false
+      }
+     ]
+    },
+    {
+     "id": "health-promotion--techniques-of-physical-assessment",
+     "name": "Techniques of Physical Assessment",
+     "learningPoints": [
+      {
+       "id": "health-promotion--techniques-of-physical-assessment--p01",
+       "text": "Apply knowledge of nursing procedures and psychomotor skills to techniques of physical assessment",
+       "isActivityStatement": false
+      },
+      {
+       "id": "health-promotion--techniques-of-physical-assessment--p02",
+       "text": "Choose physical assessment equipment and technique appropriate for the client (e.g., age of client, measurement of vital signs)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "health-promotion--techniques-of-physical-assessment--p03",
+       "text": "Perform comprehensive health assessments",
+       "isActivityStatement": true
+      }
+     ]
+    }
+   ],
+   "activityStatements": [
+    {
+     "id": "health-promotion-act-01",
+     "text": "Provide prenatal care and education",
+     "topicIds": [
+      "health-promotion--ante-intra-postpartum-and-newborn-care"
+     ]
+    },
+    {
+     "id": "health-promotion-act-02",
+     "text": "Plan and/or participate in community health education",
+     "topicIds": [
+      "health-promotion--health-promotion-disease-prevention"
+     ]
+    },
+    {
+     "id": "health-promotion-act-03",
+     "text": "Perform targeted screening assessments (e.g., vision, nutrition, depression)",
+     "topicIds": [
+      "health-promotion--health-screening"
+     ]
+    },
+    {
+     "id": "health-promotion-act-04",
+     "text": "Educate client about prevention and treatment of high-risk health behaviors",
+     "topicIds": [
+      "health-promotion--high-risk-behaviors"
+     ]
+    },
+    {
+     "id": "health-promotion-act-05",
+     "text": "Educate client about preventive care and health maintenance recommendations",
+     "topicIds": [
+      "health-promotion--health-promotion-disease-prevention"
+     ]
+    },
+    {
+     "id": "health-promotion-act-06",
+     "text": "Provide postpartum care and education",
+     "topicIds": [
+      "health-promotion--ante-intra-postpartum-and-newborn-care"
+     ]
+    },
+    {
+     "id": "health-promotion-act-07",
+     "text": "Perform comprehensive health assessments",
+     "topicIds": [
+      "health-promotion--techniques-of-physical-assessment"
+     ]
+    },
+    {
+     "id": "health-promotion-act-08",
+     "text": "Assess client's readiness to learn, learning preferences and barriers to learning",
+     "topicIds": [
+      "health-promotion--health-promotion-disease-prevention"
+     ]
+    },
+    {
+     "id": "health-promotion-act-09",
+     "text": "Provide care and education for the newborn, infant and toddler client from birth through 2 years",
+     "topicIds": [
+      "health-promotion--aging-process"
+     ]
+    },
+    {
+     "id": "health-promotion-act-10",
+     "text": "Provide care and education for the preschool, school-age and adolescent client ages 3 through 17 years",
+     "topicIds": [
+      "health-promotion--aging-process"
+     ]
+    },
+    {
+     "id": "health-promotion-act-11",
+     "text": "Provide care and education for the adult client ages 18 through 64 years",
+     "topicIds": [
+      "health-promotion--aging-process"
+     ]
+    },
+    {
+     "id": "health-promotion-act-12",
+     "text": "Provide care and education for the adult client ages 65 years and over",
+     "topicIds": [
+      "health-promotion--aging-process"
+     ]
+    },
+    {
+     "id": "health-promotion-act-13",
+     "text": "Assess client ability to manage care in home environment and plan care accordingly",
+     "topicIds": [
+      "health-promotion--self-care"
+     ]
+    },
+    {
+     "id": "health-promotion-act-14",
+     "text": "Assess and educate clients about health risks based on family, population and community",
+     "topicIds": [
+      "health-promotion--health-promotion-disease-prevention"
+     ]
+    },
+    {
+     "id": "health-promotion-act-15",
+     "text": "Provide care and education to an antepartum client or a client in labor",
+     "topicIds": [
+      "health-promotion--ante-intra-postpartum-and-newborn-care"
+     ]
+    },
+    {
+     "id": "health-promotion-act-16",
+     "text": "Provide resources to minimize communication barriers",
+     "topicIds": [
+      "health-promotion--health-promotion-disease-prevention"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "psychosocial-integrity",
+   "areaId": "area-psychosocial-integrity",
+   "name": "Psychosocial Integrity",
+   "weightRange": "6–12%",
+   "weightMin": 6,
+   "weightMax": 12,
+   "weightMid": 9.0,
+   "description": null,
+   "topics": [
+    {
+     "id": "psychosocial-integrity--abuse-or-neglect",
+     "name": "Abuse or Neglect",
+     "learningPoints": [
+      {
+       "id": "psychosocial-integrity--abuse-or-neglect--p01",
+       "text": "Assess client for abuse or neglect and report, intervene and/or escalate",
+       "isActivityStatement": true
+      },
+      {
+       "id": "psychosocial-integrity--abuse-or-neglect--p02",
+       "text": "Identify risk factors for domestic, child and elder abuse or neglect as well as sexual abuse",
+       "isActivityStatement": false
+      },
+      {
+       "id": "psychosocial-integrity--abuse-or-neglect--p03",
+       "text": "Plan interventions for recipients/suspected recipients of abuse",
+       "isActivityStatement": false
+      },
+      {
+       "id": "psychosocial-integrity--abuse-or-neglect--p04",
+       "text": "Counsel recipients/suspected recipients of abuse and their families on coping strategies",
+       "isActivityStatement": false
+      },
+      {
+       "id": "psychosocial-integrity--abuse-or-neglect--p05",
+       "text": "Provide a safe environment for the abused or neglected client",
+       "isActivityStatement": false
+      },
+      {
+       "id": "psychosocial-integrity--abuse-or-neglect--p06",
+       "text": "Evaluate client response to interventions",
+       "isActivityStatement": false
+      }
+     ]
+    },
+    {
+     "id": "psychosocial-integrity--behavioral-interventions",
+     "name": "Behavioral Interventions",
+     "learningPoints": [
+      {
+       "id": "psychosocial-integrity--behavioral-interventions--p01",
+       "text": "Assess client's appearance, mood and psychomotor behavior and identify/respond to inappropriate/abnormal behavior",
+       "isActivityStatement": false
+      },
+      {
+       "id": "psychosocial-integrity--behavioral-interventions--p02",
+       "text": "Assist client with achieving and maintaining self-control of behavior (e.g., behavior modification)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "psychosocial-integrity--behavioral-interventions--p03",
+       "text": "Assist client to develop and use strategies to decrease anxiety",
+       "isActivityStatement": false
+      },
+      {
+       "id": "psychosocial-integrity--behavioral-interventions--p04",
+       "text": "Orient the client to reality",
+       "isActivityStatement": false
+      },
+      {
+       "id": "psychosocial-integrity--behavioral-interventions--p05",
+       "text": "Participate in group sessions (e.g., support groups)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "psychosocial-integrity--behavioral-interventions--p06",
+       "text": "Incorporate behavioral management techniques when caring for a client",
+       "isActivityStatement": true
+      },
+      {
+       "id": "psychosocial-integrity--behavioral-interventions--p07",
+       "text": "Evaluate client's response to treatment plan",
+       "isActivityStatement": false
+      }
+     ]
+    },
+    {
+     "id": "psychosocial-integrity--chemical-and-other-dependencies-substance-use-disorder",
+     "name": "Chemical and Other Dependencies/Substance Use Disorder",
+     "learningPoints": [
+      {
+       "id": "psychosocial-integrity--chemical-and-other-dependencies-substance-use-disorder--p01",
+       "text": "Assess client's reactions to the diagnosis and treatment of substance-related disorder",
+       "isActivityStatement": false
+      },
+      {
+       "id": "psychosocial-integrity--chemical-and-other-dependencies-substance-use-disorder--p02",
+       "text": "Assess client for substance misuse and/or toxicities and intervene as appropriate (e.g., dependency, withdrawal)",
+       "isActivityStatement": true
+      },
+      {
+       "id": "psychosocial-integrity--chemical-and-other-dependencies-substance-use-disorder--p03",
+       "text": "Plan and provide care to clients experiencing substance-related withdrawal or toxicity (e.g., nicotine, opioid, sedative)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "psychosocial-integrity--chemical-and-other-dependencies-substance-use-disorder--p04",
+       "text": "Educate client on substance use diagnosis and treatment plan",
+       "isActivityStatement": false
+      },
+      {
+       "id": "psychosocial-integrity--chemical-and-other-dependencies-substance-use-disorder--p05",
+       "text": "Provide care and/or support for a client with non–substance-related dependencies (e.g., gambling, sex addiction)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "psychosocial-integrity--chemical-and-other-dependencies-substance-use-disorder--p06",
+       "text": "Provide symptom management for clients experiencing withdrawal or toxicity",
+       "isActivityStatement": false
+      },
+      {
+       "id": "psychosocial-integrity--chemical-and-other-dependencies-substance-use-disorder--p07",
+       "text": "Encourage client to participate in support groups",
+       "isActivityStatement": false
+      },
+      {
+       "id": "psychosocial-integrity--chemical-and-other-dependencies-substance-use-disorder--p08",
+       "text": "Evaluate client's response to a treatment plan and revise as needed",
+       "isActivityStatement": false
+      }
+     ]
+    },
+    {
+     "id": "psychosocial-integrity--coping-mechanisms",
+     "name": "Coping Mechanisms",
+     "learningPoints": [
+      {
+       "id": "psychosocial-integrity--coping-mechanisms--p01",
+       "text": "Assess client's support systems and available resources",
+       "isActivityStatement": false
+      },
+      {
+       "id": "psychosocial-integrity--coping-mechanisms--p02",
+       "text": "Assess client's ability to adapt to temporary and permanent role changes",
+       "isActivityStatement": false
+      },
+      {
+       "id": "psychosocial-integrity--coping-mechanisms--p03",
+       "text": "Assess client's reaction to a diagnosis of acute or chronic mental illness (e.g., rationalization, hopefulness, anger)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "psychosocial-integrity--coping-mechanisms--p04",
+       "text": "Assess client's ability to cope with life changes and provide support",
+       "isActivityStatement": true
+      },
+      {
+       "id": "psychosocial-integrity--coping-mechanisms--p05",
+       "text": "Identify situations that may necessitate role changes for a client (e.g., spouse with chronic illness, death of parent)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "psychosocial-integrity--coping-mechanisms--p06",
+       "text": "Provide support to client with unexpected altered body image (e.g., alopecia, amputation, burns)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "psychosocial-integrity--coping-mechanisms--p07",
+       "text": "Evaluate client's constructive use of defense mechanisms",
+       "isActivityStatement": false
+      },
+      {
+       "id": "psychosocial-integrity--coping-mechanisms--p08",
+       "text": "Evaluate whether client has successfully adapted to situational role changes (e.g., accept dependency on others)",
+       "isActivityStatement": false
+      }
+     ]
+    },
+    {
+     "id": "psychosocial-integrity--crisis-intervention",
+     "name": "Crisis Intervention",
+     "learningPoints": [
+      {
+       "id": "psychosocial-integrity--crisis-intervention--p01",
+       "text": "Assess the potential for violence and use safety precautions",
+       "isActivityStatement": true
+      },
+      {
+       "id": "psychosocial-integrity--crisis-intervention--p02",
+       "text": "Identify the client in crisis",
+       "isActivityStatement": false
+      },
+      {
+       "id": "psychosocial-integrity--crisis-intervention--p03",
+       "text": "Use crisis intervention techniques to assist the client in coping",
+       "isActivityStatement": false
+      },
+      {
+       "id": "psychosocial-integrity--crisis-intervention--p04",
+       "text": "Apply knowledge of client psychopathology to crisis intervention",
+       "isActivityStatement": false
+      },
+      {
+       "id": "psychosocial-integrity--crisis-intervention--p05",
+       "text": "Guide the client to resources for recovery from crisis (e.g., social supports)",
+       "isActivityStatement": false
+      }
+     ]
+    },
+    {
+     "id": "psychosocial-integrity--cultural-awareness-cultural-influences-on-health",
+     "name": "Cultural Awareness/Cultural Influences on Health",
+     "learningPoints": [
+      {
+       "id": "psychosocial-integrity--cultural-awareness-cultural-influences-on-health--p01",
+       "text": "Assess importance of client self-reported culture/ethnicity when planning/providing/evaluating care",
+       "isActivityStatement": false
+      },
+      {
+       "id": "psychosocial-integrity--cultural-awareness-cultural-influences-on-health--p02",
+       "text": "Incorporate client cultural practices and beliefs when planning and providing care",
+       "isActivityStatement": true
+      },
+      {
+       "id": "psychosocial-integrity--cultural-awareness-cultural-influences-on-health--p03",
+       "text": "Respect client self-reported cultural background and practices",
+       "isActivityStatement": false
+      },
+      {
+       "id": "psychosocial-integrity--cultural-awareness-cultural-influences-on-health--p04",
+       "text": "Evaluate and document how client language needs were met",
+       "isActivityStatement": false
+      }
+     ]
+    },
+    {
+     "id": "psychosocial-integrity--end-of-life-care",
+     "name": "End-of-Life Care",
+     "learningPoints": [
+      {
+       "id": "psychosocial-integrity--end-of-life-care--p01",
+       "text": "Assess client's ability to cope with end-of-life interventions",
+       "isActivityStatement": false
+      },
+      {
+       "id": "psychosocial-integrity--end-of-life-care--p02",
+       "text": "Identify end-of-life needs of the client (e.g., financial concerns, fear, loss of control, role changes)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "psychosocial-integrity--end-of-life-care--p03",
+       "text": "Recognize the need for and provide psychosocial support to the family/caregiver",
+       "isActivityStatement": false
+      },
+      {
+       "id": "psychosocial-integrity--end-of-life-care--p04",
+       "text": "Assist client in resolution of end-of-life issues",
+       "isActivityStatement": false
+      },
+      {
+       "id": "psychosocial-integrity--end-of-life-care--p05",
+       "text": "Provide end-of-life care and education to clients",
+       "isActivityStatement": true
+      }
+     ]
+    },
+    {
+     "id": "psychosocial-integrity--family-dynamics",
+     "name": "Family Dynamics",
+     "learningPoints": [
+      {
+       "id": "psychosocial-integrity--family-dynamics--p01",
+       "text": "Assess barriers and stressors that impact family functioning (e.g., meeting client care needs, divorce)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "psychosocial-integrity--family-dynamics--p02",
+       "text": "Assess client support system to aid in plan of care",
+       "isActivityStatement": true
+      },
+      {
+       "id": "psychosocial-integrity--family-dynamics--p03",
+       "text": "Assess parental techniques related to discipline",
+       "isActivityStatement": false
+      },
+      {
+       "id": "psychosocial-integrity--family-dynamics--p04",
+       "text": "Encourage the client's participation in group/family therapy",
+       "isActivityStatement": false
+      },
+      {
+       "id": "psychosocial-integrity--family-dynamics--p05",
+       "text": "Assist client to integrate new members into family structure (e.g., new infant, blended family)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "psychosocial-integrity--family-dynamics--p06",
+       "text": "Evaluate resources available to assist family functioning",
+       "isActivityStatement": false
+      }
+     ]
+    },
+    {
+     "id": "psychosocial-integrity--grief-and-loss",
+     "name": "Grief and Loss",
+     "learningPoints": [
+      {
+       "id": "psychosocial-integrity--grief-and-loss--p01",
+       "text": "Provide care for a client experiencing grief or loss",
+       "isActivityStatement": true
+      },
+      {
+       "id": "psychosocial-integrity--grief-and-loss--p02",
+       "text": "Support the client in anticipatory grieving",
+       "isActivityStatement": false
+      },
+      {
+       "id": "psychosocial-integrity--grief-and-loss--p03",
+       "text": "Inform the client of expected reactions to grief and loss (e.g., denial, fear)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "psychosocial-integrity--grief-and-loss--p04",
+       "text": "Provide the client with resources to adjust to loss/bereavement (e.g., individual counseling, support groups)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "psychosocial-integrity--grief-and-loss--p05",
+       "text": "Evaluate the client's coping and fears related to grief and loss",
+       "isActivityStatement": false
+      }
+     ]
+    },
+    {
+     "id": "psychosocial-integrity--mental-health-concepts",
+     "name": "Mental Health Concepts",
+     "learningPoints": [
+      {
+       "id": "psychosocial-integrity--mental-health-concepts--p01",
+       "text": "Identify signs and symptoms of impaired cognition (e.g., memory loss, poor hygiene)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "psychosocial-integrity--mental-health-concepts--p02",
+       "text": "Recognize signs and symptoms of acute and chronic mental illness (e.g., schizophrenia, depression, bipolar disorder)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "psychosocial-integrity--mental-health-concepts--p03",
+       "text": "Recognize client use of defense mechanisms",
+       "isActivityStatement": false
+      },
+      {
+       "id": "psychosocial-integrity--mental-health-concepts--p04",
+       "text": "Assess client adherence to treatment plan",
+       "isActivityStatement": false
+      },
+      {
+       "id": "psychosocial-integrity--mental-health-concepts--p05",
+       "text": "Assess client for alterations in mood, judgment, cognition and reasoning",
+       "isActivityStatement": false
+      },
+      {
+       "id": "psychosocial-integrity--mental-health-concepts--p06",
+       "text": "Apply knowledge of client psychopathology to mental health concepts applied in individual/group/family therapy",
+       "isActivityStatement": false
+      },
+      {
+       "id": "psychosocial-integrity--mental-health-concepts--p07",
+       "text": "Provide care and education for acute and chronic psychosocial health issues (e.g., addictions/dependencies, depression, dementia, eating disorders)",
+       "isActivityStatement": true
+      },
+      {
+       "id": "psychosocial-integrity--mental-health-concepts--p08",
+       "text": "Evaluate client's ability to adhere to treatment plan",
+       "isActivityStatement": false
+      },
+      {
+       "id": "psychosocial-integrity--mental-health-concepts--p09",
+       "text": "Evaluate client's abnormal response to the aging process (e.g., depression)",
+       "isActivityStatement": false
+      }
+     ]
+    },
+    {
+     "id": "psychosocial-integrity--religious-and-spiritual-influences-on-health",
+     "name": "Religious and Spiritual Influences on Health",
+     "learningPoints": [
+      {
+       "id": "psychosocial-integrity--religious-and-spiritual-influences-on-health--p01",
+       "text": "Identify the client emotional problems or needs that are related to self-reported religious/spiritual beliefs (e.g., spiritual distress, conflict between recommended treatment and beliefs)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "psychosocial-integrity--religious-and-spiritual-influences-on-health--p02",
+       "text": "Assess psychosocial factors influencing care and plan interventions (e.g., occupational, spiritual, environmental, financial)",
+       "isActivityStatement": true
+      },
+      {
+       "id": "psychosocial-integrity--religious-and-spiritual-influences-on-health--p03",
+       "text": "Assess and plan interventions that meet client emotional and self-reported spiritual needs",
+       "isActivityStatement": false
+      },
+      {
+       "id": "psychosocial-integrity--religious-and-spiritual-influences-on-health--p04",
+       "text": "Evaluate whether client's self-reported religious/spiritual needs are met",
+       "isActivityStatement": false
+      }
+     ]
+    },
+    {
+     "id": "psychosocial-integrity--sensory-perceptual-alterations",
+     "name": "Sensory/Perceptual Alterations",
+     "learningPoints": [
+      {
+       "id": "psychosocial-integrity--sensory-perceptual-alterations--p01",
+       "text": "Identify time, place and stimuli surrounding the appearance of symptoms",
+       "isActivityStatement": false
+      },
+      {
+       "id": "psychosocial-integrity--sensory-perceptual-alterations--p02",
+       "text": "Assist client to develop strategies for dealing with sensory and thought disturbances",
+       "isActivityStatement": false
+      },
+      {
+       "id": "psychosocial-integrity--sensory-perceptual-alterations--p03",
+       "text": "Provide appropriate care for a client experiencing visual, auditory and/or cognitive alterations",
+       "isActivityStatement": true
+      },
+      {
+       "id": "psychosocial-integrity--sensory-perceptual-alterations--p04",
+       "text": "Provide care in a nonthreatening and nonjudgmental manner",
+       "isActivityStatement": false
+      },
+      {
+       "id": "psychosocial-integrity--sensory-perceptual-alterations--p05",
+       "text": "Provide reality-based diversions",
+       "isActivityStatement": false
+      }
+     ]
+    },
+    {
+     "id": "psychosocial-integrity--stress-management",
+     "name": "Stress Management",
+     "learningPoints": [
+      {
+       "id": "psychosocial-integrity--stress-management--p01",
+       "text": "Recognize nonverbal cues to physical and/or psychological stressors",
+       "isActivityStatement": true
+      },
+      {
+       "id": "psychosocial-integrity--stress-management--p02",
+       "text": "Assess stressors, including environmental, that affect client care (e.g., noise, fear, uncertainty, change, lack of knowledge)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "psychosocial-integrity--stress-management--p03",
+       "text": "Implement measures to reduce environmental stressors (e.g., noise, temperature)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "psychosocial-integrity--stress-management--p04",
+       "text": "Provide information to client on stress management techniques (e.g., relaxation techniques, exercise, meditation)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "psychosocial-integrity--stress-management--p05",
+       "text": "Evaluate client's use of stress management techniques",
+       "isActivityStatement": false
+      }
+     ]
+    },
+    {
+     "id": "psychosocial-integrity--support-systems",
+     "name": "Support Systems",
+     "learningPoints": [
+      {
+       "id": "psychosocial-integrity--support-systems--p01",
+       "text": "Assist family to plan care for client with impaired cognition (e.g., Alzheimer disease)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "psychosocial-integrity--support-systems--p02",
+       "text": "Encourage client's involvement in the health care decision-making process",
+       "isActivityStatement": false
+      },
+      {
+       "id": "psychosocial-integrity--support-systems--p03",
+       "text": "Evaluate client's feelings about the diagnosis and treatment plan",
+       "isActivityStatement": false
+      }
+     ]
+    },
+    {
+     "id": "psychosocial-integrity--therapeutic-communication",
+     "name": "Therapeutic Communication",
+     "learningPoints": [
+      {
+       "id": "psychosocial-integrity--therapeutic-communication--p01",
+       "text": "Assess verbal and nonverbal client communication needs",
+       "isActivityStatement": false
+      },
+      {
+       "id": "psychosocial-integrity--therapeutic-communication--p02",
+       "text": "Respect the client's personal values and beliefs",
+       "isActivityStatement": false
+      },
+      {
+       "id": "psychosocial-integrity--therapeutic-communication--p03",
+       "text": "Allow time to communicate with the client",
+       "isActivityStatement": false
+      },
+      {
+       "id": "psychosocial-integrity--therapeutic-communication--p04",
+       "text": "Use therapeutic communication techniques",
+       "isActivityStatement": true
+      },
+      {
+       "id": "psychosocial-integrity--therapeutic-communication--p05",
+       "text": "Encourage client to verbalize feelings (e.g., fear, discomfort)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "psychosocial-integrity--therapeutic-communication--p06",
+       "text": "Evaluate the effectiveness of communications with the client",
+       "isActivityStatement": false
+      }
+     ]
+    },
+    {
+     "id": "psychosocial-integrity--therapeutic-environment",
+     "name": "Therapeutic Environment",
+     "learningPoints": [
+      {
+       "id": "psychosocial-integrity--therapeutic-environment--p01",
+       "text": "Identify external factors that may interfere with client recovery (e.g., stressors, family dynamics)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "psychosocial-integrity--therapeutic-environment--p02",
+       "text": "Make client room assignments that support the therapeutic milieu",
+       "isActivityStatement": false
+      },
+      {
+       "id": "psychosocial-integrity--therapeutic-environment--p03",
+       "text": "Promote a therapeutic environment",
+       "isActivityStatement": true
+      }
+     ]
+    }
+   ],
+   "activityStatements": [
+    {
+     "id": "psychosocial-integrity-act-01",
+     "text": "Assess psychosocial factors influencing care and plan interventions (e.g., occupational, spiritual, environmental, financial)",
+     "topicIds": [
+      "psychosocial-integrity--religious-and-spiritual-influences-on-health"
+     ]
+    },
+    {
+     "id": "psychosocial-integrity-act-02",
+     "text": "Assess client for abuse or neglect and report, intervene and/or escalate",
+     "topicIds": [
+      "psychosocial-integrity--abuse-or-neglect"
+     ]
+    },
+    {
+     "id": "psychosocial-integrity-act-03",
+     "text": "Assess client for substance misuse and/or toxicities and intervene as appropriate (e.g., dependency, withdrawal)",
+     "topicIds": [
+      "psychosocial-integrity--chemical-and-other-dependencies-substance-use-disorder"
+     ]
+    },
+    {
+     "id": "psychosocial-integrity-act-04",
+     "text": "Provide care and education for acute and chronic psychosocial health issues (e.g., addictions/dependencies, depression, dementia, eating disorders)",
+     "topicIds": [
+      "psychosocial-integrity--mental-health-concepts"
+     ]
+    },
+    {
+     "id": "psychosocial-integrity-act-05",
+     "text": "Promote a therapeutic environment",
+     "topicIds": [
+      "psychosocial-integrity--therapeutic-environment"
+     ]
+    },
+    {
+     "id": "psychosocial-integrity-act-06",
+     "text": "Incorporate client cultural practices and beliefs when planning and providing care",
+     "topicIds": [
+      "psychosocial-integrity--cultural-awareness-cultural-influences-on-health"
+     ]
+    },
+    {
+     "id": "psychosocial-integrity-act-07",
+     "text": "Provide end-of-life care and education to clients",
+     "topicIds": [
+      "psychosocial-integrity--end-of-life-care"
+     ]
+    },
+    {
+     "id": "psychosocial-integrity-act-08",
+     "text": "Assess the potential for violence and use safety precautions",
+     "topicIds": [
+      "psychosocial-integrity--crisis-intervention"
+     ]
+    },
+    {
+     "id": "psychosocial-integrity-act-09",
+     "text": "Assess client support system to aid in plan of care",
+     "topicIds": [
+      "psychosocial-integrity--family-dynamics"
+     ]
+    },
+    {
+     "id": "psychosocial-integrity-act-10",
+     "text": "Assess client's ability to cope with life changes and provide support",
+     "topicIds": [
+      "psychosocial-integrity--coping-mechanisms"
+     ]
+    },
+    {
+     "id": "psychosocial-integrity-act-11",
+     "text": "Use therapeutic communication techniques",
+     "topicIds": [
+      "psychosocial-integrity--therapeutic-communication"
+     ]
+    },
+    {
+     "id": "psychosocial-integrity-act-12",
+     "text": "Incorporate behavioral management techniques when caring for a client",
+     "topicIds": [
+      "psychosocial-integrity--behavioral-interventions"
+     ]
+    },
+    {
+     "id": "psychosocial-integrity-act-13",
+     "text": "Recognize nonverbal cues to physical and/or psychological stressors",
+     "topicIds": [
+      "psychosocial-integrity--stress-management"
+     ]
+    },
+    {
+     "id": "psychosocial-integrity-act-14",
+     "text": "Provide appropriate care for a client experiencing visual, auditory and/or cognitive alterations",
+     "topicIds": [
+      "psychosocial-integrity--sensory-perceptual-alterations"
+     ]
+    },
+    {
+     "id": "psychosocial-integrity-act-15",
+     "text": "Provide care for a client experiencing grief or loss",
+     "topicIds": [
+      "psychosocial-integrity--grief-and-loss"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "basic-care-comfort",
+   "areaId": "area-physiological-integrity",
+   "name": "Basic Care and Comfort",
+   "weightRange": "6–12%",
+   "weightMin": 6,
+   "weightMax": 12,
+   "weightMid": 9.0,
+   "description": "Providing comfort and assistance in the performance of activities of daily living.",
+   "topics": [
+    {
+     "id": "basic-care-comfort--assistive-devices",
+     "name": "Assistive Devices",
+     "learningPoints": [
+      {
+       "id": "basic-care-comfort--assistive-devices--p01",
+       "text": "Assess client for actual/potential difficulty with communication and speech/vision/hearing problems",
+       "isActivityStatement": false
+      },
+      {
+       "id": "basic-care-comfort--assistive-devices--p02",
+       "text": "Assess client's use of assistive devices (e.g., prosthetic limbs, hearing aid)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "basic-care-comfort--assistive-devices--p03",
+       "text": "Assist client to compensate for a physical or sensory impairment (e.g., assistive devices, positioning)",
+       "isActivityStatement": true
+      },
+      {
+       "id": "basic-care-comfort--assistive-devices--p04",
+       "text": "Manage client who uses assistive devices or prostheses (e.g., eating utensils, telecommunication devices, dentures)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "basic-care-comfort--assistive-devices--p05",
+       "text": "Evaluate the correct use of assistive devices by client",
+       "isActivityStatement": false
+      }
+     ]
+    },
+    {
+     "id": "basic-care-comfort--elimination",
+     "name": "Elimination",
+     "learningPoints": [
+      {
+       "id": "basic-care-comfort--elimination--p01",
+       "text": "Assess and manage client with an alteration in bowel and bladder elimination",
+       "isActivityStatement": true
+      },
+      {
+       "id": "basic-care-comfort--elimination--p02",
+       "text": "Perform irrigations (e.g., of bladder, ear, eye)",
+       "isActivityStatement": true
+      },
+      {
+       "id": "basic-care-comfort--elimination--p03",
+       "text": "Provide skin care to clients who are incontinent (e.g., wash frequently, barrier creams/ointments)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "basic-care-comfort--elimination--p04",
+       "text": "Use alternative methods to promote voiding",
+       "isActivityStatement": false
+      },
+      {
+       "id": "basic-care-comfort--elimination--p05",
+       "text": "Evaluate whether client's ability to eliminate is restored/maintained",
+       "isActivityStatement": false
+      }
+     ]
+    },
+    {
+     "id": "basic-care-comfort--mobility-immobility",
+     "name": "Mobility/Immobility",
+     "learningPoints": [
+      {
+       "id": "basic-care-comfort--mobility-immobility--p01",
+       "text": "Identify complications of immobility (e.g., skin breakdown, contractures)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "basic-care-comfort--mobility-immobility--p02",
+       "text": "Assess the client for mobility, gait, strength and motor skills",
+       "isActivityStatement": false
+      },
+      {
+       "id": "basic-care-comfort--mobility-immobility--p03",
+       "text": "Perform skin assessment and implement measures to maintain skin/tissue integrity",
+       "isActivityStatement": true
+      },
+      {
+       "id": "basic-care-comfort--mobility-immobility--p04",
+       "text": "Apply knowledge of nursing procedures and psychomotor skills when providing care to clients with immobility",
+       "isActivityStatement": false
+      },
+      {
+       "id": "basic-care-comfort--mobility-immobility--p05",
+       "text": "Apply, maintain or remove orthopedic devices",
+       "isActivityStatement": true
+      },
+      {
+       "id": "basic-care-comfort--mobility-immobility--p06",
+       "text": "Educate immobilized client regarding proper methods used when being repositioned",
+       "isActivityStatement": false
+      },
+      {
+       "id": "basic-care-comfort--mobility-immobility--p07",
+       "text": "Maintain client's correct body alignment",
+       "isActivityStatement": false
+      },
+      {
+       "id": "basic-care-comfort--mobility-immobility--p08",
+       "text": "Maintain/correct the adjustment of client's traction device (e.g., external fixation device, halo traction, skeletal traction)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "basic-care-comfort--mobility-immobility--p09",
+       "text": "Implement measures to promote circulation (e.g., active or passive range of motion, positioning and mobilization)",
+       "isActivityStatement": true
+      },
+      {
+       "id": "basic-care-comfort--mobility-immobility--p10",
+       "text": "Evaluate client's response to interventions to prevent complications from immobility",
+       "isActivityStatement": false
+      }
+     ]
+    },
+    {
+     "id": "basic-care-comfort--nonpharmacological-comfort-interventions",
+     "name": "Nonpharmacological Comfort Interventions",
+     "learningPoints": [
+      {
+       "id": "basic-care-comfort--nonpharmacological-comfort-interventions--p01",
+       "text": "Assess client's need for alternative and/or complementary therapy",
+       "isActivityStatement": false
+      },
+      {
+       "id": "basic-care-comfort--nonpharmacological-comfort-interventions--p02",
+       "text": "Assess client's need for palliative care/symptom management or noncurative treatments",
+       "isActivityStatement": false
+      },
+      {
+       "id": "basic-care-comfort--nonpharmacological-comfort-interventions--p03",
+       "text": "Assess client for pain and intervene as appropriate",
+       "isActivityStatement": true
+      },
+      {
+       "id": "basic-care-comfort--nonpharmacological-comfort-interventions--p04",
+       "text": "Recognize differences in client perception and response to pain",
+       "isActivityStatement": false
+      },
+      {
+       "id": "basic-care-comfort--nonpharmacological-comfort-interventions--p05",
+       "text": "Apply knowledge of pathophysiology to nonpharmacological comfort/palliative care interventions",
+       "isActivityStatement": false
+      },
+      {
+       "id": "basic-care-comfort--nonpharmacological-comfort-interventions--p06",
+       "text": "Incorporate alternative/complementary therapies into client plan of care (e.g., music therapy, relaxation therapy)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "basic-care-comfort--nonpharmacological-comfort-interventions--p07",
+       "text": "Recognize complementary therapies and identify potential benefits and contraindications (e.g., aromatherapy, acupressure, supplements)",
+       "isActivityStatement": true
+      },
+      {
+       "id": "basic-care-comfort--nonpharmacological-comfort-interventions--p08",
+       "text": "Counsel client regarding palliative care/symptom management and noncurative treatments",
+       "isActivityStatement": false
+      },
+      {
+       "id": "basic-care-comfort--nonpharmacological-comfort-interventions--p09",
+       "text": "Respect client palliative care/symptom management or noncurative treatment choices",
+       "isActivityStatement": false
+      },
+      {
+       "id": "basic-care-comfort--nonpharmacological-comfort-interventions--p10",
+       "text": "Assist client in receiving appropriate end-of-life physical symptom management",
+       "isActivityStatement": false
+      },
+      {
+       "id": "basic-care-comfort--nonpharmacological-comfort-interventions--p11",
+       "text": "Plan measures to provide comfort interventions to client with anticipated or actual impaired comfort",
+       "isActivityStatement": false
+      },
+      {
+       "id": "basic-care-comfort--nonpharmacological-comfort-interventions--p12",
+       "text": "Provide nonpharmacological comfort measures",
+       "isActivityStatement": true
+      },
+      {
+       "id": "basic-care-comfort--nonpharmacological-comfort-interventions--p13",
+       "text": "Evaluate the client's response to nonpharmacological interventions (e.g., pain rating scale, verbal reports)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "basic-care-comfort--nonpharmacological-comfort-interventions--p14",
+       "text": "Evaluate outcomes of alternative and/or complementary therapy practices",
+       "isActivityStatement": false
+      },
+      {
+       "id": "basic-care-comfort--nonpharmacological-comfort-interventions--p15",
+       "text": "Evaluate outcomes of palliative care/symptom management or noncurative treatments",
+       "isActivityStatement": false
+      }
+     ]
+    },
+    {
+     "id": "basic-care-comfort--nutrition-and-oral-hydration",
+     "name": "Nutrition and Oral Hydration",
+     "learningPoints": [
+      {
+       "id": "basic-care-comfort--nutrition-and-oral-hydration--p01",
+       "text": "Assess client ability to eat (e.g., chew, swallow)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "basic-care-comfort--nutrition-and-oral-hydration--p02",
+       "text": "Assess client for actual and potential specific food-medication interactions",
+       "isActivityStatement": false
+      },
+      {
+       "id": "basic-care-comfort--nutrition-and-oral-hydration--p03",
+       "text": "Consider client choices regarding meeting nutritional requirements and/or maintaining dietary restrictions, including mention of specific food items",
+       "isActivityStatement": false
+      },
+      {
+       "id": "basic-care-comfort--nutrition-and-oral-hydration--p04",
+       "text": "Monitor client hydration status (e.g., edema, signs and symptoms of dehydration)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "basic-care-comfort--nutrition-and-oral-hydration--p05",
+       "text": "Initiate calorie counts for client",
+       "isActivityStatement": false
+      },
+      {
+       "id": "basic-care-comfort--nutrition-and-oral-hydration--p06",
+       "text": "Apply knowledge of mathematics to client nutrition (e.g., body mass index)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "basic-care-comfort--nutrition-and-oral-hydration--p07",
+       "text": "Evaluate client's nutritional status and intervene as needed",
+       "isActivityStatement": true
+      },
+      {
+       "id": "basic-care-comfort--nutrition-and-oral-hydration--p08",
+       "text": "Promote client's independence in eating",
+       "isActivityStatement": false
+      },
+      {
+       "id": "basic-care-comfort--nutrition-and-oral-hydration--p09",
+       "text": "Provide and maintain special diets based on client diagnosis/nutritional needs and self-reported cultural considerations (e.g., low sodium, high protein, calorie restrictions)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "basic-care-comfort--nutrition-and-oral-hydration--p10",
+       "text": "Provide nutritional supplements as needed (e.g., high-protein drinks)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "basic-care-comfort--nutrition-and-oral-hydration--p11",
+       "text": "Provide client nutrition through tube feedings",
+       "isActivityStatement": true
+      },
+      {
+       "id": "basic-care-comfort--nutrition-and-oral-hydration--p12",
+       "text": "Evaluate side effects of client tube feedings and intervene as needed (e.g., diarrhea, dehydration)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "basic-care-comfort--nutrition-and-oral-hydration--p13",
+       "text": "Evaluate client's intake and output and intervene as needed",
+       "isActivityStatement": true
+      },
+      {
+       "id": "basic-care-comfort--nutrition-and-oral-hydration--p14",
+       "text": "Evaluate the impact of disease/illness on nutritional status of a client",
+       "isActivityStatement": false
+      }
+     ]
+    },
+    {
+     "id": "basic-care-comfort--personal-hygiene",
+     "name": "Personal Hygiene",
+     "learningPoints": [
+      {
+       "id": "basic-care-comfort--personal-hygiene--p01",
+       "text": "Assess client for personal hygiene habits/routine",
+       "isActivityStatement": false
+      },
+      {
+       "id": "basic-care-comfort--personal-hygiene--p02",
+       "text": "Assess client performance of activities of daily living and assist when needed",
+       "isActivityStatement": true
+      },
+      {
+       "id": "basic-care-comfort--personal-hygiene--p03",
+       "text": "Provide information to client on required adaptations for performing activities of daily living (e.g., shower chair, handrails)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "basic-care-comfort--personal-hygiene--p04",
+       "text": "Perform postmortem care",
+       "isActivityStatement": true
+      },
+      {
+       "id": "basic-care-comfort--personal-hygiene--p05",
+       "text": "Maintain client dignity and privacy during care",
+       "isActivityStatement": true
+      }
+     ]
+    },
+    {
+     "id": "basic-care-comfort--rest-and-sleep",
+     "name": "Rest and Sleep",
+     "learningPoints": [
+      {
+       "id": "basic-care-comfort--rest-and-sleep--p01",
+       "text": "Assess client's sleep/rest pattern and intervene as needed",
+       "isActivityStatement": true
+      },
+      {
+       "id": "basic-care-comfort--rest-and-sleep--p02",
+       "text": "Apply knowledge of client pathophysiology to rest and sleep interventions",
+       "isActivityStatement": false
+      },
+      {
+       "id": "basic-care-comfort--rest-and-sleep--p03",
+       "text": "Schedule client care activities to promote adequate rest",
+       "isActivityStatement": false
+      }
+     ]
+    }
+   ],
+   "activityStatements": [
+    {
+     "id": "basic-care-comfort-act-01",
+     "text": "Assess client performance of activities of daily living and assist when needed",
+     "topicIds": [
+      "basic-care-comfort--personal-hygiene"
+     ]
+    },
+    {
+     "id": "basic-care-comfort-act-02",
+     "text": "Provide client nutrition through tube feedings",
+     "topicIds": [
+      "basic-care-comfort--nutrition-and-oral-hydration"
+     ]
+    },
+    {
+     "id": "basic-care-comfort-act-03",
+     "text": "Perform postmortem care",
+     "topicIds": [
+      "basic-care-comfort--personal-hygiene"
+     ]
+    },
+    {
+     "id": "basic-care-comfort-act-04",
+     "text": "Perform irrigations (e.g., of bladder, ear, eye)",
+     "topicIds": [
+      "basic-care-comfort--elimination"
+     ]
+    },
+    {
+     "id": "basic-care-comfort-act-05",
+     "text": "Assist client to compensate for a physical or sensory impairment (e.g., assistive devices, positioning)",
+     "topicIds": [
+      "basic-care-comfort--assistive-devices"
+     ]
+    },
+    {
+     "id": "basic-care-comfort-act-06",
+     "text": "Perform skin assessment and implement measures to maintain skin/tissue integrity",
+     "topicIds": [
+      "basic-care-comfort--mobility-immobility"
+     ]
+    },
+    {
+     "id": "basic-care-comfort-act-07",
+     "text": "Assess and manage client with an alteration in bowel and bladder elimination",
+     "topicIds": [
+      "basic-care-comfort--elimination"
+     ]
+    },
+    {
+     "id": "basic-care-comfort-act-08",
+     "text": "Apply, maintain or remove orthopedic devices",
+     "topicIds": [
+      "basic-care-comfort--mobility-immobility"
+     ]
+    },
+    {
+     "id": "basic-care-comfort-act-09",
+     "text": "Maintain client dignity and privacy during care",
+     "topicIds": [
+      "basic-care-comfort--personal-hygiene"
+     ]
+    },
+    {
+     "id": "basic-care-comfort-act-10",
+     "text": "Provide nonpharmacological comfort measures",
+     "topicIds": [
+      "basic-care-comfort--nonpharmacological-comfort-interventions"
+     ]
+    },
+    {
+     "id": "basic-care-comfort-act-11",
+     "text": "Evaluate client's nutritional status and intervene as needed",
+     "topicIds": [
+      "basic-care-comfort--nutrition-and-oral-hydration"
+     ]
+    },
+    {
+     "id": "basic-care-comfort-act-12",
+     "text": "Assess client's sleep/rest pattern and intervene as needed",
+     "topicIds": [
+      "basic-care-comfort--rest-and-sleep"
+     ]
+    },
+    {
+     "id": "basic-care-comfort-act-13",
+     "text": "Evaluate client's intake and output and intervene as needed",
+     "topicIds": [
+      "basic-care-comfort--nutrition-and-oral-hydration"
+     ]
+    },
+    {
+     "id": "basic-care-comfort-act-14",
+     "text": "Implement measures to promote circulation (e.g., active or passive range of motion, positioning and mobilization)",
+     "topicIds": [
+      "basic-care-comfort--mobility-immobility"
+     ]
+    },
+    {
+     "id": "basic-care-comfort-act-15",
+     "text": "Assess client for pain and intervene as appropriate",
+     "topicIds": [
+      "basic-care-comfort--nonpharmacological-comfort-interventions"
+     ]
+    },
+    {
+     "id": "basic-care-comfort-act-16",
+     "text": "Recognize complementary therapies and identify potential benefits and contraindications (e.g., aromatherapy, acupressure, supplements)",
+     "topicIds": [
+      "basic-care-comfort--nonpharmacological-comfort-interventions"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pharmacological-parenteral",
+   "areaId": "area-physiological-integrity",
+   "name": "Pharmacological and Parenteral Therapies",
+   "weightRange": "13–19%",
+   "weightMin": 13,
+   "weightMax": 19,
+   "weightMid": 16.0,
+   "description": "Providing care related to the administration of medications and parenteral therapies.",
+   "topics": [
+    {
+     "id": "pharmacological-parenteral--adverse-effects-contraindications-side-effects-interactions",
+     "name": "Adverse Effects/Contraindications/Side Effects/Interactions",
+     "learningPoints": [
+      {
+       "id": "pharmacological-parenteral--adverse-effects-contraindications-side-effects-interactions--p01",
+       "text": "Identify a contraindication to the administration of a medication to a client",
+       "isActivityStatement": false
+      },
+      {
+       "id": "pharmacological-parenteral--adverse-effects-contraindications-side-effects-interactions--p02",
+       "text": "Identify actual and potential incompatibilities of prescribed client medications",
+       "isActivityStatement": false
+      },
+      {
+       "id": "pharmacological-parenteral--adverse-effects-contraindications-side-effects-interactions--p03",
+       "text": "Identify symptoms/evidence of an allergic reaction to medications",
+       "isActivityStatement": false
+      },
+      {
+       "id": "pharmacological-parenteral--adverse-effects-contraindications-side-effects-interactions--p04",
+       "text": "Assess client for actual and potential side effects and adverse effects of medications (e.g., prescribed, over-the- counter, herbal supplements, preexisting condition)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "pharmacological-parenteral--adverse-effects-contraindications-side-effects-interactions--p05",
+       "text": "Provide information to client on common side effects/adverse effects/potential interactions of medications and inform client when to notify primary health care provider",
+       "isActivityStatement": false
+      },
+      {
+       "id": "pharmacological-parenteral--adverse-effects-contraindications-side-effects-interactions--p06",
+       "text": "Notify primary health care provider of side effects, adverse effects and contraindications of medications and parenteral therapy",
+       "isActivityStatement": false
+      },
+      {
+       "id": "pharmacological-parenteral--adverse-effects-contraindications-side-effects-interactions--p07",
+       "text": "Document side effects and adverse effects of medications and parenteral therapy",
+       "isActivityStatement": false
+      },
+      {
+       "id": "pharmacological-parenteral--adverse-effects-contraindications-side-effects-interactions--p08",
+       "text": "Monitor for anticipated interactions among client's prescribed medications and fluids (e.g., oral, topical, subcutaneous, intramuscular, intravenous)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "pharmacological-parenteral--adverse-effects-contraindications-side-effects-interactions--p09",
+       "text": "Evaluate and document client's response to actions taken to counteract side effects and adverse effects of medications and parenteral therapy",
+       "isActivityStatement": false
+      }
+     ]
+    },
+    {
+     "id": "pharmacological-parenteral--blood-and-blood-products",
+     "name": "Blood and Blood Products",
+     "learningPoints": [
+      {
+       "id": "pharmacological-parenteral--blood-and-blood-products--p01",
+       "text": "Identify client according to facility/agency policy prior to administration of red blood cells/blood products (e.g., order for administration, correct type, correct client, crossmatching complete, consent obtained)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "pharmacological-parenteral--blood-and-blood-products--p02",
+       "text": "Check the client for appropriate venous access for red blood cell/blood product administration (e.g., correct needle gauge, integrity of access site)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "pharmacological-parenteral--blood-and-blood-products--p03",
+       "text": "Document necessary information on the administration of red blood cells/blood products",
+       "isActivityStatement": false
+      },
+      {
+       "id": "pharmacological-parenteral--blood-and-blood-products--p04",
+       "text": "Administer blood products and evaluate client response",
+       "isActivityStatement": true
+      }
+     ]
+    },
+    {
+     "id": "pharmacological-parenteral--central-venous-access-devices",
+     "name": "Central Venous Access Devices",
+     "learningPoints": [
+      {
+       "id": "pharmacological-parenteral--central-venous-access-devices--p01",
+       "text": "Educate client on the reason for and care of a venous access device",
+       "isActivityStatement": false
+      },
+      {
+       "id": "pharmacological-parenteral--central-venous-access-devices--p02",
+       "text": "Access and/or maintain central venous access devices",
+       "isActivityStatement": true
+      },
+      {
+       "id": "pharmacological-parenteral--central-venous-access-devices--p03",
+       "text": "Provide care for client with a central venous access device",
+       "isActivityStatement": false
+      }
+     ]
+    },
+    {
+     "id": "pharmacological-parenteral--dosage-calculations",
+     "name": "Dosage Calculations",
+     "learningPoints": [
+      {
+       "id": "pharmacological-parenteral--dosage-calculations--p01",
+       "text": "Perform calculations needed for medication administration",
+       "isActivityStatement": true
+      },
+      {
+       "id": "pharmacological-parenteral--dosage-calculations--p02",
+       "text": "Use clinical decision-making/critical thinking when calculating dosages",
+       "isActivityStatement": false
+      }
+     ]
+    },
+    {
+     "id": "pharmacological-parenteral--expected-actions-outcomes",
+     "name": "Expected Actions/Outcomes",
+     "learningPoints": [
+      {
+       "id": "pharmacological-parenteral--expected-actions-outcomes--p01",
+       "text": "Obtain information on a client's prescribed medications (e.g., review formulary, consult pharmacist)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "pharmacological-parenteral--expected-actions-outcomes--p02",
+       "text": "Use clinical decision-making/critical thinking when addressing expected effects/outcomes of medications (e.g., oral, intradermal, subcutaneous, intramuscular, topical)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "pharmacological-parenteral--expected-actions-outcomes--p03",
+       "text": "Evaluate client's use of medications over time (e.g., prescription, over-the-counter, home remedies)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "pharmacological-parenteral--expected-actions-outcomes--p04",
+       "text": "Evaluate client response to medication",
+       "isActivityStatement": true
+      }
+     ]
+    },
+    {
+     "id": "pharmacological-parenteral--medication-administration",
+     "name": "Medication Administration",
+     "learningPoints": [
+      {
+       "id": "pharmacological-parenteral--medication-administration--p01",
+       "text": "Educate client about medications",
+       "isActivityStatement": true
+      },
+      {
+       "id": "pharmacological-parenteral--medication-administration--p02",
+       "text": "Educate client on medication self-administration procedures",
+       "isActivityStatement": false
+      },
+      {
+       "id": "pharmacological-parenteral--medication-administration--p03",
+       "text": "Prepare and administer medications using rights of medication administration",
+       "isActivityStatement": true
+      },
+      {
+       "id": "pharmacological-parenteral--medication-administration--p04",
+       "text": "Review pertinent data prior to medication administration (e.g., contraindications, lab results, allergies, potential interactions)",
+       "isActivityStatement": true
+      },
+      {
+       "id": "pharmacological-parenteral--medication-administration--p05",
+       "text": "Mix medications from two vials when necessary",
+       "isActivityStatement": false
+      },
+      {
+       "id": "pharmacological-parenteral--medication-administration--p06",
+       "text": "Administer and document medications given by common routes (e.g., oral, topical)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "pharmacological-parenteral--medication-administration--p07",
+       "text": "Administer and document medications given by parenteral routes (e.g., intravenous, intramuscular, subcutaneous)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "pharmacological-parenteral--medication-administration--p08",
+       "text": "Participate in medication reconciliation process",
+       "isActivityStatement": true
+      },
+      {
+       "id": "pharmacological-parenteral--medication-administration--p09",
+       "text": "Titrate dosage of medication based on assessment and ordered parameters",
+       "isActivityStatement": true
+      },
+      {
+       "id": "pharmacological-parenteral--medication-administration--p10",
+       "text": "Dispose of medications safely",
+       "isActivityStatement": true
+      },
+      {
+       "id": "pharmacological-parenteral--medication-administration--p11",
+       "text": "Handle and maintain medication in a safe and controlled environment",
+       "isActivityStatement": true
+      },
+      {
+       "id": "pharmacological-parenteral--medication-administration--p12",
+       "text": "Evaluate appropriateness and accuracy of medication order for client",
+       "isActivityStatement": true
+      },
+      {
+       "id": "pharmacological-parenteral--medication-administration--p13",
+       "text": "Handle and administer high-risk medications safely",
+       "isActivityStatement": true
+      }
+     ]
+    },
+    {
+     "id": "pharmacological-parenteral--parenteral-intravenous-therapies",
+     "name": "Parenteral/Intravenous Therapies",
+     "learningPoints": [
+      {
+       "id": "pharmacological-parenteral--parenteral-intravenous-therapies--p01",
+       "text": "Identify appropriate veins that should be accessed for various therapies",
+       "isActivityStatement": false
+      },
+      {
+       "id": "pharmacological-parenteral--parenteral-intravenous-therapies--p02",
+       "text": "Educate client on the need for intermittent parenteral fluid therapy",
+       "isActivityStatement": false
+      },
+      {
+       "id": "pharmacological-parenteral--parenteral-intravenous-therapies--p03",
+       "text": "Apply knowledge and concepts of mathematics/nursing procedures/psychomotor skills when caring for a client receiving intravenous therapy",
+       "isActivityStatement": false
+      },
+      {
+       "id": "pharmacological-parenteral--parenteral-intravenous-therapies--p04",
+       "text": "Prepare client for peripheral venous access device insertion",
+       "isActivityStatement": false
+      },
+      {
+       "id": "pharmacological-parenteral--parenteral-intravenous-therapies--p05",
+       "text": "Monitor the use of an infusion pump (e.g., intravenous, patient-controlled analgesia device)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "pharmacological-parenteral--parenteral-intravenous-therapies--p06",
+       "text": "Monitor intravenous infusion and maintain site",
+       "isActivityStatement": true
+      },
+      {
+       "id": "pharmacological-parenteral--parenteral-intravenous-therapies--p07",
+       "text": "Evaluate the client's response to intermittent parenteral fluid therapy",
+       "isActivityStatement": false
+      }
+     ]
+    },
+    {
+     "id": "pharmacological-parenteral--pharmacological-pain-management",
+     "name": "Pharmacological Pain Management",
+     "learningPoints": [
+      {
+       "id": "pharmacological-parenteral--pharmacological-pain-management--p01",
+       "text": "Assess client need for administration of a p.r.n. pain medication (e.g., oral, topical, subcutaneous, intramuscular, intravenous)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "pharmacological-parenteral--pharmacological-pain-management--p02",
+       "text": "Administer and document pharmacologic pain management appropriate for client age and diagnoses (e.g., pregnancy, children, older adults)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "pharmacological-parenteral--pharmacological-pain-management--p03",
+       "text": "Administer medications for pain management",
+       "isActivityStatement": true
+      },
+      {
+       "id": "pharmacological-parenteral--pharmacological-pain-management--p04",
+       "text": "Handle and administer controlled substances within regulatory guidelines",
+       "isActivityStatement": true
+      },
+      {
+       "id": "pharmacological-parenteral--pharmacological-pain-management--p05",
+       "text": "Evaluate and document client's use and response to pain medications",
+       "isActivityStatement": false
+      }
+     ]
+    },
+    {
+     "id": "pharmacological-parenteral--total-parenteral-nutrition",
+     "name": "Total Parenteral Nutrition",
+     "learningPoints": [
+      {
+       "id": "pharmacological-parenteral--total-parenteral-nutrition--p01",
+       "text": "Identify side effects and adverse events related to total parenteral nutrition (TPN) and intervene as appropriate (e.g., hyperglycemia, fluid imbalance, infection)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "pharmacological-parenteral--total-parenteral-nutrition--p02",
+       "text": "Educate client on the need for and use of TPN",
+       "isActivityStatement": false
+      },
+      {
+       "id": "pharmacological-parenteral--total-parenteral-nutrition--p03",
+       "text": "Apply knowledge of nursing procedures and psychomotor skills when caring for a client receiving TPN",
+       "isActivityStatement": false
+      },
+      {
+       "id": "pharmacological-parenteral--total-parenteral-nutrition--p04",
+       "text": "Apply knowledge of client pathophysiology and mathematics to TPN interventions",
+       "isActivityStatement": false
+      },
+      {
+       "id": "pharmacological-parenteral--total-parenteral-nutrition--p05",
+       "text": "Administer parenteral nutrition and evaluate client response",
+       "isActivityStatement": true
+      }
+     ]
+    }
+   ],
+   "activityStatements": [
+    {
+     "id": "pharmacological-parenteral-act-01",
+     "text": "Evaluate appropriateness and accuracy of medication order for client",
+     "topicIds": [
+      "pharmacological-parenteral--medication-administration"
+     ]
+    },
+    {
+     "id": "pharmacological-parenteral-act-02",
+     "text": "Prepare and administer medications using rights of medication administration",
+     "topicIds": [
+      "pharmacological-parenteral--medication-administration"
+     ]
+    },
+    {
+     "id": "pharmacological-parenteral-act-03",
+     "text": "Perform calculations needed for medication administration",
+     "topicIds": [
+      "pharmacological-parenteral--dosage-calculations"
+     ]
+    },
+    {
+     "id": "pharmacological-parenteral-act-04",
+     "text": "Monitor intravenous infusion and maintain site",
+     "topicIds": [
+      "pharmacological-parenteral--parenteral-intravenous-therapies"
+     ]
+    },
+    {
+     "id": "pharmacological-parenteral-act-05",
+     "text": "Handle and administer controlled substances within regulatory guidelines",
+     "topicIds": [
+      "pharmacological-parenteral--pharmacological-pain-management"
+     ]
+    },
+    {
+     "id": "pharmacological-parenteral-act-06",
+     "text": "Review pertinent data prior to medication administration (e.g., contraindications, lab results, allergies, potential interactions)",
+     "topicIds": [
+      "pharmacological-parenteral--medication-administration"
+     ]
+    },
+    {
+     "id": "pharmacological-parenteral-act-07",
+     "text": "Titrate dosage of medication based on assessment and ordered parameters",
+     "topicIds": [
+      "pharmacological-parenteral--medication-administration"
+     ]
+    },
+    {
+     "id": "pharmacological-parenteral-act-08",
+     "text": "Administer blood products and evaluate client response",
+     "topicIds": [
+      "pharmacological-parenteral--blood-and-blood-products"
+     ]
+    },
+    {
+     "id": "pharmacological-parenteral-act-09",
+     "text": "Access and/or maintain central venous access devices",
+     "topicIds": [
+      "pharmacological-parenteral--central-venous-access-devices"
+     ]
+    },
+    {
+     "id": "pharmacological-parenteral-act-10",
+     "text": "Educate client about medications",
+     "topicIds": [
+      "pharmacological-parenteral--medication-administration"
+     ]
+    },
+    {
+     "id": "pharmacological-parenteral-act-11",
+     "text": "Evaluate client response to medication",
+     "topicIds": [
+      "pharmacological-parenteral--expected-actions-outcomes"
+     ]
+    },
+    {
+     "id": "pharmacological-parenteral-act-12",
+     "text": "Administer parenteral nutrition and evaluate client response",
+     "topicIds": [
+      "pharmacological-parenteral--total-parenteral-nutrition"
+     ]
+    },
+    {
+     "id": "pharmacological-parenteral-act-13",
+     "text": "Administer medications for pain management",
+     "topicIds": [
+      "pharmacological-parenteral--pharmacological-pain-management"
+     ]
+    },
+    {
+     "id": "pharmacological-parenteral-act-14",
+     "text": "Participate in medication reconciliation process",
+     "topicIds": [
+      "pharmacological-parenteral--medication-administration"
+     ]
+    },
+    {
+     "id": "pharmacological-parenteral-act-15",
+     "text": "Handle and maintain medication in a safe and controlled environment",
+     "topicIds": [
+      "pharmacological-parenteral--medication-administration"
+     ]
+    },
+    {
+     "id": "pharmacological-parenteral-act-16",
+     "text": "Handle and administer high-risk medications safely",
+     "topicIds": [
+      "pharmacological-parenteral--medication-administration"
+     ]
+    },
+    {
+     "id": "pharmacological-parenteral-act-17",
+     "text": "Dispose of medications safely",
+     "topicIds": [
+      "pharmacological-parenteral--medication-administration"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "reduction-risk-potential",
+   "areaId": "area-physiological-integrity",
+   "name": "Reduction of Risk Potential",
+   "weightRange": "9–15%",
+   "weightMin": 9,
+   "weightMax": 15,
+   "weightMid": 12.0,
+   "description": "Reducing the likelihood that clients will develop complications or health problems related to existing conditions, treatments or procedures.",
+   "topics": [
+    {
+     "id": "reduction-risk-potential--changes-abnormalities-in-vital-signs",
+     "name": "Changes/Abnormalities in Vital Signs",
+     "learningPoints": [
+      {
+       "id": "reduction-risk-potential--changes-abnormalities-in-vital-signs--p01",
+       "text": "Assess and respond to changes and trends in client vital signs",
+       "isActivityStatement": true
+      },
+      {
+       "id": "reduction-risk-potential--changes-abnormalities-in-vital-signs--p02",
+       "text": "Apply knowledge needed to perform related nursing procedures and psychomotor skills when assessing vital signs",
+       "isActivityStatement": false
+      },
+      {
+       "id": "reduction-risk-potential--changes-abnormalities-in-vital-signs--p03",
+       "text": "Apply knowledge of client pathophysiology when measuring vital signs",
+       "isActivityStatement": false
+      }
+     ]
+    },
+    {
+     "id": "reduction-risk-potential--diagnostic-tests",
+     "name": "Diagnostic Tests",
+     "learningPoints": [
+      {
+       "id": "reduction-risk-potential--diagnostic-tests--p01",
+       "text": "Apply knowledge of related nursing procedures and psychomotor skills when caring for clients undergoing diagnostic testing",
+       "isActivityStatement": false
+      },
+      {
+       "id": "reduction-risk-potential--diagnostic-tests--p02",
+       "text": "Compare client diagnostic findings with pretest results",
+       "isActivityStatement": false
+      },
+      {
+       "id": "reduction-risk-potential--diagnostic-tests--p03",
+       "text": "Perform testing within scope of practice (e.g., electrocardiogram, point-of-care testing, fetal monitoring)",
+       "isActivityStatement": true
+      },
+      {
+       "id": "reduction-risk-potential--diagnostic-tests--p04",
+       "text": "Monitor results of maternal and fetal diagnostic tests (e.g., nonstress test, amniocentesis, ultrasound)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "reduction-risk-potential--diagnostic-tests--p05",
+       "text": "Monitor the results of diagnostic testing and intervene as needed",
+       "isActivityStatement": true
+      }
+     ]
+    },
+    {
+     "id": "reduction-risk-potential--laboratory-values",
+     "name": "Laboratory Values",
+     "learningPoints": [
+      {
+       "id": "reduction-risk-potential--laboratory-values--p01",
+       "text": "Compare client laboratory values to normal laboratory values",
+       "isActivityStatement": false
+      },
+      {
+       "id": "reduction-risk-potential--laboratory-values--p02",
+       "text": "Educate client about the purpose and procedure of ordered laboratory tests",
+       "isActivityStatement": false
+      },
+      {
+       "id": "reduction-risk-potential--laboratory-values--p03",
+       "text": "Obtain blood specimens",
+       "isActivityStatement": true
+      },
+      {
+       "id": "reduction-risk-potential--laboratory-values--p04",
+       "text": "Obtain specimens other than blood for diagnostic testing",
+       "isActivityStatement": true
+      },
+      {
+       "id": "reduction-risk-potential--laboratory-values--p05",
+       "text": "Monitor client laboratory values (e.g., glucose testing results for client with diabetes)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "reduction-risk-potential--laboratory-values--p06",
+       "text": "Notify primary health care provider about laboratory test results",
+       "isActivityStatement": false
+      }
+     ]
+    },
+    {
+     "id": "reduction-risk-potential--potential-for-alterations-in-body-systems",
+     "name": "Potential for Alterations in Body Systems",
+     "learningPoints": [
+      {
+       "id": "reduction-risk-potential--potential-for-alterations-in-body-systems--p01",
+       "text": "Identify client potential for aspiration (e.g., feeding tube, sedation, swallowing difficulties)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "reduction-risk-potential--potential-for-alterations-in-body-systems--p02",
+       "text": "Identify client potential for skin breakdown (e.g., immobility, nutritional status, incontinence)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "reduction-risk-potential--potential-for-alterations-in-body-systems--p03",
+       "text": "Identify client with increased risk for insufficient vascular perfusion (e.g., immobilized limb, postsurgery, diabetes)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "reduction-risk-potential--potential-for-alterations-in-body-systems--p04",
+       "text": "Educate client on methods to prevent complications associated with activity level/diagnosed illness/disease (e.g., contractures, foot care for client with diabetes)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "reduction-risk-potential--potential-for-alterations-in-body-systems--p05",
+       "text": "Compare current client data to baseline client data (e.g., symptoms of illness/disease)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "reduction-risk-potential--potential-for-alterations-in-body-systems--p06",
+       "text": "Monitor client output for changes from baseline (e.g., nasogastric tube, emesis, stool, urine)",
+       "isActivityStatement": false
+      }
+     ]
+    },
+    {
+     "id": "reduction-risk-potential--potential-for-complications-of-diagnostic-tests-treatments-procedures",
+     "name": "Potential for Complications of Diagnostic Tests/Treatments/Procedures",
+     "learningPoints": [
+      {
+       "id": "reduction-risk-potential--potential-for-complications-of-diagnostic-tests-treatments-procedures--p01",
+       "text": "Assess client for an abnormal response following a diagnostic test/procedure (e.g., dysrhythmia following cardiac catheterization)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "reduction-risk-potential--potential-for-complications-of-diagnostic-tests-treatments-procedures--p02",
+       "text": "Apply knowledge of nursing procedures and psychomotor skills when caring for a client with potential for complications",
+       "isActivityStatement": false
+      },
+      {
+       "id": "reduction-risk-potential--potential-for-complications-of-diagnostic-tests-treatments-procedures--p03",
+       "text": "Monitor client for signs of bleeding",
+       "isActivityStatement": false
+      },
+      {
+       "id": "reduction-risk-potential--potential-for-complications-of-diagnostic-tests-treatments-procedures--p04",
+       "text": "Position client to prevent complications following tests/treatments/procedures (e.g., elevate head of bed, immobilize extremity)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "reduction-risk-potential--potential-for-complications-of-diagnostic-tests-treatments-procedures--p05",
+       "text": "Insert, maintain or remove a nasal/oral gastrointestinal tube",
+       "isActivityStatement": true
+      },
+      {
+       "id": "reduction-risk-potential--potential-for-complications-of-diagnostic-tests-treatments-procedures--p06",
+       "text": "Insert, maintain or remove a urinary catheter",
+       "isActivityStatement": true
+      },
+      {
+       "id": "reduction-risk-potential--potential-for-complications-of-diagnostic-tests-treatments-procedures--p07",
+       "text": "Insert, maintain or remove a peripheral intravenous line",
+       "isActivityStatement": true
+      },
+      {
+       "id": "reduction-risk-potential--potential-for-complications-of-diagnostic-tests-treatments-procedures--p08",
+       "text": "Maintain tube patency (e.g., nasogastric tube for decompression, chest tubes)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "reduction-risk-potential--potential-for-complications-of-diagnostic-tests-treatments-procedures--p09",
+       "text": "Maintain percutaneous feeding tube",
+       "isActivityStatement": true
+      },
+      {
+       "id": "reduction-risk-potential--potential-for-complications-of-diagnostic-tests-treatments-procedures--p10",
+       "text": "Apply and/or maintain devices used to promote venous return (e.g., antiembolism stockings, sequential compression devices)",
+       "isActivityStatement": true
+      },
+      {
+       "id": "reduction-risk-potential--potential-for-complications-of-diagnostic-tests-treatments-procedures--p11",
+       "text": "Use precautions to prevent injury and/or complications associated with a procedure or diagnosis",
+       "isActivityStatement": true
+      },
+      {
+       "id": "reduction-risk-potential--potential-for-complications-of-diagnostic-tests-treatments-procedures--p12",
+       "text": "Provide care for client undergoing electroconvulsive therapy (e.g., monitor airway, assess for side effects, teach client about procedure)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "reduction-risk-potential--potential-for-complications-of-diagnostic-tests-treatments-procedures--p13",
+       "text": "Intervene to manage potential circulatory complications (e.g., hemorrhage, embolus, shock)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "reduction-risk-potential--potential-for-complications-of-diagnostic-tests-treatments-procedures--p14",
+       "text": "Intervene to prevent aspiration (e.g., check nasogastric tube placement)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "reduction-risk-potential--potential-for-complications-of-diagnostic-tests-treatments-procedures--p15",
+       "text": "Intervene to prevent potential neurologic complications (e.g., footdrop, numbness, tingling)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "reduction-risk-potential--potential-for-complications-of-diagnostic-tests-treatments-procedures--p16",
+       "text": "Evaluate client responses to procedures and treatments",
+       "isActivityStatement": true
+      }
+     ]
+    },
+    {
+     "id": "reduction-risk-potential--potential-for-complications-from-surgical-procedures-and-health-alterations",
+     "name": "Potential for Complications from Surgical Procedures and Health Alterations",
+     "learningPoints": [
+      {
+       "id": "reduction-risk-potential--potential-for-complications-from-surgical-procedures-and-health-alterations--p01",
+       "text": "Apply knowledge of pathophysiology to monitoring for complications (e.g., recognize signs of thrombocytopenia)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "reduction-risk-potential--potential-for-complications-from-surgical-procedures-and-health-alterations--p02",
+       "text": "Evaluate client's response to postoperative interventions to prevent complications (e.g., prevent aspiration, promote venous return, promote mobility)",
+       "isActivityStatement": false
+      }
+     ]
+    },
+    {
+     "id": "reduction-risk-potential--system-specific-assessments",
+     "name": "System-Specific Assessments",
+     "learningPoints": [
+      {
+       "id": "reduction-risk-potential--system-specific-assessments--p01",
+       "text": "Assess client for abnormal peripheral pulses after a procedure or treatment",
+       "isActivityStatement": false
+      },
+      {
+       "id": "reduction-risk-potential--system-specific-assessments--p02",
+       "text": "Assess client for abnormal neurologic status (e.g., level of consciousness, muscle strength, mobility)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "reduction-risk-potential--system-specific-assessments--p03",
+       "text": "Assess client for peripheral edema",
+       "isActivityStatement": false
+      },
+      {
+       "id": "reduction-risk-potential--system-specific-assessments--p04",
+       "text": "Assess client for signs of hypoglycemia or hyperglycemia",
+       "isActivityStatement": false
+      },
+      {
+       "id": "reduction-risk-potential--system-specific-assessments--p05",
+       "text": "Identify factors that result in delayed wound healing",
+       "isActivityStatement": false
+      },
+      {
+       "id": "reduction-risk-potential--system-specific-assessments--p06",
+       "text": "Recognize trends and changes in client condition and intervene as needed",
+       "isActivityStatement": true
+      },
+      {
+       "id": "reduction-risk-potential--system-specific-assessments--p07",
+       "text": "Perform a risk assessment (e.g., sensory impairment, potential for falls, level of mobility, skin integrity)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "reduction-risk-potential--system-specific-assessments--p08",
+       "text": "Perform focused assessments",
+       "isActivityStatement": true
+      }
+     ]
+    },
+    {
+     "id": "reduction-risk-potential--therapeutic-procedures",
+     "name": "Therapeutic Procedures",
+     "learningPoints": [
+      {
+       "id": "reduction-risk-potential--therapeutic-procedures--p01",
+       "text": "Assess client response to recovery from local, regional or general anesthesia",
+       "isActivityStatement": false
+      },
+      {
+       "id": "reduction-risk-potential--therapeutic-procedures--p02",
+       "text": "Apply knowledge of related nursing procedures and psychomotor skills when caring for clients undergoing therapeutic procedures",
+       "isActivityStatement": false
+      },
+      {
+       "id": "reduction-risk-potential--therapeutic-procedures--p03",
+       "text": "Educate client about treatments and procedures",
+       "isActivityStatement": true
+      },
+      {
+       "id": "reduction-risk-potential--therapeutic-procedures--p04",
+       "text": "Educate client about home management of care",
+       "isActivityStatement": false
+      },
+      {
+       "id": "reduction-risk-potential--therapeutic-procedures--p05",
+       "text": "Use precautions to prevent further injury when moving a client with a musculoskeletal condition (e.g., logrolling, abduction pillow)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "reduction-risk-potential--therapeutic-procedures--p06",
+       "text": "Monitor client before and after a procedure/surgery (e.g., casted extremity)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "reduction-risk-potential--therapeutic-procedures--p07",
+       "text": "Monitor effective functioning of therapeutic devices (e.g., chest tube, drainage tubes, wound drainage devices, continuous bladder irrigation)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "reduction-risk-potential--therapeutic-procedures--p08",
+       "text": "Provide preoperative and postoperative education",
+       "isActivityStatement": true
+      },
+      {
+       "id": "reduction-risk-potential--therapeutic-procedures--p09",
+       "text": "Provide preoperative care",
+       "isActivityStatement": true
+      },
+      {
+       "id": "reduction-risk-potential--therapeutic-procedures--p10",
+       "text": "Manage client during a procedure with moderate sedation",
+       "isActivityStatement": true
+      },
+      {
+       "id": "reduction-risk-potential--therapeutic-procedures--p11",
+       "text": "Manage client following a procedure with moderate sedation",
+       "isActivityStatement": true
+      }
+     ]
+    }
+   ],
+   "activityStatements": [
+    {
+     "id": "reduction-risk-potential-act-01",
+     "text": "Assess and respond to changes and trends in client vital signs",
+     "topicIds": [
+      "reduction-risk-potential--changes-abnormalities-in-vital-signs"
+     ]
+    },
+    {
+     "id": "reduction-risk-potential-act-02",
+     "text": "Perform focused assessments",
+     "topicIds": [
+      "reduction-risk-potential--system-specific-assessments"
+     ]
+    },
+    {
+     "id": "reduction-risk-potential-act-03",
+     "text": "Recognize trends and changes in client condition and intervene as needed",
+     "topicIds": [
+      "reduction-risk-potential--system-specific-assessments"
+     ]
+    },
+    {
+     "id": "reduction-risk-potential-act-04",
+     "text": "Monitor the results of diagnostic testing and intervene as needed",
+     "topicIds": [
+      "reduction-risk-potential--diagnostic-tests"
+     ]
+    },
+    {
+     "id": "reduction-risk-potential-act-05",
+     "text": "Perform testing within scope of practice (e.g., electrocardiogram, point-of-care testing, fetal monitoring)",
+     "topicIds": [
+      "reduction-risk-potential--diagnostic-tests"
+     ]
+    },
+    {
+     "id": "reduction-risk-potential-act-06",
+     "text": "Evaluate client responses to procedures and treatments",
+     "topicIds": [
+      "reduction-risk-potential--potential-for-complications-of-diagnostic-tests-treatments-procedures"
+     ]
+    },
+    {
+     "id": "reduction-risk-potential-act-07",
+     "text": "Provide preoperative and postoperative education",
+     "topicIds": [
+      "reduction-risk-potential--therapeutic-procedures"
+     ]
+    },
+    {
+     "id": "reduction-risk-potential-act-08",
+     "text": "Provide preoperative care",
+     "topicIds": [
+      "reduction-risk-potential--therapeutic-procedures"
+     ]
+    },
+    {
+     "id": "reduction-risk-potential-act-09",
+     "text": "Manage client during a procedure with moderate sedation",
+     "topicIds": [
+      "reduction-risk-potential--therapeutic-procedures"
+     ]
+    },
+    {
+     "id": "reduction-risk-potential-act-10",
+     "text": "Obtain blood specimens",
+     "topicIds": [
+      "reduction-risk-potential--laboratory-values"
+     ]
+    },
+    {
+     "id": "reduction-risk-potential-act-11",
+     "text": "Use precautions to prevent injury and/or complications associated with a procedure or diagnosis",
+     "topicIds": [
+      "reduction-risk-potential--potential-for-complications-of-diagnostic-tests-treatments-procedures"
+     ]
+    },
+    {
+     "id": "reduction-risk-potential-act-12",
+     "text": "Educate client about treatments and procedures",
+     "topicIds": [
+      "reduction-risk-potential--therapeutic-procedures"
+     ]
+    },
+    {
+     "id": "reduction-risk-potential-act-13",
+     "text": "Obtain specimens other than blood for diagnostic testing",
+     "topicIds": [
+      "reduction-risk-potential--laboratory-values"
+     ]
+    },
+    {
+     "id": "reduction-risk-potential-act-14",
+     "text": "Insert, maintain or remove a nasal/oral gastrointestinal tube",
+     "topicIds": [
+      "reduction-risk-potential--potential-for-complications-of-diagnostic-tests-treatments-procedures"
+     ]
+    },
+    {
+     "id": "reduction-risk-potential-act-15",
+     "text": "Insert, maintain or remove a urinary catheter",
+     "topicIds": [
+      "reduction-risk-potential--potential-for-complications-of-diagnostic-tests-treatments-procedures"
+     ]
+    },
+    {
+     "id": "reduction-risk-potential-act-16",
+     "text": "Insert, maintain or remove a peripheral intravenous line",
+     "topicIds": [
+      "reduction-risk-potential--potential-for-complications-of-diagnostic-tests-treatments-procedures"
+     ]
+    },
+    {
+     "id": "reduction-risk-potential-act-17",
+     "text": "Apply and/or maintain devices used to promote venous return (e.g., antiembolism stockings, sequential compression devices)",
+     "topicIds": [
+      "reduction-risk-potential--potential-for-complications-of-diagnostic-tests-treatments-procedures"
+     ]
+    },
+    {
+     "id": "reduction-risk-potential-act-18",
+     "text": "Manage client following a procedure with moderate sedation",
+     "topicIds": [
+      "reduction-risk-potential--therapeutic-procedures"
+     ]
+    },
+    {
+     "id": "reduction-risk-potential-act-19",
+     "text": "Maintain percutaneous feeding tube",
+     "topicIds": [
+      "reduction-risk-potential--potential-for-complications-of-diagnostic-tests-treatments-procedures"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "physiological-adaptation",
+   "areaId": "area-physiological-integrity",
+   "name": "Physiological Adaptation",
+   "weightRange": "11–17%",
+   "weightMin": 11,
+   "weightMax": 17,
+   "weightMid": 14.0,
+   "description": "Managing and providing care for clients with acute, chronic or life-threatening physical health conditions.",
+   "topics": [
+    {
+     "id": "physiological-adaptation--alterations-in-body-systems",
+     "name": "Alterations in Body Systems",
+     "learningPoints": [
+      {
+       "id": "physiological-adaptation--alterations-in-body-systems--p01",
+       "text": "Assess adaptation of a client to health alteration, illness and/or disease",
+       "isActivityStatement": false
+      },
+      {
+       "id": "physiological-adaptation--alterations-in-body-systems--p02",
+       "text": "Assess tube drainage during the time client has an alteration in body systems (e.g., amount, color)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "physiological-adaptation--alterations-in-body-systems--p03",
+       "text": "Assess client for signs and symptoms of adverse effects of radiation therapy",
+       "isActivityStatement": false
+      },
+      {
+       "id": "physiological-adaptation--alterations-in-body-systems--p04",
+       "text": "Identify signs of potential prenatal complications",
+       "isActivityStatement": false
+      },
+      {
+       "id": "physiological-adaptation--alterations-in-body-systems--p05",
+       "text": "Identify signs, symptoms and incubation periods of infectious diseases",
+       "isActivityStatement": false
+      },
+      {
+       "id": "physiological-adaptation--alterations-in-body-systems--p06",
+       "text": "Apply knowledge of nursing procedures, pathophysiology and psychomotor skills when caring for a client with an alteration in body systems",
+       "isActivityStatement": false
+      },
+      {
+       "id": "physiological-adaptation--alterations-in-body-systems--p07",
+       "text": "Educate client about managing health problems (e.g., chronic illness)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "physiological-adaptation--alterations-in-body-systems--p08",
+       "text": "Assist with invasive procedures (e.g., central line, thoracentesis, bronchoscopy)",
+       "isActivityStatement": true
+      },
+      {
+       "id": "physiological-adaptation--alterations-in-body-systems--p09",
+       "text": "Implement and monitor phototherapy",
+       "isActivityStatement": true
+      },
+      {
+       "id": "physiological-adaptation--alterations-in-body-systems--p10",
+       "text": "Implement interventions to address side/adverse effects of radiation therapy (e.g., dietary modifications, avoid sunlight)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "physiological-adaptation--alterations-in-body-systems--p11",
+       "text": "Maintain optimal temperature of client",
+       "isActivityStatement": true
+      },
+      {
+       "id": "physiological-adaptation--alterations-in-body-systems--p12",
+       "text": "Monitor and care for clients on a ventilator",
+       "isActivityStatement": true
+      },
+      {
+       "id": "physiological-adaptation--alterations-in-body-systems--p13",
+       "text": "Monitor wounds for signs and symptoms of infection",
+       "isActivityStatement": false
+      },
+      {
+       "id": "physiological-adaptation--alterations-in-body-systems--p14",
+       "text": "Monitor and maintain devices and equipment used for drainage (e.g., surgical wound drains, chest tube suction, negative pressure wound therapy)",
+       "isActivityStatement": true
+      },
+      {
+       "id": "physiological-adaptation--alterations-in-body-systems--p15",
+       "text": "Monitor and maintain internal monitoring devices (e.g., intracranial pressure monitor, intrauterine pressure catheter)",
+       "isActivityStatement": true
+      },
+      {
+       "id": "physiological-adaptation--alterations-in-body-systems--p16",
+       "text": "Perform and manage care of client receiving peritoneal dialysis",
+       "isActivityStatement": true
+      },
+      {
+       "id": "physiological-adaptation--alterations-in-body-systems--p17",
+       "text": "Perform suctioning",
+       "isActivityStatement": true
+      },
+      {
+       "id": "physiological-adaptation--alterations-in-body-systems--p18",
+       "text": "Perform wound care and dressing change",
+       "isActivityStatement": true
+      },
+      {
+       "id": "physiological-adaptation--alterations-in-body-systems--p19",
+       "text": "Promote client progress toward recovery from an alteration in body systems",
+       "isActivityStatement": false
+      },
+      {
+       "id": "physiological-adaptation--alterations-in-body-systems--p20",
+       "text": "Provide ostomy care and education (e.g., tracheal, enteral)",
+       "isActivityStatement": true
+      },
+      {
+       "id": "physiological-adaptation--alterations-in-body-systems--p21",
+       "text": "Provide care to client who has experienced a seizure",
+       "isActivityStatement": false
+      },
+      {
+       "id": "physiological-adaptation--alterations-in-body-systems--p22",
+       "text": "Provide care to client with an infectious disease",
+       "isActivityStatement": false
+      },
+      {
+       "id": "physiological-adaptation--alterations-in-body-systems--p23",
+       "text": "Provide pulmonary hygiene (e.g., chest physiotherapy, incentive spirometry)",
+       "isActivityStatement": true
+      },
+      {
+       "id": "physiological-adaptation--alterations-in-body-systems--p24",
+       "text": "Provide care for client experiencing complications of pregnancy/labor and/or delivery (e.g., eclampsia, precipitous labor, hemorrhage)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "physiological-adaptation--alterations-in-body-systems--p25",
+       "text": "Provide care for client experiencing increased intracranial pressure",
+       "isActivityStatement": false
+      },
+      {
+       "id": "physiological-adaptation--alterations-in-body-systems--p26",
+       "text": "Provide postoperative care",
+       "isActivityStatement": true
+      },
+      {
+       "id": "physiological-adaptation--alterations-in-body-systems--p27",
+       "text": "Remove sutures or staples",
+       "isActivityStatement": false
+      },
+      {
+       "id": "physiological-adaptation--alterations-in-body-systems--p28",
+       "text": "Evaluate client response to surgery",
+       "isActivityStatement": false
+      },
+      {
+       "id": "physiological-adaptation--alterations-in-body-systems--p29",
+       "text": "Evaluate achievement of client treatment goals",
+       "isActivityStatement": false
+      },
+      {
+       "id": "physiological-adaptation--alterations-in-body-systems--p30",
+       "text": "Evaluate client response to treatment for an infectious disease (e.g., acquired immune deficiency syndrome [AIDS], tuberculosis [TB])",
+       "isActivityStatement": false
+      },
+      {
+       "id": "physiological-adaptation--alterations-in-body-systems--p31",
+       "text": "Evaluate and monitor client response to radiation therapy",
+       "isActivityStatement": false
+      }
+     ]
+    },
+    {
+     "id": "physiological-adaptation--fluid-and-electrolyte-imbalances",
+     "name": "Fluid and Electrolyte Imbalances",
+     "learningPoints": [
+      {
+       "id": "physiological-adaptation--fluid-and-electrolyte-imbalances--p01",
+       "text": "Identify signs and symptoms of client fluid and/or electrolyte imbalance",
+       "isActivityStatement": false
+      },
+      {
+       "id": "physiological-adaptation--fluid-and-electrolyte-imbalances--p02",
+       "text": "Apply knowledge of pathophysiology when caring for the client with fluid and electrolyte imbalances",
+       "isActivityStatement": false
+      },
+      {
+       "id": "physiological-adaptation--fluid-and-electrolyte-imbalances--p03",
+       "text": "Manage the care of a client with a fluid and electrolyte imbalance",
+       "isActivityStatement": true
+      },
+      {
+       "id": "physiological-adaptation--fluid-and-electrolyte-imbalances--p04",
+       "text": "Evaluate client's response to interventions to correct fluid or electrolyte imbalance",
+       "isActivityStatement": false
+      }
+     ]
+    },
+    {
+     "id": "physiological-adaptation--hemodynamics",
+     "name": "Hemodynamics",
+     "learningPoints": [
+      {
+       "id": "physiological-adaptation--hemodynamics--p01",
+       "text": "Assess client for decreased cardiac output (e.g., diminished peripheral pulses, hypotension)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "physiological-adaptation--hemodynamics--p02",
+       "text": "Identify cardiac rhythm strip abnormalities (e.g., sinus bradycardia, premature ventricular contractions, ventricular tachycardia, atrial fibrillation, ventricular fibrillation)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "physiological-adaptation--hemodynamics--p03",
+       "text": "Apply knowledge of pathophysiology to interventions in response to client abnormal hemodynamics (e.g., pulmonary artery pressure, central venous pressure)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "physiological-adaptation--hemodynamics--p04",
+       "text": "Provide client with strategies to manage decreased cardiac output (e.g., frequent rest periods, limit activities)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "physiological-adaptation--hemodynamics--p05",
+       "text": "Intervene to improve client cardiovascular status (e.g., initiate protocol to manage cardiac arrhythmias, monitor pacemaker functions)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "physiological-adaptation--hemodynamics--p06",
+       "text": "Monitor and maintain arterial lines",
+       "isActivityStatement": true
+      },
+      {
+       "id": "physiological-adaptation--hemodynamics--p07",
+       "text": "Manage the care of a client with a pacing device",
+       "isActivityStatement": true
+      },
+      {
+       "id": "physiological-adaptation--hemodynamics--p08",
+       "text": "Manage the care of a client on telemetry",
+       "isActivityStatement": true
+      },
+      {
+       "id": "physiological-adaptation--hemodynamics--p09",
+       "text": "Manage the care of a client receiving hemodialysis or continuous renal replacement therapy",
+       "isActivityStatement": true
+      },
+      {
+       "id": "physiological-adaptation--hemodynamics--p10",
+       "text": "Manage the care of a client with alteration in hemodynamics, tissue perfusion and hemostasis",
+       "isActivityStatement": true
+      }
+     ]
+    },
+    {
+     "id": "physiological-adaptation--illness-management",
+     "name": "Illness Management",
+     "learningPoints": [
+      {
+       "id": "physiological-adaptation--illness-management--p01",
+       "text": "Identify client data that needs to be reported immediately",
+       "isActivityStatement": false
+      },
+      {
+       "id": "physiological-adaptation--illness-management--p02",
+       "text": "Apply knowledge of client pathophysiology to illness management",
+       "isActivityStatement": false
+      },
+      {
+       "id": "physiological-adaptation--illness-management--p03",
+       "text": "Educate client regarding an acute or chronic condition",
+       "isActivityStatement": true
+      },
+      {
+       "id": "physiological-adaptation--illness-management--p04",
+       "text": "Educate client about managing illness",
+       "isActivityStatement": false
+      },
+      {
+       "id": "physiological-adaptation--illness-management--p05",
+       "text": "Implement interventions to manage client's recovery from an illness",
+       "isActivityStatement": false
+      },
+      {
+       "id": "physiological-adaptation--illness-management--p06",
+       "text": "Perform gastric lavage",
+       "isActivityStatement": false
+      },
+      {
+       "id": "physiological-adaptation--illness-management--p07",
+       "text": "Promote and provide continuity of care in illness management activities",
+       "isActivityStatement": false
+      },
+      {
+       "id": "physiological-adaptation--illness-management--p08",
+       "text": "Manage the care of a client with impaired ventilation/oxygenation",
+       "isActivityStatement": true
+      },
+      {
+       "id": "physiological-adaptation--illness-management--p09",
+       "text": "Evaluate the effectiveness of the treatment plan for a client with an acute or chronic diagnosis",
+       "isActivityStatement": true
+      }
+     ]
+    },
+    {
+     "id": "physiological-adaptation--medical-emergencies",
+     "name": "Medical Emergencies",
+     "learningPoints": [
+      {
+       "id": "physiological-adaptation--medical-emergencies--p01",
+       "text": "Apply knowledge of pathophysiology when caring for a client experiencing a medical emergency",
+       "isActivityStatement": false
+      },
+      {
+       "id": "physiological-adaptation--medical-emergencies--p02",
+       "text": "Apply knowledge of nursing procedures and psychomotor skills when caring for a client experiencing a medical emergency",
+       "isActivityStatement": false
+      },
+      {
+       "id": "physiological-adaptation--medical-emergencies--p03",
+       "text": "Explain emergency interventions to a client",
+       "isActivityStatement": false
+      },
+      {
+       "id": "physiological-adaptation--medical-emergencies--p04",
+       "text": "Notify primary health care provider about unexpected client response/emergency situation",
+       "isActivityStatement": false
+      },
+      {
+       "id": "physiological-adaptation--medical-emergencies--p05",
+       "text": "Perform emergency care procedures",
+       "isActivityStatement": true
+      },
+      {
+       "id": "physiological-adaptation--medical-emergencies--p06",
+       "text": "Provide emergency care for wound disruption (e.g., dehiscence)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "physiological-adaptation--medical-emergencies--p07",
+       "text": "Evaluate and document client's response to emergency interventions (e.g., restoration of breathing, pulse)",
+       "isActivityStatement": false
+      }
+     ]
+    },
+    {
+     "id": "physiological-adaptation--pathophysiology",
+     "name": "Pathophysiology",
+     "learningPoints": [
+      {
+       "id": "physiological-adaptation--pathophysiology--p01",
+       "text": "Identify pathophysiology related to an acute or chronic condition",
+       "isActivityStatement": true
+      },
+      {
+       "id": "physiological-adaptation--pathophysiology--p02",
+       "text": "Understand general principles of pathophysiology (e.g., injury and repair, immunity, cellular structure)",
+       "isActivityStatement": false
+      }
+     ]
+    },
+    {
+     "id": "physiological-adaptation--unexpected-response-to-therapies",
+     "name": "Unexpected Response to Therapies",
+     "learningPoints": [
+      {
+       "id": "physiological-adaptation--unexpected-response-to-therapies--p01",
+       "text": "Assess client for unexpected adverse response to therapy (e.g., increased intracranial pressure, hemorrhage)",
+       "isActivityStatement": false
+      },
+      {
+       "id": "physiological-adaptation--unexpected-response-to-therapies--p02",
+       "text": "Recognize signs and symptoms of client complications and intervene",
+       "isActivityStatement": true
+      },
+      {
+       "id": "physiological-adaptation--unexpected-response-to-therapies--p03",
+       "text": "Promote recovery of a client from unexpected response to therapy (e.g., urinary tract infection)",
+       "isActivityStatement": false
+      }
+     ]
+    }
+   ],
+   "activityStatements": [
+    {
+     "id": "physiological-adaptation-act-01",
+     "text": "Monitor and maintain devices and equipment used for drainage (e.g., surgical wound drains, chest tube suction, negative pressure wound therapy)",
+     "topicIds": [
+      "physiological-adaptation--alterations-in-body-systems"
+     ]
+    },
+    {
+     "id": "physiological-adaptation-act-02",
+     "text": "Perform emergency care procedures",
+     "topicIds": [
+      "physiological-adaptation--medical-emergencies"
+     ]
+    },
+    {
+     "id": "physiological-adaptation-act-03",
+     "text": "Monitor and care for clients on a ventilator",
+     "topicIds": [
+      "physiological-adaptation--alterations-in-body-systems"
+     ]
+    },
+    {
+     "id": "physiological-adaptation-act-04",
+     "text": "Perform wound care and dressing change",
+     "topicIds": [
+      "physiological-adaptation--alterations-in-body-systems"
+     ]
+    },
+    {
+     "id": "physiological-adaptation-act-05",
+     "text": "Assist with invasive procedures (e.g., central line, thoracentesis, bronchoscopy)",
+     "topicIds": [
+      "physiological-adaptation--alterations-in-body-systems"
+     ]
+    },
+    {
+     "id": "physiological-adaptation-act-06",
+     "text": "Provide ostomy care and education (e.g., tracheal, enteral)",
+     "topicIds": [
+      "physiological-adaptation--alterations-in-body-systems"
+     ]
+    },
+    {
+     "id": "physiological-adaptation-act-07",
+     "text": "Provide postoperative care",
+     "topicIds": [
+      "physiological-adaptation--alterations-in-body-systems"
+     ]
+    },
+    {
+     "id": "physiological-adaptation-act-08",
+     "text": "Perform and manage care of client receiving peritoneal dialysis",
+     "topicIds": [
+      "physiological-adaptation--alterations-in-body-systems"
+     ]
+    },
+    {
+     "id": "physiological-adaptation-act-09",
+     "text": "Perform suctioning",
+     "topicIds": [
+      "physiological-adaptation--alterations-in-body-systems"
+     ]
+    },
+    {
+     "id": "physiological-adaptation-act-10",
+     "text": "Provide pulmonary hygiene (e.g., chest physiotherapy, incentive spirometry)",
+     "topicIds": [
+      "physiological-adaptation--alterations-in-body-systems"
+     ]
+    },
+    {
+     "id": "physiological-adaptation-act-11",
+     "text": "Manage the care of a client on telemetry",
+     "topicIds": [
+      "physiological-adaptation--hemodynamics"
+     ]
+    },
+    {
+     "id": "physiological-adaptation-act-12",
+     "text": "Manage the care of a client with impaired ventilation/oxygenation",
+     "topicIds": [
+      "physiological-adaptation--illness-management"
+     ]
+    },
+    {
+     "id": "physiological-adaptation-act-13",
+     "text": "Maintain optimal temperature of client",
+     "topicIds": [
+      "physiological-adaptation--alterations-in-body-systems"
+     ]
+    },
+    {
+     "id": "physiological-adaptation-act-14",
+     "text": "Implement and monitor phototherapy",
+     "topicIds": [
+      "physiological-adaptation--alterations-in-body-systems"
+     ]
+    },
+    {
+     "id": "physiological-adaptation-act-15",
+     "text": "Manage the care of a client with a pacing device",
+     "topicIds": [
+      "physiological-adaptation--hemodynamics"
+     ]
+    },
+    {
+     "id": "physiological-adaptation-act-16",
+     "text": "Monitor and maintain arterial lines",
+     "topicIds": [
+      "physiological-adaptation--hemodynamics"
+     ]
+    },
+    {
+     "id": "physiological-adaptation-act-17",
+     "text": "Manage the care of a client with a fluid and electrolyte imbalance",
+     "topicIds": [
+      "physiological-adaptation--fluid-and-electrolyte-imbalances"
+     ]
+    },
+    {
+     "id": "physiological-adaptation-act-18",
+     "text": "Manage the care of a client with alteration in hemodynamics, tissue perfusion and hemostasis",
+     "topicIds": [
+      "physiological-adaptation--hemodynamics"
+     ]
+    },
+    {
+     "id": "physiological-adaptation-act-19",
+     "text": "Evaluate the effectiveness of the treatment plan for a client with an acute or chronic diagnosis",
+     "topicIds": [
+      "physiological-adaptation--illness-management"
+     ]
+    },
+    {
+     "id": "physiological-adaptation-act-20",
+     "text": "Identify pathophysiology related to an acute or chronic condition",
+     "topicIds": [
+      "physiological-adaptation--pathophysiology"
+     ]
+    },
+    {
+     "id": "physiological-adaptation-act-21",
+     "text": "Manage the care of a client receiving hemodialysis or continuous renal replacement therapy",
+     "topicIds": [
+      "physiological-adaptation--hemodynamics"
+     ]
+    },
+    {
+     "id": "physiological-adaptation-act-22",
+     "text": "Recognize signs and symptoms of client complications and intervene",
+     "topicIds": [
+      "physiological-adaptation--unexpected-response-to-therapies"
+     ]
+    },
+    {
+     "id": "physiological-adaptation-act-23",
+     "text": "Educate client regarding an acute or chronic condition",
+     "topicIds": [
+      "physiological-adaptation--illness-management"
+     ]
+    },
+    {
+     "id": "physiological-adaptation-act-24",
+     "text": "Monitor and maintain internal monitoring devices (e.g., intracranial pressure monitor, intrauterine pressure catheter)",
+     "topicIds": [
+      "physiological-adaptation--alterations-in-body-systems"
+     ]
+    }
+   ]
+  }
+ ],
+ "integratedProcesses": [
+  {
+   "id": "caring",
+   "name": "Caring",
+   "description": "The nurse and client interact in an atmosphere of mutual respect and trust. The nurse provides encouragement, hope, support and compassion to help achieve desired outcomes."
+  },
+  {
+   "id": "clinical-judgment",
+   "name": "Clinical Judgment",
+   "description": "The observed outcome of critical thinking and decision-making: an iterative, multi-step process that uses nursing knowledge to observe and assess presenting situations, identify a prioritized client concern and generate the best possible evidence-based solutions to deliver safe client care."
+  },
+  {
+   "id": "communication-documentation",
+   "name": "Communication and Documentation",
+   "description": "Verbal and nonverbal interactions between the nurse and the client, significant others and the health care team, and the written or electronic records of client care that show adherence to standards of practice and accountability."
+  },
+  {
+   "id": "culture-spirituality",
+   "name": "Culture and Spirituality",
+   "description": "Interaction of the nurse and the client (individual, family or group) that recognizes and considers the client's self-identified, unique preferences for care, the applicable standard of care and legal considerations."
+  },
+  {
+   "id": "nursing-process",
+   "name": "Nursing Process",
+   "description": "A scientific, clinical reasoning approach to client care that includes assessment, analysis, planning, implementation and evaluation."
+  },
+  {
+   "id": "teaching-learning",
+   "name": "Teaching/Learning",
+   "description": "Facilitation of the acquisition of knowledge, skills and abilities that promotes a change in behavior."
+  }
+ ],
+ "clinicalJudgmentSteps": [
+  {
+   "id": "recognize-cues",
+   "order": 1,
+   "name": "Recognize cues",
+   "description": "Identify relevant and important information from different sources (e.g., medical history, vital signs)."
+  },
+  {
+   "id": "analyze-cues",
+   "order": 2,
+   "name": "Analyze cues",
+   "description": "Organize and connect the recognized cues to the client's clinical presentation."
+  },
+  {
+   "id": "prioritize-hypotheses",
+   "order": 3,
+   "name": "Prioritize hypotheses",
+   "description": "Evaluate and prioritize hypotheses (urgency, likelihood, risk, difficulty, time constraints, etc.)."
+  },
+  {
+   "id": "generate-solutions",
+   "order": 4,
+   "name": "Generate solutions",
+   "description": "Identify expected outcomes and use hypotheses to define a set of interventions for the expected outcomes."
+  },
+  {
+   "id": "take-action",
+   "order": 5,
+   "name": "Take action",
+   "description": "Implement the solution(s) that address the highest priority."
+  },
+  {
+   "id": "evaluate-outcomes",
+   "order": 6,
+   "name": "Evaluate outcomes",
+   "description": "Compare observed outcomes to expected outcomes."
+  }
+ ],
+ "exam": {
+  "minItems": 85,
+  "maxItems": 150,
+  "timeLimitHours": 5,
+  "breaksCountTowardTime": true,
+  "minLengthBreakdown": {
+   "contentItems": 52,
+   "caseStudyItems": 18,
+   "caseStudies": 3,
+   "itemsPerCaseStudy": 6,
+   "pretestItems": 15
+  },
+  "standAloneClinicalJudgmentPercent": 10,
+  "canReturnToPreviousItem": false,
+  "mustAnswerEveryItem": true,
+  "stopRules": [
+   "95% confidence interval rule (after the minimum number of items)",
+   "Maximum-length exam (final ability estimate decides)",
+   "Run-out-of-time rule (fail if fewer than the minimum answered; otherwise final ability estimate decides)"
+  ],
+  "partialCreditMethods": [
+   "plus/minus",
+   "zero/one",
+   "rationale scoring"
+  ]
+ }
+}
