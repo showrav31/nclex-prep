@@ -26,7 +26,39 @@ const V2 = { exam: "2028-06-15", lv: { "0-0": 3, "5-3": 1, "9-9": 2 }, can: { "0
 const V3 = { ...V2, v: 3, name: "Test", minutes: 30, setup: true, days: { "2026-11-20": 1 }, task: { d: "2000-01-01", c: 5, tp: 3, why: "weak", done: false } };
 // Progress as saved by v4 (fixed IDs, before the study tools).
 const V4 = { v: 4, exam: "2028-07-01", name: "Four", minutes: 30, setup: true, lv: { "moc-advance-directives": 3, "pharm-dosage-calculation": 1 }, can: { "can-bnmc": true }, plan: { "plan-get-test-plan": true }, stat: { moc: { n: 4, c: 3 } }, sessions: [{ d: "2026-11-20", q: 4, c: 3, cat: "MoC", cid: "moc" }], days: { "2026-11-20": 1 }, task: null };
-const LATEST = 5;
+const LATEST = 6;
+// Official syllabus ids used by the tests.
+const T = {
+  adv: "management-of-care--advance-directives-self-determination-life-planning", advocacy: "management-of-care--advocacy",
+  delegation: "management-of-care--assignment-delegation-and-supervision",
+  asepsis: "safety-infection-control--standard-precautions-transmission-based-precautions-surgical-asepsis",
+  medAdmin: "pharmacological-parenteral--medication-administration", dose: "pharmacological-parenteral--dosage-calculations",
+  dev: "health-promotion--developmental-stages-and-transitions", fluid: "physiological-adaptation--fluid-and-electrolyte-imbalances"
+};
+const ACTS_FOR = (cat, id) => cat.activityStatements.filter(a => a.topicIds.includes(id)).length;
+// Progress as saved by v5 (study tools, but still the OLD topic ids). Rich on purpose: merged and unmatched topics.
+const V5 = {
+  v: 5, setup: true, name: "Five", exam: "2028-07-01", minutes: 30,
+  lv: { "safety-precautions": 3, "safety-surgical-asepsis": 1, "moc-advance-directives": 3, "pharm-high-alert": 2, "pharm-med-administration": 3, "phys-acid-base": 1, "health-growth-development": 3, "health-developmental-stages": 2 },
+  notes: {
+    "moc-delegation": { text: "UCP = routine, stable.", updated: "2026-11-20T10:00:00.000Z" },
+    "safety-precautions": { text: "Airborne = N95", updated: "2026-11-20T11:00:00.000Z" },
+    "safety-surgical-asepsis": { text: "Sterile field rules", updated: "2026-11-21T11:00:00.000Z" },
+    "phys-acid-base": { text: "ROME", updated: "2026-11-22T11:00:00.000Z" }
+  },
+  freeNotes: [{ id: "note-1", title: "My own", text: "keep me", updated: "2026-11-20T00:00:00.000Z" }],
+  mistakes: {
+    "q-phys-abg-resp-acidosis": { topic: "phys-acid-base", stem: "ABG question", rationale: "why", first: "2026-11-20", last: "2026-11-20", n: 1, why: "misread", fixed: false },
+    "q-pharm-digoxin-hold": { topic: "pharm-high-alert", stem: "Digoxin question", rationale: "why", first: "2026-11-20", last: "2026-11-20", n: 2, why: "", fixed: false }
+  },
+  study: { "2026-11-20": { "pharm-dosage-calculation": 25, "phys-acid-base": 10, general: 5 } },
+  stat: { moc: { n: 4, c: 3 }, pharm: { n: 2, c: 1 } },
+  sessions: [{ d: "2026-11-20", q: 4, c: 3, cat: "MoC", cid: "moc" }, { d: "2026-11-21", q: 2, c: 1, cat: "Pharm", cid: "pharm" }],
+  task: { d: "2000-01-01", topic: "moc-delegation", why: "weak", done: false },
+  timerRun: { mode: "work", end: null, left: 600000, topic: "phys-acid-base", work: 25 },
+  cards: { "lab-sodium": { due: "2026-12-01", ivl: 3, ease: 2.5, reps: 2, lapses: 0 } }, myCards: [{ id: "my-1", front: "f", back: "b", created: "2026-11-20" }], fcReviews: 5,
+  badges: { "first-question": "2026-11-20" }, days: { "2026-11-20": 1 }, can: { "can-bnmc": true }, plan: { "plan-get-test-plan": true }
+};
 
 (async () => {
   await new Promise(r => server.listen(0, "127.0.0.1", r));
@@ -109,9 +141,9 @@ const LATEST = 5;
     const s = await p.evaluate(() => S); // in memory: nothing is saved until setup is finished
     check(await p.isVisible("#setup"), "v2 user sees setup once");
     check(await p.inputValue("#setExam") === "2028-06-15", "v2 exam date kept");
-    check(s.lv["moc-advance-directives"] === 3 && s.lv["pharm-dosage-calculation"] === 1, "v2 topic ratings moved to IDs");
+    check(s.lv[T.adv] === 3 && s.lv[T.dose] === 1, "v2 topic ratings moved to the official topic IDs");
     check(s.plan["plan-get-test-plan"] && s.plan["plan-sit-nclex"] && s.can["can-bnmc"], "v2 plan + Canada ticks moved to IDs");
-    check(s.stat.moc && s.stat.moc.n === 4 && s.sessions.length === 1 && s.sessions[0].cid === "moc", "v2 quiz stats + sessions kept");
+    check(s.stat["management-of-care"] && s.stat["management-of-care"].n === 4 && s.sessions.length === 1 && s.sessions[0].cid === "management-of-care", "v2 quiz stats + sessions kept (new category ids)");
     check(s.unmapped && s.unmapped.lv["9-9"] === 2, "unknown old keys kept, not dropped");
     check(JSON.parse(await p.evaluate(() => localStorage.getItem("nclexDash2_backup_v2"))).lv["0-0"] === 3, "v2 backup copy kept");
     check(p.errs.length === 0, "no console errors (v2)");
@@ -123,10 +155,10 @@ const LATEST = 5;
     const { ctx, p } = await page(V3);
     await p.waitForSelector("#home.on");
     const s = await state(p);
-    check(s.v === LATEST && s.name === "Test" && s.lv["pharm-dosage-calculation"] === 1, "v3 progress moved to IDs, setup skipped");
-    check(await p.textContent("#hTask .topicname") === "Dosage calculation", "today's task picks the Weak topic");
+    check(s.v === LATEST && s.name === "Test" && s.lv[T.dose] === 1, "v3 progress moved to the official topic IDs, setup skipped");
+    check(await p.textContent("#hTask .topicname") === "Dosage Calculations", "today's task picks the Weak topic");
     await p.click("#tabbar [data-go=learn]");
-    check((await p.textContent("#p-moc")).startsWith("1/14 confident"), "syllabus shows migrated rating");
+    check((await p.textContent("#p-management-of-care")).startsWith("1/16 confident"), "syllabus shows migrated rating");
     await p.click("#tabbar [data-go=progress]");
     check((await p.textContent("#ph-phase-foundation .pill")) === "1/9", "study plan shows migrated tick");
     check(!!(await p.evaluate(() => localStorage.getItem("nclexDash2_backup_v3"))), "v3 backup copy kept");
@@ -143,7 +175,7 @@ const LATEST = 5;
     await ctx.grantPermissions(["clipboard-read", "clipboard-write"], { origin: new URL(U).origin });
     await p.waitForSelector("#home.on");
     let s = await state(p);
-    check(s.v === LATEST && s.lv["moc-advance-directives"] === 3 && !!s.cards && !!s.notes && !!(await p.evaluate(() => localStorage.getItem("nclexDash2_backup_v4"))), "v4 progress kept, new fields added, v4 backup kept");
+    check(s.v === LATEST && s.lv[T.adv] === 3 && !!s.cards && !!s.notes && !!(await p.evaluate(() => localStorage.getItem("nclexDash2_backup_v4"))), "v4 progress kept, new fields added, v4 backup kept");
     check(+(await p.textContent("#hDue")) === 10, "Home shows cards due today (10 new a day)");
 
     // flashcards
@@ -166,13 +198,13 @@ const LATEST = 5;
 
     // topic note; Android Back closes the sheet
     await p.goto(U + "#learn/syllabus");
-    await p.click("#c-moc .head");
-    await p.click('#c-moc button[aria-label^="Notes on Advance"]');
+    await p.click("#c-management-of-care .head");
+    await p.click('#c-management-of-care .tname:has-text("Advance Directives")');
     await p.fill("#noteText", "Competent adult's wishes come first.");
     await p.goBack();
     await p.waitForSelector("#sheet", { state: "hidden" });
     s = await state(p);
-    check(!!s.notes["moc-advance-directives"] && s.notes["moc-advance-directives"].text.includes("wishes"), "topic note saved; Back closes the note");
+    check(!!s.notes[T.adv] && s.notes[T.adv].text.includes("wishes"), "topic note saved; Back closes the note");
     check(await p.isVisible("#learn.on"), "Back from a note stays on the same screen");
     // free note + search
     await p.click("#learnTabs [data-sub=notes]");
@@ -185,16 +217,16 @@ const LATEST = 5;
     check(await noSideScroll(p), "notes: no sideways scroll");
 
     // timer
-    await p.evaluate(() => openTimer("pharm-dosage-calculation"));
+    await p.evaluate(t => openTimer(t), T.dose);
     await p.click('#tBtns button:has-text("Start")');
     check(await p.isVisible("#timebar"), "timer bar shows while timing");
     await p.evaluate(() => { S.timerRun.end = Date.now() - 1000; });
     await p.waitForFunction(() => S.timerRun && S.timerRun.mode === "break", null, { timeout: 4000 });
-    check(await p.evaluate(() => S.study[dayKey()]["pharm-dosage-calculation"] === 25), "finished timer logs 25 min to the topic");
+    check(await p.evaluate(t => S.study[dayKey()][t] === 25, T.dose), "finished timer logs 25 min to the topic");
     await p.click('#tBtns button:has-text("Skip break")');
     await p.click('#sheet button:has-text("Done")');
     await p.goto(U + "#progress");
-    check((await p.textContent("#wkTopics")).includes("Dosage calculation"), "weekly chart lists study time by topic");
+    check((await p.textContent("#wkTopics")).includes("Dosage Calculations"), "weekly chart lists study time by topic");
     check(!!(await p.evaluate(() => S.badges["first-note"])) && (await p.$$("#badgeGrid .badge:not(.locked)")).length >= 1, "badges earned and shown");
     check(await noSideScroll(p), "progress: no sideways scroll");
 
@@ -207,7 +239,7 @@ const LATEST = 5;
     if (shots) { await p.goto(U + "#home"); await p.screenshot({ path: shots + "/home-dark.png" }); await p.goto(U + "#more"); }
     await p.click('button:has-text("Copy backup")');
     const copied = JSON.parse(await p.evaluate(() => navigator.clipboard.readText()));
-    check(copied.app === "nclex-prep" && !!copied.data.notes["moc-advance-directives"] && copied.data.myCards.length === 1 && !!copied.data.cards && !!copied.data.study, "Copy backup includes notes, cards, timer and progress");
+    check(copied.app === "nclex-prep" && !!copied.data.notes[T.adv] && copied.data.myCards.length === 1 && !!copied.data.cards && !!copied.data.study, "Copy backup includes notes, cards, timer and progress");
     copied.data.name = "Restored";
     await p.fill("#importText", JSON.stringify(copied));
     await Promise.all([p.waitForEvent("load"), p.click('button:has-text("Restore backup")')]);
@@ -217,13 +249,112 @@ const LATEST = 5;
     await p.fill("#importText", JSON.stringify(V2));
     await Promise.all([p.waitForEvent("load"), p.click('button:has-text("Restore backup")')]);
     await p.waitForSelector("#setup:not([hidden]), #app:not([hidden])");
-    check(await p.evaluate(() => S.lv["moc-advance-directives"] === 3 && S.v === 5), "restoring an old-version backup migrates it");
+    check(await p.evaluate(t => S.lv[t] === 3 && S.v === 6, T.adv), "restoring an old-version backup migrates it");
     await p.evaluate(() => { S.setup = true; persist(); });
     await p.goto(U + "#more"); await p.reload(); await p.waitForSelector("#more.on");
     await Promise.all([p.waitForEvent("load"), p.click('button:has-text("Reset all progress")')]);
     await p.waitForSelector("#setup:not([hidden])");
     check(!!(await p.evaluate(() => localStorage.getItem("nclexDash2_before_reset"))), "reset starts over and keeps a safety copy");
     check(p.errs.length === 0, "no console errors (study tools)" + (p.errs.length ? ": " + p.errs.join(" | ") : ""));
+    await ctx.close();
+  }
+
+  // E. Migration from v5 (old topic ids) to the official syllabus ids
+  {
+    const { ctx, p } = await page(V5);
+    await p.waitForSelector("#home.on");
+    check(!!(await p.evaluate(() => localStorage.getItem("nclexDash2_backup_v5"))) && JSON.parse(await p.evaluate(() => localStorage.getItem("nclexDash2_backup_v5"))).lv["safety-precautions"] === 3, "v5 safety backup kept (untouched old data)");
+    // the migration itself, on a copy (the app has already moved on and replaced today's task)
+    const m = await p.evaluate(seed => migrate(JSON.parse(JSON.stringify(seed)), JSON.stringify(seed)), V5);
+    check(m.v === LATEST, "migrated to schema v" + LATEST);
+    check(m.lv[T.adv] === 3 && m.lv[T.asepsis] === 1 && m.lv[T.medAdmin] === 2 && m.lv[T.dev] === 2, "ratings moved; where two old topics became one, the lower rating wins");
+    check(!("phys-acid-base" in m.lv) && m.unmapped.v6.lv["phys-acid-base"] === 1, "rating of the unmatched topic is kept in unmapped, not lost");
+    check(m.notes[T.delegation].text === "UCP = routine, stable.", "a note on a matched topic moved as it was");
+    check(m.notes[T.asepsis].text.includes("Airborne = N95") && m.notes[T.asepsis].text.includes("Sterile field rules") && m.notes[T.asepsis].updated.startsWith("2026-11-21"), "notes from two old topics are joined, nothing lost");
+    check(m.freeNotes.length === 2 && m.freeNotes.some(n => n.id === "note-1") && m.freeNotes.some(n => n.title === "From old topic: Acid–base / ABGs" && n.text === "ROME"), "note on the unmatched topic became a free note; her own free note kept");
+    check(m.mistakes["q-phys-abg-resp-acidosis"].topic === T.fluid && m.mistakes["q-pharm-digoxin-hold"].topic === T.medAdmin && m.mistakes["q-phys-abg-resp-acidosis"].why === "misread", "mistakes point to new topics, their 'why' kept");
+    check(m.study["2026-11-20"][T.dose] === 25 && m.study["2026-11-20"].general === 15 && m.unmapped.v6.study["2026-11-20/phys-acid-base"] === 10, "timer minutes follow the topic; unmatched minutes count as general study (original kept)");
+    check(m.stat["management-of-care"].n === 4 && m.stat["pharmacological-parenteral"].c === 1 && !m.stat.moc, "quiz stats moved to the new category ids");
+    check(m.sessions[0].cid === "management-of-care" && m.sessions[1].cid === "pharmacological-parenteral" && m.sessions[0].cat === "MoC", "session history keeps its label and gets the new category id");
+    check(m.task.topic === T.delegation && m.timerRun.topic === "general", "today's task and a paused timer follow the new ids");
+    check(!!m.cards["lab-sodium"] && m.myCards.length === 1 && m.fcReviews === 5 && m.badges["first-question"] && m.plan["plan-get-test-plan"] && m.can["can-bnmc"] && m.days["2026-11-20"] === 1, "flashcards, own cards, badges, plan, Canada ticks, streak days untouched");
+    check(JSON.stringify(await p.evaluate(s => migrate(JSON.parse(JSON.stringify(s)), null), m)) === JSON.stringify(m), "migrating again changes nothing");
+
+    // what she sees
+    await p.goto(U + "#learn/syllabus"); await p.waitForSelector("#syllabus.on #cats .card");
+    const txt = id => p.textContent("#" + id);
+    check((await txt("p-management-of-care")).startsWith("1/16 confident"), "syllabus shows the migrated rating");
+    check((await txt("p-safety-infection-control")).includes("1 weak"), "merged topic shows as Weak (the lower rating)");
+    await p.goto(U + "#practice/mistakes"); await p.waitForSelector("#mistakes.on .item");
+    check((await txt("mkList")).includes("Fluid and Electrolyte Imbalances") && (await txt("mkList")).includes("Medication Administration"), "My mistakes shows the new topic names");
+    await p.goto(U + "#learn/notes"); await p.waitForSelector("#notes.on");
+    await p.fill("#noteSearch", "rome");
+    check((await txt("noteList")).includes("From old topic"), "the note from the unmatched topic can be found in Notes");
+    check((await p.evaluate(() => Q.length)) === 34 && (await p.evaluate(() => Q.every(q => TOPIC[q.topic]))), "all 34 questions are in the bank and point to real topics");
+    check(p.errs.length === 0, "no console errors (v5)" + (p.errs.length ? ": " + p.errs.join(" | ") : ""));
+    await ctx.close();
+  }
+
+  // F. The new syllabus screen
+  {
+    const SYLL = JSON.parse(fs.readFileSync(path.join(root, "data/syllabus.json"), "utf8"));
+    const moc = SYLL.categories[0], adv = moc.topics[0], advocacy = moc.topics.find(t => t.id === T.advocacy);
+    const basic = SYLL.categories.find(c => c.id === "basic-care-comfort");
+    const seed = { v: LATEST, setup: true, name: "Six", exam: "2028-07-01", lv: {} };
+    moc.topics.forEach(t => seed.lv[t.id] = 3);
+    seed.lv[basic.topics[0].id] = 3;
+    const { ctx, p } = await page(seed);
+    await p.waitForSelector("#home.on");
+    // expected overall progress, worked out here from the file (not by the app): sum(weightMid x share Confident) / sum(weightMid)
+    const wSum = SYLL.categories.reduce((n, c) => n + c.weightMid, 0);
+    const wDone = SYLL.categories.reduce((n, c) => n + c.weightMid * c.topics.filter(t => seed.lv[t.id] === 3).length / c.topics.length, 0);
+    const expect = Math.round(wDone / wSum * 100) + "%";
+    check(expect === "19%", "expected weighted progress is 19% (self-check of the test)");
+    check((await p.textContent("#sSyl")) === expect, `Home: syllabus progress is weighted by weightMid (${expect}, not the plain topic count)`);
+    await p.goto(U + "#learn/syllabus"); await p.waitForSelector("#syllabus.on #cats .card");
+    check((await p.textContent("#synTop")).includes(expect), "Syllabus screen shows the same weighted progress");
+    check((await p.$$("#cats .group")).length === 4 && (await p.$$("#cats > .card")).length === 8, "4 areas and 8 categories shown");
+    check((await p.textContent("#c-management-of-care .pill")).includes("15–21%"), "category shows its weight range");
+    await p.click("#c-management-of-care .head");
+    check((await p.$$("#c-management-of-care .topic")).length === 16, "category opens to its 16 topics");
+    check(await noSideScroll(p), "syllabus: no sideways scroll");
+
+    // topic page
+    await p.click(`#c-management-of-care .tname:has-text("Advance Directives")`);
+    await p.waitForSelector("#sheet:not([hidden]) #tpPoints");
+    check((await p.$$("#tpPoints .check")).length === adv.learningPoints.length, `topic page lists all ${adv.learningPoints.length} learning points as a checklist`);
+    const acts = moc.activityStatements.filter(a => a.topicIds.includes(adv.id));
+    check((await p.$$("#sheetBody .acts li")).length === acts.length && acts.length > 0, `topic page lists the ${acts.length} linked activity statements`);
+    check((await p.textContent("#sheetBody")).includes(acts[0].text), "activity statement text is shown");
+    await p.click("#tpPoints .check >> nth=0");
+    await p.click("#tpPoints .check >> nth=1");
+    check(Object.keys((await state(p)).points).length === 2 && (await p.textContent("#tpCount")).startsWith("2/"), "ticking learning points is saved by point id");
+    await p.click('#tpLvl button:has-text("OK")');
+    check((await state(p)).lv[adv.id] === 2, "rating can be changed on the topic page");
+    await p.fill("#noteText", "Living will + health care proxy.");
+    check(await noSideScroll(p), "topic page: no sideways scroll");
+    await p.goBack();
+    await p.waitForSelector("#sheet", { state: "hidden" });
+    check((await state(p)).notes[adv.id].text.startsWith("Living will"), "topic note saved when the page closes");
+    check((await p.textContent(`#c-management-of-care .tname:has-text("Advance Directives")`)).includes("2/3 points") && (await p.textContent("#p-management-of-care")).includes("2/"), "rows and category show points ticked");
+    // practise this topic
+    await p.click(`#c-management-of-care .tname:has-text("Advance Directives")`);
+    await p.click('#sheetBody button:has-text("Practise this topic")');
+    await p.waitForSelector("#drill.on #quiz .stem");
+    check(await p.evaluate(t => QZ.topic === t && QZ.list.length === Q.filter(q => q.topic === t).length && QZ.list.every(q => q.topic === t), adv.id), "Practise this topic runs only that topic's questions");
+    check(await p.evaluate(() => !document.getElementById("sheet").offsetParent) && await p.evaluate(() => location.hash) === "#practice/drill", "the topic page closed and the quiz opened");
+    // a topic with no questions
+    await p.goto(U + "#learn/syllabus");
+    if (!(await p.isVisible("#c-management-of-care .topic"))) await p.click("#c-management-of-care .head");
+    await p.click(`#c-management-of-care .tname:has-text("Advocacy")`);
+    check((await p.textContent("#sheetBody")).includes("No practice questions on this topic yet") && (await p.$$("#sheetBody .acts li")).length === (ACTS_FOR(moc, advocacy.id)), "topic without questions says so and offers the category instead");
+    await p.goBack();
+    // test plan overview + footer
+    await p.waitForSelector("#sheet", { state: "hidden" });
+    const info = await p.textContent("#planInfo");
+    check(info.includes("85 to 150 items") && (await p.$$("#planInfo details")).length === 12, "test-plan overview shows exam rules, 6 integrated processes and 6 clinical judgment steps");
+    check((await p.textContent("footer.credit")).includes("Portions copyrighted by the National Council of State Boards of Nursing, Inc. All rights reserved."), "footer shows the NCSBN copyright credit");
+    check(p.errs.length === 0, "no console errors (syllabus)" + (p.errs.length ? ": " + p.errs.join(" | ") : ""));
     await ctx.close();
   }
 

@@ -1,0 +1,854 @@
+{
+ "_readme": "Maps the OLD topic ids (used by saved progress up to schema v5) to the NEW official topic ids in data/syllabus.json. Used by the v5 -> v6 migration in js/store.js (which holds a frozen copy; tests/check-data.js checks they agree). Never edit it after release.",
+ "categories": {
+  "moc": {
+   "new": "management-of-care",
+   "oldName": "Management of Care",
+   "newName": "Management of Care"
+  },
+  "safety": {
+   "new": "safety-infection-control",
+   "oldName": "Safety and Infection Prevention and Control",
+   "newName": "Safety and Infection Prevention and Control"
+  },
+  "health": {
+   "new": "health-promotion",
+   "oldName": "Health Promotion and Maintenance",
+   "newName": "Health Promotion and Maintenance"
+  },
+  "psych": {
+   "new": "psychosocial-integrity",
+   "oldName": "Psychosocial Integrity",
+   "newName": "Psychosocial Integrity"
+  },
+  "basic": {
+   "new": "basic-care-comfort",
+   "oldName": "Basic Care and Comfort",
+   "newName": "Basic Care and Comfort"
+  },
+  "pharm": {
+   "new": "pharmacological-parenteral",
+   "oldName": "Pharmacological and Parenteral Therapies",
+   "newName": "Pharmacological and Parenteral Therapies"
+  },
+  "risk": {
+   "new": "reduction-risk-potential",
+   "oldName": "Reduction of Risk Potential",
+   "newName": "Reduction of Risk Potential"
+  },
+  "phys": {
+   "new": "physiological-adaptation",
+   "oldName": "Physiological Adaptation",
+   "newName": "Physiological Adaptation"
+  }
+ },
+ "topics": {
+  "moc-advance-directives": {
+   "oldName": "Advance directives & client rights",
+   "oldCategory": "moc",
+   "new": "management-of-care--advance-directives-self-determination-life-planning",
+   "newName": "Advance Directives/Self-Determination/Life Planning",
+   "match": "combined",
+   "alsoCovers": [
+    {
+     "id": "management-of-care--client-rights",
+     "name": "Client Rights"
+    }
+   ]
+  },
+  "moc-advocacy": {
+   "oldName": "Advocacy",
+   "oldCategory": "moc",
+   "new": "management-of-care--advocacy",
+   "newName": "Advocacy",
+   "match": "name"
+  },
+  "moc-delegation": {
+   "oldName": "Assignment, delegation & supervision",
+   "oldCategory": "moc",
+   "new": "management-of-care--assignment-delegation-and-supervision",
+   "newName": "Assignment, Delegation and Supervision",
+   "match": "name"
+  },
+  "moc-case-management": {
+   "oldName": "Case management & continuity of care",
+   "oldCategory": "moc",
+   "new": "management-of-care--case-management",
+   "newName": "Case Management",
+   "match": "combined",
+   "alsoCovers": [
+    {
+     "id": "management-of-care--continuity-of-care",
+     "name": "Continuity of Care"
+    }
+   ]
+  },
+  "moc-confidentiality": {
+   "oldName": "Client confidentiality / privacy",
+   "oldCategory": "moc",
+   "new": "management-of-care--confidentiality-information-security",
+   "newName": "Confidentiality/Information Security",
+   "match": "name"
+  },
+  "moc-collaboration": {
+   "oldName": "Collaboration with the interprofessional team",
+   "oldCategory": "moc",
+   "new": "management-of-care--collaboration-with-multidisciplinary-team",
+   "newName": "Collaboration with Multidisciplinary Team",
+   "match": "name"
+  },
+  "moc-leadership": {
+   "oldName": "Concepts of management & leadership",
+   "oldCategory": "moc",
+   "new": "management-of-care--concepts-of-management",
+   "newName": "Concepts of Management",
+   "match": "name"
+  },
+  "moc-priorities": {
+   "oldName": "Establishing priorities",
+   "oldCategory": "moc",
+   "new": "management-of-care--establishing-priorities",
+   "newName": "Establishing Priorities",
+   "match": "name"
+  },
+  "moc-ethics": {
+   "oldName": "Ethical practice",
+   "oldCategory": "moc",
+   "new": "management-of-care--ethical-practice",
+   "newName": "Ethical Practice",
+   "match": "name"
+  },
+  "moc-informed-consent": {
+   "oldName": "Informed consent",
+   "oldCategory": "moc",
+   "new": "management-of-care--informed-consent",
+   "newName": "Informed Consent",
+   "match": "name"
+  },
+  "moc-documentation": {
+   "oldName": "Information technology & documentation",
+   "oldCategory": "moc",
+   "new": "management-of-care--information-technology",
+   "newName": "Information Technology",
+   "match": "name"
+  },
+  "moc-legal": {
+   "oldName": "Legal rights & responsibilities",
+   "oldCategory": "moc",
+   "new": "management-of-care--legal-rights-and-responsibilities",
+   "newName": "Legal Rights and Responsibilities",
+   "match": "name"
+  },
+  "moc-quality": {
+   "oldName": "Performance improvement (quality)",
+   "oldCategory": "moc",
+   "new": "management-of-care--performance-improvement-quality-improvement",
+   "newName": "Performance Improvement (Quality Improvement)",
+   "match": "name"
+  },
+  "moc-referrals": {
+   "oldName": "Referrals",
+   "oldCategory": "moc",
+   "new": "management-of-care--referrals",
+   "newName": "Referrals",
+   "match": "name"
+  },
+  "safety-injury-prevention": {
+   "oldName": "Accident, error & injury prevention",
+   "oldCategory": "safety",
+   "new": "safety-infection-control--accident-error-injury-prevention",
+   "newName": "Accident/Error/Injury Prevention",
+   "match": "name"
+  },
+  "safety-emergency-triage": {
+   "oldName": "Emergency response plan & triage",
+   "oldCategory": "safety",
+   "new": "safety-infection-control--emergency-response-plan",
+   "newName": "Emergency Response Plan",
+   "match": "name"
+  },
+  "safety-ergonomics": {
+   "oldName": "Ergonomic principles & safe handling",
+   "oldCategory": "safety",
+   "new": "safety-infection-control--ergonomic-principles",
+   "newName": "Ergonomic Principles",
+   "match": "name"
+  },
+  "safety-hazardous-materials": {
+   "oldName": "Handling hazardous & infectious materials",
+   "oldCategory": "safety",
+   "new": "safety-infection-control--handling-hazardous-and-infectious-materials",
+   "newName": "Handling Hazardous and Infectious Materials",
+   "match": "name"
+  },
+  "safety-home": {
+   "oldName": "Home safety",
+   "oldCategory": "safety",
+   "new": "safety-infection-control--home-safety",
+   "newName": "Home Safety",
+   "match": "name"
+  },
+  "safety-incident-reports": {
+   "oldName": "Reporting incidents",
+   "oldCategory": "safety",
+   "new": "safety-infection-control--reporting-of-incident-event-irregular-occurrence-variance",
+   "newName": "Reporting of Incident/Event/Irregular Occurrence/Variance",
+   "match": "name"
+  },
+  "safety-equipment": {
+   "oldName": "Safe use of equipment",
+   "oldCategory": "safety",
+   "new": "safety-infection-control--safe-use-of-equipment",
+   "newName": "Safe Use of Equipment",
+   "match": "name"
+  },
+  "safety-security": {
+   "oldName": "Security plan",
+   "oldCategory": "safety",
+   "new": "safety-infection-control--security-plan",
+   "newName": "Security Plan",
+   "match": "name"
+  },
+  "safety-precautions": {
+   "oldName": "Standard & transmission-based precautions",
+   "oldCategory": "safety",
+   "new": "safety-infection-control--standard-precautions-transmission-based-precautions-surgical-asepsis",
+   "newName": "Standard Precautions/Transmission-Based Precautions/Surgical Asepsis",
+   "match": "name"
+  },
+  "safety-surgical-asepsis": {
+   "oldName": "Surgical asepsis",
+   "oldCategory": "safety",
+   "new": "safety-infection-control--standard-precautions-transmission-based-precautions-surgical-asepsis",
+   "newName": "Standard Precautions/Transmission-Based Precautions/Surgical Asepsis",
+   "match": "merged"
+  },
+  "safety-restraints": {
+   "oldName": "Restraints & safety devices",
+   "oldCategory": "safety",
+   "new": "safety-infection-control--use-of-restraints-safety-devices",
+   "newName": "Use of Restraints/Safety Devices",
+   "match": "name"
+  },
+  "health-aging": {
+   "oldName": "Aging process",
+   "oldCategory": "health",
+   "new": "health-promotion--aging-process",
+   "newName": "Aging Process",
+   "match": "name"
+  },
+  "health-maternal-newborn": {
+   "oldName": "Ante / intra / postpartum & newborn care",
+   "oldCategory": "health",
+   "new": "health-promotion--ante-intra-postpartum-and-newborn-care",
+   "newName": "Ante-/Intra-/Postpartum and Newborn Care",
+   "match": "name"
+  },
+  "health-developmental-stages": {
+   "oldName": "Developmental stages & transitions",
+   "oldCategory": "health",
+   "new": "health-promotion--developmental-stages-and-transitions",
+   "newName": "Developmental Stages and Transitions",
+   "match": "name"
+  },
+  "health-growth-development": {
+   "oldName": "Growth & development (paediatrics)",
+   "oldCategory": "health",
+   "new": "health-promotion--developmental-stages-and-transitions",
+   "newName": "Developmental Stages and Transitions",
+   "match": "merged"
+  },
+  "health-prevention-immunizations": {
+   "oldName": "Health promotion, disease prevention & immunizations",
+   "oldCategory": "health",
+   "new": "health-promotion--health-promotion-disease-prevention",
+   "newName": "Health Promotion/Disease Prevention",
+   "match": "name"
+  },
+  "health-screening": {
+   "oldName": "Health screening",
+   "oldCategory": "health",
+   "new": "health-promotion--health-screening",
+   "newName": "Health Screening",
+   "match": "name"
+  },
+  "health-high-risk-behaviours": {
+   "oldName": "High-risk behaviours",
+   "oldCategory": "health",
+   "new": "health-promotion--high-risk-behaviors",
+   "newName": "High-Risk Behaviors",
+   "match": "name"
+  },
+  "health-lifestyle": {
+   "oldName": "Lifestyle choices",
+   "oldCategory": "health",
+   "new": "health-promotion--lifestyle-choices",
+   "newName": "Lifestyle Choices",
+   "match": "name"
+  },
+  "health-self-care": {
+   "oldName": "Self-care",
+   "oldCategory": "health",
+   "new": "health-promotion--self-care",
+   "newName": "Self-Care",
+   "match": "name"
+  },
+  "health-physical-assessment": {
+   "oldName": "Physical assessment techniques",
+   "oldCategory": "health",
+   "new": "health-promotion--techniques-of-physical-assessment",
+   "newName": "Techniques of Physical Assessment",
+   "match": "name"
+  },
+  "psych-abuse-neglect": {
+   "oldName": "Abuse / neglect",
+   "oldCategory": "psych",
+   "new": "psychosocial-integrity--abuse-or-neglect",
+   "newName": "Abuse or Neglect",
+   "match": "name"
+  },
+  "psych-behavioural-interventions": {
+   "oldName": "Behavioural interventions",
+   "oldCategory": "psych",
+   "new": "psychosocial-integrity--behavioral-interventions",
+   "newName": "Behavioral Interventions",
+   "match": "name"
+  },
+  "psych-substance-use": {
+   "oldName": "Substance use disorders & withdrawal",
+   "oldCategory": "psych",
+   "new": "psychosocial-integrity--chemical-and-other-dependencies-substance-use-disorder",
+   "newName": "Chemical and Other Dependencies/Substance Use Disorder",
+   "match": "name"
+  },
+  "psych-coping": {
+   "oldName": "Coping mechanisms",
+   "oldCategory": "psych",
+   "new": "psychosocial-integrity--coping-mechanisms",
+   "newName": "Coping Mechanisms",
+   "match": "name"
+  },
+  "psych-crisis": {
+   "oldName": "Crisis intervention",
+   "oldCategory": "psych",
+   "new": "psychosocial-integrity--crisis-intervention",
+   "newName": "Crisis Intervention",
+   "match": "name"
+  },
+  "psych-culture-spirituality": {
+   "oldName": "Cultural awareness & spirituality",
+   "oldCategory": "psych",
+   "new": "psychosocial-integrity--cultural-awareness-cultural-influences-on-health",
+   "newName": "Cultural Awareness/Cultural Influences on Health",
+   "match": "combined",
+   "alsoCovers": [
+    {
+     "id": "psychosocial-integrity--religious-and-spiritual-influences-on-health",
+     "name": "Religious and Spiritual Influences on Health"
+    }
+   ]
+  },
+  "psych-end-of-life": {
+   "oldName": "End-of-life & grief",
+   "oldCategory": "psych",
+   "new": "psychosocial-integrity--end-of-life-care",
+   "newName": "End-of-Life Care",
+   "match": "combined",
+   "alsoCovers": [
+    {
+     "id": "psychosocial-integrity--grief-and-loss",
+     "name": "Grief and Loss"
+    }
+   ]
+  },
+  "psych-family-dynamics": {
+   "oldName": "Family dynamics",
+   "oldCategory": "psych",
+   "new": "psychosocial-integrity--family-dynamics",
+   "newName": "Family Dynamics",
+   "match": "name"
+  },
+  "psych-mental-health": {
+   "oldName": "Mental health concepts",
+   "oldCategory": "psych",
+   "new": "psychosocial-integrity--mental-health-concepts",
+   "newName": "Mental Health Concepts",
+   "match": "name"
+  },
+  "psych-sensory-perceptual": {
+   "oldName": "Sensory / perceptual alterations",
+   "oldCategory": "psych",
+   "new": "psychosocial-integrity--sensory-perceptual-alterations",
+   "newName": "Sensory/Perceptual Alterations",
+   "match": "name"
+  },
+  "psych-stress": {
+   "oldName": "Stress management",
+   "oldCategory": "psych",
+   "new": "psychosocial-integrity--stress-management",
+   "newName": "Stress Management",
+   "match": "name"
+  },
+  "psych-support-systems": {
+   "oldName": "Support systems",
+   "oldCategory": "psych",
+   "new": "psychosocial-integrity--support-systems",
+   "newName": "Support Systems",
+   "match": "name"
+  },
+  "psych-therapeutic-communication": {
+   "oldName": "Therapeutic communication",
+   "oldCategory": "psych",
+   "new": "psychosocial-integrity--therapeutic-communication",
+   "newName": "Therapeutic Communication",
+   "match": "name"
+  },
+  "psych-therapeutic-environment": {
+   "oldName": "Therapeutic environment",
+   "oldCategory": "psych",
+   "new": "psychosocial-integrity--therapeutic-environment",
+   "newName": "Therapeutic Environment",
+   "match": "name"
+  },
+  "basic-assistive-devices": {
+   "oldName": "Assistive devices",
+   "oldCategory": "basic",
+   "new": "basic-care-comfort--assistive-devices",
+   "newName": "Assistive Devices",
+   "match": "name"
+  },
+  "basic-elimination": {
+   "oldName": "Elimination",
+   "oldCategory": "basic",
+   "new": "basic-care-comfort--elimination",
+   "newName": "Elimination",
+   "match": "name"
+  },
+  "basic-mobility": {
+   "oldName": "Mobility / immobility",
+   "oldCategory": "basic",
+   "new": "basic-care-comfort--mobility-immobility",
+   "newName": "Mobility/Immobility",
+   "match": "name"
+  },
+  "basic-comfort": {
+   "oldName": "Non-pharmacological comfort",
+   "oldCategory": "basic",
+   "new": "basic-care-comfort--nonpharmacological-comfort-interventions",
+   "newName": "Nonpharmacological Comfort Interventions",
+   "match": "name"
+  },
+  "basic-nutrition": {
+   "oldName": "Nutrition & oral hydration",
+   "oldCategory": "basic",
+   "new": "basic-care-comfort--nutrition-and-oral-hydration",
+   "newName": "Nutrition and Oral Hydration",
+   "match": "name"
+  },
+  "basic-hygiene": {
+   "oldName": "Personal hygiene",
+   "oldCategory": "basic",
+   "new": "basic-care-comfort--personal-hygiene",
+   "newName": "Personal Hygiene",
+   "match": "name"
+  },
+  "basic-rest-sleep": {
+   "oldName": "Rest & sleep",
+   "oldCategory": "basic",
+   "new": "basic-care-comfort--rest-and-sleep",
+   "newName": "Rest and Sleep",
+   "match": "name"
+  },
+  "pharm-adverse-effects": {
+   "oldName": "Adverse effects / contraindications / interactions",
+   "oldCategory": "pharm",
+   "new": "pharmacological-parenteral--adverse-effects-contraindications-side-effects-interactions",
+   "newName": "Adverse Effects/Contraindications/Side Effects/Interactions",
+   "match": "name"
+  },
+  "pharm-blood-products": {
+   "oldName": "Blood & blood products",
+   "oldCategory": "pharm",
+   "new": "pharmacological-parenteral--blood-and-blood-products",
+   "newName": "Blood and Blood Products",
+   "match": "name"
+  },
+  "pharm-central-lines": {
+   "oldName": "Central venous access devices",
+   "oldCategory": "pharm",
+   "new": "pharmacological-parenteral--central-venous-access-devices",
+   "newName": "Central Venous Access Devices",
+   "match": "name"
+  },
+  "pharm-dosage-calculation": {
+   "oldName": "Dosage calculation",
+   "oldCategory": "pharm",
+   "new": "pharmacological-parenteral--dosage-calculations",
+   "newName": "Dosage Calculations",
+   "match": "name"
+  },
+  "pharm-expected-actions": {
+   "oldName": "Expected actions / outcomes",
+   "oldCategory": "pharm",
+   "new": "pharmacological-parenteral--expected-actions-outcomes",
+   "newName": "Expected Actions/Outcomes",
+   "match": "name"
+  },
+  "pharm-med-administration": {
+   "oldName": "Medication administration",
+   "oldCategory": "pharm",
+   "new": "pharmacological-parenteral--medication-administration",
+   "newName": "Medication Administration",
+   "match": "name"
+  },
+  "pharm-iv-therapy": {
+   "oldName": "Parenteral / IV therapies",
+   "oldCategory": "pharm",
+   "new": "pharmacological-parenteral--parenteral-intravenous-therapies",
+   "newName": "Parenteral/Intravenous Therapies",
+   "match": "name"
+  },
+  "pharm-pain-management": {
+   "oldName": "Pharmacological pain management",
+   "oldCategory": "pharm",
+   "new": "pharmacological-parenteral--pharmacological-pain-management",
+   "newName": "Pharmacological Pain Management",
+   "match": "name"
+  },
+  "pharm-tpn": {
+   "oldName": "Total parenteral nutrition",
+   "oldCategory": "pharm",
+   "new": "pharmacological-parenteral--total-parenteral-nutrition",
+   "newName": "Total Parenteral Nutrition",
+   "match": "name"
+  },
+  "pharm-high-alert": {
+   "oldName": "High-alert medications",
+   "oldCategory": "pharm",
+   "new": "pharmacological-parenteral--medication-administration",
+   "newName": "Medication Administration",
+   "match": "content",
+   "why": "The official Medication Administration topic includes the point \"Handle and administer high-risk medications safely\". There is no separate high-alert topic."
+  },
+  "risk-vital-signs": {
+   "oldName": "Changes in vital signs",
+   "oldCategory": "risk",
+   "new": "reduction-risk-potential--changes-abnormalities-in-vital-signs",
+   "newName": "Changes/Abnormalities in Vital Signs",
+   "match": "name"
+  },
+  "risk-diagnostic-tests": {
+   "oldName": "Diagnostic tests",
+   "oldCategory": "risk",
+   "new": "reduction-risk-potential--diagnostic-tests",
+   "newName": "Diagnostic Tests",
+   "match": "name"
+  },
+  "risk-lab-values": {
+   "oldName": "Laboratory values",
+   "oldCategory": "risk",
+   "new": "reduction-risk-potential--laboratory-values",
+   "newName": "Laboratory Values",
+   "match": "name"
+  },
+  "risk-body-system-alterations": {
+   "oldName": "Potential for alterations in body systems",
+   "oldCategory": "risk",
+   "new": "reduction-risk-potential--potential-for-alterations-in-body-systems",
+   "newName": "Potential for Alterations in Body Systems",
+   "match": "name"
+  },
+  "risk-procedure-complications": {
+   "oldName": "Complications of procedures / surgery",
+   "oldCategory": "risk",
+   "new": "reduction-risk-potential--potential-for-complications-of-diagnostic-tests-treatments-procedures",
+   "newName": "Potential for Complications of Diagnostic Tests/Treatments/Procedures",
+   "match": "combined",
+   "alsoCovers": [
+    {
+     "id": "reduction-risk-potential--potential-for-complications-from-surgical-procedures-and-health-alterations",
+     "name": "Potential for Complications from Surgical Procedures and Health Alterations"
+    }
+   ]
+  },
+  "risk-system-assessments": {
+   "oldName": "System-specific assessments",
+   "oldCategory": "risk",
+   "new": "reduction-risk-potential--system-specific-assessments",
+   "newName": "System-Specific Assessments",
+   "match": "name"
+  },
+  "risk-therapeutic-procedures": {
+   "oldName": "Therapeutic procedures",
+   "oldCategory": "risk",
+   "new": "reduction-risk-potential--therapeutic-procedures",
+   "newName": "Therapeutic Procedures",
+   "match": "name"
+  },
+  "phys-body-system-alterations": {
+   "oldName": "Alterations in body systems",
+   "oldCategory": "phys",
+   "new": "physiological-adaptation--alterations-in-body-systems",
+   "newName": "Alterations in Body Systems",
+   "match": "name"
+  },
+  "phys-fluid-electrolytes": {
+   "oldName": "Fluid & electrolyte imbalances",
+   "oldCategory": "phys",
+   "new": "physiological-adaptation--fluid-and-electrolyte-imbalances",
+   "newName": "Fluid and Electrolyte Imbalances",
+   "match": "name"
+  },
+  "phys-acid-base": {
+   "oldName": "Acid–base / ABGs",
+   "oldCategory": "phys",
+   "new": null,
+   "match": "none",
+   "why": "No official topic or learning point covers acid-base balance / ABGs.",
+   "questionsGoTo": "physiological-adaptation--fluid-and-electrolyte-imbalances"
+  },
+  "phys-hemodynamics": {
+   "oldName": "Hemodynamics & dysrhythmias",
+   "oldCategory": "phys",
+   "new": "physiological-adaptation--hemodynamics",
+   "newName": "Hemodynamics",
+   "match": "name"
+  },
+  "phys-illness-management": {
+   "oldName": "Illness management",
+   "oldCategory": "phys",
+   "new": "physiological-adaptation--illness-management",
+   "newName": "Illness Management",
+   "match": "name"
+  },
+  "phys-medical-emergencies": {
+   "oldName": "Medical emergencies",
+   "oldCategory": "phys",
+   "new": "physiological-adaptation--medical-emergencies",
+   "newName": "Medical Emergencies",
+   "match": "name"
+  },
+  "phys-pathophysiology": {
+   "oldName": "Pathophysiology",
+   "oldCategory": "phys",
+   "new": "physiological-adaptation--pathophysiology",
+   "newName": "Pathophysiology",
+   "match": "name"
+  },
+  "phys-unexpected-response": {
+   "oldName": "Unexpected response to therapies",
+   "oldCategory": "phys",
+   "new": "physiological-adaptation--unexpected-response-to-therapies",
+   "newName": "Unexpected Response to Therapies",
+   "match": "name"
+  }
+ },
+ "questions": {
+  "q-moc-delegate-ucp": {
+   "oldTopic": "moc-delegation",
+   "newTopic": "management-of-care--assignment-delegation-and-supervision",
+   "how": "mapped"
+  },
+  "q-moc-see-first-opioid": {
+   "oldTopic": "moc-priorities",
+   "newTopic": "management-of-care--establishing-priorities",
+   "how": "mapped"
+  },
+  "q-moc-consent-role": {
+   "oldTopic": "moc-informed-consent",
+   "newTopic": "management-of-care--informed-consent",
+   "how": "mapped"
+  },
+  "q-moc-confidentiality": {
+   "oldTopic": "moc-confidentiality",
+   "newTopic": "management-of-care--confidentiality-information-security",
+   "how": "mapped"
+  },
+  "q-moc-dnr": {
+   "oldTopic": "moc-advance-directives",
+   "newTopic": "management-of-care--advance-directives-self-determination-life-planning",
+   "how": "mapped"
+  },
+  "q-safety-cdiff-hand-hygiene": {
+   "oldTopic": "safety-precautions",
+   "newTopic": "safety-infection-control--standard-precautions-transmission-based-precautions-surgical-asepsis",
+   "how": "mapped"
+  },
+  "q-safety-fire-race": {
+   "oldTopic": "safety-emergency-triage",
+   "newTopic": "safety-infection-control--emergency-response-plan",
+   "how": "mapped"
+  },
+  "q-safety-wrist-restraint": {
+   "oldTopic": "safety-restraints",
+   "newTopic": "safety-infection-control--use-of-restraints-safety-devices",
+   "how": "mapped"
+  },
+  "q-safety-tb-precautions": {
+   "oldTopic": "safety-precautions",
+   "newTopic": "safety-infection-control--standard-precautions-transmission-based-precautions-surgical-asepsis",
+   "how": "mapped"
+  },
+  "q-health-infant-weight": {
+   "oldTopic": "health-growth-development",
+   "newTopic": "health-promotion--developmental-stages-and-transitions",
+   "how": "mapped"
+  },
+  "q-health-boggy-uterus": {
+   "oldTopic": "health-maternal-newborn",
+   "newTopic": "health-promotion--ante-intra-postpartum-and-newborn-care",
+   "how": "mapped"
+  },
+  "q-health-mmr-pregnancy": {
+   "oldTopic": "health-prevention-immunizations",
+   "newTopic": "health-promotion--health-promotion-disease-prevention",
+   "how": "mapped"
+  },
+  "q-psych-therapeutic-response": {
+   "oldTopic": "psych-therapeutic-communication",
+   "newTopic": "psychosocial-integrity--therapeutic-communication",
+   "how": "mapped"
+  },
+  "q-psych-alcohol-withdrawal": {
+   "oldTopic": "psych-substance-use",
+   "newTopic": "psychosocial-integrity--chemical-and-other-dependencies-substance-use-disorder",
+   "how": "mapped"
+  },
+  "q-psych-lithium-toxicity": {
+   "oldTopic": "psych-mental-health",
+   "newTopic": "psychosocial-integrity--mental-health-concepts",
+   "how": "mapped"
+  },
+  "q-psych-suicide-warning": {
+   "oldTopic": "psych-crisis",
+   "newTopic": "psychosocial-integrity--crisis-intervention",
+   "how": "mapped"
+  },
+  "q-basic-pressure-injury": {
+   "oldTopic": "basic-mobility",
+   "newTopic": "basic-care-comfort--mobility-immobility",
+   "how": "mapped"
+  },
+  "q-basic-crutches-stairs": {
+   "oldTopic": "basic-assistive-devices",
+   "newTopic": "basic-care-comfort--assistive-devices",
+   "how": "mapped"
+  },
+  "q-basic-low-sodium": {
+   "oldTopic": "basic-nutrition",
+   "newTopic": "basic-care-comfort--nutrition-and-oral-hydration",
+   "how": "mapped"
+  },
+  "q-pharm-digoxin-hold": {
+   "oldTopic": "pharm-high-alert",
+   "newTopic": "pharmacological-parenteral--medication-administration",
+   "how": "mapped"
+  },
+  "q-pharm-heparin-antidote": {
+   "oldTopic": "pharm-adverse-effects",
+   "newTopic": "pharmacological-parenteral--adverse-effects-contraindications-side-effects-interactions",
+   "how": "mapped"
+  },
+  "q-pharm-amoxicillin-dose": {
+   "oldTopic": "pharm-dosage-calculation",
+   "newTopic": "pharmacological-parenteral--dosage-calculations",
+   "how": "mapped"
+  },
+  "q-pharm-iv-potassium": {
+   "oldTopic": "pharm-iv-therapy",
+   "newTopic": "pharmacological-parenteral--parenteral-intravenous-therapies",
+   "how": "mapped"
+  },
+  "q-pharm-insulin-facts": {
+   "oldTopic": "pharm-high-alert",
+   "newTopic": "pharmacological-parenteral--medication-administration",
+   "how": "mapped"
+  },
+  "q-pharm-transfusion-reaction": {
+   "oldTopic": "pharm-blood-products",
+   "newTopic": "pharmacological-parenteral--blood-and-blood-products",
+   "how": "mapped"
+  },
+  "q-risk-hyperkalemia": {
+   "oldTopic": "risk-lab-values",
+   "newTopic": "reduction-risk-potential--laboratory-values",
+   "how": "mapped"
+  },
+  "q-risk-cardiac-cath": {
+   "oldTopic": "risk-procedure-complications",
+   "newTopic": "reduction-risk-potential--potential-for-complications-of-diagnostic-tests-treatments-procedures",
+   "how": "mapped"
+  },
+  "q-risk-thyroidectomy-calcium": {
+   "oldTopic": "risk-system-assessments",
+   "newTopic": "reduction-risk-potential--system-specific-assessments",
+   "how": "mapped"
+  },
+  "q-risk-postop-hemorrhage": {
+   "oldTopic": "risk-vital-signs",
+   "newTopic": "reduction-risk-potential--changes-abnormalities-in-vital-signs",
+   "how": "mapped"
+  },
+  "q-phys-abg-resp-acidosis": {
+   "oldTopic": "phys-acid-base",
+   "newTopic": "physiological-adaptation--fluid-and-electrolyte-imbalances",
+   "how": "re-pointed by judgment (old topic has no match)"
+  },
+  "q-phys-dka-fluids": {
+   "oldTopic": "phys-medical-emergencies",
+   "newTopic": "physiological-adaptation--medical-emergencies",
+   "how": "mapped"
+  },
+  "q-phys-anaphylaxis": {
+   "oldTopic": "phys-medical-emergencies",
+   "newTopic": "physiological-adaptation--medical-emergencies",
+   "how": "mapped"
+  },
+  "q-phys-stroke-ct": {
+   "oldTopic": "phys-medical-emergencies",
+   "newTopic": "physiological-adaptation--medical-emergencies",
+   "how": "mapped"
+  },
+  "q-phys-hf-teaching": {
+   "oldTopic": "phys-illness-management",
+   "newTopic": "physiological-adaptation--illness-management",
+   "how": "mapped"
+  }
+ },
+ "summary": {
+  "oldTopics": 81,
+  "newTopics": 82,
+  "matchedByName": 72,
+  "combined": 5,
+  "merged": 2,
+  "matchedByContent": 1,
+  "unmatched": 1,
+  "questions": 34,
+  "questionsRepointedByJudgment": [
+   "q-phys-abg-resp-acidosis"
+  ],
+  "newTopicsWithoutOldTopicOfTheirOwn": [
+   {
+    "id": "management-of-care--client-rights",
+    "name": "Client Rights"
+   },
+   {
+    "id": "management-of-care--continuity-of-care",
+    "name": "Continuity of Care"
+   },
+   {
+    "id": "psychosocial-integrity--grief-and-loss",
+    "name": "Grief and Loss"
+   },
+   {
+    "id": "psychosocial-integrity--religious-and-spiritual-influences-on-health",
+    "name": "Religious and Spiritual Influences on Health"
+   },
+   {
+    "id": "reduction-risk-potential--potential-for-complications-from-surgical-procedures-and-health-alterations",
+    "name": "Potential for Complications from Surgical Procedures and Health Alterations"
+   }
+  ],
+  "oldTopicsMatched": 80
+ }
+}
