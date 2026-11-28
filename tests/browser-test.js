@@ -35,7 +35,7 @@ const T = {
   medAdmin: "pharmacological-parenteral--medication-administration", dose: "pharmacological-parenteral--dosage-calculations",
   dev: "health-promotion--developmental-stages-and-transitions", fluid: "physiological-adaptation--fluid-and-electrolyte-imbalances"
 };
-const BANK_FILES = ["management-of-care", "pharmacological-parenteral"]; // question banks in data/questions/
+const BANK_FILES = ["management-of-care", "pharmacological-parenteral", "physiological-adaptation"]; // question banks in data/questions/
 const BANK = BANK_FILES.flatMap(c => JSON.parse(fs.readFileSync(path.join(root, "data/questions/" + c + ".json"), "utf8")).questions);
 const ACTS_FOR = (cat, id) => cat.activityStatements.filter(a => a.topicIds.includes(id)).length;
 // Progress as saved by v5 (study tools, but still the OLD topic ids). Rich on purpose: merged and unmatched topics.
@@ -574,6 +574,51 @@ const V5 = {
     // a regional question's rationale carries the detail she needs
     check(/provinc|territor|Canad/i.test(regional.rationale) && BANK.filter(q => q.reviewKind === "regional").every(q => /provinc|territor|Canad|U\.S\./i.test(q.rationale)), "every regional question explains the difference in its rationale");
     check(p.errs.length === 0, "no console errors (calculations)" + (p.errs.length ? ": " + p.errs.join(" | ") : ""));
+    await ctx.close();
+  }
+
+  // J. ECG strips (drawn in code) and the questions that use them
+  {
+    const { ctx, p } = await page({ v: LATEST, setup: true, name: "ECG", exam: "2028-07-01" });
+    await p.waitForSelector("#home.on");
+    const st = await p.evaluate(() => Object.fromEntries([["nsr", 75], ["sinus-tach", 128], ["sinus-brady", 40], ["afib", 120], ["pvc", 75], ["vtach", 180], ["vfib", 0], ["asystole", 0]].map(([r, rate]) => {
+      const m = ecgModel(r, rate), s = ecgStats(m), pAt = m.beats.map(b => m.v[Math.round((b - 0.16) * m.fs)]).filter(x => x !== undefined);
+      return [r, { beats: m.beats.length, rate: s.rate, cv: s.cv, qrs: m.qrs, amp: Math.max(...m.v) - Math.min(...m.v), ectopic: m.ectopic.filter(Boolean).length, pWave: pAt.length ? pAt.reduce((a, b) => a + b, 0) / pAt.length : 0 }];
+    })));
+    check(Math.abs(st.nsr.rate - 75) < 3 && st.nsr.cv < 0.03 && st.nsr.qrs < 0.11 && st.nsr.pWave > 0.08, "normal sinus rhythm: regular, about 75/min, narrow QRS, P waves present");
+    check(Math.abs(st["sinus-tach"].rate - 128) < 4 && st["sinus-tach"].cv < 0.03 && st["sinus-tach"].qrs < 0.11, "sinus tachycardia: regular, fast, narrow QRS");
+    check(Math.abs(st["sinus-brady"].rate - 40) < 2 && st["sinus-brady"].cv < 0.03, "sinus bradycardia: regular and slow");
+    check(st.afib.cv > 0.2 && st.afib.rate > 80 && st.afib.rate < 180 && st.afib.qrs < 0.11, "atrial fibrillation: irregularly irregular, narrow QRS");
+    check(st.pvc.ectopic >= 1 && st.pvc.qrs >= 0.14, "premature ventricular contractions: wide early beats");
+    check(Math.abs(st.vtach.rate - 180) < 6 && st.vtach.cv < 0.03 && st.vtach.qrs >= 0.14, "ventricular tachycardia: fast, regular, wide complexes");
+    check(st.vfib.beats === 0 && st.vfib.amp > 0.5, "ventricular fibrillation: chaotic with no QRS complexes");
+    check(st.asystole.beats === 0 && st.asystole.amp < 0.05, "asystole: a flat line");
+    check(await p.evaluate(() => JSON.stringify(ecgModel("afib", 110, 6, 9).v) === JSON.stringify(ecgModel("afib", 110, 6, 9).v) && JSON.stringify(ecgModel("afib", 110, 6, 9).v) !== JSON.stringify(ecgModel("afib", 110, 6, 10).v)), "a strip is the same every time, and a different seed gives a different strip");
+    const svg = await p.evaluate(() => ecgSvg({ rhythm: "nsr", rate: 72 }));
+    check(svg.startsWith("<svg") && (svg.match(/L/g) || []).length > 1000 && svg.includes('class="tr"') && svg.includes("role=\"img\"") && !/nsr|normal sinus/i.test(svg), "the strip is an accessible SVG that does not name the rhythm");
+
+    // questions that use strips
+    const withStrips = BANK.filter(q => (q.exhibit && q.exhibit.ecg) || (q.rows || []).some(r => r.ecg) || (q.items || []).some(r => r.ecg));
+    check(withStrips.length >= 3, `${withStrips.length} questions use ECG strips`);
+    const used = new Set(withStrips.flatMap(q => [q.exhibit && q.exhibit.ecg, ...(q.rows || []).map(r => r.ecg), ...(q.items || []).map(r => r.ecg)]).filter(Boolean).map(e => e.rhythm));
+    check(["nsr", "sinus-tach", "sinus-brady", "afib", "vtach", "vfib", "asystole"].every(r => used.has(r)), "the questions cover normal sinus, sinus tachycardia and bradycardia, atrial fibrillation, ventricular tachycardia, ventricular fibrillation and asystole: " + [...used].join(", "));
+    for (const q of withStrips) {
+      const want = [q.exhibit && q.exhibit.ecg, ...(q.rows || []).map(r => r.ecg), ...(q.items || []).map(r => r.ecg)].filter(Boolean).length;
+      await p.evaluate(id => { runQuiz([Q.find(x => x.id === id)], {}); }, q.id);
+      await p.waitForSelector("#quiz .stem");
+      check((await p.$$("#quiz svg.ecg")).length === want && await p.evaluate(() => document.documentElement.scrollWidth <= 360), `${q.id}: ${want} ECG strip(s) are drawn without sideways scroll`);
+      const rows = q.rows || q.items;
+      if (rows && rows.some(r => r.ecg)) {
+        for (let ri = 0; ri < rows.length; ri++) await p.click(`#quiz input[name=m${ri}] >> nth=${rows[ri].key}`);
+      } else if (q.type === "dropdown") for (let bi = 0; bi < q.blanks.length; bi++) await p.click(`#quiz .bowpart >> nth=${bi} >> .opt >> nth=${q.blanks[bi].key}`);
+      await p.click('#quiz button:has-text("Submit")');
+      check((await p.textContent("#quiz .rat b")).includes("Correct"), `${q.id}: choosing the right answers for the strips shows Correct`);
+    }
+    // the strip uses theme colours, so it stays readable in dark mode
+    await p.evaluate(() => { S.theme = "dark"; applyLook(); });
+    const dark = await p.evaluate(() => { const t = getComputedStyle(document.querySelector("#quiz svg.ecg .tr")).stroke, bg = getComputedStyle(document.querySelector("#quiz svg.ecg")).backgroundColor; return { t, bg }; });
+    check(dark.t !== dark.bg && /rgb/.test(dark.t), "in dark mode the trace and the strip background are different colours: " + dark.t + " on " + dark.bg);
+    check(p.errs.length === 0, "no console errors (ECG)" + (p.errs.length ? ": " + p.errs.join(" | ") : ""));
     await ctx.close();
   }
 

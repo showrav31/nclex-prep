@@ -101,8 +101,8 @@ function scoreQ(q, sel) {
 
 /* ---------- drawing ---------- */
 function exhibitHtml(e) {
-  const body = e.text ? `<p style="margin:6px 0 0">${fmt(e.text)}</p>`
-    : `<div class="scroll"><table class="exh ${e.columns.length === 2 ? "two" : ""}"><tr>${e.columns.map(c => `<th>${fmt(c)}</th>`).join("")}</tr>${e.rows.map(r => `<tr>${r.map((c, i) => i ? `<td>${fmt(c)}</td>` : `<th>${fmt(c)}</th>`).join("")}</tr>`).join("")}</table></div>`;
+  const body = (e.text ? `<p style="margin:6px 0 0">${fmt(e.text)}</p>` : "") + (e.ecg ? ecgSvg(e.ecg) : "") + (!e.columns ? "" :
+    `<div class="scroll"><table class="exh ${e.columns.length === 2 ? "two" : e.columns.length >= 5 ? "wide" : ""}"><tr>${e.columns.map(c => `<th>${fmt(c)}</th>`).join("")}</tr>${e.rows.map(r => `<tr>${r.map((c, i) => i ? `<td>${fmt(c)}</td>` : `<th>${fmt(c)}</th>`).join("")}</tr>`).join("")}</table></div>`);
   return `<div class="exhibit"><b>📋 ${fmt(e.title || "Client data")}</b>${body}</div>`;
 }
 
@@ -113,6 +113,16 @@ function gridHtml(cols, rows, z) { // rows: [{text, key}]
   }).join("")}</tr>`).join("")}</table></div>`;
 }
 
+/* Rows or items that carry an ECG strip: each one is a card with the strip and its choices (a list of radio buttons). */
+function stripsHtml(cols, rows, z) {
+  return rows.map((r, ri) => `<div class="stripcard"><b>${fmt(r.text)}</b>${r.ecg ? ecgSvg(r.ecg) : ""}<div class="stripopts">${cols.map((c, ci) => {
+    let cls = ""; if (z.sub && ci === r.key) cls = "right"; else if (z.sub && z.sel[ri] === ci) cls = "wrong";
+    return `<label class="stripopt ${cls}"><input type="radio" name="m${ri}" ${z.sel[ri] === ci ? "checked" : ""} ${z.sub ? "disabled" : ""} onchange="qCell(${ri},${ci})"><span>${fmt(c)}</span></label>`;
+  }).join("")}</div></div>`).join("");
+}
+/* Card layout for rows with an ECG strip, and for any question with 4 or more choices (a table would be too wide for a phone). */
+const useCards = (cols, rows) => rows.some(r => r.ecg) || cols.length >= 4;
+
 const BODY = {
   mcq: (q, z) => q.options.map((o, oi) => {
     let cls = z.sel.includes(oi) ? "sel" : "";
@@ -120,8 +130,8 @@ const BODY = {
     return `<div class="opt ${cls}" onclick="qPick(${oi})"><span class="k">${q.type === "sata" ? (z.sel.includes(oi) ? "☑" : "☐") : letter(oi)}</span><span>${fmt(o)}</span></div>`;
   }).join(""),
   sata: (q, z) => BODY.mcq(q, z),
-  matrix: (q, z) => gridHtml(q.cols, q.rows, z),
-  sort: (q, z) => gridHtml(q.bins, q.items, z),
+  matrix: (q, z) => useCards(q.cols, q.rows) ? stripsHtml(q.cols, q.rows, z) : gridHtml(q.cols, q.rows, z),
+  sort: (q, z) => useCards(q.bins, q.items) ? stripsHtml(q.bins, q.items, z) : gridHtml(q.bins, q.items, z),
   dropdown: (q, z) => {
     const sentence = q.template.split(/(\{\d+\})/).map(part => {
       const m = part.match(/^\{(\d+)\}$/);

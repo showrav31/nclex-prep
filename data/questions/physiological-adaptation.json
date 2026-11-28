@@ -1,0 +1,3008 @@
+{
+ "categoryId": "physiological-adaptation",
+ "questions": [
+  {
+   "id": "q-pa-alter-01",
+   "categoryId": "physiological-adaptation",
+   "topicId": "physiological-adaptation--alterations-in-body-systems",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "physiological-adaptation--alterations-in-body-systems--p01"
+   ],
+   "cjStep": "recognize-cues",
+   "integratedProcess": "clinical-judgment",
+   "type": "highlight",
+   "difficulty": 4,
+   "stem": "A 72-year-old client with heart failure is admitted with increasing shortness of breath over 3 days. Review the admission data and the nurse's note. Highlight the findings that show the client is not adapting well to the illness and need action.",
+   "exhibit": {
+    "title": "Admission data",
+    "columns": [
+     "Finding",
+     "Value"
+    ],
+    "rows": [
+     [
+      "Blood pressure",
+      "148/92 mmHg"
+     ],
+     [
+      "Heart rate",
+      "112/min, regular"
+     ],
+     [
+      "Respiratory rate",
+      "26/min"
+     ],
+     [
+      "Oxygen saturation",
+      "89% on room air"
+     ],
+     [
+      "Temperature",
+      "36.8 °C [98.2 °F]"
+     ],
+     [
+      "Weight today",
+      "84.6 kg [186.5 lb]"
+     ],
+     [
+      "Weight 3 days ago",
+      "81.2 kg [179.0 lb]"
+     ],
+     [
+      "BNP",
+      "1,450 ng/L (normal is below 100 ng/L)"
+     ],
+     [
+      "Potassium",
+      "3.4 mmol/L [3.4 mEq/L]"
+     ],
+     [
+      "Creatinine",
+      "132 µmol/L [1.5 mg/dL]"
+     ]
+    ]
+   },
+   "caseStudy": {
+    "id": "cs-pa-heart-failure",
+    "step": 1
+   },
+   "checks": [
+    {
+     "kind": "lab",
+     "name": "potassium",
+     "value": 3.4,
+     "flag": "low"
+    },
+    {
+     "kind": "lab",
+     "name": "creatinine",
+     "value": 132,
+     "flag": "high"
+    }
+   ],
+   "segments": [
+    {
+     "text": "Nurse's note: "
+    },
+    {
+     "text": "Weight is 3.4 kg [7.5 lb] higher than 3 days ago.",
+     "key": true,
+     "why": "A fast weight gain over a few days is mostly retained fluid, a key sign of worsening heart failure."
+    },
+    {
+     "text": " "
+    },
+    {
+     "text": "Temperature is 36.8 °C [98.2 °F].",
+     "key": false,
+     "why": "A normal temperature does not point to a problem with the heart failure."
+    },
+    {
+     "text": " "
+    },
+    {
+     "text": "Oxygen saturation is 89% on room air and the respiratory rate is 26/min.",
+     "key": true,
+     "why": "Low oxygen with fast breathing shows that fluid in the lungs is affecting gas exchange."
+    },
+    {
+     "text": " "
+    },
+    {
+     "text": "The client reports a good appetite.",
+     "key": false,
+     "why": "A good appetite is reassuring and is not a sign of worsening."
+    },
+    {
+     "text": " "
+    },
+    {
+     "text": "Crackles are heard to the mid-lung fields, the neck veins are distended and there is 3+ pitting edema of both ankles.",
+     "key": true,
+     "why": "Crackles, distended neck veins and edema show fluid overload on both sides of the heart."
+    },
+    {
+     "text": " "
+    },
+    {
+     "text": "The client lives with a spouse who helps with meals.",
+     "key": false,
+     "why": "Good support at home is helpful but is not a sign that the illness is worsening."
+    },
+    {
+     "text": " "
+    },
+    {
+     "text": "Potassium is 3.4 mmol/L [3.4 mEq/L] while the client takes furosemide.",
+     "key": true,
+     "why": "Low potassium from the diuretic can cause dangerous heart rhythm changes and must be reported."
+    }
+   ],
+   "rationale": "The client's weight gain, low oxygen, crackles, edema and low potassium show that the heart failure is getting worse and that the diuretic is causing a new problem. These are the cues the nurse must recognize first, before analyzing them and planning care.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pa-alter-02",
+   "categoryId": "physiological-adaptation",
+   "topicId": "physiological-adaptation--alterations-in-body-systems",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "physiological-adaptation--alterations-in-body-systems--p14"
+   ],
+   "cjStep": "analyze-cues",
+   "integratedProcess": "nursing-process",
+   "type": "matrix",
+   "difficulty": 3,
+   "stem": "A client has a chest tube connected to a three-chamber drainage system with suction. For each finding, select whether it is expected or needs to be reported to the provider.",
+   "cols": [
+    "Expected",
+    "Report to the provider"
+   ],
+   "rows": [
+    {
+     "text": "The fluid in the water-seal chamber rises and falls with each breath.",
+     "key": 0,
+     "why": "This movement (tidaling) shows the tube is open to the pleural space and is expected."
+    },
+    {
+     "text": "There is gentle, continuous bubbling in the suction control chamber.",
+     "key": 0,
+     "why": "Gentle bubbling shows the suction is working and is expected."
+    },
+    {
+     "text": "There is continuous bubbling in the water-seal chamber that does not stop.",
+     "key": 1,
+     "why": "This suggests an air leak in the system or in the lung, and the provider needs to know."
+    },
+    {
+     "text": "There is 250 mL of bright red drainage in the last hour.",
+     "key": 1,
+     "why": "A large amount of bright red blood suggests bleeding into the chest and needs urgent help."
+    },
+    {
+     "text": "The drainage tube has come apart from the collection chamber.",
+     "key": 1,
+     "why": "A disconnected system can let air enter the chest. The nurse follows the unit's protocol to make the system safe again, stays with the client and calls the provider."
+    }
+   ],
+   "rationale": "Tidaling and gentle suction bubbling are normal. A continuous air leak, heavy bright red drainage and a disconnected system are signs of a complication that must be reported at once.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pa-alter-03",
+   "categoryId": "physiological-adaptation",
+   "topicId": "physiological-adaptation--alterations-in-body-systems",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "physiological-adaptation--alterations-in-body-systems--p06"
+   ],
+   "cjStep": "analyze-cues",
+   "integratedProcess": "clinical-judgment",
+   "type": "numeric",
+   "difficulty": 3,
+   "stem": "A client with acute kidney injury weighs 80 kg. The urine collected over the last 6 hours totals 150 mL. What is the client's urine output? Round to one decimal place.",
+   "unit": "mL/kg/h",
+   "rounding": {
+    "decimals": 1,
+    "rule": "Round to one decimal place."
+   },
+   "key": 0.3,
+   "calc": {
+    "formula": "Urine output (mL/kg/h) = total urine (mL) ÷ hours ÷ weight (kg).",
+    "inputs": {
+     "urineMl": 150,
+     "hours": 6,
+     "weightKg": 80
+    },
+    "steps": [
+     {
+      "name": "mlPerHour",
+      "label": "Urine per hour",
+      "expr": "urineMl / hours",
+      "value": 25,
+      "show": "150 ÷ 6 = 25"
+     },
+     {
+      "name": "mlPerKgH",
+      "label": "Divide by the weight",
+      "expr": "mlPerHour / weightKg",
+      "value": 0.3125,
+      "show": "25 ÷ 80 = 0.3125"
+     }
+    ],
+    "result": "mlPerKgH"
+   },
+   "commonErrors": [
+    {
+     "expr": "urineMl / weightKg",
+     "value": 1.875,
+     "why": "you forgot to divide by the 6 hours."
+    },
+    {
+     "expr": "mlPerHour",
+     "value": 25,
+     "why": "you stopped at mL per hour and did not divide by the weight."
+    }
+   ],
+   "rationale": "150 mL ÷ 6 h = 25 mL/h, and 25 ÷ 80 kg = 0.3 mL/kg/h. A urine output below about 0.5 mL/kg/h is oliguria and is a sign of acute kidney injury getting worse, so the nurse reports it, checks the potassium and creatinine, and reviews medicines that can harm the kidneys.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pa-alter-04",
+   "categoryId": "physiological-adaptation",
+   "topicId": "physiological-adaptation--alterations-in-body-systems",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "physiological-adaptation--alterations-in-body-systems--p25"
+   ],
+   "cjStep": "recognize-cues",
+   "integratedProcess": "clinical-judgment",
+   "type": "trend",
+   "difficulty": 4,
+   "stem": "A 45-year-old client with a head injury has neurological checks every hour. For each measure, select the trend.",
+   "exhibit": {
+    "title": "Hourly neurological checks",
+    "columns": [
+     "Measure",
+     "12:00",
+     "13:00",
+     "14:00",
+     "15:00"
+    ],
+    "rows": [
+     [
+      "Glasgow Coma Scale (3 to 15)",
+      "14",
+      "13",
+      "11",
+      "9"
+     ],
+     [
+      "Heart rate (per minute)",
+      "88",
+      "74",
+      "62",
+      "52"
+     ],
+     [
+      "Blood pressure (mmHg)",
+      "128/78",
+      "138/76",
+      "152/74",
+      "170/72"
+     ],
+     [
+      "Breathing",
+      "Regular, 16/min",
+      "Regular, 14/min",
+      "Irregular, 12/min",
+      "Irregular, 10/min"
+     ],
+     [
+      "Temperature, °C [°F]",
+      "37.0 [98.6]",
+      "37.0 [98.6]",
+      "37.0 [98.6]",
+      "37.0 [98.6]"
+     ]
+    ]
+   },
+   "cols": [
+    "Improving",
+    "No change",
+    "Worsening"
+   ],
+   "rows": [
+    {
+     "text": "Glasgow Coma Scale",
+     "key": 2,
+     "why": "A falling score means the level of consciousness is dropping."
+    },
+    {
+     "text": "Heart rate",
+     "key": 2,
+     "why": "A slowing heart rate, with the rise in blood pressure and irregular breathing, is a late sign of rising intracranial pressure."
+    },
+    {
+     "text": "Blood pressure",
+     "key": 2,
+     "why": "A rising systolic pressure with a wider gap between systolic and diastolic is part of Cushing's triad."
+    },
+    {
+     "text": "Breathing",
+     "key": 2,
+     "why": "Slow, irregular breathing suggests pressure on the brainstem."
+    },
+    {
+     "text": "Temperature",
+     "key": 1,
+     "why": "The temperature has not changed."
+    }
+   ],
+   "rationale": "A falling level of consciousness, a slow heart rate, a rising and widening blood pressure and irregular breathing (Cushing's triad) mean the intracranial pressure is rising. The nurse notifies the provider and the rapid response team at once, keeps the head of the bed raised about 30 degrees with the head in line, and prepares for emergency treatment.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pa-alter-05",
+   "categoryId": "physiological-adaptation",
+   "topicId": "physiological-adaptation--alterations-in-body-systems",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "physiological-adaptation--alterations-in-body-systems--p20"
+   ],
+   "cjStep": "recognize-cues",
+   "integratedProcess": "nursing-process",
+   "type": "mcq",
+   "difficulty": 3,
+   "stem": "The nurse assesses a new colostomy 6 hours after surgery. Which finding should the nurse report to the provider immediately?",
+   "options": [
+    "The stoma is red-pink and moist, with mild swelling.",
+    "A small amount of blood-tinged mucus is on the pouch.",
+    "The stoma is dark purple to black.",
+    "No stool has passed into the pouch yet."
+   ],
+   "optionRationales": [
+    "Incorrect. A red-pink, moist stoma with some swelling is normal soon after surgery.",
+    "Incorrect. Small amounts of blood-tinged mucus are expected from the new stoma.",
+    "Correct. A dark purple or black stoma suggests the blood supply is poor (ischemia) and the tissue may die. The provider must be told at once.",
+    "Incorrect. The bowel needs time to start working, and no stool in the first day or two is expected."
+   ],
+   "key": 2,
+   "rationale": "A healthy stoma is red-pink and moist. A pale, dark purple or black stoma means poor blood supply and is an emergency.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pa-alter-06",
+   "categoryId": "physiological-adaptation",
+   "topicId": "physiological-adaptation--alterations-in-body-systems",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "physiological-adaptation--alterations-in-body-systems--p07"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "teaching-learning",
+   "type": "sata",
+   "difficulty": 3,
+   "stem": "A client with type 1 diabetes has influenza with a fever and a poor appetite. Which instructions should the nurse include for managing the illness at home? Select all that apply.",
+   "options": [
+    "Keep taking your insulin, even if you are eating less, and call the care team for dose advice.",
+    "Check your blood glucose at least every 4 hours and write the results down.",
+    "Check for ketones, and call right away if they are moderate or high.",
+    "Sip fluids often to avoid dehydration.",
+    "Stop your insulin until you are eating normally.",
+    "Skip checking your glucose because you feel too unwell."
+   ],
+   "optionRationales": [
+    "Correct. The body still needs insulin during illness, and stress hormones can raise the glucose.",
+    "Correct. Illness can change glucose quickly, so frequent checks are needed.",
+    "Correct. Ketones are an early sign of diabetic ketoacidosis.",
+    "Correct. Fever and high glucose cause fluid loss.",
+    "Incorrect. Stopping insulin in type 1 diabetes can lead to ketoacidosis.",
+    "Incorrect. Illness is the time to check more often, not less."
+   ],
+   "key": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "rationale": "On sick days, a client with type 1 diabetes continues insulin, checks glucose and ketones often, drinks fluids and calls the care team early.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pa-alter-07",
+   "categoryId": "physiological-adaptation",
+   "topicId": "physiological-adaptation--alterations-in-body-systems",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "physiological-adaptation--alterations-in-body-systems--p14",
+    "physiological-adaptation--alterations-in-body-systems--p02"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "nursing-process",
+   "type": "dragdrop",
+   "difficulty": 3,
+   "stem": "The nurse empties a closed-suction surgical drain (a bulb drain) that is attached to a client's abdominal incision. Place the steps in the correct order.",
+   "mode": "order",
+   "items": [
+    {
+     "text": "Perform hand hygiene and put on clean gloves and eye protection if splashing is possible.",
+     "why": "Protecting the nurse and the client comes first."
+    },
+    {
+     "text": "Squeeze the bulb flat and close the plug while it is still squeezed, so that suction is restored.",
+     "why": "The bulb must be compressed before it is closed so that it can pull fluid again."
+    },
+    {
+     "text": "Measure and record the amount and color of the drainage, discard it as the policy says, and clean your hands.",
+     "why": "Measuring, recording and disposal complete the procedure."
+    },
+    {
+     "text": "Open the drain's plug and empty the contents into a measuring container.",
+     "why": "The bulb is emptied before it is squeezed."
+    },
+    {
+     "text": "Check that the tubing is secure and not kinked, and look at the insertion site.",
+     "why": "The tube and the site are checked after the system is working."
+    }
+   ],
+   "key": [
+    0,
+    3,
+    1,
+    4,
+    2
+   ],
+   "rationale": "Emptying a closed-suction drain follows a sequence: protect yourself, empty, re-create the suction, check the tubing and site, then record the amount and color of the drainage.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pa-alter-08",
+   "categoryId": "physiological-adaptation",
+   "topicId": "physiological-adaptation--alterations-in-body-systems",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "physiological-adaptation--alterations-in-body-systems--p23",
+    "physiological-adaptation--alterations-in-body-systems--p26"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "nursing-process",
+   "type": "sata",
+   "difficulty": 2,
+   "stem": "A client is 1 day after open abdominal surgery. Which nursing actions help prevent postoperative pulmonary complications? Select all that apply.",
+   "options": [
+    "Coach the client to use the incentive spirometer 10 times every hour while awake.",
+    "Help the client to hold a pillow over the incision while coughing and deep breathing.",
+    "Encourage walking as ordered.",
+    "Give the prescribed pain medicine before breathing exercises.",
+    "Keep the client flat in bed to reduce pain.",
+    "Discourage coughing because it could open the incision."
+   ],
+   "optionRationales": [
+    "Correct. Deep breathing opens the small air sacs and prevents atelectasis.",
+    "Correct. Splinting reduces pain so that the client can cough effectively.",
+    "Correct. Moving helps the lungs expand and loosen secretions.",
+    "Correct. Good pain control allows deep breaths.",
+    "Incorrect. Lying flat limits lung expansion and increases the risk of atelectasis.",
+    "Incorrect. Coughing is needed to clear secretions, and splinting protects the incision."
+   ],
+   "key": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "rationale": "Incentive spirometry, splinted coughing, early walking and good pain control prevent atelectasis and pneumonia after surgery.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pa-alter-09",
+   "categoryId": "physiological-adaptation",
+   "topicId": "physiological-adaptation--alterations-in-body-systems",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "physiological-adaptation--alterations-in-body-systems--p30"
+   ],
+   "cjStep": "evaluate-outcomes",
+   "integratedProcess": "nursing-process",
+   "type": "trend",
+   "difficulty": 4,
+   "stem": "A client with pulmonary tuberculosis has taken combination drug treatment for 8 weeks. For each measure, select the trend.",
+   "exhibit": {
+    "title": "Treatment follow-up",
+    "columns": [
+     "Measure",
+     "Week 0",
+     "Week 2",
+     "Week 4",
+     "Week 8"
+    ],
+    "rows": [
+     [
+      "Cough",
+      "Severe",
+      "Moderate",
+      "Mild",
+      "Occasional"
+     ],
+     [
+      "Night sweats per week",
+      "7",
+      "5",
+      "2",
+      "0"
+     ],
+     [
+      "Weight (kg)",
+      "52.0",
+      "52.4",
+      "53.6",
+      "55.1"
+     ],
+     [
+      "Sputum smear for acid-fast bacilli",
+      "3+",
+      "2+",
+      "1+",
+      "Negative"
+     ],
+     [
+      "AST (U/L; normal is below 40)",
+      "28",
+      "45",
+      "92",
+      "180"
+     ]
+    ]
+   },
+   "cols": [
+    "Improving",
+    "No change",
+    "Worsening"
+   ],
+   "rows": [
+    {
+     "text": "Cough",
+     "key": 0,
+     "why": "The cough is getting milder."
+    },
+    {
+     "text": "Night sweats",
+     "key": 0,
+     "why": "The sweats have stopped."
+    },
+    {
+     "text": "Weight",
+     "key": 0,
+     "why": "Weight gain suggests the infection is under control and nutrition is recovering."
+    },
+    {
+     "text": "Sputum smear",
+     "key": 0,
+     "why": "A negative smear means fewer bacteria are being coughed up."
+    },
+    {
+     "text": "AST",
+     "key": 2,
+     "why": "The rising liver enzyme is a warning sign of liver injury from the anti-tuberculosis drugs. The nurse reports it so that the provider can review the treatment."
+    }
+   ],
+   "rationale": "The client is responding to treatment, but the rising AST suggests drug-related liver injury, a known adverse effect of some anti-tuberculosis drugs. The nurse reports it right away, asks about nausea, dark urine and yellow skin or eyes, and does not let the client stop the medicines without advice.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pa-alter-10",
+   "categoryId": "physiological-adaptation",
+   "topicId": "physiological-adaptation--alterations-in-body-systems",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "physiological-adaptation--alterations-in-body-systems--p24"
+   ],
+   "cjStep": "analyze-cues",
+   "integratedProcess": "clinical-judgment",
+   "type": "bowtie",
+   "difficulty": 4,
+   "stem": "A 31-year-old client at 35 weeks of pregnancy arrives with a severe headache and blurred vision. Review the data, then complete the diagram by choosing the condition, 2 actions and 2 parameters.",
+   "exhibit": {
+    "title": "Client data",
+    "columns": [
+     "Finding",
+     "Value"
+    ],
+    "rows": [
+     [
+      "Blood pressure",
+      "168/112 mmHg, and 170/114 mmHg 15 minutes later"
+     ],
+     [
+      "Urine protein (dipstick)",
+      "3+"
+     ],
+     [
+      "Reflexes",
+      "3+ with 2 beats of clonus"
+     ],
+     [
+      "Edema",
+      "Swelling of the face and hands"
+     ],
+     [
+      "Fetal heart rate",
+      "140/min"
+     ],
+     [
+      "Platelet count",
+      "220 × 10⁹/L"
+     ]
+    ]
+   },
+   "condition": {
+    "prompt": "Condition most likely experienced by the client",
+    "options": [
+     "Severe preeclampsia",
+     "Gestational diabetes",
+     "Abruptio placentae"
+    ],
+    "key": 0,
+    "optionRationales": [
+     "Correct. Severe high blood pressure, protein in the urine, a severe headache, visual changes, brisk reflexes and edema point to severe preeclampsia.",
+     "Incorrect. Gestational diabetes does not cause high blood pressure, headache or clonus.",
+     "Incorrect. A placental abruption causes vaginal bleeding and a painful, hard uterus."
+    ]
+   },
+   "actions": {
+    "prompt": "Actions the nurse should take (select 2)",
+    "options": [
+     "Notify the provider and prepare to give IV magnesium sulfate as ordered.",
+     "Start seizure precautions: a quiet, dim room, padded side rails, and oxygen and suction available.",
+     "Encourage the client to walk to bring the blood pressure down.",
+     "Give a 1 L IV fluid bolus to raise the blood pressure.",
+     "Plan for discharge home with a follow-up visit in 1 week."
+    ],
+    "keys": [
+     0,
+     1
+    ],
+    "optionRationales": [
+     "Correct. Magnesium sulfate is given to prevent seizures (eclampsia), and the provider orders it.",
+     "Correct. A seizure can happen at any time, so the environment is made safe and equipment is ready.",
+     "Incorrect. Activity can raise the blood pressure and increase the risk of a seizure.",
+     "Incorrect. The blood pressure is already dangerously high, and extra fluid can cause pulmonary edema.",
+     "Incorrect. This client needs urgent hospital treatment, not discharge."
+    ]
+   },
+   "parameters": {
+    "prompt": "Parameters the nurse should monitor (select 2)",
+    "options": [
+     "Deep tendon reflexes, respiratory rate and urine output every hour (signs of magnesium toxicity)",
+     "Blood pressure, headache, vision changes and the fetal heart rate (progress of the disease)",
+     "Bowel sounds",
+     "Breast tenderness",
+     "Daily intake of fiber"
+    ],
+    "keys": [
+     0,
+     1
+    ],
+    "optionRationales": [
+     "Correct. Magnesium can cause toxicity, shown by loss of reflexes, slow breathing and low urine output. Calcium gluconate is the antidote.",
+     "Correct. These show whether the preeclampsia is worsening and whether the baby is tolerating it.",
+     "Incorrect. Bowel sounds are not a priority here.",
+     "Incorrect. Breast tenderness is not related to this problem.",
+     "Incorrect. Fiber intake is not a priority in this emergency."
+    ]
+   },
+   "rationale": "Severe preeclampsia can lead to seizures, stroke and placental problems. The nurse reports it urgently, protects the client from seizures, gives magnesium sulfate as ordered and monitors for both disease progress and magnesium toxicity.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pa-hemo-01",
+   "categoryId": "physiological-adaptation",
+   "topicId": "physiological-adaptation--hemodynamics",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "physiological-adaptation--hemodynamics--p02"
+   ],
+   "cjStep": "recognize-cues",
+   "integratedProcess": "clinical-judgment",
+   "type": "dropdown",
+   "difficulty": 3,
+   "stem": "A 28-year-old client with pneumonia has a temperature of 39.2 °C [102.6 °F] and a blood pressure of 112/68 mmHg. The nurse looks at the telemetry strip shown below (6 seconds).",
+   "exhibit": {
+    "title": "Telemetry strip",
+    "ecg": {
+     "rhythm": "sinus-tach",
+     "rate": 128,
+     "seed": 5
+    }
+   },
+   "checks": [
+    {
+     "kind": "ecg",
+     "rhythm": "sinus-tach",
+     "ref": "blanks.0"
+    }
+   ],
+   "template": "The rhythm is {1}, so the nurse should {2}.",
+   "blanks": [
+    {
+     "options": [
+      "sinus tachycardia",
+      "atrial fibrillation",
+      "ventricular tachycardia"
+     ],
+     "key": 0,
+     "why": "The rhythm is regular, the QRS complexes are narrow, there is a P wave before each QRS and the rate is fast (about 130/min). That is sinus tachycardia. Atrial fibrillation is irregular with no P waves, and ventricular tachycardia has wide, sine-wave-like complexes."
+    },
+    {
+     "options": [
+      "look for and treat the cause, such as fever, pain or low fluid volume, and report the rate",
+      "start chest compressions and call for a defibrillator",
+      "prepare for immediate synchronized cardioversion"
+     ],
+     "key": 0,
+     "why": "Sinus tachycardia is the heart's normal response to something else, here the fever. Treating the cause (for example, giving the ordered antipyretic and fluids) slows the rate. Compressions and shocks are for rhythms that do not produce a pulse, and cardioversion is not used for a sinus rhythm."
+    }
+   ],
+   "rationale": "Reading a rhythm strip means checking regularity, rate, P waves and QRS width. A regular, narrow-complex rhythm with a P wave before each QRS and a rate above 100 is sinus tachycardia, which is treated by finding the cause.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pa-hemo-02",
+   "categoryId": "physiological-adaptation",
+   "topicId": "physiological-adaptation--hemodynamics",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "physiological-adaptation--hemodynamics--p02"
+   ],
+   "cjStep": "recognize-cues",
+   "integratedProcess": "clinical-judgment",
+   "type": "matrix",
+   "difficulty": 3,
+   "stem": "The nurse looks at four different telemetry strips (6 seconds each). For each strip, select the rhythm.",
+   "checks": [
+    {
+     "kind": "ecg",
+     "rhythm": "nsr",
+     "ref": "rows.0"
+    },
+    {
+     "kind": "ecg",
+     "rhythm": "afib",
+     "ref": "rows.1"
+    },
+    {
+     "kind": "ecg",
+     "rhythm": "vtach",
+     "ref": "rows.2"
+    },
+    {
+     "kind": "ecg",
+     "rhythm": "vfib",
+     "ref": "rows.3"
+    }
+   ],
+   "cols": [
+    "Normal sinus rhythm",
+    "Atrial fibrillation",
+    "Ventricular tachycardia",
+    "Ventricular fibrillation"
+   ],
+   "rows": [
+    {
+     "text": "Strip A. The client is awake and talking.",
+     "ecg": {
+      "rhythm": "nsr",
+      "rate": 72,
+      "seed": 3
+     },
+     "key": 0,
+     "why": "The rhythm is regular and the rate is about 70/min. Each narrow QRS has a P wave before it and a T wave after it."
+    },
+    {
+     "text": "Strip B. The client reports a fluttering feeling in the chest. Blood pressure is 118/74 mmHg.",
+     "ecg": {
+      "rhythm": "afib",
+      "rate": 115,
+      "seed": 9
+     },
+     "key": 1,
+     "why": "The R-R intervals are irregularly irregular, there are no clear P waves and the baseline is fibrillating."
+    },
+    {
+     "text": "Strip C. The client is unresponsive.",
+     "ecg": {
+      "rhythm": "vtach",
+      "rate": 190,
+      "seed": 4
+     },
+     "key": 2,
+     "why": "The complexes are wide, regular and very fast, about 190/min, with no distinct P or T waves. A client who is unresponsive with this rhythm may have no pulse."
+    },
+    {
+     "text": "Strip D. The client is unresponsive and not breathing.",
+     "ecg": {
+      "rhythm": "vfib",
+      "rate": 0,
+      "seed": 12
+     },
+     "key": 3,
+     "why": "The tracing is a chaotic, irregular wave with no identifiable QRS complexes. The heart is quivering and not pumping."
+    }
+   ],
+   "rationale": "For each strip, check whether the rhythm is regular, whether there are P waves, how wide the QRS complexes are, and the rate. Always check the client too: a rhythm that looks bad with an alert client is treated differently from the same rhythm in an unresponsive client.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pa-hemo-03",
+   "categoryId": "physiological-adaptation",
+   "topicId": "physiological-adaptation--hemodynamics",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "physiological-adaptation--hemodynamics--p05"
+   ],
+   "cjStep": "prioritize-hypotheses",
+   "integratedProcess": "clinical-judgment",
+   "type": "dragdrop",
+   "difficulty": 4,
+   "stem": "For each telemetry strip and client situation, select the priority action. The nurse calls for help in each case, and any drug or procedure is given as ordered or per protocol.",
+   "checks": [
+    {
+     "kind": "ecg-action",
+     "rhythm": "vtach",
+     "context": "pulseless",
+     "ref": "items.0"
+    },
+    {
+     "kind": "ecg-action",
+     "rhythm": "vfib",
+     "context": "pulseless",
+     "ref": "items.1"
+    },
+    {
+     "kind": "ecg-action",
+     "rhythm": "asystole",
+     "context": "pulseless",
+     "ref": "items.2"
+    },
+    {
+     "kind": "ecg-action",
+     "rhythm": "afib",
+     "context": "stable",
+     "ref": "items.3"
+    },
+    {
+     "kind": "ecg-action",
+     "rhythm": "sinus-brady",
+     "context": "symptomatic",
+     "ref": "items.4"
+    }
+   ],
+   "mode": "sort",
+   "bins": [
+    "CPR + defibrillate",
+    "CPR + epinephrine (no shock)",
+    "Rate control (provider)",
+    "Atropine / pacing (provider)"
+   ],
+   "items": [
+    {
+     "text": "The client is unresponsive, is not breathing normally and has no pulse.",
+     "ecg": {
+      "rhythm": "vtach",
+      "rate": 200,
+      "seed": 6
+     },
+     "key": 0,
+     "why": "This is pulseless ventricular tachycardia, a shockable rhythm. Start CPR and defibrillate as soon as a defibrillator is ready."
+    },
+    {
+     "text": "The client is unresponsive, is not breathing normally and has no pulse (second strip).",
+     "ecg": {
+      "rhythm": "vfib",
+      "rate": 0,
+      "seed": 14
+     },
+     "key": 0,
+     "why": "This is ventricular fibrillation, a shockable rhythm. Start CPR and defibrillate as soon as possible."
+    },
+    {
+     "text": "The client is unresponsive, is not breathing normally and has no pulse (third strip). The leads and the gain have been checked.",
+     "ecg": {
+      "rhythm": "asystole",
+      "rate": 0,
+      "seed": 2
+     },
+     "key": 1,
+     "why": "This is asystole, which is not shockable. Start high-quality CPR, give epinephrine as ordered and look for reversible causes."
+    },
+    {
+     "text": "The client is alert, with a blood pressure of 124/78 mmHg and mild palpitations.",
+     "ecg": {
+      "rhythm": "afib",
+      "rate": 118,
+      "seed": 8
+     },
+     "key": 2,
+     "why": "This is atrial fibrillation with a fast ventricular rate in a stable client. The provider decides on rate control, and the nurse monitors and prepares the medicine as ordered."
+    },
+    {
+     "text": "The client is dizzy and pale, with a blood pressure of 78/40 mmHg.",
+     "ecg": {
+      "rhythm": "sinus-brady",
+      "rate": 38,
+      "seed": 10
+     },
+     "key": 3,
+     "why": "This is a slow rhythm with signs of poor perfusion. The provider orders atropine and may use transcutaneous pacing."
+    }
+   ],
+   "rationale": "The action depends on both the rhythm and the client. Pulseless ventricular tachycardia and ventricular fibrillation get CPR and a shock. Asystole gets CPR and epinephrine, but no shock. A stable client with a fast irregular rhythm needs rate control ordered by the provider, and a slow rhythm with poor perfusion needs atropine or pacing.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pa-hemo-04",
+   "categoryId": "physiological-adaptation",
+   "topicId": "physiological-adaptation--hemodynamics",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "physiological-adaptation--hemodynamics--p01",
+    "physiological-adaptation--hemodynamics--p03"
+   ],
+   "cjStep": "analyze-cues",
+   "integratedProcess": "clinical-judgment",
+   "type": "numeric",
+   "difficulty": 3,
+   "stem": "A client's arterial line shows a blood pressure of 86/48 mmHg. What is the client's mean arterial pressure (MAP)? Round to the nearest whole number.",
+   "unit": "mmHg",
+   "rounding": {
+    "decimals": 0,
+    "rule": "Round to the nearest whole number."
+   },
+   "key": 61,
+   "calc": {
+    "formula": "MAP = (systolic + 2 × diastolic) ÷ 3.",
+    "inputs": {
+     "systolic": 86,
+     "diastolic": 48
+    },
+    "steps": [
+     {
+      "name": "twiceDiastolic",
+      "label": "Double the diastolic",
+      "expr": "2 * diastolic",
+      "value": 96,
+      "show": "2 × 48 = 96"
+     },
+     {
+      "name": "sum",
+      "label": "Add the systolic",
+      "expr": "systolic + twiceDiastolic",
+      "value": 182,
+      "show": "86 + 96 = 182"
+     },
+     {
+      "name": "map",
+      "label": "Divide by 3",
+      "expr": "sum / 3",
+      "value": 60.666666666666664,
+      "show": "182 ÷ 3 = 60.6667"
+     }
+    ],
+    "result": "map"
+   },
+   "commonErrors": [
+    {
+     "expr": "(systolic + diastolic) / 2",
+     "value": 67,
+     "why": "you took a simple average of the two numbers."
+    },
+    {
+     "expr": "(systolic + diastolic) / 3",
+     "value": 44.666667,
+     "why": "you forgot to double the diastolic pressure."
+    },
+    {
+     "expr": "systolic - diastolic",
+     "value": 38,
+     "why": "you found the pulse pressure and not the MAP."
+    }
+   ],
+   "rationale": "The diastolic part of the cycle is longer than the systolic part, so it is counted twice: (86 + 2 × 48) ÷ 3 = 60.7, which rounds to 61 mmHg. A MAP below about 60 mmHg means the organs may not be getting enough blood flow (critical care targets are often 65 mmHg or higher), so the nurse checks the client and reports it to the provider.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pa-hemo-05",
+   "categoryId": "physiological-adaptation",
+   "topicId": "physiological-adaptation--hemodynamics",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "physiological-adaptation--hemodynamics--p07"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "teaching-learning",
+   "type": "sata",
+   "difficulty": 3,
+   "stem": "A client is going home 1 day after a permanent pacemaker was implanted. Which instructions should the nurse include? Select all that apply.",
+   "options": [
+    "Check your pulse every day, and report a rate lower than the set rate of your pacemaker or a very fast rate.",
+    "Report dizziness, fainting, shortness of breath or hiccups that do not stop.",
+    "Keep a mobile phone at least 15 cm [6 in] away from the pacemaker, and use the ear on the opposite side.",
+    "Carry your pacemaker identification card, and tell staff before any medical test or security screening.",
+    "Avoid raising the arm on the pacemaker side above shoulder height until the provider says it is safe.",
+    "Stand next to arc-welding equipment or lean over a running car engine as normal.",
+    "Remove the dressing on day 2 and soak the site in the bath."
+   ],
+   "optionRationales": [
+    "Correct. A pulse below the set rate can mean that the pacemaker is not working properly.",
+    "Correct. These can mean that the pacemaker is not working or that the lead has moved. Constant hiccups can come from stimulation of the diaphragm.",
+    "Correct. Phones can interfere with some devices when held close to them.",
+    "Correct. Some tests and equipment can affect the device.",
+    "Correct. Early arm movement can pull the new lead out of position.",
+    "Incorrect. Strong electrical or magnetic fields can interfere with the pacemaker.",
+    "Incorrect. The wound should be kept clean and dry until the provider says it has healed."
+   ],
+   "key": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "rationale": "Pacemaker teaching covers checking the pulse, reporting symptoms, avoiding sources of interference, carrying an ID card and protecting the new lead and the wound.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pa-hemo-06",
+   "categoryId": "physiological-adaptation",
+   "topicId": "physiological-adaptation--hemodynamics",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "physiological-adaptation--hemodynamics--p10",
+    "physiological-adaptation--hemodynamics--p03"
+   ],
+   "cjStep": "analyze-cues",
+   "integratedProcess": "clinical-judgment",
+   "type": "trend",
+   "difficulty": 4,
+   "stem": "A client is 4 hours after coronary artery bypass surgery. The nurse reviews the hourly data. For each measure, select the trend.",
+   "exhibit": {
+    "title": "Hourly data after surgery",
+    "columns": [
+     "Measure",
+     "1 h",
+     "2 h",
+     "3 h",
+     "4 h"
+    ],
+    "rows": [
+     [
+      "Blood pressure (mmHg)",
+      "118/70",
+      "108/64",
+      "98/58",
+      "86/50"
+     ],
+     [
+      "Heart rate (per minute)",
+      "82",
+      "96",
+      "112",
+      "126"
+     ],
+     [
+      "Central venous pressure (mmHg)",
+      "9",
+      "7",
+      "5",
+      "3"
+     ],
+     [
+      "Chest tube drainage in the past hour (mL)",
+      "40",
+      "90",
+      "170",
+      "260"
+     ],
+     [
+      "Urine output (mL per hour)",
+      "55",
+      "40",
+      "25",
+      "15"
+     ],
+     [
+      "Temperature, °C [°F]",
+      "36.8 [98.2]",
+      "36.8 [98.2]",
+      "36.9 [98.4]",
+      "36.8 [98.2]"
+     ]
+    ]
+   },
+   "cols": [
+    "Improving",
+    "No change",
+    "Worsening"
+   ],
+   "rows": [
+    {
+     "text": "Blood pressure",
+     "key": 2,
+     "why": "The pressure is falling."
+    },
+    {
+     "text": "Heart rate",
+     "key": 2,
+     "why": "The heart rate is rising to make up for the low blood volume."
+    },
+    {
+     "text": "Central venous pressure",
+     "key": 2,
+     "why": "A falling central venous pressure shows that the blood volume is dropping. (In cardiac tamponade it would rise.)"
+    },
+    {
+     "text": "Chest tube drainage",
+     "key": 2,
+     "why": "More and more blood is draining from the chest."
+    },
+    {
+     "text": "Urine output",
+     "key": 2,
+     "why": "Less urine means the kidneys are getting less blood flow."
+    },
+    {
+     "text": "Temperature",
+     "key": 1,
+     "why": "The temperature has not changed."
+    }
+   ],
+   "rationale": "A falling blood pressure and central venous pressure, a rising heart rate, increasing bloody chest tube drainage and falling urine output mean that the client is bleeding (hypovolemic shock). The nurse calls the surgeon and rapid response team at once, checks that the chest tubes are not blocked, prepares for fluids or blood and may need to prepare for a return to the operating room.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pa-illness-01",
+   "categoryId": "physiological-adaptation",
+   "topicId": "physiological-adaptation--illness-management",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "physiological-adaptation--illness-management--p01"
+   ],
+   "cjStep": "recognize-cues",
+   "integratedProcess": "clinical-judgment",
+   "type": "highlight",
+   "difficulty": 4,
+   "stem": "A 68-year-old client with chronic obstructive pulmonary disease (COPD) has had a worse cough and more breathlessness for 3 days. Review the data and the nurse's note. Highlight the findings that need to be reported immediately.",
+   "exhibit": {
+    "title": "Assessment on admission",
+    "columns": [
+     "Finding",
+     "Value"
+    ],
+    "rows": [
+     [
+      "Respiratory rate",
+      "28/min"
+     ],
+     [
+      "Heart rate",
+      "118/min"
+     ],
+     [
+      "Blood pressure",
+      "138/84 mmHg"
+     ],
+     [
+      "Oxygen saturation",
+      "85% on 2 L/min"
+     ],
+     [
+      "Temperature",
+      "38.4 °C [101.1 °F]"
+     ],
+     [
+      "Level of consciousness",
+      "Drowsy, wakes to voice"
+     ],
+     [
+      "Blood gas pH",
+      "7.31"
+     ],
+     [
+      "PaCO₂",
+      "64 mmHg [8.5 kPa]"
+     ],
+     [
+      "HCO₃⁻",
+      "32 mmol/L"
+     ]
+    ]
+   },
+   "caseStudy": {
+    "id": "cs-pa-copd",
+    "step": 1
+   },
+   "checks": [
+    {
+     "kind": "abg",
+     "pH": 7.31,
+     "paco2": 64,
+     "hco3": 32,
+     "primary": "respiratory acidosis",
+     "compensation": "partially compensated"
+    }
+   ],
+   "segments": [
+    {
+     "text": "Nurse's note: "
+    },
+    {
+     "text": "Oxygen saturation is 85% on 2 L/min, and the respiratory rate is 28/min with use of the neck muscles.",
+     "key": true,
+     "why": "A low saturation on oxygen with fast, laboured breathing shows the client is in respiratory distress."
+    },
+    {
+     "text": " "
+    },
+    {
+     "text": "Blood pressure is 138/84 mmHg.",
+     "key": false,
+     "why": "This blood pressure is acceptable and is not the urgent problem."
+    },
+    {
+     "text": " "
+    },
+    {
+     "text": "The client is drowsy and wakes only to voice.",
+     "key": true,
+     "why": "New drowsiness in a client with COPD can be a sign of carbon dioxide retention and needs urgent action."
+    },
+    {
+     "text": " "
+    },
+    {
+     "text": "The client smoked for 40 years and stopped 3 years ago.",
+     "key": false,
+     "why": "This is important history but it is not a finding that needs to be reported right now."
+    },
+    {
+     "text": " "
+    },
+    {
+     "text": "PaCO₂ is 64 mmHg [8.5 kPa] and the pH is 7.31.",
+     "key": true,
+     "why": "A high carbon dioxide level with a low pH shows respiratory acidosis from poor ventilation."
+    },
+    {
+     "text": " "
+    },
+    {
+     "text": "The client's spouse brought the client's own inhaler from home.",
+     "key": false,
+     "why": "This is a policy question for later and is not urgent."
+    },
+    {
+     "text": " "
+    },
+    {
+     "text": "Temperature is 38.4 °C [101.1 °F] and the sputum has become green.",
+     "key": true,
+     "why": "A new fever and green sputum suggest an infection that may have triggered the exacerbation."
+    }
+   ],
+   "rationale": "The client has low oxygen, increasing work of breathing, drowsiness and a rising carbon dioxide level (respiratory acidosis with a raised bicarbonate, partly compensated), and possible infection. These cues are reported at once, before the nurse analyzes them and plans care.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pa-illness-02",
+   "categoryId": "physiological-adaptation",
+   "topicId": "physiological-adaptation--illness-management",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "physiological-adaptation--illness-management--p08"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "clinical-judgment",
+   "type": "mcq",
+   "difficulty": 3,
+   "stem": "A client with COPD has an oxygen saturation of 84% on room air and is breathless. The provider orders oxygen. Which action by the nurse is best?",
+   "options": [
+    "Apply oxygen by non-rebreather mask at 15 L/min until the saturation reaches 100%.",
+    "Apply oxygen by nasal cannula at 1 to 2 L/min, and adjust it to keep the saturation at 88% to 92%.",
+    "Withhold the oxygen because it will stop the client's drive to breathe.",
+    "Give the oxygen only when the client falls asleep."
+   ],
+   "optionRationales": [
+    "Incorrect. Very high oxygen levels can worsen carbon dioxide retention in some clients with COPD.",
+    "Correct. A lower target range gives enough oxygen without a large rise in carbon dioxide. The nurse monitors the client closely.",
+    "Incorrect. Oxygen should never be withheld from a client who is hypoxemic. It is given carefully and monitored.",
+    "Incorrect. The client needs the oxygen now, while breathless."
+   ],
+   "key": 1,
+   "rationale": "Clients with COPD who retain carbon dioxide are given controlled oxygen with a target saturation of about 88% to 92%, and are watched for drowsiness or a rising carbon dioxide level.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pa-illness-03",
+   "categoryId": "physiological-adaptation",
+   "topicId": "physiological-adaptation--illness-management",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "physiological-adaptation--illness-management--p03"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "teaching-learning",
+   "type": "sata",
+   "difficulty": 2,
+   "stem": "A client with heart failure is being discharged. Which teaching points about managing the illness should the nurse include? Select all that apply.",
+   "options": [
+    "Weigh yourself every morning after you urinate and before you eat, using the same scale.",
+    "Call the care team if you gain more than 1 kg [2.2 lb] in a day or 2 kg [4.4 lb] in a week, or the numbers on your own plan.",
+    "Limit salt (sodium) as taught, and read food labels.",
+    "Report more shortness of breath, swollen ankles, or needing more pillows to sleep.",
+    "Stop your water pill (diuretic) on days when you do not notice swelling.",
+    "Drink extra fluids to flush out the kidneys."
+   ],
+   "optionRationales": [
+    "Correct. Daily weights are the best early sign of fluid build-up.",
+    "Correct. A fast gain is retained fluid and needs early treatment.",
+    "Correct. Salt makes the body hold on to fluid.",
+    "Correct. These are signs that the heart failure is getting worse.",
+    "Incorrect. Medicines are taken as prescribed. Stopping a diuretic can let fluid build up again without warning.",
+    "Incorrect. Fluid is limited if the provider says so, because extra fluid adds to the heart's work."
+   ],
+   "key": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "rationale": "Heart failure self-care includes daily weights, reporting fast weight gain, limiting sodium, knowing the warning signs and taking medicines as prescribed. Provincial rules may differ: Canadian programs and US programs use slightly different weight-gain limits, so the nurse teaches the numbers on the client's own plan.",
+   "needsReview": true,
+   "reviewKind": "regional",
+   "reviewNote": "Weight-gain limits and fluid advice differ a little between Canadian and US heart-failure programs and guidelines. Please check against the Canadian program she will practise in."
+  },
+  {
+   "id": "q-pa-illness-04",
+   "categoryId": "physiological-adaptation",
+   "topicId": "physiological-adaptation--illness-management",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "physiological-adaptation--illness-management--p09"
+   ],
+   "cjStep": "evaluate-outcomes",
+   "integratedProcess": "nursing-process",
+   "type": "trend",
+   "difficulty": 4,
+   "stem": "A client was admitted with pneumonia and started on an IV antibiotic. For each measure, select the trend.",
+   "exhibit": {
+    "title": "Daily review, days 1 to 4",
+    "columns": [
+     "Measure",
+     "Day 1",
+     "Day 2",
+     "Day 3",
+     "Day 4"
+    ],
+    "rows": [
+     [
+      "Temperature, °C [°F]",
+      "38.9 [102.0]",
+      "38.2 [100.8]",
+      "37.6 [99.7]",
+      "37.1 [98.8]"
+     ],
+     [
+      "Respiratory rate (per minute)",
+      "28",
+      "24",
+      "20",
+      "18"
+     ],
+     [
+      "Oxygen saturation on room air",
+      "86%",
+      "90%",
+      "93%",
+      "95%"
+     ],
+     [
+      "White blood cells (× 10⁹/L)",
+      "18.2",
+      "15.4",
+      "12.1",
+      "9.6"
+     ],
+     [
+      "Creatinine, µmol/L [mg/dL]",
+      "88 [1.0]",
+      "104 [1.2]",
+      "131 [1.5]",
+      "168 [1.9]"
+     ]
+    ]
+   },
+   "checks": [
+    {
+     "kind": "lab",
+     "name": "wbc",
+     "value": 18.2,
+     "flag": "high"
+    },
+    {
+     "kind": "lab",
+     "name": "wbc",
+     "value": 9.6,
+     "flag": "normal"
+    }
+   ],
+   "cols": [
+    "Improving",
+    "No change",
+    "Worsening"
+   ],
+   "rows": [
+    {
+     "text": "Temperature",
+     "key": 0,
+     "why": "The fever has settled."
+    },
+    {
+     "text": "Respiratory rate",
+     "key": 0,
+     "why": "Breathing is slowing toward normal."
+    },
+    {
+     "text": "Oxygen saturation",
+     "key": 0,
+     "why": "Oxygenation is improving."
+    },
+    {
+     "text": "White blood cells",
+     "key": 0,
+     "why": "The count is falling back toward the normal range, which fits a response to the antibiotic."
+    },
+    {
+     "text": "Creatinine",
+     "key": 2,
+     "why": "A rising creatinine suggests the kidneys are being harmed, possibly by the antibiotic or by dehydration. This must be reported."
+    }
+   ],
+   "rationale": "The pneumonia is responding to treatment, but the rising creatinine is an unexpected effect that needs attention. The nurse reports it, checks the antibiotic and its kidney effects, looks at the fluid intake and urine output, and waits for the provider's orders.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pa-illness-05",
+   "categoryId": "physiological-adaptation",
+   "topicId": "physiological-adaptation--illness-management",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "physiological-adaptation--illness-management--p06"
+   ],
+   "cjStep": "analyze-cues",
+   "integratedProcess": "clinical-judgment",
+   "type": "mcq",
+   "difficulty": 3,
+   "stem": "A provider is considering gastric lavage for several clients who have swallowed poisons. In which situation is gastric lavage contraindicated?",
+   "options": [
+    "An alert adult who swallowed a large number of acetaminophen tablets 30 minutes ago.",
+    "An alert adult who swallowed a large number of aspirin tablets 30 minutes ago.",
+    "An adult who swallowed a strong alkaline drain cleaner.",
+    "An alert adult who swallowed a large number of iron tablets 30 minutes ago."
+   ],
+   "optionRationales": [
+    "Incorrect. A recent overdose of this kind is not by itself a contraindication. The provider decides, together with the poison centre, whether a treatment is useful.",
+    "Incorrect. A recent overdose of this kind is not by itself a contraindication.",
+    "Correct. A tube passed through a burned (corroded) esophagus and stomach could cause a perforation. Corrosives, such as strong acids and alkalis, are a contraindication.",
+    "Incorrect. Iron overdose alone is not a contraindication to lavage, although the provider decides on the best treatment."
+   ],
+   "key": 2,
+   "rationale": "Gastric lavage is contraindicated after swallowing a corrosive substance because passing a tube can perforate the damaged esophagus or stomach. Today it is rarely used, and the provider and the poison centre choose the treatment.",
+   "needsReview": true,
+   "reviewKind": "clinical",
+   "reviewNote": "Gastric lavage is rarely used in current practice, and the provider and poison centre decide on treatment. The corrosive-ingestion contraindication is standard. Please confirm that you want this item kept."
+  },
+  {
+   "id": "q-pa-illness-06",
+   "categoryId": "physiological-adaptation",
+   "topicId": "physiological-adaptation--illness-management",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "physiological-adaptation--illness-management--p04"
+   ],
+   "cjStep": "analyze-cues",
+   "integratedProcess": "teaching-learning",
+   "type": "matrix",
+   "difficulty": 3,
+   "stem": "A client with asthma has an action plan with three zones. For each situation, select the zone that the client is in.",
+   "cols": [
+    "Green zone",
+    "Yellow zone",
+    "Red zone"
+   ],
+   "rows": [
+    {
+     "text": "No cough or wheeze. The peak flow is 90% of the client's personal best.",
+     "key": 0,
+     "why": "The green zone means the asthma is well controlled (peak flow about 80% or more of the personal best). The client keeps taking the usual controller medicine."
+    },
+    {
+     "text": "The client wakes at night with a cough and mild wheeze. The peak flow is 65% of the personal best.",
+     "key": 1,
+     "why": "The yellow zone (about 50% to 79%) means the asthma is getting worse. The client uses the reliever inhaler and follows the plan's next steps."
+    },
+    {
+     "text": "The client cannot speak in full sentences, and the lips look blue-grey. The peak flow is 40% of the personal best.",
+     "key": 2,
+     "why": "The red zone (below about 50%) is an emergency. The client uses the reliever inhaler and calls emergency services or goes to the hospital at once."
+    },
+    {
+     "text": "The client coughs and wheezes when exercising. The peak flow is 75% of the personal best after resting.",
+     "key": 1,
+     "why": "Symptoms with a peak flow in the 50% to 79% range put the client in the yellow zone."
+    }
+   ],
+   "rationale": "Asthma action plans use green, yellow and red zones, based on symptoms and the peak flow compared with the client's personal best. Each client's own plan sets the exact limits and the action for each zone.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pa-emerg-01",
+   "categoryId": "physiological-adaptation",
+   "topicId": "physiological-adaptation--medical-emergencies",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "physiological-adaptation--medical-emergencies--p01"
+   ],
+   "cjStep": "recognize-cues",
+   "integratedProcess": "clinical-judgment",
+   "type": "trend",
+   "difficulty": 4,
+   "stem": "A 66-year-old client with pneumonia is monitored on a medical unit. For each measure, select the trend.",
+   "exhibit": {
+    "title": "Vital signs and laboratory results",
+    "columns": [
+     "Measure",
+     "08:00",
+     "10:00",
+     "12:00",
+     "14:00"
+    ],
+    "rows": [
+     [
+      "Temperature, °C [°F]",
+      "38.1 [100.6]",
+      "38.7 [101.7]",
+      "39.1 [102.4]",
+      "39.4 [102.9]"
+     ],
+     [
+      "Heart rate (per minute)",
+      "96",
+      "108",
+      "118",
+      "130"
+     ],
+     [
+      "Blood pressure (mmHg)",
+      "124/72",
+      "112/64",
+      "102/58",
+      "88/46"
+     ],
+     [
+      "Respiratory rate (per minute)",
+      "20",
+      "22",
+      "26",
+      "30"
+     ],
+     [
+      "Oxygen saturation (2 L/min oxygen)",
+      "94%",
+      "94%",
+      "94%",
+      "94%"
+     ],
+     [
+      "Lactate (mmol/L; normal is 0.5 to 2.0)",
+      "1.8",
+      "2.4",
+      "3.6",
+      "4.8"
+     ],
+     [
+      "Mental status",
+      "Alert, oriented",
+      "Alert, oriented",
+      "Drowsy",
+      "Confused"
+     ]
+    ]
+   },
+   "checks": [
+    {
+     "kind": "lab",
+     "name": "lactate",
+     "value": 4.8,
+     "flag": "high"
+    },
+    {
+     "kind": "lab",
+     "name": "lactate",
+     "value": 1.8,
+     "flag": "normal"
+    }
+   ],
+   "cols": [
+    "Improving",
+    "No change",
+    "Worsening"
+   ],
+   "rows": [
+    {
+     "text": "Temperature",
+     "key": 2,
+     "why": "The fever is rising."
+    },
+    {
+     "text": "Heart rate",
+     "key": 2,
+     "why": "The heart rate is rising."
+    },
+    {
+     "text": "Blood pressure",
+     "key": 2,
+     "why": "The blood pressure is falling and is now low."
+    },
+    {
+     "text": "Respiratory rate",
+     "key": 2,
+     "why": "Breathing is getting faster."
+    },
+    {
+     "text": "Oxygen saturation",
+     "key": 1,
+     "why": "The saturation has stayed the same."
+    },
+    {
+     "text": "Lactate",
+     "key": 2,
+     "why": "A rising lactate shows that the tissues are not getting enough oxygen."
+    },
+    {
+     "text": "Mental status",
+     "key": 2,
+     "why": "New drowsiness and confusion are signs of poor brain perfusion."
+    }
+   ],
+   "rationale": "The fever, fast heart rate, fast breathing, falling blood pressure, rising lactate and new confusion show that the client is moving from infection to sepsis with septic shock. The nurse calls the rapid response team at once, and expects blood cultures, antibiotics within the first hour and IV fluids as ordered.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pa-emerg-02",
+   "categoryId": "physiological-adaptation",
+   "topicId": "physiological-adaptation--medical-emergencies",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "physiological-adaptation--medical-emergencies--p01"
+   ],
+   "cjStep": "recognize-cues",
+   "integratedProcess": "clinical-judgment",
+   "type": "highlight",
+   "difficulty": 3,
+   "stem": "A 58-year-old man comes to the emergency department with chest pain. Review the data and the nurse's note. Highlight the findings that are most important for recognizing an acute myocardial infarction.",
+   "exhibit": {
+    "title": "Triage data",
+    "columns": [
+     "Finding",
+     "Value"
+    ],
+    "rows": [
+     [
+      "Blood pressure",
+      "152/94 mmHg"
+     ],
+     [
+      "Heart rate",
+      "104/min"
+     ],
+     [
+      "Respiratory rate",
+      "22/min"
+     ],
+     [
+      "Oxygen saturation",
+      "95% on room air"
+     ],
+     [
+      "Temperature",
+      "36.9 °C [98.4 °F]"
+     ],
+     [
+      "Pain",
+      "8 out of 10"
+     ],
+     [
+      "12-lead ECG report",
+      "ST-segment elevation of 3 mm in leads V2 to V4"
+     ],
+     [
+      "High-sensitivity troponin T",
+      "480 ng/L (normal is below 14 ng/L; varies by laboratory)"
+     ]
+    ]
+   },
+   "caseStudy": {
+    "id": "cs-pa-mi",
+    "step": 1
+   },
+   "segments": [
+    {
+     "text": "Nurse's note: "
+    },
+    {
+     "text": "Crushing central chest pain for 40 minutes, spreading to the left arm and jaw, with sweating and nausea.",
+     "key": true,
+     "why": "This typical pain pattern, with sweating and nausea, suggests that the heart muscle is not getting enough blood."
+    },
+    {
+     "text": " "
+    },
+    {
+     "text": "The client has had mild seasonal allergies for years.",
+     "key": false,
+     "why": "This history is not relevant to the chest pain."
+    },
+    {
+     "text": " "
+    },
+    {
+     "text": "The 12-lead ECG shows ST-segment elevation in leads V2 to V4.",
+     "key": true,
+     "why": "ST elevation in contiguous leads indicates an ST-elevation myocardial infarction, which needs urgent reperfusion."
+    },
+    {
+     "text": " "
+    },
+    {
+     "text": "Temperature is 36.9 °C [98.4 °F].",
+     "key": false,
+     "why": "A normal temperature does not help identify a myocardial infarction."
+    },
+    {
+     "text": " "
+    },
+    {
+     "text": "High-sensitivity troponin T is 480 ng/L (normal is below 14 ng/L).",
+     "key": true,
+     "why": "A much higher troponin level shows that heart muscle cells have been damaged."
+    },
+    {
+     "text": " "
+    },
+    {
+     "text": "The client's wife says he skipped lunch today.",
+     "key": false,
+     "why": "This detail is not a sign of a myocardial infarction."
+    }
+   ],
+   "rationale": "Typical chest pain, ST-segment elevation on the ECG and a high troponin level together mean an acute myocardial infarction. These are the cues to recognize first. The nurse then calls for urgent help, and the team prepares for rapid treatment to open the blocked artery.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pa-emerg-03",
+   "categoryId": "physiological-adaptation",
+   "topicId": "physiological-adaptation--medical-emergencies",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "physiological-adaptation--medical-emergencies--p04"
+   ],
+   "cjStep": "prioritize-hypotheses",
+   "integratedProcess": "clinical-judgment",
+   "type": "mcq",
+   "difficulty": 2,
+   "stem": "A client's wife reports that her husband suddenly developed weakness on the right side and slurred speech while having breakfast. They arrive at the emergency department 90 minutes later. Which information is most critical for the nurse to obtain immediately?",
+   "options": [
+    "The client's blood pressure history over the past 10 years.",
+    "The client's usual daily diet.",
+    "The time the client was last known to be well.",
+    "The names of the client's children."
+   ],
+   "optionRationales": [
+    "Incorrect. This is useful history, but it does not decide whether urgent treatment is possible.",
+    "Incorrect. This is not needed for the immediate treatment decision.",
+    "Correct. The time of symptom onset (or last known well) decides whether clot-dissolving treatment or clot removal can be offered, because these work only within time limits.",
+    "Incorrect. This is not needed for the immediate treatment decision."
+   ],
+   "key": 2,
+   "rationale": "In an acute stroke, time matters. The time the client was last known to be well is the key piece of information, because treatment is time-limited. It is gathered together with a rapid assessment, a blood glucose check and an urgent brain scan.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pa-emerg-04",
+   "categoryId": "physiological-adaptation",
+   "topicId": "physiological-adaptation--medical-emergencies",
+   "secondaryTopicIds": [
+    "reduction-risk-potential--laboratory-values"
+   ],
+   "learningPointIds": [
+    "physiological-adaptation--medical-emergencies--p01"
+   ],
+   "cjStep": "analyze-cues",
+   "integratedProcess": "clinical-judgment",
+   "type": "dropdown",
+   "difficulty": 4,
+   "stem": "A 24-year-old client with type 1 diabetes has had vomiting and abdominal pain for 2 days and now has fast, deep breathing. The blood glucose is 28.4 mmol/L [511 mg/dL], blood ketones are 5.2 mmol/L (high), and the potassium is 5.4 mmol/L [5.4 mEq/L]. The arterial blood gas shows pH 7.12, PaCO₂ 24 mmHg [3.2 kPa] and HCO₃⁻ 8 mmol/L.",
+   "checks": [
+    {
+     "kind": "abg",
+     "pH": 7.12,
+     "paco2": 24,
+     "hco3": 8,
+     "primary": "metabolic acidosis",
+     "compensation": "partially compensated",
+     "ref": "blanks.0"
+    },
+    {
+     "kind": "lab",
+     "name": "potassium",
+     "value": 5.4,
+     "flag": "high"
+    }
+   ],
+   "template": "The blood gas shows {1}, and the first treatment the nurse expects is {2}.",
+   "blanks": [
+    {
+     "options": [
+      "metabolic acidosis, partially compensated",
+      "respiratory acidosis, uncompensated",
+      "metabolic alkalosis, uncompensated"
+     ],
+     "key": 0,
+     "why": "The pH is low (acidosis) and the bicarbonate is low, so the problem is metabolic. The PaCO₂ is low because the deep, fast breathing (Kussmaul breathing) is blowing off carbon dioxide, which partly compensates but does not bring the pH back to normal."
+    },
+    {
+     "options": [
+      "IV 0.9% sodium chloride to restore fluid volume",
+      "a rapid IV bolus of sodium bicarbonate",
+      "IV potassium chloride before anything else"
+     ],
+     "key": 0,
+     "why": "Fluid replacement is the first treatment, because the client is badly dehydrated. Insulin follows, once the potassium has been checked. Bicarbonate is not routine, and extra potassium is not given when the level is already high."
+    }
+   ],
+   "rationale": "Diabetic ketoacidosis causes a metabolic acidosis with a very high glucose and ketones. The first treatment is IV fluid, followed by an IV insulin infusion once the potassium level is known to be safe, with close monitoring of glucose and potassium.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pa-emerg-05",
+   "categoryId": "physiological-adaptation",
+   "topicId": "physiological-adaptation--medical-emergencies",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "physiological-adaptation--medical-emergencies--p05"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "clinical-judgment",
+   "type": "dragdrop",
+   "difficulty": 3,
+   "stem": "A client develops hives, wheezing, a swollen tongue and a blood pressure of 78/40 mmHg a few minutes after a first dose of an IV antibiotic. Place the nurse's actions in the correct order.",
+   "mode": "order",
+   "items": [
+    {
+     "text": "Monitor vital signs and breathing continuously, and be ready to repeat the epinephrine if there is no improvement in 5 to 15 minutes.",
+     "why": "The client is watched closely because symptoms can return or get worse."
+    },
+    {
+     "text": "Position the client lying flat with the legs raised (or sitting up if breathing is difficult), and give high-flow oxygen.",
+     "why": "Position and oxygen support circulation and breathing while the epinephrine starts to work."
+    },
+    {
+     "text": "Stop the suspected trigger (the infusion) and call for help or the rapid response team.",
+     "why": "The trigger is stopped and help is called first, so that the client keeps getting care while the nurse acts."
+    },
+    {
+     "text": "Give epinephrine by intramuscular injection into the middle of the outer thigh, as ordered or per protocol.",
+     "why": "Epinephrine is the first and most important drug for anaphylaxis and should not be delayed."
+    },
+    {
+     "text": "Obtain IV access with a new line and prepare to give IV fluids and other drugs as ordered.",
+     "why": "Fluids and other drugs are used after the first treatments."
+    }
+   ],
+   "key": [
+    2,
+    3,
+    1,
+    4,
+    0
+   ],
+   "rationale": "Anaphylaxis is treated by stopping the trigger, getting help, giving IM epinephrine without delay, supporting breathing and circulation, and watching closely for return of symptoms.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pa-emerg-06",
+   "categoryId": "physiological-adaptation",
+   "topicId": "physiological-adaptation--medical-emergencies",
+   "secondaryTopicIds": [
+    "reduction-risk-potential--laboratory-values"
+   ],
+   "learningPointIds": [
+    "physiological-adaptation--medical-emergencies--p02",
+    "physiological-adaptation--medical-emergencies--p01"
+   ],
+   "cjStep": "prioritize-hypotheses",
+   "integratedProcess": "clinical-judgment",
+   "type": "mcq",
+   "difficulty": 4,
+   "stem": "A 70-year-old client with severe COPD has a worse cough and is drowsy. The arterial blood gas on room air shows pH 7.24, PaCO₂ 74 mmHg [9.9 kPa], HCO₃⁻ 31 mmol/L and PaO₂ 52 mmHg [6.9 kPa]. Which action is the priority?",
+   "checks": [
+    {
+     "kind": "abg",
+     "pH": 7.24,
+     "paco2": 74,
+     "hco3": 31,
+     "primary": "respiratory acidosis",
+     "compensation": "partially compensated"
+    }
+   ],
+   "options": [
+    "Let the client sleep and repeat the blood gas in 6 hours.",
+    "Give a sedative to help the client to relax.",
+    "Call the rapid response team and prepare for non-invasive ventilation (such as BiPAP) or intubation, as ordered.",
+    "Give oxygen by non-rebreather mask at 15 L/min and leave the client to rest."
+   ],
+   "optionRationales": [
+    "Incorrect. The client is in acute respiratory failure with a very high carbon dioxide level, and waiting is dangerous.",
+    "Incorrect. A sedative can slow breathing further and worsen carbon dioxide retention.",
+    "Correct. A low pH with a very high PaCO₂, low oxygen and drowsiness means respiratory failure. The client needs urgent help with ventilation.",
+    "Incorrect. Very high oxygen can worsen carbon dioxide retention, and the main problem is ventilation, not oxygen alone. The client must not be left alone."
+   ],
+   "key": 2,
+   "rationale": "The blood gas shows respiratory acidosis (low pH, high PaCO₂) with a raised bicarbonate, which means the kidneys have partly compensated over time, and low oxygen. With drowsiness, this is acute-on-chronic respiratory failure. The priority is to call for urgent help and prepare for assisted ventilation.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pa-fluid-01",
+   "categoryId": "physiological-adaptation",
+   "topicId": "physiological-adaptation--fluid-and-electrolyte-imbalances",
+   "secondaryTopicIds": [
+    "reduction-risk-potential--laboratory-values"
+   ],
+   "learningPointIds": [
+    "physiological-adaptation--fluid-and-electrolyte-imbalances--p01",
+    "reduction-risk-potential--laboratory-values--p01"
+   ],
+   "cjStep": "recognize-cues",
+   "integratedProcess": "clinical-judgment",
+   "type": "matrix",
+   "difficulty": 2,
+   "stem": "Normal adult values are: sodium 135 to 145 mmol/L, potassium 3.5 to 5.0 mmol/L, total calcium 2.15 to 2.60 mmol/L, magnesium 0.70 to 1.00 mmol/L. (Ranges differ a little between laboratories.) For each result, select whether it is low, normal or high.",
+   "checks": [
+    {
+     "kind": "lab",
+     "name": "sodium",
+     "value": 128,
+     "flag": "low",
+     "ref": "rows.0"
+    },
+    {
+     "kind": "lab",
+     "name": "potassium",
+     "value": 6.2,
+     "flag": "high",
+     "ref": "rows.1"
+    },
+    {
+     "kind": "lab",
+     "name": "calcium",
+     "value": 1.9,
+     "flag": "low",
+     "ref": "rows.2"
+    },
+    {
+     "kind": "lab",
+     "name": "magnesium",
+     "value": 0.85,
+     "flag": "normal",
+     "ref": "rows.3"
+    },
+    {
+     "kind": "lab",
+     "name": "sodium",
+     "value": 152,
+     "flag": "high",
+     "ref": "rows.4"
+    }
+   ],
+   "cols": [
+    "Low",
+    "Normal",
+    "High"
+   ],
+   "rows": [
+    {
+     "text": "Serum sodium 128 mmol/L [128 mEq/L]",
+     "key": 0,
+     "why": "The value is below 135 mmol/L (hyponatremia). It can cause confusion, headache and seizures."
+    },
+    {
+     "text": "Serum potassium 6.2 mmol/L [6.2 mEq/L]",
+     "key": 2,
+     "why": "The value is above 5.0 mmol/L (hyperkalemia). It can cause dangerous heart rhythms, so the nurse reports it and may place the client on a monitor."
+    },
+    {
+     "text": "Total calcium 1.90 mmol/L [7.6 mg/dL]",
+     "key": 0,
+     "why": "The value is below 2.15 mmol/L (hypocalcemia). It can cause tingling, muscle cramps and seizures."
+    },
+    {
+     "text": "Serum magnesium 0.85 mmol/L",
+     "key": 1,
+     "why": "The value is within the normal range."
+    },
+    {
+     "text": "Serum sodium 152 mmol/L [152 mEq/L]",
+     "key": 2,
+     "why": "The value is above 145 mmol/L (hypernatremia). It is often caused by a loss of water or too little water intake and can cause thirst and confusion."
+    }
+   ],
+   "rationale": "Comparing a client's result with the normal range is the first step. Abnormal sodium, potassium and calcium levels cause changes in the brain, muscles and heart, and the nurse reports significant results to the provider.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pa-fluid-02",
+   "categoryId": "physiological-adaptation",
+   "topicId": "physiological-adaptation--fluid-and-electrolyte-imbalances",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "physiological-adaptation--fluid-and-electrolyte-imbalances--p02"
+   ],
+   "cjStep": "analyze-cues",
+   "integratedProcess": "clinical-judgment",
+   "type": "mcq",
+   "difficulty": 3,
+   "stem": "A client with small cell lung cancer has a serum sodium of 123 mmol/L [123 mEq/L], concentrated urine and a normal fluid volume. The provider diagnoses syndrome of inappropriate antidiuretic hormone secretion (SIADH). Which treatment does the nurse expect?",
+   "checks": [
+    {
+     "kind": "lab",
+     "name": "sodium",
+     "value": 123,
+     "flag": "low"
+    }
+   ],
+   "options": [
+    "Encouraging a high fluid intake to dilute the blood.",
+    "Giving IV 5% dextrose in water.",
+    "Restricting fluids.",
+    "Giving a low-sodium diet."
+   ],
+   "optionRationales": [
+    "Incorrect. The body is already holding too much water. More fluid would make the sodium even lower.",
+    "Incorrect. This adds free water and would lower the sodium further.",
+    "Correct. In SIADH, too much antidiuretic hormone makes the kidneys hold water, which dilutes the sodium. Restricting fluids is the usual first treatment.",
+    "Incorrect. The sodium is already low because of too much water, so a low-sodium diet would not help."
+   ],
+   "key": 2,
+   "rationale": "SIADH causes water retention and a low sodium level from dilution. The treatment is fluid restriction, with careful monitoring of sodium, weight and neurological status. Severe symptoms may need a provider-ordered hypertonic saline.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pa-fluid-03",
+   "categoryId": "physiological-adaptation",
+   "topicId": "physiological-adaptation--fluid-and-electrolyte-imbalances",
+   "secondaryTopicIds": [
+    "reduction-risk-potential--laboratory-values"
+   ],
+   "learningPointIds": [
+    "physiological-adaptation--fluid-and-electrolyte-imbalances--p03"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "nursing-process",
+   "type": "sata",
+   "difficulty": 3,
+   "stem": "A client is 1 day after a total thyroidectomy. The nurse finds numbness around the mouth and tingling in the fingers. The total calcium is 1.85 mmol/L [7.4 mg/dL]. Which actions are appropriate? Select all that apply.",
+   "checks": [
+    {
+     "kind": "lab",
+     "name": "calcium",
+     "value": 1.85,
+     "flag": "low"
+    }
+   ],
+   "options": [
+    "Notify the provider and prepare to give IV calcium gluconate as ordered.",
+    "Check for Chvostek's and Trousseau's signs.",
+    "Start seizure precautions, and keep suction and airway equipment at the bedside.",
+    "Monitor the heart rhythm.",
+    "Give a potassium supplement.",
+    "Encourage a diet that is low in calcium."
+   ],
+   "optionRationales": [
+    "Correct. A symptomatic low calcium is treated with IV calcium.",
+    "Correct. These bedside tests show increased nerve and muscle excitability from low calcium.",
+    "Correct. Low calcium can cause seizures and laryngospasm.",
+    "Correct. Low calcium can prolong the QT interval and cause rhythm problems.",
+    "Incorrect. The problem is a low calcium level. Potassium is not the treatment.",
+    "Incorrect. A low-calcium diet would make the problem worse."
+   ],
+   "key": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "rationale": "After thyroid surgery the parathyroid glands can be injured, which causes a low calcium level. The nurse recognizes the signs, reports them, protects the client from seizures and gives IV calcium as ordered.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pa-fluid-04",
+   "categoryId": "physiological-adaptation",
+   "topicId": "physiological-adaptation--fluid-and-electrolyte-imbalances",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "physiological-adaptation--fluid-and-electrolyte-imbalances--p04"
+   ],
+   "cjStep": "evaluate-outcomes",
+   "integratedProcess": "clinical-judgment",
+   "type": "trend",
+   "difficulty": 4,
+   "stem": "A client with kidney failure and a high potassium level was treated with calcium gluconate, insulin with dextrose, and a potassium binder. For each measure, select the trend.",
+   "exhibit": {
+    "title": "Response to treatment",
+    "columns": [
+     "Measure",
+     "08:00",
+     "10:00",
+     "12:00",
+     "16:00"
+    ],
+    "rows": [
+     [
+      "Serum potassium (mmol/L, the same as mEq/L)",
+      "6.8",
+      "6.1",
+      "5.6",
+      "4.9"
+     ],
+     [
+      "ECG",
+      "Peaked T waves, wide QRS",
+      "Peaked T waves",
+      "Normal",
+      "Normal"
+     ],
+     [
+      "Blood glucose, mmol/L [mg/dL]",
+      "6.2 [112]",
+      "4.4 [79]",
+      "3.3 [59]",
+      "2.9 [52]"
+     ],
+     [
+      "Heart rate (per minute)",
+      "98",
+      "90",
+      "84",
+      "80"
+     ],
+     [
+      "Urine output (mL per hour)",
+      "30",
+      "45",
+      "60",
+      "80"
+     ]
+    ]
+   },
+   "checks": [
+    {
+     "kind": "lab",
+     "name": "potassium",
+     "value": 6.8,
+     "flag": "high"
+    },
+    {
+     "kind": "lab",
+     "name": "potassium",
+     "value": 4.9,
+     "flag": "normal"
+    }
+   ],
+   "cols": [
+    "Improving",
+    "No change",
+    "Worsening"
+   ],
+   "rows": [
+    {
+     "text": "Serum potassium",
+     "key": 0,
+     "why": "The potassium has come down into the normal range."
+    },
+    {
+     "text": "ECG",
+     "key": 0,
+     "why": "The heart tracing is back to normal."
+    },
+    {
+     "text": "Blood glucose",
+     "key": 2,
+     "why": "The glucose keeps falling because of the insulin and is now low. The nurse treats the low glucose and rechecks it often."
+    },
+    {
+     "text": "Heart rate",
+     "key": 0,
+     "why": "The heart rate is settling."
+    },
+    {
+     "text": "Urine output",
+     "key": 0,
+     "why": "More urine means better kidney function and removal of potassium."
+    }
+   ],
+   "rationale": "The treatment lowered the potassium and the ECG is normal, but the glucose has fallen to a low level, which is a known risk of insulin. The nurse treats the low glucose as the protocol says, rechecks the glucose often and reports the low reading to the provider.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pa-abg-01",
+   "categoryId": "physiological-adaptation",
+   "topicId": "physiological-adaptation--fluid-and-electrolyte-imbalances",
+   "secondaryTopicIds": [
+    "reduction-risk-potential--laboratory-values"
+   ],
+   "learningPointIds": [
+    "physiological-adaptation--fluid-and-electrolyte-imbalances--p02",
+    "reduction-risk-potential--laboratory-values--p01"
+   ],
+   "cjStep": "analyze-cues",
+   "integratedProcess": "clinical-judgment",
+   "type": "mcq",
+   "difficulty": 3,
+   "stem": "A client with COPD received a sedative and is now hard to wake. The arterial blood gas shows pH 7.29, PaCO₂ 58 mmHg [7.7 kPa], HCO₃⁻ 25 mmol/L. Which interpretation is correct?",
+   "checks": [
+    {
+     "kind": "abg",
+     "pH": 7.29,
+     "paco2": 58,
+     "hco3": 25,
+     "primary": "respiratory acidosis",
+     "compensation": "uncompensated",
+     "ref": "key"
+    }
+   ],
+   "options": [
+    "Respiratory acidosis, partially compensated",
+    "Respiratory acidosis, uncompensated",
+    "Metabolic acidosis, uncompensated",
+    "Respiratory alkalosis, uncompensated"
+   ],
+   "optionRationales": [
+    "Incorrect. The bicarbonate is normal, so the kidneys have not begun to compensate yet.",
+    "Correct. The pH is low (acidosis), the PaCO₂ is high (respiratory), and the bicarbonate is normal because the problem is new and the kidneys have not compensated yet.",
+    "Incorrect. In metabolic acidosis the bicarbonate would be low. Here the bicarbonate is normal and the PaCO₂ is high.",
+    "Incorrect. The pH is below 7.35, so this is acidosis, not alkalosis."
+   ],
+   "key": 1,
+   "rationale": "Step 1: the pH is low, so this is acidosis. Step 2: the PaCO₂ is high and matches the acidosis, so it is respiratory. Step 3: the bicarbonate is normal, so the body has not compensated yet. The sedative slowed breathing, and the nurse reports the findings and prepares to support ventilation.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pa-abg-02",
+   "categoryId": "physiological-adaptation",
+   "topicId": "physiological-adaptation--fluid-and-electrolyte-imbalances",
+   "secondaryTopicIds": [
+    "reduction-risk-potential--laboratory-values"
+   ],
+   "learningPointIds": [
+    "physiological-adaptation--fluid-and-electrolyte-imbalances--p02",
+    "reduction-risk-potential--laboratory-values--p01"
+   ],
+   "cjStep": "analyze-cues",
+   "integratedProcess": "clinical-judgment",
+   "type": "matrix",
+   "difficulty": 3,
+   "stem": "Normal values: pH 7.35 to 7.45, PaCO₂ 35 to 45 mmHg [4.7 to 6.0 kPa], HCO₃⁻ 22 to 26 mmol/L. For each arterial blood gas, select the primary acid-base disorder.",
+   "checks": [
+    {
+     "kind": "abg",
+     "pH": 7.31,
+     "paco2": 50,
+     "hco3": 24,
+     "primary": "respiratory acidosis",
+     "compensation": "uncompensated",
+     "ref": "rows.0"
+    },
+    {
+     "kind": "abg",
+     "pH": 7.5,
+     "paco2": 28,
+     "hco3": 23,
+     "primary": "respiratory alkalosis",
+     "compensation": "uncompensated",
+     "ref": "rows.1"
+    },
+    {
+     "kind": "abg",
+     "pH": 7.28,
+     "paco2": 30,
+     "hco3": 14,
+     "primary": "metabolic acidosis",
+     "compensation": "partially compensated",
+     "ref": "rows.2"
+    },
+    {
+     "kind": "abg",
+     "pH": 7.49,
+     "paco2": 48,
+     "hco3": 33,
+     "primary": "metabolic alkalosis",
+     "compensation": "partially compensated",
+     "ref": "rows.3"
+    }
+   ],
+   "cols": [
+    "Respiratory acidosis",
+    "Respiratory alkalosis",
+    "Metabolic acidosis",
+    "Metabolic alkalosis"
+   ],
+   "rows": [
+    {
+     "text": "Client A: pH 7.31, PaCO₂ 50 mmHg [6.7 kPa], HCO₃⁻ 24 mmol/L",
+     "key": 0,
+     "why": "The pH is low and the PaCO₂ is high. The bicarbonate is normal, so the disorder is uncompensated."
+    },
+    {
+     "text": "Client B: pH 7.50, PaCO₂ 28 mmHg [3.7 kPa], HCO₃⁻ 23 mmol/L",
+     "key": 1,
+     "why": "The pH is high and the PaCO₂ is low. The bicarbonate is normal, so the disorder is uncompensated."
+    },
+    {
+     "text": "Client C: pH 7.28, PaCO₂ 30 mmHg [4.0 kPa], HCO₃⁻ 14 mmol/L",
+     "key": 2,
+     "why": "The pH is low and the bicarbonate is low. The low PaCO₂ shows that the lungs are compensating, but the pH is still abnormal, so it is partially compensated."
+    },
+    {
+     "text": "Client D: pH 7.49, PaCO₂ 48 mmHg [6.4 kPa], HCO₃⁻ 33 mmol/L",
+     "key": 3,
+     "why": "The pH is high and the bicarbonate is high. The raised PaCO₂ shows that the lungs are compensating by breathing more slowly, so it is partially compensated."
+    }
+   ],
+   "rationale": "Use three steps. First, the pH tells acidosis from alkalosis. Second, find which of PaCO₂ (respiratory) or HCO₃⁻ (metabolic) moves in the same direction as the pH. Third, if the other value has moved the opposite way, the body is compensating. With ROME in mind: respiratory opposite, metabolic equal.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pa-abg-03",
+   "categoryId": "physiological-adaptation",
+   "topicId": "physiological-adaptation--fluid-and-electrolyte-imbalances",
+   "secondaryTopicIds": [
+    "reduction-risk-potential--laboratory-values"
+   ],
+   "learningPointIds": [
+    "physiological-adaptation--fluid-and-electrolyte-imbalances--p02"
+   ],
+   "cjStep": "analyze-cues",
+   "integratedProcess": "clinical-judgment",
+   "type": "dropdown",
+   "difficulty": 3,
+   "stem": "A client has had continuous nasogastric suction for 3 days after bowel surgery. The arterial blood gas shows pH 7.52, PaCO₂ 48 mmHg [6.4 kPa] and HCO₃⁻ 36 mmol/L. The potassium is 3.1 mmol/L [3.1 mEq/L].",
+   "checks": [
+    {
+     "kind": "abg",
+     "pH": 7.52,
+     "paco2": 48,
+     "hco3": 36,
+     "primary": "metabolic alkalosis",
+     "compensation": "partially compensated",
+     "ref": "blanks.0"
+    },
+    {
+     "kind": "lab",
+     "name": "potassium",
+     "value": 3.1,
+     "flag": "low"
+    }
+   ],
+   "template": "The blood gas shows {1}. The most likely cause is {2}.",
+   "blanks": [
+    {
+     "options": [
+      "metabolic alkalosis, partially compensated",
+      "respiratory alkalosis, partially compensated",
+      "metabolic acidosis, partially compensated"
+     ],
+     "key": 0,
+     "why": "The pH is high (alkalosis) and the bicarbonate is high, so it is metabolic. The PaCO₂ is raised because the lungs are breathing more slowly to hold on to carbon dioxide, which partly compensates."
+    },
+    {
+     "options": [
+      "loss of stomach acid (hydrogen and chloride) through the suction",
+      "too much carbon dioxide being breathed out",
+      "loss of bicarbonate in diarrhea"
+     ],
+     "key": 0,
+     "why": "Stomach fluid is rich in acid, so continuous suction removes acid and leaves too much bicarbonate. The low potassium makes the alkalosis worse. Losing bicarbonate in diarrhea causes acidosis, not alkalosis."
+    }
+   ],
+   "rationale": "Vomiting or nasogastric suction removes stomach acid and causes metabolic alkalosis, often with a low potassium and chloride. The provider may order IV 0.9% sodium chloride with potassium, and the nurse monitors the blood gas, the electrolytes and the heart rhythm.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pa-abg-04",
+   "categoryId": "physiological-adaptation",
+   "topicId": "physiological-adaptation--fluid-and-electrolyte-imbalances",
+   "secondaryTopicIds": [
+    "reduction-risk-potential--laboratory-values"
+   ],
+   "learningPointIds": [
+    "physiological-adaptation--fluid-and-electrolyte-imbalances--p04",
+    "reduction-risk-potential--laboratory-values--p01"
+   ],
+   "cjStep": "evaluate-outcomes",
+   "integratedProcess": "clinical-judgment",
+   "type": "trend",
+   "difficulty": 4,
+   "stem": "A client with a COPD exacerbation started non-invasive ventilation (BiPAP) at 08:00. For each measure, select the trend.",
+   "exhibit": {
+    "title": "Arterial blood gases and observations",
+    "columns": [
+     "Measure",
+     "08:00",
+     "10:00",
+     "12:00",
+     "16:00"
+    ],
+    "rows": [
+     [
+      "pH",
+      "7.24",
+      "7.29",
+      "7.34",
+      "7.37"
+     ],
+     [
+      "PaCO₂, mmHg [kPa]",
+      "78 [10.4]",
+      "68 [9.1]",
+      "60 [8.0]",
+      "54 [7.2]"
+     ],
+     [
+      "HCO₃⁻ (mmol/L)",
+      "33",
+      "33",
+      "34",
+      "34"
+     ],
+     [
+      "PaO₂, mmHg [kPa]",
+      "54 [7.2]",
+      "62 [8.3]",
+      "70 [9.3]",
+      "78 [10.4]"
+     ],
+     [
+      "Level of consciousness",
+      "Drowsy",
+      "Drowsy",
+      "Awake",
+      "Alert"
+     ]
+    ]
+   },
+   "checks": [
+    {
+     "kind": "abg",
+     "pH": 7.24,
+     "paco2": 78,
+     "hco3": 33,
+     "primary": "respiratory acidosis",
+     "compensation": "partially compensated"
+    },
+    {
+     "kind": "abg",
+     "pH": 7.37,
+     "paco2": 54,
+     "hco3": 34,
+     "primary": "respiratory acidosis",
+     "compensation": "fully compensated"
+    }
+   ],
+   "cols": [
+    "Improving",
+    "No change",
+    "Worsening"
+   ],
+   "rows": [
+    {
+     "text": "pH",
+     "key": 0,
+     "why": "The pH is rising toward the normal range."
+    },
+    {
+     "text": "PaCO₂",
+     "key": 0,
+     "why": "The carbon dioxide level is falling as the client is ventilated better."
+    },
+    {
+     "text": "HCO₃⁻",
+     "key": 1,
+     "why": "The bicarbonate stays raised. This is the kidneys' long-term compensation in a client who retains carbon dioxide, and it does not change quickly."
+    },
+    {
+     "text": "PaO₂",
+     "key": 0,
+     "why": "The oxygen level is rising."
+    },
+    {
+     "text": "Level of consciousness",
+     "key": 0,
+     "why": "The client is more alert as the carbon dioxide falls."
+    }
+   ],
+   "rationale": "The BiPAP is working: the pH is nearly normal, the PaCO₂ is falling, the PaO₂ is rising and the client is more alert. The bicarbonate stays high because of long-term compensation. The nurse continues to monitor the blood gases, avoids sedatives and watches for tiring.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pa-patho-01",
+   "categoryId": "physiological-adaptation",
+   "topicId": "physiological-adaptation--pathophysiology",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "physiological-adaptation--pathophysiology--p01"
+   ],
+   "cjStep": "analyze-cues",
+   "integratedProcess": "clinical-judgment",
+   "type": "mcq",
+   "difficulty": 2,
+   "stem": "Which finding does the nurse expect in a client with left-sided heart failure?",
+   "options": [
+    "Distended neck veins and an enlarged liver.",
+    "Swelling of both feet and ankles as the only sign.",
+    "Increased appetite and weight loss.",
+    "Crackles in the lungs and shortness of breath when lying flat."
+   ],
+   "optionRationales": [
+    "Incorrect. These are signs of right-sided heart failure, when blood backs up into the veins of the body.",
+    "Incorrect. Swelling of the legs mainly comes from right-sided failure.",
+    "Incorrect. Heart failure usually causes poor appetite and weight gain from retained fluid.",
+    "Correct. When the left side of the heart cannot pump well, blood backs up into the lungs. This causes crackles, cough and breathlessness (especially when lying down)."
+   ],
+   "key": 3,
+   "rationale": "The left heart pumps blood to the body. When it fails, blood backs up into the lungs, which causes pulmonary congestion. When the right heart fails, blood backs up into the body, which causes distended neck veins, an enlarged liver and edema.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pa-patho-02",
+   "categoryId": "physiological-adaptation",
+   "topicId": "physiological-adaptation--pathophysiology",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "physiological-adaptation--pathophysiology--p02"
+   ],
+   "cjStep": null,
+   "integratedProcess": "clinical-judgment",
+   "type": "dragdrop",
+   "difficulty": 2,
+   "stem": "For each example, select the type of immunity that it gives.",
+   "mode": "sort",
+   "bins": [
+    "Active immunity",
+    "Passive immunity"
+   ],
+   "items": [
+    {
+     "text": "Protection after having chickenpox",
+     "key": 0,
+     "why": "The body made its own antibodies after infection. This is naturally acquired active immunity."
+    },
+    {
+     "text": "Antibodies passed to a baby through breast milk",
+     "key": 1,
+     "why": "The baby receives antibodies made by the mother. This gives short-term protection."
+    },
+    {
+     "text": "Protection after completing the hepatitis B vaccine series",
+     "key": 0,
+     "why": "A vaccine makes the body produce its own antibodies and memory cells."
+    },
+    {
+     "text": "Immune globulin given after an exposure to hepatitis B",
+     "key": 1,
+     "why": "Ready-made antibodies give quick but temporary protection."
+    },
+    {
+     "text": "Antibodies that cross the placenta to the fetus",
+     "key": 1,
+     "why": "These are antibodies from the mother, so the immunity is passive."
+    },
+    {
+     "text": "A tetanus toxoid booster",
+     "key": 0,
+     "why": "The toxoid stimulates the body to make its own protection."
+    }
+   ],
+   "rationale": "Active immunity means the body makes its own antibodies (after infection or a vaccine), and lasts a long time. Passive immunity means antibodies are received from another source, and it protects quickly but only for a short time.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pa-patho-03",
+   "categoryId": "physiological-adaptation",
+   "topicId": "physiological-adaptation--pathophysiology",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "physiological-adaptation--pathophysiology--p02"
+   ],
+   "cjStep": null,
+   "integratedProcess": "clinical-judgment",
+   "type": "dragdrop",
+   "difficulty": 2,
+   "stem": "Place the phases of normal wound healing in the correct order.",
+   "mode": "order",
+   "items": [
+    {
+     "text": "Maturation (remodeling): collagen is reorganized and the scar gains strength over months.",
+     "why": "The scar strengthens slowly, over months, in the last phase."
+    },
+    {
+     "text": "Hemostasis: blood vessels constrict and a clot forms to stop the bleeding.",
+     "why": "The first priority after injury is to stop the bleeding."
+    },
+    {
+     "text": "Inflammation: white blood cells clear germs and debris, with redness, warmth and swelling.",
+     "why": "Cleaning of the wound comes before new tissue is built."
+    },
+    {
+     "text": "Proliferation: new blood vessels and granulation tissue fill the wound, and the edges begin to close.",
+     "why": "New tissue is built once the wound is clean."
+    }
+   ],
+   "key": [
+    1,
+    2,
+    3,
+    0
+   ],
+   "rationale": "Wound healing goes through hemostasis, inflammation, proliferation and maturation. Knowing the phases helps the nurse understand why wounds look different at different times and why nutrition, perfusion and infection control matter.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pa-patho-04",
+   "categoryId": "physiological-adaptation",
+   "topicId": "physiological-adaptation--pathophysiology",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "physiological-adaptation--pathophysiology--p01"
+   ],
+   "cjStep": "analyze-cues",
+   "integratedProcess": "clinical-judgment",
+   "type": "dropdown",
+   "difficulty": 2,
+   "stem": "A nurse explains why a client with type 1 diabetes developed diabetic ketoacidosis.",
+   "template": "Without enough {1}, glucose cannot enter the cells, so the body breaks down {2}, which makes ketones and causes metabolic acidosis.",
+   "blanks": [
+    {
+     "options": [
+      "insulin",
+      "glucagon",
+      "cortisol"
+     ],
+     "key": 0,
+     "why": "Insulin moves glucose into the cells. In type 1 diabetes the pancreas makes almost none, so the glucose stays in the blood. Glucagon and cortisol raise the glucose rather than moving it into cells."
+    },
+    {
+     "options": [
+      "fat for energy",
+      "bone for energy",
+      "red blood cells for energy"
+     ],
+     "key": 0,
+     "why": "When cells cannot use glucose, the body burns fat for energy. A by-product of fat breakdown is ketones, which are acids."
+    }
+   ],
+   "rationale": "In diabetic ketoacidosis a lack of insulin leaves the cells without glucose. The body burns fat, ketones build up and the blood becomes acidic, while the blood glucose is very high.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pa-unexp-01",
+   "categoryId": "physiological-adaptation",
+   "topicId": "physiological-adaptation--unexpected-response-to-therapies",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "physiological-adaptation--unexpected-response-to-therapies--p01"
+   ],
+   "cjStep": "recognize-cues",
+   "integratedProcess": "clinical-judgment",
+   "type": "mcq",
+   "difficulty": 3,
+   "stem": "A client is 45 minutes into an IV thrombolytic infusion (alteplase) for an acute ischemic stroke. The client suddenly has a severe headache, vomiting and a drop in the level of consciousness. What should the nurse do first?",
+   "options": [
+    "Give acetaminophen for the headache and recheck in 30 minutes.",
+    "Slow the infusion by half and reassess in 1 hour.",
+    "Stop the infusion, call for urgent help and prepare for an emergency brain scan.",
+    "Give aspirin to prevent another clot."
+   ],
+   "optionRationales": [
+    "Incorrect. A sudden severe headache with a drop in consciousness suggests bleeding in the brain, and waiting is dangerous.",
+    "Incorrect. If bleeding is suspected, the infusion must be stopped, not slowed.",
+    "Correct. Bleeding in the brain is a known and life-threatening risk of clot-dissolving drugs. The drug is stopped and an urgent CT scan is arranged.",
+    "Incorrect. Aspirin increases the risk of bleeding and is not given after a thrombolytic."
+   ],
+   "key": 2,
+   "rationale": "Clot-dissolving drugs can cause bleeding, including bleeding into the brain. A new severe headache, vomiting or a drop in consciousness during or after treatment means the infusion is stopped and help is called at once. Provincial rules may differ: some Canadian centres use tenecteplase instead of alteplase, but the nursing response is the same.",
+   "needsReview": true,
+   "reviewKind": "regional",
+   "reviewNote": "Some Canadian stroke centres now use tenecteplase rather than alteplase, and protocols differ between provinces. The nursing response to suspected bleeding is the same. Please check the wording against Canadian stroke guidelines."
+  },
+  {
+   "id": "q-pa-unexp-02",
+   "categoryId": "physiological-adaptation",
+   "topicId": "physiological-adaptation--unexpected-response-to-therapies",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "physiological-adaptation--unexpected-response-to-therapies--p02"
+   ],
+   "cjStep": "recognize-cues",
+   "integratedProcess": "clinical-judgment",
+   "type": "highlight",
+   "difficulty": 4,
+   "stem": "A 62-year-old client is on day 3 after a colon resection. Review the data and the nurse's assessment. Highlight the findings that suggest a serious complication needing action.",
+   "exhibit": {
+    "title": "Assessment, post-operative day 3",
+    "columns": [
+     "Finding",
+     "Value"
+    ],
+    "rows": [
+     [
+      "Temperature",
+      "38.8 °C [101.8 °F]"
+     ],
+     [
+      "Heart rate",
+      "118/min"
+     ],
+     [
+      "Blood pressure",
+      "96/58 mmHg"
+     ],
+     [
+      "Respiratory rate",
+      "24/min"
+     ],
+     [
+      "Oxygen saturation",
+      "94% on room air"
+     ],
+     [
+      "White blood cells",
+      "19.6 × 10⁹/L"
+     ],
+     [
+      "Lactate",
+      "3.4 mmol/L"
+     ],
+     [
+      "Urine output",
+      "20 mL per hour"
+     ]
+    ]
+   },
+   "caseStudy": {
+    "id": "cs-pa-postop",
+    "step": 1
+   },
+   "checks": [
+    {
+     "kind": "lab",
+     "name": "wbc",
+     "value": 19.6,
+     "flag": "high"
+    },
+    {
+     "kind": "lab",
+     "name": "lactate",
+     "value": 3.4,
+     "flag": "high"
+    }
+   ],
+   "segments": [
+    {
+     "text": "Nurse's assessment: "
+    },
+    {
+     "text": "Temperature is 38.8 °C [101.8 °F] and the heart rate is 118/min.",
+     "key": true,
+     "why": "A new fever with a fast heart rate on day 3 suggests infection, possibly from a leak at the bowel join."
+    },
+    {
+     "text": " "
+    },
+    {
+     "text": "The incision edges are together, with a small amount of dry, clear drainage on the dressing.",
+     "key": false,
+     "why": "This is a normal healing incision."
+    },
+    {
+     "text": " "
+    },
+    {
+     "text": "The abdomen is rigid and very tender, and the client guards it when touched.",
+     "key": true,
+     "why": "A rigid, tender abdomen suggests peritonitis, which is an emergency."
+    },
+    {
+     "text": " "
+    },
+    {
+     "text": "The client reports mild incisional pain (3/10) that is relieved by acetaminophen.",
+     "key": false,
+     "why": "Mild pain that responds to a pain medicine is expected."
+    },
+    {
+     "text": " "
+    },
+    {
+     "text": "Blood pressure is 96/58 mmHg and urine output is 20 mL per hour.",
+     "key": true,
+     "why": "Low blood pressure and low urine output show that the circulation is failing (sepsis)."
+    },
+    {
+     "text": " "
+    },
+    {
+     "text": "The client sat in a chair for 20 minutes this morning.",
+     "key": false,
+     "why": "Sitting out of bed is expected and is a good sign."
+    },
+    {
+     "text": " "
+    },
+    {
+     "text": "White blood cells are 19.6 × 10⁹/L and lactate is 3.4 mmol/L.",
+     "key": true,
+     "why": "A very high white cell count and a raised lactate support a serious infection with poor tissue perfusion."
+    }
+   ],
+   "rationale": "A new fever, a fast heart rate, a rigid abdomen, low blood pressure, low urine output, a high white cell count and a raised lactate on day 3 suggest peritonitis and sepsis, possibly from a leak at the bowel join. The nurse reports it immediately, because these are the cues that must be recognized before anything else.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pa-unexp-03",
+   "categoryId": "physiological-adaptation",
+   "topicId": "physiological-adaptation--unexpected-response-to-therapies",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "physiological-adaptation--unexpected-response-to-therapies--p03"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "nursing-process",
+   "type": "sata",
+   "difficulty": 3,
+   "stem": "A client on day 5 in the hospital has an indwelling urinary catheter and now has a fever, cloudy urine and discomfort over the bladder. The provider diagnoses a catheter-associated urinary tract infection. Which actions help the client's recovery? Select all that apply.",
+   "options": [
+    "Ask the provider whether the catheter can be removed or replaced.",
+    "Collect a urine culture, if ordered, before the first antibiotic dose, and give the antibiotic on time.",
+    "Encourage oral fluids unless the client is on a fluid restriction.",
+    "Give perineal care and keep the drainage bag below the level of the bladder.",
+    "Clamp the catheter for a few hours to exercise the bladder.",
+    "Irrigate the catheter with saline every day."
+   ],
+   "optionRationales": [
+    "Correct. The catheter is the source of the infection, so it should be removed as soon as it is not needed.",
+    "Correct. A culture before antibiotics identifies the germ, and timely doses treat the infection.",
+    "Correct. Fluids help flush the urinary tract.",
+    "Correct. Good hygiene and drainage prevent more germs from entering.",
+    "Incorrect. Clamping can let urine and germs back up, and it is not recommended.",
+    "Incorrect. Routine irrigation can introduce germs and is not recommended."
+   ],
+   "key": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "rationale": "Recovery from a catheter-associated urinary tract infection depends on removing the catheter when possible, giving antibiotics, keeping up fluids and keeping the closed drainage system clean.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pa-unexp-04",
+   "categoryId": "physiological-adaptation",
+   "topicId": "physiological-adaptation--unexpected-response-to-therapies",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "physiological-adaptation--unexpected-response-to-therapies--p02"
+   ],
+   "cjStep": "analyze-cues",
+   "integratedProcess": "clinical-judgment",
+   "type": "trend",
+   "difficulty": 4,
+   "stem": "A client has received a heparin infusion for a pulmonary embolism. For each measure, select the trend.",
+   "exhibit": {
+    "title": "Laboratory results and observations",
+    "columns": [
+     "Measure",
+     "Day 1",
+     "Day 3",
+     "Day 5",
+     "Day 7"
+    ],
+    "rows": [
+     [
+      "Platelet count (× 10⁹/L)",
+      "245",
+      "210",
+      "150",
+      "85"
+     ],
+     [
+      "aPTT (seconds; the target is 45 to 75)",
+      "62",
+      "58",
+      "64",
+      "60"
+     ],
+     [
+      "Hemoglobin (g/L)",
+      "132",
+      "131",
+      "129",
+      "128"
+     ],
+     [
+      "New skin lesions at heparin injection sites (number)",
+      "0",
+      "0",
+      "1",
+      "3"
+     ]
+    ]
+   },
+   "checks": [
+    {
+     "kind": "lab",
+     "name": "platelets",
+     "value": 85,
+     "flag": "low"
+    },
+    {
+     "kind": "lab",
+     "name": "platelets",
+     "value": 245,
+     "flag": "normal"
+    }
+   ],
+   "cols": [
+    "Improving",
+    "No change",
+    "Worsening"
+   ],
+   "rows": [
+    {
+     "text": "Platelet count",
+     "key": 2,
+     "why": "The platelets have fallen by about two thirds, which is a warning sign of heparin-induced thrombocytopenia."
+    },
+    {
+     "text": "aPTT",
+     "key": 1,
+     "why": "The aPTT has stayed in the target range."
+    },
+    {
+     "text": "Hemoglobin",
+     "key": 1,
+     "why": "The hemoglobin has changed very little, so there is no sign of bleeding."
+    },
+    {
+     "text": "New skin lesions",
+     "key": 2,
+     "why": "New skin lesions at the injection sites can be part of heparin-induced thrombocytopenia."
+    }
+   ],
+   "rationale": "A fall in platelets of more than half, with new skin lesions, after several days of heparin suggests heparin-induced thrombocytopenia, which paradoxically causes clots. The nurse reports it at once, expects heparin to be stopped and another anticoagulant to be used, and watches for signs of new clots.",
+   "needsReview": false
+  }
+ ]
+}

@@ -7,7 +7,7 @@ A mobile-first study app for the NCLEX-RN: the official Client Needs syllabus wi
 ## Files
 - `index.html`, `css/style.css`, `js/*.js`: the app
 - `data/*.json`: syllabus, questions, study plan, Canada roadmap, quick reference, exam guide
-- `data/questions/`: question banks per category (10 question types incl. calculations; a rationale for every option; dosage answers recomputed by the tests)
+- `data/questions/`: question banks per category (10 question types incl. calculations and ECG strips; a rationale for every option; dosage, ABG, lab and ECG answers re-checked by the tests)
 - `source/nclex-2026-syllabus.json`: the official 2026 NCLEX-RN Test Plan syllabus data (source of truth; `data/syllabus.json` is an exact copy)
 - `sw.js`: offline support (bump its `VERSION` on every change)
 - `tests/`: `node tests/check-data.js` and `node tests/browser-test.js`
