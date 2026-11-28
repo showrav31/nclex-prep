@@ -4,7 +4,7 @@
 This website is my wife's **main** place to prepare for the NCLEX-RN. She is a 4th-year nursing student in Bangladesh, sitting the exam around mid-2028, and will then work as an RN in Canada. She mostly uses her **Android phone**, sometimes on **slow internet**.
 
 ## Rules
-- **Fast on a mid-range Android**: plain JS, no frameworks or big libraries, render only the visible screen. (Now: ~500 KB uncompressed; the syllabus is 168 KB and the Management of Care questions 117 KB, about 23 KB and 28 KB gzipped; ~0.35 s load with a 4× slower CPU.)
+- **Fast on a mid-range Android**: plain JS, no frameworks or big libraries, render only the visible screen. (Now: ~580 KB uncompressed; the syllabus is 168 KB and the two question banks 118 KB and 75 KB, all compressing to a fraction of that on GitHub Pages; ~0.32 s load with a 4× slower CPU.)
 - **Dark mode**: use the colour tokens in `:root` (`var(--card)`, `var(--ink)` …), never hard-coded colours.
 - **Mobile-first**: design for a small Android screen first, then scale up.
 - **Simple and friendly** design, in **plain English**.
@@ -59,13 +59,13 @@ The site lives under the `/nclex-prep/` subpath, not the domain root.
 - `js/syllabus.js` — syllabus screen: area → category → topic rows, the topic page (learning-point checklist, linked activity statements, note, "Practise this topic"), weighted progress, "About the test plan". Short category labels (`CAT_SHORT`) live here: add one for any new category.
 - Study tools, one file each, loaded after `app.js`: `flashcards.js` (spaced repetition), `notes.js`, `mistakes.js`, `timer.js` (study timer + weekly chart), `badges.js`, `settings.js` (dark mode, text size, backup/restore, reset).
 - `source/nclex-2026-syllabus.json` — the official syllabus data (never edit). Not cached by the service worker.
-- `js/qtypes.js` — question engine: loads/normalizes questions, draws all 8 question types, scoring and partial credit, "why each choice" review.
-- `data/questions/<categoryId>.json` — the question bank for one category, in the new format (see **Question bank** below). Today only `management-of-care.json` (64 questions). Add a file per category, and list it in `QUESTION_FILES` in `js/app.js` and in `FILES` in `sw.js`.
+- `js/qtypes.js` — question engine: loads/normalizes questions, draws all 10 question types (incl. numeric calculations), scoring and partial credit, "why each choice" review.
+- `data/questions/<categoryId>.json` — the question bank for one category, in the new format (see **Question bank** below). Today `management-of-care.json` (64 questions) and `pharmacological-parenteral.json` (36 questions). Add a file per category, and list it in `QUESTION_FILES` in `js/app.js` and in `FILES` in `sw.js`.
 - `data/questions.json` — the 34 older questions (older, simpler format; still loaded and converted by `normQ`). Leave as is.
 - `data/legacy-topic-map.json` — old (pre-2026-syllabus) topic id → new id map, used by the v5 → v6 migration. Never edit it.
 - `data/*.json` — content: `syllabus` (copy of the source), `questions`, `plan`, `canada`, `reference` (labs, drugs, isolation, high-alert meds, vital signs), `exam-guide`. Flashcard decks are built from `reference` + `exam-guide.priority`; each item's `id` is its card ID.
 - `sw.js` — service worker for offline use. **Bump `VERSION` in `sw.js` whenever any app file changes**, and add new files to its `FILES` list.
-- `tests/` — `check-data.js` (content checks) and `browser-test.js` (Playwright, phone size). Not part of the app.
+- `tests/` — `check-data.js` (content checks), `calc.js` (recomputes dosage calculations, used by the checks) and `browser-test.js` (Playwright, phone size). Not part of the app.
 
 ## Saved progress (never lose it)
 - One `localStorage` key: `nclexDash2`. Never rename it. Schema has a version field `v` (now **6**); when the shape changes, add a step to `migrate()` in `js/store.js` and a test case in `tests/browser-test.js`.
@@ -78,7 +78,7 @@ The site lives under the `/nclex-prep/` subpath, not the domain root.
 
 ## Question bank
 Question files `data/questions/<categoryId>.json` look like `{ "categoryId": "...", "questions": [ ... ] }`. Every question has:
-`id` (stable, `q-…`), `categoryId`, `topicId`, `secondaryTopicIds[]`, `learningPointIds[]` (official ids; the first is the main one), `cjStep` (a clinical judgment step id or `null`), `integratedProcess` (id), `type`, `difficulty` (1 to 5), `stem`, optional `exhibit` (`{title, text}` or `{title, columns, rows}`), `rationale` (why the key is right), `needsReview` (true/false, plus a `reviewNote` saying what to check when true).
+`id` (stable, `q-…`), `categoryId`, `topicId`, `secondaryTopicIds[]`, `learningPointIds[]` (official ids; the first is the main one), `cjStep` (a clinical judgment step id or `null`), `integratedProcess` (id), `type`, `difficulty` (1 to 5), `stem`, optional `exhibit` (`{title, text}` or `{title, columns, rows}`), `rationale` (why the key is right), `needsReview` (true/false; when true also `reviewKind` and `reviewNote`, see below).
 Type fields:
 - `mcq`: `options[]`, `key` (index), `optionRationales[]` (one per option).
 - `sata`: `options[]`, `key` (array of indexes), `optionRationales[]`.
@@ -88,9 +88,16 @@ Type fields:
 - `highlight`: `segments[]`; plain text is `{text}`, tappable text is `{text, key: true|false, why}`.
 - `dragdrop`: `mode: "order"` with `items[{text, why}]` shown in a mixed order and `key[]` (key[position] = index of the item that belongs there); or `mode: "sort"` with `bins[]` and `items[{text, key (bin index), why}]`.
 - `bowtie`: `condition`, `actions`, `parameters`, each `{prompt, options[], key|keys[], optionRationales[]}` (1 condition, 2 actions, 2 parameters).
+- `numeric` (calculation, not a Next Gen type): she types a number. Fields: `unit`, `key` (number), `rounding: {decimals, rule}` (the `rule` sentence, e.g. "Round to one decimal place.", must also appear in the `stem`), `calc: {formula, inputs{}, steps[{name, label, expr, value, show}], result}`, `commonErrors[{expr, value, why}]` (typical wrong answers; `why` completes "you …").
+  Accepted answers: the key, or any more precise number that rounds to the key under `rounding.decimals` (half up). A decimal comma is read as a point.
 Text is plain; `**bold**` is allowed. Question ids are stable: **never change or reuse one** (My mistakes is keyed by it).
-**Partial credit** (in `scoreQ`, `js/qtypes.js`): mcq all-or-nothing; sata and highlight plus/minus (+1 right, −1 wrong, min 0); matrix, trend, sort 1 point per row/item; dropdown 1 per box; order 1 per item in the right place; bowtie 1 per right choice out of 5 (wrong choices score 0). A question counts as correct only when every point is earned.
-**Writing questions**: original (never copy the test plan or a commercial bank), entry-level RN scope, generic drug names, lab values with units, glucose in both mmol/L and mg/dL, temperatures in °C with °F, Canadian-friendly wording. At least 4 questions per topic covering different learning points, and at least 40% Next Gen types (matrix, dropdown, highlight, dragdrop, bowtie, trend). Every wrong option needs a reason. Set `needsReview: true` (with a `reviewNote`) when not fully sure, or when the answer depends on province/territory rules; the app shows these to her as "waiting for a clinical check", and they should be listed to the user after each task.
+**Partial credit** (in `scoreQ`, `js/qtypes.js`): mcq all-or-nothing; sata and highlight plus/minus (+1 right, −1 wrong, min 0); matrix, trend, sort 1 point per row/item; dropdown 1 per box; order 1 per item in the right place; bowtie 1 per right choice out of 5 (wrong choices score 0). numeric all-or-nothing. A question counts as correct only when every point is earned.
+**Dosage calculations are verified by code.** `tests/calc.js` recomputes every `calc` (steps use only numbers, + − × ÷, brackets and names from `inputs` or earlier steps; nothing else is evaluated) and `tests/check-data.js` fails if a step value, the "working" text (`show`), the key, a rounding rule or a common error is wrong. Never type `value`/`show` by hand: build them with `calc.runCalc` (the question-writing tool does). Don't use an exact answer that sits on a rounding boundary (e.g. 2.5 to a whole number). Cover unit conversions (mg/mcg/g, mL/L, kg/lb), weight-based doses, mL/h and gtt/min, and say the rounding rule in the stem ("Round only the final answer").
+**Unit pairs are checked too**: any "X mmol/L [Y mg/dL]", "X °C [Y °F]", "X ng/mL [Y nmol/L]", "X g/L [Y g/dL]" or "X mmol/L [X mEq/L]" in a question must be arithmetically right (the test scans all question text).
+**needsReview has two kinds** (`reviewKind`):
+- `"regional"`: the NCLEX model may differ from provincial/Canadian practice, or the question relies on US-only vs Canadian practice (e.g. controlled-substance rules, scope of practice, substitute decision-makers). She sees "NCLEX model: provincial rules may differ". **The detail must be in the `rationale`** (a test checks it mentions provincial/Canadian/US practice) and `reviewNote` says what to check.
+- `"clinical"`: real doubt about the clinical answer. She sees "Waiting for a clinical check". Use it only for real doubt.
+**Writing questions**: original (never copy the test plan or a commercial bank), entry-level RN scope, generic drug names, lab values with units, glucose in both mmol/L and mg/dL, temperatures in °C with °F, Canadian-friendly wording. At least 4 questions per topic covering different learning points, and at least 40% Next Gen types (matrix, dropdown, highlight, dragdrop, bowtie, trend). Every wrong option needs a reason. Set `needsReview: true` (with `reviewKind` and `reviewNote`) when not fully sure or when the answer depends on province/territory rules, and list the flagged questions to the user after each task. Prefer drugs that exist in both Canada and the US; give units in both systems.
 
 ## Content order and IDs
 - Content can be **reordered, inserted or removed** safely.

@@ -450,8 +450,9 @@
      "why": "Evaluating care and revising the plan are RN responsibilities."
     }
    ],
-   "rationale": "Assign tasks to the staff member who has the skills and legal scope, and keep assessment, teaching new content and evaluation of the plan with the RN.",
+   "rationale": "Assign tasks to the staff member who has the skills and legal scope, and keep assessment, teaching new content and evaluation of the plan with the RN. Provincial rules may differ: in Canada, what a practical nurse (LPN/RPN) or a care aide may do varies by province and territory. This question uses the NCLEX RN / LPN / UAP model.",
    "needsReview": true,
+   "reviewKind": "regional",
    "reviewNote": "Scope of practice for practical nurses and care aides differs by province or territory. This item uses the NCLEX RN / LPN / UAP model. Please check it against the Canadian regulator's guidance."
   },
   {
@@ -1956,8 +1957,9 @@
     "Incorrect. The provider explains the procedure and obtains consent, but cannot consent on the client's behalf."
    ],
    "key": 2,
-   "rationale": "When a client lacks capacity, the legally authorized substitute decision-maker (identified through law and facility policy) gives informed consent.",
+   "rationale": "When a client lacks capacity, the legally authorized substitute decision-maker (identified through law and facility policy) gives informed consent. Provincial rules may differ: in Canada, who may act as substitute decision-maker, and in what order, is set by provincial or territorial law and facility policy.",
    "needsReview": true,
+   "reviewKind": "regional",
    "reviewNote": "Who may act as substitute decision-maker and in what order is set by provincial or territorial law. Please check this against Canadian rules."
   },
   {
@@ -2370,8 +2372,9 @@
      "why": "Only the client (or the legal substitute decision-maker) can give consent."
     }
    ],
-   "rationale": "Nurses must work within the legal scope of practice. Assessment, nursing care, teaching and delegation are within scope, but medical diagnosis and signing consent for a client are not.",
+   "rationale": "Nurses must work within the legal scope of practice. Assessment, nursing care, teaching and delegation are within scope, but medical diagnosis and signing consent for a client are not. Provincial rules may differ: RN scope of practice varies between Canadian provinces and territories (for example, ordering some tests or prescribing with additional authorization). This question uses the usual NCLEX model.",
    "needsReview": true,
+   "reviewKind": "regional",
    "reviewNote": "RN scope of practice varies between provinces and territories (for example, ordering some tests or prescribing with additional authorization). Please check this item against the Canadian regulator."
   },
   {

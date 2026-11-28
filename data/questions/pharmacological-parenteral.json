@@ -1,0 +1,1808 @@
+{
+ "categoryId": "pharmacological-parenteral",
+ "questions": [
+  {
+   "id": "q-pharm-adverse-01",
+   "categoryId": "pharmacological-parenteral",
+   "topicId": "pharmacological-parenteral--adverse-effects-contraindications-side-effects-interactions",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "pharmacological-parenteral--adverse-effects-contraindications-side-effects-interactions--p08"
+   ],
+   "cjStep": "analyze-cues",
+   "integratedProcess": "clinical-judgment",
+   "type": "mcq",
+   "difficulty": 3,
+   "stem": "A 68-year-old client with atrial fibrillation takes warfarin. Five days ago the client started ciprofloxacin for a urinary tract infection. This morning the INR is 5.4 (the usual target is 2.0 to 3.0). The client has no bleeding, and the blood pressure is normal. Which action should the nurse take first?",
+   "options": [
+    "Give the scheduled warfarin dose and recheck the INR tomorrow.",
+    "Give vitamin K intravenously right away.",
+    "Hold the warfarin dose until the provider has been contacted, and report the INR and the new antibiotic.",
+    "Tell the client to stop taking the ciprofloxacin without calling anyone."
+   ],
+   "optionRationales": [
+    "Incorrect. The INR is far above the target, so another dose raises the risk of bleeding. Ciprofloxacin can increase the effect of warfarin.",
+    "Incorrect. Vitamin K is the antidote for warfarin, but it is given on the provider's order, and IV vitamin K is kept for serious bleeding. This client is not bleeding.",
+    "Correct. The antibiotic is a likely cause of the rise in INR. The provider decides on the dose, repeat INR and whether vitamin K is needed.",
+    "Incorrect. Stopping an antibiotic is the prescriber's decision, and the infection would be left untreated."
+   ],
+   "key": 2,
+   "rationale": "Many antibiotics, including ciprofloxacin, increase the effect of warfarin and raise the INR. An INR of 5.4 is well above 2.0 to 3.0, so the bleeding risk is high even though the client is not bleeding now. The nurse holds the dose and notifies the provider.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pharm-adverse-02",
+   "categoryId": "pharmacological-parenteral",
+   "topicId": "pharmacological-parenteral--adverse-effects-contraindications-side-effects-interactions",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "pharmacological-parenteral--adverse-effects-contraindications-side-effects-interactions--p04"
+   ],
+   "cjStep": "recognize-cues",
+   "integratedProcess": "nursing-process",
+   "type": "sata",
+   "difficulty": 3,
+   "stem": "A 74-year-old client with heart failure takes digoxin 0.125 mg daily and furosemide. The client reports nausea, poor appetite and seeing yellow-green halos around lights. Which findings indicate digoxin toxicity or increase the risk of it? Select all that apply.",
+   "options": [
+    "Apical heart rate 48/min",
+    "Serum potassium 3.1 mmol/L [3.1 mEq/L]",
+    "Serum digoxin level 3.1 ng/mL [4.0 nmol/L]",
+    "Serum potassium 4.4 mmol/L [4.4 mEq/L]",
+    "Apical heart rate 76/min",
+    "Serum digoxin level 1.0 ng/mL [1.3 nmol/L]"
+   ],
+   "optionRationales": [
+    "Correct. Bradycardia is a common sign of digoxin toxicity.",
+    "Correct. Low potassium (often from furosemide) makes digoxin toxicity more likely.",
+    "Correct. The usual therapeutic range is about 0.5 to 2.0 ng/mL [0.6 to 2.6 nmol/L], so this level is toxic.",
+    "Incorrect. This is a normal potassium level.",
+    "Incorrect. A normal heart rate does not suggest toxicity.",
+    "Incorrect. This level is within the usual therapeutic range."
+   ],
+   "key": [
+    0,
+    1,
+    2
+   ],
+   "rationale": "Digoxin has a narrow safe range. Nausea, visual changes (such as yellow-green halos) and a slow heart rate point to toxicity, and low potassium makes it more likely. The nurse holds the dose and reports the findings and laboratory results to the provider.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pharm-adverse-03",
+   "categoryId": "pharmacological-parenteral",
+   "topicId": "pharmacological-parenteral--adverse-effects-contraindications-side-effects-interactions",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "pharmacological-parenteral--adverse-effects-contraindications-side-effects-interactions--p09"
+   ],
+   "cjStep": "generate-solutions",
+   "integratedProcess": "clinical-judgment",
+   "type": "dragdrop",
+   "difficulty": 3,
+   "stem": "For each situation, select the antidote or treatment the provider is most likely to order. The nurse's first priority is always the airway, breathing and circulation.",
+   "mode": "sort",
+   "bins": [
+    "Protamine sulfate",
+    "Vitamin K (phytonadione)",
+    "Naloxone",
+    "Digoxin immune fab",
+    "Glucagon or IV dextrose"
+   ],
+   "items": [
+    {
+     "text": "A heparin infusion error: the aPTT is 150 seconds and the client has new bleeding from the IV site.",
+     "key": 0,
+     "why": "Protamine sulfate reverses heparin. The aPTT is the laboratory test used to monitor heparin."
+    },
+    {
+     "text": "Warfarin: the INR is 9.0 and the client has bleeding gums.",
+     "key": 1,
+     "why": "Vitamin K helps the liver make clotting factors again. (For life-threatening bleeding, other products may be added.)"
+    },
+    {
+     "text": "Morphine: the client is hard to wake and the respiratory rate is 6/min.",
+     "key": 2,
+     "why": "Naloxone reverses opioid effects, including respiratory depression."
+    },
+    {
+     "text": "Digoxin: serious bradycardia with a digoxin level of 5.2 ng/mL [6.7 nmol/L].",
+     "key": 3,
+     "why": "Digoxin immune fab binds digoxin and is used for life-threatening toxicity."
+    },
+    {
+     "text": "Insulin: the blood glucose is 2.1 mmol/L [38 mg/dL] and the client cannot swallow safely.",
+     "key": 4,
+     "why": "A client who cannot swallow safely needs glucagon or IV dextrose, not food or juice by mouth."
+    },
+    {
+     "text": "Hydromorphone by patient-controlled analgesia: the client does not respond to voice and the respiratory rate is 5/min.",
+     "key": 2,
+     "why": "This is opioid-induced respiratory depression. Naloxone is the antidote."
+    }
+   ],
+   "rationale": "Knowing the antidote for each high-alert medicine, and the test that monitors it (aPTT for heparin, INR for warfarin, drug level for digoxin), lets the nurse act quickly. The nurse supports breathing and circulation and gives the antidote on the provider's order.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pharm-adverse-04",
+   "categoryId": "pharmacological-parenteral",
+   "topicId": "pharmacological-parenteral--adverse-effects-contraindications-side-effects-interactions",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "pharmacological-parenteral--adverse-effects-contraindications-side-effects-interactions--p03"
+   ],
+   "cjStep": "recognize-cues",
+   "integratedProcess": "clinical-judgment",
+   "type": "highlight",
+   "difficulty": 3,
+   "stem": "A client received the first IV dose of ceftriaxone 10 minutes ago. Highlight the findings in the nurse's note that suggest a serious allergic reaction needing immediate action.",
+   "segments": [
+    {
+     "text": "Nurse's note: "
+    },
+    {
+     "text": "Hives are spreading across the chest and arms.",
+     "key": true,
+     "why": "Hives soon after a new drug are a key sign of an allergic reaction."
+    },
+    {
+     "text": " "
+    },
+    {
+     "text": "The client has mild nausea and no vomiting.",
+     "key": false,
+     "why": "Mild nausea is a common side effect and is not by itself a sign of an allergic reaction. The nurse should still monitor the client."
+    },
+    {
+     "text": " "
+    },
+    {
+     "text": "The client says the throat feels tight and the voice sounds hoarse.",
+     "key": true,
+     "why": "Throat tightness and hoarseness suggest swelling of the airway, which is life-threatening."
+    },
+    {
+     "text": " "
+    },
+    {
+     "text": "There is mild redness under the tape at the IV site.",
+     "key": false,
+     "why": "Local irritation from tape is not a systemic allergic reaction."
+    },
+    {
+     "text": " "
+    },
+    {
+     "text": "Blood pressure has fallen from 126/78 to 84/50 mmHg.",
+     "key": true,
+     "why": "A sudden drop in blood pressure suggests anaphylaxis."
+    },
+    {
+     "text": " "
+    },
+    {
+     "text": "Temperature is 36.9 °C [98.4 °F].",
+     "key": false,
+     "why": "This temperature is normal and does not indicate an allergic reaction."
+    }
+   ],
+   "rationale": "Hives, throat tightness and low blood pressure soon after a new drug suggest anaphylaxis. The nurse stops the infusion, keeps the IV open with a new bag of 0.9% sodium chloride, calls for urgent help, and gives epinephrine as ordered.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pharm-blood-01",
+   "categoryId": "pharmacological-parenteral",
+   "topicId": "pharmacological-parenteral--blood-and-blood-products",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "pharmacological-parenteral--blood-and-blood-products--p02"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "nursing-process",
+   "type": "mcq",
+   "difficulty": 2,
+   "stem": "An adult client is to receive 1 unit of packed red blood cells. The nurse checks the client's IV access. Which access is the most appropriate to use?",
+   "options": [
+    "A 24-gauge catheter in the back of the hand.",
+    "A 20-gauge catheter in the forearm with brisk blood return and no redness or swelling.",
+    "A catheter that is infusing 5% dextrose in water, with the blood run in through a Y-tubing.",
+    "A catheter at the wrist with bruising and tenderness around the insertion site."
+   ],
+   "optionRationales": [
+    "Incorrect. A very small catheter slows the flow and can damage the red cells. Most policies call for a larger catheter for adults.",
+    "Correct. A large enough catheter in a healthy site allows blood to run safely. The exact size is set by facility policy, often 18 to 20 gauge for adults.",
+    "Incorrect. Dextrose solutions can make red cells clump or burst. Only 0.9% sodium chloride is compatible with blood.",
+    "Incorrect. The site must be intact. A painful or bruised site may be leaking and could be infiltrated."
+   ],
+   "key": 1,
+   "rationale": "Blood products need a patent, appropriately sized catheter in an intact site, and only 0.9% sodium chloride may be run with them.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pharm-blood-02",
+   "categoryId": "pharmacological-parenteral",
+   "topicId": "pharmacological-parenteral--blood-and-blood-products",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "pharmacological-parenteral--blood-and-blood-products--p01"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "nursing-process",
+   "type": "dragdrop",
+   "difficulty": 3,
+   "stem": "The nurse is preparing to start a red blood cell transfusion. Place the steps in the correct order.",
+   "mode": "order",
+   "items": [
+    {
+     "text": "Start the transfusion slowly and stay with the client for the first 15 minutes, watching for a reaction.",
+     "why": "Most serious reactions begin early, so the start is slow and watched closely."
+    },
+    {
+     "text": "At the bedside, check the blood bag, the blood product record and the client's identification band with a second qualified person.",
+     "why": "The two-person identity check prevents transfusing the wrong blood and is done at the bedside with the client's band."
+    },
+    {
+     "text": "Prime the blood tubing (with filter) with 0.9% sodium chloride, then collect the blood from the blood bank.",
+     "why": "Everything is ready at the bedside before the blood is picked up."
+    },
+    {
+     "text": "Take vital signs again as the policy states and adjust the rate as ordered if the client is stable.",
+     "why": "Ongoing monitoring continues throughout the transfusion."
+    },
+    {
+     "text": "Confirm the order and the consent, check the IV site and take baseline vital signs before the blood is collected.",
+     "why": "Preparation is done first, because blood must be started within a short time after it leaves the blood bank."
+    }
+   ],
+   "key": [
+    4,
+    2,
+    1,
+    0,
+    3
+   ],
+   "rationale": "Safe transfusion follows a fixed sequence: prepare the client and equipment, do the two-person identity check at the bedside, start slowly with close observation, and continue to monitor.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pharm-blood-03",
+   "categoryId": "pharmacological-parenteral",
+   "topicId": "pharmacological-parenteral--blood-and-blood-products",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "pharmacological-parenteral--blood-and-blood-products--p04"
+   ],
+   "cjStep": "analyze-cues",
+   "integratedProcess": "clinical-judgment",
+   "type": "matrix",
+   "difficulty": 4,
+   "stem": "For each client finding during or after a blood transfusion, select the most likely type of reaction. (For any suspected reaction, the nurse stops the transfusion, keeps the IV open with 0.9% sodium chloride using new tubing and tells the provider.)",
+   "cols": [
+    "Acute hemolytic",
+    "Febrile non-hemolytic",
+    "Mild allergic",
+    "Circulatory overload"
+   ],
+   "rows": [
+    {
+     "text": "Ten minutes into the transfusion, the client has back pain, chills, fever and dark red urine.",
+     "key": 0,
+     "why": "Back pain, chills, fever and red-brown urine suggest destruction of red cells from incompatible blood. This is a medical emergency."
+    },
+    {
+     "text": "After 40 minutes the temperature rises by 1.5 °C with chills, and there are no other new findings.",
+     "key": 1,
+     "why": "A rise in temperature with chills and no other signs suggests a febrile non-hemolytic reaction. A hemolytic reaction must still be ruled out."
+    },
+    {
+     "text": "The client develops itchy hives on the arms. Breathing, blood pressure and heart rate are unchanged.",
+     "key": 2,
+     "why": "Hives and itching without airway or blood pressure changes suggest a mild allergic reaction."
+    },
+    {
+     "text": "An 82-year-old client with heart failure has new shortness of breath, crackles and distended neck veins near the end of a fast transfusion.",
+     "key": 3,
+     "why": "A large volume given quickly to a client with a weak heart overloads the circulation."
+    }
+   ],
+   "rationale": "Recognizing the pattern of findings helps the nurse report accurately. Whatever the type, the first step is to stop the transfusion and keep the IV open with 0.9% sodium chloride.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pharm-blood-04",
+   "categoryId": "pharmacological-parenteral",
+   "topicId": "pharmacological-parenteral--blood-and-blood-products",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "pharmacological-parenteral--blood-and-blood-products--p03"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "communication-documentation",
+   "type": "dropdown",
+   "difficulty": 2,
+   "stem": "A 1-unit transfusion of packed red blood cells has finished. Before the transfusion, the client's hemoglobin was 68 g/L [6.8 g/dL]. The nurse completes the record.",
+   "template": "The nurse should document {1} and {2}.",
+   "blanks": [
+    {
+     "options": [
+      "the product and unit number, the start and end times, the volume given, and the vital signs before, during and after",
+      "only that the blood was given without problems",
+      "the donor's name and address"
+     ],
+     "key": 0,
+     "why": "A complete record includes what was given, when, how much, and the monitoring. \"Without problems\" is too vague, and donor identity is confidential and not documented."
+    },
+    {
+     "options": [
+      "the client's response, any reaction and the actions taken, and the two people who completed the identity check",
+      "that no more blood tests are needed because the unit was given",
+      "the reason the client's hemoglobin was low, as the nurse's own diagnosis"
+     ],
+     "key": 0,
+     "why": "Evaluating the response and recording who verified the product are part of the record. A follow-up hemoglobin is usually ordered, and the nurse does not make medical diagnoses."
+    }
+   ],
+   "rationale": "Documentation of a transfusion must be complete: the product, the times, the volume, the checks, the vital signs and the client's response.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pharm-central-01",
+   "categoryId": "pharmacological-parenteral",
+   "topicId": "pharmacological-parenteral--central-venous-access-devices",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "pharmacological-parenteral--central-venous-access-devices--p03"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "clinical-judgment",
+   "type": "mcq",
+   "difficulty": 4,
+   "stem": "A client with a central venous catheter in the right subclavian vein suddenly becomes short of breath, with chest pain and a heart rate of 128/min, just after the IV tubing came apart at the catheter hub. What should the nurse do first?",
+   "options": [
+    "Flush the catheter with 10 mL of 0.9% sodium chloride to clear the air.",
+    "Help the client sit upright in a chair and reassess in 10 minutes.",
+    "Clamp or pinch the catheter, place the client on the left side with the head lowered, give oxygen and call for help.",
+    "Remove the catheter and hold pressure on the site."
+   ],
+   "optionRationales": [
+    "Incorrect. Flushing could push air farther into the circulation.",
+    "Incorrect. This delays treatment of a possible air embolism, which is life-threatening.",
+    "Correct. Closing the catheter stops more air from entering, and the other actions support breathing and bring help quickly.",
+    "Incorrect. Removing the catheter is not the first step and can let more air enter. The provider decides when to remove it."
+   ],
+   "key": 2,
+   "rationale": "Sudden shortness of breath, chest pain and a fast heart rate after a disconnection suggest an air embolism. The nurse closes the catheter, gives oxygen and calls for help. The traditional teaching is to turn the client onto the left side with the head lowered.",
+   "needsReview": true,
+   "reviewKind": "clinical",
+   "reviewNote": "Left-side-lying, head-down positioning is the traditional NCLEX teaching. Some current guidance questions how much it helps. The first actions (close the catheter, give oxygen, call for help) are standard. Please confirm which teaching you want her to learn."
+  },
+  {
+   "id": "q-pharm-central-02",
+   "categoryId": "pharmacological-parenteral",
+   "topicId": "pharmacological-parenteral--central-venous-access-devices",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "pharmacological-parenteral--central-venous-access-devices--p01"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "teaching-learning",
+   "type": "sata",
+   "difficulty": 2,
+   "stem": "A client is going home with a peripherally inserted central catheter (PICC) for 6 weeks of IV antibiotics. Which instructions should the nurse include? Select all that apply.",
+   "options": [
+    "Keep the dressing clean, dry and in place, and cover it with a waterproof cover when showering.",
+    "Report redness, swelling, pain, drainage or fever to the care team right away.",
+    "Clean your hands before touching the catheter or the dressing.",
+    "Report swelling of the arm, new arm pain or shortness of breath at once.",
+    "Soak your arm in a bath or swimming pool to keep the site clean.",
+    "Lift heavy objects with the PICC arm to keep the arm strong.",
+    "If the dressing gets damp, change it yourself with any clean bandage."
+   ],
+   "optionRationales": [
+    "Correct. A wet or loose dressing increases the risk of infection.",
+    "Correct. These can be signs of a catheter infection.",
+    "Correct. Hand hygiene is the most important way to prevent infection.",
+    "Correct. These can be signs of a blood clot in the arm or lung.",
+    "Incorrect. Soaking exposes the site to germs and loosens the dressing.",
+    "Incorrect. Heavy lifting or strain can move the catheter. The care team will tell the client what activity is safe.",
+    "Incorrect. The dressing must be changed with sterile technique by a trained person. The client should call the care team."
+   ],
+   "key": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "rationale": "Teaching about a central catheter covers keeping the site dry and clean, hand hygiene, and when to report signs of infection or a blood clot.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pharm-central-03",
+   "categoryId": "pharmacological-parenteral",
+   "topicId": "pharmacological-parenteral--central-venous-access-devices",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "pharmacological-parenteral--central-venous-access-devices--p03"
+   ],
+   "cjStep": "analyze-cues",
+   "integratedProcess": "clinical-judgment",
+   "type": "bowtie",
+   "difficulty": 4,
+   "stem": "A client has had a tunneled central venous catheter for 3 weeks and is receiving chemotherapy. During an infusion, the client begins to shake with chills. Review the client data, then complete the diagram by choosing the condition, 2 actions and 2 parameters.",
+   "exhibit": {
+    "title": "Client data",
+    "columns": [
+     "Finding",
+     "Value"
+    ],
+    "rows": [
+     [
+      "Temperature",
+      "38.9 °C [102.0 °F]"
+     ],
+     [
+      "Heart rate",
+      "118/min"
+     ],
+     [
+      "Blood pressure",
+      "98/60 mmHg"
+     ],
+     [
+      "Respiratory rate",
+      "22/min"
+     ],
+     [
+      "Oxygen saturation",
+      "95% on room air"
+     ],
+     [
+      "Catheter exit site",
+      "Red, warm and swollen, with pus-like drainage"
+     ],
+     [
+      "Neutrophil count",
+      "0.4 × 10⁹/L [400/mm³] (very low)"
+     ]
+    ]
+   },
+   "condition": {
+    "prompt": "Condition most likely experienced by the client",
+    "options": [
+     "Central line-associated bloodstream infection",
+     "Air embolism",
+     "Catheter occlusion"
+    ],
+    "key": 0,
+    "optionRationales": [
+     "Correct. Fever, chills, an infected exit site and a very low neutrophil count point to an infection that has reached the bloodstream.",
+     "Incorrect. An air embolism causes sudden shortness of breath and chest pain, not fever and a pus-filled exit site.",
+     "Incorrect. An occlusion makes the catheter hard to flush or draw from. It does not cause fever or an infected exit site."
+    ]
+   },
+   "actions": {
+    "prompt": "Actions the nurse should take (select 2)",
+    "options": [
+     "Notify the provider right away and prepare to collect blood cultures before any antibiotic is given.",
+     "Prepare to give the prescribed IV antibiotics promptly once the cultures have been taken.",
+     "Flush the catheter hard with 0.9% sodium chloride to clear it.",
+     "Give acetaminophen and recheck the temperature in 4 hours.",
+     "Apply a warm compress over the exit site."
+    ],
+    "keys": [
+     0,
+     1
+    ],
+    "optionRationales": [
+     "Correct. Fever with a very low neutrophil count is an emergency, and cultures should be taken before antibiotics.",
+     "Correct. Prompt antibiotics improve survival in infection with a low neutrophil count.",
+     "Incorrect. Forceful flushing could push infected material into the bloodstream.",
+     "Incorrect. Treating only the fever and waiting hides the problem and delays urgent treatment.",
+     "Incorrect. A warm compress does not treat a bloodstream infection and delays care."
+    ]
+   },
+   "parameters": {
+    "prompt": "Parameters the nurse should monitor (select 2)",
+    "options": [
+     "Temperature, heart rate, blood pressure and oxygen saturation",
+     "Level of consciousness and urine output",
+     "Bowel sounds",
+     "Range of motion of the neck",
+     "Appetite"
+    ],
+    "keys": [
+     0,
+     1
+    ],
+    "optionRationales": [
+     "Correct. These show whether the infection is progressing to sepsis.",
+     "Correct. Confusion and low urine output are early signs of poor perfusion.",
+     "Incorrect. Bowel sounds are not a priority here.",
+     "Incorrect. Neck movement is not related to this problem.",
+     "Incorrect. Appetite is not a priority while the client may be developing sepsis."
+    ]
+   },
+   "rationale": "A client with a central catheter, fever and an infected exit site has a catheter-related bloodstream infection until proven otherwise. With a very low neutrophil count it is an emergency: report at once, get cultures, give antibiotics as ordered and monitor for sepsis.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pharm-central-04",
+   "categoryId": "pharmacological-parenteral",
+   "topicId": "pharmacological-parenteral--central-venous-access-devices",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "pharmacological-parenteral--central-venous-access-devices--p02"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "nursing-process",
+   "type": "dragdrop",
+   "difficulty": 3,
+   "stem": "The nurse is changing the transparent dressing on a client's non-tunneled central venous catheter. Place the steps in the correct order.",
+   "mode": "order",
+   "items": [
+    {
+     "text": "Apply the new sterile transparent dressing and label it with the date, time and your initials.",
+     "why": "The new dressing goes on last and is labelled."
+    },
+    {
+     "text": "Clean the skin with chlorhexidine using friction and let it dry completely.",
+     "why": "The skin must be allowed to dry fully so that the antiseptic works."
+    },
+    {
+     "text": "Perform hand hygiene, gather sterile supplies and put on a mask (the client turns the head away or wears a mask).",
+     "why": "Preparation and hand hygiene come first to reduce the chance of contaminating the site."
+    },
+    {
+     "text": "Perform hand hygiene again and put on sterile gloves.",
+     "why": "Hands are cleaned again after handling the old dressing, before touching sterile items."
+    },
+    {
+     "text": "Remove the old dressing carefully, hold the catheter still, and look at the site for redness, swelling, drainage or tenderness.",
+     "why": "The old dressing is removed carefully so the catheter is not pulled out, and the site is assessed."
+    }
+   ],
+   "key": [
+    2,
+    4,
+    3,
+    1,
+    0
+   ],
+   "rationale": "Dressing changes for central catheters follow a sterile sequence to prevent bloodstream infection.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pharm-dosage-01",
+   "categoryId": "pharmacological-parenteral",
+   "topicId": "pharmacological-parenteral--dosage-calculations",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "pharmacological-parenteral--dosage-calculations--p01"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "clinical-judgment",
+   "type": "numeric",
+   "difficulty": 2,
+   "stem": "The provider orders digoxin 0.25 mg by mouth once daily. The pharmacy supplies digoxin tablets of 125 mcg. How many tablets should the nurse give? Round to the nearest whole number.",
+   "unit": "tablets",
+   "rounding": {
+    "decimals": 0,
+    "rule": "Round to the nearest whole number."
+   },
+   "key": 2,
+   "calc": {
+    "formula": "Tablets = ordered dose ÷ dose per tablet, after both are in the same unit (1 mg = 1000 mcg).",
+    "inputs": {
+     "orderMg": 0.25,
+     "tabletMcg": 125
+    },
+    "steps": [
+     {
+      "name": "orderMcg",
+      "label": "Change the ordered dose from mg to mcg",
+      "expr": "orderMg * 1000",
+      "value": 250,
+      "show": "0.25 × 1000 = 250"
+     },
+     {
+      "name": "tablets",
+      "label": "Divide by the dose per tablet",
+      "expr": "orderMcg / tabletMcg",
+      "value": 2,
+      "show": "250 ÷ 125 = 2"
+     }
+    ],
+    "result": "tablets"
+   },
+   "commonErrors": [
+    {
+     "expr": "orderMg / tabletMcg",
+     "value": 0.002,
+     "why": "you divided 0.25 mg by 125 mcg without changing the units to the same unit."
+    },
+    {
+     "expr": "tabletMcg / orderMcg",
+     "value": 0.5,
+     "why": "you turned the division upside down (tablet strength ÷ ordered dose)."
+    },
+    {
+     "expr": "orderMg * 1000 * 1000 / tabletMcg",
+     "value": 2000,
+     "why": "you changed mg to mcg twice."
+    }
+   ],
+   "rationale": "The order is in mg and the tablets are in mcg, so one of them is converted first: 0.25 mg = 250 mcg, and 250 mcg ÷ 125 mcg = 2 tablets. Digoxin is a high-alert medicine with a narrow safe range, so the nurse also checks the apical pulse before giving it.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pharm-dosage-02",
+   "categoryId": "pharmacological-parenteral",
+   "topicId": "pharmacological-parenteral--dosage-calculations",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "pharmacological-parenteral--dosage-calculations--p01"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "clinical-judgment",
+   "type": "numeric",
+   "difficulty": 3,
+   "stem": "A child weighs 33 lb. The provider orders acetaminophen 15 mg/kg by mouth every 6 hours as needed for fever. The liquid contains 160 mg in 5 mL. How many mL should the nurse give for one dose? Round to one decimal place. Round only the final answer.",
+   "unit": "mL",
+   "rounding": {
+    "decimals": 1,
+    "rule": "Round to one decimal place. Round only the final answer."
+   },
+   "key": 7,
+   "calc": {
+    "formula": "Weight in kg = weight in lb ÷ 2.2. Dose (mg) = weight (kg) × dose per kg. Volume (mL) = dose ÷ strength × volume that contains the strength.",
+    "inputs": {
+     "weightLb": 33,
+     "lbPerKg": 2.2,
+     "dosePerKg": 15,
+     "strengthMg": 160,
+     "strengthMl": 5
+    },
+    "steps": [
+     {
+      "name": "weightKg",
+      "label": "Change pounds to kilograms",
+      "expr": "weightLb / lbPerKg",
+      "value": 14.999999999999998,
+      "show": "33 ÷ 2.2 = 15"
+     },
+     {
+      "name": "doseMg",
+      "label": "Dose for this weight",
+      "expr": "weightKg * dosePerKg",
+      "value": 224.99999999999997,
+      "show": "15 × 15 = 225"
+     },
+     {
+      "name": "volumeMl",
+      "label": "Volume that holds this dose",
+      "expr": "doseMg / strengthMg * strengthMl",
+      "value": 7.031249999999999,
+      "show": "225 ÷ 160 × 5 = 7.0312"
+     }
+    ],
+    "result": "volumeMl"
+   },
+   "commonErrors": [
+    {
+     "expr": "weightLb * dosePerKg / strengthMg * strengthMl",
+     "value": 15.46875,
+     "why": "you used the weight in pounds instead of kilograms."
+    },
+    {
+     "expr": "weightLb * lbPerKg * dosePerKg / strengthMg * strengthMl",
+     "value": 34.03125,
+     "why": "you multiplied by 2.2 instead of dividing when you changed pounds to kilograms."
+    }
+   ],
+   "rationale": "Weight-based doses use kilograms: 33 lb ÷ 2.2 = 15 kg. The dose is 15 kg × 15 mg/kg = 225 mg. At 160 mg in 5 mL, 225 mg is 7.03 mL, which rounds to 7.0 mL. Only the final answer is rounded.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pharm-dosage-03",
+   "categoryId": "pharmacological-parenteral",
+   "topicId": "pharmacological-parenteral--dosage-calculations",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "pharmacological-parenteral--dosage-calculations--p01"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "clinical-judgment",
+   "type": "numeric",
+   "difficulty": 3,
+   "stem": "The provider orders 1.5 L of 0.9% sodium chloride IV to infuse over 7 hours using an infusion pump. At what rate should the nurse set the pump? Round to the nearest whole number.",
+   "unit": "mL/h",
+   "rounding": {
+    "decimals": 0,
+    "rule": "Round to the nearest whole number."
+   },
+   "key": 214,
+   "calc": {
+    "formula": "Rate (mL/h) = volume (mL) ÷ time (hours). 1 L = 1000 mL.",
+    "inputs": {
+     "volumeL": 1.5,
+     "hours": 7
+    },
+    "steps": [
+     {
+      "name": "volumeMl",
+      "label": "Change litres to mL",
+      "expr": "volumeL * 1000",
+      "value": 1500,
+      "show": "1.5 × 1000 = 1500"
+     },
+     {
+      "name": "rateMlH",
+      "label": "Divide by the hours",
+      "expr": "volumeMl / hours",
+      "value": 214.28571428571428,
+      "show": "1500 ÷ 7 = 214.2857"
+     }
+    ],
+    "result": "rateMlH"
+   },
+   "commonErrors": [
+    {
+     "expr": "volumeL / hours",
+     "value": 0.214286,
+     "why": "you did not change litres to mL."
+    },
+    {
+     "expr": "volumeMl / (hours * 60)",
+     "value": 3.571429,
+     "why": "you found mL per minute instead of mL per hour."
+    }
+   ],
+   "rationale": "1.5 L = 1500 mL. 1500 mL ÷ 7 hours = 214.3 mL/h, which rounds to 214 mL/h. Infusion pumps are set in mL/h, so the answer is a whole number of mL per hour.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pharm-dosage-04",
+   "categoryId": "pharmacological-parenteral",
+   "topicId": "pharmacological-parenteral--dosage-calculations",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "pharmacological-parenteral--dosage-calculations--p02"
+   ],
+   "cjStep": "analyze-cues",
+   "integratedProcess": "clinical-judgment",
+   "type": "numeric",
+   "difficulty": 4,
+   "stem": "A client weighs 60 kg. The provider orders gentamicin 150 mg IV every 8 hours. The drug reference gives a usual conventional (divided-dose) range of 3 to 5 mg/kg/day. What total daily dose is this order, in mg/kg/day? Round to one decimal place.",
+   "unit": "mg/kg/day",
+   "rounding": {
+    "decimals": 1,
+    "rule": "Round to one decimal place."
+   },
+   "key": 7.5,
+   "calc": {
+    "formula": "Doses per day = 24 ÷ hours between doses. Daily dose (mg) = dose × doses per day. Dose per kg per day = daily dose ÷ weight (kg).",
+    "inputs": {
+     "doseMg": 150,
+     "intervalHours": 8,
+     "weightKg": 60
+    },
+    "steps": [
+     {
+      "name": "dosesPerDay",
+      "label": "Doses in 24 hours",
+      "expr": "24 / intervalHours",
+      "value": 3,
+      "show": "24 ÷ 8 = 3"
+     },
+     {
+      "name": "dailyMg",
+      "label": "Total mg in 24 hours",
+      "expr": "doseMg * dosesPerDay",
+      "value": 450,
+      "show": "150 × 3 = 450"
+     },
+     {
+      "name": "mgPerKgDay",
+      "label": "Divide by the weight",
+      "expr": "dailyMg / weightKg",
+      "value": 7.5,
+      "show": "450 ÷ 60 = 7.5"
+     }
+    ],
+    "result": "mgPerKgDay"
+   },
+   "commonErrors": [
+    {
+     "expr": "doseMg / weightKg",
+     "value": 2.5,
+     "why": "you found the dose per kg for one dose, not for the whole day."
+    },
+    {
+     "expr": "doseMg * dosesPerDay",
+     "value": 450,
+     "why": "you stopped at the total mg per day and did not divide by the weight."
+    }
+   ],
+   "rationale": "Every 8 hours is 3 doses a day: 150 mg × 3 = 450 mg a day. 450 mg ÷ 60 kg = 7.5 mg/kg/day. This is above the range given (3 to 5 mg/kg/day, or 180 to 300 mg a day for this client), so the nurse holds the dose and clarifies the order with the provider or pharmacist before giving it.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pharm-expected-01",
+   "categoryId": "pharmacological-parenteral",
+   "topicId": "pharmacological-parenteral--expected-actions-outcomes",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "pharmacological-parenteral--expected-actions-outcomes--p02"
+   ],
+   "cjStep": "analyze-cues",
+   "integratedProcess": "clinical-judgment",
+   "type": "mcq",
+   "difficulty": 2,
+   "stem": "A client with a deep vein thrombosis has taken warfarin for several days. Which laboratory result shows the expected therapeutic effect of the medication?",
+   "options": [
+    "aPTT 35 seconds (control 30 seconds)",
+    "Platelet count 250 × 10⁹/L",
+    "INR 1.0",
+    "INR 2.4"
+   ],
+   "optionRationales": [
+    "Incorrect. The aPTT is used to monitor heparin, not warfarin.",
+    "Incorrect. A normal platelet count does not measure the effect of warfarin.",
+    "Incorrect. An INR of 1.0 is the normal value for someone who is not on warfarin, so the drug is not yet having its full effect.",
+    "Correct. For most clients on warfarin, including those with a deep vein thrombosis, the target INR is 2.0 to 3.0."
+   ],
+   "key": 3,
+   "rationale": "Warfarin is monitored with the INR (target 2.0 to 3.0 for most conditions). Heparin is monitored with the aPTT.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pharm-expected-02",
+   "categoryId": "pharmacological-parenteral",
+   "topicId": "pharmacological-parenteral--expected-actions-outcomes",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "pharmacological-parenteral--expected-actions-outcomes--p01"
+   ],
+   "cjStep": "generate-solutions",
+   "integratedProcess": "nursing-process",
+   "type": "sata",
+   "difficulty": 2,
+   "stem": "A nurse is about to give a medication that the nurse has never given before. Which information should the nurse review before giving the first dose? Select all that apply.",
+   "options": [
+    "The drug's usual action and why it was ordered for this client.",
+    "The usual dose range and route, and whether the ordered dose is within it.",
+    "The main adverse effects, contraindications and interactions with the client's other medications.",
+    "Any laboratory tests or vital signs to check before the dose or to monitor afterward.",
+    "A coworker's memory of what the drug is for, without checking a reference.",
+    "The drug company's advertising material."
+   ],
+   "optionRationales": [
+    "Correct. The nurse should know what effect to expect and whether it fits the client's condition.",
+    "Correct. This helps catch ordering and calculation errors.",
+    "Correct. This is needed to give the drug safely and to monitor the client.",
+    "Correct. Some drugs have values that must be checked first, such as the heart rate or potassium level.",
+    "Incorrect. Memory can be wrong. A current drug reference or the pharmacist is a reliable source.",
+    "Incorrect. Advertising is not an unbiased or complete source of safety information."
+   ],
+   "key": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "rationale": "Before giving an unfamiliar drug, the nurse uses a reliable source, such as a drug reference or the pharmacist, to learn its action, dose, adverse effects, interactions and monitoring needs.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pharm-expected-03",
+   "categoryId": "pharmacological-parenteral",
+   "topicId": "pharmacological-parenteral--expected-actions-outcomes",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "pharmacological-parenteral--expected-actions-outcomes--p03"
+   ],
+   "cjStep": "evaluate-outcomes",
+   "integratedProcess": "nursing-process",
+   "type": "trend",
+   "difficulty": 3,
+   "stem": "A client with type 2 diabetes started insulin glargine at bedtime 4 weeks ago. At each weekly clinic visit, the nurse reviews the client's home log. For each measure, select the trend.",
+   "exhibit": {
+    "title": "Home log, weeks 1 to 4",
+    "columns": [
+     "Measure",
+     "Wk 1",
+     "Wk 2",
+     "Wk 3",
+     "Wk 4"
+    ],
+    "rows": [
+     [
+      "Average fasting glucose, mmol/L [mg/dL]",
+      "11.8 [212]",
+      "9.6 [173]",
+      "8.1 [146]",
+      "6.9 [124]"
+     ],
+     [
+      "Readings below 4.0 mmol/L [72 mg/dL] (number)",
+      "0",
+      "0",
+      "1",
+      "3"
+     ],
+     [
+      "Missed insulin doses (number)",
+      "2",
+      "1",
+      "0",
+      "0"
+     ],
+     [
+      "Weight (kg)",
+      "92.0",
+      "92.1",
+      "92.0",
+      "92.1"
+     ]
+    ]
+   },
+   "cols": [
+    "Improving",
+    "No change",
+    "Worsening"
+   ],
+   "rows": [
+    {
+     "text": "Fasting glucose",
+     "key": 0,
+     "why": "The average is moving steadily toward the target range."
+    },
+    {
+     "text": "Low glucose readings",
+     "key": 2,
+     "why": "More readings below 4.0 mmol/L [72 mg/dL] are a safety warning: the dose may now be too high."
+    },
+    {
+     "text": "Missed insulin doses",
+     "key": 0,
+     "why": "The client is taking the insulin as prescribed."
+    },
+    {
+     "text": "Weight",
+     "key": 1,
+     "why": "The values stay close to 92 kg, so there is no real trend."
+    }
+   ],
+   "rationale": "The fasting glucose is improving and the client takes the insulin, but the rising number of low readings means hypoglycemia is becoming a risk. The nurse reports this to the provider so that the dose can be reviewed, and reviews how to recognize and treat a low glucose.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pharm-expected-04",
+   "categoryId": "pharmacological-parenteral",
+   "topicId": "pharmacological-parenteral--expected-actions-outcomes",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "pharmacological-parenteral--expected-actions-outcomes--p04"
+   ],
+   "cjStep": "evaluate-outcomes",
+   "integratedProcess": "clinical-judgment",
+   "type": "dropdown",
+   "difficulty": 4,
+   "stem": "A client with a pulmonary embolism is receiving a continuous heparin infusion. The hospital protocol targets an aPTT of 1.5 to 2.5 times the control value. The control value is 30 seconds (so the target is 45 to 75 seconds). The 6-hour aPTT is 38 seconds.",
+   "template": "The aPTT is {1} the target range, so the nurse should {2}.",
+   "blanks": [
+    {
+     "options": [
+      "below",
+      "within",
+      "above"
+     ],
+     "key": 0,
+     "why": "38 seconds is about 1.3 times the control (38 ÷ 30), which is lower than 1.5 times the control (45 seconds). The heparin effect is below the target."
+    },
+    {
+     "options": [
+      "report the result and adjust the infusion according to the heparin protocol or the provider's order",
+      "stop the infusion and give protamine sulfate",
+      "keep the rate the same and recheck in 24 hours"
+     ],
+     "key": 0,
+     "why": "A low aPTT means the client is not fully anticoagulated, so the dose is adjusted according to the protocol. Protamine would reverse the heparin, which is the opposite of what is needed, and waiting 24 hours leaves the client at risk of clot growth."
+    }
+   ],
+   "rationale": "The expected outcome of heparin therapy is an aPTT in the target range. A result below it means the effect is too low, and the dose is adjusted per protocol, with a repeat aPTT as ordered.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pharm-medadmin-01",
+   "categoryId": "pharmacological-parenteral",
+   "topicId": "pharmacological-parenteral--medication-administration",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "pharmacological-parenteral--medication-administration--p13"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "clinical-judgment",
+   "type": "mcq",
+   "difficulty": 3,
+   "stem": "The nurse is preparing a subcutaneous dose of insulin. The hospital policy requires an independent double check for insulin. Which action best follows safe practice?",
+   "options": [
+    "Ask another nurse to sign the medication record after the dose has been given.",
+    "Ask a second qualified nurse to check the insulin type, the dose and the pen or syringe setting independently before it is given, and then document.",
+    "Tell the second nurse the dose that was calculated and ask whether it looks right.",
+    "Skip the check because the nurse has given this dose many times."
+   ],
+   "optionRationales": [
+    "Incorrect. The check must happen before the dose is given. Signing afterward cannot prevent an error.",
+    "Correct. An independent check before giving a high-alert medicine can catch errors in the type, the dose and the device.",
+    "Incorrect. A check is not independent if the checker is told the answer first. The second nurse should work it out and compare.",
+    "Incorrect. Experience does not remove the need for the check. High-alert medicines cause serious harm when errors occur."
+   ],
+   "key": 1,
+   "rationale": "Insulin is a high-alert medicine. An independent double check before giving it, as the facility policy requires, reduces the risk of a serious dosing error.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pharm-medadmin-02",
+   "categoryId": "pharmacological-parenteral",
+   "topicId": "pharmacological-parenteral--medication-administration",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "pharmacological-parenteral--medication-administration--p06"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "clinical-judgment",
+   "type": "matrix",
+   "difficulty": 3,
+   "stem": "A client has a feeding tube and cannot swallow tablets. For each medication, select whether it can be crushed. (The nurse always checks with the pharmacist, who may suggest a liquid form.)",
+   "cols": [
+    "Can be crushed",
+    "Do not crush"
+   ],
+   "rows": [
+    {
+     "text": "Metoprolol tartrate immediate-release tablet",
+     "key": 0,
+     "why": "An immediate-release tablet is designed to dissolve at once, so crushing does not change how it works."
+    },
+    {
+     "text": "Nifedipine extended-release tablet",
+     "key": 1,
+     "why": "Crushing releases the whole dose at once, which can cause a sudden, dangerous drop in blood pressure."
+    },
+    {
+     "text": "Pantoprazole delayed-release (enteric-coated) tablet",
+     "key": 1,
+     "why": "The coating protects the drug from stomach acid. Crushing destroys the coating."
+    },
+    {
+     "text": "Furosemide plain tablet",
+     "key": 0,
+     "why": "A plain tablet can be crushed and mixed with water for a feeding tube."
+    },
+    {
+     "text": "Oxycodone controlled-release tablet",
+     "key": 1,
+     "why": "Crushing releases the whole dose at once and can cause a fatal overdose."
+    }
+   ],
+   "rationale": "Extended-release, controlled-release and enteric-coated forms must not be crushed because crushing changes how and when the drug is released. Plain immediate-release tablets usually can be crushed.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pharm-medadmin-03",
+   "categoryId": "pharmacological-parenteral",
+   "topicId": "pharmacological-parenteral--medication-administration",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "pharmacological-parenteral--medication-administration--p11"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "clinical-judgment",
+   "type": "dropdown",
+   "difficulty": 3,
+   "stem": "A nurse takes a 2 mg/mL hydromorphone vial from the locked medication cabinet and gives the client 0.5 mg IV, as ordered. Part of the drug in the vial is left over.",
+   "template": "The nurse should {1} and then {2}.",
+   "blanks": [
+    {
+     "options": [
+      "have a second licensed nurse watch the unused drug being wasted, and both should sign the record",
+      "pour the unused drug into the sink without anyone watching",
+      "keep the vial in a pocket for the client's next dose"
+     ],
+     "key": 0,
+     "why": "A witness at the waste protects the client, the staff and the supply of a controlled drug. Wasting it alone, or keeping it, leaves room for diversion."
+    },
+    {
+     "options": [
+      "document the dose given and the amount wasted, and make sure the controlled-substance record matches",
+      "wait until the end of the shift to record the waste",
+      "leave the record blank because the dose was small"
+     ],
+     "key": 0,
+     "why": "Controlled drugs must be recorded when they are taken, given and wasted, so that the count is always correct. Delaying or skipping the record is a serious breach."
+    }
+   ],
+   "rationale": "Controlled drugs are kept locked, recorded every time and wasted with a witness. Provincial rules may differ: in Canada the details of witnessing, counts and records come from facility policy and from federal and provincial rules, and U.S. practice differs. The NCLEX tests the common model of a witnessed waste and an accurate record.",
+   "needsReview": true,
+   "reviewKind": "regional",
+   "reviewNote": "Witnessed waste, counts and record-keeping rules for controlled drugs are set by facility policy and by Canadian federal and provincial rules. U.S. rules (federal and state law) differ. Please check against Canadian practice."
+  },
+  {
+   "id": "q-pharm-medadmin-04",
+   "categoryId": "pharmacological-parenteral",
+   "topicId": "pharmacological-parenteral--medication-administration",
+   "secondaryTopicIds": [
+    "pharmacological-parenteral--dosage-calculations"
+   ],
+   "learningPointIds": [
+    "pharmacological-parenteral--medication-administration--p09",
+    "pharmacological-parenteral--dosage-calculations--p01"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "clinical-judgment",
+   "type": "numeric",
+   "difficulty": 4,
+   "stem": "A client's heparin infusion is adjusted according to a protocol. The aPTT is below the target range, and the protocol says to increase the rate by 100 units/h. The current rate is 1,100 units/h. The bag contains 25,000 units of heparin in 500 mL of 5% dextrose in water. At what rate should the nurse set the pump after the increase? (A second nurse will independently check the pump settings.) Round to one decimal place.",
+   "unit": "mL/h",
+   "rounding": {
+    "decimals": 1,
+    "rule": "Round to one decimal place."
+   },
+   "key": 24,
+   "calc": {
+    "formula": "New rate (units/h) = current rate + increase. Concentration (units/mL) = units in the bag ÷ mL in the bag. Pump rate (mL/h) = new rate ÷ concentration.",
+    "inputs": {
+     "currentUnitsH": 1100,
+     "increaseUnitsH": 100,
+     "bagUnits": 25000,
+     "bagMl": 500
+    },
+    "steps": [
+     {
+      "name": "newUnitsH",
+      "label": "New dose rate",
+      "expr": "currentUnitsH + increaseUnitsH",
+      "value": 1200,
+      "show": "1100 + 100 = 1200"
+     },
+     {
+      "name": "unitsPerMl",
+      "label": "Concentration of the bag",
+      "expr": "bagUnits / bagMl",
+      "value": 50,
+      "show": "25000 ÷ 500 = 50"
+     },
+     {
+      "name": "rateMlH",
+      "label": "Pump rate",
+      "expr": "newUnitsH / unitsPerMl",
+      "value": 24,
+      "show": "1200 ÷ 50 = 24"
+     }
+    ],
+    "result": "rateMlH"
+   },
+   "commonErrors": [
+    {
+     "expr": "currentUnitsH / unitsPerMl",
+     "value": 22,
+     "why": "you used the old rate and did not add the 100 units/h increase."
+    },
+    {
+     "expr": "newUnitsH * unitsPerMl",
+     "value": 60000,
+     "why": "you multiplied by the concentration instead of dividing."
+    }
+   ],
+   "rationale": "The new dose is 1,100 + 100 = 1,200 units/h. The bag holds 25,000 ÷ 500 = 50 units/mL. So the pump rate is 1,200 ÷ 50 = 24.0 mL/h. Heparin is a high-alert medicine, so a second nurse independently checks the calculation and the pump settings.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pharm-iv-01",
+   "categoryId": "pharmacological-parenteral",
+   "topicId": "pharmacological-parenteral--parenteral-intravenous-therapies",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "pharmacological-parenteral--parenteral-intravenous-therapies--p06"
+   ],
+   "cjStep": "recognize-cues",
+   "integratedProcess": "clinical-judgment",
+   "type": "mcq",
+   "difficulty": 3,
+   "stem": "A client receiving 0.9% sodium chloride through a forearm IV catheter reports burning at the site. The nurse finds the area cool, pale and swollen, and the infusion is running slowly. What should the nurse do first?",
+   "options": [
+    "Flush the catheter with 10 mL of 0.9% sodium chloride to check that it is working.",
+    "Slow the infusion and recheck the site in 1 hour.",
+    "Stop the infusion, remove the catheter, assess the site and restart the IV in another site as ordered.",
+    "Apply a warm compress and keep the infusion running."
+   ],
+   "optionRationales": [
+    "Incorrect. Flushing a catheter that has infiltrated puts more fluid into the tissue.",
+    "Incorrect. Continuing the infusion into the tissue increases swelling and can damage the tissue.",
+    "Correct. A cool, pale, swollen site with a slow infusion indicates infiltration. The infusion must be stopped and the catheter removed.",
+    "Incorrect. The infusion must be stopped first. Continuing it puts more fluid into the tissue."
+   ],
+   "key": 2,
+   "rationale": "Infiltration (fluid leaking into the tissue) causes a cool, pale, swollen, sometimes painful site and a slowed infusion. The nurse stops the infusion, removes the catheter, assesses and treats the site, and restarts the IV elsewhere.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pharm-iv-02",
+   "categoryId": "pharmacological-parenteral",
+   "topicId": "pharmacological-parenteral--parenteral-intravenous-therapies",
+   "secondaryTopicIds": [
+    "pharmacological-parenteral--dosage-calculations"
+   ],
+   "learningPointIds": [
+    "pharmacological-parenteral--parenteral-intravenous-therapies--p03",
+    "pharmacological-parenteral--dosage-calculations--p01"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "clinical-judgment",
+   "type": "numeric",
+   "difficulty": 3,
+   "stem": "The provider orders 750 mL of lactated Ringer's solution (Ringer's lactate) IV over 6 hours by gravity. The drop factor of the tubing is 15 gtt/mL. At how many drops per minute (gtt/min) should the nurse set the flow? Round to the nearest whole number.",
+   "unit": "gtt/min",
+   "rounding": {
+    "decimals": 0,
+    "rule": "Round to the nearest whole number."
+   },
+   "key": 31,
+   "calc": {
+    "formula": "Drops per minute = volume (mL) × drop factor (gtt/mL) ÷ time (minutes). 1 hour = 60 minutes.",
+    "inputs": {
+     "volumeMl": 750,
+     "dropFactor": 15,
+     "hours": 6
+    },
+    "steps": [
+     {
+      "name": "minutes",
+      "label": "Change hours to minutes",
+      "expr": "hours * 60",
+      "value": 360,
+      "show": "6 × 60 = 360"
+     },
+     {
+      "name": "gttMin",
+      "label": "Volume × drop factor ÷ minutes",
+      "expr": "volumeMl * dropFactor / minutes",
+      "value": 31.25,
+      "show": "750 × 15 ÷ 360 = 31.25"
+     }
+    ],
+    "result": "gttMin"
+   },
+   "commonErrors": [
+    {
+     "expr": "volumeMl * dropFactor / hours",
+     "value": 1875,
+     "why": "you divided by hours instead of minutes."
+    },
+    {
+     "expr": "volumeMl / hours",
+     "value": 125,
+     "why": "you found mL/h and did not use the drop factor."
+    }
+   ],
+   "rationale": "6 hours = 360 minutes. 750 mL × 15 gtt/mL = 11,250 drops. 11,250 ÷ 360 = 31.25, which rounds to 31 gtt/min. Drops cannot be fractions, so the rate is a whole number.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pharm-iv-03",
+   "categoryId": "pharmacological-parenteral",
+   "topicId": "pharmacological-parenteral--parenteral-intravenous-therapies",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "pharmacological-parenteral--parenteral-intravenous-therapies--p01"
+   ],
+   "cjStep": "generate-solutions",
+   "integratedProcess": "nursing-process",
+   "type": "dragdrop",
+   "difficulty": 3,
+   "stem": "For each therapy, select the type of IV access that is usually the most appropriate. The provider's order and the facility policy decide in each case.",
+   "mode": "sort",
+   "bins": [
+    "Peripheral IV (large forearm vein)",
+    "Central venous access device"
+   ],
+   "items": [
+    {
+     "text": "0.9% sodium chloride, 1 L over 8 hours",
+     "key": 0,
+     "why": "An isotonic fluid for a short time is safe through a peripheral vein."
+    },
+    {
+     "text": "An IV antibiotic every 8 hours for 3 days",
+     "key": 0,
+     "why": "A short course of a non-irritating drug can go through a peripheral IV."
+    },
+    {
+     "text": "Parenteral nutrition with a high dextrose concentration",
+     "key": 1,
+     "why": "A very concentrated (hypertonic) solution damages small veins and needs the large flow of a central vein."
+    },
+    {
+     "text": "A chemotherapy drug that can severely damage tissue if it leaks",
+     "key": 1,
+     "why": "A drug that damages tissue (a vesicant) is safer in a central vein with large blood flow."
+    },
+    {
+     "text": "A unit of red blood cells for a client with a 20-gauge catheter in the forearm",
+     "key": 0,
+     "why": "Blood products can run through a peripheral catheter of adequate size."
+    },
+    {
+     "text": "Six weeks of IV antibiotics at home",
+     "key": 1,
+     "why": "A long course needs a reliable, long-term device such as a PICC."
+    }
+   ],
+   "rationale": "Short-term, non-irritating therapy can use a peripheral vein. Concentrated, irritating or long-term therapy needs a central venous access device.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pharm-iv-04",
+   "categoryId": "pharmacological-parenteral",
+   "topicId": "pharmacological-parenteral--parenteral-intravenous-therapies",
+   "secondaryTopicIds": [
+    "pharmacological-parenteral--medication-administration"
+   ],
+   "learningPointIds": [
+    "pharmacological-parenteral--parenteral-intravenous-therapies--p05",
+    "pharmacological-parenteral--medication-administration--p13"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "clinical-judgment",
+   "type": "dropdown",
+   "difficulty": 3,
+   "stem": "A client has a potassium level of 3.0 mmol/L [3.0 mEq/L]. The provider orders potassium chloride in a premixed bag of 0.9% sodium chloride to be given IV.",
+   "template": "Potassium chloride must be {1}, and the nurse should {2}.",
+   "blanks": [
+    {
+     "options": [
+      "premixed by the pharmacy and given by an infusion pump, never by IV push",
+      "drawn up from a concentrated vial at the bedside and pushed slowly",
+      "run by gravity so that it goes in faster"
+     ],
+     "key": 0,
+     "why": "Concentrated potassium given too fast can stop the heart. A premixed bag on a pump controls the rate. Pushing it, or letting it run by gravity, can deliver a deadly dose."
+    },
+    {
+     "options": [
+      "watch the heart rhythm and the IV site for pain or infiltration, and recheck the potassium as ordered",
+      "stop all monitoring once the infusion has started",
+      "increase the rate if the client says the site burns"
+     ],
+     "key": 0,
+     "why": "Potassium irritates veins and affects the heart, so the nurse watches the site, the rhythm and the follow-up level. Burning means the rate may be too fast or the site has a problem, so the nurse slows or stops and checks, never speeds up."
+    }
+   ],
+   "rationale": "Potassium chloride is a high-alert medicine. It is never given by IV push, it is given in a premixed, diluted form on a pump, and the client's heart and IV site are monitored.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pharm-pain-01",
+   "categoryId": "pharmacological-parenteral",
+   "topicId": "pharmacological-parenteral--pharmacological-pain-management",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "pharmacological-parenteral--pharmacological-pain-management--p01"
+   ],
+   "cjStep": "analyze-cues",
+   "integratedProcess": "clinical-judgment",
+   "type": "mcq",
+   "difficulty": 3,
+   "stem": "A client 6 hours after surgery asks for a PRN dose of morphine for pain rated 8/10. The nurse finds the client very drowsy and hard to wake, with a respiratory rate of 8/min and an oxygen saturation of 89% on room air. What should the nurse do first?",
+   "options": [
+    "Give the morphine as ordered because the pain is 8/10.",
+    "Withhold the morphine, stimulate the client, give oxygen and call for urgent help.",
+    "Give half the dose and recheck in 30 minutes.",
+    "Document the findings and give the morphine after the shift change."
+   ],
+   "optionRationales": [
+    "Incorrect. Morphine further slows breathing. This client already shows signs of opioid-related respiratory depression.",
+    "Correct. The priority is breathing. The provider may order naloxone, and the nurse prepares for it.",
+    "Incorrect. Even a half dose can worsen respiratory depression.",
+    "Incorrect. This delays the response to a life-threatening problem."
+   ],
+   "key": 1,
+   "rationale": "Before every opioid dose, the nurse assesses pain, breathing rate and level of sedation. A slow respiratory rate with sedation is a sign of respiratory depression. The opioid is withheld, breathing is supported, and help is called.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pharm-pain-02",
+   "categoryId": "pharmacological-parenteral",
+   "topicId": "pharmacological-parenteral--pharmacological-pain-management",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "pharmacological-parenteral--pharmacological-pain-management--p04"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "clinical-judgment",
+   "type": "matrix",
+   "difficulty": 3,
+   "stem": "For each action by a nurse caring for a client who uses patient-controlled analgesia (PCA) with morphine, select whether it is appropriate.",
+   "cols": [
+    "Appropriate",
+    "Not appropriate"
+   ],
+   "rows": [
+    {
+     "text": "Check the pump settings (drug, concentration, dose and lockout interval) with a second nurse when the PCA is started or the syringe is changed.",
+     "key": 0,
+     "why": "An independent check of a high-alert opioid pump helps prevent programming errors."
+    },
+    {
+     "text": "Tell the client's wife to press the PCA button whenever she thinks he looks uncomfortable.",
+     "key": 1,
+     "why": "Only the client should press the button. Someone else pressing it (PCA by proxy) bypasses the safety of a sleepy client not pressing."
+    },
+    {
+     "text": "Assess pain, respiratory rate and sedation level at the intervals the policy states.",
+     "key": 0,
+     "why": "Regular monitoring detects respiratory depression early."
+    },
+    {
+     "text": "Give an extra IV push of morphine for pain without an order because the client already has a PCA.",
+     "key": 1,
+     "why": "Any additional dose needs a provider's order. Extra opioid on top of a PCA is dangerous."
+    },
+    {
+     "text": "Keep the PCA pump and syringe locked, and record the controlled-drug counts as the policy requires.",
+     "key": 0,
+     "why": "Controlled drugs must be secured and accounted for."
+    }
+   ],
+   "rationale": "Safe PCA use: only the client presses the button, settings are checked independently, the client is monitored, and controlled drugs are secured. Provincial rules may differ: in Canada the details of double checks, counts and records come from facility policy and from federal and provincial rules, and U.S. practice differs. This question uses the common NCLEX model.",
+   "needsReview": true,
+   "reviewKind": "regional",
+   "reviewNote": "Independent double checks, counts and key-control rules for controlled drugs and PCA pumps are set by facility policy and by Canadian federal and provincial rules. U.S. rules differ. Please check against Canadian practice."
+  },
+  {
+   "id": "q-pharm-pain-03",
+   "categoryId": "pharmacological-parenteral",
+   "topicId": "pharmacological-parenteral--pharmacological-pain-management",
+   "secondaryTopicIds": [
+    "pharmacological-parenteral--dosage-calculations"
+   ],
+   "learningPointIds": [
+    "pharmacological-parenteral--pharmacological-pain-management--p03",
+    "pharmacological-parenteral--dosage-calculations--p01"
+   ],
+   "cjStep": "analyze-cues",
+   "integratedProcess": "clinical-judgment",
+   "type": "numeric",
+   "difficulty": 3,
+   "stem": "A client received acetaminophen 650 mg by mouth 4 times in the last 24 hours as scheduled. For breakthrough pain, the client also received 2 tablets of oxycodone/acetaminophen 5 mg/325 mg, 1 tablet each time. How many grams of acetaminophen has the client received in 24 hours? The usual maximum for most adults is 4 g a day. Round to two decimal places.",
+   "unit": "g",
+   "rounding": {
+    "decimals": 2,
+    "rule": "Round to two decimal places."
+   },
+   "key": 3.25,
+   "calc": {
+    "formula": "Total acetaminophen (mg) = scheduled doses + doses in the combination tablets. 1 g = 1000 mg.",
+    "inputs": {
+     "scheduledMg": 650,
+     "scheduledDoses": 4,
+     "comboAcetMg": 325,
+     "comboTablets": 2
+    },
+    "steps": [
+     {
+      "name": "scheduledTotalMg",
+      "label": "Scheduled acetaminophen",
+      "expr": "scheduledMg * scheduledDoses",
+      "value": 2600,
+      "show": "650 × 4 = 2600"
+     },
+     {
+      "name": "comboTotalMg",
+      "label": "Acetaminophen in the combination tablets",
+      "expr": "comboAcetMg * comboTablets",
+      "value": 650,
+      "show": "325 × 2 = 650"
+     },
+     {
+      "name": "totalMg",
+      "label": "Total in mg",
+      "expr": "scheduledTotalMg + comboTotalMg",
+      "value": 3250,
+      "show": "2600 + 650 = 3250"
+     },
+     {
+      "name": "totalG",
+      "label": "Change mg to g",
+      "expr": "totalMg / 1000",
+      "value": 3.25,
+      "show": "3250 ÷ 1000 = 3.25"
+     }
+    ],
+    "result": "totalG"
+   },
+   "commonErrors": [
+    {
+     "expr": "scheduledTotalMg / 1000",
+     "value": 2.6,
+     "why": "you left out the acetaminophen in the oxycodone/acetaminophen tablets."
+    },
+    {
+     "expr": "totalMg",
+     "value": 3250,
+     "why": "you did not change mg to g."
+    },
+    {
+     "expr": "(scheduledTotalMg + 5 * comboTablets) / 1000",
+     "value": 2.61,
+     "why": "you added the 5 mg oxycodone dose instead of the 325 mg acetaminophen dose."
+    }
+   ],
+   "rationale": "Scheduled: 650 mg × 4 = 2,600 mg. Combination tablets: 325 mg × 2 = 650 mg. Total 3,250 mg = 3.25 g. This is under 4 g but leaves only 0.75 g (750 mg), so the nurse must count the acetaminophen in combination products and watch the daily total. The provider may set a lower limit for some clients, such as older adults or those with liver disease.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pharm-pain-04",
+   "categoryId": "pharmacological-parenteral",
+   "topicId": "pharmacological-parenteral--pharmacological-pain-management",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "pharmacological-parenteral--pharmacological-pain-management--p05"
+   ],
+   "cjStep": "recognize-cues",
+   "integratedProcess": "clinical-judgment",
+   "type": "trend",
+   "difficulty": 4,
+   "stem": "A client with a PCA morphine pump after bowel surgery is assessed every hour. For each measure, select the trend.",
+   "exhibit": {
+    "title": "Hourly assessment",
+    "columns": [
+     "Measure",
+     "20:00",
+     "21:00",
+     "22:00",
+     "23:00"
+    ],
+    "rows": [
+     [
+      "Pain score (0 to 10)",
+      "8",
+      "5",
+      "3",
+      "2"
+     ],
+     [
+      "Respiratory rate (per minute)",
+      "18",
+      "15",
+      "12",
+      "9"
+     ],
+     [
+      "Sedation (1 awake to 4 cannot wake)",
+      "1",
+      "2",
+      "2",
+      "3"
+     ],
+     [
+      "Oxygen saturation (%)",
+      "97",
+      "96",
+      "95",
+      "93"
+     ]
+    ]
+   },
+   "cols": [
+    "Improving",
+    "No change",
+    "Worsening"
+   ],
+   "rows": [
+    {
+     "text": "Pain score",
+     "key": 0,
+     "why": "The pain is now well controlled."
+    },
+    {
+     "text": "Respiratory rate",
+     "key": 2,
+     "why": "The rate is falling toward a dangerous level."
+    },
+    {
+     "text": "Sedation",
+     "key": 2,
+     "why": "The client is becoming more sedated, which comes before slow breathing."
+    },
+    {
+     "text": "Oxygen saturation",
+     "key": 2,
+     "why": "It is drifting down and may fall further."
+    }
+   ],
+   "rationale": "Pain is controlled, but the falling respiratory rate, rising sedation and falling oxygen saturation show developing opioid-induced respiratory depression. The nurse stops the PCA, stays with the client, supports breathing, calls the provider, and prepares for naloxone if ordered.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pharm-tpn-01",
+   "categoryId": "pharmacological-parenteral",
+   "topicId": "pharmacological-parenteral--total-parenteral-nutrition",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "pharmacological-parenteral--total-parenteral-nutrition--p05"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "clinical-judgment",
+   "type": "mcq",
+   "difficulty": 3,
+   "stem": "A client's parenteral nutrition (PN) bag is empty at 02:00, and the next bag has not arrived from the pharmacy. What should the nurse do?",
+   "options": [
+    "Stop the infusion and wait for the next bag to arrive.",
+    "Hang a dextrose solution as ordered or per protocol, check the blood glucose, and call the pharmacy.",
+    "Hang 0.9% sodium chloride at the same rate.",
+    "Use the leftover bag from yesterday."
+   ],
+   "optionRationales": [
+    "Incorrect. Stopping a high-dextrose infusion suddenly can cause rebound hypoglycemia.",
+    "Correct. A dextrose infusion (often 10%) prevents low blood glucose until the new bag arrives, and the glucose is checked.",
+    "Incorrect. Saline does not supply the glucose that the body has become used to.",
+    "Incorrect. Old or unlabeled bags are not sterile or safe and may not match the order."
+   ],
+   "key": 1,
+   "rationale": "PN gives a large amount of glucose. If it is stopped suddenly, the client can become hypoglycemic. The nurse obtains and gives a dextrose solution as ordered or per protocol, checks the blood glucose and notifies the pharmacy.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pharm-tpn-02",
+   "categoryId": "pharmacological-parenteral",
+   "topicId": "pharmacological-parenteral--total-parenteral-nutrition",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "pharmacological-parenteral--total-parenteral-nutrition--p02"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "teaching-learning",
+   "type": "sata",
+   "difficulty": 3,
+   "stem": "A client who cannot absorb nutrients after bowel surgery will go home on parenteral nutrition. Which teaching points should the nurse include? Select all that apply.",
+   "options": [
+    "The solution gives nutrition directly into a vein because the bowel cannot absorb enough.",
+    "Check your temperature daily and report fever, chills or redness at the catheter site.",
+    "Use clean, aseptic technique every time you connect or disconnect the tubing.",
+    "Check your blood glucose as taught and report readings that are too high or too low.",
+    "If the pump alarms, add water to the bag so that the solution runs faster.",
+    "You can stop the infusion any time you feel full, with no need to tell the care team."
+   ],
+   "optionRationales": [
+    "Correct. Clients who understand why they need PN take part better in their care.",
+    "Correct. Infection is a major risk with PN and a central catheter.",
+    "Correct. Careful technique prevents infection.",
+    "Correct. PN can cause high blood glucose, and stopping it suddenly can cause low blood glucose.",
+    "Incorrect. Nothing is ever added to a PN bag at home, and the rate is set only by the care team.",
+    "Incorrect. Stopping PN suddenly can cause low blood glucose, and changes to the schedule need the care team."
+   ],
+   "key": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "rationale": "Home PN teaching covers why it is needed, infection prevention, aseptic technique, glucose monitoring, and never changing the bag or rate without the care team.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pharm-tpn-03",
+   "categoryId": "pharmacological-parenteral",
+   "topicId": "pharmacological-parenteral--total-parenteral-nutrition",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "pharmacological-parenteral--total-parenteral-nutrition--p01"
+   ],
+   "cjStep": "recognize-cues",
+   "integratedProcess": "clinical-judgment",
+   "type": "highlight",
+   "difficulty": 3,
+   "stem": "A client is on day 3 of parenteral nutrition. Highlight the findings in the nurse's note that suggest a complication of PN needing follow-up.",
+   "segments": [
+    {
+     "text": "Nurse's note: "
+    },
+    {
+     "text": "The 08:00 blood glucose is 15.2 mmol/L [274 mg/dL].",
+     "key": true,
+     "why": "A high glucose is the most common PN complication (hyperglycemia) and may need insulin or a change in the PN formula."
+    },
+    {
+     "text": " "
+    },
+    {
+     "text": "The PN bag and tubing are labelled with today's date and the client's name.",
+     "key": false,
+     "why": "Correct labelling is expected practice, not a complication."
+    },
+    {
+     "text": " "
+    },
+    {
+     "text": "Weight is up 2.4 kg in 24 hours, with new crackles in both lungs and swollen ankles.",
+     "key": true,
+     "why": "This suggests fluid overload from the large volume of PN."
+    },
+    {
+     "text": " "
+    },
+    {
+     "text": "Serum potassium is 4.2 mmol/L [4.2 mEq/L].",
+     "key": false,
+     "why": "This is a normal potassium level."
+    },
+    {
+     "text": " "
+    },
+    {
+     "text": "Temperature is 38.6 °C [101.5 °F] with chills during the infusion and redness at the catheter exit site.",
+     "key": true,
+     "why": "This suggests a catheter-related infection, which is a serious PN complication."
+    },
+    {
+     "text": " "
+    },
+    {
+     "text": "Bowel sounds are quiet, as expected after surgery.",
+     "key": false,
+     "why": "This is expected and is not a PN complication."
+    }
+   ],
+   "rationale": "Common PN complications are hyperglycemia, fluid overload and infection. The nurse recognizes them early and reports them to the provider.",
+   "needsReview": false
+  },
+  {
+   "id": "q-pharm-tpn-04",
+   "categoryId": "pharmacological-parenteral",
+   "topicId": "pharmacological-parenteral--total-parenteral-nutrition",
+   "secondaryTopicIds": [],
+   "learningPointIds": [
+    "pharmacological-parenteral--total-parenteral-nutrition--p03"
+   ],
+   "cjStep": "take-action",
+   "integratedProcess": "nursing-process",
+   "type": "dragdrop",
+   "difficulty": 3,
+   "stem": "The nurse is hanging a new bag of parenteral nutrition through a central venous catheter. Place the steps in the correct order.",
+   "mode": "order",
+   "items": [
+    {
+     "text": "Perform hand hygiene and, as policy requires, verify the client's identity and the pump settings with a second nurse.",
+     "why": "Hand hygiene and the identity and settings check come before touching the line."
+    },
+    {
+     "text": "Check the blood glucose as ordered and document the time, the bag, the rate and the client's tolerance.",
+     "why": "Monitoring and documentation follow the start of the infusion."
+    },
+    {
+     "text": "Check the bag label against the order (client name, contents, rate) and inspect the solution for cloudiness, particles or leaks.",
+     "why": "The product is checked before anything is connected, because a wrong or damaged bag cannot be corrected once infusing."
+    },
+    {
+     "text": "Scrub the connection hub with an antiseptic wipe for the time required and let it dry.",
+     "why": "Cleaning the hub reduces the chance of introducing germs into the bloodstream."
+    },
+    {
+     "text": "Connect the new tubing with the correct filter and start the infusion at the ordered rate, then check the pump.",
+     "why": "The infusion is started once everything has been verified and the hub is clean."
+    }
+   ],
+   "key": [
+    2,
+    0,
+    3,
+    4,
+    1
+   ],
+   "rationale": "Hanging PN follows a sequence that protects the client from infection, wrong solutions and wrong rates.",
+   "needsReview": false
+  }
+ ]
+}

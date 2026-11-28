@@ -43,7 +43,7 @@ const sheetHead = title => `<div class="sheet-head"><h3>${title}</h3><button cla
 /* ---------- START-UP ---------- */
 const DATA = ["syllabus", "questions", "plan", "canada", "reference", "exam-guide"];
 /* Question banks per category (data/questions/<categoryId>.json). Add new files here AND to FILES in sw.js. */
-const QUESTION_FILES = ["questions/management-of-care"];
+const QUESTION_FILES = ["questions/management-of-care", "questions/pharmacological-parenteral"];
 const getJson = f => fetch("data/" + f + ".json").then(r => { if (!r.ok) throw new Error(f); return r.json(); });
 Promise.all([Promise.all(DATA.map(getJson)), Promise.all(QUESTION_FILES.map(getJson))])
   .then(([[syl, qs, plan, can, ref, guide], more]) => {

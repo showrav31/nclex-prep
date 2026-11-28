@@ -81,7 +81,8 @@ guide.priority.forEach(x => id("card priority", x.id));
 
 // ---- question banks: data/questions/<categoryId>.json (new format, all question types)
 const NGN_TYPES = new Set(["matrix", "dropdown", "highlight", "dragdrop", "bowtie", "trend"]);
-const ALL_TYPES = new Set(["mcq", "sata", ...NGN_TYPES]);
+const ALL_TYPES = new Set(["mcq", "sata", "numeric", ...NGN_TYPES]); // numeric (calculation) is not a Next Gen type
+const calc = require("./calc");
 const cjIds = new Set(syl.clinicalJudgmentSteps.map(s => s.id)), ipIds = new Set(syl.integratedProcesses.map(p => p.id));
 const topicCat = {}, pointTopic = {};
 syl.categories.forEach(c => c.topics.forEach(t => { topicCat[t.id] = c.id; t.learningPoints.forEach(p => pointTopic[p.id] = t.id); }));
@@ -89,7 +90,7 @@ const nonEmpty = x => typeof x === "string" && x.trim().length > 0;
 const isIdx = (n, len) => Number.isInteger(n) && n >= 0 && n < len;
 const bankFiles = fs.existsSync(path.join(root, "data/questions")) ? fs.readdirSync(path.join(root, "data/questions")).filter(f => f.endsWith(".json")).sort() : [];
 const stems = new Map(), needsReview = [];
-let bankTotal = 0;
+let bankTotal = 0, numericCount = 0;
 
 function checkTypeFields(q, E) {
   const opts = (arr, what) => Array.isArray(arr) && arr.length >= 2 && arr.every(nonEmpty) && new Set(arr).size === arr.length ? true : (E(`${what} must be 2+ different non-empty strings`), false);
@@ -138,6 +139,39 @@ function checkTypeFields(q, E) {
         q.bins.forEach((b, bi) => { if (!q.items.some(it => it.key === bi)) E(`bin "${b}" is never the answer`); });
       } else E(`unknown dragdrop mode "${q.mode}"`);
       break;
+    case "numeric": {
+      numericCount++;
+      if (!nonEmpty(q.unit)) E("needs a unit");
+      const r = q.rounding;
+      if (!r || !Number.isInteger(r.decimals) || r.decimals < 0 || r.decimals > 3 || !nonEmpty(r.rule)) return E("rounding needs decimals (0 to 3) and a rule sentence");
+      if (!q.stem.includes(r.rule)) E("the stem must contain the rounding rule sentence exactly, so the student sees it");
+      if (typeof q.key !== "number" || !Number.isFinite(q.key)) return E("key must be a number");
+      const c = q.calc;
+      if (!c || !nonEmpty(c.formula) || !c.inputs || !Array.isArray(c.steps) || !c.steps.length || !nonEmpty(c.result)) return E("needs calc: formula, inputs, steps and result");
+      if (!Object.values(c.inputs).every(v => typeof v === "number" && Number.isFinite(v))) E("calc.inputs must all be numbers");
+      let run;
+      try { run = calc.runCalc(c); } catch (e) { return E("calc cannot be computed: " + e.message); }
+      c.steps.forEach((st, i) => {
+        if (!nonEmpty(st.label) || !/^[A-Za-z_]\w*$/.test(st.name || "")) E(`calc step ${i + 1}: needs a name and a label`);
+        const got = run.steps[i];
+        if (typeof st.value !== "number" || Math.abs(st.value - got.value) > 1e-9 * Math.max(1, Math.abs(got.value))) E(`calc step "${st.name}": stored value ${st.value} but recomputed ${got.value}`);
+        if (st.show !== got.show) E(`calc step "${st.name}": the working text "${st.show}" should be "${got.show}"`);
+      });
+      if (calc.onBoundary(run.exact, r.decimals)) E(`the exact answer ${run.exact} sits on a rounding boundary, so rounding is ambiguous`);
+      const want = calc.roundTo(run.exact, r.decimals);
+      if (Math.abs(want - q.key) > 1e-9) E(`KEY IS WRONG: the calculation gives ${run.exact}, which rounds to ${want}, but the key is ${q.key}`);
+      if (!Array.isArray(q.commonErrors) || !q.commonErrors.length) E("needs at least one commonErrors entry (a typical wrong answer and why)");
+      const seenVals = new Set();
+      (q.commonErrors || []).forEach((e, i) => {
+        let v; try { v = calc.evalExpr(e.expr, run.scope); } catch (err) { return E(`commonErrors ${i + 1}: ${err.message}`); }
+        if (Math.abs(v - e.value) > 1e-6 * Math.max(1, Math.abs(v))) E(`commonErrors ${i + 1}: stored value ${e.value} but recomputed ${v}`);
+        const rv = calc.roundTo(v, r.decimals);
+        if (Math.abs(rv - q.key) < 1e-9) E(`commonErrors ${i + 1}: gives the same answer as the key`);
+        if (seenVals.has(rv)) E(`commonErrors ${i + 1}: same answer as another common error`); seenVals.add(rv);
+        if (!nonEmpty(e.why) || e.why.length < 15) E(`commonErrors ${i + 1}: needs a why`);
+      });
+      break;
+    }
     case "bowtie":
       [["condition", 1], ["actions", 2], ["parameters", 2]].forEach(([part, n]) => {
         const p = q[part];
@@ -151,6 +185,20 @@ function checkTypeFields(q, E) {
   }
 }
 
+// ---- unit pairs written in the text must agree: glucose mmol/L [mg/dL], temperature °C [°F], digoxin ng/mL [nmol/L], hemoglobin g/L [g/dL], potassium mmol/L [mEq/L]
+function allText(x, out = []) { if (typeof x === "string") out.push(x); else if (Array.isArray(x)) x.forEach(v => allText(v, out)); else if (x && typeof x === "object") Object.values(x).forEach(v => allText(v, out)); return out; }
+const UNIT_PAIRS = [
+  { name: "glucose mmol/L [mg/dL]", re: /(\d+(?:\.\d+)?) mmol\/L \[(\d+(?:\.\d+)?) mg\/dL\]/g, ok: (a, b) => Math.abs(a * 18 - b) <= 1 },
+  { name: "temperature °C [°F]", re: /(\d+(?:\.\d+)?) °C \[(\d+(?:\.\d+)?) °F\]/g, ok: (a, b) => Math.abs(a * 1.8 + 32 - b) <= 0.06 },
+  { name: "digoxin ng/mL [nmol/L]", re: /(\d+(?:\.\d+)?) ng\/mL \[(\d+(?:\.\d+)?) nmol\/L\]/g, ok: (a, b) => Math.abs(a * 1.281 - b) <= 0.06 },
+  { name: "hemoglobin g/L [g/dL]", re: /(\d+(?:\.\d+)?) g\/L \[(\d+(?:\.\d+)?) g\/dL\]/g, ok: (a, b) => Math.abs(a / 10 - b) <= 0.051 },
+  { name: "potassium mmol/L [mEq/L]", re: /(\d+(?:\.\d+)?) mmol\/L \[(\d+(?:\.\d+)?) mEq\/L\]/g, ok: (a, b) => a === b }
+];
+let unitPairs = 0;
+function checkUnitPairs(q) {
+  allText(q).forEach(t => UNIT_PAIRS.forEach(u => { for (const m of t.matchAll(u.re)) { unitPairs++; if (!u.ok(+m[1], +m[2])) errors.push(`question ${q.id}: ${u.name} pair "${m[0]}" does not match`); } }));
+}
+
 bankFiles.forEach(f => {
   const file = read("data/questions/" + f), cat = syl.categories.find(c => c.id === file.categoryId);
   if (!cat || f !== file.categoryId + ".json") { errors.push(`data/questions/${f}: categoryId "${file.categoryId}" must be a real category and match the file name`); return; }
@@ -158,6 +206,7 @@ bankFiles.forEach(f => {
   file.questions.forEach(q => {
     const E = msg => errors.push(`question ${q.id || "(no id)"}: ${msg}`);
     bankTotal++;
+    checkUnitPairs(q);
     id("question", q.id);
     if (q.categoryId !== file.categoryId) E(`categoryId should be ${file.categoryId}`);
     if (topicCat[q.topicId] !== file.categoryId) E(`topicId "${q.topicId}" is not a topic of ${file.categoryId}`);
@@ -172,7 +221,12 @@ bankFiles.forEach(f => {
     if (!nonEmpty(q.stem) || q.stem.length < 20) E("needs a stem");
     if (!nonEmpty(q.rationale) || q.rationale.length < 30) E("needs a rationale");
     if (typeof q.needsReview !== "boolean") E("needsReview must be true or false");
-    if (q.needsReview) { needsReview.push(q.id); if (!nonEmpty(q.reviewNote)) E("needsReview questions need a reviewNote saying what to check"); }
+    if (q.needsReview) {
+      needsReview.push(q.id);
+      if (!nonEmpty(q.reviewNote)) E("needsReview questions need a reviewNote saying what to check");
+      if (q.reviewKind !== "clinical" && q.reviewKind !== "regional") E(`reviewKind must be "clinical" (real doubt about the clinical answer) or "regional" (provincial / regional practice may differ)`);
+      if (q.reviewKind === "regional" && !/provinc|territor|Canad|U\.?S\.?\b|regional|jurisdiction/i.test(q.rationale || "")) E("regional questions must explain the difference in the rationale (mention provincial, Canadian or US practice)");
+    } else if (q.reviewKind !== undefined || q.reviewNote !== undefined) E("reviewKind / reviewNote only belong on needsReview questions");
     if (q.exhibit && !(nonEmpty(q.exhibit.text) || (Array.isArray(q.exhibit.columns) && Array.isArray(q.exhibit.rows) && q.exhibit.rows.every(r => r.length === q.exhibit.columns.length)))) E("exhibit needs text, or columns and rows of the same width");
     const norm = String(q.stem).toLowerCase().replace(/\W+/g, " ").trim();
     if (stems.has(norm)) E(`same stem as ${stems.get(norm)}`); else stems.set(norm, q.id);
@@ -197,4 +251,4 @@ const files = JSON.parse(sw.match(/const FILES = (\[[\s\S]*?\]);/)[1].replace(/,
 files.filter(f => f !== "./").forEach(f => { if (!fs.existsSync(path.join(root, f))) errors.push(`sw.js caches missing file ${f}`); });
 
 if (errors.length) { console.error("✘ " + errors.join("\n✘ ")); process.exit(1); }
-console.log(`✔ data ok: ${counts.areas} areas, ${counts.categories} categories, ${counts.topics} topics, ${counts.learningPoints} learning points, ${counts.activityStatements} activity statements, ${counts.integratedProcesses} integrated processes, ${counts.clinicalJudgmentSteps} judgment steps; ${seen.size} unique ids; sw caches ${files.length} files; question banks: ${bankTotal} questions, ${needsReview.length} flagged needsReview`);
+console.log(`✔ data ok: ${counts.areas} areas, ${counts.categories} categories, ${counts.topics} topics, ${counts.learningPoints} learning points, ${counts.activityStatements} activity statements, ${counts.integratedProcesses} integrated processes, ${counts.clinicalJudgmentSteps} judgment steps; ${seen.size} unique ids; sw caches ${files.length} files; question banks: ${bankTotal} questions (${unitPairs} unit pairs and ${numericCount} calculations recomputed), ${needsReview.length} flagged needsReview`);

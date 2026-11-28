@@ -35,6 +35,8 @@ const T = {
   medAdmin: "pharmacological-parenteral--medication-administration", dose: "pharmacological-parenteral--dosage-calculations",
   dev: "health-promotion--developmental-stages-and-transitions", fluid: "physiological-adaptation--fluid-and-electrolyte-imbalances"
 };
+const BANK_FILES = ["management-of-care", "pharmacological-parenteral"]; // question banks in data/questions/
+const BANK = BANK_FILES.flatMap(c => JSON.parse(fs.readFileSync(path.join(root, "data/questions/" + c + ".json"), "utf8")).questions);
 const ACTS_FOR = (cat, id) => cat.activityStatements.filter(a => a.topicIds.includes(id)).length;
 // Progress as saved by v5 (study tools, but still the OLD topic ids). Rich on purpose: merged and unmatched topics.
 const V5 = {
@@ -290,7 +292,7 @@ const V5 = {
     await p.goto(U + "#learn/notes"); await p.waitForSelector("#notes.on");
     await p.fill("#noteSearch", "rome");
     check((await txt("noteList")).includes("From old topic"), "the note from the unmatched topic can be found in Notes");
-    check((await p.evaluate(() => Q.length)) === 98 && (await p.evaluate(() => Q.every(q => TOPIC[q.topic]))), "all 98 questions (34 older + 64 new) are in the bank and point to real topics");
+    check((await p.evaluate(() => Q.length)) === 34 + BANK.length && (await p.evaluate(() => Q.every(q => TOPIC[q.topic]))), `all ${34 + BANK.length} questions (34 older + ${BANK.length} new) are in the bank and point to real topics`);
     check(p.errs.length === 0, "no console errors (v5)" + (p.errs.length ? ": " + p.errs.join(" | ") : ""));
     await ctx.close();
   }
@@ -361,19 +363,20 @@ const V5 = {
 
   // G. Question types, scoring and the 64 Management of Care questions
   {
-    const BANK = JSON.parse(fs.readFileSync(path.join(root, "data/questions/management-of-care.json"), "utf8")).questions;
     // The right and a deliberately wrong answer for each question, worked out here from the keys (not by the app).
     const correctSel = q => ({
       mcq: () => [q.key], sata: () => [...q.key], matrix: () => q.rows.map(r => r.key), trend: () => q.rows.map(r => r.key),
       dropdown: () => q.blanks.map(b => b.key), highlight: () => q.segments.map((s, i) => s.key === true ? i : -1).filter(i => i >= 0),
       dragdrop: () => q.mode === "sort" ? q.items.map(i => i.key) : [...q.key],
-      bowtie: () => ({ c: [q.condition.key], a: [...q.actions.keys], p: [...q.parameters.keys] })
+      bowtie: () => ({ c: [q.condition.key], a: [...q.actions.keys], p: [...q.parameters.keys] }),
+      numeric: () => [String(q.key)]
     })[q.type]();
     const wrongSel = q => ({
       mcq: () => [(q.key + 1) % q.options.length], sata: () => q.options.map((_, i) => i).filter(i => !q.key.includes(i)).slice(0, 2),
       matrix: () => q.rows.map(r => (r.key + 1) % q.cols.length), trend: () => q.rows.map(r => (r.key + 1) % q.cols.length),
       dropdown: () => q.blanks.map(b => (b.key + 1) % b.options.length), highlight: () => q.segments.map((s, i) => s.key === false ? i : -1).filter(i => i >= 0),
       dragdrop: () => q.mode === "sort" ? q.items.map(i => (i.key + 1) % q.bins.length) : [...q.key].reverse(),
+      numeric: () => [String(q.key + 1)],
       bowtie: () => { const pick = (n, keys, len) => [...Array(len).keys()].filter(i => !keys.includes(i)).slice(0, n); return { c: pick(1, [q.condition.key], q.condition.options.length), a: pick(q.actions.keys.length, q.actions.keys, q.actions.options.length), p: pick(q.parameters.keys.length, q.parameters.keys, q.parameters.options.length) }; }
     })[q.type]();
 
@@ -383,7 +386,7 @@ const V5 = {
     // 1. every question: the right answer earns full marks, a wrong answer does not
     const res = await p.evaluate(items => items.map(({ id, good, bad }) => { const q = Q.find(x => x.id === id); return { id, found: !!q, goodReady: isReady(q, good), badReady: isReady(q, bad), good: scoreQ(q, good), bad: scoreQ(q, bad) }; }),
       BANK.map(q => ({ id: q.id, good: correctSel(q), bad: wrongSel(q) })));
-    check(res.every(r => r.found) && res.length === 64, "all 64 new questions are loaded by the app");
+    check(res.every(r => r.found) && res.length === BANK.length, `all ${BANK.length} new questions are loaded by the app`);
     check(res.every(r => r.goodReady && r.badReady), "every right and wrong answer can be submitted (Submit becomes available)");
     check(res.every(r => r.good.got === r.good.max && r.good.max >= 1), "the right answer earns full marks for every question: " + (res.filter(r => r.good.got !== r.good.max).map(r => r.id).join(", ") || "ok"));
     check(res.every(r => r.bad.got < r.bad.max), "a wrong answer never earns full marks: " + (res.filter(r => r.bad.got >= r.bad.max).map(r => r.id).join(", ") || "ok"));
@@ -421,13 +424,13 @@ const V5 = {
       submitQ();
       return { id, w1: before[0], w2: document.documentElement.scrollWidth, bad: /undefined|\[object|NaN|\{\d\}/.test(before[1] + document.getElementById("quiz").innerText), why: !!document.querySelector("#quiz .whyall"), rationale: document.querySelector("#quiz .rat").innerText.length > 30 };
     }), BANK.map(q => ({ id: q.id, good: correctSel(q) })));
-    check(layout.every(l => l.w1 <= 360 && l.w2 <= 360), "no sideways scroll at 360px for any of the 64 questions: " + (layout.filter(l => l.w1 > 360 || l.w2 > 360).map(l => l.id).join(", ") || "ok"));
+    check(layout.every(l => l.w1 <= 360 && l.w2 <= 360), `no sideways scroll at 360px for any of the ${BANK.length} questions: ` + (layout.filter(l => l.w1 > 360 || l.w2 > 360).map(l => l.id).join(", ") || "ok"));
     check(layout.every(l => !l.bad), "no 'undefined', '[object' or '{n}' text in any question");
     check(layout.every(l => l.why && l.rationale), "after answering, every question shows its rationale and the 'why each choice' list");
 
     // 4. one question of every type, answered by tapping the screen
     const byType = {}; BANK.forEach(q => { const k = q.type === "dragdrop" ? "dragdrop-" + q.mode : q.type; if (!byType[k]) byType[k] = q; });
-    check(Object.keys(byType).length === 9, "the bank uses all 9 kinds of question: " + Object.keys(byType).join(", "));
+    check(Object.keys(byType).length === 10, "the bank uses all 10 kinds of question: " + Object.keys(byType).join(", "));
     const fresh = async q => { await p.evaluate(id => { runQuiz([Q.find(x => x.id === id)], {}); }, q.id); await p.waitForSelector("#quiz .stem"); };
     const banner = async () => (await p.textContent("#quiz .rat b")).trim();
     for (const [kind, q] of Object.entries(byType)) {
@@ -439,6 +442,7 @@ const V5 = {
       else if (q.type === "matrix" || q.type === "trend" || (q.type === "dragdrop" && q.mode === "sort")) { const rows = q.rows || q.items; for (let ri = 0; ri < rows.length; ri++) await p.click(`#quiz input[name=m${ri}] >> nth=${rows[ri].key}`); }
       else if (q.type === "dropdown") for (let bi = 0; bi < q.blanks.length; bi++) await p.click(`#quiz .bowpart >> nth=${bi} >> .opt >> nth=${q.blanks[bi].key}`);
       else if (q.type === "highlight") { const idx = q.segments.map((s, i) => s.key !== undefined ? i : -1).filter(i => i >= 0); for (const i of q.segments.map((s, i) => s.key === true ? i : -1).filter(i => i >= 0)) await p.click(`#quiz .hlw >> nth=${idx.indexOf(i)}`); }
+      else if (q.type === "numeric") await p.fill("#numIn", String(q.key));
       else if (q.type === "dragdrop") for (const ii of q.key) await p.getByText(q.items[ii].text, { exact: true }).click();
       else if (q.type === "bowtie") { for (const k of q.actions.keys) await p.click(`#quiz .bowpart >> nth=0 >> .opt >> nth=${k}`); await p.click(`#quiz .bowpart >> nth=1 >> .opt >> nth=${q.condition.key}`); for (const k of q.parameters.keys) await p.click(`#quiz .bowpart >> nth=2 >> .opt >> nth=${k}`); }
       await p.click(submit);
@@ -461,9 +465,6 @@ const V5 = {
     await p.click("#mkRetry"); await p.waitForSelector("#drill.on #quiz .stem");
     check(await p.evaluate(() => QZ.mode === "retry" && QZ.list.every(q => q.id in S.mistakes)), "Retry my mistakes works with the new types");
 
-    // 5. questions waiting for a clinical check are marked
-    const flagged = BANK.find(q => q.needsReview); await fresh(flagged);
-    check((await p.textContent("#quiz")).includes("Waiting for a clinical check"), "a needsReview question shows the 'waiting for a clinical check' note");
     check(p.errs.length === 0, "no console errors (question types)" + (p.errs.length ? ": " + p.errs.join(" | ") : ""));
     await ctx.close();
   }
@@ -475,7 +476,7 @@ const V5 = {
     await p.waitForSelector("#home.on");
     await p.goto(U + "#practice/drill"); await p.waitForSelector("#drill.on #qtopic");
     check((await p.$$("#qtopic optgroup")).length === 8 && (await p.$$("#qtopic option[value*='--']")).length === 82, "topic filter lists all 82 official topics in 8 category groups");
-    const withQuestions = new Set([...JSON.parse(fs.readFileSync(path.join(root, "data/questions.json"), "utf8")).questions.map(q => q.topic), ...JSON.parse(fs.readFileSync(path.join(root, "data/questions/management-of-care.json"), "utf8")).questions.map(q => q.topicId)]);
+    const withQuestions = new Set([...JSON.parse(fs.readFileSync(path.join(root, "data/questions.json"), "utf8")).questions.map(q => q.topic), ...BANK.map(q => q.topicId)]);
     check((await p.$$("#qtopic option[disabled]")).length === 82 - withQuestions.size, `topics with no questions are greyed out (${82 - withQuestions.size} of 82 for now)`);
     await p.click('#qfilter .chip:has-text("MoC")');
     check((await p.$$("#qtopic optgroup")).length === 1 && (await p.$$("#qtopic option[value*='--']")).length === 16, "choosing a category narrows the topic list to its topics");
@@ -508,6 +509,71 @@ const V5 = {
     await p.evaluate(() => { qf = "safety-infection-control"; qt = "safety-infection-control--security-plan"; startQuiz(); });
     check(await p.isVisible("#toast") && (await p.textContent("#toast")).includes("No questions"), "choosing a topic with no questions gives a message instead of an empty quiz");
     check(p.errs.length === 0, "no console errors (practice filter)" + (p.errs.length ? ": " + p.errs.join(" | ") : ""));
+    await ctx.close();
+  }
+
+  // I. Calculation questions (numeric entry) and the two kinds of review label
+  {
+    const calc = require(path.join(root, "tests", "calc.js"));
+    const NUM = BANK.filter(q => q.type === "numeric");
+    const { ctx, p } = await page({ v: LATEST, setup: true, name: "Calc", exam: "2028-07-01" });
+    await p.waitForSelector("#home.on");
+    const fresh = async q => { await p.evaluate(id => { runQuiz([Q.find(x => x.id === id)], {}); }, q.id); await p.waitForSelector("#quiz .stem"); };
+    check(NUM.length >= 7, `the bank has ${NUM.length} calculation questions`);
+
+    // the number parser
+    const parsed = await p.evaluate(() => ["7", "7.0", "7,5", "1,200", "-3.5", ".5", "abc", "", "1.2.3", "7 mL", "1,2,3"].map(parseNum));
+    check(JSON.stringify(parsed) === JSON.stringify([7, 7, 7.5, 1200, -3.5, 0.5, null, null, null, null, null]), "typed numbers: 7, 7.0, 7,5 (decimal comma) and 1,200 are read; text and a second dot are not");
+
+    // what the app accepts, checked against answers recomputed here with the shared calc module
+    const rows = NUM.map(q => { const run = calc.runCalc(q.calc), d = q.rounding.decimals; return { id: q.id, key: q.key, exact: run.exact, d, slips: q.commonErrors.map(e => e.value) }; });
+    const acc = await p.evaluate(items => items.map(({ id, key, exact, d, slips }) => {
+      const q = Q.find(x => x.id === id), step = Math.pow(10, -d);
+      return { id, key: numericOk(q, String(key)), exact: numericOk(q, String(exact)), long: numericOk(q, exact.toFixed(8)), comma: numericOk(q, String(key).replace(".", ",") + (Number.isInteger(key) ? ",0" : "")),
+        up: numericOk(q, (key + step).toFixed(d + 3)), down: numericOk(q, (key - step).toFixed(d + 3)), slips: slips.map(v => numericOk(q, String(v))) };
+    }), rows);
+    check(acc.every(a => a.key && a.exact && a.long && a.comma), "the rounded answer, the exact unrounded answer and a decimal-comma answer are all accepted: " + (acc.filter(a => !(a.key && a.exact && a.long && a.comma)).map(a => a.id).join(", ") || "ok"));
+    check(acc.every(a => !a.up && !a.down), "an answer one rounding step too high or too low is not accepted");
+    check(acc.every(a => a.slips.every(s => !s)), "none of the listed common slips is accepted as correct");
+    check(await p.evaluate(() => roundTo(2.5, 0) === 3 && roundTo(7.03125, 1) === 7 && roundTo(214.2857, 0) === 214 && roundTo(3.255, 2) === 3.26 && roundTo(1.005, 2) === 1.01), "rounding is half-up and not thrown off by floating point (1.005 → 1.01)");
+
+    // on screen, for every calculation question
+    for (const q of NUM) {
+      await fresh(q);
+      const submit = '#quiz button:has-text("Submit")';
+      check(await p.isDisabled(submit) && await p.isVisible("#numIn") && (await p.textContent("#quiz .unit")).trim() === q.unit, `${q.id}: Submit is off until a number is typed, and the unit "${q.unit}" is shown`);
+      await p.fill("#numIn", "abc"); const offForText = await p.isDisabled(submit);
+      await p.fill("#numIn", String(q.key)); const onForNumber = !(await p.isDisabled(submit));
+      check(offForText && onForNumber, `${q.id}: text keeps Submit off, a number turns it on`);
+      await p.press("#numIn", "Enter");
+      check((await p.textContent("#quiz .rat b")).includes("Correct") && await p.isVisible("#numIn.right"), `${q.id}: the right number (Enter key) shows Correct`);
+      const body = await p.textContent("#quiz .whyall");
+      check(body.includes("Formula:") && q.calc.steps.every(s => body.includes(s.show)), `${q.id}: the working (formula and every step) is shown`);
+      // a common slip: not correct, and the app says what the slip was
+      await fresh(q);
+      await p.fill("#numIn", String(q.commonErrors[0].value));
+      await p.click(submit);
+      const txt = await p.textContent("#quiz .rat");
+      check(txt.includes("Not quite") && txt.includes("Answer:") && txt.includes("Your answer is what you get if") && await p.isVisible("#numIn.wrong"), `${q.id}: the first common slip is marked wrong and explained`);
+    }
+    const st = await state(p);
+    check(NUM.every(q => st.mistakes[q.id] && st.mistakes[q.id].rationale.length > 30), "wrong calculation answers are saved to My mistakes");
+    // the rounding rule is in the stem, so she sees it
+    check(await (async () => { await fresh(NUM[1]); return (await p.textContent("#quiz .stem")).includes(NUM[1].rounding.rule); })(), "the rounding rule is part of the question text");
+
+    // review labels
+    const regional = BANK.find(q => q.reviewKind === "regional"), clinical = BANK.find(q => q.reviewKind === "clinical");
+    check(!!regional && !!clinical, "the bank has a regional and a clinical needsReview question");
+    await fresh(regional);
+    let t = await p.textContent("#quiz");
+    check(t.includes("NCLEX model: provincial rules may differ") && !t.includes("clinical check"), "a regional question says 'NCLEX model: provincial rules may differ' and not 'clinical check'");
+    await p.evaluate(() => { QZ.selFor = 0; QZ.sel = []; });
+    await fresh(clinical);
+    t = await p.textContent("#quiz");
+    check(t.includes("Waiting for a clinical check") && !t.includes("provincial rules may differ"), "a clinical question says 'Waiting for a clinical check'");
+    // a regional question's rationale carries the detail she needs
+    check(/provinc|territor|Canad/i.test(regional.rationale) && BANK.filter(q => q.reviewKind === "regional").every(q => /provinc|territor|Canad|U\.S\./i.test(q.rationale)), "every regional question explains the difference in its rationale");
+    check(p.errs.length === 0, "no console errors (calculations)" + (p.errs.length ? ": " + p.errs.join(" | ") : ""));
     await ctx.close();
   }
 
