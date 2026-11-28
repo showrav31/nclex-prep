@@ -35,8 +35,24 @@ const T = {
   medAdmin: "pharmacological-parenteral--medication-administration", dose: "pharmacological-parenteral--dosage-calculations",
   dev: "health-promotion--developmental-stages-and-transitions", fluid: "physiological-adaptation--fluid-and-electrolyte-imbalances"
 };
-const BANK_FILES = ["management-of-care", "pharmacological-parenteral", "physiological-adaptation"]; // question banks in data/questions/
+const BANK_FILES = ["management-of-care", "pharmacological-parenteral", "physiological-adaptation", "safety-infection-control"]; // question banks in data/questions/
 const BANK = BANK_FILES.flatMap(c => JSON.parse(fs.readFileSync(path.join(root, "data/questions/" + c + ".json"), "utf8")).questions);
+// The first topic that has no questions in any bank yet (used to test the "no questions" messages; it changes as banks are added).
+const HAS_Q = new Set([...JSON.parse(fs.readFileSync(path.join(root, "data/questions.json"), "utf8")).questions.map(q => q.topic), ...BANK.map(q => q.topicId)]);
+const SYLL_ALL = JSON.parse(fs.readFileSync(path.join(root, "data/syllabus.json"), "utf8"));
+const emptyCat = SYLL_ALL.categories.find(c => c.topics.some(t => !HAS_Q.has(t.id))), emptyTopic = emptyCat.topics.find(t => !HAS_Q.has(t.id));
+// Answers one bank question correctly by tapping the screen (works for every question type).
+async function tapRight(p, q) {
+  if (q.type === "mcq") await p.click(`#quiz .opt >> nth=${q.key}`);
+  else if (q.type === "sata") for (const k of q.key) await p.click(`#quiz .opt >> nth=${k}`);
+  else if (q.type === "matrix" || q.type === "trend" || (q.type === "dragdrop" && q.mode === "sort")) { const rows = q.rows || q.items; for (let ri = 0; ri < rows.length; ri++) await p.click(`#quiz input[name=m${ri}] >> nth=${rows[ri].key}`); }
+  else if (q.type === "dropdown") for (let bi = 0; bi < q.blanks.length; bi++) await p.click(`#quiz .bowpart >> nth=${bi} >> .opt >> nth=${q.blanks[bi].key}`);
+  else if (q.type === "highlight") { const idx = q.segments.map((s, i) => s.key !== undefined ? i : -1).filter(i => i >= 0); for (const i of q.segments.map((s, i) => s.key === true ? i : -1).filter(i => i >= 0)) await p.click(`#quiz .hlw >> nth=${idx.indexOf(i)}`); }
+  else if (q.type === "numeric") await p.fill("#numIn", String(q.key));
+  else if (q.type === "dragdrop") for (const ii of q.key) await p.getByText(q.items[ii].text, { exact: true }).click();
+  else if (q.type === "bowtie") { for (const k of q.actions.keys) await p.click(`#quiz .bowpart >> nth=0 >> .opt >> nth=${k}`); await p.click(`#quiz .bowpart >> nth=1 >> .opt >> nth=${q.condition.key}`); for (const k of q.parameters.keys) await p.click(`#quiz .bowpart >> nth=2 >> .opt >> nth=${k}`); }
+}
+
 const ACTS_FOR = (cat, id) => cat.activityStatements.filter(a => a.topicIds.includes(id)).length;
 // Progress as saved by v5 (study tools, but still the OLD topic ids). Rich on purpose: merged and unmatched topics.
 const V5 = {
@@ -98,7 +114,9 @@ const V5 = {
     await p.waitForSelector("#practice.on #quiz:not([hidden])");
     const n = await p.evaluate(() => QZ.list.length);
     for (let i = 0; i < n; i++) {
-      if (await p.evaluate(() => QZ.list[QZ.i].type) === "matrix") {
+      const curId = await p.evaluate(() => QZ.list[QZ.i].id), bankQ = BANK.find(x => x.id === curId);
+      if (bankQ && !["mcq", "matrix"].includes(bankQ.type)) await tapRight(p, bankQ);
+      else if (await p.evaluate(() => QZ.list[QZ.i].type) === "matrix") {
         const r = await p.evaluate(() => QZ.list[QZ.i].rows.length);
         for (let k = 0; k < r; k++) await p.click(`input[name=m${k}] >> nth=0`);
       } else await p.click("#quiz .opt >> nth=0");
@@ -346,11 +364,10 @@ const V5 = {
     check(await p.evaluate(t => QZ.topic === t && QZ.list.length === Q.filter(q => q.topic === t).length && QZ.list.every(q => q.topic === t), adv.id), "Practise this topic runs only that topic's questions");
     check(await p.evaluate(() => !document.getElementById("sheet").offsetParent) && await p.evaluate(() => location.hash) === "#practice/drill", "the topic page closed and the quiz opened");
     // a topic with no questions
-    const safety = SYLL.categories.find(c => c.id === "safety-infection-control"), secPlan = safety.topics.find(t => t.id.endsWith("--security-plan"));
     await p.goto(U + "#learn/syllabus");
-    if (!(await p.isVisible("#c-safety-infection-control .topic"))) await p.click("#c-safety-infection-control .head");
-    await p.click(`#c-safety-infection-control .tname:has-text("Security Plan")`);
-    check((await p.textContent("#sheetBody")).includes("No practice questions on this topic yet") && (await p.$$("#sheetBody .acts li")).length === (ACTS_FOR(safety, secPlan.id)), "topic without questions says so and offers the category instead");
+    if (!(await p.isVisible(`#c-${emptyCat.id} .topic`))) await p.click(`#c-${emptyCat.id} .head`);
+    await p.click(`#c-${emptyCat.id} .tname:has-text("${emptyTopic.name}")`);
+    check((await p.textContent("#sheetBody")).includes("No practice questions on this topic yet") && (await p.$$("#sheetBody .acts li")).length === (ACTS_FOR(emptyCat, emptyTopic.id)), "topic without questions says so and offers the category instead");
     await p.goBack();
     // test plan overview + footer
     await p.waitForSelector("#sheet", { state: "hidden" });
@@ -437,14 +454,7 @@ const V5 = {
       await fresh(q);
       const submit = '#quiz button:has-text("Submit")';
       check(await p.isDisabled(submit), `${kind}: Submit is off until the question is answered`);
-      if (q.type === "mcq") await p.click(`#quiz .opt >> nth=${q.key}`);
-      else if (q.type === "sata") for (const k of q.key) await p.click(`#quiz .opt >> nth=${k}`);
-      else if (q.type === "matrix" || q.type === "trend" || (q.type === "dragdrop" && q.mode === "sort")) { const rows = q.rows || q.items; for (let ri = 0; ri < rows.length; ri++) await p.click(`#quiz input[name=m${ri}] >> nth=${rows[ri].key}`); }
-      else if (q.type === "dropdown") for (let bi = 0; bi < q.blanks.length; bi++) await p.click(`#quiz .bowpart >> nth=${bi} >> .opt >> nth=${q.blanks[bi].key}`);
-      else if (q.type === "highlight") { const idx = q.segments.map((s, i) => s.key !== undefined ? i : -1).filter(i => i >= 0); for (const i of q.segments.map((s, i) => s.key === true ? i : -1).filter(i => i >= 0)) await p.click(`#quiz .hlw >> nth=${idx.indexOf(i)}`); }
-      else if (q.type === "numeric") await p.fill("#numIn", String(q.key));
-      else if (q.type === "dragdrop") for (const ii of q.key) await p.getByText(q.items[ii].text, { exact: true }).click();
-      else if (q.type === "bowtie") { for (const k of q.actions.keys) await p.click(`#quiz .bowpart >> nth=0 >> .opt >> nth=${k}`); await p.click(`#quiz .bowpart >> nth=1 >> .opt >> nth=${q.condition.key}`); for (const k of q.parameters.keys) await p.click(`#quiz .bowpart >> nth=2 >> .opt >> nth=${k}`); }
+      await tapRight(p, q);
       await p.click(submit);
       check((await banner()).includes("Correct"), `${kind}: answering correctly on screen shows "Correct"`);
     }
@@ -505,8 +515,8 @@ const V5 = {
     check(allWork, "'Practise this topic' works for all 16 Management of Care topics and updates the Practice filter" + (why.length ? ": " + why.join(", ") : ""));
     // a topic with nothing yet does not start an empty quiz
     await p.goto(U + "#practice/drill");
-    await p.evaluate(() => { qf = "safety-infection-control"; qt = ""; renderFilter(); });
-    await p.evaluate(() => { qf = "safety-infection-control"; qt = "safety-infection-control--security-plan"; startQuiz(); });
+    await p.evaluate(c => { qf = c; qt = ""; renderFilter(); }, emptyCat.id);
+    await p.evaluate(([c, t]) => { qf = c; qt = t; startQuiz(); }, [emptyCat.id, emptyTopic.id]);
     check(await p.isVisible("#toast") && (await p.textContent("#toast")).includes("No questions"), "choosing a topic with no questions gives a message instead of an empty quiz");
     check(p.errs.length === 0, "no console errors (practice filter)" + (p.errs.length ? ": " + p.errs.join(" | ") : ""));
     await ctx.close();

@@ -328,9 +328,17 @@ bankFiles.forEach(f => {
     perTopic[q.topicId] = (perTopic[q.topicId] || 0) + 1;
     (firstPoints[q.topicId] = firstPoints[q.topicId] || new Set()).add((q.learningPointIds || [])[0]);
   });
+  // Per-topic quota: 4 by default. A bank file may carry "quotas": {topicId: n} (n may be 0) when the request asked for a different number for some topics.
+  const quotas = file.quotas || {};
+  Object.keys(quotas).forEach(k => {
+    if (!cat.topics.some(t => t.id === k)) errors.push(`${f}: quotas names unknown topic ${k}`);
+    else if (!Number.isInteger(quotas[k]) || quotas[k] < 0) errors.push(`${f}: quota for ${k} must be a whole number, 0 or more`);
+  });
   cat.topics.forEach(t => {
-    if ((perTopic[t.id] || 0) < 4) errors.push(`${f}: topic ${t.id} has ${perTopic[t.id] || 0} questions, needs at least 4`);
-    const want = Math.min(4, t.learningPoints.length), got = (firstPoints[t.id] || new Set()).size;
+    const quota = quotas[t.id] !== undefined ? quotas[t.id] : 4, have = perTopic[t.id] || 0;
+    if (have < quota) errors.push(`${f}: topic ${t.id} has ${have} questions, needs ${quota}`);
+    if (file.quotas && have > quota) errors.push(`${f}: topic ${t.id} has ${have} questions but its quota is ${quota}`);
+    const want = Math.min(quota, t.learningPoints.length), got = (firstPoints[t.id] || new Set()).size;
     if (got < want) errors.push(`${f}: topic ${t.id} covers only ${got} different learning points (first learningPointId of each question), needs ${want}`);
   });
   const ngn = file.questions.filter(q => NGN_TYPES.has(q.type)).length;
